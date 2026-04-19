@@ -19,9 +19,14 @@ def test_keyword_match_empty_list_returns_true():
     assert keyword_match("anything", []) is True
 
 
-class _FakeMessage:
-    def __init__(self, text: str):
-        self.content = [MagicMock(text=text)]
+def _tool_response(args):
+    block = MagicMock()
+    block.type = "tool_use"
+    block.name = "emit_verdict"
+    block.input = args
+    msg = MagicMock()
+    msg.content = [block]
+    return msg
 
 
 @pytest.fixture
@@ -32,8 +37,8 @@ def fake_client():
 
 
 async def test_haiku_returns_relevant(fake_client):
-    fake_client.messages.create.return_value = _FakeMessage(
-        '{"is_relevant": true, "reason": "Discusses GPTBot opt-out"}'
+    fake_client.messages.create.return_value = _tool_response(
+        {"is_relevant": True, "reason": "Discusses GPTBot opt-out"}
     )
     v = await haiku_relevance(fake_client, "Cloudflare launches AI bot audit", "...")
     assert v.is_relevant is True
@@ -41,8 +46,16 @@ async def test_haiku_returns_relevant(fake_client):
 
 
 async def test_haiku_returns_not_relevant(fake_client):
-    fake_client.messages.create.return_value = _FakeMessage(
-        '{"is_relevant": false, "reason": "Unrelated product"}'
+    fake_client.messages.create.return_value = _tool_response(
+        {"is_relevant": False, "reason": "Unrelated product"}
     )
     v = await haiku_relevance(fake_client, "We launched new dashboard widgets", "...")
+    assert v.is_relevant is False
+
+
+async def test_haiku_fallback_when_no_tool_use(fake_client):
+    msg = MagicMock()
+    msg.content = [MagicMock(type="text")]
+    fake_client.messages.create.return_value = msg
+    v = await haiku_relevance(fake_client, "Something", "...")
     assert v.is_relevant is False

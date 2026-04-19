@@ -18,7 +18,7 @@ async def fetch_github_repo(
     since: datetime | None,
     seen_guids: list[str],
 ) -> FetchResult:
-    token = os.environ.get("GITHUB_TOKEN")
+    token = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN")
     headers = {"User-Agent": _UA, "Accept": "application/vnd.github+json"}
     if token:
         headers["Authorization"] = f"Bearer {token}"
@@ -28,10 +28,21 @@ async def fetch_github_repo(
     async with httpx.AsyncClient(
         headers=headers, timeout=_TIMEOUT, follow_redirects=True
     ) as client:
-        releases = await _fetch_releases(client, source, since, seen)
-        prs = await _fetch_merged_prs(client, source, since, seen)
-    items.extend(releases)
-    items.extend(prs)
+        # Treat rate-limited endpoints as "no items this run" rather than a
+        # hard failure — unauthenticated GitHub API allows 60 req/hour, and
+        # the daily cron shouldn't drop the whole source on a transient 403.
+        try:
+            releases = await _fetch_releases(client, source, since, seen)
+            items.extend(releases)
+        except httpx.HTTPStatusError as e:
+            if e.response.status_code != 403:
+                raise
+        try:
+            prs = await _fetch_merged_prs(client, source, since, seen)
+            items.extend(prs)
+        except httpx.HTTPStatusError as e:
+            if e.response.status_code != 403:
+                raise
     return FetchResult(mode=ResultMode.PER_ITEM, items=items)
 
 

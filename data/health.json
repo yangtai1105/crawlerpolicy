@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-04-19T06:19:33.336737+00:00",
+  "last_run_at": "2026-04-19T06:44:06.524131+00:00",
   "per_source_status": {
     "claudebot": "ok",
     "google-extended": "ok",
@@ -20,5 +20,20 @@
     "cloudflare-research": "ok",
     "openai-blog": "ok"
   },
-  "events_written": []
+  "events_written": [
+    "content/events/2026-04-17-cloudflare-blog-cloudflare-launches-redirects-for-ai-training-canonical-tags-become-http-301s-fo.md",
+    "content/events/2026-04-16-datadome-blog-datadome-publishes-detailed-analysis-of-agentic-commerce-threats-and-opportuniti.md",
+    "content/events/2026-04-07-datadome-blog-datadome-publishes-agentic-commerce-webinar-takeaways-with-bot-traffic-agent-ide.md",
+    "content/events/2026-04-03-datadome-blog-datadome-publishes-tco-case-study-hidden-costs-of-budget-bot-protection-for-publ.md",
+    "content/events/2026-03-27-datadome-blog-datadome-publishes-new-guide-on-ai-agent-era-ticket-scalping-and-bot-protection.md",
+    "content/events/2026-03-25-datadome-blog-datadome-publishes-new-blog-post-on-ai-traffic-detection-as-prerequisite-for-pub.md",
+    "content/events/2026-03-23-news-media-alliance-news-media-alliance-launches-opt-in-ai-licensing-partnership-with-bria.md",
+    "content/events/2026-04-02-cloudflare-research-cloudflare-research-ai-crawler-traffic-is-degrading-cdn-cache-performance-propos.md",
+    "content/events/2026-04-15-openai-blog-openai-agents-sdk-gains-native-sandbox-execution-and-model-native-harness.md",
+    "content/events/2026-04-13-openai-blog-cloudflare-integrates-gpt-5-4-and-codex-into-agent-cloud-for-enterprise-ai-deplo.md",
+    "content/events/2026-04-08-openai-blog-openai-publishes-enterprise-ai-roadmap-covering-frontier-chatgpt-enterprise-code.md",
+    "content/events/2026-04-01-openai-blog-openai-highlights-gradient-labs-deployment-of-gpt-4-1-and-gpt-4-1-mini-nano-for-.md",
+    "content/events/2026-03-25-openai-blog-openai-launches-safety-bug-bounty-program-covering-agentic-and-ai-abuse-risks.md",
+    "content/events/2026-03-24-openai-blog-openai-launches-agentic-commerce-protocol-for-chatgpt-shopping.md"
+  ]
 }

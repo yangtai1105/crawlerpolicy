@@ -1,7 +1,6 @@
 """Two-stage relevance funnel: cheap keyword regex, then Haiku classifier."""
 from __future__ import annotations
 
-import json
 import re
 from dataclasses import dataclass
 
@@ -18,7 +17,6 @@ def keyword_match(text: str, keywords: list[str]) -> bool:
         if not needle:
             continue
         # Leading boundary only, so "AI bot" matches "AI bots" / "AI botnet".
-        # Trailing boundary dropped intentionally to allow plurals.
         pattern = re.compile(r"(?<![a-z0-9])" + re.escape(needle))
         if pattern.search(haystack):
             return True
@@ -37,21 +35,41 @@ _RELEVANCE_PROMPT = (
     "AI crawler policy, AI training data, bot access / robots.txt, "
     "content-ecosystem regulation (AI), AI agent infrastructure, "
     "AI bot identity / auth. "
-    "Return a single JSON object: "
-    '{"is_relevant": true|false, "reason": "<one short sentence>"}'
+    "Always call the emit_verdict tool with your decision."
 )
+
+_TOOL = {
+    "name": "emit_verdict",
+    "description": "Emit a structured relevance verdict.",
+    "input_schema": {
+        "type": "object",
+        "properties": {
+            "is_relevant": {"type": "boolean"},
+            "reason": {"type": "string"},
+        },
+        "required": ["is_relevant", "reason"],
+    },
+}
 
 
 async def haiku_relevance(
     client: AsyncAnthropic, title: str, summary: str
 ) -> RelevanceVerdict:
-    """Stage 2: Haiku call returning structured verdict."""
+    """Stage 2: Haiku tool-use call returning a guaranteed-structured verdict."""
     resp = await client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=150,
+        max_tokens=200,
         system=_RELEVANCE_PROMPT,
+        tools=[_TOOL],
+        tool_choice={"type": "tool", "name": "emit_verdict"},
         messages=[{"role": "user", "content": f"Title: {title}\n\nSummary: {summary}"}],
     )
-    text = resp.content[0].text
-    data = json.loads(text)
-    return RelevanceVerdict(is_relevant=bool(data["is_relevant"]), reason=data["reason"])
+    for block in resp.content:
+        if getattr(block, "type", None) == "tool_use" and block.name == "emit_verdict":
+            args = block.input
+            return RelevanceVerdict(
+                is_relevant=bool(args.get("is_relevant", False)),
+                reason=str(args.get("reason", "")),
+            )
+    # Fallback: if the model refused to call the tool, treat as not relevant.
+    return RelevanceVerdict(is_relevant=False, reason="no tool_use returned")
