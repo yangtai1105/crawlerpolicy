@@ -1,0 +1,25 @@
+{
+  "last_run_at": "2026-04-19T06:15:05.062689+00:00",
+  "per_source_status": {
+    "claudebot": "ok",
+    "google-extended": "ok",
+    "perplexitybot": "ok",
+    "applebot-extended": "ok",
+    "microsoft-bot-docs": "ok",
+    "amazonbot": "ok",
+    "ccbot": "ok",
+    "cloudflare-blog": "ok",
+    "datadome-blog": "ok",
+    "uk-cma": "ok",
+    "eu-commission-digital": "ok",
+    "us-ftc": "ok",
+    "news-media-alliance": "ok",
+    "reddit-corporate": "ok",
+    "web-bot-auth-repo": "ok",
+    "mcp-spec": "ok",
+    "cloudflare-research": "ok",
+    "openai-blog": "ok",
+    "_sop": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CaCe2nph7U2DzokUXqY73'}"
+  },
+  "events_written": []
+}

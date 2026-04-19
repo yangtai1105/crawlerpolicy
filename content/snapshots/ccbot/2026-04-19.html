@@ -1,0 +1,27 @@
+Our CDX API endpoint is frequently abused and therefore heavily rate limited. If your client sends too many requests in a short period of time, your IP address may be temporarily blocked.
+To avoid connection issues, always use
+HTTPS
+(
+https://index.commoncrawl.org
+) — HTTP connections are not supported and may fail with browser or client errors.
+If you receive
+HTTP 503 responses
+, please
+slow down your request rate
+. These are a sign you've exceeded the acceptable request rate. If your IP is temporarily blocked, please
+wait 24 hours
+before trying again.
+Please sleep between calls to our API (including if you run your script repeatedly in a loop), don't run multiple threads at once on the same IP, and don't use proxy networks. You should also ensure that you are using a properly formulated
+UserAgent
+string (
+see RFC 9110
+).
+You may wish to use our columnar index via Amazon Athena or Apache Spark if your query involves broad or large-scale filtering. These tools are better suited to high-volume access patterns and provide more flexibility for complex queries.
+We also provide an official downloader client
+cc-downloader
+which is robust and polite. The
+cdx-toolkit
+project also serves as an example of good practices and politeness.
+Please refer to
+https://status.commoncrawl.org/
+to see the current load our systems are under.

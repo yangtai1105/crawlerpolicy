@@ -1,0 +1,12 @@
+Amazon respects the
+Robots Exclusion Protocol
+, honoring the user-agent and the allow/disallow directives. Amazon will fetch host-level robots.txt files or use a cached copy from the last 30 days. When a file can’t be fetched, Amazon will behave as if it does not exist.
+Amazon attempts to read robots.txt files at the host level (for example
+example.com
+), so it looks for robots.txt at
+example.com/robots.txt
+. If a domain has multiple hosts, then we will honor robots rules exposed under each host. For example, if there is also a
+site.example.com
+host, it will look for robots.txt at
+site.example.com/robots.txt
+When Amazon crawlers access web pages they respect the link-level rel=nofollow directive, and page level robots meta tags of noarchive (do not use the page for model training), noindex (do not index the page) and none (do not index the page). Amazon crawlers do not support the crawl-delay directive.
