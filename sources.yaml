@@ -1,0 +1,194 @@
+# AI Ecosystem Tracker — v1 source list (28 entries)
+# To add a new source: append an entry below and open a PR.
+# First run after merge is "catch-up" mode (records state, emits zero events).
+
+# ─── Pillar 1: Crawler / Bot documentation (HTML diff) ───
+
+- slug: gptbot
+  pillar: crawler
+  type: html_page
+  url: https://platform.openai.com/docs/gptbot
+  display_name: OpenAI GPTBot
+
+- slug: claudebot
+  pillar: crawler
+  type: html_page
+  url: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
+  display_name: Anthropic ClaudeBot
+
+- slug: google-extended
+  pillar: crawler
+  type: html_page
+  url: https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers
+  display_name: Google-Extended
+
+- slug: perplexitybot
+  pillar: crawler
+  type: html_page
+  url: https://docs.perplexity.ai/guides/bots
+  display_name: PerplexityBot
+
+- slug: applebot-extended
+  pillar: crawler
+  type: html_page
+  url: https://support.apple.com/en-us/119829
+  display_name: Applebot-Extended
+
+- slug: meta-externalagent
+  pillar: crawler
+  type: html_page
+  url: https://developers.facebook.com/docs/sharing/bot/
+  display_name: Meta-ExternalAgent
+
+- slug: microsoft-bot-docs
+  pillar: crawler
+  type: html_page
+  url: https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
+  display_name: Microsoft Bingbot / Copilot
+
+- slug: amazonbot
+  pillar: crawler
+  type: html_page
+  url: https://developer.amazon.com/amazonbot
+  display_name: Amazonbot
+
+- slug: ccbot
+  pillar: crawler
+  type: html_page
+  url: https://commoncrawl.org/faq
+  display_name: Common Crawl CCBot
+
+# ─── Pillar 2: Content ecosystem news (RSS + keyword filter + Haiku) ───
+
+- slug: cloudflare-blog
+  pillar: ecosystem
+  type: rss_feed
+  url: https://blog.cloudflare.com/rss/
+  keyword_filter: ["AI bot", "crawler", "scraper", "content", "robots.txt", "training", "AI training"]
+  display_name: Cloudflare Blog
+
+- slug: fastly-blog
+  pillar: ecosystem
+  type: rss_feed
+  url: https://www.fastly.com/blog/feed.xml
+  keyword_filter: ["AI bot", "crawler", "scraper", "training", "content"]
+  display_name: Fastly Blog
+
+- slug: akamai-blog
+  pillar: ecosystem
+  type: rss_feed
+  url: https://www.akamai.com/blog/rss.xml
+  keyword_filter: ["bot", "AI", "crawler", "scraper", "training"]
+  display_name: Akamai Blog
+
+- slug: datadome-blog
+  pillar: ecosystem
+  type: rss_feed
+  url: https://datadome.co/feed/
+  keyword_filter: ["AI", "crawler", "scraper", "bot", "LLM"]
+  display_name: DataDome Blog
+
+- slug: uk-cma
+  pillar: ecosystem
+  type: rss_feed
+  url: https://www.gov.uk/government/organisations/competition-and-markets-authority.atom
+  keyword_filter: ["AI", "artificial intelligence", "foundation model", "generative"]
+  display_name: UK CMA
+
+- slug: eu-commission-digital
+  pillar: ecosystem
+  type: rss_feed
+  url: https://ec.europa.eu/commission/presscorner/api/rss?language=EN
+  keyword_filter: ["AI", "artificial intelligence", "generative", "AI Act", "DSA", "DMA"]
+  display_name: EU Commission Press
+
+- slug: eu-ai-office
+  pillar: ecosystem
+  type: rss_feed
+  url: https://digital-strategy.ec.europa.eu/en/policies/ai-office/rss
+  keyword_filter: ["AI", "code of practice", "GPAI", "model"]
+  display_name: EU AI Office
+
+- slug: us-ftc
+  pillar: ecosystem
+  type: rss_feed
+  url: https://www.ftc.gov/news-events/news/press-releases/rss
+  keyword_filter: ["AI", "artificial intelligence", "generative", "chatbot", "training data", "large language"]
+  display_name: US FTC
+
+- slug: us-copyright-office
+  pillar: ecosystem
+  type: rss_feed
+  url: https://www.copyright.gov/rss/news.rss
+  keyword_filter: ["AI", "artificial intelligence", "machine learning", "training"]
+  display_name: US Copyright Office
+
+- slug: news-media-alliance
+  pillar: ecosystem
+  type: rss_feed
+  url: https://www.newsmediaalliance.org/feed/
+  keyword_filter: ["AI", "artificial intelligence", "LLM", "scraper", "training"]
+  display_name: News/Media Alliance
+
+- slug: reddit-corporate
+  pillar: ecosystem
+  type: rss_feed
+  url: https://redditinc.com/blog/rss.xml
+  keyword_filter: ["AI", "data", "API", "license", "bot"]
+  display_name: Reddit Corporate Blog
+
+# ─── Pillar 3: AI Agent ecosystem (mixed) ───
+
+- slug: ietf-web-bot-auth
+  pillar: agent
+  type: ietf_draft
+  draft_name: draft-cloudflare-httpbis-web-bot-auth
+  display_name: IETF Web Bot Auth
+
+- slug: web-bot-auth-repo
+  pillar: agent
+  type: github_repo
+  repo: cloudflareresearch/web-bot-auth
+  display_name: Web Bot Auth (spec repo)
+
+- slug: mcp-spec
+  pillar: agent
+  type: github_repo
+  repo: modelcontextprotocol/specification
+  pr_labels: ["spec", "rfc"]
+  display_name: Model Context Protocol (spec)
+
+- slug: browserbase-blog
+  pillar: agent
+  type: rss_feed
+  url: https://www.browserbase.com/blog/rss.xml
+  keyword_filter: ["agent", "bot", "browser", "auth", "MCP"]
+  display_name: Browserbase Blog
+
+- slug: cloudflare-research
+  pillar: agent
+  type: rss_feed
+  url: https://blog.cloudflare.com/tag/research/rss/
+  keyword_filter: ["bot", "agent", "auth", "identity", "scraper"]
+  display_name: Cloudflare Research Blog
+
+- slug: anthropic-news
+  pillar: agent
+  type: rss_feed
+  url: https://www.anthropic.com/news/rss.xml
+  keyword_filter: ["agent", "operator", "bot", "crawler", "MCP", "Computer Use", "Claude Code"]
+  display_name: Anthropic News
+
+- slug: openai-blog
+  pillar: agent
+  type: rss_feed
+  url: https://openai.com/blog/rss.xml
+  keyword_filter: ["agent", "operator", "bot", "crawler", "Assistants", "ChatGPT agents"]
+  display_name: OpenAI Blog
+
+- slug: langchain-blog
+  pillar: agent
+  type: rss_feed
+  url: https://blog.langchain.dev/rss/
+  keyword_filter: ["agent", "bot", "MCP", "tool use"]
+  display_name: LangChain Blog
