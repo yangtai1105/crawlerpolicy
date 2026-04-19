@@ -17,7 +17,9 @@ def keyword_match(text: str, keywords: list[str]) -> bool:
         needle = kw.lower().strip()
         if not needle:
             continue
-        pattern = re.compile(r"(?<![a-z0-9])" + re.escape(needle) + r"(?![a-z0-9])")
+        # Leading boundary only, so "AI bot" matches "AI bots" / "AI botnet".
+        # Trailing boundary dropped intentionally to allow plurals.
+        pattern = re.compile(r"(?<![a-z0-9])" + re.escape(needle))
         if pattern.search(haystack):
             return True
     return False
