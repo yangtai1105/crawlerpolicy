@@ -92,16 +92,40 @@ async def fetch_wayback_snapshot(
     return WaybackSnapshot(archived_at=snap_dt, content=normalized, wayback_url=wayback_url)
 
 
+_MIN_READABLE_CHARS = 1500
+
+
 def _normalize(html: str, content_selector: str | None) -> str:
-    """Same normalization as fetch_html_page — stable text for hashing/diff."""
+    """Match fetch_html_page normalization: try readability or selector, but
+    fall back to full body text when the result is suspiciously short (common
+    on archived Intercom-style pages and developer-doc sidebars)."""
     if content_selector:
         soup = BeautifulSoup(html, "lxml")
         node = soup.select_one(content_selector)
-        if node is None:
-            # Fall back to readability if selector fails on the archived page.
-            node = BeautifulSoup(Document(html).summary(html_partial=True), "lxml")
-    else:
-        node = BeautifulSoup(Document(html).summary(html_partial=True), "lxml")
+        if node is not None:
+            text = _strip_and_join(node)
+            if text:
+                return text
+
+    readability_text = ""
+    try:
+        article_html = Document(html).summary(html_partial=True)
+        readability_text = _strip_and_join(BeautifulSoup(article_html, "lxml"))
+    except Exception:
+        readability_text = ""
+
+    if len(readability_text) >= _MIN_READABLE_CHARS:
+        return readability_text
+
+    soup = BeautifulSoup(html, "lxml")
+    for tag in soup.find_all(["script", "style", "noscript", "nav", "header", "footer", "aside"]):
+        tag.decompose()
+    body = soup.body or soup
+    full_text = _strip_and_join(body)
+    return full_text if len(full_text) > len(readability_text) else readability_text
+
+
+def _strip_and_join(node) -> str:
     for tag in node.find_all(["script", "style", "noscript"]):
         tag.decompose()
     text = node.get_text(separator="\n", strip=True)

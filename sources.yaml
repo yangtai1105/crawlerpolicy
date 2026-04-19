@@ -8,7 +8,10 @@
   pillar: crawler
   type: html_page
   url: https://developers.openai.com/api/docs/bots
-  display_name: OpenAI GPTBot
+  # Old canonical URL (pre-2026 rebrand) — Wayback has archives there, so we
+  # use it to seed a ~6-month historical baseline for comparison.
+  baseline_url: https://platform.openai.com/docs/gptbot
+  display_name: OpenAI Crawlers
 
 - slug: claudebot
   pillar: crawler
@@ -57,6 +60,22 @@
   type: html_page
   url: https://commoncrawl.org/faq
   display_name: Common Crawl CCBot
+
+# Gemini grounded-search coverage for crawler-ecosystem movement that
+# never lands on vendor doc pages (third-party observation, CDN analytics,
+# ecosystem commentary). References knownagents and Cloudflare Radar
+# explicitly so Gemini prioritizes them when relevant.
+- slug: gemini-crawler-insights
+  pillar: crawler
+  type: gemini_search
+  query: >-
+    AI crawler observations, bot behavior analytics, and crawler-policy news —
+    including pay-per-crawl developments, bot verification / Signed Agents adoption,
+    CDN bot-management research, and publisher-side crawler actions. Include findings from
+    knownagents.com/insights and radar.cloudflare.com/ai-insights where relevant,
+    and any vendor announcements about new crawler UAs or scope changes.
+  lookback_days: 30
+  display_name: Crawler insights (search)
 
 # ─── Pillar 2: Content ecosystem news (RSS + keyword filter + Haiku) ───
 

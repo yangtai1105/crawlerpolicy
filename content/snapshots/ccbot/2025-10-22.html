@@ -1,3 +1,87 @@
+Frequently Asked Questions
+Everything you need to know regarding general and technical questions about
+Common Crawl.
+General Questions
+What is Common Crawl?
+Common Crawl is a 501(c)(3) non-profit organization dedicated to providing a copy of the Internet to Internet researchers, companies and individuals at no cost for the purpose of research and analysis.
+What can you do with Common Crawl data?
+The possibilities are endless. People have used the data to improve language translation software, predict trends, track disease propagation, and much more.
+‍
+The crawl data is stored on Amazon’s S3 service, allowing it to be bulk downloaded as well as directly accessed for
+Map-Reduce
+processing in EC2.
+Can’t Google or Microsoft just do what Common Crawl does?
+Our goal is to democratize the data so that everyone, not just big companies, can do high-quality research and analysis.
+Under what terms is Common Crawl data released?
+As strong believers in Open Data, we apply as few restrictions as possible to the dataset.
+The terms we add (primarily in an effort to prevent abusive or illegal usage) are described on our
+‍
+Terms of Use
+page.
+Technical Questions
+What is the Common Crawl CCBot crawler?
+CCBot is a
+Nutch-based
+web crawler that makes use of the Apache Hadoop project.
+We use
+Map-Reduce
+to process and extract crawl candidates from our crawl database.
+This candidate list is sorted by host (domain name) and then distributed to a set of crawler servers.
+How does the Common Crawl CCBot identify itself?
+Our older bot identified itself with the
+User-Agent
+string
+CCBot/1.0 (+https://commoncrawl.org/bot.html)
+, and the current version identifies itself as
+CCBot/2.0
+. We may increment the version number in the future.
+‍
+Contact information (a link to the FAQs) is sent along with the
+User-Agent
+string.
+Will the Common Crawl CCBot make my website slow for other users?
+The CCBot crawler has a number of algorithms designed to prevent undue load on web servers for a given domain.
+We have taken great care to ensure that our crawler will never cause web servers to slow down or be inaccessible to other users.
+The crawler uses an adaptive back-off algorithm that slows down requests to your website if your web server is responding with a
+HTTP 429
+or
+5xx
+status. By default our crawler waits few seconds before sending the next request to the same site.
+How can I ask for a slower crawl if the Common Crawl CCBot is taking up too much bandwidth?
+We obey the
+Crawl-delay
+parameter for
+robots.txt
+. By increasing that number, you will indicate to CCBot to slow down the rate of crawling.
+For instance, to limit our crawler from request pages more than once every 2 seconds, add the following to your
+robots.txt
+file:
+‍
+User-agent: CCBot
+Crawl-delay: 2
+How can I block the Common Crawl CCBot?
+You configure your
+robots.txt
+file which uses the Robots Exclusion Protocol to block the crawler. Our bot’s exclusion
+User-Agent
+string is:
+CCBot
+.
+Add these lines to your
+robots.txt
+file and our crawler will stop crawling your website:
+‍
+User-agent: CCBot
+Disallow: /
+We will periodically continue to check if the
+robots.txt
+file has been updated.
+Can I add my website to Common Crawl?
+Common Crawl's dataset is a sample of the web, and we do not generally archive any entire website but a randomly selected subset of it. Our crawler supports the Sitemap Protocol and utilizes any Sitemap announced in the
+robots.txt
+file; you can learn more here about setting that up for us to crawl your website more effectively if our crawler visits it:
+https://www.sitemaps.org/
+Why am I getting connection errors or 5xx responses from index.commoncrawl.org?
 Our CDX API endpoint is frequently abused and therefore heavily rate limited. If your client sends too many requests in a short period of time, your IP address may be temporarily blocked.
 To avoid connection issues, always use
 HTTPS
@@ -25,3 +109,93 @@ project also serves as an example of good practices and politeness.
 Please refer to
 https://status.commoncrawl.org/
 to see the current load our systems are under.
+How can I ensure the Common Crawl CCBot can crawl my site effectively?
+The crawler supports the
+Sitemap Protocol
+and utilizes any
+Sitemap
+announced in the
+robots.txt
+file.
+Does the Common Crawl CCBot support conditional
+GET
+and/or compression?
+We do support conditional
+GET
+requests. We also currently support the
+gzip
+and
+Brotli
+encoding formats.
+Why is the Common Crawl CCBot crawling pages I don’t have links to?
+The bot may have found your pages by following links from other sites.
+What is the IP range of the Common Crawl CCBot?
+The current IP address ranges are as follows:
+IP CIDR blocks as of 2024-11-29:
+IPv6 (no reverse DNS)
+2600:1f28:365:80b0::/60
+IPv4
+18.97.9.168/29
+18.97.14.80/29
+18.97.14.88/30
+98.85.178.216/32
+This information is also provided as JSON at
+https://index.commoncrawl.org/ccbot.json
+.
+CCBot is now run on dedicated IP address ranges with reverse DNS. This allows webmasters to verify whether a logged request stems from the real CCBot, for example:
+$> host 18.97.14.84
+84.14.97.18.in-addr.arpa domain name pointer 18-97-14-84.crawl.commoncrawl.org.
+$> host 18-97-14-84.crawl.commoncrawl.org
+18-97-14-84.crawl.commoncrawl.org has address 18.97.14.84
+$> dig -x 18.97.14.84
+;; ANSWER SECTION:
+84.14.97.18.in-addr.arpa. 276   IN      PTR     18-97-14-84.crawl.commoncrawl.org.
+$> dig 18-97-14-84.crawl.commoncrawl.org A
+;; ANSWER SECTION:
+18-97-14-84.crawl.commoncrawl.org. 275 IN A     18.97.14.84
+Does the Common Crawl CCBot support
+nofollow
+?
+We currently honor the
+nofollow
+attribute as it applies to links embedded on your site.
+It should be noted that this attribute value is not meant for blocking access to content or preventing content to be indexed by search engines; instead, it is primarily used by site authors to prevent search engines such as Google from having the source page’s PageRank impact the PageRank of linked targets.
+If we ever did ignore
+nofollow
+in the future, we would do so only for the purposes of link discovery and would never create any association between the discovered link and the source document.
+Need a more specific answer?
+Can’t find the answer you’re looking for? Please chat to our friendly team.
+Get in touch
+The Data
+Overview
+Web Graphs
+Latest Crawl
+Crawl Stats
+Graph Stats
+Errata
+Resources
+Get Started
+AI Agent
+Blog
+Examples
+Use Cases
+CCBot
+Infra Status
+Opt-out Registry
+FAQ
+Community
+Research Papers
+Mailing List Archive
+Hugging Face
+Discord
+Collaborators
+About
+Team
+Jobs
+Mission
+Impact
+Privacy Policy
+Terms of Use
+©
+2025
+Common Crawl

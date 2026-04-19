@@ -44,9 +44,12 @@ async def bootstrap(cfg: Config) -> None:
             log.info("%s: already has a snapshot ≥30 days old, skipping", source.slug)
             continue
 
+        # If the tracked URL changed recently, pull Wayback from the old URL
+        # so we still get a historical baseline to diff against.
+        lookup_url = source.baseline_url or source.url
         try:
             snap = await fetch_wayback_snapshot(
-                source.url,
+                lookup_url,
                 target_days_ago=180,
                 window_start_days=150,
                 window_end_days=400,

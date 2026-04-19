@@ -34,6 +34,11 @@ class Source(BaseModel):
     url: str | None = None
     content_selector: str | None = None
 
+    # Optional: when the tracked URL changed recently (vendor rebrand / URL
+    # restructure), this URL is used by bootstrap_baseline for Wayback lookup
+    # so we still get a ~6-month historical baseline to diff against.
+    baseline_url: str | None = None
+
     # rss_feed
     keyword_filter: list[str] | None = None
 
