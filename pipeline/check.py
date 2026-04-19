@@ -18,6 +18,8 @@ from pipeline.config import Config
 from pipeline.differ import compute_diff
 from pipeline.event_writer import write_event
 from pipeline.fetchers.base import FetchResult, ResultMode
+from pipeline.fetchers.cf_browser_run import fetch_cf_browser_run
+from pipeline.fetchers.gemini_search import fetch_gemini_search
 from pipeline.fetchers.github_repo import fetch_github_repo
 from pipeline.fetchers.html_page import fetch_html_page
 from pipeline.fetchers.ietf_draft import fetch_ietf_draft
@@ -52,6 +54,12 @@ async def _default_fetch(source: Source, state: SourceState) -> FetchResult:
         )
     if source.type == SourceType.IETF_DRAFT:
         return await fetch_ietf_draft(source)
+    if source.type == SourceType.GEMINI_SEARCH:
+        return await fetch_gemini_search(
+            source, since=state.last_checked_at, seen_guids=state.last_seen_guids
+        )
+    if source.type == SourceType.CF_BROWSER_RUN:
+        return await fetch_cf_browser_run(source)
     raise ValueError(f"unknown source type {source.type}")
 
 
@@ -154,19 +162,26 @@ async def _process_result(
                 content=result.normalized_content,
                 ext=result.raw_ext,
             )
-        # Catch-up: first-ever snapshot → no event
-        if state.first_seen or prev is None or prev[0] == result.normalized_content:
+        # Catch-up: first-ever snapshot → no event.
+        # Exception: gemini_search "first run" is itself a valid digest event,
+        # since the query is explicitly recurring and there's no
+        # previous-page-state to silently migrate from.
+        is_catchup = (state.first_seen or prev is None) and source.type != SourceType.GEMINI_SEARCH
+        if is_catchup or (prev is not None and prev[0] == result.normalized_content):
             state.first_seen = False
             state.last_hash = new_hash
             return new_events, state
-        diff = compute_diff(prev[0], result.normalized_content)
+        # gemini_search + no prior snapshot: treat baseline as empty string so
+        # the first run produces a full-report event instead of crashing on prev[0].
+        prev_content = prev[0] if prev is not None else ""
+        diff = compute_diff(prev_content, result.normalized_content)
         if not diff.has_changes:
             state.last_hash = new_hash
             return new_events, state
         analysis: AnalysisResult = await analyze_change(
             client=client,
             source=source,
-            prev_content=prev[0],
+            prev_content=prev_content,
             curr_content=result.normalized_content,
             unified_diff=diff.unified_diff,
         )

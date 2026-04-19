@@ -1,19 +1,15 @@
-# AI Ecosystem Tracker — v1 source list
-# To add a new source: append an entry below and open a PR.
-# First run after merge is "catch-up" mode (records state, emits zero events).
-#
-# NOTE: 10 sources in the original 28-source v1 plan are currently commented out
-# because their official URLs returned 403/404 during initial smoke test. URL
-# discovery for these is tracked separately — uncomment as correct URLs are
-# confirmed. The 18 active sources below form a fully functional v1.
+# AI Ecosystem Tracker — source configuration
+# Types: html_page | rss_feed | github_repo | ietf_draft | gemini_search | cf_browser_run
+# Use cf_browser_run ONLY for sites Python/httpx can't fetch directly.
 
 # ─── Pillar 1: Crawler / Bot documentation (HTML diff) ───
 
-# TODO(url-discovery): gptbot — platform.openai.com is CF-challenged.
-# Candidates to try: https://openai.com/gptbot ; https://platform.openai.com/docs/bots
+# gptbot via cf_browser_run timed out at 420s (CF-challenged + JS render on
+# platform.openai.com takes >7 min). Disabled until we either raise the
+# timeout or find a lighter alternative (e.g. https://openai.com/gptbot).
 # - slug: gptbot
 #   pillar: crawler
-#   type: html_page
+#   type: cf_browser_run
 #   url: https://platform.openai.com/docs/gptbot
 #   display_name: OpenAI GPTBot
 
@@ -41,13 +37,11 @@
   url: https://support.apple.com/en-us/119829
   display_name: Applebot-Extended
 
-# TODO(url-discovery): meta-externalagent — old URL returns 400 post-redirect.
-# Meta's bot docs moved; verify current canonical page.
-# - slug: meta-externalagent
-#   pillar: crawler
-#   type: html_page
-#   url: https://developers.facebook.com/docs/sharing/bot/
-#   display_name: Meta-ExternalAgent
+- slug: meta-externalagent
+  pillar: crawler
+  type: cf_browser_run
+  url: https://developers.facebook.com/docs/sharing/webmasters/web-crawlers
+  display_name: Meta-ExternalAgent
 
 - slug: microsoft-bot-docs
   pillar: crawler
@@ -76,22 +70,6 @@
   keyword_filter: ["AI bot", "crawler", "scraper", "content", "robots.txt", "training", "AI training"]
   display_name: Cloudflare Blog
 
-# TODO(url-discovery): fastly-blog — /blog/feed.xml returns 404. Check feed discovery.
-# - slug: fastly-blog
-#   pillar: ecosystem
-#   type: rss_feed
-#   url: https://www.fastly.com/blog/feed.xml
-#   keyword_filter: ["AI bot", "crawler", "scraper", "training", "content"]
-#   display_name: Fastly Blog
-
-# TODO(url-discovery): akamai-blog — returns 403 CF challenge.
-# - slug: akamai-blog
-#   pillar: ecosystem
-#   type: rss_feed
-#   url: https://www.akamai.com/blog/rss.xml
-#   keyword_filter: ["bot", "AI", "crawler", "scraper", "training"]
-#   display_name: Akamai Blog
-
 - slug: datadome-blog
   pillar: ecosystem
   type: rss_feed
@@ -106,6 +84,18 @@
   keyword_filter: ["AI", "artificial intelligence", "foundation model", "generative"]
   display_name: UK CMA
 
+- slug: uk-cma-google-search-case
+  pillar: ecosystem
+  type: html_page
+  url: https://www.gov.uk/cma-cases/googles-general-search-and-search-advertising-services
+  display_name: UK CMA — Google Search case docs index
+
+- slug: uk-gov-agentic-ai
+  pillar: ecosystem
+  type: html_page
+  url: https://www.gov.uk/government/publications/agentic-ai-and-consumers/agentic-ai-and-consumers
+  display_name: UK Gov — Agentic AI and Consumers
+
 - slug: eu-commission-digital
   pillar: ecosystem
   type: rss_feed
@@ -113,28 +103,12 @@
   keyword_filter: ["AI", "artificial intelligence", "generative", "AI Act", "DSA", "DMA"]
   display_name: EU Commission Press
 
-# TODO(url-discovery): eu-ai-office — redirects to page-not-found.
-# - slug: eu-ai-office
-#   pillar: ecosystem
-#   type: rss_feed
-#   url: https://digital-strategy.ec.europa.eu/en/policies/ai-office/rss
-#   keyword_filter: ["AI", "code of practice", "GPAI", "model"]
-#   display_name: EU AI Office
-
 - slug: us-ftc
   pillar: ecosystem
   type: rss_feed
   url: https://www.ftc.gov/news-events/news/press-releases/rss
   keyword_filter: ["AI", "artificial intelligence", "generative", "chatbot", "training data", "large language"]
   display_name: US FTC
-
-# TODO(url-discovery): us-copyright-office — /rss/news.rss returns 404.
-# - slug: us-copyright-office
-#   pillar: ecosystem
-#   type: rss_feed
-#   url: https://www.copyright.gov/rss/news.rss
-#   keyword_filter: ["AI", "artificial intelligence", "machine learning", "training"]
-#   display_name: US Copyright Office
 
 - slug: news-media-alliance
   pillar: ecosystem
@@ -152,14 +126,6 @@
 
 # ─── Pillar 3: AI Agent ecosystem (mixed) ───
 
-# TODO(url-discovery): ietf-web-bot-auth — draft name not found in datatracker.
-# Need to look up actual draft name; may be draft-meunier-* or a different ID.
-# - slug: ietf-web-bot-auth
-#   pillar: agent
-#   type: ietf_draft
-#   draft_name: draft-cloudflare-httpbis-web-bot-auth
-#   display_name: IETF Web Bot Auth
-
 - slug: web-bot-auth-repo
   pillar: agent
   type: github_repo
@@ -173,29 +139,12 @@
   pr_labels: ["spec", "rfc"]
   display_name: Model Context Protocol (spec)
 
-# TODO(url-discovery): browserbase-blog — /blog/rss.xml returns 404.
-# - slug: browserbase-blog
-#   pillar: agent
-#   type: rss_feed
-#   url: https://www.browserbase.com/blog/rss.xml
-#   keyword_filter: ["agent", "bot", "browser", "auth", "MCP"]
-#   display_name: Browserbase Blog
-
 - slug: cloudflare-research
   pillar: agent
   type: rss_feed
   url: https://blog.cloudflare.com/tag/research/rss/
   keyword_filter: ["bot", "agent", "auth", "identity", "scraper"]
   display_name: Cloudflare Research Blog
-
-# TODO(url-discovery): anthropic-news — /news/rss.xml returns 404. Anthropic may
-# not publish a public RSS feed; consider html_page of the news index instead.
-# - slug: anthropic-news
-#   pillar: agent
-#   type: rss_feed
-#   url: https://www.anthropic.com/news/rss.xml
-#   keyword_filter: ["agent", "operator", "bot", "crawler", "MCP", "Computer Use", "Claude Code"]
-#   display_name: Anthropic News
 
 - slug: openai-blog
   pillar: agent
@@ -204,11 +153,43 @@
   keyword_filter: ["agent", "operator", "bot", "crawler", "Assistants", "ChatGPT agents"]
   display_name: OpenAI News
 
-# TODO(url-discovery): langchain-blog — blog.langchain.dev/rss/ redirects to
-# langchain.com/blog (HTML, not RSS). Substack feed may be at a different URL.
-# - slug: langchain-blog
-#   pillar: agent
-#   type: rss_feed
-#   url: https://blog.langchain.dev/rss/
-#   keyword_filter: ["agent", "bot", "MCP", "tool use"]
-#   display_name: LangChain Blog
+# ─── Gemini grounded-search discovery (one call/day per query) ───
+# Each of these runs once per day, returns the top grounded search results
+# as candidate items. Covers territory that's hard to track via fixed URLs
+# (news across many outlets, regulator actions not in any single feed,
+# emerging agent/standards movement).
+
+- slug: gemini-ai-licensing-deals
+  pillar: ecosystem
+  type: gemini_search
+  query: "New AI training data licensing deals, content partnerships, or lawsuits between AI companies and publishers, rights holders, or platforms"
+  lookback_days: 14
+  display_name: AI licensing & training deals (search)
+
+- slug: gemini-content-blocking
+  pillar: ecosystem
+  type: gemini_search
+  query: "New tools, policies, or announcements for publishers to block, charge, or control AI crawlers (e.g. robots.txt changes, paywalls for AI training, pay-per-crawl, content authenticity / provenance)"
+  lookback_days: 14
+  display_name: Content-blocking & pay-for-content (search)
+
+- slug: gemini-regulator-ai-content
+  pillar: ecosystem
+  type: gemini_search
+  query: "Regulatory action from UK CMA, EU Commission, EU AI Office, Italian Garante, US FTC, or US Copyright Office specifically concerning AI training data, AI crawlers, content licensing, or generative AI and copyright"
+  lookback_days: 30
+  display_name: Regulator action on AI content (search)
+
+- slug: gemini-agent-standards
+  pillar: agent
+  type: gemini_search
+  query: "New or updated IETF drafts, W3C proposals, or standards-body activity on AI agent authentication, web bot auth, agents.txt, llms.txt, or agent identity"
+  lookback_days: 30
+  display_name: Agent & bot-auth standards (search)
+
+- slug: gemini-agent-infra
+  pillar: agent
+  type: gemini_search
+  query: "New features, integrations, or announcements from AI agent infrastructure vendors (Browserbase, Stagehand, LangChain agents, CrewAI, AutoGen, Anthropic Computer Use, OpenAI Operator, Google Agent Development Kit) — focus on protocol and bot-identity features"
+  lookback_days: 14
+  display_name: Agent infrastructure movement (search)

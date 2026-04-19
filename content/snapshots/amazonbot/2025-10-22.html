@@ -1,0 +1,14 @@
+Amazonbot respects the robots.txt protocol, honors the user-agent and the allow/disallow directives, enabling webmasters to manage how crawlers access their site. Amazonbot attempts to read robots.txt files at the host level (for example example.com), so it looks for robots.txt at example.com/robots.txt. If a domain has multiple hosts, then we will honor robots rules exposed under each host. For example, in this scenario, if there is also a site.example.com host, it will look for robots.txt at example.com/robots.txt and also at site.example.com/robots.txt. If example.com/robots.txt blocks Amazonbot, but there are no robots.txt files on site.example.com or page.example.com, then Amazonbot cannot crawl example.com (blocked by its robots.txt), but will crawl site.example.com and page.example.com.
+In the event Amazonbot cannot fetch robots.txt due to IP or user agent blocking, parsing errors, network timeouts, or any other non-successful status codes (such as 3XX, 4XX or 5XX), Amazonbot will attempt to refetch robots.txt or use a cached copy from the last 30 days. If both these approaches fail, Amazonbot will behave as if robots.txt does not exist and will crawl the site. When accessible, Amazonbot will respond to changes in robots.txt files within 24 hours.
+Amazonbot honors the "Robots Exclusion protocol" defined at (
+https://www.rfc-editor.org/rfc/rfc9309.html
+) and recognizes the following fields. The field names are interpreted as case-insensitive. However the values for each of these fields are case-sensitive.
+user-agent
+: identifies which crawler the rules apply to.
+allow
+: a URL path that may be crawled.
+disallow
+: a URL path that may not be crawled.
+sitemap
+: the complete URL of a sitemap.
+Note: Amazonbot does not currently support the crawl-delay directive

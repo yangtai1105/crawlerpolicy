@@ -1,12 +1,12 @@
 {
-  "generated_at": "2026-04-19T06:44:06.524131+00:00",
+  "generated_at": "2026-04-19T20:20:28.999309+00:00",
   "entries": [
     {
       "slug": "claudebot",
       "display_name": "Anthropic ClaudeBot",
       "supports_robots_txt": null,
       "supports_user_agent_opt_out": null,
-      "policy_url": "https://www.anthropic.com",
+      "policy_url": "<UNKNOWN>",
       "days_since_last_change": 0,
       "last_snapshot_date": "2026-04-19"
     },
@@ -38,11 +38,20 @@
       "last_snapshot_date": "2026-04-19"
     },
     {
+      "slug": "meta-externalagent",
+      "display_name": "Meta-ExternalAgent",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    },
+    {
       "slug": "microsoft-bot-docs",
       "display_name": "Microsoft Bingbot / Copilot",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://www.bingbot.msn.com/en-us/webmasters/crawling",
+      "policy_url": "https://www.microsoft.com/en-us/bing/webmasters/crawling-and-indexing",
       "days_since_last_change": 0,
       "last_snapshot_date": "2026-04-19"
     },
@@ -51,7 +60,7 @@
       "display_name": "Amazonbot",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE35MHWXV99",
+      "policy_url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE35AF4ER63",
       "days_since_last_change": 0,
       "last_snapshot_date": "2026-04-19"
     },
@@ -60,7 +69,7 @@
       "display_name": "Common Crawl CCBot",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://commoncrawl.org/",
+      "policy_url": "https://commoncrawl.org/get-started/crawling-policies/",
       "days_since_last_change": 0,
       "last_snapshot_date": "2026-04-19"
     }

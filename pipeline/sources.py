@@ -20,6 +20,8 @@ class SourceType(str, Enum):
     RSS_FEED = "rss_feed"
     GITHUB_REPO = "github_repo"
     IETF_DRAFT = "ietf_draft"
+    GEMINI_SEARCH = "gemini_search"
+    CF_BROWSER_RUN = "cf_browser_run"
 
 
 class Source(BaseModel):
@@ -43,12 +45,16 @@ class Source(BaseModel):
     # ietf_draft
     draft_name: str | None = None
 
+    # gemini_search
+    query: str | None = None
+    lookback_days: int | None = None
+
     # Optional Sonnet/Opus override per source
     model: str | None = None
 
     @model_validator(mode="after")
     def _validate_type_requirements(self) -> Self:
-        if self.type in (SourceType.HTML_PAGE, SourceType.RSS_FEED) and not self.url:
+        if self.type in (SourceType.HTML_PAGE, SourceType.RSS_FEED, SourceType.CF_BROWSER_RUN) and not self.url:
             raise ValueError(f"source {self.slug}: {self.type} requires `url`")
         if self.type == SourceType.RSS_FEED and not self.keyword_filter:
             raise ValueError(f"source {self.slug}: rss_feed requires `keyword_filter`")
@@ -56,6 +62,8 @@ class Source(BaseModel):
             raise ValueError(f"source {self.slug}: github_repo requires `repo`")
         if self.type == SourceType.IETF_DRAFT and not self.draft_name:
             raise ValueError(f"source {self.slug}: ietf_draft requires `draft_name`")
+        if self.type == SourceType.GEMINI_SEARCH and not self.query:
+            raise ValueError(f"source {self.slug}: gemini_search requires `query`")
         return self
 
 
