@@ -1,0 +1,184 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import EventCard from "../../components/EventCard.astro";
+import PillarTag from "../../components/PillarTag.astro";
+import { loadPillarDigests } from "../../lib/pillar_digests";
+import { loadSources } from "../../lib/sources";
+
+export async function getStaticPaths() {
+  return [
+    { params: { pillar: "crawler" } },
+    { params: { pillar: "ecosystem" } },
+    { params: { pillar: "agent" } },
+  ];
+}
+
+const { pillar } = Astro.params;
+const digests = loadPillarDigests();
+if (!digests) {
+  throw new Error("data/pillar-digests.json not found — run pipeline first");
+}
+const digest = digests[pillar as "crawler" | "ecosystem" | "agent"];
+
+const events = (await getCollection("events"))
+  .filter(
+    (e) =>
+      e.data.pillar === pillar &&
+      e.data.change_kind === "material",
+  )
+  .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime())
+  .slice(0, 30);
+
+const sources = loadSources().filter((s) => s.pillar === pillar);
+
+const pillarLabels = {
+  crawler: "Crawler docs",
+  ecosystem: "Content ecosystem",
+  agent: "Agent infrastructure",
+};
+const pillarLabel = pillarLabels[pillar as keyof typeof pillarLabels];
+---
+
+<Base title={`State of ${pillarLabel.toLowerCase()}`}>
+  <article class="container pillar-page">
+    <header class={`pillar-page-head pillar-${pillar}`}>
+      <div class="pillar-page-meta">
+        <PillarTag pillar={pillar as "crawler" | "ecosystem" | "agent"} />
+        <span class="window-label">
+          {digests.window_days}-day briefing · {digest.event_count} material event{digest.event_count !== 1 ? "s" : ""}
+        </span>
+      </div>
+      <h1 class="pillar-page-headline">{digest.headline}</h1>
+      <p class="pillar-page-body">{digest.body}</p>
+      {digest.themes && digest.themes.length > 0 && (
+        <ul class="pillar-page-themes">
+          {digest.themes.map((t) => <li>{t}</li>)}
+        </ul>
+      )}
+      <p class="digest-footnote">
+        Synthesized by Claude Haiku 4.5 from the last {digests.window_days} days of detected events in this pillar.
+        Regenerates each daily run. <a href="/about">Methodology</a>.
+      </p>
+    </header>
+
+    <section class="pillar-page-section">
+      <div class="label">Events in this pillar</div>
+      {events.length > 0 ? (
+        <div>
+          {events.map((e) => (
+            <EventCard slug={e.id} data={e.data} body={e.body ?? ""} />
+          ))}
+        </div>
+      ) : (
+        <p class="empty">No material events in this window.</p>
+      )}
+    </section>
+
+    {sources.length > 0 && (
+      <section class="pillar-page-section">
+        <div class="label">Tracked sources in this pillar ({sources.length})</div>
+        <ul class="sources-list">
+          {sources.map((s) => (
+            <li>
+              <a href={`/sources/${s.slug}`}>
+                <span class="source-name">{s.display_name}</span>
+                <span class="source-type">{s.type}</span>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </article>
+</Base>
+
+<style>
+  .pillar-page { max-width: 780px; padding: var(--space-6) var(--space-5); }
+
+  .pillar-page-head {
+    padding: var(--space-5) 0 var(--space-6);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--space-6);
+    border-top: 3px solid var(--border);
+    padding-top: var(--space-5);
+  }
+  .pillar-page-head.pillar-crawler { border-top-color: var(--pillar-crawler); }
+  .pillar-page-head.pillar-ecosystem { border-top-color: var(--pillar-ecosystem); }
+  .pillar-page-head.pillar-agent { border-top-color: var(--pillar-agent); }
+
+  .pillar-page-meta {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+  }
+  .window-label { font-size: 0.78rem; color: var(--ink-muted); }
+
+  .pillar-page-headline {
+    font-family: var(--font-display);
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: -0.015em;
+    margin: 0 0 var(--space-4);
+  }
+  .pillar-page-body {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 var(--space-4);
+  }
+
+  .pillar-page-themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    list-style: none;
+    margin: 0 0 var(--space-4);
+    padding: 0;
+  }
+  .pillar-page-themes li {
+    font-size: 0.75rem;
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    padding: 3px 10px;
+    border-radius: 3px;
+    color: var(--ink-muted);
+  }
+
+  .digest-footnote {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+  .digest-footnote a { color: var(--pillar-ecosystem); }
+
+  .pillar-page-section { margin-bottom: var(--space-7); }
+  .pillar-page-section .label { margin-bottom: var(--space-3); }
+  .empty { color: var(--ink-muted); font-size: 0.88rem; }
+
+  .sources-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg-elev);
+  }
+  .sources-list li { border-bottom: 1px solid var(--border); }
+  .sources-list li:last-child { border-bottom: 0; }
+  .sources-list a {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-3) var(--space-4);
+    color: var(--ink);
+  }
+  .sources-list a:hover { background: var(--bg-hover); color: var(--pillar-ecosystem); }
+  .source-name { font-weight: 500; }
+  .source-type {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+</style>
