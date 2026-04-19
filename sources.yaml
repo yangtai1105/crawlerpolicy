@@ -11,55 +11,55 @@
   # Old canonical URL (pre-2026 rebrand) — Wayback has archives there, so we
   # use it to seed a ~6-month historical baseline for comparison.
   baseline_url: https://platform.openai.com/docs/gptbot
-  display_name: OpenAI Crawlers
+  display_name: OpenAI
 
 - slug: claudebot
   pillar: crawler
   type: html_page
   url: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
-  display_name: Anthropic ClaudeBot
+  display_name: Anthropic
 
 - slug: google-extended
   pillar: crawler
   type: html_page
   url: https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers
-  display_name: Google-Extended
+  display_name: Google
 
 - slug: perplexitybot
   pillar: crawler
   type: html_page
   url: https://docs.perplexity.ai/guides/bots
-  display_name: PerplexityBot
+  display_name: Perplexity
 
 - slug: applebot-extended
   pillar: crawler
   type: html_page
   url: https://support.apple.com/en-us/119829
-  display_name: Applebot-Extended
+  display_name: Apple
 
 - slug: meta-externalagent
   pillar: crawler
   type: cf_browser_run
   url: https://developers.facebook.com/docs/sharing/webmasters/web-crawlers
-  display_name: Meta-ExternalAgent
+  display_name: Meta
 
 - slug: microsoft-bot-docs
   pillar: crawler
   type: html_page
   url: https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
-  display_name: Microsoft Bingbot / Copilot
+  display_name: Microsoft
 
 - slug: amazonbot
   pillar: crawler
   type: html_page
   url: https://developer.amazon.com/amazonbot
-  display_name: Amazonbot
+  display_name: Amazon
 
 - slug: ccbot
   pillar: crawler
   type: html_page
   url: https://commoncrawl.org/faq
-  display_name: Common Crawl CCBot
+  display_name: Common Crawl
 
 # Gemini grounded-search coverage for crawler-ecosystem movement that
 # never lands on vendor doc pages (third-party observation, CDN analytics,

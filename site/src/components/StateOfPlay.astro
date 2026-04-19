@@ -1,10 +1,18 @@
 ---
 import { loadOptOutMatrix } from "../lib/sop";
+import { findSource } from "../lib/sources";
 
 const matrix = loadOptOutMatrix();
-const total = matrix.entries.length;
-const withRobots = matrix.entries.filter((e) => e.supports_robots_txt === true).length;
-const withUA = matrix.entries.filter((e) => e.supports_user_agent_opt_out === true).length;
+// Resolve display names from sources.yaml at render time so renaming a source
+// there (e.g. 'OpenAI Crawlers' → 'OpenAI') doesn't require regenerating
+// opt-out-matrix.json.
+const entries = matrix.entries.map((e) => ({
+  ...e,
+  display_name: findSource(e.slug)?.display_name ?? e.display_name,
+}));
+const total = entries.length;
+const withRobots = entries.filter((e) => e.supports_robots_txt === true).length;
+const withUA = entries.filter((e) => e.supports_user_agent_opt_out === true).length;
 ---
 
 <aside class="sop">
@@ -13,7 +21,7 @@ const withUA = matrix.entries.filter((e) => e.supports_user_agent_opt_out === tr
     {total > 0 ? (
       <>
         <ul class="sop-list">
-          {matrix.entries.map((e) => (
+          {entries.map((e) => (
             <li>
               <a href={`/sources/${e.slug}`} class="sop-row">
                 <span class="sop-name">{e.display_name}</span>
