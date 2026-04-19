@@ -28,7 +28,9 @@ from pipeline.relevance import haiku_relevance, keyword_match
 from pipeline.snapshots import hash_content, load_latest, save_snapshot
 from pipeline.sources import Pillar, Source, SourceType, load_sources
 from pipeline.state import SourceState, load_state, save_state
+from pipeline.pillar_digest import build_pillar_digests
 from pipeline.state_of_play import build_opt_out_matrix
+from pipeline.trend_context import format_trend_context, load_recent_events_for_source
 
 log = logging.getLogger("check")
 
@@ -39,6 +41,19 @@ BACKFILL_DAYS = 30
 
 
 FetchDispatch = Callable[[Source, SourceState], Awaitable[FetchResult]]
+
+
+def _maybe_trend_context(cfg: Config, source: Source) -> str:
+    """Build a compact history-of-this-source block for the analyzer prompt.
+
+    Crawler events are rare and self-standing; skip trend context there to keep
+    focus on the specific change. For ecosystem + agent sources, the last ~10
+    events provide genuinely useful pattern context.
+    """
+    if source.pillar == Pillar.CRAWLER:
+        return ""
+    recent = load_recent_events_for_source(cfg.events_dir, source.slug, limit=10)
+    return format_trend_context(recent)
 
 
 async def _default_fetch(source: Source, state: SourceState) -> FetchResult:
@@ -178,12 +193,14 @@ async def _process_result(
         if not diff.has_changes:
             state.last_hash = new_hash
             return new_events, state
+        trend_ctx = _maybe_trend_context(cfg, source)
         analysis: AnalysisResult = await analyze_change(
             client=client,
             source=source,
             prev_content=prev_content,
             curr_content=result.normalized_content,
             unified_diff=diff.unified_diff,
+            trend_context=trend_ctx,
         )
         if analysis.change_kind == "material" and not dry_run:
             path = write_event(
@@ -223,12 +240,14 @@ async def _process_result(
             verdict = await haiku_relevance(client, item.title, item.summary)
             relevance_pass = verdict.is_relevant
             if verdict.is_relevant:
+                trend_ctx = _maybe_trend_context(cfg, source)
                 analysis = await analyze_change(
                     client=client,
                     source=source,
                     prev_content="",
                     curr_content=item.body or item.summary,
                     unified_diff="",
+                    trend_context=trend_ctx,
                 )
                 if analysis.change_kind == "material" and not dry_run:
                     path = write_event(
@@ -302,6 +321,12 @@ def _cli() -> None:
             crawler_sources=crawler_sources,
             load_latest_snapshot=_load,
             out_path=cfg.data_dir / "opt-out-matrix.json",
+            now=now,
+        )
+        await build_pillar_digests(
+            client=client,
+            events_dir=cfg.events_dir,
+            out_path=cfg.data_dir / "pillar-digests.json",
             now=now,
         )
 

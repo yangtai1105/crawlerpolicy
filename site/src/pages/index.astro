@@ -1,97 +1,127 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
 import EventCard from "../components/EventCard.astro";
-import HeroBlock from "../components/HeroBlock.astro";
+import PillarDigestCard from "../components/PillarDigestCard.astro";
 import StateOfPlay from "../components/StateOfPlay.astro";
-import { countsByPillar } from "../lib/sources";
+import { countsByPillar, findSource } from "../lib/sources";
+import { loadPillarDigests } from "../lib/pillar_digests";
 
 const events = (await getCollection("events"))
   .filter((e) => e.data.change_kind === "material")
   .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime());
 
-// Hero: top-importance event in last 48h, or latest material event, or null.
-const now = Date.now();
-const within48h = events.filter(
-  (e) => now - e.data.detected_at.getTime() < 48 * 60 * 60 * 1000,
-);
-const heroCandidate =
-  within48h.sort((a, b) => b.data.importance - a.data.importance)[0] ??
-  events[0] ??
-  null;
+const digests = loadPillarDigests();
+const counts = countsByPillar();
 
-let heroBody: string | null = null;
-if (heroCandidate) {
-  // getCollection entries have a `body` string available directly
-  heroBody = heroCandidate.body ?? null;
+// "Key content" grid below the pillar cards: show the most recent event
+// per (source, pillar) cluster so readers get a menu of fronts rather than
+// a flat reverse-chron scroll.
+const latestBySource = new Map<string, typeof events[number]>();
+for (const e of events) {
+  if (!latestBySource.has(e.data.source)) latestBySource.set(e.data.source, e);
 }
+const keyContent = Array.from(latestBySource.values())
+  .sort((a, b) => {
+    // Prioritize by detection recency, but weight by importance.
+    const scoreA = a.data.importance + (a.data.detected_at.getTime() / 1e13);
+    const scoreB = b.data.importance + (b.data.detected_at.getTime() / 1e13);
+    return scoreB - scoreA;
+  })
+  .slice(0, 12);
 
-// Load bodies for feed preview
 const feedEntries = await Promise.all(
-  events.slice(0, 20).map(async (e) => ({
+  events.slice(0, 25).map(async (e) => ({
     slug: e.id,
     data: e.data,
     body: e.body ?? "",
   })),
 );
-
-const counts = countsByPillar();
-const total = counts.crawler + counts.ecosystem + counts.agent;
 ---
 
 <Base title="Feed">
-  <HeroBlock
-    slug={heroCandidate?.id ?? null}
-    data={heroCandidate?.data ?? null}
-    body={heroBody}
-    placeholder={{
-      title:
-        events.length === 0
-          ? `Baseline established. ${total} sources under watch — waiting for the first signal.`
-          : "Nothing material in the last 48 hours.",
-      message:
-        events.length === 0
-          ? `Tracking ${counts.crawler} AI crawler documentation pages, ${counts.ecosystem} content-ecosystem news sources, and ${counts.agent} agent infrastructure sources. Daily check at 08:00 UTC.`
-          : "See the feed below.",
-    }}
-  />
+  {digests ? (
+    <section class="pillars-strip">
+      <div class="container">
+        <div class="pillars-grid">
+          <PillarDigestCard pillar="crawler" digest={digests.crawler} windowDays={digests.window_days} />
+          <PillarDigestCard pillar="ecosystem" digest={digests.ecosystem} windowDays={digests.window_days} />
+          <PillarDigestCard pillar="agent" digest={digests.agent} windowDays={digests.window_days} />
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="empty-hero">
+      <div class="container">
+        <p class="label">Status</p>
+        <h1>Pillar digests not yet generated.</h1>
+        <p class="lede">
+          Run <code>uv run python -m pipeline.check</code> to produce the first 30-day rollups.
+          Tracking {counts.crawler} crawler sources, {counts.ecosystem} ecosystem sources,
+          and {counts.agent} agent-infra sources.
+        </p>
+      </div>
+    </section>
+  )}
 
   <div class="container home-body">
     <div class="home-grid">
       <section class="feed">
-        <div class="filter-bar">
-          <span class="label">Filter</span>
-          <button class="chip active" data-filter="all">All · {events.length}</button>
-          <button class="chip" data-filter="crawler">
-            Crawler · {events.filter((e) => e.data.pillar === "crawler").length}
-          </button>
-          <button class="chip" data-filter="ecosystem">
-            Ecosystem · {events.filter((e) => e.data.pillar === "ecosystem").length}
-          </button>
-          <button class="chip" data-filter="agent">
-            Agent · {events.filter((e) => e.data.pillar === "agent").length}
-          </button>
-        </div>
-
-        {feedEntries.length > 0 ? (
-          <div class="feed-list">
-            {feedEntries.map((e) => (
-              <div class="feed-item" data-pillar={e.data.pillar}>
-                <EventCard slug={e.slug} data={e.data} body={e.body} />
-              </div>
-            ))}
-          </div>
-        ) : (
-          <div class="feed-empty">
-            <p>
-              No material events yet. On each daily run, any substantive change to a tracked
-              source becomes an entry here with a machine-generated summary.
+        {keyContent.length > 0 && (
+          <section class="key-content">
+            <div class="label">Key sources</div>
+            <p class="section-lede">
+              Latest material change per tracked source — one card per front.
+              Click any card for the full LLM-written implication.
             </p>
-            <p>
-              Meanwhile, the <a href="/sources">sources</a> list shows everything under watch.
-            </p>
-          </div>
+            <div class="keys-grid">
+              {keyContent.map((e) => {
+                const src = findSource(e.data.source);
+                return (
+                  <a href={`/events/${e.id}`} class={`key-card pillar-${e.data.pillar}`}>
+                    <div class="key-source">
+                      <span class="key-source-name">{src?.display_name ?? e.data.source}</span>
+                      <span class="key-date">
+                        {e.data.detected_at.toISOString().slice(0, 10)}
+                      </span>
+                    </div>
+                    <div class="key-title">{e.data.title}</div>
+                  </a>
+                );
+              })}
+            </div>
+          </section>
         )}
+
+        <section class="all-feed">
+          <div class="filter-bar">
+            <span class="label">Recent events</span>
+            <button class="chip active" data-filter="all">All · {events.length}</button>
+            <button class="chip" data-filter="crawler">
+              Crawler · {events.filter((e) => e.data.pillar === "crawler").length}
+            </button>
+            <button class="chip" data-filter="ecosystem">
+              Ecosystem · {events.filter((e) => e.data.pillar === "ecosystem").length}
+            </button>
+            <button class="chip" data-filter="agent">
+              Agent · {events.filter((e) => e.data.pillar === "agent").length}
+            </button>
+          </div>
+
+          {feedEntries.length > 0 ? (
+            <div class="feed-list">
+              {feedEntries.map((e) => (
+                <div class="feed-item" data-pillar={e.data.pillar}>
+                  <EventCard slug={e.slug} data={e.data} body={e.body} />
+                </div>
+              ))}
+            </div>
+          ) : (
+            <div class="feed-empty">
+              <p>No material events yet.</p>
+            </div>
+          )}
+        </section>
       </section>
 
       <StateOfPlay />
@@ -100,23 +130,55 @@ const total = counts.crawler + counts.ecosystem + counts.agent;
 </Base>
 
 <script is:inline>
-  // Filter chips toggle card visibility client-side.
-  document.querySelectorAll(".filter-bar .chip").forEach((btn) => {
-    btn.addEventListener("click", () => {
-      document
-        .querySelectorAll(".filter-bar .chip")
-        .forEach((b) => b.classList.remove("active"));
-      btn.classList.add("active");
-      const filter = btn.dataset.filter;
-      document.querySelectorAll(".feed-item").forEach((item) => {
-        item.style.display =
-          filter === "all" || item.dataset.pillar === filter ? "" : "none";
-      });
+  // Filter chips (also honor ?pillar= from PillarDigestCard links)
+  const chips = document.querySelectorAll(".filter-bar .chip");
+  const items = document.querySelectorAll(".feed-item");
+  function applyFilter(f) {
+    chips.forEach((b) => b.classList.toggle("active", b.dataset.filter === f));
+    items.forEach((item) => {
+      item.style.display = f === "all" || item.dataset.pillar === f ? "" : "none";
     });
+  }
+  chips.forEach((btn) => {
+    btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
   });
+  const urlFilter = new URLSearchParams(location.search).get("pillar");
+  if (urlFilter && ["crawler", "ecosystem", "agent"].includes(urlFilter)) {
+    applyFilter(urlFilter);
+    // scroll to recent events section
+    document.querySelector(".filter-bar")?.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 </script>
 
 <style>
+  /* Pillar strip at top */
+  .pillars-strip {
+    background: var(--bg);
+    padding: var(--space-6) 0 var(--space-4);
+    border-bottom: 1px solid var(--border);
+  }
+  .pillars-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-4);
+    align-items: stretch;
+  }
+  @media (max-width: 900px) {
+    .pillars-grid { grid-template-columns: 1fr; }
+  }
+
+  .empty-hero {
+    background: #0a0a0a;
+    color: #f5f5f0;
+    padding: var(--space-7) 0;
+  }
+  .empty-hero h1 { font-size: 1.6rem; margin: var(--space-3) 0; max-width: 720px; }
+  .empty-hero .lede { color: rgba(245, 245, 240, 0.75); font-size: 0.95rem; }
+  .empty-hero .label { color: rgba(245, 245, 240, 0.55); }
+  .empty-hero code {
+    background: #222; padding: 2px 8px; border-radius: 3px; font-size: 0.85rem;
+  }
+
   .home-body { padding: var(--space-6) 0; }
 
   .home-grid {
@@ -128,6 +190,61 @@ const total = counts.crawler + counts.ecosystem + counts.agent;
     .home-grid { grid-template-columns: 1fr; }
   }
 
+  /* Key content grid */
+  .key-content { margin-bottom: var(--space-7); }
+  .section-lede {
+    color: var(--ink-muted);
+    font-size: 0.88rem;
+    margin: var(--space-2) 0 var(--space-5);
+    max-width: 640px;
+  }
+  .keys-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+  @media (max-width: 640px) {
+    .keys-grid { grid-template-columns: 1fr; }
+  }
+  .key-card {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
+    border-radius: 4px;
+    padding: var(--space-4);
+    color: var(--ink);
+    transition: border-color 120ms, background 120ms;
+  }
+  .key-card:hover {
+    border-color: var(--border-strong);
+    background: var(--bg-hover);
+    color: var(--ink);
+  }
+  .key-card.pillar-crawler { border-left-color: var(--pillar-crawler); }
+  .key-card.pillar-ecosystem { border-left-color: var(--pillar-ecosystem); }
+  .key-card.pillar-agent { border-left-color: var(--pillar-agent); }
+
+  .key-source {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.72rem;
+    color: var(--ink-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .key-source-name { color: var(--ink-muted); }
+  .key-date { font-variant-numeric: tabular-nums; }
+  .key-title {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    line-height: 1.3;
+    font-weight: 500;
+  }
+
+  /* Filter bar + recent feed (unchanged) */
   .filter-bar {
     display: flex;
     align-items: center;
@@ -138,7 +255,6 @@ const total = counts.crawler + counts.ecosystem + counts.agent;
     border-bottom: 1px solid var(--border);
   }
   .filter-bar .label { margin-right: var(--space-2); }
-
   .chip {
     background: transparent;
     border: 1px solid var(--border);
@@ -155,7 +271,6 @@ const total = counts.crawler + counts.ecosystem + counts.agent;
     color: var(--bg);
     border-color: var(--ink);
   }
-
   .feed-empty {
     border: 1px dashed var(--border);
     padding: var(--space-6);
@@ -163,6 +278,4 @@ const total = counts.crawler + counts.ecosystem + counts.agent;
     color: var(--ink-muted);
     font-size: 0.92rem;
   }
-  .feed-empty p { margin: 0 0 var(--space-3); }
-  .feed-empty p:last-child { margin: 0; }
 </style>

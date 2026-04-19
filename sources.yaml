@@ -4,14 +4,11 @@
 
 # ─── Pillar 1: Crawler / Bot documentation (HTML diff) ───
 
-# gptbot via cf_browser_run timed out at 420s (CF-challenged + JS render on
-# platform.openai.com takes >7 min). Disabled until we either raise the
-# timeout or find a lighter alternative (e.g. https://openai.com/gptbot).
-# - slug: gptbot
-#   pillar: crawler
-#   type: cf_browser_run
-#   url: https://platform.openai.com/docs/gptbot
-#   display_name: OpenAI GPTBot
+- slug: gptbot
+  pillar: crawler
+  type: html_page
+  url: https://developers.openai.com/api/docs/bots
+  display_name: OpenAI GPTBot
 
 - slug: claudebot
   pillar: crawler

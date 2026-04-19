@@ -1,0 +1,39 @@
+{
+  "generated_at": "2026-04-19T20:45:18.927178+00:00",
+  "window_days": 30,
+  "crawler": {
+    "headline": "AI crawlers tighten docs on training opt-outs; critical endpoint rename requires immediate tooling updates.",
+    "body": "Two high-impact changes landed on the same day from major crawler operators. Amazon introduced explicit meta-tag directives\u2014most notably `noarchive` with documented \"do not use for model training\" semantics\u2014giving site operators a page-level mechanism to block LLM training. This plugs a transparency gap. Simultaneously, Google renamed its IP range reference file from `googlebot.json` to `common-crawlers.json`, a breaking change requiring operators and verification tools to update immediately or risk crawler-validation failures. Both moves suggest crawlers are responding to regulatory and operational pressure around transparency, but the rename is a sharp friction point that will break existing workflows without notice.",
+    "themes": [
+      "Training opt-out mechanisms",
+      "IP range endpoint migration",
+      "Documentation transparency shifts",
+      "Tooling breakage risk"
+    ],
+    "event_count": 2
+  },
+  "ecosystem": {
+    "headline": "Copyright enforcement and AI monetization frameworks displace broader ecosystem coverage as litigation hardens publisher stance.",
+    "body": "The AI content ecosystem has undergone a material editorial and strategic shift over the past 30 days, with copyright litigation and training-data licensing disputes now dominating the interpretive frame. Four simultaneous copyright filings by major publishers (Penguin Random House, Ted Entertainment, DMCA class actions), combined with coordinated editorial narrowing of coverage, signal a hardening IP enforcement posture. Simultaneously, infrastructure-level tools for AI access control\u2014Cloudflare's redirects for training crawlers, DataDome's agent-identity verification, TollBit-integrated detection layers\u2014are moving from tactical publisher responses to operational monetization mechanisms. Publishers are systematically shifting from blocking mechanisms (robots.txt, wholesale crawler exclusions) to metering and compensation structures (micropayments, opt-in licensing frameworks like the News Media Alliance\u2013Bria partnership). The removal of broader consumer-protection, policy-convergence, and mid-market licensing stories from editorial priority reflects a consolidation: the ecosystem's dominant signal is now enforcement, not adaptation or negotiation.",
+    "themes": [
+      "Copyright litigation surge",
+      "Monetization infrastructure hardening",
+      "AI agent identity control",
+      "Publisher enforcement coordination",
+      "Licensing narrowing from policy"
+    ],
+    "event_count": 13
+  },
+  "agent": {
+    "headline": "OpenAI entrenches infrastructure dominance while standards sources pivot toward concrete implementation",
+    "body": "Over the last 30 days, the agent infrastructure pillar has split into two diverging currents. OpenAI has moved aggressively from APIs toward integrated enterprise stacks\u2014sandbox execution, edge deployment via Cloudflare, formal protocols for commerce, and security bug bounties\u2014signaling a shift toward end-to-end platform control. Meanwhile, standards-tracking sources (Gemini digests) have undergone three rapid restructurings, abandoning broad protocol coverage and NIST response tracking in favor of narrower focus on vendor implementation and industry consensus. The practical effect is telling: standards bodies are retreating from competing visions (WBA, APKI, draft-drake) toward fewer, vendor-backed approaches, while OpenAI consolidates distribution leverage through CDN integration and enterprise licensing tiers. A third thread\u2014security hardening\u2014has accelerated: MCP vulnerabilities, sandbox execution, and the formal bug bounty program now rank alongside identity protocols as baseline infrastructure concerns. The pillar is moving from \"which standard wins?\" to \"how do we operationalize and secure it?\"",
+    "themes": [
+      "OpenAI platform consolidation",
+      "Standards curation narrowing",
+      "Security infrastructure priority",
+      "Edge distribution expansion",
+      "Enterprise licensing shift"
+    ],
+    "event_count": 11
+  }
+}

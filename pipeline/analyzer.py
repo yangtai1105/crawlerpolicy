@@ -72,9 +72,14 @@ _CRAWLER_ADDON = (
 )
 
 _NEWS_ADDON = (
-    "\n\nThis is a pillar-2/3 news source: the reader wants 3–5 sentences of what_changed "
-    "and 3–5 sentences of implication explaining why a publisher / policy / agent-infra "
-    "practitioner should care. Avoid hype."
+    "\n\nThis is a pillar-2/3 news source: lead with IMPLICATION. The reader wants "
+    "3-5 factual sentences in what_changed, then 4-6 sentences of implication "
+    "explaining why a publisher / policy person / agent-infra practitioner should "
+    "care. Avoid hype. If RECENT ITEMS context is provided, ground your implication "
+    "in the pattern — e.g. 'the third such deal this month', 'reverses a stance from "
+    "last quarter', 'continues a trend' — when the facts actually support it. "
+    "Don't invent patterns that aren't in the history. Set importance based on the "
+    "item's reshaping potential for the ecosystem, not just its novelty."
 )
 
 
@@ -85,16 +90,25 @@ async def analyze_change(
     prev_content: str,
     curr_content: str,
     unified_diff: str,
+    trend_context: str = "",
 ) -> AnalysisResult:
     system = _SYSTEM_BASE + (_CRAWLER_ADDON if source.pillar == Pillar.CRAWLER else _NEWS_ADDON)
     model = _resolve_model(source)
-    user_content = (
-        f"Source: {source.display_name} ({source.pillar.value})\n"
-        f"URL: {source.url or ''}\n\n"
-        f"=== PREVIOUS ===\n{prev_content[:20000]}\n\n"
-        f"=== CURRENT ===\n{curr_content[:20000]}\n\n"
-        f"=== DIFF ===\n{unified_diff[:20000]}\n"
-    )
+    user_content_parts = [
+        f"Source: {source.display_name} ({source.pillar.value})",
+        f"URL: {source.url or ''}",
+        "",
+    ]
+    if trend_context:
+        user_content_parts.extend([trend_context, ""])
+    user_content_parts.extend([
+        f"=== PREVIOUS ===\n{prev_content[:20000]}",
+        "",
+        f"=== CURRENT ===\n{curr_content[:20000]}",
+        "",
+        f"=== DIFF ===\n{unified_diff[:20000]}",
+    ])
+    user_content = "\n".join(user_content_parts)
 
     msg = await client.messages.create(
         model=model,

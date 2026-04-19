@@ -1,6 +1,7 @@
 {
-  "last_run_at": "2026-04-19T20:20:28.999309+00:00",
+  "last_run_at": "2026-04-19T20:45:18.927178+00:00",
   "per_source_status": {
+    "gptbot": "ok",
     "claudebot": "ok",
     "google-extended": "ok",
     "perplexitybot": "ok",
@@ -29,10 +30,10 @@
     "gemini-agent-infra": "ok"
   },
   "events_written": [
-    "content/events/2026-04-19-gemini-ai-licensing-deals-ai-ecosystem-digest-fully-refreshed-four-new-stories-replace-prior-four.md",
-    "content/events/2026-04-19-gemini-content-blocking-weekly-ai-crawler-content-control-digest-fully-refreshed-with-new-story-set-apr-.md",
-    "content/events/2026-04-19-gemini-regulator-ai-content-ai-regulatory-digest-rolls-forward-thaler-v-perlmutter-entry-dropped-window-shif.md",
-    "content/events/2026-04-19-gemini-agent-standards-ai-agent-auth-standards-digest-four-new-ietf-drafts-w3c-activity-and-revised-llm.md",
-    "content/events/2026-04-19-gemini-agent-infra-agent-identity-authentication-digest-refreshed-five-new-entries-replace-previous.md"
+    "content/events/2026-04-19-gemini-ai-licensing-deals-digest-editorial-shift-copyright-litigation-completely-displaces-business-deals-.md",
+    "content/events/2026-04-19-gemini-content-blocking-digest-content-shift-from-technical-controls-to-monetization-enforcement-tactics.md",
+    "content/events/2026-04-19-gemini-regulator-ai-content-editorial-re-inclusion-of-italian-court-win-for-openai-digest-scope-and-framing-.md",
+    "content/events/2026-04-19-gemini-agent-standards-source-refocuses-agent-bot-auth-standards-digest-removes-nist-response-collectio.md",
+    "content/events/2026-04-19-gemini-agent-infra-agent-infrastructure-digest-refocused-drops-4-items-elevates-web-bot-auth-as-lea.md"
   ]
 }
