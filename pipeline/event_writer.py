@@ -57,21 +57,24 @@ def _compose(*, source, analysis, detected_at, source_url, unified_diff, event_s
         f"importance: {analysis.importance:.2f}\n"
         "---\n\n"
     )
-    # For the crawler pillar the raw diff is part of the signal (readers want to
-    # see exactly which UA string or directive moved). For ecosystem + agent
-    # news, the diff is either irrelevant (RSS — no prior) or noisy (Gemini
-    # digest text diff) — lead with implication instead.
+    # Crawler events are page-diff signals — the "what changed" framing + raw
+    # diff is accurate and useful. Ecosystem + agent events are NEWS items —
+    # they report a happening and its implication, not a diff.
     pillar_is_crawler = source.pillar.value == "crawler"
 
     body = ""
-    if analysis.implication.strip() and not pillar_is_crawler:
-        body += f"## Implication\n\n{analysis.implication}\n\n"
-    body += f"## What changed\n\n{analysis.what_changed}\n\n"
-    if analysis.implication.strip() and pillar_is_crawler:
-        body += f"## Implication\n\n{analysis.implication}\n\n"
-    if unified_diff.strip() and pillar_is_crawler:
-        body += "## Raw diff\n\n<details><summary>View diff</summary>\n\n"
-        body += f"```diff\n{unified_diff}\n```\n\n</details>\n"
+    if pillar_is_crawler:
+        body += f"## What changed\n\n{analysis.what_changed}\n\n"
+        if analysis.implication.strip():
+            body += f"## Implication\n\n{analysis.implication}\n\n"
+        if unified_diff.strip():
+            body += "## Raw diff\n\n<details><summary>View diff</summary>\n\n"
+            body += f"```diff\n{unified_diff}\n```\n\n</details>\n"
+    else:
+        # News framing: lead with the news brief, then why it matters.
+        body += f"## News\n\n{analysis.what_changed}\n\n"
+        if analysis.implication.strip():
+            body += f"## Why it matters\n\n{analysis.implication}\n\n"
     return frontmatter + body
 
 

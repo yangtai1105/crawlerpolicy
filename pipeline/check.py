@@ -248,6 +248,7 @@ async def _process_result(
                     curr_content=item.body or item.summary,
                     unified_diff="",
                     trend_context=trend_ctx,
+                    item_url=item.url,
                 )
                 if analysis.change_kind == "material" and not dry_run:
                     path = write_event(

@@ -78,14 +78,25 @@ _CRAWLER_ADDON = (
 )
 
 _NEWS_ADDON = (
-    "\n\nThis is a pillar-2/3 news source: lead with IMPLICATION. The reader wants "
-    "3-5 factual sentences in what_changed, then 4-6 sentences of implication "
-    "explaining why a publisher / policy person / agent-infra practitioner should "
-    "care. Avoid hype. If RECENT ITEMS context is provided, ground your implication "
-    "in the pattern — e.g. 'the third such deal this month', 'reverses a stance from "
-    "last quarter', 'continues a trend' — when the facts actually support it. "
-    "Don't invent patterns that aren't in the history. Set importance based on the "
-    "item's reshaping potential for the ecosystem, not just its novelty."
+    "\n\nThis is a pillar-2/3 news source. You are covering a NEWS ITEM, not a "
+    "change to a page — don't use 'what changed' framing. Structure your answer "
+    "as:\n"
+    "  - what_changed: 3-5 sentences summarizing the NEWS itself — what was "
+    "announced / filed / shipped / said, with inline [markdown](url) citations "
+    "to primary sources at the point each fact is stated. Treat this as the "
+    "news brief.\n"
+    "  - implication: 4-6 sentences of WHY IT MATTERS — the effect on "
+    "publishers, regulators, or agent-infra practitioners. Continue citing "
+    "inline when you reference external facts or prior context. "
+    "If RECENT ITEMS context is provided, ground your analysis in the pattern — "
+    "'third such deal this month', 'reverses a stance from last quarter', "
+    "'continues a trend' — when the facts actually support it. Don't invent "
+    "patterns that aren't in the history.\n"
+    "\n"
+    "MANDATORY: include at least one inline primary-source link in the news "
+    "brief (what_changed). Never write news without a citation anchor. If the "
+    "only URL you have is the item's own URL (shown as URL above), cite that. "
+    "Set importance based on ecosystem-reshaping potential, not novelty."
 )
 
 
@@ -97,12 +108,14 @@ async def analyze_change(
     curr_content: str,
     unified_diff: str,
     trend_context: str = "",
+    item_url: str | None = None,
 ) -> AnalysisResult:
     system = _SYSTEM_BASE + (_CRAWLER_ADDON if source.pillar == Pillar.CRAWLER else _NEWS_ADDON)
     model = _resolve_model(source)
+    primary_url = item_url or source.url or ""
     user_content_parts = [
         f"Source: {source.display_name} ({source.pillar.value})",
-        f"URL: {source.url or ''}",
+        f"URL: {primary_url}",
         "",
     ]
     if trend_context:

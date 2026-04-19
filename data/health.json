@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-04-19T21:35:19.602033+00:00",
+  "last_run_at": "2026-04-19T21:55:50.320539+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -23,7 +23,7 @@
     "web-bot-auth-repo": "ok",
     "mcp-spec": "ok",
     "cloudflare-research": "ok",
-    "openai-blog": "ok",
+    "openai-blog": "error: Server error '500 Internal Server Error' for url 'https://openai.com/news/rss.xml'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/500",
     "gemini-ai-licensing-deals": "ok",
     "gemini-content-blocking": "ok",
     "gemini-regulator-ai-content": "ok",
@@ -31,16 +31,18 @@
     "gemini-agent-infra": "ok"
   },
   "events_written": [
-    "content/events/2026-04-19-gptbot-openai-publishes-full-crawler-bot-documentation-page-with-four-ua-strings-includ.md",
-    "content/events/2026-04-19-claudebot-anthropic-publishes-ip-range-list-for-crawler-verification-replacing-we-do-not-p.md",
-    "content/events/2026-04-19-google-extended-google-renames-crawler-ip-range-json-object-from-googlebot-json-to-common-crawle.md",
-    "content/events/2026-04-19-amazonbot-amazon-expands-crawler-doc-to-three-distinct-bots-with-explicit-ai-training-disc.md",
-    "content/events/2026-04-19-ccbot-ccbot-ua-string-clarified-with-full-url-new-how-does-ccbot-fetch-a-web-page-sect.md",
-    "content/events/2026-04-19-gemini-crawler-insights-new-crawler-insights-digest-12-major-ai-bot-policy-developments-march-april-2026.md",
-    "content/events/2026-04-19-gemini-ai-licensing-deals-digest-reset-full-content-replacement-with-single-disney-minimax-lawsuit-alert.md",
-    "content/events/2026-04-19-gemini-content-blocking-digest-refresh-shift-from-structural-controls-c2pa-licensing-to-tactical-monetiz.md",
-    "content/events/2026-04-19-gemini-regulator-ai-content-regulatory-digest-updated-language-refined-eu-position-elevated-citation-scope-e.md",
-    "content/events/2026-04-19-gemini-agent-standards-agent-bot-auth-standards-digest-expanded-to-cover-ecosystem-breadth-new-dawn-hai.md",
-    "content/events/2026-04-19-gemini-agent-infra-agent-infrastructure-digest-refocused-protocol-governance-coverage-narrowed-to-i.md"
+    "content/events/2026-04-19-gemini-crawler-insights-new-30-day-crawler-digest-14-items-covering-cloudflare-pay-per-crawl-redirects-f.md",
+    "content/events/2026-04-17-cloudflare-blog-cloudflare-launches-redirects-for-ai-training-to-enforce-content-freshness-for-m.md",
+    "content/events/2026-04-16-datadome-blog-datadome-publishes-deep-analysis-of-agentic-commerce-threats-and-opportunities-i.md",
+    "content/events/2026-04-07-datadome-blog-datadome-webinar-ai-agent-adoption-mainstream-discovery-funnel-fragmenting-bot-m.md",
+    "content/events/2026-04-03-datadome-blog-datadome-publishes-tco-analysis-against-budget-bot-protection-stacks-quantifying.md",
+    "content/events/2026-03-25-datadome-blog-datadome-positions-ai-traffic-detection-as-publisher-monetization-enabler.md",
+    "content/events/2026-03-23-news-media-alliance-news-media-alliance-partners-with-bria-on-ai-content-licensing.md",
+    "content/events/2026-04-02-cloudflare-research-cloudflare-publishes-research-on-ai-bot-impact-on-cdn-caching-proposes-architect.md",
+    "content/events/2026-04-19-gemini-ai-licensing-deals-quickplay-ai-content-partnership-digest-entry.md",
+    "content/events/2026-04-19-gemini-content-blocking-q2-2026-publishers-deploy-multi-layer-ai-content-protection-wayback-block-cloudf.md",
+    "content/events/2026-04-19-gemini-regulator-ai-content-three-major-regulatory-shifts-on-ai-training-data-and-copyright-uk-eu-italy.md",
+    "content/events/2026-04-19-gemini-agent-standards-ietf-publishes-agent-identity-trust-and-lifecycle-protocol-aitlp-ecosystem-conso.md",
+    "content/events/2026-04-19-gemini-agent-infra-new-agent-infrastructure-digest-protocol-and-identity-standardization-across-eco.md"
   ]
 }
