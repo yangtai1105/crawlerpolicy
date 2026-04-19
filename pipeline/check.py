@@ -6,11 +6,12 @@ import asyncio
 import json
 import logging
 from collections.abc import Awaitable, Callable
-from datetime import datetime, timezone
+from datetime import datetime, timedelta, timezone
 from pathlib import Path
 
 from anthropic import AsyncAnthropic
 
+from pipeline import raw_log
 from pipeline.analyzer import AnalysisResult
 from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
@@ -28,6 +29,11 @@ from pipeline.state import SourceState, load_state, save_state
 from pipeline.state_of_play import build_opt_out_matrix
 
 log = logging.getLogger("check")
+
+# On first-seen RSS/GitHub sources, process items from the last N days as
+# events (instead of silently recording state). Avoids a wall of historical
+# posts while still giving the site something to show at launch.
+BACKFILL_DAYS = 30
 
 
 FetchDispatch = Callable[[Source, SourceState], Awaitable[FetchResult]]
@@ -177,43 +183,74 @@ async def _process_result(
         return new_events, state
 
     # PER_ITEM
-    # Catch-up: on first run, record all guids as "seen" without LLM work.
-    # Otherwise adding a new RSS source would flood the feed with historical posts.
+    # Catch-up on first run: filter items to the last BACKFILL_DAYS (default
+    # 30) rather than skipping everything. A brand-new source should
+    # contribute some immediately visible history, but not a flood.
+    items_to_process = result.items
     if state.first_seen:
-        for item in result.items:
-            state.last_seen_guids.append(item.guid)
-        state.first_seen = False
-        state.last_seen_guids = state.last_seen_guids[-500:]
-        return new_events, state
+        cutoff = now - timedelta(days=BACKFILL_DAYS)
+        items_to_process = [
+            i for i in result.items if i.published_at and i.published_at >= cutoff
+        ]
+        # Record guids of items OLDER than the backfill window as "seen" so
+        # they don't get reprocessed if the state file is ever rebuilt.
+        for i in result.items:
+            if i not in items_to_process:
+                state.last_seen_guids.append(i.guid)
 
-    for item in result.items:
+    for item in items_to_process:
         blob = f"{item.title}\n{item.summary}"
-        if not keyword_match(blob, source.keyword_filter or []):
-            state.last_seen_guids.append(item.guid)
-            continue
-        verdict = await haiku_relevance(client, item.title, item.summary)
-        if not verdict.is_relevant:
-            state.last_seen_guids.append(item.guid)
-            continue
-        analysis = await analyze_change(
-            client=client,
-            source=source,
-            prev_content="",
-            curr_content=item.body or item.summary,
-            unified_diff="",
-        )
-        if analysis.change_kind == "material" and not dry_run:
-            path = write_event(
-                events_dir=cfg.events_dir,
-                source=source,
-                analysis=analysis,
-                detected_at=item.published_at or now,
-                unified_diff="",
-                source_url=item.url,
+        keyword_pass = keyword_match(blob, source.keyword_filter or [])
+        relevance_pass: bool | None = None
+        analysis: AnalysisResult | None = None
+
+        if keyword_pass:
+            verdict = await haiku_relevance(client, item.title, item.summary)
+            relevance_pass = verdict.is_relevant
+            if verdict.is_relevant:
+                analysis = await analyze_change(
+                    client=client,
+                    source=source,
+                    prev_content="",
+                    curr_content=item.body or item.summary,
+                    unified_diff="",
+                )
+                if analysis.change_kind == "material" and not dry_run:
+                    path = write_event(
+                        events_dir=cfg.events_dir,
+                        source=source,
+                        analysis=analysis,
+                        detected_at=item.published_at or now,
+                        unified_diff="",
+                        source_url=item.url,
+                    )
+                    new_events.append(path)
+
+        # Raw log: every item that passed the keyword filter (or made it into
+        # the relevance pass) is recorded so long-term analysis has the full
+        # corpus. Items that failed the keyword filter are skipped here —
+        # they're noise that'd drown a trend query.
+        if keyword_pass and not dry_run:
+            raw_log.append(
+                cfg.raw_dir,
+                source.slug,
+                guid=item.guid,
+                title=item.title,
+                summary=item.summary,
+                url=item.url,
+                published_at=item.published_at,
+                keyword_pass=keyword_pass,
+                relevance_pass=relevance_pass,
+                change_kind=analysis.change_kind if analysis else None,
+                importance=analysis.importance if analysis else None,
+                recorded_at=now,
             )
-            new_events.append(path)
+
         state.last_seen_guids.append(item.guid)
 
+    # Mark first_seen done AFTER processing so the flag still applies above.
+    if state.first_seen:
+        state.first_seen = False
     state.last_seen_guids = state.last_seen_guids[-500:]
     return new_events, state
 

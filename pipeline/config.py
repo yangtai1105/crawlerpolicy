@@ -32,6 +32,10 @@ class Config:
     def sources_yaml(self) -> Path:
         return self.repo_root / "sources.yaml"
 
+    @property
+    def raw_dir(self) -> Path:
+        return self.repo_root / "content" / "raw"
+
     @classmethod
     def from_env(cls) -> "Config":
         repo_root_raw = os.environ.get("REPO_ROOT")
