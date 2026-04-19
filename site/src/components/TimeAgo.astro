@@ -1,0 +1,20 @@
+---
+interface Props {
+  date: Date;
+}
+const { date } = Astro.props;
+
+const now = new Date();
+const delta = Math.max(0, now.getTime() - date.getTime());
+const MIN = 60_000;
+const HR = 60 * MIN;
+const DAY = 24 * HR;
+
+let label: string;
+if (delta < MIN) label = "just now";
+else if (delta < HR) label = `${Math.floor(delta / MIN)}m ago`;
+else if (delta < DAY) label = `${Math.floor(delta / HR)}h ago`;
+else label = `${Math.floor(delta / DAY)}d ago`;
+---
+
+<time datetime={date.toISOString()} title={date.toUTCString()}>{label}</time>

@@ -1,0 +1,168 @@
+---
+import { getCollection, render } from "astro:content";
+import Base from "../layouts/Base.astro";
+import EventCard from "../components/EventCard.astro";
+import HeroBlock from "../components/HeroBlock.astro";
+import StateOfPlay from "../components/StateOfPlay.astro";
+import { countsByPillar } from "../lib/sources";
+
+const events = (await getCollection("events"))
+  .filter((e) => e.data.change_kind === "material")
+  .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime());
+
+// Hero: top-importance event in last 48h, or latest material event, or null.
+const now = Date.now();
+const within48h = events.filter(
+  (e) => now - e.data.detected_at.getTime() < 48 * 60 * 60 * 1000,
+);
+const heroCandidate =
+  within48h.sort((a, b) => b.data.importance - a.data.importance)[0] ??
+  events[0] ??
+  null;
+
+let heroBody: string | null = null;
+if (heroCandidate) {
+  // getCollection entries have a `body` string available directly
+  heroBody = heroCandidate.body ?? null;
+}
+
+// Load bodies for feed preview
+const feedEntries = await Promise.all(
+  events.slice(0, 20).map(async (e) => ({
+    slug: e.id,
+    data: e.data,
+    body: e.body ?? "",
+  })),
+);
+
+const counts = countsByPillar();
+const total = counts.crawler + counts.ecosystem + counts.agent;
+---
+
+<Base title="Feed">
+  <HeroBlock
+    slug={heroCandidate?.id ?? null}
+    data={heroCandidate?.data ?? null}
+    body={heroBody}
+    placeholder={{
+      title:
+        events.length === 0
+          ? `Baseline established. ${total} sources under watch — waiting for the first signal.`
+          : "Nothing material in the last 48 hours.",
+      message:
+        events.length === 0
+          ? `Tracking ${counts.crawler} AI crawler documentation pages, ${counts.ecosystem} content-ecosystem news sources, and ${counts.agent} agent infrastructure sources. Daily check at 08:00 UTC.`
+          : "See the feed below.",
+    }}
+  />
+
+  <div class="container home-body">
+    <div class="home-grid">
+      <section class="feed">
+        <div class="filter-bar">
+          <span class="label">Filter</span>
+          <button class="chip active" data-filter="all">All · {events.length}</button>
+          <button class="chip" data-filter="crawler">
+            Crawler · {events.filter((e) => e.data.pillar === "crawler").length}
+          </button>
+          <button class="chip" data-filter="ecosystem">
+            Ecosystem · {events.filter((e) => e.data.pillar === "ecosystem").length}
+          </button>
+          <button class="chip" data-filter="agent">
+            Agent · {events.filter((e) => e.data.pillar === "agent").length}
+          </button>
+        </div>
+
+        {feedEntries.length > 0 ? (
+          <div class="feed-list">
+            {feedEntries.map((e) => (
+              <div class="feed-item" data-pillar={e.data.pillar}>
+                <EventCard slug={e.slug} data={e.data} body={e.body} />
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div class="feed-empty">
+            <p>
+              No material events yet. On each daily run, any substantive change to a tracked
+              source becomes an entry here with a machine-generated summary.
+            </p>
+            <p>
+              Meanwhile, the <a href="/sources">sources</a> list shows everything under watch.
+            </p>
+          </div>
+        )}
+      </section>
+
+      <StateOfPlay />
+    </div>
+  </div>
+</Base>
+
+<script is:inline>
+  // Filter chips toggle card visibility client-side.
+  document.querySelectorAll(".filter-bar .chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      document
+        .querySelectorAll(".filter-bar .chip")
+        .forEach((b) => b.classList.remove("active"));
+      btn.classList.add("active");
+      const filter = btn.dataset.filter;
+      document.querySelectorAll(".feed-item").forEach((item) => {
+        item.style.display =
+          filter === "all" || item.dataset.pillar === filter ? "" : "none";
+      });
+    });
+  });
+</script>
+
+<style>
+  .home-body { padding: var(--space-6) 0; }
+
+  .home-grid {
+    display: grid;
+    grid-template-columns: 1fr var(--sidebar-w);
+    gap: var(--space-6);
+  }
+  @media (max-width: 860px) {
+    .home-grid { grid-template-columns: 1fr; }
+  }
+
+  .filter-bar {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+    margin-bottom: var(--space-4);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid var(--border);
+  }
+  .filter-bar .label { margin-right: var(--space-2); }
+
+  .chip {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--ink-muted);
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-family: inherit;
+    font-size: 0.78rem;
+    cursor: pointer;
+  }
+  .chip:hover { border-color: var(--border-strong); color: var(--ink); }
+  .chip.active {
+    background: var(--ink);
+    color: var(--bg);
+    border-color: var(--ink);
+  }
+
+  .feed-empty {
+    border: 1px dashed var(--border);
+    padding: var(--space-6);
+    border-radius: 4px;
+    color: var(--ink-muted);
+    font-size: 0.92rem;
+  }
+  .feed-empty p { margin: 0 0 var(--space-3); }
+  .feed-empty p:last-child { margin: 0; }
+</style>

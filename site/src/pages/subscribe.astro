@@ -1,0 +1,114 @@
+---
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Subscribe">
+  <div class="container subscribe-page">
+    <h1>Subscribe</h1>
+    <p class="lede">
+      Once a week, a single email summarizing every material change detected in the past 7 days
+      — crawler documentation updates, ecosystem news, and agent infrastructure signals.
+    </p>
+
+    <form id="subscribe-form" class="subscribe-form" novalidate>
+      <label>
+        <span class="label">Email address</span>
+        <input type="email" name="email" required autocomplete="email" placeholder="you@example.com" />
+      </label>
+      <button type="submit">Send confirmation link</button>
+      <p class="form-note">
+        Double opt-in: we'll email you a confirmation link. You can unsubscribe at any time.
+      </p>
+      <p class="form-status" id="subscribe-status" aria-live="polite"></p>
+    </form>
+
+    <p class="alt-info">
+      Prefer RSS? Point your reader at <a href="/feed.xml"><code>/feed.xml</code></a>.
+    </p>
+  </div>
+</Base>
+
+<script is:inline>
+  const form = document.getElementById("subscribe-form");
+  const status = document.getElementById("subscribe-status");
+  form?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.textContent = "Submitting…";
+    try {
+      const res = await fetch("/api/subscribe", {
+        method: "POST",
+        headers: { "content-type": "application/json" },
+        body: JSON.stringify({ email: form.email.value }),
+      });
+      if (!res.ok) throw new Error(await res.text());
+      status.textContent = "Check your inbox for a confirmation link.";
+      status.dataset.state = "ok";
+      form.reset();
+    } catch (err) {
+      status.textContent = "Subscribe endpoint not yet wired up (Plan 3). Email " + form.email.value + " captured client-side only.";
+      status.dataset.state = "warn";
+    }
+  });
+</script>
+
+<style>
+  .subscribe-page { max-width: 560px; padding: var(--space-6) var(--space-5); }
+  .subscribe-page h1 { margin-bottom: var(--space-3); }
+  .lede { color: var(--ink-muted); margin-bottom: var(--space-6); }
+
+  .subscribe-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    padding: var(--space-5);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg-elev);
+  }
+  .subscribe-form label {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+  }
+  .subscribe-form input {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    color: var(--ink);
+    padding: 10px 12px;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.95rem;
+  }
+  .subscribe-form input:focus {
+    outline: none;
+    border-color: var(--pillar-ecosystem);
+  }
+  .subscribe-form button {
+    background: var(--ink);
+    color: var(--bg);
+    border: 0;
+    padding: 10px 16px;
+    border-radius: 3px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    align-self: flex-start;
+  }
+  .subscribe-form button:hover { opacity: 0.88; }
+  .form-note { font-size: 0.78rem; color: var(--ink-muted); margin: 0; }
+  .form-status {
+    font-size: 0.85rem;
+    margin: 0;
+    min-height: 1.2em;
+  }
+  .form-status[data-state="ok"] { color: var(--pillar-agent); }
+  .form-status[data-state="warn"] { color: var(--pillar-crawler); }
+
+  .alt-info {
+    margin-top: var(--space-5);
+    color: var(--ink-muted);
+    font-size: 0.85rem;
+  }
+  .alt-info a { color: var(--pillar-ecosystem); }
+</style>

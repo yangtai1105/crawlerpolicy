@@ -1,0 +1,161 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import EventCard from "../../components/EventCard.astro";
+import PillarTag from "../../components/PillarTag.astro";
+import { loadSources } from "../../lib/sources";
+import { listSnapshots, daysSinceLatest } from "../../lib/snapshots";
+
+export async function getStaticPaths() {
+  const sources = loadSources();
+  return sources.map((s) => ({ params: { slug: s.slug }, props: { source: s } }));
+}
+
+const { source } = Astro.props;
+
+const allEvents = (await getCollection("events")).filter(
+  (e) => e.data.source === source.slug,
+);
+allEvents.sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime());
+const materialCount = allEvents.filter((e) => e.data.change_kind === "material").length;
+
+const snapshots = listSnapshots(source.slug);
+const daysSince = daysSinceLatest(source.slug);
+
+const stabilityLabel =
+  daysSince === null
+    ? "no snapshots yet"
+    : daysSince === 0
+      ? "snapshotted today"
+      : `stable for ${daysSince} days`;
+---
+
+<Base title={source.display_name}>
+  <div class="container source-page">
+    <header class="source-header">
+      <div class="source-meta">
+        <PillarTag pillar={source.pillar} />
+        <span class="source-type">type: {source.type}</span>
+        {source.url && (
+          <a href={source.url} target="_blank" rel="noopener noreferrer" class="source-link">
+            {new URL(source.url).hostname}↗
+          </a>
+        )}
+        {source.repo && (
+          <a href={`https://github.com/${source.repo}`} target="_blank" rel="noopener noreferrer" class="source-link">
+            github.com/{source.repo}↗
+          </a>
+        )}
+        {source.draft_name && <code>{source.draft_name}</code>}
+      </div>
+      <h1>{source.display_name}</h1>
+      <p class="source-stats">
+        <strong>{stabilityLabel}</strong> · {materialCount} material event{materialCount !== 1 ? "s" : ""} tracked ·
+        {snapshots.length} snapshot{snapshots.length !== 1 ? "s" : ""} in history
+      </p>
+    </header>
+
+    <section class="source-section">
+      <div class="label">Events</div>
+      {allEvents.length > 0 ? (
+        <div>
+          {allEvents.map((e) => (
+            <EventCard slug={e.id} data={e.data} body={e.body ?? ""} />
+          ))}
+        </div>
+      ) : (
+        <p class="empty">No material changes detected yet.</p>
+      )}
+    </section>
+
+    {snapshots.length > 0 && (
+      <section class="source-section">
+        <div class="label">Snapshot history</div>
+        <ul class="snapshot-list">
+          {snapshots.map((s) => (
+            <li>
+              <code>{s.filename}</code>
+              <span class="muted">{s.date}</span>
+            </li>
+          ))}
+        </ul>
+        <p class="muted small">
+          Snapshot diff viewer coming in v1.1. For now, each daily snapshot is committed to git
+          — <code>git log content/snapshots/{source.slug}/</code> shows the full timeline.
+        </p>
+      </section>
+    )}
+  </div>
+</Base>
+
+<style>
+  .source-page {
+    max-width: 900px;
+    padding: var(--space-6) var(--space-5);
+  }
+  .source-header {
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: var(--space-6);
+  }
+  .source-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+    font-size: 0.82rem;
+    color: var(--ink-muted);
+    margin-bottom: var(--space-3);
+  }
+  .source-type { font-family: var(--font-mono); font-size: 0.75rem; }
+  .source-link { color: var(--pillar-ecosystem); font-size: 0.8rem; }
+  .source-meta code {
+    background: var(--bg-elev);
+    padding: 2px 6px;
+    border-radius: 3px;
+    color: var(--ink);
+    font-size: 0.78rem;
+  }
+  .source-header h1 {
+    font-size: 2rem;
+    margin-bottom: var(--space-3);
+  }
+  .source-stats {
+    font-size: 0.9rem;
+    color: var(--ink-muted);
+    margin: 0;
+  }
+  .source-stats strong { color: var(--ink); font-weight: 600; }
+
+  .source-section {
+    margin-bottom: var(--space-7);
+  }
+  .source-section .label {
+    margin-bottom: var(--space-3);
+  }
+
+  .empty, .muted.small {
+    color: var(--ink-muted);
+    font-size: 0.88rem;
+  }
+  .muted { color: var(--ink-muted); }
+  .small { font-size: 0.8rem; }
+
+  .snapshot-list {
+    list-style: none;
+    margin: 0 0 var(--space-4);
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg-elev);
+  }
+  .snapshot-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: var(--space-2) var(--space-4);
+    border-bottom: 1px solid var(--border);
+    font-size: 0.85rem;
+  }
+  .snapshot-list li:last-child { border-bottom: 0; }
+  .snapshot-list code { color: var(--ink); }
+</style>

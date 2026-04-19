@@ -1,0 +1,97 @@
+---
+import Base from "../layouts/Base.astro";
+import { countsByPillar } from "../lib/sources";
+const counts = countsByPillar();
+---
+
+<Base title="About">
+  <article class="about container">
+    <h1>About AI Ecosystem Tracker</h1>
+
+    <p class="lede">
+      A monitoring publication for the AI content ecosystem: what AI crawlers publicly say about
+      themselves, what policy and infrastructure actors are doing around them, and how the
+      emerging AI agent layer is taking shape.
+    </p>
+
+    <h2>What's tracked</h2>
+    <ul>
+      <li><strong>{counts.crawler}</strong> AI crawler / bot documentation pages (full-page HTML diff)</li>
+      <li><strong>{counts.ecosystem}</strong> content-ecosystem news sources (RSS + relevance filter)</li>
+      <li><strong>{counts.agent}</strong> AI agent infrastructure sources (spec repos, draft specs, vendor blogs)</li>
+    </ul>
+
+    <h2>How it works</h2>
+    <p>
+      Once a day at 08:00 UTC, an automated pipeline fetches each source, compares against its
+      previous snapshot, and decides if anything material changed. For content-ecosystem and
+      agent-infrastructure sources (which publish a stream of posts rather than a single page),
+      each new post goes through a two-stage relevance filter first: a cheap keyword regex, then
+      a Claude Haiku classifier that decides whether the post is about AI crawlers, training
+      data, bot policy, content regulation, or agent infrastructure.
+    </p>
+    <p>
+      Items that pass the filter are analyzed by Claude Sonnet, which classifies each as
+      <em>material</em>, <em>cosmetic</em>, or <em>noise</em> and writes a structured summary.
+      Only material changes become entries in the feed.
+    </p>
+
+    <h2>LLM disclosure</h2>
+    <p>
+      Every event page's <em>What changed</em> and <em>Implication</em> sections are written by
+      Claude Sonnet 4.6 from the raw diff, which is always shown (often collapsed) on the same
+      page. The diff is the authoritative record; the LLM sections are our best attempt to make
+      that diff legible.
+    </p>
+    <p>
+      The State-of-Play matrix on the homepage is regenerated daily by Claude Haiku 4.5,
+      which extracts a small set of factual fields from each crawler's latest snapshot. When
+      a vendor's documentation doesn't explicitly address a field, the value appears as
+      "unknown" rather than guessed.
+    </p>
+
+    <h2>Source of truth</h2>
+    <p>
+      The repo is the source of truth. Every snapshot is a committed file; <code>git log</code>
+      for any source shows its full history. If the LLM misreads a diff, the raw diff is still
+      right there, and the git log shows when the human record differs.
+    </p>
+
+    <h2>Reporting errors / suggesting sources</h2>
+    <p>
+      Open an issue on the tracker's GitHub repo, or email the maintainer team. To request a new
+      source, include the URL, the source type (page to diff vs. RSS feed vs. GitHub repo vs.
+      IETF draft), and why it matters.
+    </p>
+  </article>
+</Base>
+
+<style>
+  .about {
+    max-width: 720px;
+    padding: var(--space-6) var(--space-5);
+  }
+  .about h1 { font-size: 2rem; margin-bottom: var(--space-4); }
+  .about h2 {
+    font-size: 1.2rem;
+    margin-top: var(--space-6);
+    margin-bottom: var(--space-3);
+  }
+  .lede {
+    font-size: 1.05rem;
+    color: var(--ink);
+    border-left: 2px solid var(--pillar-ecosystem);
+    padding-left: var(--space-4);
+    margin: var(--space-5) 0;
+  }
+  .about p { font-size: 0.95rem; line-height: 1.7; }
+  .about ul { padding-left: var(--space-5); line-height: 1.9; }
+  .about strong { font-weight: 600; }
+  .about em { color: var(--pillar-ecosystem); font-style: normal; }
+  .about code {
+    background: var(--bg-elev);
+    padding: 1px 6px;
+    border-radius: 3px;
+    border: 1px solid var(--border);
+  }
+</style>

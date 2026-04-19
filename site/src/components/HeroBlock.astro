@@ -1,0 +1,112 @@
+---
+import PillarTag from "./PillarTag.astro";
+import TimeAgo from "./TimeAgo.astro";
+import { findSource } from "../lib/sources";
+
+interface Props {
+  slug: string | null;
+  data: {
+    title: string;
+    source: string;
+    pillar: "crawler" | "ecosystem" | "agent";
+    detected_at: Date;
+  } | null;
+  body?: string | null;
+  placeholder?: {
+    title: string;
+    message: string;
+  };
+}
+
+const { slug, data, body, placeholder } = Astro.props;
+
+let implication = "";
+if (body) {
+  const match = body.match(/## Implication\s*\n+([^\n]+(?:\n[^\n#]+)*)/);
+  if (match) implication = match[1].trim();
+}
+
+const source = data ? findSource(data.source) : null;
+const sourceName = source?.display_name ?? data?.source ?? "";
+---
+
+<section class="hero">
+  <div class="container hero-inner">
+    {data && slug ? (
+      <>
+        <div class="hero-eyebrow">
+          <span class="label">Today's signal</span>
+          <span class="dot">·</span>
+          <PillarTag pillar={data.pillar} />
+          <span class="source-meta">{sourceName} · <TimeAgo date={data.detected_at} /></span>
+        </div>
+        <h1 class="hero-title">
+          <a href={`/events/${slug}`}>{data.title}</a>
+        </h1>
+        {implication && <p class="hero-lede">{implication}</p>}
+        <p class="hero-disclosure">LLM-generated analysis · click for full entry and raw diff</p>
+      </>
+    ) : (
+      <>
+        <div class="hero-eyebrow"><span class="label">Status</span></div>
+        <h1 class="hero-title">{placeholder?.title ?? "Baseline established; waiting for the first signal."}</h1>
+        <p class="hero-lede">{placeholder?.message ?? ""}</p>
+      </>
+    )}
+  </div>
+</section>
+
+<style>
+  .hero {
+    background: #0a0a0a;
+    color: #f5f5f0;
+    border-bottom: 1px solid var(--border);
+  }
+  [data-theme="light"] .hero {
+    background: #1a1a1a;
+  }
+  .hero-inner {
+    padding: var(--space-7) var(--space-5);
+  }
+  .hero-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+    color: rgba(245, 245, 240, 0.65);
+    font-size: 0.78rem;
+  }
+  .hero-eyebrow .label { color: rgba(245, 245, 240, 0.55); }
+  .hero-eyebrow .dot { opacity: 0.5; }
+  .source-meta { color: rgba(245, 245, 240, 0.75); }
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: 2.1rem;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    max-width: 860px;
+    margin: 0 0 var(--space-4);
+  }
+  .hero-title a {
+    color: inherit;
+    border-bottom: 1px solid rgba(245, 245, 240, 0.2);
+    padding-bottom: 2px;
+  }
+  .hero-title a:hover {
+    border-bottom-color: var(--pillar-ecosystem);
+    color: #f5f5f0;
+  }
+  .hero-lede {
+    max-width: 780px;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: rgba(245, 245, 240, 0.8);
+    margin-bottom: var(--space-4);
+  }
+  .hero-disclosure {
+    font-size: 0.78rem;
+    color: rgba(245, 245, 240, 0.45);
+    margin: 0;
+  }
+</style>

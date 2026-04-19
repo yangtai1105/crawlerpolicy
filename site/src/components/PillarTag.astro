@@ -1,0 +1,38 @@
+---
+interface Props {
+  pillar: "crawler" | "ecosystem" | "agent";
+}
+const { pillar } = Astro.props;
+const labels = {
+  crawler: "Crawler",
+  ecosystem: "Ecosystem",
+  agent: "Agent",
+};
+---
+
+<span class={`pillar-tag pillar-${pillar}`}>{labels[pillar]}</span>
+
+<style>
+  .pillar-tag {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    line-height: 1.5;
+  }
+  .pillar-crawler {
+    background: color-mix(in oklch, var(--pillar-crawler) 18%, transparent);
+    color: var(--pillar-crawler);
+  }
+  .pillar-ecosystem {
+    background: color-mix(in oklch, var(--pillar-ecosystem) 18%, transparent);
+    color: var(--pillar-ecosystem);
+  }
+  .pillar-agent {
+    background: color-mix(in oklch, var(--pillar-agent) 18%, transparent);
+    color: var(--pillar-agent);
+  }
+</style>

@@ -1,0 +1,106 @@
+---
+import Base from "../../layouts/Base.astro";
+import PillarTag from "../../components/PillarTag.astro";
+import { loadSources } from "../../lib/sources";
+import { daysSinceLatest } from "../../lib/snapshots";
+
+const sources = loadSources();
+const byPillar = {
+  crawler: sources.filter((s) => s.pillar === "crawler"),
+  ecosystem: sources.filter((s) => s.pillar === "ecosystem"),
+  agent: sources.filter((s) => s.pillar === "agent"),
+};
+---
+
+<Base title="Sources">
+  <div class="container sources-page">
+    <header class="sources-header">
+      <h1>Sources</h1>
+      <p class="lede">
+        {sources.length} sources under daily watch. Each source produces one or more entries in the feed
+        when its content materially changes.
+      </p>
+    </header>
+
+    {(["crawler", "ecosystem", "agent"] as const).map((pillar) => (
+      <section class="sources-section">
+        <div class="sources-section-header">
+          <PillarTag pillar={pillar} />
+          <span class="label">{byPillar[pillar].length} sources</span>
+        </div>
+        <ul class="sources-list">
+          {byPillar[pillar].map((s) => {
+            const days = s.pillar === "crawler" ? daysSinceLatest(s.slug) : null;
+            return (
+              <li>
+                <a href={`/sources/${s.slug}`}>
+                  <span class="source-name">{s.display_name}</span>
+                  <span class="source-type">{s.type}</span>
+                  {days !== null && (
+                    <span class={`source-days ${days < 14 ? "hot" : ""}`}>
+                      {days === 0 ? "snapshotted today" : `${days}d stable`}
+                    </span>
+                  )}
+                </a>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+    ))}
+  </div>
+</Base>
+
+<style>
+  .sources-page {
+    max-width: 900px;
+    padding: var(--space-6) var(--space-5);
+  }
+  .sources-header {
+    margin-bottom: var(--space-7);
+    padding-bottom: var(--space-5);
+    border-bottom: 1px solid var(--border);
+  }
+  .sources-header h1 { margin-bottom: var(--space-3); }
+  .lede { color: var(--ink-muted); font-size: 1rem; max-width: 640px; }
+
+  .sources-section { margin-bottom: var(--space-7); }
+  .sources-section-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+
+  .sources-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    background: var(--bg-elev);
+  }
+  .sources-list li { border-bottom: 1px solid var(--border); }
+  .sources-list li:last-child { border-bottom: 0; }
+  .sources-list a {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    align-items: center;
+    color: var(--ink);
+  }
+  .sources-list a:hover { background: var(--bg-hover); color: var(--pillar-ecosystem); }
+  .source-name { font-weight: 500; }
+  .source-type {
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+  }
+  .source-days {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+  }
+  .source-days.hot { color: var(--signal-hot); }
+</style>

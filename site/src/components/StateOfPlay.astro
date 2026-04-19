@@ -1,0 +1,124 @@
+---
+import { loadOptOutMatrix } from "../lib/sop";
+
+const matrix = loadOptOutMatrix();
+const total = matrix.entries.length;
+const withRobots = matrix.entries.filter((e) => e.supports_robots_txt === true).length;
+const withUA = matrix.entries.filter((e) => e.supports_user_agent_opt_out === true).length;
+---
+
+<aside class="sop">
+  <div class="sop-section">
+    <div class="label">Opt-out matrix</div>
+    {total > 0 ? (
+      <>
+        <ul class="sop-list">
+          {matrix.entries.map((e) => (
+            <li>
+              <a href={`/sources/${e.slug}`} class="sop-row">
+                <span class="sop-name">{e.display_name}</span>
+                <span class={`sop-dot ${e.days_since_last_change < 14 ? "hot" : ""}`}></span>
+                <span class="sop-days">
+                  {e.days_since_last_change === 0 ? "today" : `${e.days_since_last_change}d`}
+                </span>
+              </a>
+            </li>
+          ))}
+        </ul>
+        <p class="sop-summary">
+          <strong>{withRobots}</strong>/{total} explicitly mention robots.txt ·
+          <strong>{withUA}</strong>/{total} document UA opt-out
+        </p>
+      </>
+    ) : (
+      <p class="sop-empty">Matrix not yet generated. Run the pipeline to populate.</p>
+    )}
+  </div>
+
+  <div class="sop-section">
+    <div class="label">Legend</div>
+    <ul class="sop-legend">
+      <li><span class="sop-dot hot"></span> changed in last 14 days</li>
+      <li><span class="sop-dot"></span> stable</li>
+    </ul>
+  </div>
+</aside>
+
+<style>
+  .sop {
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: var(--space-4);
+    position: sticky;
+    top: 70px;
+    font-size: 0.85rem;
+  }
+  .sop-section + .sop-section {
+    margin-top: var(--space-5);
+    padding-top: var(--space-4);
+    border-top: 1px solid var(--border);
+  }
+  .sop .label {
+    margin-bottom: var(--space-3);
+  }
+  .sop-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  .sop-row {
+    display: grid;
+    grid-template-columns: 1fr auto auto;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 6px 0;
+    border-bottom: 1px dashed var(--border);
+    color: var(--ink);
+  }
+  .sop-row:hover { color: var(--pillar-ecosystem); }
+  .sop-name { font-size: 0.85rem; }
+  .sop-days {
+    font-size: 0.75rem;
+    color: var(--ink-muted);
+    font-variant-numeric: tabular-nums;
+    min-width: 40px;
+    text-align: right;
+  }
+  .sop-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--signal-cool);
+    display: inline-block;
+  }
+  .sop-dot.hot { background: var(--signal-hot); }
+  .sop-summary {
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+    margin: var(--space-3) 0 0;
+    padding-top: var(--space-2);
+    border-top: 1px solid var(--border);
+  }
+  .sop-summary strong { color: var(--ink); font-weight: 600; }
+  .sop-empty {
+    color: var(--ink-muted);
+    font-size: 0.82rem;
+    margin: 0;
+  }
+  .sop-legend {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 0.78rem;
+    color: var(--ink-muted);
+  }
+  .sop-legend li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+  }
+</style>
