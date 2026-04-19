@@ -4,7 +4,7 @@ title: "Agent Identity & Authentication Digest Refreshed: Five New Entries Repla
 source: gemini-agent-infra
 pillar: agent
 detected_at: 2026-04-19T20:20:28.999309+00:00
-source_url: 
+source_url: ""
 change_kind: material
 importance: 0.82
 ---

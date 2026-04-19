@@ -52,7 +52,7 @@ def _compose(*, source, analysis, detected_at, source_url, unified_diff, event_s
         f"source: {source.slug}\n"
         f"pillar: {source.pillar.value}\n"
         f"detected_at: {detected_at.isoformat()}\n"
-        f"source_url: {source_url}\n"
+        f'source_url: "{_yaml_escape(source_url or "")}"\n'
         f"change_kind: {analysis.change_kind}\n"
         f"importance: {analysis.importance:.2f}\n"
         "---\n\n"

@@ -4,7 +4,7 @@ title: "AI Agent Auth Standards Digest: Four New IETF Drafts, W3C Activity, and 
 source: gemini-agent-standards
 pillar: agent
 detected_at: 2026-04-19T20:20:28.999309+00:00
-source_url: 
+source_url: ""
 change_kind: material
 importance: 0.72
 ---
