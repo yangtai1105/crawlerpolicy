@@ -16,15 +16,17 @@ def test_html_page_source_minimum_fields():
     assert s.pillar == Pillar.CRAWLER
 
 
-def test_rss_feed_requires_keyword_filter():
-    with pytest.raises(ValidationError):
-        Source(
-            slug="cloudflare-blog",
-            pillar=Pillar.ECOSYSTEM,
-            type=SourceType.RSS_FEED,
-            url="https://blog.cloudflare.com/rss/",
-            display_name="Cloudflare Blog",
-        )
+def test_rss_feed_accepts_no_keyword_filter():
+    # Product-specific changelog feeds don't need a keyword filter — they're
+    # already pre-filtered at the publisher. Only `url` is schema-required.
+    s = Source(
+        slug="cf-ai-crawl-control",
+        pillar=Pillar.ECOSYSTEM,
+        type=SourceType.RSS_FEED,
+        url="https://developers.cloudflare.com/changelog/rss/ai-crawl-control.xml",
+        display_name="Cloudflare AI Crawl Control",
+    )
+    assert s.keyword_filter is None
 
 
 def test_github_repo_requires_repo_field():

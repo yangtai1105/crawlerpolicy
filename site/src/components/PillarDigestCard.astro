@@ -4,10 +4,12 @@ import type { PillarDigest } from "../lib/pillar_digests";
 interface Props {
   pillar: "crawler" | "ecosystem" | "agent";
   digest: PillarDigest;
-  windowDays: number;
 }
 
-const { pillar, digest, windowDays } = Astro.props;
+const { pillar, digest } = Astro.props;
+const windowDays = digest.window_days;
+const windowLabel =
+  windowDays >= 365 ? `past year` : `${windowDays}d`;
 
 const pillarLabels = {
   crawler: "Crawler docs",
@@ -20,7 +22,7 @@ const pillarLabels = {
   <div class="pillar-eyebrow">
     <span class="pillar-label">{pillarLabels[pillar]}</span>
     <span class="pillar-meta">
-      {windowDays}d · {digest.event_count} event{digest.event_count !== 1 ? "s" : ""}
+      {windowLabel} · {digest.event_count} event{digest.event_count !== 1 ? "s" : ""}
     </span>
   </div>
 

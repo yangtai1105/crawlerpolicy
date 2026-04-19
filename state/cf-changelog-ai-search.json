@@ -1,0 +1,28 @@
+{
+  "last_checked_at": "2026-04-19T22:16:04.328018+00:00",
+  "last_hash": null,
+  "last_seen_guids": [
+    "https://developers.cloudflare.com/changelog/post/2026-02-09-indexing-improvements/",
+    "https://developers.cloudflare.com/changelog/post/2026-01-20-ai-search-path-filtering/",
+    "https://developers.cloudflare.com/changelog/post/2026-01-20-ai-search-simplified-api/",
+    "https://developers.cloudflare.com/changelog/post/2025-11-19-add-extra-headers-for-website-crawling/",
+    "https://developers.cloudflare.com/changelog/post/2025-10-27-ai-search-reranking-system-prompt/",
+    "https://developers.cloudflare.com/changelog/post/2025-09-25-ai-search-more-models/",
+    "https://developers.cloudflare.com/changelog/post/2025-09-19-autorag-metrics/",
+    "https://developers.cloudflare.com/changelog/post/2025-07-08-autorag-jobs-view/",
+    "https://developers.cloudflare.com/changelog/post/2025-06-19-autorag-custom-metadata-and-context/",
+    "https://developers.cloudflare.com/changelog/post/2025-06-19-autorag-filename-filter/",
+    "https://developers.cloudflare.com/changelog/post/2025-04-23-autorag-metadata-filtering/",
+    "https://developers.cloudflare.com/changelog/post/2025-04-07-autorag-open-beta/",
+    "https://developers.cloudflare.com/changelog/post/2026-04-16-ai-search-namespace-binding/",
+    "https://developers.cloudflare.com/changelog/post/2026-04-16-hybrid-search-and-relevance-boosting/",
+    "https://developers.cloudflare.com/changelog/post/2026-04-09-ai-search-content-selectors/",
+    "https://developers.cloudflare.com/changelog/post/2026-04-09-new-workers-ai-models/",
+    "https://developers.cloudflare.com/changelog/post/2026-04-01-ai-search-wrangler-commands/",
+    "https://developers.cloudflare.com/changelog/post/2026-03-23-ai-search-new-rest-api/",
+    "https://developers.cloudflare.com/changelog/post/2026-03-23-ai-search-public-endpoint-and-snippets/",
+    "https://developers.cloudflare.com/changelog/post/2026-03-23-custom-metadata-filtering/"
+  ],
+  "consecutive_failures": 0,
+  "first_seen": false
+}

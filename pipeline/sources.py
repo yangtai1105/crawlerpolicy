@@ -61,8 +61,10 @@ class Source(BaseModel):
     def _validate_type_requirements(self) -> Self:
         if self.type in (SourceType.HTML_PAGE, SourceType.RSS_FEED, SourceType.CF_BROWSER_RUN) and not self.url:
             raise ValueError(f"source {self.slug}: {self.type} requires `url`")
-        if self.type == SourceType.RSS_FEED and not self.keyword_filter:
-            raise ValueError(f"source {self.slug}: rss_feed requires `keyword_filter`")
+        # keyword_filter is optional for rss_feed: product-specific changelog
+        # feeds (e.g. Cloudflare ai-crawl-control.xml) are pre-filtered at the
+        # publisher and don't need another pass. Broad blog feeds should still
+        # supply one — but that's a YAML-side convention, not a schema rule.
         if self.type == SourceType.GITHUB_REPO and not self.repo:
             raise ValueError(f"source {self.slug}: github_repo requires `repo`")
         if self.type == SourceType.IETF_DRAFT and not self.draft_name:

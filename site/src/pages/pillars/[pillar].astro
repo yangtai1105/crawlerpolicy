@@ -46,7 +46,7 @@ const pillarLabel = pillarLabels[pillar as keyof typeof pillarLabels];
       <div class="pillar-page-meta">
         <PillarTag pillar={pillar as "crawler" | "ecosystem" | "agent"} />
         <span class="window-label">
-          {digests.window_days}-day briefing · {digest.event_count} material event{digest.event_count !== 1 ? "s" : ""}
+          {digest.window_days >= 365 ? "past-year" : `${digest.window_days}-day`} briefing · {digest.event_count} material event{digest.event_count !== 1 ? "s" : ""}
         </span>
       </div>
       <h1 class="pillar-page-headline">{digest.headline}</h1>
@@ -57,7 +57,7 @@ const pillarLabel = pillarLabels[pillar as keyof typeof pillarLabels];
         </ul>
       )}
       <p class="digest-footnote">
-        Synthesized by Claude Haiku 4.5 from the last {digests.window_days} days of detected events in this pillar.
+        Synthesized by Claude Haiku 4.5 from the last {digest.window_days} days of detected events in this pillar.
         Regenerates each daily run. <a href="/about">Methodology</a>.
       </p>
     </header>

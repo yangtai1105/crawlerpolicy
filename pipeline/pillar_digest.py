@@ -108,18 +108,50 @@ _PILLAR_LABEL = {
     Pillar.AGENT: "AI agent infrastructure and bot-identity standards",
 }
 
-_SYSTEM = (
-    "You are writing a 'state of the pillar' briefing for an AI ecosystem "
-    "tracker. The reader has been busy and wants the big picture of the last "
-    "30 days in under a minute. Synthesize — don't list. Find the 3-5 threads "
-    "that matter. If the window is quiet, say so plainly (don't manufacture "
-    "drama). Neutral voice; no hype. Always call the emit_pillar_digest tool."
+# Per-pillar rolling window for the digest. Crawler doc changes are rare
+# (1-2 per vendor per year), so a 30-day window rarely shows a real pattern;
+# a ~year-long view is the right frame. News pillars churn fast — 30 days
+# is the sweet spot.
+PILLAR_WINDOW_DAYS = {
+    Pillar.CRAWLER: 365,
+    Pillar.ECOSYSTEM: 30,
+    Pillar.AGENT: 30,
+}
+
+_SYSTEM_NEWS = (
+    "You are writing a 'state of the pillar' briefing for an AI content "
+    "ecosystem insights publication. The reader has been busy and wants the "
+    "big picture of the last {window_days} days in under a minute. "
+    "Synthesize — don't list. Find the 3-5 threads that matter. If the window "
+    "is quiet, say so plainly (don't manufacture drama). Neutral voice; no hype. "
+    "Always call the emit_pillar_digest tool."
+)
+
+_SYSTEM_CRAWLER = (
+    "You are writing a year-in-review 'state of the pillar' briefing on AI "
+    "crawler documentation for an AI content ecosystem insights publication. "
+    "The events below span the past ~12 months of detected vendor-doc changes "
+    "(each event represents a drift from a ~6-month-old Wayback baseline we "
+    "took, or a later-detected change). Frame your synthesis as 'over the past "
+    "year, AI crawler documentation has...' — NOT as 'this month' or 'this week'. "
+    "Find the 3-5 threads that matter (new UA strings, opt-out mechanism "
+    "shifts, scope changes, verification / IP-range tooling changes). If the "
+    "history is thin, say so plainly — 'the tracker seeded baselines recently; "
+    "this is the first comparison pass' is fine. Neutral voice; no hype. "
+    "Always call the emit_pillar_digest tool."
 )
 
 
-async def _synthesize(client: AsyncAnthropic, pillar: Pillar, events: list[dict]) -> dict:
+async def _synthesize(
+    client: AsyncAnthropic, pillar: Pillar, events: list[dict], window_days: int
+) -> dict:
     label = _PILLAR_LABEL[pillar]
-    lines = [f"PILLAR: {label}", f"EVENTS IN LAST 30 DAYS (n={len(events)}, newest first):", ""]
+    window_label = (
+        f"LAST {window_days} DAYS"
+        if window_days <= 60
+        else f"LAST ~{round(window_days / 365, 1)} YEAR{'S' if window_days >= 730 else ''}"
+    )
+    lines = [f"PILLAR: {label}", f"EVENTS IN {window_label} (n={len(events)}, newest first):", ""]
     for e in events[:40]:  # cap context
         date = e["detected_at"].date().isoformat()
         lines.append(f"- [{date}] ({e['source']}, importance {e['importance']:.2f}) {e['title']}")
@@ -127,10 +159,16 @@ async def _synthesize(client: AsyncAnthropic, pillar: Pillar, events: list[dict]
             lines.append(f"  implication: {e['implication']}")
     user = "\n".join(lines)
 
+    system_prompt = (
+        _SYSTEM_CRAWLER
+        if pillar == Pillar.CRAWLER
+        else _SYSTEM_NEWS.format(window_days=window_days)
+    )
+
     msg = await client.messages.create(
         model=HAIKU_MODEL,
         max_tokens=800,
-        system=[{"type": "text", "text": _SYSTEM, "cache_control": {"type": "ephemeral"}}],
+        system=[{"type": "text", "text": system_prompt, "cache_control": {"type": "ephemeral"}}],
         tools=[_TOOL],
         tool_choice={"type": "tool", "name": "emit_pillar_digest"},
         messages=[{"role": "user", "content": user}],
@@ -147,28 +185,31 @@ async def build_pillar_digests(
     events_dir: Path,
     out_path: Path,
     now: datetime,
-    window_days: int = 30,
 ) -> None:
     digests: dict[str, dict] = {}
     for pillar in (Pillar.CRAWLER, Pillar.ECOSYSTEM, Pillar.AGENT):
+        window_days = PILLAR_WINDOW_DAYS[pillar]
         events = _load_events_in_window(events_dir, pillar, now, window_days)
         if not events:
             digests[pillar.value] = {
                 "headline": f"Quiet window for {pillar.value}.",
                 "body": (
                     f"No material events detected in the {pillar.value} pillar over the last "
-                    f"{window_days} days. This is not necessarily a sign of ecosystem inactivity — "
-                    "it can mean our tracked sources happened not to publish, or what they "
-                    "published didn't pass the relevance filter. Add or adjust sources in "
-                    "sources.yaml to broaden the radar."
+                    f"{window_days} days. This can mean tracked sources didn't publish in the "
+                    "window, or published content didn't pass the relevance filter."
                 ),
                 "themes": [],
                 "event_count": 0,
+                "window_days": window_days,
             }
             continue
         try:
-            result = await _synthesize(client, pillar, events)
-            digests[pillar.value] = {**result, "event_count": len(events)}
+            result = await _synthesize(client, pillar, events, window_days)
+            digests[pillar.value] = {
+                **result,
+                "event_count": len(events),
+                "window_days": window_days,
+            }
             log.info("pillar_digest %s: %d events → %s", pillar.value, len(events), result["headline"])
         except Exception as e:
             log.exception("pillar_digest %s failed", pillar.value)
@@ -177,6 +218,7 @@ async def build_pillar_digests(
                 "body": f"Digest synthesis errored: {e}",
                 "themes": [],
                 "event_count": len(events),
+                "window_days": window_days,
             }
 
     out_path.parent.mkdir(parents=True, exist_ok=True)
@@ -184,7 +226,6 @@ async def build_pillar_digests(
         json.dumps(
             {
                 "generated_at": now.isoformat(),
-                "window_days": window_days,
                 **digests,
             },
             indent=2,

@@ -61,6 +61,24 @@
   url: https://commoncrawl.org/faq
   display_name: Common Crawl
 
+# Cloudflare product-specific changelog RSS feeds. These are pre-filtered at
+# the publisher — every item is in-scope for the assigned pillar, so no
+# keyword_filter needed. The Haiku relevance classifier still runs as a cheap
+# defensive pass.
+
+- slug: cf-changelog-ai-crawl-control
+  pillar: crawler
+  type: rss_feed
+  url: https://developers.cloudflare.com/changelog/rss/ai-crawl-control.xml
+  display_name: Cloudflare AI Crawl Control changelog
+
+- slug: cf-changelog-radar
+  pillar: crawler
+  type: rss_feed
+  url: https://developers.cloudflare.com/changelog/rss/radar.xml
+  keyword_filter: ["AI", "crawler", "bot", "agent", "training"]
+  display_name: Cloudflare Radar changelog
+
 # Gemini grounded-search coverage for crawler-ecosystem movement that
 # never lands on vendor doc pages (third-party observation, CDN analytics,
 # ecosystem commentary). References knownagents and Cloudflare Radar
@@ -168,6 +186,18 @@
   url: https://openai.com/news/rss.xml
   keyword_filter: ["agent", "operator", "bot", "crawler", "Assistants", "ChatGPT agents"]
   display_name: OpenAI News
+
+- slug: cf-changelog-ai-gateway
+  pillar: agent
+  type: rss_feed
+  url: https://developers.cloudflare.com/changelog/rss/ai-gateway.xml
+  display_name: Cloudflare AI Gateway changelog
+
+- slug: cf-changelog-ai-search
+  pillar: agent
+  type: rss_feed
+  url: https://developers.cloudflare.com/changelog/rss/ai-search.xml
+  display_name: Cloudflare AI Search changelog
 
 # ─── Gemini grounded-search discovery (one call/day per query) ───
 # Each of these runs once per day, returns the top grounded search results

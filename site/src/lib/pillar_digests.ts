@@ -6,11 +6,11 @@ export interface PillarDigest {
   body: string;
   themes: string[];
   event_count: number;
+  window_days: number;
 }
 
 export interface PillarDigests {
   generated_at: string;
-  window_days: number;
   crawler: PillarDigest;
   ecosystem: PillarDigest;
   agent: PillarDigest;

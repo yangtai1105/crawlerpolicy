@@ -1,0 +1,20 @@
+{
+  "last_checked_at": "2026-04-19T22:16:04.328018+00:00",
+  "last_hash": null,
+  "last_seen_guids": [
+    "https://developers.cloudflare.com/changelog/post/2026-03-17-collect-log-payload-header/",
+    "https://developers.cloudflare.com/changelog/post/2026-03-02-default-gateway/",
+    "https://developers.cloudflare.com/changelog/post/2026-02-19-ai-dashboard-experience-improvements/",
+    "https://developers.cloudflare.com/changelog/post/2025-08-25-secrets-store-ai-gateway/",
+    "https://developers.cloudflare.com/changelog/post/2025-06-03-aig-openai-compatible-endpoint/",
+    "https://developers.cloudflare.com/changelog/post/2025-03-20-websockets/",
+    "https://developers.cloudflare.com/changelog/post/2025-02-26-guardrails/",
+    "https://developers.cloudflare.com/changelog/post/2025-02-05-aig-request-handling/",
+    "https://developers.cloudflare.com/changelog/post/2025-02-04-aig-provider-cartesia-eleven-cerebras/",
+    "https://developers.cloudflare.com/changelog/post/2025-01-26-worker-binding-methods/",
+    "https://developers.cloudflare.com/changelog/post/2025-01-07-aig-provider-deepseek/",
+    "https://developers.cloudflare.com/changelog/post/2026-04-02-auto-retry-upstream-failures/"
+  ],
+  "consecutive_failures": 0,
+  "first_seen": false
+}
