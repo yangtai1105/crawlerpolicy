@@ -1,23 +1,32 @@
 {
-  "generated_at": "2026-04-19T20:45:18.927178+00:00",
+  "generated_at": "2026-04-19T21:06:01.962496+00:00",
   "entries": [
     {
       "slug": "gptbot",
       "display_name": "OpenAI GPTBot",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://openai.com/searchbot",
+      "policy_url": "https://openai.com/crawling-standards",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": []
     },
     {
       "slug": "claudebot",
       "display_name": "Anthropic ClaudeBot",
-      "supports_robots_txt": null,
-      "supports_user_agent_opt_out": null,
-      "policy_url": "https://support.anthropic.com/",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "https://support.anthropic.com/en/articles/",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": [
+        {
+          "name": "ClaudeBot",
+          "purpose": "Web crawling for training and operational data collection",
+          "scope": "General web crawl for content discovery and analysis",
+          "opt_out": "Disallow ClaudeBot in robots.txt or contact Anthropic for opt-out"
+        }
+      ]
     },
     {
       "slug": "google-extended",
@@ -26,7 +35,8 @@
       "supports_user_agent_opt_out": true,
       "policy_url": "https://developers.google.com/search/docs/crawling-indexing/overview",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": []
     },
     {
       "slug": "perplexitybot",
@@ -35,16 +45,31 @@
       "supports_user_agent_opt_out": true,
       "policy_url": "https://perplexity.ai/perplexitybot",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": [
+        {
+          "name": "PerplexityBot",
+          "purpose": "Surface and link websites in Perplexity search results",
+          "scope": "Search results indexing, not used for AI foundation model training",
+          "opt_out": "Disallow PerplexityBot in robots.txt file"
+        },
+        {
+          "name": "Perplexity-User",
+          "purpose": "Support user-triggered web page fetching for accurate answers",
+          "scope": "User-requested page fetches to include links in responses; generally ignores robots.txt",
+          "opt_out": "Control access via IP address allowlisting; ignores robots.txt rules"
+        }
+      ]
     },
     {
       "slug": "applebot-extended",
       "display_name": "Applebot-Extended",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://www.apple.com/go/applebot",
+      "policy_url": "http://www.apple.com/go/applebot",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": []
     },
     {
       "slug": "meta-externalagent",
@@ -53,34 +78,52 @@
       "supports_user_agent_opt_out": true,
       "policy_url": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": []
     },
     {
       "slug": "microsoft-bot-docs",
       "display_name": "Microsoft Bingbot / Copilot",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://www.microsoft.com/en-us/bing/webmaster/help/crawlers",
+      "policy_url": "https://www.microsoft.com/en-us/bing/webmastertools/about-bingbot",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": []
     },
     {
       "slug": "amazonbot",
       "display_name": "Amazonbot",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=G200127470",
+      "policy_url": "https://www.amazon.com/robots.txt",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": [
+        {
+          "name": "Amazonbot",
+          "purpose": "Web crawling for Amazon services",
+          "scope": "General web crawl, respects host-level robots.txt files",
+          "opt_out": "User-agent: Amazonbot / Disallow: /, or use robots meta tags (noarchive, noindex, none)"
+        }
+      ]
     },
     {
       "slug": "ccbot",
       "display_name": "Common Crawl CCBot",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://commoncrawl.org/",
+      "policy_url": "https://commoncrawl.org/get-started/crawling-policies/",
       "days_since_last_change": 0,
-      "last_snapshot_date": "2026-04-19"
+      "last_snapshot_date": "2026-04-19",
+      "user_agents": [
+        {
+          "name": "CCBot",
+          "purpose": "Web crawling for Common Crawl archives",
+          "scope": "General web crawl to create publicly available web archives",
+          "opt_out": "Respect robots.txt Disallow rules; set User-Agent properly per RFC 9110"
+        }
+      ]
     }
   ]
 }

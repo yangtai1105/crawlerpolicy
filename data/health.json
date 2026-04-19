@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-04-19T20:45:18.927178+00:00",
+  "last_run_at": "2026-04-19T21:06:01.962496+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -23,17 +23,16 @@
     "mcp-spec": "ok",
     "cloudflare-research": "ok",
     "openai-blog": "ok",
-    "gemini-ai-licensing-deals": "ok",
+    "gemini-ai-licensing-deals": "error: AnalysisResult.__init__() missing 1 required positional argument: 'importance'",
     "gemini-content-blocking": "ok",
     "gemini-regulator-ai-content": "ok",
     "gemini-agent-standards": "ok",
     "gemini-agent-infra": "ok"
   },
   "events_written": [
-    "content/events/2026-04-19-gemini-ai-licensing-deals-digest-editorial-shift-copyright-litigation-completely-displaces-business-deals-.md",
-    "content/events/2026-04-19-gemini-content-blocking-digest-content-shift-from-technical-controls-to-monetization-enforcement-tactics.md",
-    "content/events/2026-04-19-gemini-regulator-ai-content-editorial-re-inclusion-of-italian-court-win-for-openai-digest-scope-and-framing-.md",
-    "content/events/2026-04-19-gemini-agent-standards-source-refocuses-agent-bot-auth-standards-digest-removes-nist-response-collectio.md",
-    "content/events/2026-04-19-gemini-agent-infra-agent-infrastructure-digest-refocused-drops-4-items-elevates-web-bot-auth-as-lea.md"
+    "content/events/2026-04-19-gemini-content-blocking-publisher-ai-relations-digest-april-2026-watershed-on-licensing-blocking-and-reg.md",
+    "content/events/2026-04-19-gemini-regulator-ai-content-regulatory-digest-six-major-ai-copyright-and-fraud-actions-mar-apr-2026.md",
+    "content/events/2026-04-19-gemini-agent-standards-four-new-ietf-ai-agent-authentication-drafts-and-w3c-agentic-integrity-group-lau.md",
+    "content/events/2026-04-19-gemini-agent-infra-agent-infrastructure-surge-multi-vendor-push-on-identity-authentication-and-orch.md"
   ]
 }

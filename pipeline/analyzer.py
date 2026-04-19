@@ -60,6 +60,12 @@ _SYSTEM_BASE = (
     "- noise: formatting, dates, unrelated artifact.\n\n"
     "Importance rubric (0.0–1.0): reserve 0.9+ for ecosystem-reshaping events; "
     "0.6–0.8 for notable-but-bounded news; 0.3–0.5 incremental; below 0.3 is likely cosmetic.\n\n"
+    "CITATION STYLE: In what_changed and implication, cite primary sources INLINE "
+    "using markdown link syntax at the point the claim is made — e.g. "
+    "'[Cloudflare ships redirects for AI training](https://blog.cloudflare.com/ai-redirects/) "
+    "signals...'. Use the specific URLs from CURRENT or the Cited-sources section if present. "
+    "Never invent URLs. If a claim isn't supported by a listed URL, state the claim "
+    "without a link rather than fabricating one. Never link the same URL more than twice.\n\n"
     "Always call the emit_analysis tool exactly once with your verdict."
 )
 
@@ -121,7 +127,17 @@ async def analyze_change(
 
     for block in msg.content:
         if getattr(block, "type", None) == "tool_use" and block.name == "emit_analysis":
-            return AnalysisResult(**block.input)
+            # Defensive construction — LLMs occasionally drop a required field
+            # (particularly Haiku on long prompts). Fill with safe defaults
+            # rather than crashing the whole pipeline run.
+            args = dict(block.input or {})
+            return AnalysisResult(
+                change_kind=args.get("change_kind", "cosmetic"),
+                importance=float(args.get("importance", 0.3) or 0.3),
+                title=args.get("title") or "(untitled change)",
+                what_changed=args.get("what_changed") or "",
+                implication=args.get("implication") or "",
+            )
     raise RuntimeError("analyzer did not return tool_use")
 
 

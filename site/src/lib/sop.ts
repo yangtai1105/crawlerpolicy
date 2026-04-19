@@ -1,6 +1,13 @@
 import { readFileSync, existsSync } from "node:fs";
 import { resolve } from "node:path";
 
+export interface CrawlerUA {
+  name: string;
+  purpose: string;
+  scope?: string;
+  opt_out?: string;
+}
+
 export interface OptOutEntry {
   slug: string;
   display_name: string;
@@ -9,11 +16,16 @@ export interface OptOutEntry {
   policy_url: string;
   days_since_last_change: number;
   last_snapshot_date: string;
+  user_agents?: CrawlerUA[];
 }
 
 export interface OptOutMatrix {
   generated_at: string;
   entries: OptOutEntry[];
+}
+
+export function findOptOutEntry(slug: string): OptOutEntry | undefined {
+  return loadOptOutMatrix().entries.find((e) => e.slug === slug);
 }
 
 function tryLoad<T>(relPath: string, fallback: T): T {

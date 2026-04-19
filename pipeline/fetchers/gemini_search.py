@@ -14,10 +14,12 @@ whose diff shows what's NEW this week vs last.
 """
 from __future__ import annotations
 
+import asyncio
 import logging
 import os
 from typing import Any
 
+import httpx
 from google import genai
 from google.genai import types as gt
 
@@ -27,6 +29,7 @@ from pipeline.sources import Source
 log = logging.getLogger("gemini_search")
 
 _MODEL = "gemini-2.5-flash"
+_REDIRECT_TIMEOUT = httpx.Timeout(10.0)
 
 
 async def fetch_gemini_search(
@@ -62,18 +65,25 @@ async def fetch_gemini_search(
         ),
     )
 
-    report = _compose_report(resp)
+    report = await _compose_report(resp)
     log.info("gemini_search %s: report length %d chars", source.slug, len(report))
     return FetchResult(mode=ResultMode.DIFFABLE, normalized_content=report, raw_ext="md")
 
 
-def _compose_report(resp: Any) -> str:
-    """Turn Gemini's response into a stable markdown digest for diffing.
+async def _resolve_redirect(client: httpx.AsyncClient, uri: str) -> str:
+    """Follow a Gemini grounding-api-redirect URL to the real source. Return
+    the original URI if resolution fails (so the citation still works)."""
+    try:
+        resp = await client.get(uri)
+        return str(resp.url) if resp.url else uri
+    except Exception:
+        return uri
 
-    Includes the synthesized text + a dedup'd list of cited URLs. Redirects
-    are kept as-is (they're stable per Gemini's attribution system, so
-    diffing won't churn unless the cited sources actually change).
-    """
+
+async def _compose_report(resp: Any) -> str:
+    """Turn Gemini's response into a markdown digest with REAL source URLs
+    (not opaque grounding-redirect URLs), so downstream analysis and inline
+    citations have clickable primary sources."""
     candidates = getattr(resp, "candidates", None) or []
     if not candidates:
         return ""
@@ -82,7 +92,7 @@ def _compose_report(resp: Any) -> str:
     full_text = "".join(getattr(p, "text", "") or "" for p in parts).strip()
 
     meta = getattr(candidate, "grounding_metadata", None)
-    citations: list[tuple[str, str]] = []
+    raw_citations: list[tuple[str, str]] = []  # (title, redirect_uri)
     seen_uris: set[str] = set()
     if meta is not None:
         for chunk in getattr(meta, "grounding_chunks", None) or []:
@@ -94,9 +104,21 @@ def _compose_report(resp: Any) -> str:
             if not uri or uri in seen_uris:
                 continue
             seen_uris.add(uri)
-            citations.append((title, uri))
+            raw_citations.append((title, uri))
+
+    # Follow redirects in parallel so the digest stores real source URLs.
+    # This makes citations durable even if Gemini's attribution URLs rotate.
+    resolved: list[tuple[str, str]] = []
+    if raw_citations:
+        async with httpx.AsyncClient(timeout=_REDIRECT_TIMEOUT, follow_redirects=True) as client:
+            real_urls = await asyncio.gather(
+                *[_resolve_redirect(client, uri) for _, uri in raw_citations],
+                return_exceptions=False,
+            )
+        for (title, _original), real_url in zip(raw_citations, real_urls):
+            resolved.append((title, real_url))
 
     body = full_text + "\n\n## Cited sources\n"
-    for i, (title, uri) in enumerate(citations, start=1):
-        body += f"{i}. [{title}]({uri})\n"
+    for i, (title, url) in enumerate(resolved, start=1):
+        body += f"{i}. [{title}]({url})\n"
     return body

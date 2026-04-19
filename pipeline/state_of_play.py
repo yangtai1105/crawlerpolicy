@@ -28,15 +28,45 @@ def _as_bool(v) -> bool | None:
 
 _CRAWLER_FACTS_TOOL = {
     "name": "emit_crawler_facts",
-    "description": "Emit structured facts about this crawler's opt-out behavior.",
+    "description": "Emit structured facts about this vendor's AI bot/crawler documentation.",
     "input_schema": {
         "type": "object",
         "properties": {
             "supports_robots_txt": {"type": "boolean"},
             "supports_user_agent_opt_out": {"type": "boolean"},
             "policy_url": {"type": "string"},
+            "user_agents": {
+                "type": "array",
+                "description": (
+                    "Each distinct user-agent documented on this page. List ALL of them — "
+                    "training crawlers, search crawlers, user-triggered fetchers, agent "
+                    "actions, etc. If the page only mentions one, return one."
+                ),
+                "items": {
+                    "type": "object",
+                    "properties": {
+                        "name": {
+                            "type": "string",
+                            "description": "The UA string or product name (e.g. 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User')",
+                        },
+                        "purpose": {
+                            "type": "string",
+                            "description": "≤15 words — what this UA is for (e.g. 'training data collection', 'search index updates')",
+                        },
+                        "scope": {
+                            "type": "string",
+                            "description": "≤25 words — what it crawls or when it fires (e.g. 'general web crawl', 'user-triggered fetch for live responses')",
+                        },
+                        "opt_out": {
+                            "type": "string",
+                            "description": "≤20 words — documented opt-out mechanism for THIS specific UA (e.g. 'User-agent: GPTBot / Disallow: /', 'honors Google-Extended robots token')",
+                        },
+                    },
+                    "required": ["name", "purpose"],
+                },
+            },
         },
-        "required": ["supports_robots_txt", "supports_user_agent_opt_out", "policy_url"],
+        "required": ["supports_robots_txt", "supports_user_agent_opt_out", "policy_url", "user_agents"],
     },
 }
 
@@ -46,10 +76,14 @@ async def _extract_crawler_facts(
 ) -> dict:
     msg = await client.messages.create(
         model=HAIKU_MODEL,
-        max_tokens=300,
+        # Needs enough room for the UA array (vendors can document 5-8 UAs).
+        max_tokens=2500,
         system=(
             "You extract factual fields from an AI crawler's official documentation. "
-            "Be conservative: only mark true when the documentation explicitly supports it."
+            "Be conservative: only mark booleans true when the documentation explicitly "
+            "supports it. For user_agents, list EVERY distinct UA name mentioned on the "
+            "page — don't skip any, even if purpose is similar to another. Use the "
+            "specific name the vendor uses (e.g. 'GPTBot', 'OAI-SearchBot', 'Claude-User')."
         ),
         tools=[_CRAWLER_FACTS_TOOL],
         tool_choice={"type": "tool", "name": "emit_crawler_facts"},
@@ -91,6 +125,7 @@ async def build_opt_out_matrix(
                 "policy_url": facts["policy_url"],
                 "days_since_last_change": days_since,
                 "last_snapshot_date": snap_date.date().isoformat(),
+                "user_agents": facts.get("user_agents") or [],
             }
         )
     out_path.parent.mkdir(parents=True, exist_ok=True)
