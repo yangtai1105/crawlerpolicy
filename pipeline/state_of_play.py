@@ -12,6 +12,20 @@ from pipeline.sources import Source
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
 
+
+def _as_bool(v) -> bool | None:
+    """Coerce Haiku tool output to a strict bool or None.
+
+    Haiku occasionally ignores the schema and returns a string placeholder
+    (e.g. '<UNKNOWN>') instead of a true bool. Fall back to null so the
+    frontend can render 'unknown' rather than crash on truthy strings.
+    """
+    if isinstance(v, bool):
+        return v
+    if isinstance(v, str) and v.strip().lower() in ("true", "false"):
+        return v.strip().lower() == "true"
+    return None
+
 _CRAWLER_FACTS_TOOL = {
     "name": "emit_crawler_facts",
     "description": "Emit structured facts about this crawler's opt-out behavior.",
@@ -72,8 +86,8 @@ async def build_opt_out_matrix(
             {
                 "slug": s.slug,
                 "display_name": s.display_name,
-                "supports_robots_txt": facts["supports_robots_txt"],
-                "supports_user_agent_opt_out": facts["supports_user_agent_opt_out"],
+                "supports_robots_txt": _as_bool(facts["supports_robots_txt"]),
+                "supports_user_agent_opt_out": _as_bool(facts["supports_user_agent_opt_out"]),
                 "policy_url": facts["policy_url"],
                 "days_since_last_change": days_since,
                 "last_snapshot_date": snap_date.date().isoformat(),

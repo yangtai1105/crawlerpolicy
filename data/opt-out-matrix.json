@@ -1,0 +1,68 @@
+{
+  "generated_at": "2026-04-19T06:19:33.336737+00:00",
+  "entries": [
+    {
+      "slug": "claudebot",
+      "display_name": "Anthropic ClaudeBot",
+      "supports_robots_txt": null,
+      "supports_user_agent_opt_out": null,
+      "policy_url": "https://www.anthropic.com",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    },
+    {
+      "slug": "google-extended",
+      "display_name": "Google-Extended",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "https://developers.google.com/search/docs/crawling-indexing/overview-google-crawlers",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    },
+    {
+      "slug": "perplexitybot",
+      "display_name": "PerplexityBot",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "https://www.perplexity.com/perplexitybot",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    },
+    {
+      "slug": "applebot-extended",
+      "display_name": "Applebot-Extended",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "http://www.apple.com/go/applebot",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    },
+    {
+      "slug": "microsoft-bot-docs",
+      "display_name": "Microsoft Bingbot / Copilot",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "https://www.microsoft.com/en-us/bing/webmasters/how-to-use-bingbot",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    },
+    {
+      "slug": "amazonbot",
+      "display_name": "Amazonbot",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=GLSBYFE35AF4D689",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    },
+    {
+      "slug": "ccbot",
+      "display_name": "Common Crawl CCBot",
+      "supports_robots_txt": true,
+      "supports_user_agent_opt_out": true,
+      "policy_url": "https://commoncrawl.org/",
+      "days_since_last_change": 0,
+      "last_snapshot_date": "2026-04-19"
+    }
+  ]
+}
