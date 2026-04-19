@@ -1,14 +1,21 @@
-# AI Ecosystem Tracker — v1 source list (28 entries)
+# AI Ecosystem Tracker — v1 source list
 # To add a new source: append an entry below and open a PR.
 # First run after merge is "catch-up" mode (records state, emits zero events).
+#
+# NOTE: 10 sources in the original 28-source v1 plan are currently commented out
+# because their official URLs returned 403/404 during initial smoke test. URL
+# discovery for these is tracked separately — uncomment as correct URLs are
+# confirmed. The 18 active sources below form a fully functional v1.
 
 # ─── Pillar 1: Crawler / Bot documentation (HTML diff) ───
 
-- slug: gptbot
-  pillar: crawler
-  type: html_page
-  url: https://platform.openai.com/docs/gptbot
-  display_name: OpenAI GPTBot
+# TODO(url-discovery): gptbot — platform.openai.com is CF-challenged.
+# Candidates to try: https://openai.com/gptbot ; https://platform.openai.com/docs/bots
+# - slug: gptbot
+#   pillar: crawler
+#   type: html_page
+#   url: https://platform.openai.com/docs/gptbot
+#   display_name: OpenAI GPTBot
 
 - slug: claudebot
   pillar: crawler
@@ -34,11 +41,13 @@
   url: https://support.apple.com/en-us/119829
   display_name: Applebot-Extended
 
-- slug: meta-externalagent
-  pillar: crawler
-  type: html_page
-  url: https://developers.facebook.com/docs/sharing/bot/
-  display_name: Meta-ExternalAgent
+# TODO(url-discovery): meta-externalagent — old URL returns 400 post-redirect.
+# Meta's bot docs moved; verify current canonical page.
+# - slug: meta-externalagent
+#   pillar: crawler
+#   type: html_page
+#   url: https://developers.facebook.com/docs/sharing/bot/
+#   display_name: Meta-ExternalAgent
 
 - slug: microsoft-bot-docs
   pillar: crawler
@@ -67,19 +76,21 @@
   keyword_filter: ["AI bot", "crawler", "scraper", "content", "robots.txt", "training", "AI training"]
   display_name: Cloudflare Blog
 
-- slug: fastly-blog
-  pillar: ecosystem
-  type: rss_feed
-  url: https://www.fastly.com/blog/feed.xml
-  keyword_filter: ["AI bot", "crawler", "scraper", "training", "content"]
-  display_name: Fastly Blog
+# TODO(url-discovery): fastly-blog — /blog/feed.xml returns 404. Check feed discovery.
+# - slug: fastly-blog
+#   pillar: ecosystem
+#   type: rss_feed
+#   url: https://www.fastly.com/blog/feed.xml
+#   keyword_filter: ["AI bot", "crawler", "scraper", "training", "content"]
+#   display_name: Fastly Blog
 
-- slug: akamai-blog
-  pillar: ecosystem
-  type: rss_feed
-  url: https://www.akamai.com/blog/rss.xml
-  keyword_filter: ["bot", "AI", "crawler", "scraper", "training"]
-  display_name: Akamai Blog
+# TODO(url-discovery): akamai-blog — returns 403 CF challenge.
+# - slug: akamai-blog
+#   pillar: ecosystem
+#   type: rss_feed
+#   url: https://www.akamai.com/blog/rss.xml
+#   keyword_filter: ["bot", "AI", "crawler", "scraper", "training"]
+#   display_name: Akamai Blog
 
 - slug: datadome-blog
   pillar: ecosystem
@@ -102,12 +113,13 @@
   keyword_filter: ["AI", "artificial intelligence", "generative", "AI Act", "DSA", "DMA"]
   display_name: EU Commission Press
 
-- slug: eu-ai-office
-  pillar: ecosystem
-  type: rss_feed
-  url: https://digital-strategy.ec.europa.eu/en/policies/ai-office/rss
-  keyword_filter: ["AI", "code of practice", "GPAI", "model"]
-  display_name: EU AI Office
+# TODO(url-discovery): eu-ai-office — redirects to page-not-found.
+# - slug: eu-ai-office
+#   pillar: ecosystem
+#   type: rss_feed
+#   url: https://digital-strategy.ec.europa.eu/en/policies/ai-office/rss
+#   keyword_filter: ["AI", "code of practice", "GPAI", "model"]
+#   display_name: EU AI Office
 
 - slug: us-ftc
   pillar: ecosystem
@@ -116,12 +128,13 @@
   keyword_filter: ["AI", "artificial intelligence", "generative", "chatbot", "training data", "large language"]
   display_name: US FTC
 
-- slug: us-copyright-office
-  pillar: ecosystem
-  type: rss_feed
-  url: https://www.copyright.gov/rss/news.rss
-  keyword_filter: ["AI", "artificial intelligence", "machine learning", "training"]
-  display_name: US Copyright Office
+# TODO(url-discovery): us-copyright-office — /rss/news.rss returns 404.
+# - slug: us-copyright-office
+#   pillar: ecosystem
+#   type: rss_feed
+#   url: https://www.copyright.gov/rss/news.rss
+#   keyword_filter: ["AI", "artificial intelligence", "machine learning", "training"]
+#   display_name: US Copyright Office
 
 - slug: news-media-alliance
   pillar: ecosystem
@@ -133,17 +146,19 @@
 - slug: reddit-corporate
   pillar: ecosystem
   type: rss_feed
-  url: https://redditinc.com/blog/rss.xml
+  url: https://redditinc.com/news/rss.xml
   keyword_filter: ["AI", "data", "API", "license", "bot"]
   display_name: Reddit Corporate Blog
 
 # ─── Pillar 3: AI Agent ecosystem (mixed) ───
 
-- slug: ietf-web-bot-auth
-  pillar: agent
-  type: ietf_draft
-  draft_name: draft-cloudflare-httpbis-web-bot-auth
-  display_name: IETF Web Bot Auth
+# TODO(url-discovery): ietf-web-bot-auth — draft name not found in datatracker.
+# Need to look up actual draft name; may be draft-meunier-* or a different ID.
+# - slug: ietf-web-bot-auth
+#   pillar: agent
+#   type: ietf_draft
+#   draft_name: draft-cloudflare-httpbis-web-bot-auth
+#   display_name: IETF Web Bot Auth
 
 - slug: web-bot-auth-repo
   pillar: agent
@@ -158,12 +173,13 @@
   pr_labels: ["spec", "rfc"]
   display_name: Model Context Protocol (spec)
 
-- slug: browserbase-blog
-  pillar: agent
-  type: rss_feed
-  url: https://www.browserbase.com/blog/rss.xml
-  keyword_filter: ["agent", "bot", "browser", "auth", "MCP"]
-  display_name: Browserbase Blog
+# TODO(url-discovery): browserbase-blog — /blog/rss.xml returns 404.
+# - slug: browserbase-blog
+#   pillar: agent
+#   type: rss_feed
+#   url: https://www.browserbase.com/blog/rss.xml
+#   keyword_filter: ["agent", "bot", "browser", "auth", "MCP"]
+#   display_name: Browserbase Blog
 
 - slug: cloudflare-research
   pillar: agent
@@ -172,23 +188,27 @@
   keyword_filter: ["bot", "agent", "auth", "identity", "scraper"]
   display_name: Cloudflare Research Blog
 
-- slug: anthropic-news
-  pillar: agent
-  type: rss_feed
-  url: https://www.anthropic.com/news/rss.xml
-  keyword_filter: ["agent", "operator", "bot", "crawler", "MCP", "Computer Use", "Claude Code"]
-  display_name: Anthropic News
+# TODO(url-discovery): anthropic-news — /news/rss.xml returns 404. Anthropic may
+# not publish a public RSS feed; consider html_page of the news index instead.
+# - slug: anthropic-news
+#   pillar: agent
+#   type: rss_feed
+#   url: https://www.anthropic.com/news/rss.xml
+#   keyword_filter: ["agent", "operator", "bot", "crawler", "MCP", "Computer Use", "Claude Code"]
+#   display_name: Anthropic News
 
 - slug: openai-blog
   pillar: agent
   type: rss_feed
-  url: https://openai.com/blog/rss.xml
+  url: https://openai.com/news/rss.xml
   keyword_filter: ["agent", "operator", "bot", "crawler", "Assistants", "ChatGPT agents"]
-  display_name: OpenAI Blog
+  display_name: OpenAI News
 
-- slug: langchain-blog
-  pillar: agent
-  type: rss_feed
-  url: https://blog.langchain.dev/rss/
-  keyword_filter: ["agent", "bot", "MCP", "tool use"]
-  display_name: LangChain Blog
+# TODO(url-discovery): langchain-blog — blog.langchain.dev/rss/ redirects to
+# langchain.com/blog (HTML, not RSS). Substack feed may be at a different URL.
+# - slug: langchain-blog
+#   pillar: agent
+#   type: rss_feed
+#   url: https://blog.langchain.dev/rss/
+#   keyword_filter: ["agent", "bot", "MCP", "tool use"]
+#   display_name: LangChain Blog

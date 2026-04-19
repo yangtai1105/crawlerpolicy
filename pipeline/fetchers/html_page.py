@@ -8,13 +8,23 @@ from readability import Document
 from pipeline.fetchers.base import FetchResult, ResultMode
 from pipeline.sources import Source
 
-_UA = "ai-ecosystem-tracker/0.1 (+https://github.com/yangtai1105/ai-ecosystem-tracker)"
+# Browser-like UA — many vendor doc sites 403 anything else. We're a read-only
+# daily archive tracker; this is a monitoring pattern, not impersonation.
+_UA = (
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
+    "AppleWebKit/537.36 (KHTML, like Gecko) Chrome/126.0.0.0 Safari/537.36"
+)
+_HEADERS = {
+    "User-Agent": _UA,
+    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+    "Accept-Language": "en-US,en;q=0.9",
+}
 _TIMEOUT = httpx.Timeout(30.0)
 
 
 async def fetch_html_page(source: Source) -> FetchResult:
     async with httpx.AsyncClient(
-        headers={"User-Agent": _UA}, timeout=_TIMEOUT, follow_redirects=True
+        headers=_HEADERS, timeout=_TIMEOUT, follow_redirects=True
     ) as client:
         resp = await client.get(source.url)
         resp.raise_for_status()
