@@ -266,8 +266,12 @@ def _cli() -> None:
         format="%(asctime)s %(levelname)s %(name)s %(message)s",
     )
     cfg = Config.from_env()
+    # max_retries=5 (default 2) absorbs intermittent connection errors during
+    # the 30-day backfill, which fans out ~30-80 API calls over a few minutes.
     client = (
-        AsyncAnthropic(api_key=cfg.anthropic_api_key) if cfg.anthropic_api_key else None
+        AsyncAnthropic(api_key=cfg.anthropic_api_key, max_retries=5)
+        if cfg.anthropic_api_key
+        else None
     )
 
     async def _sop(sources, repo_root, now):
