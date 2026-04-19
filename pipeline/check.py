@@ -177,6 +177,15 @@ async def _process_result(
         return new_events, state
 
     # PER_ITEM
+    # Catch-up: on first run, record all guids as "seen" without LLM work.
+    # Otherwise adding a new RSS source would flood the feed with historical posts.
+    if state.first_seen:
+        for item in result.items:
+            state.last_seen_guids.append(item.guid)
+        state.first_seen = False
+        state.last_seen_guids = state.last_seen_guids[-500:]
+        return new_events, state
+
     for item in result.items:
         blob = f"{item.title}\n{item.summary}"
         if not keyword_match(blob, source.keyword_filter or []):
@@ -204,12 +213,6 @@ async def _process_result(
             )
             new_events.append(path)
         state.last_seen_guids.append(item.guid)
-
-    if state.first_seen:
-        for p in new_events:
-            p.unlink(missing_ok=True)
-        new_events = []
-        state.first_seen = False
 
     state.last_seen_guids = state.last_seen_guids[-500:]
     return new_events, state
