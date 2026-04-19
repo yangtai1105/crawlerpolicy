@@ -8,8 +8,19 @@ from anthropic import AsyncAnthropic
 
 from pipeline.sources import Pillar, Source
 
-DEFAULT_MODEL = "claude-sonnet-4-6"
+# Per-pillar default routing: crawler events are rare (1-2/month) and
+# high-stakes (the whole site's point is catching these), so they get the
+# stronger model. News pillars are high-volume; Haiku is 4x cheaper and
+# adequate for "summarize this blog post + 3-sentence implication".
+SONNET_MODEL = "claude-sonnet-4-6"
+HAIKU_MODEL = "claude-haiku-4-5-20251001"
 OPUS_MODEL = "claude-opus-4-7"
+
+DEFAULT_MODEL_BY_PILLAR: dict[Pillar, str] = {
+    Pillar.CRAWLER: SONNET_MODEL,
+    Pillar.ECOSYSTEM: HAIKU_MODEL,
+    Pillar.AGENT: HAIKU_MODEL,
+}
 
 
 @dataclass
@@ -76,7 +87,7 @@ async def analyze_change(
     unified_diff: str,
 ) -> AnalysisResult:
     system = _SYSTEM_BASE + (_CRAWLER_ADDON if source.pillar == Pillar.CRAWLER else _NEWS_ADDON)
-    model = _resolve_model(source.model)
+    model = _resolve_model(source)
     user_content = (
         f"Source: {source.display_name} ({source.pillar.value})\n"
         f"URL: {source.url or ''}\n\n"
@@ -100,9 +111,14 @@ async def analyze_change(
     raise RuntimeError("analyzer did not return tool_use")
 
 
-def _resolve_model(override: str | None) -> str:
+def _resolve_model(source: Source) -> str:
+    override = source.model
     if override == "opus":
         return OPUS_MODEL
+    if override == "sonnet":
+        return SONNET_MODEL
+    if override == "haiku":
+        return HAIKU_MODEL
     if override and override.startswith("claude-"):
         return override
-    return DEFAULT_MODEL
+    return DEFAULT_MODEL_BY_PILLAR.get(source.pillar, SONNET_MODEL)
