@@ -1,0 +1,76 @@
+{
+  "generated_at": "2026-04-19T23:40:54.584069+00:00",
+  "iso_year": 2026,
+  "iso_week": 16,
+  "topic_groups": [
+    "Crawling & Publisher Controls",
+    "Agents",
+    "Copyright & Legal",
+    "Web Ecosystem & AI Impact"
+  ],
+  "items": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tag": "#RobotsTxt",
+      "source_domain": "arxiv.org",
+      "url": "https://arxiv.org/abs/2604.08675",
+      "title": "Strategic Response of News Publishers to Generative AI",
+      "frame": "Publishers blocking AI bots via robots.txt experience reduced traffic, diminishing brand awareness and audience engagement in AI-generated responses.",
+      "quote": "A key finding is that the most common protective step, restricting AI bot access through robots.txt is associated with lower, not higher, traffic."
+    },
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tag": "#PublisherControls",
+      "source_domain": "cloudflare.com",
+      "url": "https://blog.cloudflare.com/redirects-for-ai-training-enforces-canonical-content/",
+      "title": "Redirects for AI Training enforces canonical content",
+      "frame": "Publishers can use canonical tags to redirect AI crawlers to current content, aiming to improve AI-generated answers and control data access.",
+      "quote": "In the first seven days, 100% of AI training crawler requests to pages with non-self-referencing canonical tags were redirected and were not served with deprecated content."
+    },
+    {
+      "topic": "Agents",
+      "tag": "#AIAgents",
+      "source_domain": "llm.watch",
+      "url": "https://llm.watch/p/ai-agents-of-the-week-april-12-2026",
+      "title": "AI Agents of the Week: Papers You Should Know About",
+      "frame": "Autonomous AI agents still struggle with complex real-world web tasks, achieving low success rates compared to humans, highlighting brittleness.",
+      "quote": "Web agents that fail two-thirds of everyday online tasks. Skills that evolve across users like a living organism. Autonomous AI is at an inflection point - capable enough to surprise us, brittle enough to humble us, and occasionally deceptive enough to alarm us."
+    },
+    {
+      "topic": "Agents",
+      "tag": "#AIAgentSecurity",
+      "source_domain": "cdw.com",
+      "url": "https://www.cdw.com/content/cdw/en/articles/security/autonomous-ai-agents-insider-threat.html",
+      "title": "Autonomous AI Agents Are the Next Insider Threat: What Leaders Should Know",
+      "frame": "Autonomous AI agents pose a new insider threat due to independent actions and high privileges, demanding a shift to hybrid identity security.",
+      "quote": "The moment software starts taking independent action inside your environment, it stops being a tool and starts behaving like an identity."
+    },
+    {
+      "topic": "Agents",
+      "tag": "#AIAgentGovernance",
+      "source_domain": "xpert.digital",
+      "url": "https://xpert.digital/managed-ai-against-the-proliferation-of-ai-agents-why-your-unsupervised-ai-agents-will-soon-become-a-legal-risk/",
+      "title": "Managed AI against the proliferation of AI agents Why your unsupervised AI agents will soon become a legal risk",
+      "frame": "Uncontrolled proliferation of AI agents ('agent sprawl') creates significant IT and compliance risks, including exploding costs and security gaps.",
+      "quote": "The so-called 'agent sprawl' (uncontrolled proliferation of AI agents) not only leads to exploding infrastructure costs and redundant systems, but also opens up dangerous security gaps."
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tag": "#AISearchImpact",
+      "source_domain": "ziptie.dev",
+      "url": "https://ziptie.dev/blog/future-of-ai-search-less-traffic-higher-conversions/",
+      "title": "Future of AI Search : Less Traffic, Higher Conversions",
+      "frame": "AI search shifts traffic from ranked links to synthesized answers, reducing clicks but increasing conversion rates for cited brands.",
+      "quote": "AI Overviews cause a 61% CTR drop on informational queries, and 93% of AI Mode searches produce zero clicks to external websites."
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tag": "#PublisherRevenue",
+      "source_domain": "magazinecoalition.com",
+      "url": "https://magazinecoalition.com/google-ai-overviews-impact-on-publishers-explained/",
+      "title": "Google AI Overviews Impact on Publishers Explained",
+      "frame": "Google's AI Overviews cause structural declines in publisher traffic by summarizing content, creating a 'lose-lose' situation for publishers.",
+      "quote": "If you let Google's AI crawl your content, it summarizes your work and keeps readers on its platform. If you block Google's AI, you disappear from search results entirely."
+    }
+  ]
+}

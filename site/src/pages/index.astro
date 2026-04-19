@@ -6,12 +6,14 @@ import PillarDigestCard from "../components/PillarDigestCard.astro";
 import StateOfPlay from "../components/StateOfPlay.astro";
 import { countsByPillar, findSource } from "../lib/sources";
 import { loadPillarDigests } from "../lib/pillar_digests";
+import { loadLatest as loadLatestReading } from "../lib/critical_reading";
 
 const events = (await getCollection("events"))
   .filter((e) => e.data.change_kind === "material")
   .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime());
 
 const digests = loadPillarDigests();
+const latestReading = loadLatestReading();
 const counts = countsByPillar();
 
 // "Key content" grid below the pillar cards: show the most recent event
@@ -48,6 +50,16 @@ const feedEntries = await Promise.all(
           <PillarDigestCard pillar="ecosystem" digest={digests.ecosystem}  />
           <PillarDigestCard pillar="agent" digest={digests.agent}  />
         </div>
+        {latestReading && (
+          <a href="/reading" class="reading-strip">
+            <span class="rs-label">This week's critical reading</span>
+            <span class="rs-meta">
+              Week {latestReading.iso_week} · {latestReading.items.length} items ·
+              analysis, not announcements
+            </span>
+            <span class="rs-cta">Open →</span>
+          </a>
+        )}
       </div>
     </section>
   ) : (
@@ -156,6 +168,29 @@ const feedEntries = await Promise.all(
     background: var(--bg);
     padding: var(--space-6) 0 var(--space-4);
     border-bottom: 1px solid var(--border);
+  }
+  .reading-strip {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-4);
+    padding: var(--space-3) var(--space-4);
+    margin-top: var(--space-4);
+    background: var(--bg-elev);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--pillar-agent);
+    border-radius: 4px;
+    color: var(--ink);
+    transition: border-color 120ms, background 120ms;
+  }
+  .reading-strip:hover { background: var(--bg-hover); color: var(--ink); }
+  .rs-label { font-weight: 500; font-size: 0.95rem; }
+  .rs-meta { color: var(--ink-muted); font-size: 0.82rem; flex: 1; margin-left: var(--space-3); }
+  .rs-cta { color: var(--ink-muted); font-size: 0.82rem; }
+  .reading-strip:hover .rs-cta { color: var(--pillar-agent); }
+  @media (max-width: 640px) {
+    .reading-strip { flex-wrap: wrap; }
+    .rs-meta { flex: 0 0 100%; margin-left: 0; }
   }
   .pillars-grid {
     display: grid;
