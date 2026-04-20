@@ -1,261 +1,51 @@
 {
-  "generated_at": "2026-04-20T04:40:55.887345+00:00",
+  "generated_at": "2026-04-20T05:02:07.968362+00:00",
   "iso_year": 2026,
   "iso_week": 17,
   "topics": [
     {
       "topic": "Crawling & Publisher Controls",
-      "tldr": "This week saw limited new reporting on AI crawlers and publisher controls from top-tier outlets, with key discussions focusing on the importance of log file analysis for understanding AI bot behavior and significant legal developments regarding OpenAI's obligation to disclose ChatGPT logs in copyright lawsuits, highlighting broader AI discovery and privacy concerns for businesses.",
-      "items": [
-        {
-          "tag": "#AIDiscovery",
-          "title": "AI, Privacy, and Discovery: Think Before You Prompt",
-          "frame": "Public AI tools create discoverable data, threatening privilege and exposing businesses to litigation risks, necessitating careful usage and adherence to discovery obligations.",
-          "quote": "For Illinois and Missouri clients, the practical takeaway is straightforward: treat public AI tools as if everything you enter could one day appear in discovery.",
-          "kind": "commentary",
-          "topic": "Crawling & Publisher Controls",
-          "url": "https://heplerbroom.com/blog/ai-privacy-and-discovery-think-before-you-prompt/",
-          "source_domain": "heplerbroom.com"
-        }
-      ]
+      "tldr": "A quiet week for major reporting or analysis on AI crawlers and publisher controls, with most recent activity appearing to be older than the strict 14-day recency requirement.",
+      "items": []
     },
     {
       "topic": "Agents",
-      "tldr": "This week's reporting emphasizes the rapid evolution of AI agent protocols like A2A and MCP, crucial for interconnected agent ecosystems, while simultaneously revealing widespread enterprise security incidents and the urgent need for better authentication, governance, and readiness for agentic commerce.",
+      "tldr": "This week's analysis highlights growing concerns over AI agent security, control, and the high potential for enterprise deployment failures, alongside discussions on critical infrastructure needs and the challenges of debugging non-deterministic agent behavior.",
       "items": [
         {
-          "tag": "#AgentEcosystem",
-          "title": "AI Agent Protocols in 2025: A2A, MCP, and the Coming Agentic Ecosystem",
-          "frame": "Explains how A2A and MCP are complementary foundational protocols for building interconnected AI agent economies.",
-          "quote": "They are not competitors — they are complementary, and understanding their roles is essential for anyone building agentic systems.",
+          "tag": "#AgentInfrastructure",
+          "title": "The Agentic Blockchain Stack: How AI Agents Are Rewriting On-Chain Infrastructure in 2026",
+          "published": "2026-04-09",
+          "frame": "AI agents are fundamentally changing blockchain infrastructure requirements, demanding real-time, multi-chain data and event-driven pipelines for autonomous operations.",
+          "quote": "\"As we move deeper into 2026, one truth is becoming undeniable: the infrastructure powering these agents determines whether they win or fail.\"",
           "kind": "analysis",
           "topic": "Agents",
-          "url": "https://dev.to/chunxiaoxx/ai-agent-protocols-in-2025-a2a-mcp-and-the-coming-agentic-ecosystem-4k48",
-          "source_domain": "dev.to"
-        },
-        {
-          "tag": "#AgentSecurity",
-          "title": "AI Agent Security Risks Are Already Here, According to Research",
-          "frame": "Reports that AI agents are already causing security incidents and exceeding permissions in enterprises due to lacking governance.",
-          "quote": "AI agents are already embedded in core workflows, already exceeding intended permissions on a regular basis, and the governance and detection mechanisms needed to manage them are still catching up.",
-          "kind": "research",
-          "topic": "Agents",
-          "url": "https://zenity.io/blog/research/enterprise-ai-security-report",
-          "source_domain": "zenity.io"
-        },
-        {
-          "tag": "#AgentThreats",
-          "title": "Most enterprises can't stop stage-three AI agent threats, VentureBeat survey finds",
-          "frame": "A survey reveals that most enterprises lack visibility and budget to address advanced AI agent security threats, despite frequent incidents.",
-          "quote": "Eighty-eight percent reported AI agent security incidents in the last twelve months. Only 21% have runtime visibility into what their agents are doing.",
-          "kind": "reporting",
-          "topic": "Agents",
-          "url": "https://venturebeat.com/security/most-enterprises-cant-stop-stage-three-ai-agent-threats-venturebeat-survey-finds",
-          "source_domain": "venturebeat.com"
-        },
-        {
-          "tag": "#AgentAuthentication",
-          "title": "Introducing the Agent Readiness score. Is your site agent-ready?",
-          "frame": "Cloudflare introduces a score to help websites adopt standards like Web Bot Auth for better interaction and authentication with AI agents.",
-          "quote": "the Web Bot Auth IETF draft standard allows friendly bots to authenticate themselves, and allows websites receiving requests from bots to identify them.",
-          "kind": "commentary",
-          "topic": "Agents",
-          "url": "https://blog.cloudflare.com/agent-readiness/",
-          "source_domain": "blog.cloudflare.com"
-        },
-        {
-          "tag": "#AgenticCommerce",
-          "title": "From e-commerce to agentic commerce",
-          "frame": "Discusses the evolution from e-commerce to agentic commerce, where AI agents become the primary customer, requiring new optimization strategies.",
-          "quote": "We must treat AI agents as the “primary customer” and adapt e-commerce to become their preferred choice by making optimisations to our online shop.",
-          "kind": "commentary",
-          "topic": "Agents",
-          "url": "https://www.telefonica.com/en/communication-room/blog/commerce-agentic-commerce/",
-          "source_domain": "telefonica.com"
+          "url": "https://cryptoapis.io/blog/564-the-agentic-blockchain-stack-how-ai-agents-are-rewriting-on-chain-infrastructure-in-2026",
+          "source_domain": "cryptoapis.io"
         }
       ]
     },
     {
       "topic": "Copyright & Legal",
-      "tldr": "This week saw continued legal activity in AI copyright lawsuits, with new amicus briefs filed and ongoing updates in major cases involving publishers, authors, and music rights holders against AI companies like OpenAI, Anthropic, and Meta. Regulatory discussions also progressed, particularly in the UK, where the government's stance on AI training data has sparked debate about its impact on the tech sector.",
+      "tldr": "This week's analysis highlights escalating generative AI copyright lawsuits challenging fair use, new EU regulations increasing liability for open-source AI, and calls for stronger copyright protection in Japan for AI-generated animation.",
       "items": [
         {
-          "tag": "#AICopyrightLawsuits",
-          "title": "OpenAI Copyright Lawsuit: Why Authors Are Suing AI",
-          "frame": "Details the consolidated lawsuits against OpenAI and Microsoft for using copyrighted works to train AI models, impacting the content economy.",
-          "quote": "At the center of the dispute is OpenAI, the company behind ChatGPT, which faces a consolidated wave of lawsuits alleging that its AI models were built on the unauthorized mass reproduction of copyrighted books, news articles, reference works, and other creative material.",
-          "kind": "legal",
-          "topic": "Copyright & Legal",
-          "url": "https://crediblelaw.com/openai-copyright-lawsuit-explained/",
-          "source_domain": "crediblelaw.com"
-        },
-        {
-          "tag": "#AIIssuesIP",
-          "title": "Who owns intelligence? AI and intellectual property rights",
-          "frame": "Explores complex IP questions surrounding AI inputs, outputs, and foundation models, including copyrightability and ownership challenges.",
-          "quote": "As AI reshapes business, major intellectual property questions are emerging, from data and copyright to ownership of outputs.",
+          "tag": "#EUCyberResilienceAct",
+          "title": "How AI and new regulations are shaping open source in 2026",
+          "published": "2026-04-17",
+          "frame": "New EU regulations like the Cyber Resilience Act are increasing legal liability for companies using open-source AI components, emphasizing licensing integrity and security.",
+          "quote": "The European Union Cyber Resilience Act (EU CRA) is increasing obligations throughout 2026. It fundamentally changes liability, making companies legally accountable for the security of open-source components in their products.",
           "kind": "commentary",
           "topic": "Copyright & Legal",
-          "url": "https://www.bl.uk/stories/blogs/posts/who-owns-intelligence-ai-and-intellectual-property-rights",
-          "source_domain": "bl.uk"
-        },
-        {
-          "tag": "#AmicusBriefsAI",
-          "title": "Pryor Cashman Continues To Support Creative Community In AI Copyright Case",
-          "frame": "Reports on an amicus brief supporting music publishers in their lawsuit against Anthropic for unlicensed use of copyrighted lyrics.",
-          "quote": "The brief, which supports the music publishers' summary judgment motion, focuses on the fourth fair use factor—the effect of unauthorized copying on the potential market for or value of the copyrighted works—and underscores the significant risks that generative AI poses to the music ecosystem.",
-          "kind": "legal",
-          "topic": "Copyright & Legal",
-          "url": "https://www.mondaq.com/unitedstates/copyright/1770750/pryor-cashman-continues-to-support-creative-community-in-ai-copyright-case",
-          "source_domain": "mondaq.com"
-        },
-        {
-          "tag": "#GenerativeAICases",
-          "title": "Generative AI – IP cases and policy tracker",
-          "frame": "Tracks various generative AI intellectual property cases and policy developments across jurisdictions, including new lawsuits and court rulings.",
-          "quote": "In this tracker, we provide an insight on the various intellectual property cases relating to generative AI going through the courts, as well as anticipated policy and legislative developments.",
-          "kind": "legal",
-          "topic": "Copyright & Legal",
-          "url": "https://www.mishcon.com/generative-ai-intellectual-property-cases-and-policy-tracker",
-          "source_domain": "mishcon.com"
-        },
-        {
-          "tag": "#AIMusicCopyright",
-          "title": "Folk singer unauthorized copy by AI, sued and initially lost case to faulty copyright claims",
-          "frame": "Details a folk artist's struggle with unauthorized AI-generated copies and erroneous copyright claims, highlighting flaws in automated rights systems.",
-          "quote": "Murphy's case highlights the growing challenge of AI-driven impersonation and the need for stronger artist verification tools, a concern echoed in broader discussions about AI's impact on music distribution and artist branding.",
-          "kind": "field-report",
-          "topic": "Copyright & Legal",
-          "url": "https://www.reddit.com/r/musicians/comments/1sjlrmq/folk_singer_unauthorized_copy_by_ai_sued_and/",
-          "source_domain": "reddit.com"
-        },
-        {
-          "tag": "#AIMediaCopyright",
-          "title": "Current Edition: Updates on Generative AI Infringement Cases in Media and Entertainment",
-          "frame": "Provides updates on various generative AI infringement cases in media and entertainment, including motions to dismiss and fair use arguments.",
-          "quote": "In the past few weeks, Sony submitted a supplemental filing in connection with Udio's pending motion to dismiss, citing a recent California decision (Cordova v. Huneault) where a court allowed a similar DMCA claim to proceed.",
-          "kind": "legal",
-          "topic": "Copyright & Legal",
-          "url": "https://www.mishcon.com/generative-ai-intellectual-property-cases-and-policy-tracker",
-          "source_domain": "mishcon.com"
-        },
-        {
-          "tag": "#UKAIRegulation",
-          "title": "Is the government's stance on AI copyright holding back the UK tech scene?",
-          "frame": "Analyzes the UK government's U-turn on AI copyright reform, creating uncertainty for both creatives and AI developers regarding training data.",
-          "quote": "Last month, UK technology secretary Liz Kendall backtracked on plans to let AI firms use copyright-protected work without permission.",
-          "kind": "commentary",
-          "topic": "Copyright & Legal",
-          "url": "https://150sec.com/is-the-governments-stance-on-ai-copyright-holding-back-the-uk-tech-scene/23747/",
-          "source_domain": "150sec.com"
-        },
-        {
-          "tag": "#AICopyrightDilemmas",
-          "title": "The Dilemmas of Artificial Intelligence from a Copyright Perspective",
-          "frame": "Discusses global copyright challenges with AI-generated works, highlighting the need for significant human contribution for protection.",
-          "quote": "In general terms, protection is not granted to AI-generated works unless a significant human contribution can be demonstrated — one that is sufficiently relevant to rule out the possibility that the AI system created the work randomly and unpredictably.",
-          "kind": "commentary",
-          "topic": "Copyright & Legal",
-          "url": "https://tmbroadcast.com/artificial-intelligence-copyright/",
-          "source_domain": "tmbroadcast.com"
+          "url": "https://psyll.com/articles/technology/open-source/how-ai-and-new-regulations-are-shaping-open-source-in-2026",
+          "source_domain": "psyll.com"
         }
       ]
     },
     {
       "topic": "Web Ecosystem & AI Impact",
-      "tldr": "The web ecosystem is grappling with AI's profound impact, as AI Overviews and bot traffic drastically reduce publisher referral revenue, forcing a pivot towards direct audience monetization and content licensing deals. Solutions are emerging, including pay-per-crawl models and AI-powered chatbots, while concerns grow over AI's potential for digital extractivism and the need for protection of indigenous content and minority languages.",
-      "items": [
-        {
-          "tag": "#AITrafficImpact",
-          "title": "The AI Content Crisis: How LLMs Are Draining Media Revenue — and Who's Fighting Back",
-          "frame": "AI models are severely reducing publisher traffic and revenue, leading to new monetization strategies like pay-per-crawl and revenue sharing.",
-          "quote": "AI scrapers consume publisher content at 8692:1 ratios while sending almost zero traffic back.",
-          "kind": "analysis",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://guptadeepak.com/the-ai-content-crisis-how-llms-are-draining-media-revenue-and-the-technologies-fighting-back/",
-          "source_domain": "guptadeepak.com"
-        },
-        {
-          "tag": "#AIOverviewImpact",
-          "title": "Google AI Overviews Impact on Publishers Explained - The Magazine Coalition",
-          "frame": "Google's AI Overviews are causing catastrophic traffic and revenue loss for publishers by providing instant answers without clicks.",
-          "quote": "Zero-click searches don't just steal one visitor. They erase entire content categories from your traffic pipeline.",
-          "kind": "analysis",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://magazinecoalition.com/blog/ai-content/google-ai-overviews-impact-on-publishers/",
-          "source_domain": "magazinecoalition.com"
-        },
-        {
-          "tag": "#PublisherRevenue",
-          "title": "Publishers Are Turning AI Into Ad Revenue. Everyone Else Is Fighting to Survive.",
-          "frame": "Major publishers are piloting ad-funded AI chatbots for revenue, highlighting a growing divide with smaller outlets struggling for survival.",
-          "quote": "Major publishers are installing ad-funded chatbots on their sites and calling it a revenue strategy. A legacy metro daily nearly shut down because it couldn't make payroll.",
-          "kind": "commentary",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://www.mediabistro.com/media-news/publishers-are-turning-ai-into-ad-revenue-everyone-else-is-fighting-to-survive/",
-          "source_domain": "mediabistro.com"
-        },
-        {
-          "tag": "#ContentLicensing",
-          "title": "Le Monde CEO urges publishers to sign AI partnerships to stay competitive - Press Gazette",
-          "frame": "Le Monde's CEO advocates for AI licensing deals, citing significant new revenue and subscriber conversions from partnerships with AI firms.",
-          "quote": "Le Monde shares 25% of revenue from its licensing deals with OpenAI, Perplexity and Meta with its staff journalists.",
-          "kind": "news",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://pressgazette.co.uk/publishers/le-monde-ceo-urges-publishers-to-sign-ai-partnerships-to-stay-competitive/",
-          "source_domain": "pressgazette.co.uk"
-        },
-        {
-          "tag": "#PayPerCrawl",
-          "title": "The Washington Post's Arc XP adds TollBit to help publishers make money from AI bot traffic",
-          "frame": "Arc XP's integration with TollBit enables publishers, especially smaller ones, to monitor and monetize AI bot crawling through pay-per-crawl models.",
-          "quote": "Arc XP customers will be able to use TollBit's tools to monitor and control which bots are crawling their sites for content, as well as monetize the scraping they do allow by redirecting AI bots to TollBit's paywall that charges for crawling.",
-          "kind": "news",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://digiday.com/media/the-washington-posts-arc-xp-adds-tollbit-to-help-publishers-make-money-from-ai-bot-traffic/",
-          "source_domain": "digiday.com"
-        },
-        {
-          "tag": "#IndigenousContent",
-          "title": "a/hrc/emrtd/13/crp.1 - ohchr",
-          "frame": "A UN study assesses AI's impact on cultural rights, highlighting concerns over digital extractivism and the need for protection of Indigenous Peoples' traditional knowledge.",
-          "quote": "The unauthorised digitisation, scraping, or commercial exploitation of these materials, particularly in the training of AI systems, has increasingly been characterised as a form of cultural appropriation or 'digital extractivism'.",
-          "kind": "legal",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://www.ohchr.org/sites/default/files/documents/issues/development/emd/session13/a-hrc-emrtd-13-crp-1.pdf",
-          "source_domain": "ohchr.org"
-        },
-        {
-          "tag": "#MinorityLanguage",
-          "title": "AI isn't built for all languages and cultures. There's a push to fix that - Fast Company",
-          "frame": "The AI industry's English dominance overlooks minority languages, but local LLMs and tightening token limits are creating opportunities for more inclusive models.",
-          "quote": "So-called minority languages are, in reality, spoken by the global majority. Yet thanks to the way models are trained (on massive scrapes of the web), combined with the economics of the tech industry, English remains dominant.",
-          "kind": "analysis",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://www.fastcompany.com/91527477/the-global-push-to-rebuild-ai-in-local-languages",
-          "source_domain": "fastcompany.com"
-        },
-        {
-          "tag": "#NicheMediaImpact",
-          "title": "The End of the Pageview: How Agentic AI is Forcing a Reckoning in Publishing",
-          "frame": "Agentic AI signals the 'end of the pageview,' pushing publishers, especially niche ones, to shift from an attention economy to a data supply economy.",
-          "quote": "The highest leverage comes from authoritative, niche content that no other publisher has written and cannot be easily replaced.",
-          "kind": "commentary",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://www.foundingfuel.com/video/the-end-of-the-pageview-how-agentic-ai-is-forcing-a-reckoning-in-publishing",
-          "source_domain": "foundingfuel.com"
-        },
-        {
-          "tag": "#CulturalProtection",
-          "title": "Human Resilience with AI: Importance and Impact - Karaitiana Taiuru",
-          "frame": "An Indigenous perspective emphasizes that without Indigenous authority, AI development will perpetuate harms like cultural appropriation, necessitating robust protection of traditional knowledge.",
-          "quote": "The immediate priorities are therefore not merely adoption or innovation but cultural protection of traditional knowledge, enforceable intellectual property and related rights and robust partnership terms with government and large technology companies to ensure bias, discrimination, cultural appropriation and racism are not embedded at scale.",
-          "kind": "commentary",
-          "topic": "Web Ecosystem & AI Impact",
-          "url": "https://www.taiuru.co.nz/human-resilience-with-ai/",
-          "source_domain": "taiuru.co.nz"
-        }
-      ]
+      "tldr": "A quiet week; most activity flowed through the daily feed, with no substantive reporting or analysis on AI's impact on the web ecosystem, publisher traffic, or content licensing from major outlets in the last 14 days.",
+      "items": []
     }
   ]
 }
