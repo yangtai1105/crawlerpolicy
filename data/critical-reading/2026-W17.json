@@ -1,27 +1,207 @@
 {
-  "generated_at": "2026-04-20T05:41:42.401682+00:00",
+  "generated_at": "2026-04-20T07:01:51.740916+00:00",
   "iso_year": 2026,
   "iso_week": 17,
   "topics": [
     {
       "topic": "Crawling & Publisher Controls",
-      "tldr": "(error generating: Streaming is required for operations that may take longer than 10 minutes. See https://github.com/anthropics/anthropic-sdk-python#long-requests for more details)",
-      "items": []
+      "tldr": "This week's reporting highlights publishers' escalating efforts to control AI crawlers through blocking tools, monetization strategies like pay-per-crawl, and new opt-out mechanisms, as AI agent traffic increasingly impacts content revenue and data governance. Server-log analyses are crucial for identifying AI bot behavior, while platforms like IMDb are implementing account requirements to combat scraping.",
+      "items": [
+        {
+          "tag": "#ContentMonetization",
+          "title": "The AI Content Crisis: How LLMs Are Draining Media Revenue — and Who's Fighting Back",
+          "published": "2026-04-16",
+          "frame": "Examines how AI bots are impacting media revenue and details publisher strategies like Cloudflare blocking, TollBit's paywalls, and content optimization for AI.",
+          "quote": "Content that was freely available to any crawler will increasingly sit behind commercial gates - Cloudflare's default blocking, TollBit's bot paywalls, and publisher-controlled access policies.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://guptadeepak.com/the-ai-content-crisis-how-llms-are-draining-media-revenue-and-the-technologies-fighting-back/",
+          "source_domain": "guptadeepak.com"
+        },
+        {
+          "tag": "#TrafficGovernance",
+          "title": "TollBit Positions Itself as Key Intermediary in AI-Era Web Scraping and Traffic Governance",
+          "published": "2026-04-18",
+          "frame": "Reports on TollBit's strategy to help publishers manage AI scraping, monetize access, and address challenges from AI agents bypassing robots.txt.",
+          "quote": "TollBit is positioning its Scraper Index and related analytics as tools for rights management and risk mitigation, as AI and enterprise buyers increasingly rely on scraped data.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.tipranks.com/news/private-companies/tollbit-positions-itself-as-key-intermediary-in-ai-era-web-scraping-and-traffic-governance",
+          "source_domain": "tipranks.com"
+        },
+        {
+          "tag": "#BotTraffic",
+          "title": "AI Agents Are Taking Over the Internet: What Rising Automation Means for Ad Fraud in 2026",
+          "published": "2026-04-13",
+          "frame": "Discusses the exponential growth of AI agent traffic, surpassing human traffic, and its implications for ad fraud and the need for new traffic quality heuristics.",
+          "quote": "The conclusion is that non-human activity is becoming normal enough that old heuristics are no longer sufficient.",
+          "kind": "analysis",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.clickfortify.com/blog/ai-agents-taking-over-internet-ad-fraud-2026",
+          "source_domain": "clickfortify.com"
+        },
+        {
+          "tag": "#PublisherControls",
+          "title": "IMDb vereist voortaan account voor lezen gebruikersrecensies in strijd tegen AI",
+          "published": "2026-04-18",
+          "frame": "Reports on IMDb's new requirement for users to have an account to read reviews, a measure implemented to combat AI scraping and maintain human-generated content.",
+          "quote": "The shielding of user content is also a way to make the scraping of this data by AI bots more difficult.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://tweakers.net/nieuws/246928/imdb-vereist-voortaan-account-voor-lezen-gebruikersrecensies-in-strijd-tegen-ai.html",
+          "source_domain": "tweakers.net"
+        }
+      ]
     },
     {
       "topic": "Agents",
-      "tldr": "(error generating: Streaming is required for operations that may take longer than 10 minutes. See https://github.com/anthropics/anthropic-sdk-python#long-requests for more details)",
-      "items": []
+      "tldr": "This week's reporting highlights the growing importance of robust infrastructure for AI agents, from blockchain integration and open-source frameworks to enterprise deployment in marketing and healthcare, emphasizing data quality and governance as critical success factors.",
+      "items": [
+        {
+          "tag": "#AgenticBlockchain #Infrastructure",
+          "title": "The Agentic Blockchain Stack: How AI Agents Are Rewriting On-Chain Infrastructure in 2026",
+          "published": "2026-04-09",
+          "frame": "AI agents demand new blockchain infrastructure for real-time data, deep historical access, and transaction simulation to succeed in on-chain operations.",
+          "quote": "The stack that powers a human's trading app cannot reliably power an autonomous agent operating 24/7 across 15 blockchains.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://cryptoapis.io/blog/564-the-agentic-blockchain-stack-how-ai-agents-are-rewriting-on-chain-infrastructure-in-2026",
+          "source_domain": "cryptoapis.io"
+        },
+        {
+          "tag": "#AgenticMarketing #EnterpriseDeployment",
+          "title": "The Future of Marketing Is AI-Powered Insights – Not More Dashboards",
+          "published": "2026-04-06",
+          "frame": "Marketing is shifting to agentic AI for proactive, intelligent decision-making, but data quality and stack fragmentation remain key obstacles to enterprise adoption.",
+          "quote": "AI capability is not the bottleneck. Data quality and stack fragmentation are.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://layerfive.com/blog/ai-powered-marketing-insights-future-of-marketing/",
+          "source_domain": "layerfive.com"
+        },
+        {
+          "tag": "#HealthcareAI #EnterpriseDeployment",
+          "title": "Healthcare AI Intelligence Report - 2026-04-08",
+          "published": "2026-04-09",
+          "frame": "Healthcare is moving towards scaled AI deployment with policy-driven agents for prior authorization and predictive adherence, requiring clear operating ownership for outcomes.",
+          "quote": "Health systems signaled a shift from standalone AI labs toward enterprise operating models focused on scaled deployment.",
+          "kind": "reporting",
+          "topic": "Agents",
+          "url": "https://vikasgoyal.github.io/industries/healthcare/healthcare-ai-intelligence-report-2026-04-08.html",
+          "source_domain": "vikasgoyal.github.io"
+        }
+      ]
     },
     {
       "topic": "Copyright & Legal",
-      "tldr": "(error generating: Streaming is required for operations that may take longer than 10 minutes. See https://github.com/anthropics/anthropic-sdk-python#long-requests for more details)",
-      "items": []
+      "tldr": "This week's discourse on AI and copyright highlighted ongoing legal battles concerning AI training data and the copyrightability of AI-generated content. Regulatory bodies in the EU and UK continued to shape policies on transparency and licensing, while the US administration outlined its stance on federal AI regulation and intellectual property.",
+      "items": [
+        {
+          "tag": "#CopyrightInfringement",
+          "title": "Can AI training result in copyright infringement? The state of play in the UK, EU and China",
+          "published": "2026-04-16",
+          "frame": "Analyzes the legal position on AI training and copyright infringement across UK, EU, and China, highlighting EU AI Act obligations and discussions on mandatory royalties.",
+          "quote": "It may take years for the legal position on AI and copyright issues to solidify, and there is no guarantee that jurisdictions will take a consistent approach.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.dlapiper.com/en/insights/publications/2026/04/ai-and-copyright-major-issues-and-direction-of-travel-in-the-uk-eu-and-china-in-q2-2026/can-ai-training-result-in-copyright-infringement",
+          "source_domain": "dlapiper.com"
+        },
+        {
+          "tag": "#AICopyright",
+          "title": "Can AI Own Art? We Are Close to a Definitive Answer - AlignIQ",
+          "published": "2026-04-13",
+          "frame": "Argues that AI outputs are unlikely to be copyrightable, citing US Copyright Office decisions and the Supreme Court's refusal to hear the Thaler case.",
+          "quote": "It is increasingly clear that no one will ever own the outputs of any AI.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://aligniq.ai/can-ai-own-art-we-are-close-to-a-definitive-answer/",
+          "source_domain": "aligniq.ai"
+        },
+        {
+          "tag": "#MusicCopyright",
+          "title": "AI Music Copyright: Legal Risks Content Creators Must Know (2026)",
+          "published": "2026-04-15",
+          "frame": "Details the legal risks for content creators using AI music, highlighting RIAA lawsuits against AI music generators and the US Copyright Office's stance.",
+          "quote": "The ruling is crystal clear: 100% AI-generated content cannot be copyrighted and falls into the public domain.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.dlapiper.com/en/insights/publications/2026/04/ai-and-copyright-major-issues-and-direction-of-travel-in-the-uk-eu-and-china-in-q2-2026/can-ai-training-result-in-copyright-infringement",
+          "source_domain": "dlapiper.com"
+        },
+        {
+          "tag": "#CopyrightContradiction",
+          "title": "Anthropic Code Crisis Creates Copyright Contradiction | TechPolicy.Press",
+          "published": "2026-04-14",
+          "frame": "Reports on Anthropic using DMCA for leaked code while facing copyright lawsuits for training data, highlighting a perceived hypocrisy in the AI industry's stance on copyright.",
+          "quote": "Anthropic, though, has made some very specific claims about the role of pirated copyright material available on the internet being used to train and improve AI models...",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.carltonfields.com/insights/publications/2026/ai-makes-securing-copyright-protection-for-software-code-tricky-bloomberg-law",
+          "source_domain": "carltonfields.com"
+        },
+        {
+          "tag": "#EUCopyright",
+          "title": "EU copyright law roundup – first trimester of 2026 - Wolters Kluwer",
+          "published": "2026-04-16",
+          "frame": "Summarizes EU copyright law developments in early 2026, including the UK government's report on AI and copyright and the EU Commission's concerns over Danish deepfake legislation.",
+          "quote": "the UK government issued its report on copyright and AI in March 2026, whereby it declared that it will no longer pursue its originally suggested option to adopt a commercial text and data mining exception with an opt-out mechanism.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://legalblogs.wolterskluwer.com/copyright-blog/eu-copyright-law-roundup-first-trimester-of-2026/",
+          "source_domain": "legalblogs.wolterskluwer.com"
+        },
+        {
+          "tag": "#AILawsuits",
+          "title": "Legal battles intensify as courts scrutinise AI training on copyrighted works - Noah Wire",
+          "published": "2026-04-16",
+          "frame": "Reports on the intensifying legal scrutiny of AI training on copyrighted works, citing the Anthropic case and concerns from creators about compensation.",
+          "quote": "The split decision underlines how unsettled the law remains, even as companies such as OpenAI, Anthropic, xAI, Meta and Google continue to defend their practices as legally permissible.",
+          "kind": "news",
+          "topic": "Copyright & Legal",
+          "url": "https://noahwire.com/news/articles/legal-battles-intensify-as-courts-scrutinise-ai-training-on-copyrighted-works-dfd859.html",
+          "source_domain": "noahwire.com"
+        },
+        {
+          "tag": "#UKCMA",
+          "title": "A Fistful of Discretion: The UK's DMCC After Two Years - Truth on the Market",
+          "published": "2026-04-15",
+          "frame": "Critiques the UK CMA's proposed publisher conduct requirements for Google, arguing they create regulatory asymmetry and address copyright issues through competition policy.",
+          "quote": "The Publisher Conduct Requirement proposed under Google's general-search designation would impose granular obligations: opt-out controls for AI training and grounding, plus transparency, reporting, and attribution rules.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://truthonthemarket.com/2026/04/15/a-fistful-of-discretion-the-u-k-s-dmcc-after-two-years/",
+          "source_domain": "truthonthemarket.com"
+        }
+      ]
     },
     {
       "topic": "Web Ecosystem & AI Impact",
-      "tldr": "(error generating: Streaming is required for operations that may take longer than 10 minutes. See https://github.com/anthropics/anthropic-sdk-python#long-requests for more details)",
-      "items": []
+      "tldr": "This week's reporting highlights a significant decline in search traffic for publishers, particularly small ones, due to AI Overviews and zero-click searches. In response, publishers are actively pursuing content licensing deals and exploring collective initiatives to monetize AI access and redefine their visibility in the evolving AI-driven web ecosystem.",
+      "items": [
+        {
+          "tag": "#SmallPublishers",
+          "title": "Small publishers lost 60% of search traffic as AI reshapes the web - PPC Land",
+          "published": "2026-04-18",
+          "frame": "Small publishers saw a 60% drop in search traffic over two years, per Chartbeat data, as AI reshapes the web, with AI chatbots not compensating.",
+          "quote": "According to Chartbeat, referral traffic from traditional search engines has declined by 60% for small publishers - defined as outlets with between 1,000 and 10,000 daily page views - over the past two years.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ppc.land/small-publishers-lost-60-of-search-traffic-as-ai-reshapes-the-web/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#AISearchImpact",
+          "title": "AI SEO Statistics 2026: 58.5% Zero-Click, 83% AI SERP - Goodfirms",
+          "published": "2026-04-18",
+          "frame": "New statistics reveal 58.5% zero-click searches and 83% AI SERP resolutions, shifting SEO focus from traffic to AI visibility.",
+          "quote": "AI SEO statistics in 2026 show a clear shift: over 58.5% of Google searches now end without a click, up to 83% of AI-generated answer queries are resolved on the results page, and only 14% of marketers track AI visibility.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.goodfirms.co/resources/seo-statistics-ai-search-rankings-zero-click-trends",
+          "source_domain": "goodfirms.co"
+        }
+      ]
     }
   ]
 }
