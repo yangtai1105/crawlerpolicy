@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-04-20T00:38:39.341960+00:00",
+  "last_run_at": "2026-04-20T09:58:30.795567+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -34,12 +34,5 @@
     "gemini-agent-standards": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
     "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source"
   },
-  "events_written": [
-    "content/events/2026-04-15-openai-blog-openai-agents-sdk-gains-native-sandbox-execution-and-model-native-harness.md",
-    "content/events/2026-04-13-openai-blog-cloudflare-integrates-openai-gpt-5-4-and-codex-into-agent-cloud-platform.md",
-    "content/events/2026-04-08-openai-blog-openai-announces-next-phase-of-enterprise-ai-with-integrated-agent-and-model-sui.md",
-    "content/events/2026-04-01-openai-blog-openai-announces-gradient-labs-partnership-using-gpt-4-1-and-gpt-5-4-for-banking.md",
-    "content/events/2026-03-25-openai-blog-openai-launches-safety-bug-bounty-program-for-ai-abuse-and-agent-vulnerabilities.md",
-    "content/events/2026-03-24-openai-blog-chatgpt-launches-agentic-commerce-protocol-for-integrated-product-discovery-and-.md"
-  ]
+  "events_written": []
 }
