@@ -1,27 +1,139 @@
 {
-  "generated_at": "2026-04-20T04:15:51.151782+00:00",
+  "generated_at": "2026-04-20T04:29:34.862265+00:00",
   "iso_year": 2026,
   "iso_week": 17,
   "topics": [
     {
       "topic": "Crawling & Publisher Controls",
-      "tldr": "This week's reporting highlights publishers' ongoing struggle with AI crawlers, with new tools and partnerships emerging to control access and monetize content, while legal battles over scraped data continue to escalate. Server log analyses reveal specific AI bot behaviors and the critical role of robots.txt and sitemaps, even as some bots bypass traditional blocking methods.",
-      "items": []
+      "tldr": "This week's reporting highlights the escalating challenge publishers face from AI crawlers, with traditional blocking methods proving insufficient against a 'bot tsunami.' New solutions like Cloudflare's redirection tools and TollBit's monetization platforms are emerging, alongside increased emphasis on server-log analysis to understand and control AI bot behavior, as the industry grapples with the shift to a 'zero-click internet' and the need for new revenue models for content accessed by AI.",
+      "items": [
+        {
+          "tag": "#ServerLogAnalysis",
+          "title": "How to Use Server Logs to Identify AI Crawler Behavior",
+          "frame": "Author reports on methods to detect AI crawler patterns in server logs, distinguishing them from human traffic for blocking and rate limiting.",
+          "quote": "You can spot AI crawlers by watching your server logs, having technical SEO under control and checking user agents, IPs, timestamps, and status codes.",
+          "kind": "field-report",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.seohero.io/how-to-use-server-logs-to-identify-ai-crawler-behavior/",
+          "source_domain": "seohero.io"
+        },
+        {
+          "tag": "#AICrawlerBehavior",
+          "title": "Why log file analysis matters for AI crawlers and search visibility",
+          "frame": "Author analyzes how log files reveal distinct behaviors of AI training and retrieval crawlers, impacting content discovery and search visibility.",
+          "quote": "Training crawlers, such as GPTBot, ClaudeBot, CCBot, and Google-Extended, collect content for large-scale datasets and model development.",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://searchengineland.com/log-file-analysis-ai-crawlers-search-visibility-474428",
+          "source_domain": "searchengineland.com"
+        },
+        {
+          "tag": "#ContentMonetization",
+          "title": "The AI Content Crisis: How LLMs Are Draining Media Revenue — and Who's Fighting Back",
+          "frame": "This piece reports on the exponential growth of AI bot traffic and publishers' strategies, including bot monitoring and access policies, to combat revenue drain.",
+          "quote": "Media and publishing sites are 7x more likely to see AI bot traffic than the average website.",
+          "kind": "investigation",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://guptadeepak.com/the-ai-content-crisis-how-llms-are-draining-media-revenue-and-the-technologies-fighting-back/",
+          "source_domain": "guptadeepak.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Publishers urged to embrace future where bot readers provide majority of revenue",
+          "frame": "TollBit co-founders argue that AI agents will become the primary revenue source for publishers, advocating for monetized access over ineffective blocking.",
+          "quote": "But this is certainly going to be the primary mode of revenue. It's going to have to come from AI visitors.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://pressgazette.co.uk/platforms/publishers-urged-to-embrace-future-where-bot-readers-provide-majority-of-revenue/",
+          "source_domain": "pressgazette.co.uk"
+        },
+        {
+          "tag": "#ZeroClickInternet",
+          "title": "The End of the Pageview: How Agentic AI is Forcing a Reckoning in Publishing",
+          "frame": "This commentary argues that the 'zero-click internet' driven by AI agents necessitates programmatic tolls and new monetization models, as traditional defenses fail.",
+          "quote": "The internet is rapidly moving toward a zero-click world where people may not visit publisher websites anymore, representing a foundational shift...",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.foundingfuel.com/video/the-end-of-the-pageview-how-agentic-ai-is-forcing-a-reckoning-in-publishing",
+          "source_domain": "foundingfuel.com"
+        },
+        {
+          "tag": "#GoogleAIIndexing",
+          "title": "The Visibility Trap! Is Google Reusing Indexing Data for Search AI Features?",
+          "frame": "This piece examines publishers' dilemma regarding Google's AI features, highlighting third-party solutions like Cloudflare and TollBit for bot management and monetization.",
+          "quote": "If a publisher decides that their data has value to AI companies, blocking them entirely leaves money on the table.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://creativelicensinginternational.com/licensing-brief/the-visibility-trap-is-google-reusing-indexing-data-for-search-ai-features/",
+          "source_domain": "creativelicensinginternational.com"
+        }
+      ]
     },
     {
       "topic": "Agents",
-      "tldr": "This week's reporting highlights growing concerns over AI agent security, with a Cloud Security Alliance survey revealing widespread scope violations and security incidents in enterprise deployments. Experts emphasize the critical need for evolving authentication, access control, and payment infrastructure to manage autonomous agents, while new developments in agent infrastructure focus on observability and deployment protocols.",
+      "tldr": "The week's discourse on AI agents highlighted the crucial need for robust infrastructure to ensure scalable and reliable deployments, alongside warnings about \"transitional lock-in\" risks from interim technical solutions. Key discussions also centered on securing agent authentication, improving agent-to-agent communication protocols, and developing advanced observability tools for better agent performance and failure investigation.",
       "items": []
     },
     {
       "topic": "Copyright & Legal",
-      "tldr": "A quiet week for substantive reporting, analysis, or perspective on AI training-data copyright lawsuits, regulatory actions, amicus briefs, licensing disputes, or government policy changes. Most activity found related to AI legal and copyright issues were either educational course listings, technical standards developments, or general market trend discussions, none of which met the specific criteria for inclusion.",
+      "tldr": "(no items surfaced this week)",
       "items": []
     },
     {
       "topic": "Web Ecosystem & AI Impact",
-      "tldr": "A quiet week; no substantive reporting, analysis, or perspective on the Web Ecosystem & AI Impact on publishers was found from reputable sources within the last 14 days.",
-      "items": []
+      "tldr": "This week's reporting highlights the ongoing and accelerating decline in publisher traffic, particularly for small outlets, due to AI Overviews, while also showcasing publishers' varied responses, from pursuing content licensing and developing proprietary AI agents to addressing the critical need for indigenous content protection.",
+      "items": [
+        {
+          "tag": "#AISearchImpact",
+          "title": "Small publishers lost 60% of search traffic as AI reshapes the web",
+          "frame": "Chartbeat data reveals small publishers experienced a 60% decline in search referral traffic over two years due to AI, with chatbots not compensating.",
+          "quote": "According to Chartbeat, referral traffic from traditional search engines has declined by 60% for small publishers - defined as outlets with between 1,000 and 10,000 daily page views - over the past two years.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ppc.land/small-publishers-lost-60-of-search-traffic-as-ai-reshapes-the-web/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#AIEconomics",
+          "title": "The AI Content Crisis: How LLMs Are Draining Media Revenue - and the Technologies Fighting Back",
+          "frame": "LLMs are severely impacting media revenue by intercepting content consumption, leading to a broken scrape-to-referral ratio, but new technologies offer solutions.",
+          "quote": "Large Language Models have shattered that loop entirely – and with it, the financial foundation of journalism, publishing, and digital media.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://securityboulevard.com/2026/04/the-ai-content-crisis-how-llms-are-draining-media-revenue-and-the-technologies-fighting-back/",
+          "source_domain": "securityboulevard.com"
+        },
+        {
+          "tag": "#FirstPartyAIStrategy",
+          "title": "Inside TIME's rollout of its TIMEAI interactive agent",
+          "frame": "TIME is developing its own AI agent, TIMEAI, trained on its archive to enhance on-site user experience and deepen engagement, alongside content licensing.",
+          "quote": "TIME isn't just licensing its journalism to AI platforms; it has built its own agent to keep users on-site, deepen engagement, and prove that trusted archives can power differentiated AI experiences.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://digitalcontentnext.org/blog/2026/04/16/inside-times-rollout-of-its-timeai-interactive-agent/",
+          "source_domain": "digitalcontentnext.org"
+        },
+        {
+          "tag": "#SmallPublisherImpact",
+          "title": "The Numbers Are In, Small Publishers Are Losing Search Traffic at an Alarming Rate",
+          "frame": "New data confirms small publishers are losing over half their search traffic to AI, with AI chatbots failing to compensate for the decline.",
+          "quote": "Small publishers, those receiving between 1,000 and 10,000 daily page views, lost 60% of their search referral traffic over two years.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://startupfortune.com/the-numbers-are-in-small-publishers-are-losing-search-traffic-at-an-alarming-rate/",
+          "source_domain": "startupfortune.com"
+        },
+        {
+          "tag": "#NewsResilience",
+          "title": "AI's Impact on Publishers: Why News Is Emerging as a Resilient and Valuable Category",
+          "frame": "Analysis shows news publishers are more resilient to AI's impact on traffic compared to other content categories, with ad spend sometimes increasing despite softer audiences.",
+          "quote": "News and politics, by contrast, has significantly lower exposure to AI overviews and a far more modest decline in ad opportunities.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.indexexchange.com/2026/03/31/ais-impact-publishers/",
+          "source_domain": "indexexchange.com"
+        }
+      ]
     }
   ]
 }
