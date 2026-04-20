@@ -148,14 +148,32 @@ def test_map_drops_item_when_no_citation_overlaps_enough():
 
 
 def test_map_respects_min_overlap_threshold():
-    # Only 1 shared >3-char non-stopword token: "crawlers". Default threshold
-    # is 3, so this should drop.
+    # Only 1 shared meaningful token: "crawlers". Default threshold is 2,
+    # so this should drop.
     items = [{"title": "New research on AI crawlers", "frame": "."}]
     grounded = [("Something about crawlers today", "https://example.com/x")]
     assert _map_items_to_grounded_citations(items, grounded) == []
     # With relaxed threshold, accept it.
     out = _map_items_to_grounded_citations(items, grounded, min_overlap=1)
     assert len(out) == 1
+
+
+def test_map_matches_via_url_slug_when_grounded_title_is_redirect_uri():
+    # Real failure mode: grounding_metadata's `web.title` is sometimes
+    # just the redirect URI. The resolved URL's slug still carries the
+    # headline and is enough for token matching.
+    items = [
+        {"title": "Why agentic AI deployments are failing before they scale"}
+    ]
+    grounded = [
+        (
+            "https://vertexaisearch.cloud.google.com/grounding-api-redirect/xyz",
+            "https://observer.com/2026/04/why-agentic-ai-deployments-are-failing-before-they-scale/",
+        ),
+    ]
+    out = _map_items_to_grounded_citations(items, grounded)
+    assert out[0]["url"].endswith("failing-before-they-scale/")
+    assert out[0]["source_domain"] == "observer.com"
 
 
 def test_map_drops_items_with_empty_title():

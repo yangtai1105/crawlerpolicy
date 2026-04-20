@@ -199,12 +199,16 @@ async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
 
         if items or tldr:
             if items_raw and not items:
-                log.warning(
-                    "dispatch[%s]: attempt %d — %d raw items, 0 matched grounded citations; retrying",
-                    topic,
-                    attempt + 1,
-                    len(items_raw),
+                sample_items = "; ".join((it.get("title") or "?")[:80] for it in items_raw[:3])
+                sample_cits = "; ".join(
+                    f"{(t or '(no title)')[:50]} -> {u[:80]}" for t, u in resolved[:3]
                 )
+                log.warning(
+                    "dispatch[%s]: attempt %d — %d raw items, %d grounded, 0 matched; retrying",
+                    topic, attempt + 1, len(items_raw), len(resolved),
+                )
+                log.warning("dispatch[%s]: sample items: %s", topic, sample_items)
+                log.warning("dispatch[%s]: sample citations: %s", topic, sample_cits)
                 continue
             return tldr, items
         finish = _extract_finish_reason(resp)
@@ -283,7 +287,8 @@ _TOKEN_RX = re.compile(r"[a-z0-9]+")
 _TITLE_STOPWORDS = frozenset({"with", "from", "that", "this", "your", "will",
                               "what", "when", "were", "them", "they", "their",
                               "have", "been", "into", "about", "against",
-                              "news", "report", "says", "just", "more"})
+                              "news", "report", "says", "just", "more", "html",
+                              "http", "https", "www"})
 
 
 def _title_tokens(s: str) -> set[str]:
@@ -295,19 +300,36 @@ def _title_overlap(a: str, b: str) -> int:
     return len(_title_tokens(a) & _title_tokens(b))
 
 
+def _citation_tokens(title: str, url: str) -> set[str]:
+    """Token pool for a grounded citation: meaningful tokens from both the
+    citation title AND the URL path. Grounded titles from the Gemini SDK
+    are sometimes empty or the raw URI; the URL slug usually contains the
+    headline and gives us something to match against."""
+    tokens = _title_tokens(title)
+    try:
+        path = urlparse(url).path
+    except Exception:
+        path = ""
+    for t in _TOKEN_RX.findall(path.lower()):
+        if len(t) > 3 and t not in _TITLE_STOPWORDS:
+            tokens.add(t)
+    return tokens
+
+
 def _map_items_to_grounded_citations(
     items: list[dict],
     grounded: list[tuple[str, str]],
     *,
-    min_overlap: int = 3,
+    min_overlap: int = 2,
 ) -> list[dict]:
-    """Match each item to the grounded citation whose title shares the most
-    meaningful tokens with the item's title. Populate ``url`` and
+    """Match each item to the grounded citation whose title + URL-slug shares
+    the most meaningful tokens with the item's title. Populate ``url`` and
     ``source_domain`` from the matched citation. Drop items whose best match
     has fewer than ``min_overlap`` shared tokens — fewer shared tokens means
     we're likely attaching the wrong article."""
     if not grounded:
         return []
+    pool = [(title, url, _citation_tokens(title, url)) for title, url in grounded]
     kept: list[dict] = []
     for it in items:
         item_title = it.get("title") or ""
@@ -317,16 +339,15 @@ def _map_items_to_grounded_citations(
         if not item_tokens:
             continue
         best_score = 0
-        best: tuple[str, str] | None = None
-        for g_title, g_url in grounded:
-            score = len(item_tokens & _title_tokens(g_title))
+        best_url: str | None = None
+        for _g_title, g_url, g_tokens in pool:
+            score = len(item_tokens & g_tokens)
             if score > best_score:
                 best_score = score
-                best = (g_title, g_url)
-        if best is None or best_score < min_overlap:
+                best_url = g_url
+        if best_url is None or best_score < min_overlap:
             continue
-        _, url = best
-        kept.append({**it, "url": url, "source_domain": _url_domain(url)})
+        kept.append({**it, "url": best_url, "source_domain": _url_domain(best_url)})
     return kept
 
 
