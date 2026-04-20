@@ -10,7 +10,7 @@ in parallel), each returning a 1-2 sentence TLDR for that topic's week plus
 max-token truncation, and lets us recover gracefully if a single topic's
 call returns nothing.
 
-Cost: 4 × \$0.01 = \$0.04/week → \$0.16/month.
+Cost: 4 x $0.01 = $0.04/week -> $0.16/month.
 """
 from __future__ import annotations
 
@@ -21,6 +21,7 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
+from urllib.parse import urlparse
 
 import httpx
 from google import genai
@@ -29,6 +30,7 @@ from google.genai import types as gt
 log = logging.getLogger("dispatch")
 
 _MODEL = "gemini-2.5-flash"
+_REDIRECT_TIMEOUT = httpx.Timeout(10.0)
 
 TOPIC_GROUPS: list[str] = [
     "Crawling & Publisher Controls",
@@ -114,9 +116,6 @@ Hard rules:
 """
 
 
-_GEMINI_REDIRECT_HOST = "vertexaisearch.cloud.google.com"
-
-
 async def build_weekly_dispatch(
     *,
     out_dir: Path,
@@ -163,7 +162,7 @@ async def build_weekly_dispatch(
 
 
 async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
-    """Run one Gemini call for a single topic, retrying up to 3 times on empty."""
+    """Run one Gemini call for a single topic, retrying up to 5 times on empty."""
     hint = _TOPIC_HINTS[topic]
     prompt = _prompt_for(topic, hint)
     items: list[dict] = []
@@ -183,14 +182,27 @@ async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
         items_raw = parsed.get("items", [])
         tldr = (parsed.get("tldr") or "").strip()
 
-        # Attach the topic label to each item (the prompt doesn't require it;
-        # the JSON is scoped per topic).
         for it in items_raw:
             it["topic"] = topic
 
-        items = [it for it in items_raw if _is_valid(it)]
+        # Gemini's text output frequently hallucinates publisher URLs that
+        # look plausible but 404. The response's grounding_metadata, however,
+        # contains the real grounded source URIs. Replace each item's URL
+        # with the matching grounded URL (by source_domain) — and drop items
+        # with no grounded citation at all.
+        citations = _collect_grounding_citations(resp)
+        resolved = await _resolve_citations(citations)
+        items = _map_items_to_grounded_urls(items_raw, resolved)
 
         if items or tldr:
+            if items_raw and not items:
+                log.warning(
+                    "dispatch[%s]: attempt %d — %d raw items, 0 matched grounded citations; retrying",
+                    topic,
+                    attempt + 1,
+                    len(items_raw),
+                )
+                continue
             return tldr, items
         finish = _extract_finish_reason(resp)
         log.warning(
@@ -203,14 +215,109 @@ async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
     return tldr or "(no items surfaced this week)", items
 
 
-def _is_valid(it: dict) -> bool:
-    sd = (it.get("source_domain") or "").strip().lower()
-    url = (it.get("url") or "").strip().lower()
-    if not url or sd in {"", "n/a", "none"}:
-        return False
-    if _GEMINI_REDIRECT_HOST in url or _GEMINI_REDIRECT_HOST in sd:
-        return False
-    return True
+def _collect_grounding_citations(resp) -> list[tuple[str, str]]:
+    """Return (title, redirect_uri) pairs from Gemini's grounding_metadata.
+    These are the real sources Google Search grounded against — unlike the
+    URLs the model emits into its JSON body, which are frequently fabricated."""
+    candidates = getattr(resp, "candidates", None) or []
+    if not candidates:
+        return []
+    meta = getattr(candidates[0], "grounding_metadata", None)
+    if meta is None:
+        return []
+    out: list[tuple[str, str]] = []
+    seen: set[str] = set()
+    for chunk in getattr(meta, "grounding_chunks", None) or []:
+        web = getattr(chunk, "web", None)
+        if web is None:
+            continue
+        uri = getattr(web, "uri", None) or ""
+        if not uri or uri in seen:
+            continue
+        seen.add(uri)
+        title = getattr(web, "title", None) or uri
+        out.append((title, uri))
+    return out
+
+
+async def _resolve_redirect(client: httpx.AsyncClient, uri: str) -> str:
+    """Follow a Gemini grounding-api-redirect URL to the real publisher URL."""
+    try:
+        resp = await client.get(uri)
+        return str(resp.url) if resp.url else uri
+    except Exception:
+        return uri
+
+
+async def _resolve_citations(citations: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """Follow redirect URIs in parallel so downstream gets real publisher URLs
+    (the redirect URIs expire fast and 404 for non-Gemini clients)."""
+    if not citations:
+        return []
+    async with httpx.AsyncClient(timeout=_REDIRECT_TIMEOUT, follow_redirects=True) as client:
+        real_urls = await asyncio.gather(
+            *[_resolve_redirect(client, uri) for _, uri in citations],
+            return_exceptions=False,
+        )
+    return [(title, url) for (title, _), url in zip(citations, real_urls)]
+
+
+def _normalize_domain(d: str) -> str:
+    d = (d or "").strip().lower()
+    return d[4:] if d.startswith("www.") else d
+
+
+def _url_domain(url: str) -> str:
+    try:
+        return _normalize_domain(urlparse(url).netloc)
+    except Exception:
+        return ""
+
+
+_TOKEN_RX = re.compile(r"[a-z0-9]+")
+
+
+def _title_overlap(a: str, b: str) -> int:
+    tokens_a = {t for t in _TOKEN_RX.findall((a or "").lower()) if len(t) > 3}
+    tokens_b = {t for t in _TOKEN_RX.findall((b or "").lower()) if len(t) > 3}
+    return len(tokens_a & tokens_b)
+
+
+def _domain_matches(grounded_host: str, item_domain: str) -> bool:
+    """item_domain is the 'bare hostname' Gemini wrote (e.g. 'cloudflare.com').
+    grounded_host is the hostname of a resolved grounded URL (e.g.
+    'blog.cloudflare.com'). Match if grounded_host equals or is a subdomain
+    of item_domain."""
+    return grounded_host == item_domain or grounded_host.endswith("." + item_domain)
+
+
+def _map_items_to_grounded_urls(
+    items: list[dict],
+    grounded: list[tuple[str, str]],
+) -> list[dict]:
+    """For each item, overwrite ``url`` with the grounded citation URL whose
+    host matches or is a subdomain of ``source_domain`` (title-overlap breaks
+    ties). Drop items with no matching grounded citation."""
+    grounded_hosts: list[tuple[str, str, str]] = []  # (host, title, url)
+    for title, url in grounded:
+        host = _url_domain(url)
+        if host:
+            grounded_hosts.append((host, title, url))
+
+    kept: list[dict] = []
+    for it in items:
+        domain = _normalize_domain(it.get("source_domain") or "")
+        if not domain or domain in {"n/a", "none"}:
+            continue
+        matches = [(title, url) for host, title, url in grounded_hosts if _domain_matches(host, domain)]
+        if not matches:
+            continue
+        if len(matches) == 1:
+            _, url = matches[0]
+        else:
+            _, url = max(matches, key=lambda c: _title_overlap(it.get("title", ""), c[0]))
+        kept.append({**it, "url": url})
+    return kept
 
 
 def _extract_text(resp) -> str:
