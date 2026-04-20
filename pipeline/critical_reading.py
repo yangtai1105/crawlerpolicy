@@ -35,12 +35,9 @@ log = logging.getLogger("dispatch")
 
 _MODEL = "claude-sonnet-4-6"
 # Cap web_search invocations per topic — roughly how many distinct queries
-# Claude can issue during one topic's reasoning. 5 is plenty for a weekly
-# news roundup; higher values balloon latency beyond the workflow timeout.
-_WEB_SEARCH_MAX_USES = 5
-# Sonnet needs headroom for tool-use reasoning AND the final JSON synthesis.
-# If max_tokens is reached during tool use, the final text block is empty.
-_MAX_TOKENS = 32000
+# Claude can issue during one topic's reasoning. 8 is plenty for a news roundup
+# while keeping cost bounded (web_search is $10/1k uses).
+_WEB_SEARCH_MAX_USES = 8
 
 TOPIC_GROUPS: list[str] = [
     "Crawling & Publisher Controls",
@@ -146,16 +143,10 @@ async def build_weekly_dispatch(
     client = AsyncAnthropic(api_key=api_key)
 
     today = now.date().isoformat()
-    # Run topics sequentially, not in parallel. Claude + web_search is slow
-    # (~2-5 minutes per topic) and parallel calls hit organization-level rate
-    # limits (429s). Sequential runs trade wall-clock latency for reliability
-    # under the account's RPM/ITPM budget.
-    topic_results: list[tuple[str, list[dict]] | Exception] = []
-    for t in TOPIC_GROUPS:
-        try:
-            topic_results.append(await _run_topic(client, t, now=now, today=today))
-        except Exception as exc:
-            topic_results.append(exc)
+    topic_results = await asyncio.gather(
+        *[_run_topic(client, t, now=now, today=today) for t in TOPIC_GROUPS],
+        return_exceptions=True,
+    )
 
     topics_payload: list[dict] = []
     for t, res in zip(TOPIC_GROUPS, topic_results):
@@ -197,7 +188,7 @@ async def _run_topic(
 
     resp = await client.messages.create(
         model=_MODEL,
-        max_tokens=_MAX_TOKENS,
+        max_tokens=16000,
         tools=[{
             "type": "web_search_20260209",
             "name": "web_search",
@@ -207,11 +198,6 @@ async def _run_topic(
     )
 
     text = _extract_text_blocks(resp)
-    stop_reason = getattr(resp, "stop_reason", "?")
-    log.info(
-        "dispatch[%s]: stop_reason=%s text_len=%d",
-        topic, stop_reason, len(text),
-    )
     parsed = _parse_json(text)
     items_raw = parsed.get("items", [])
     tldr = (parsed.get("tldr") or "").strip()
