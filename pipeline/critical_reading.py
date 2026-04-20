@@ -195,11 +195,7 @@ async def _run_topic(
     hint = _TOPIC_HINTS[topic]
     prompt = _prompt_for(topic, hint, today)
 
-    # Use streaming: web_search sessions routinely exceed the 10-minute
-    # non-streaming request limit. `.get_final_message()` blocks until the
-    # response is complete and returns the same Message shape as
-    # `.messages.create()`, so downstream parsing is unchanged.
-    async with client.messages.stream(
+    resp = await client.messages.create(
         model=_MODEL,
         max_tokens=_MAX_TOKENS,
         tools=[{
@@ -208,8 +204,7 @@ async def _run_topic(
             "max_uses": _WEB_SEARCH_MAX_USES,
         }],
         messages=[{"role": "user", "content": prompt}],
-    ) as stream:
-        resp = await stream.get_final_message()
+    )
 
     text = _extract_text_blocks(resp)
     stop_reason = getattr(resp, "stop_reason", "?")
