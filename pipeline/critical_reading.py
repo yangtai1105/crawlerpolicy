@@ -19,7 +19,7 @@ import json
 import logging
 import os
 import re
-from datetime import datetime
+from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -67,12 +67,15 @@ _TOPIC_HINTS: dict[str, str] = {
 }
 
 
-def _prompt_for(topic: str, hint: str) -> str:
-    return f"""Find the week's 6–10 most important pieces of REPORTING, ANALYSIS, or
-PERSPECTIVE on:
+def _prompt_for(topic: str, hint: str, today: str) -> str:
+    return f"""Today is {today}. Find THIS WEEK's most important pieces of
+REPORTING, ANALYSIS, or PERSPECTIVE on:
 {topic} — {hint}
 
-Published in the last 7 days (stretch to 14 if this week was quiet).
+Hard recency requirement: each item MUST be published in the last 7 days
+(stretch to 14 if this week was genuinely quiet). Nothing older. Verify
+the publication date via your search — if you can't confirm a piece is
+from the last 14 days, skip it.
 
 Include any of these:
 - Substantive news reporting from reputable outlets (Reuters, NYT, Bloomberg,
@@ -85,27 +88,33 @@ Include any of these:
 - Academic / specialist-researcher analyses
 - Serious think-piece / essay commentary on the ecosystem
 
-EXCLUDE (these are noise):
-- Generic explainer / 101 posts ("X Impact on Y Explained", "What is Z?")
+HARD EXCLUDE (do not return these, even if they rank well in search):
+- Generic explainer / 101 posts ("X Impact on Y Explained", "What is Z?",
+  "Who Owns…", "Understanding X", "A Guide to…", "Introduction to…")
 - SEO listicles ("Top 10 Tools for…", "N Things You Should Know…")
 - Vendor product launches / press releases (those live in our daily feed)
 - Tutorial / how-to content
 - Aggregator posts that just summarize someone else's report without adding anything
-- PDF lawyer-marketing pieces and other thinly-veiled sales content
+- Law-firm blog posts / client-alert SEO content (Mondaq, JD Supra,
+  Lexology, individual firm blogs like "X Firm's guide to Y")
+- Personal-blog explainers with no independent reporting or argument
+- Anything from {{2022, 2023, 2024, 2025}} — we want THIS week only
 
-News reporting IS welcome here — the point is WHO is reporting it and
-whether the piece adds anything: context, argument, or primary-source detail.
-A solid Reuters story on an AI lawsuit counts. A random law-firm blog
-summarizing the same lawsuit does not.
+News reporting IS welcome — the point is WHO is reporting it and whether
+the piece adds anything: context, argument, or primary-source detail.
+A solid Reuters story on an AI lawsuit counts. A law-firm blog summarizing
+the same lawsuit does not.
 
 Return ONLY this JSON (no prose, no code fences):
 
-{{"tldr":"1–2 sentence synthesis of the week's thread on this topic","items":[{{"tag":"#CamelCase","title":"exact published headline","frame":"what the author argues or reports, ≤25 words","quote":"verbatim pull-quote, ≤30 words","kind":"investigation|commentary|field-report|legal|research"}}]}}
+{{"tldr":"1–2 sentence synthesis of THIS week's thread on this topic","items":[{{"tag":"#CamelCase","title":"exact published headline","published":"YYYY-MM-DD","frame":"what the author argues or reports, ≤25 words","quote":"verbatim pull-quote, ≤30 words","kind":"investigation|commentary|field-report|legal|research"}}]}}
 
 Hard rules:
 - title MUST be the exact published headline as it appears at the source.
   Don't rewrite, shorten, or paraphrase — we look up the URL from the
   headline, so precision matters more than style.
+- published MUST be the actual publication date in YYYY-MM-DD. If you're
+  not sure, skip the item — don't guess.
 - tag: a specific CamelCase hashtag capturing this item's angle. Avoid
   generic #AI / #Tech. Examples: #SearchImpact, #OptOut, #PayPerCrawl,
   #BotVerification, #AIRegulation, #DataLicensing, #AgentSecurity.
@@ -129,8 +138,9 @@ async def build_weekly_dispatch(
     # Run one Gemini call per topic in parallel. Each retries up to 3 times
     # if it returns empty (grounded-search responses are occasionally empty
     # or truncated).
+    today = now.date().isoformat()
     topic_results = await asyncio.gather(
-        *[_run_topic(client, t) for t in TOPIC_GROUPS],
+        *[_run_topic(client, t, now=now, today=today) for t in TOPIC_GROUPS],
         return_exceptions=True,
     )
 
@@ -161,10 +171,16 @@ async def build_weekly_dispatch(
     return out_path
 
 
-async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
+async def _run_topic(
+    client,
+    topic: str,
+    *,
+    now: datetime,
+    today: str,
+) -> tuple[str, list[dict]]:
     """Run one Gemini call for a single topic, retrying up to 5 times on empty."""
     hint = _TOPIC_HINTS[topic]
-    prompt = _prompt_for(topic, hint)
+    prompt = _prompt_for(topic, hint, today)
     items: list[dict] = []
     tldr: str = ""
     for attempt in range(5):
@@ -192,7 +208,8 @@ async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
         # title-token overlap.
         citations = _collect_grounding_citations(resp)
         resolved = await _resolve_citations(citations)
-        items = _map_items_to_grounded_citations(items_raw, resolved)
+        matched = _map_items_to_grounded_citations(items_raw, resolved)
+        items = _filter_quality(matched, now=now)
 
         if items or tldr:
             if items_raw and not items:
@@ -254,6 +271,93 @@ async def _resolve_redirect(client: httpx.AsyncClient, uri: str) -> str:
 
 
 _VERTEX_REDIRECT_HOST = "vertexaisearch.cloud.google.com"
+
+# Domains consistently surfacing as law-firm / SEO-farm content. These are
+# NOT reporting or commentary in the sense we want, and they rank well in
+# Google Search so they flood grounded results. Drop wholesale.
+_BLOCKED_DOMAINS = frozenset({
+    "mondaq.com",
+    "jdsupra.com",
+    "lexology.com",
+    "natlawreview.com",
+})
+
+# URL slug patterns that reliably indicate explainer / how-to / listicle
+# content, which the prompt already says to EXCLUDE but Gemini sometimes
+# still surfaces because these posts are SEO-optimized.
+_EXPLAINER_PATTERNS = (
+    "-explained",
+    "/explained-",
+    "what-is-",
+    "/what-is/",
+    "how-to-",
+    "/how-to/",
+    "-guide-to-",
+    "-a-guide-",
+    "/guide-to-",
+    "introduction-to-",
+    "understanding-",
+    "-for-dummies",
+    "-101-",
+    "/101/",
+    "who-owns-",
+)
+
+# Year-in-URL-path pattern catches articles filed under an old year even
+# when Gemini claims they're recent.
+_OLD_YEAR_IN_PATH_RX = re.compile(r"[-/_](20\d\d)[-/_]")
+
+
+def _filter_quality(items: list[dict], *, now: datetime, max_age_days: int = 14) -> list[dict]:
+    """Post-filter matched items for quality and recency.
+
+    Drops:
+    - Items whose ``published`` field parses to older than ``max_age_days``
+    - Items whose URL path contains a year older than the current year
+    - Items on the blocked-domain list (law-firm content farms)
+    - Items whose URL path matches an obvious-explainer slug pattern
+    """
+    kept: list[dict] = []
+    cutoff_year = now.year
+    cutoff = now.date() - timedelta(days=max_age_days)
+    for it in items:
+        url = it.get("url", "")
+        domain = (it.get("source_domain") or _url_domain(url) or "").lower()
+        path_lower = ""
+        try:
+            path_lower = urlparse(url).path.lower()
+        except Exception:
+            pass
+
+        # Domain blocklist
+        if any(domain == b or domain.endswith("." + b) for b in _BLOCKED_DOMAINS):
+            continue
+
+        # Explainer URL patterns
+        if any(pat in path_lower for pat in _EXPLAINER_PATTERNS):
+            continue
+
+        # Year-in-URL — drop if URL path is stamped with a past year
+        m = _OLD_YEAR_IN_PATH_RX.search(path_lower)
+        if m and int(m.group(1)) < cutoff_year:
+            continue
+
+        # Parsed published date
+        pub = _parse_published(it.get("published"))
+        if pub is not None and pub < cutoff:
+            continue
+
+        kept.append(it)
+    return kept
+
+
+def _parse_published(raw) -> "date | None":
+    if not raw or not isinstance(raw, str):
+        return None
+    try:
+        return datetime.strptime(raw[:10], "%Y-%m-%d").date()
+    except ValueError:
+        return None
 
 
 async def _resolve_citations(citations: list[tuple[str, str]]) -> list[tuple[str, str]]:

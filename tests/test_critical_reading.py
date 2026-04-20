@@ -12,10 +12,15 @@ or wrong URL.
 """
 from __future__ import annotations
 
+from datetime import datetime, timezone
+
 from pipeline.critical_reading import (
     _collect_grounding_citations,
+    _filter_quality,
     _map_items_to_grounded_citations,
 )
+
+_NOW = datetime(2026, 4, 20, tzinfo=timezone.utc)
 
 
 class _FakeWeb:
@@ -193,3 +198,61 @@ def test_map_strips_www_in_derived_source_domain():
                  "https://www.reuters.com/tech/article/123")]
     out = _map_items_to_grounded_citations(items, grounded)
     assert out[0]["source_domain"] == "reuters.com"
+
+
+def test_filter_quality_drops_old_year_in_url_path():
+    items = [
+        {"url": "https://example.com/2025/07/some-article", "source_domain": "example.com"},
+        {"url": "https://example.com/2026/04/fresh-article", "source_domain": "example.com"},
+    ]
+    out = _filter_quality(items, now=_NOW)
+    assert [it["url"] for it in out] == ["https://example.com/2026/04/fresh-article"]
+
+
+def test_filter_quality_drops_explainer_slugs():
+    items = [
+        {"url": "https://reuters.com/openai-copyright-lawsuit-explained/", "source_domain": "reuters.com"},
+        {"url": "https://example.com/what-is-mcp/", "source_domain": "example.com"},
+        {"url": "https://example.com/how-to-block-ai-bots/", "source_domain": "example.com"},
+        {"url": "https://example.com/who-owns-ai-training-data/", "source_domain": "example.com"},
+        {"url": "https://reuters.com/real-lawsuit-filing", "source_domain": "reuters.com"},
+    ]
+    out = _filter_quality(items, now=_NOW)
+    assert [it["url"] for it in out] == ["https://reuters.com/real-lawsuit-filing"]
+
+
+def test_filter_quality_drops_blocked_domains():
+    items = [
+        {"url": "https://www.mondaq.com/unitedstates/copyright/123456/fresh", "source_domain": "mondaq.com"},
+        {"url": "https://jdsupra.com/legalnews/something", "source_domain": "jdsupra.com"},
+        {"url": "https://lexology.com/library/foo", "source_domain": "lexology.com"},
+        {"url": "https://reuters.com/tech/article", "source_domain": "reuters.com"},
+    ]
+    out = _filter_quality(items, now=_NOW)
+    assert [it["source_domain"] for it in out] == ["reuters.com"]
+
+
+def test_filter_quality_drops_stale_published_date():
+    items = [
+        {"url": "https://reuters.com/a", "source_domain": "reuters.com", "published": "2026-03-01"},  # >14d
+        {"url": "https://reuters.com/b", "source_domain": "reuters.com", "published": "2026-04-15"},  # ~5d
+        {"url": "https://reuters.com/c", "source_domain": "reuters.com", "published": "2026-04-05"},  # ~15d
+    ]
+    out = _filter_quality(items, now=_NOW)
+    assert [it["url"] for it in out] == ["https://reuters.com/b"]
+
+
+def test_filter_quality_keeps_item_when_published_missing_and_url_clean():
+    items = [
+        {"url": "https://reuters.com/story-about-ai", "source_domain": "reuters.com"},  # no date
+    ]
+    out = _filter_quality(items, now=_NOW)
+    assert len(out) == 1
+
+
+def test_filter_quality_keeps_current_year_in_url():
+    items = [
+        {"url": "https://reuters.com/2026/04/17/story", "source_domain": "reuters.com"},
+    ]
+    out = _filter_quality(items, now=_NOW)
+    assert len(out) == 1
