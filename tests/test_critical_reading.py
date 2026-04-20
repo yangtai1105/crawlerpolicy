@@ -1,16 +1,20 @@
 """Tests for the Weekly Dispatch URL-grounding logic.
 
-Gemini's grounded-search response ships *two* things: the JSON body (which
-can hallucinate publisher URLs) and `grounding_metadata.grounding_chunks`
-(which contain the real grounded URIs). These tests cover the pure logic
-that extracts grounding citations and maps each Gemini item back to its
-real grounded URL by source_domain.
+Gemini's grounded-search response ships *two* things: the JSON body (title/
+frame/quote/tag/kind — editorial fields only) and
+``grounding_metadata.grounding_chunks`` (the real grounded URIs).
+
+The matcher here pairs each Gemini item to its grounded citation by
+title-token overlap, then fills in ``url`` and ``source_domain`` from the
+matched citation. If no grounded citation shares enough tokens with an
+item's title, the item is dropped rather than shipped with a hallucinated
+or wrong URL.
 """
 from __future__ import annotations
 
 from pipeline.critical_reading import (
     _collect_grounding_citations,
-    _map_items_to_grounded_urls,
+    _map_items_to_grounded_citations,
 )
 
 
@@ -68,68 +72,106 @@ def test_collect_grounding_citations_handles_missing_metadata():
     assert _collect_grounding_citations(object()) == []
 
 
-def test_map_items_overwrites_hallucinated_url_with_grounded_url():
+def test_map_fills_url_and_source_domain_from_matched_citation():
     items = [
         {
-            "source_domain": "cloudflare.com",
-            "title": "Cloudflare blog: canonicalization",
-            "url": "https://hallucinated.example/fake",
+            "tag": "#Canonicalization",
+            "title": "Redirects for AI Training enforces canonical content",
+            "frame": "Cloudflare announces canonical redirects for AI crawlers.",
+            "quote": "...",
+            "kind": "field-report",
             "topic": "Crawling & Publisher Controls",
         }
     ]
     grounded = [
-        ("Redirects for AI Training - Cloudflare", "https://blog.cloudflare.com/redirects-for-ai-training"),
+        ("Redirects for AI Training enforces canonical content - The Cloudflare Blog",
+         "https://blog.cloudflare.com/ai-redirects/"),
     ]
-    out = _map_items_to_grounded_urls(items, grounded)
+    out = _map_items_to_grounded_citations(items, grounded)
     assert len(out) == 1
-    assert out[0]["url"] == "https://blog.cloudflare.com/redirects-for-ai-training"
+    assert out[0]["url"] == "https://blog.cloudflare.com/ai-redirects/"
+    assert out[0]["source_domain"] == "blog.cloudflare.com"
+    # Editorial fields preserved.
+    assert out[0]["tag"] == "#Canonicalization"
     assert out[0]["topic"] == "Crawling & Publisher Controls"
 
 
-def test_map_items_drops_items_with_no_matching_grounded_domain():
-    items = [
-        {"source_domain": "apnews.com", "title": "Unrelated", "url": "https://apnews.com/fake-000"},
-        {"source_domain": "cloudflare.com", "title": "Cloudflare", "url": "https://cf.example/fake"},
-    ]
-    grounded = [("CF canonical post", "https://blog.cloudflare.com/real")]
-    out = _map_items_to_grounded_urls(items, grounded)
-    assert [it["source_domain"] for it in out] == ["cloudflare.com"]
-    assert out[0]["url"] == "https://blog.cloudflare.com/real"
-
-
-def test_map_items_breaks_ties_by_title_overlap():
+def test_map_picks_best_title_overlap_across_unrelated_citations():
     items = [
         {
-            "source_domain": "digiday.com",
-            "title": "New data shows publishers face growing AI bot scraper activity",
-            "url": "https://fake",
+            "tag": "#AgentSecurity",
+            "title": "Enterprise AI Agent Security Survey shows widespread incidents",
+            "frame": "...",
         }
     ]
     grounded = [
-        ("Totally unrelated Digiday headline about advertising", "https://digiday.com/ads/unrelated"),
-        (
-            "In Graphic Detail: data shows publishers face growing AI bot scraper activity",
-            "https://digiday.com/media/real",
-        ),
+        ("Unrelated story about weather radar forecasts",
+         "https://weather.example/forecast"),
+        ("Enterprise AI Agent Security Survey Report",
+         "https://cloudsecurityalliance.org/survey"),
+        ("Crypto market update",
+         "https://crypto.example/market"),
     ]
-    out = _map_items_to_grounded_urls(items, grounded)
-    assert out[0]["url"] == "https://digiday.com/media/real"
+    out = _map_items_to_grounded_citations(items, grounded)
+    assert out[0]["url"] == "https://cloudsecurityalliance.org/survey"
+    assert out[0]["source_domain"] == "cloudsecurityalliance.org"
 
 
-def test_map_items_strips_www_and_is_case_insensitive():
-    items = [{"source_domain": "Reuters.com", "title": "x", "url": "fake"}]
-    grounded = [("Reuters story", "https://www.reuters.com/article/123")]
-    out = _map_items_to_grounded_urls(items, grounded)
+def test_map_matches_even_when_domain_differs_from_what_gemini_would_guess():
+    # The gemini-prior fix was domain-strict; this case failed there.
+    # Here we verify title-overlap matching succeeds even if Gemini never
+    # claimed the grounded citation's domain as its own.
+    items = [
+        {
+            "tag": "#AgentFailure",
+            "title": "Why agentic AI deployments are failing before they scale",
+            "frame": "...",
+        }
+    ]
+    grounded = [
+        ("Why Agentic A.I. Deployments Are Failing Before They Scale - Observer",
+         "https://observer.com/2026/04/agentic-ai-scale-failures/"),
+    ]
+    out = _map_items_to_grounded_citations(items, grounded)
+    assert out[0]["url"] == "https://observer.com/2026/04/agentic-ai-scale-failures/"
+    assert out[0]["source_domain"] == "observer.com"
+
+
+def test_map_drops_item_when_no_citation_overlaps_enough():
+    items = [
+        {"title": "Some completely unrelated headline about gardening tips", "frame": "."}
+    ]
+    grounded = [
+        ("AI crawler enforcement becomes stricter in Q2", "https://example.com/ai"),
+    ]
+    assert _map_items_to_grounded_citations(items, grounded) == []
+
+
+def test_map_respects_min_overlap_threshold():
+    # Only 1 shared >3-char non-stopword token: "crawlers". Default threshold
+    # is 3, so this should drop.
+    items = [{"title": "New research on AI crawlers", "frame": "."}]
+    grounded = [("Something about crawlers today", "https://example.com/x")]
+    assert _map_items_to_grounded_citations(items, grounded) == []
+    # With relaxed threshold, accept it.
+    out = _map_items_to_grounded_citations(items, grounded, min_overlap=1)
     assert len(out) == 1
-    assert out[0]["url"] == "https://www.reuters.com/article/123"
 
 
-def test_map_items_drops_item_with_missing_source_domain():
-    items = [{"source_domain": "", "title": "x", "url": "fake"}]
-    grounded = [("any", "https://example.com/a")]
-    assert _map_items_to_grounded_urls(items, grounded) == []
+def test_map_drops_items_with_empty_title():
+    items = [{"title": "", "frame": "."}]
+    grounded = [("x", "https://example.com/x")]
+    assert _map_items_to_grounded_citations(items, grounded) == []
 
 
-def test_map_items_returns_empty_when_no_grounded_citations():
-    items = [{"source_domain": "cloudflare.com", "title": "x", "url": "https://cf.example/fake"}]
-    assert _map_items_to_grounded_urls(items, []) == []
+def test_map_returns_empty_when_no_grounded_citations():
+    items = [{"title": "Real headline with plenty of tokens", "frame": "."}]
+    assert _map_items_to_grounded_citations(items, []) == []
+
+
+def test_map_strips_www_in_derived_source_domain():
+    items = [{"title": "Reuters reports new AI crawler guidance this week"}]
+    grounded = [("Reuters reports new AI crawler guidance this week",
+                 "https://www.reuters.com/tech/article/123")]
+    out = _map_items_to_grounded_citations(items, grounded)
+    assert out[0]["source_domain"] == "reuters.com"

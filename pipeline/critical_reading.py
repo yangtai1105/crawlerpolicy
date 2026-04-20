@@ -100,12 +100,15 @@ summarizing the same lawsuit does not.
 
 Return ONLY this JSON (no prose, no code fences):
 
-{{"tldr":"1–2 sentence synthesis of the week's thread on this topic","items":[{{"tag":"#CamelCase","source_domain":"example.com","url":"https://...","title":"...","frame":"what the author argues or reports, ≤25 words","quote":"verbatim pull-quote, ≤30 words","kind":"investigation|commentary|field-report|legal|research"}}]}}
+{{"tldr":"1–2 sentence synthesis of the week's thread on this topic","items":[{{"tag":"#CamelCase","title":"exact published headline","frame":"what the author argues or reports, ≤25 words","quote":"verbatim pull-quote, ≤30 words","kind":"investigation|commentary|field-report|legal|research"}}]}}
 
 Hard rules:
-- url MUST be the real publisher URL, not a Google/grounding redirect URL.
-  If you cannot cite a real URL, skip the item.
-- source_domain is the bare hostname, no "www." (e.g. "theguardian.com").
+- title MUST be the exact published headline. We use it to look up the
+  source URL from your grounded citations — precision matters more than style.
+  Don't rewrite, shorten, or paraphrase headlines.
+- Only include items you actually surfaced via search in THIS response.
+  Don't list items from memory or prior knowledge. We'll discard anything
+  that isn't backed by a grounded citation, so there's no point padding.
 - tag: a specific CamelCase hashtag capturing this item's angle. Avoid
   generic #AI / #Tech. Examples: #SearchImpact, #OptOut, #PayPerCrawl,
   #BotVerification, #AIRegulation, #DataLicensing, #AgentSecurity.
@@ -185,14 +188,14 @@ async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
         for it in items_raw:
             it["topic"] = topic
 
-        # Gemini's text output frequently hallucinates publisher URLs that
-        # look plausible but 404. The response's grounding_metadata, however,
-        # contains the real grounded source URIs. Replace each item's URL
-        # with the matching grounded URL (by source_domain) — and drop items
-        # with no grounded citation at all.
+        # Gemini's JSON only carries editorial fields (title/frame/quote/tag/
+        # kind). The *URL* and source_domain come from grounding_metadata —
+        # the model is instructed not to emit URLs itself, since it frequently
+        # hallucinates them. Match each item to a grounded citation by
+        # title-token overlap.
         citations = _collect_grounding_citations(resp)
         resolved = await _resolve_citations(citations)
-        items = _map_items_to_grounded_urls(items_raw, resolved)
+        items = _map_items_to_grounded_citations(items_raw, resolved)
 
         if items or tldr:
             if items_raw and not items:
@@ -275,48 +278,55 @@ def _url_domain(url: str) -> str:
 
 
 _TOKEN_RX = re.compile(r"[a-z0-9]+")
+# Common title noise that shouldn't count toward overlap. Keep small —
+# real stopwords are handled by the len-3 floor.
+_TITLE_STOPWORDS = frozenset({"with", "from", "that", "this", "your", "will",
+                              "what", "when", "were", "them", "they", "their",
+                              "have", "been", "into", "about", "against",
+                              "news", "report", "says", "just", "more"})
+
+
+def _title_tokens(s: str) -> set[str]:
+    return {t for t in _TOKEN_RX.findall((s or "").lower())
+            if len(t) > 3 and t not in _TITLE_STOPWORDS}
 
 
 def _title_overlap(a: str, b: str) -> int:
-    tokens_a = {t for t in _TOKEN_RX.findall((a or "").lower()) if len(t) > 3}
-    tokens_b = {t for t in _TOKEN_RX.findall((b or "").lower()) if len(t) > 3}
-    return len(tokens_a & tokens_b)
+    return len(_title_tokens(a) & _title_tokens(b))
 
 
-def _domain_matches(grounded_host: str, item_domain: str) -> bool:
-    """item_domain is the 'bare hostname' Gemini wrote (e.g. 'cloudflare.com').
-    grounded_host is the hostname of a resolved grounded URL (e.g.
-    'blog.cloudflare.com'). Match if grounded_host equals or is a subdomain
-    of item_domain."""
-    return grounded_host == item_domain or grounded_host.endswith("." + item_domain)
-
-
-def _map_items_to_grounded_urls(
+def _map_items_to_grounded_citations(
     items: list[dict],
     grounded: list[tuple[str, str]],
+    *,
+    min_overlap: int = 3,
 ) -> list[dict]:
-    """For each item, overwrite ``url`` with the grounded citation URL whose
-    host matches or is a subdomain of ``source_domain`` (title-overlap breaks
-    ties). Drop items with no matching grounded citation."""
-    grounded_hosts: list[tuple[str, str, str]] = []  # (host, title, url)
-    for title, url in grounded:
-        host = _url_domain(url)
-        if host:
-            grounded_hosts.append((host, title, url))
-
+    """Match each item to the grounded citation whose title shares the most
+    meaningful tokens with the item's title. Populate ``url`` and
+    ``source_domain`` from the matched citation. Drop items whose best match
+    has fewer than ``min_overlap`` shared tokens — fewer shared tokens means
+    we're likely attaching the wrong article."""
+    if not grounded:
+        return []
     kept: list[dict] = []
     for it in items:
-        domain = _normalize_domain(it.get("source_domain") or "")
-        if not domain or domain in {"n/a", "none"}:
+        item_title = it.get("title") or ""
+        if not item_title:
             continue
-        matches = [(title, url) for host, title, url in grounded_hosts if _domain_matches(host, domain)]
-        if not matches:
+        item_tokens = _title_tokens(item_title)
+        if not item_tokens:
             continue
-        if len(matches) == 1:
-            _, url = matches[0]
-        else:
-            _, url = max(matches, key=lambda c: _title_overlap(it.get("title", ""), c[0]))
-        kept.append({**it, "url": url})
+        best_score = 0
+        best: tuple[str, str] | None = None
+        for g_title, g_url in grounded:
+            score = len(item_tokens & _title_tokens(g_title))
+            if score > best_score:
+                best_score = score
+                best = (g_title, g_url)
+        if best is None or best_score < min_overlap:
+            continue
+        _, url = best
+        kept.append({**it, "url": url, "source_domain": _url_domain(url)})
     return kept
 
 
