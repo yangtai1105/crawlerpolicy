@@ -5,9 +5,12 @@ export default defineConfig({
   output: "static",
   outDir: "./dist",
   site: "https://tracker.example.com",
-  trailingSlash: "never",
+  trailingSlash: "ignore",
   build: {
-    format: "file",
+    // 'directory' produces /reading/index.html — plays clean with Vercel's
+    // default static serving, which maps /reading → /reading/index.html.
+    // 'file' mode required a vercel.json with cleanUrls: true.
+    format: "directory",
   },
   vite: {
     server: {
