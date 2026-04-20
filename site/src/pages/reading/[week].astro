@@ -1,6 +1,6 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { loadWeek, listWeeks, groupByTopic } from "../../lib/critical_reading";
+import { loadWeek, listWeeks } from "../../lib/critical_reading";
 
 export async function getStaticPaths() {
   return listWeeks().map((w) => ({
@@ -12,70 +12,80 @@ export async function getStaticPaths() {
 const { week } = Astro.params;
 const { filename } = Astro.props as { filename: string };
 const digest = loadWeek(filename);
+const totalItems = digest ? digest.topics.reduce((n, t) => n + t.items.length, 0) : 0;
 ---
 
-<Base title={digest ? `Critical reading — ${week}` : "Critical reading"}>
-  <article class="container reading-page">
-    <header class="reading-head">
-      <p class="label">Weekly — critical analysis · archived</p>
-      <h1>Critical reading · Week {digest?.iso_week} of {digest?.iso_year}</h1>
+<Base title={digest ? `Weekly Dispatch — ${week}` : "Weekly Dispatch"}>
+  <article class="container dispatch-page">
+    <header class="dispatch-head">
+      <p class="label">Weekly Dispatch · archived</p>
+      <h1>Weekly Dispatch · Week {digest?.iso_week} of {digest?.iso_year}</h1>
       <p class="back"><a href="/reading">← latest week</a></p>
     </header>
 
     {digest ? (
-      (() => {
-        const grouped = groupByTopic(digest.items, digest.topic_groups);
-        return Array.from(grouped.entries()).map(([topic, items]) => {
-          if (items.length === 0) return null;
+      <>
+        <div class="week-meta">
+          <span>{totalItems} items across {digest.topics.length} topics</span>
+        </div>
+        {digest.topics.map((topic) => {
+          if (topic.items.length === 0 && !topic.tldr) return null;
           return (
             <section class="topic-block">
-              <h2 class="topic-heading">{topic}</h2>
-              <ul class="items">
-                {items.map((it) => (
-                  <li class="item">
-                    <div class="item-head">
-                      <a href={it.url} target="_blank" rel="noopener noreferrer" class="item-source">
-                        {it.source_domain}
-                      </a>
-                      <span class="item-tag">{it.tag}</span>
-                    </div>
-                    <a href={it.url} target="_blank" rel="noopener noreferrer" class="item-title">
-                      {it.title}
-                    </a>
-                    <p class="item-frame">{it.frame}</p>
-                    {it.quote && <blockquote class="item-quote">"{it.quote}"</blockquote>}
-                  </li>
-                ))}
-              </ul>
+              <h2 class="topic-heading">{topic.topic}</h2>
+              {topic.tldr && <p class="topic-tldr">{topic.tldr}</p>}
+              {topic.items.length > 0 ? (
+                <ul class="items">
+                  {topic.items.map((it) => (
+                    <li class="item">
+                      <div class="item-head">
+                        <a href={it.url} target="_blank" rel="noopener noreferrer" class="item-source">
+                          {it.source_domain}
+                        </a>
+                        {it.kind && <span class="item-kind">{it.kind}</span>}
+                        <span class="item-tag">{it.tag}</span>
+                      </div>
+                      <a href={it.url} target="_blank" rel="noopener noreferrer" class="item-title">{it.title}</a>
+                      <p class="item-frame">{it.frame}</p>
+                      {it.quote && <blockquote class="item-quote">"{it.quote}"</blockquote>}
+                    </li>
+                  ))}
+                </ul>
+              ) : (
+                <p class="empty-topic">No items qualified this week.</p>
+              )}
             </section>
           );
-        });
-      })()
+        })}
+      </>
     ) : (
-      <p class="empty">No digest found for this week.</p>
+      <p class="empty">No dispatch found for this week.</p>
     )}
   </article>
 </Base>
 
 <style>
-  /* Same styles as index — duplicated to keep pages self-contained */
-  .reading-page { max-width: 780px; padding: var(--space-6) var(--space-5); }
-  .reading-head { margin-bottom: var(--space-6); padding-bottom: var(--space-5); border-bottom: 1px solid var(--border); }
-  .reading-head h1 { font-size: 1.6rem; margin: var(--space-3) 0; }
+  .dispatch-page { max-width: 780px; padding: var(--space-6) var(--space-5); }
+  .dispatch-head { margin-bottom: var(--space-6); padding-bottom: var(--space-5); border-bottom: 1px solid var(--border); }
+  .dispatch-head h1 { font-size: 1.6rem; margin: var(--space-3) 0; }
   .back { font-size: 0.85rem; margin: var(--space-2) 0 0; }
   .back a { color: var(--pillar-ecosystem); }
+  .week-meta { color: var(--ink-muted); font-size: 0.82rem; margin-bottom: var(--space-6); }
   .topic-block { margin-bottom: var(--space-7); }
-  .topic-heading { font-family: var(--font-display); font-size: 1.3rem; font-weight: 500; letter-spacing: -0.01em; margin: 0 0 var(--space-4); padding-bottom: var(--space-2); border-bottom: 2px solid var(--border); }
+  .topic-heading { font-family: var(--font-display); font-size: 1.35rem; font-weight: 500; margin: 0 0 var(--space-2); padding-bottom: var(--space-2); border-bottom: 2px solid var(--border); }
+  .topic-tldr { color: var(--ink); font-size: 0.95rem; line-height: 1.6; background: var(--bg-elev); border-left: 3px solid var(--pillar-agent); padding: var(--space-3) var(--space-4); margin: 0 0 var(--space-4); border-radius: 0 3px 3px 0; }
   .items { list-style: none; padding: 0; margin: 0; }
   .item { padding: var(--space-4) 0; border-bottom: 1px dashed var(--border); }
   .item:last-child { border-bottom: 0; }
-  .item-head { display: flex; justify-content: space-between; align-items: baseline; gap: var(--space-3); margin-bottom: var(--space-2); font-size: 0.78rem; }
+  .item-head { display: flex; align-items: baseline; gap: var(--space-3); margin-bottom: var(--space-2); font-size: 0.78rem; flex-wrap: wrap; }
   .item-source { color: var(--ink-muted); font-family: var(--font-mono); }
   .item-source:hover { color: var(--pillar-ecosystem); }
-  .item-tag { color: var(--pillar-agent); font-weight: 600; letter-spacing: 0.02em; }
-  .item-title { display: block; font-family: var(--font-display); font-size: 1.08rem; font-weight: 500; line-height: 1.35; color: var(--ink); margin-bottom: var(--space-2); letter-spacing: -0.005em; }
+  .item-kind { background: var(--bg-elev); color: var(--ink-muted); border: 1px solid var(--border); padding: 1px 6px; border-radius: 2px; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.04em; }
+  .item-tag { color: var(--pillar-agent); font-weight: 600; margin-left: auto; }
+  .item-title { display: block; font-family: var(--font-display); font-size: 1.08rem; font-weight: 500; line-height: 1.35; color: var(--ink); margin-bottom: var(--space-2); }
   .item-title:hover { color: var(--pillar-ecosystem); }
   .item-frame { color: var(--ink-muted); font-size: 0.92rem; line-height: 1.55; margin: 0 0 var(--space-2); }
   .item-quote { border-left: 2px solid var(--border-strong); padding: var(--space-2) var(--space-3); margin: var(--space-2) 0 0; font-family: var(--font-display); font-style: italic; color: var(--ink); font-size: 0.95rem; line-height: 1.5; }
+  .empty-topic { color: var(--ink-muted); font-size: 0.88rem; font-style: italic; margin: 0; }
   .empty { color: var(--ink-muted); font-size: 0.95rem; }
 </style>

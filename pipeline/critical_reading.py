@@ -1,14 +1,16 @@
-"""Weekly 'Critical Reading' module — a curated list of critical commentary,
-analysis, and investigative pieces across our four topic groups.
+"""Weekly Dispatch — the week's sharpest reporting, investigations, and
+perspectives on AI crawlers, agents, copyright/legal, and web-ecosystem
+impact. Distinct from the daily Feed (primary-source announcements) in that
+Dispatch surfaces outside voices: investigative journalism, op-eds, policy
+critique, first-hand field reports, academic commentary.
 
-Distinct from the daily news feed: these are opinions / deep analyses /
-investigative journalism, not vendor announcements. The shape matches the
-example workflow: source + 1-sentence frame + pull-quote + hashtag, grouped
-by topic.
+Architecture: one Gemini grounded-search call PER TOPIC GROUP (4 calls/run,
+in parallel), each returning a 1-2 sentence TLDR for that topic's week plus
+5-8 items. Splitting per-topic keeps each prompt focused, avoids
+max-token truncation, and lets us recover gracefully if a single topic's
+call returns nothing.
 
-Runs once per ISO week (Monday morning via GitHub Actions). One Gemini call
-with Google Search grounding, structured-JSON response parsed out of the
-response text. Cost: ~\$0.005/run → ~\$0.02/month.
+Cost: 4 × \$0.01 = \$0.04/week → \$0.16/month.
 """
 from __future__ import annotations
 
@@ -19,13 +21,12 @@ import os
 import re
 from datetime import datetime
 from pathlib import Path
-from urllib.parse import urlparse
 
 import httpx
 from google import genai
 from google.genai import types as gt
 
-log = logging.getLogger("critical_reading")
+log = logging.getLogger("dispatch")
 
 _MODEL = "gemini-2.5-flash"
 
@@ -36,34 +37,87 @@ TOPIC_GROUPS: list[str] = [
     "Web Ecosystem & AI Impact",
 ]
 
-_PROMPT_TEMPLATE = """Find 2-3 CRITICAL commentary / analysis / investigative pieces per topic
-below, published in the last 7 days (stretch to 14 if quiet):
+_TOPIC_HINTS: dict[str, str] = {
+    "Crawling & Publisher Controls": (
+        "AI crawlers (GPTBot / ClaudeBot / PerplexityBot / Bytespider / etc), "
+        "robots.txt, publisher-side blocking tooling (Cloudflare AI Crawl Control, "
+        "DataDome, TollBit), server-log analyses showing crawler behavior, "
+        "new opt-out mechanisms, scraped-content lawsuits about access"
+    ),
+    "Agents": (
+        "AI agent infrastructure, agent-to-agent protocols (MCP, A2A), agent "
+        "authentication (Web Bot Auth, agent identity standards), agent-failure "
+        "investigations, agent-security incidents, critiques of agentic "
+        "commerce, enterprise deployment experience reports"
+    ),
+    "Copyright & Legal": (
+        "AI training-data copyright lawsuits (publisher / author / rights-holder "
+        "vs AI company), regulatory action (UK CMA, EU AI Office, Italian Garante, "
+        "US Copyright Office, US courts), amicus briefs, licensing disputes, "
+        "government policy changes on AI + copyright"
+    ),
+    "Web Ecosystem & AI Impact": (
+        "AI Overviews / AI search impact on publisher traffic & revenue, "
+        "first-party data monetization strategies, indigenous-content and minority-"
+        "language protection, pay-per-crawl negotiations, content-licensing deals, "
+        "AI's effect on small publishers / niche media"
+    ),
+}
 
-{topics}
 
-Criteria: independent analyst, specialist blogger, regulator, investigator,
-or academic — NOT vendor announcements / product launches. Distinct argument,
-not news summary.
+def _prompt_for(topic: str, hint: str) -> str:
+    return f"""Find the week's 6–10 most important pieces of REPORTING, ANALYSIS, or
+PERSPECTIVE on:
+{topic} — {hint}
 
-Return ONLY this JSON, no prose, no code fences:
+Published in the last 7 days (stretch to 14 if this week was quiet).
 
-{{"items":[{{"topic":"...","tag":"#CamelCase","source_domain":"example.com","url":"...","title":"...","frame":"what the author argues, ≤25 words","quote":"verbatim pull-quote, ≤30 words"}}]}}
+Include any of these:
+- Substantive news reporting from reputable outlets (Reuters, NYT, Bloomberg,
+  WSJ, Politico, FT, The Guardian, Ars Technica, TechCrunch, Information,
+  Platformer, Semafor, Axios, trade-press outlets, etc.)
+- Investigative journalism, exclusives, and deep-dive features
+- Op-eds / commentary with a distinct argument
+- First-hand field reports (server-log analyses, case studies, postmortems)
+- Filed legal documents, regulator briefs, policy critiques
+- Academic / specialist-researcher analyses
+- Serious think-piece / essay commentary on the ecosystem
 
-Hard requirements:
-- url: THE ACTUAL PUBLISHER'S URL (e.g. https://mariehaynes.com/agentic-web).
-  Never a Google / vertexaisearch grounding redirect URL. Never a search
-  result page. If you cannot cite a real publisher URL, skip the item.
-- source_domain: the bare hostname of that URL without "www." or protocol
-  (e.g. "mariehaynes.com"). Must match the url.
-- tag: specific hashtag (#SearchImpact, #OptOut, #PayPerCrawl, #AIRegulation,
-  #DataLicensing, #BotVerification, #Copyright, etc.). Don't use generic #AI.
-- quote: must appear verbatim in the source. Don't fabricate.
-- Skip a topic group if nothing genuinely critical emerged — do NOT pad with
-  placeholders or vendor content.
+EXCLUDE (these are noise):
+- Generic explainer / 101 posts ("X Impact on Y Explained", "What is Z?")
+- SEO listicles ("Top 10 Tools for…", "N Things You Should Know…")
+- Vendor product launches / press releases (those live in our daily feed)
+- Tutorial / how-to content
+- Aggregator posts that just summarize someone else's report without adding anything
+- PDF lawyer-marketing pieces and other thinly-veiled sales content
+
+News reporting IS welcome here — the point is WHO is reporting it and
+whether the piece adds anything: context, argument, or primary-source detail.
+A solid Reuters story on an AI lawsuit counts. A random law-firm blog
+summarizing the same lawsuit does not.
+
+Return ONLY this JSON (no prose, no code fences):
+
+{{"tldr":"1–2 sentence synthesis of the week's thread on this topic","items":[{{"tag":"#CamelCase","source_domain":"example.com","url":"https://...","title":"...","frame":"what the author argues or reports, ≤25 words","quote":"verbatim pull-quote, ≤30 words","kind":"investigation|commentary|field-report|legal|research"}}]}}
+
+Hard rules:
+- url MUST be the real publisher URL, not a Google/grounding redirect URL.
+  If you cannot cite a real URL, skip the item.
+- source_domain is the bare hostname, no "www." (e.g. "theguardian.com").
+- tag: a specific CamelCase hashtag capturing this item's angle. Avoid
+  generic #AI / #Tech. Examples: #SearchImpact, #OptOut, #PayPerCrawl,
+  #BotVerification, #AIRegulation, #DataLicensing, #AgentSecurity.
+- quote must appear verbatim in the source.
+- Don't pad. If the week had only 3 items, return 3. If nothing qualified,
+  return items: [] and an honest tldr like "A quiet week; most activity
+  flowed through the daily feed."
 """
 
 
-async def build_critical_reading(
+_GEMINI_REDIRECT_HOST = "vertexaisearch.cloud.google.com"
+
+
+async def build_weekly_dispatch(
     *,
     out_dir: Path,
     now: datetime,
@@ -71,67 +125,25 @@ async def build_critical_reading(
     api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
         raise RuntimeError("GEMINI_API_KEY not set")
-
     client = genai.Client(api_key=api_key)
 
-    topics_bullet = "\n".join(f"  - {t}" for t in TOPIC_GROUPS)
-    prompt = _PROMPT_TEMPLATE.format(topics=topics_bullet)
+    # Run one Gemini call per topic in parallel. Each retries up to 3 times
+    # if it returns empty (grounded-search responses are occasionally empty
+    # or truncated).
+    topic_results = await asyncio.gather(
+        *[_run_topic(client, t) for t in TOPIC_GROUPS],
+        return_exceptions=True,
+    )
 
-    log.info("critical_reading: querying Gemini…")
-    # Gemini grounded responses are occasionally truncated or empty; retry
-    # up to 3 times with slightly varied temperature if we get no items.
-    items: list[dict] = []
-    for attempt in range(3):
-        resp = client.models.generate_content(
-            model=_MODEL,
-            contents=prompt,
-            config=gt.GenerateContentConfig(
-                tools=[gt.Tool(google_search=gt.GoogleSearch())],
-                temperature=0.3 + attempt * 0.1,
-                # Gemini grounded-search responses include reasoning tokens
-                # in the budget. 32k leaves room for all of that + the JSON.
-                max_output_tokens=32768,
-            ),
-        )
-        text = _extract_text(resp)
-        parsed = _parse_json_items(text)
-        items = parsed.get("items", [])
-        if items:
-            log.info("critical_reading: attempt %d returned %d items", attempt + 1, len(items))
-            break
-        finish = _extract_finish_reason(resp)
-        log.warning(
-            "critical_reading: attempt %d returned 0 items (response %d chars, finish=%s); retrying",
-            attempt + 1,
-            len(text),
-            finish,
-        )
-
-    # Drop Gemini-injected placeholder items (no real source/url) + items
-    # that still cite Google's grounding-redirect URL (which expires quickly
-    # and can't be resolved post-hoc). We'd rather ship a short week than
-    # a row pointing to a dead link.
-    def _is_valid(it: dict) -> bool:
-        sd = (it.get("source_domain") or "").strip().lower()
-        url = (it.get("url") or "").strip().lower()
-        if not url or sd in {"", "n/a", "none"}:
-            return False
-        if _GEMINI_REDIRECT_HOST in url or _GEMINI_REDIRECT_HOST in sd:
-            return False
-        return True
-    before = len(items)
-    items = [it for it in items if _is_valid(it)]
-    dropped = before - len(items)
-    if dropped:
-        log.warning("critical_reading: dropped %d items with redirect/placeholder URLs", dropped)
-
-    if not items:
-        log.warning("critical_reading: zero items; raw response preview follows")
-        log.warning("----- RAW GEMINI RESPONSE (first 2000 chars) -----")
-        for line in text[:2000].splitlines():
-            log.warning("  %s", line)
-        log.warning("--------------------------------------------------")
-    log.info("critical_reading: Gemini returned %d items", len(items))
+    topics_payload: list[dict] = []
+    for t, res in zip(TOPIC_GROUPS, topic_results):
+        if isinstance(res, Exception):
+            log.exception("dispatch: topic %s errored", t)
+            topics_payload.append({"topic": t, "tldr": f"(error generating: {res})", "items": []})
+            continue
+        tldr, items = res
+        log.info("dispatch: %s — %d items", t, len(items))
+        topics_payload.append({"topic": t, "tldr": tldr, "items": items})
 
     iso_year, iso_week, _ = now.isocalendar()
     filename = f"{iso_year}-W{iso_week:02d}.json"
@@ -142,51 +154,63 @@ async def build_critical_reading(
         "generated_at": now.isoformat(),
         "iso_year": iso_year,
         "iso_week": iso_week,
-        "topic_groups": TOPIC_GROUPS,
-        "items": items,
+        "topics": topics_payload,
     }
     out_path.write_text(json.dumps(payload, indent=2, ensure_ascii=False))
-    log.info("critical_reading: wrote %s (%d items)", out_path, len(items))
+    total = sum(len(t["items"]) for t in topics_payload)
+    log.info("dispatch: wrote %s (%d items across %d topics)", out_path, total, len(topics_payload))
     return out_path
 
 
-_GEMINI_REDIRECT_HOST = "vertexaisearch.cloud.google.com"
-
-
-async def _resolve_urls(items: list[dict]) -> list[dict]:
-    """For any item whose URL points to a Gemini grounding redirect, follow
-    the redirect to the real source and repair source_domain. Leave
-    non-redirect URLs untouched so we don't accidentally hit sites that
-    rate-limit head requests."""
-    needs_resolve = [
-        (i, it["url"])
-        for i, it in enumerate(items)
-        if it.get("url") and _GEMINI_REDIRECT_HOST in it["url"]
-    ]
-    if not needs_resolve:
-        return items
-
-    async with httpx.AsyncClient(timeout=httpx.Timeout(10.0), follow_redirects=True) as client:
-        resolved = await asyncio.gather(
-            *[_follow(client, url) for _, url in needs_resolve],
-            return_exceptions=False,
+async def _run_topic(client, topic: str) -> tuple[str, list[dict]]:
+    """Run one Gemini call for a single topic, retrying up to 3 times on empty."""
+    hint = _TOPIC_HINTS[topic]
+    prompt = _prompt_for(topic, hint)
+    items: list[dict] = []
+    tldr: str = ""
+    for attempt in range(5):
+        resp = client.models.generate_content(
+            model=_MODEL,
+            contents=prompt,
+            config=gt.GenerateContentConfig(
+                tools=[gt.Tool(google_search=gt.GoogleSearch())],
+                temperature=0.3 + attempt * 0.1,
+                max_output_tokens=32768,
+            ),
         )
-    for (idx, _original), real_url in zip(needs_resolve, resolved):
-        if not real_url:
-            continue
-        items[idx]["url"] = real_url
-        parsed = urlparse(real_url)
-        if parsed.hostname:
-            items[idx]["source_domain"] = parsed.hostname.removeprefix("www.")
-    return items
+        text = _extract_text(resp)
+        parsed = _parse_json(text)
+        items_raw = parsed.get("items", [])
+        tldr = (parsed.get("tldr") or "").strip()
+
+        # Attach the topic label to each item (the prompt doesn't require it;
+        # the JSON is scoped per topic).
+        for it in items_raw:
+            it["topic"] = topic
+
+        items = [it for it in items_raw if _is_valid(it)]
+
+        if items or tldr:
+            return tldr, items
+        finish = _extract_finish_reason(resp)
+        log.warning(
+            "dispatch[%s]: attempt %d empty (response %d chars, finish=%s); retrying",
+            topic,
+            attempt + 1,
+            len(text),
+            finish,
+        )
+    return tldr or "(no items surfaced this week)", items
 
 
-async def _follow(client: httpx.AsyncClient, url: str) -> str | None:
-    try:
-        resp = await client.get(url)
-        return str(resp.url) if resp.url else None
-    except Exception:
-        return None
+def _is_valid(it: dict) -> bool:
+    sd = (it.get("source_domain") or "").strip().lower()
+    url = (it.get("url") or "").strip().lower()
+    if not url or sd in {"", "n/a", "none"}:
+        return False
+    if _GEMINI_REDIRECT_HOST in url or _GEMINI_REDIRECT_HOST in sd:
+        return False
+    return True
 
 
 def _extract_text(resp) -> str:
@@ -207,10 +231,7 @@ def _extract_finish_reason(resp) -> str:
 _CODE_FENCE_RX = re.compile(r"^```(?:json)?\s*\n?(.*?)\n?```\s*$", re.DOTALL)
 
 
-def _parse_json_items(text: str) -> dict:
-    """Gemini sometimes wraps JSON in ```json fences despite the prompt.
-    Strip those, then json.loads. If that fails, fall back to finding the
-    outermost {...} block via bracket matching."""
+def _parse_json(text: str) -> dict:
     body = text.strip()
     m = _CODE_FENCE_RX.match(body)
     if m:
@@ -219,11 +240,9 @@ def _parse_json_items(text: str) -> dict:
         return json.loads(body)
     except json.JSONDecodeError:
         pass
-
-    # Fallback: find first '{' to matching '}'.
     start = body.find("{")
     if start < 0:
-        return {"items": []}
+        return {}
     depth = 0
     for i, ch in enumerate(body[start:], start=start):
         if ch == "{":
@@ -235,8 +254,7 @@ def _parse_json_items(text: str) -> dict:
                     return json.loads(body[start : i + 1])
                 except json.JSONDecodeError:
                     break
-    log.warning("critical_reading: could not parse Gemini JSON response")
-    return {"items": []}
+    return {}
 
 
 def _cli() -> None:
@@ -253,11 +271,14 @@ def _cli() -> None:
     parser.add_argument("--out-dir", type=Path, default=None)
     args = parser.parse_args()
 
-    import asyncio
-
     cfg = Config.from_env()
+    # Migrate display name but keep file path backwards-compatible for now.
     out_dir = args.out_dir or (cfg.data_dir / "critical-reading")
-    asyncio.run(build_critical_reading(out_dir=out_dir, now=datetime.now(tz=timezone.utc)))
+    asyncio.run(build_weekly_dispatch(out_dir=out_dir, now=datetime.now(tz=timezone.utc)))
+
+
+# Backwards-compat alias for any callers still using the old name.
+build_critical_reading = build_weekly_dispatch
 
 
 if __name__ == "__main__":

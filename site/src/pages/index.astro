@@ -50,16 +50,18 @@ const feedEntries = await Promise.all(
           <PillarDigestCard pillar="ecosystem" digest={digests.ecosystem}  />
           <PillarDigestCard pillar="agent" digest={digests.agent}  />
         </div>
-        {latestReading && (
-          <a href="/reading" class="reading-strip">
-            <span class="rs-label">This week's critical reading</span>
-            <span class="rs-meta">
-              Week {latestReading.iso_week} · {latestReading.items.length} items ·
-              analysis, not announcements
-            </span>
-            <span class="rs-cta">Open →</span>
-          </a>
-        )}
+        {latestReading && (() => {
+          const total = latestReading.topics.reduce((n, t) => n + t.items.length, 0);
+          return (
+            <a href="/reading" class="reading-strip">
+              <span class="rs-label">Weekly Dispatch · W{latestReading.iso_week}</span>
+              <span class="rs-meta">
+                {total} items — reporting, investigations, and perspectives (not vendor announcements)
+              </span>
+              <span class="rs-cta">Open →</span>
+            </a>
+          );
+        })()}
       </div>
     </section>
   ) : (

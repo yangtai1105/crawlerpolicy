@@ -1,48 +1,52 @@
 ---
 import Base from "../../layouts/Base.astro";
-import { loadLatest, listWeeks, groupByTopic } from "../../lib/critical_reading";
+import { loadLatest, listWeeks } from "../../lib/critical_reading";
 
 const latest = loadLatest();
 const archive = listWeeks().slice(1, 12);
+
+const totalItems = latest ? latest.topics.reduce((n, t) => n + t.items.length, 0) : 0;
 ---
 
-<Base title="Critical reading">
-  <article class="container reading-page">
-    <header class="reading-head">
-      <p class="label">Weekly — critical analysis</p>
-      <h1>Critical reading</h1>
+<Base title="Weekly Dispatch">
+  <article class="container dispatch-page">
+    <header class="dispatch-head">
+      <p class="label">Weekly · published Mondays</p>
+      <h1>Weekly Dispatch</h1>
       <p class="lede">
-        Independent commentary, investigative reporting, and analysis on AI crawlers,
+        The week's sharpest reporting, investigations, and perspectives on AI crawlers,
         agents, copyright / legal movement, and the broader web-ecosystem impact of AI.
-        Curated once a week by Gemini grounded search from specialist analysts and
-        investigative journalism, not vendor announcements.
+        Curated by Gemini grounded search from investigative journalism, op-eds, policy
+        critique, and first-hand field reports — <strong>not vendor announcements</strong>
+        (those live in the <a href="/">daily feed</a>).
       </p>
     </header>
 
     {latest ? (
       <>
         <div class="week-meta">
-          <span>Week {latest.iso_week} of {latest.iso_year}</span>
+          <span>Week {latest.iso_week} · {latest.iso_year}</span>
           <span>·</span>
-          <span>{latest.items.length} items</span>
+          <span>{totalItems} items across {latest.topics.length} topics</span>
           <span>·</span>
           <time>Generated {new Date(latest.generated_at).toUTCString().replace("GMT", "UTC")}</time>
         </div>
 
-        {(() => {
-          const grouped = groupByTopic(latest.items, latest.topic_groups);
-          return Array.from(grouped.entries()).map(([topic, items]) => {
-            if (items.length === 0) return null;
-            return (
-              <section class="topic-block">
-                <h2 class="topic-heading">{topic}</h2>
+        {latest.topics.map((topic) => {
+          if (topic.items.length === 0 && !topic.tldr) return null;
+          return (
+            <section class="topic-block">
+              <h2 class="topic-heading">{topic.topic}</h2>
+              {topic.tldr && <p class="topic-tldr">{topic.tldr}</p>}
+              {topic.items.length > 0 ? (
                 <ul class="items">
-                  {items.map((it) => (
+                  {topic.items.map((it) => (
                     <li class="item">
                       <div class="item-head">
                         <a href={it.url} target="_blank" rel="noopener noreferrer" class="item-source">
                           {it.source_domain}
                         </a>
+                        {it.kind && <span class="item-kind">{it.kind}</span>}
                         <span class="item-tag">{it.tag}</span>
                       </div>
                       <a href={it.url} target="_blank" rel="noopener noreferrer" class="item-title">
@@ -55,14 +59,16 @@ const archive = listWeeks().slice(1, 12);
                     </li>
                   ))}
                 </ul>
-              </section>
-            );
-          });
-        })()}
+              ) : (
+                <p class="empty-topic">No items qualified this week.</p>
+              )}
+            </section>
+          );
+        })}
       </>
     ) : (
       <p class="empty">
-        No critical reading digests yet. Run{" "}
+        No dispatch yet. Run{" "}
         <code>uv run python -m pipeline.critical_reading</code> to generate this week's.
       </p>
     )}
@@ -85,11 +91,11 @@ const archive = listWeeks().slice(1, 12);
 </Base>
 
 <style>
-  .reading-page { max-width: 780px; padding: var(--space-6) var(--space-5); }
-
-  .reading-head { margin-bottom: var(--space-6); padding-bottom: var(--space-5); border-bottom: 1px solid var(--border); }
-  .reading-head h1 { font-size: 2rem; margin: var(--space-3) 0; }
-  .reading-head .lede { color: var(--ink-muted); font-size: 1rem; line-height: 1.7; max-width: 680px; margin: 0; }
+  .dispatch-page { max-width: 780px; padding: var(--space-6) var(--space-5); }
+  .dispatch-head { margin-bottom: var(--space-6); padding-bottom: var(--space-5); border-bottom: 1px solid var(--border); }
+  .dispatch-head h1 { font-size: 2rem; margin: var(--space-3) 0; }
+  .dispatch-head .lede { color: var(--ink-muted); font-size: 1rem; line-height: 1.7; max-width: 680px; margin: 0; }
+  .dispatch-head .lede a { color: var(--pillar-ecosystem); }
 
   .week-meta {
     display: flex; gap: var(--space-2); flex-wrap: wrap;
@@ -100,38 +106,53 @@ const archive = listWeeks().slice(1, 12);
   .topic-block { margin-bottom: var(--space-7); }
   .topic-heading {
     font-family: var(--font-display);
-    font-size: 1.3rem; font-weight: 500;
+    font-size: 1.35rem; font-weight: 500;
     letter-spacing: -0.01em;
-    margin: 0 0 var(--space-4);
+    margin: 0 0 var(--space-2);
     padding-bottom: var(--space-2);
     border-bottom: 2px solid var(--border);
   }
+  .topic-tldr {
+    color: var(--ink);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    background: var(--bg-elev);
+    border-left: 3px solid var(--pillar-agent);
+    padding: var(--space-3) var(--space-4);
+    margin: 0 0 var(--space-4);
+    border-radius: 0 3px 3px 0;
+  }
 
   .items { list-style: none; padding: 0; margin: 0; }
-  .item {
-    padding: var(--space-4) 0;
-    border-bottom: 1px dashed var(--border);
-  }
+  .item { padding: var(--space-4) 0; border-bottom: 1px dashed var(--border); }
   .item:last-child { border-bottom: 0; }
 
   .item-head {
-    display: flex; justify-content: space-between; align-items: baseline;
-    gap: var(--space-3); margin-bottom: var(--space-2);
-    font-size: 0.78rem;
+    display: flex; align-items: baseline; gap: var(--space-3);
+    margin-bottom: var(--space-2); font-size: 0.78rem; flex-wrap: wrap;
   }
   .item-source { color: var(--ink-muted); font-family: var(--font-mono); }
   .item-source:hover { color: var(--pillar-ecosystem); }
+  .item-kind {
+    background: var(--bg-elev);
+    color: var(--ink-muted);
+    border: 1px solid var(--border);
+    padding: 1px 6px;
+    border-radius: 2px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
   .item-tag {
     color: var(--pillar-agent);
     font-weight: 600;
-    letter-spacing: 0.02em;
+    margin-left: auto;
   }
 
   .item-title {
     display: block;
     font-family: var(--font-display);
-    font-size: 1.08rem;
-    font-weight: 500;
+    font-size: 1.08rem; font-weight: 500;
     line-height: 1.35;
     color: var(--ink);
     margin-bottom: var(--space-2);
@@ -139,13 +160,7 @@ const archive = listWeeks().slice(1, 12);
   }
   .item-title:hover { color: var(--pillar-ecosystem); }
 
-  .item-frame {
-    color: var(--ink-muted);
-    font-size: 0.92rem;
-    line-height: 1.55;
-    margin: 0 0 var(--space-2);
-  }
-
+  .item-frame { color: var(--ink-muted); font-size: 0.92rem; line-height: 1.55; margin: 0 0 var(--space-2); }
   .item-quote {
     border-left: 2px solid var(--border-strong);
     padding: var(--space-2) var(--space-3);
@@ -157,6 +172,7 @@ const archive = listWeeks().slice(1, 12);
     line-height: 1.5;
   }
 
+  .empty-topic { color: var(--ink-muted); font-size: 0.88rem; font-style: italic; margin: 0; }
   .empty { color: var(--ink-muted); font-size: 0.95rem; }
   .empty code { background: var(--bg-elev); padding: 2px 6px; border-radius: 3px; }
 
@@ -165,12 +181,9 @@ const archive = listWeeks().slice(1, 12);
   .archive-list { list-style: none; padding: 0; margin: 0; display: flex; flex-wrap: wrap; gap: var(--space-2); }
   .archive-list li { font-size: 0.82rem; }
   .archive-list a {
-    display: inline-block;
-    padding: 4px 10px;
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    color: var(--ink-muted);
+    display: inline-block; padding: 4px 10px;
+    background: var(--bg-elev); border: 1px solid var(--border);
+    border-radius: 3px; color: var(--ink-muted);
   }
   .archive-list a:hover { color: var(--ink); border-color: var(--border-strong); }
 </style>
