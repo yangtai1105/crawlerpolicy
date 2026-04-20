@@ -308,14 +308,16 @@ _EXPLAINER_PATTERNS = (
 _OLD_YEAR_IN_PATH_RX = re.compile(r"[-/_](20\d\d)[-/_]")
 
 
-def _filter_quality(items: list[dict], *, now: datetime, max_age_days: int = 14) -> list[dict]:
+def _filter_quality(items: list[dict], *, now: datetime, max_age_days: int = 60) -> list[dict]:
     """Post-filter matched items for quality and recency.
 
-    Drops:
-    - Items whose ``published`` field parses to older than ``max_age_days``
-    - Items whose URL path contains a year older than the current year
+    Drops (with a log line for each drop so the run is debuggable):
     - Items on the blocked-domain list (law-firm content farms)
     - Items whose URL path matches an obvious-explainer slug pattern
+    - Items whose URL path contains a year older than the current year
+    - Items whose ``published`` field parses to older than ``max_age_days``
+      (60-day cutoff is generous on purpose — Gemini's self-reported dates
+      are unreliable, but clearly-old content is still clearly old)
     """
     kept: list[dict] = []
     cutoff_year = now.year
@@ -329,22 +331,23 @@ def _filter_quality(items: list[dict], *, now: datetime, max_age_days: int = 14)
         except Exception:
             pass
 
-        # Domain blocklist
         if any(domain == b or domain.endswith("." + b) for b in _BLOCKED_DOMAINS):
+            log.info("dispatch: drop %s (blocked domain)", url)
             continue
 
-        # Explainer URL patterns
-        if any(pat in path_lower for pat in _EXPLAINER_PATTERNS):
+        hit = next((pat for pat in _EXPLAINER_PATTERNS if pat in path_lower), None)
+        if hit:
+            log.info("dispatch: drop %s (explainer pattern %r)", url, hit)
             continue
 
-        # Year-in-URL — drop if URL path is stamped with a past year
         m = _OLD_YEAR_IN_PATH_RX.search(path_lower)
         if m and int(m.group(1)) < cutoff_year:
+            log.info("dispatch: drop %s (URL year %s)", url, m.group(1))
             continue
 
-        # Parsed published date
         pub = _parse_published(it.get("published"))
         if pub is not None and pub < cutoff:
+            log.info("dispatch: drop %s (published %s, older than %dd)", url, pub, max_age_days)
             continue
 
         kept.append(it)

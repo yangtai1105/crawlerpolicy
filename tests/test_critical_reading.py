@@ -233,13 +233,15 @@ def test_filter_quality_drops_blocked_domains():
 
 
 def test_filter_quality_drops_stale_published_date():
+    # Default cutoff is 60 days — generous on purpose because Gemini's
+    # self-reported dates are flaky.
     items = [
-        {"url": "https://reuters.com/a", "source_domain": "reuters.com", "published": "2026-03-01"},  # >14d
+        {"url": "https://reuters.com/a", "source_domain": "reuters.com", "published": "2025-11-01"},  # >60d
         {"url": "https://reuters.com/b", "source_domain": "reuters.com", "published": "2026-04-15"},  # ~5d
-        {"url": "https://reuters.com/c", "source_domain": "reuters.com", "published": "2026-04-05"},  # ~15d
+        {"url": "https://reuters.com/c", "source_domain": "reuters.com", "published": "2026-03-10"},  # ~40d
     ]
     out = _filter_quality(items, now=_NOW)
-    assert [it["url"] for it in out] == ["https://reuters.com/b"]
+    assert [it["url"] for it in out] == ["https://reuters.com/b", "https://reuters.com/c"]
 
 
 def test_filter_quality_keeps_item_when_published_missing_and_url_clean():
