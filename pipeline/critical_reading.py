@@ -103,12 +103,9 @@ Return ONLY this JSON (no prose, no code fences):
 {{"tldr":"1–2 sentence synthesis of the week's thread on this topic","items":[{{"tag":"#CamelCase","title":"exact published headline","frame":"what the author argues or reports, ≤25 words","quote":"verbatim pull-quote, ≤30 words","kind":"investigation|commentary|field-report|legal|research"}}]}}
 
 Hard rules:
-- title MUST be the exact published headline. We use it to look up the
-  source URL from your grounded citations — precision matters more than style.
-  Don't rewrite, shorten, or paraphrase headlines.
-- Only include items you actually surfaced via search in THIS response.
-  Don't list items from memory or prior knowledge. We'll discard anything
-  that isn't backed by a grounded citation, so there's no point padding.
+- title MUST be the exact published headline as it appears at the source.
+  Don't rewrite, shorten, or paraphrase — we look up the URL from the
+  headline, so precision matters more than style.
 - tag: a specific CamelCase hashtag capturing this item's angle. Avoid
   generic #AI / #Tech. Examples: #SearchImpact, #OptOut, #PayPerCrawl,
   #BotVerification, #AIRegulation, #DataLicensing, #AgentSecurity.
@@ -256,9 +253,14 @@ async def _resolve_redirect(client: httpx.AsyncClient, uri: str) -> str:
         return uri
 
 
+_VERTEX_REDIRECT_HOST = "vertexaisearch.cloud.google.com"
+
+
 async def _resolve_citations(citations: list[tuple[str, str]]) -> list[tuple[str, str]]:
     """Follow redirect URIs in parallel so downstream gets real publisher URLs
-    (the redirect URIs expire fast and 404 for non-Gemini clients)."""
+    (the redirect URIs expire fast and 404 for non-Gemini clients). Citations
+    whose redirect failed to resolve are dropped — they have no matchable
+    slug, and the raw redirect would 404 for our readers too."""
     if not citations:
         return []
     async with httpx.AsyncClient(timeout=_REDIRECT_TIMEOUT, follow_redirects=True) as client:
@@ -266,7 +268,12 @@ async def _resolve_citations(citations: list[tuple[str, str]]) -> list[tuple[str
             *[_resolve_redirect(client, uri) for _, uri in citations],
             return_exceptions=False,
         )
-    return [(title, url) for (title, _), url in zip(citations, real_urls)]
+    out: list[tuple[str, str]] = []
+    for (title, _), url in zip(citations, real_urls):
+        if _VERTEX_REDIRECT_HOST in url:
+            continue
+        out.append((title, url))
+    return out
 
 
 def _normalize_domain(d: str) -> str:
