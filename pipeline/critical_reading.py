@@ -4,19 +4,13 @@ impact. Distinct from the daily Feed (primary-source announcements) in that
 Dispatch surfaces outside voices: investigative journalism, op-eds, policy
 critique, first-hand field reports, academic commentary.
 
-Architecture: one Claude + web_search call PER TOPIC GROUP (4 calls/run,
+Architecture: one Gemini grounded-search call PER TOPIC GROUP (4 calls/run,
 in parallel), each returning a 1-2 sentence TLDR for that topic's week plus
 5-8 items. Splitting per-topic keeps each prompt focused, avoids
 max-token truncation, and lets us recover gracefully if a single topic's
 call returns nothing.
 
-Why Anthropic web_search instead of Gemini grounded search: Gemini's
-grounding ranked SEO-optimized law-firm blogs and startup explainers over
-real journalism because those rank well in Google Search for these topics.
-Sonnet's instruction-following on the EXCLUDE list (skip explainers, skip
-law-firm SEO, skip content farms) is substantially better.
-
-Cost: ~4 x $0.05 (Sonnet tokens + web_search uses) = ~$0.20/week = ~$0.80/mo.
+Cost: 4 x $0.01 = $0.04/week -> $0.16/month.
 """
 from __future__ import annotations
 
@@ -29,15 +23,14 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
-from anthropic import AsyncAnthropic
+import httpx
+from google import genai
+from google.genai import types as gt
 
 log = logging.getLogger("dispatch")
 
-_MODEL = "claude-sonnet-4-6"
-# Cap web_search invocations per topic — roughly how many distinct queries
-# Claude can issue during one topic's reasoning. 8 is plenty for a news roundup
-# while keeping cost bounded (web_search is $10/1k uses).
-_WEB_SEARCH_MAX_USES = 8
+_MODEL = "gemini-2.5-flash"
+_REDIRECT_TIMEOUT = httpx.Timeout(10.0)
 
 TOPIC_GROUPS: list[str] = [
     "Crawling & Publisher Controls",
@@ -137,11 +130,14 @@ async def build_weekly_dispatch(
     out_dir: Path,
     now: datetime,
 ) -> Path:
-    api_key = os.environ.get("ANTHROPIC_API_KEY")
+    api_key = os.environ.get("GEMINI_API_KEY")
     if not api_key:
-        raise RuntimeError("ANTHROPIC_API_KEY not set")
-    client = AsyncAnthropic(api_key=api_key)
+        raise RuntimeError("GEMINI_API_KEY not set")
+    client = genai.Client(api_key=api_key)
 
+    # Run one Gemini call per topic in parallel. Each retries up to 3 times
+    # if it returns empty (grounded-search responses are occasionally empty
+    # or truncated).
     today = now.date().isoformat()
     topic_results = await asyncio.gather(
         *[_run_topic(client, t, now=now, today=today) for t in TOPIC_GROUPS],
@@ -176,82 +172,105 @@ async def build_weekly_dispatch(
 
 
 async def _run_topic(
-    client: AsyncAnthropic,
+    client,
     topic: str,
     *,
     now: datetime,
     today: str,
 ) -> tuple[str, list[dict]]:
-    """Run one Claude + web_search call for a single topic."""
+    """Run one Gemini call for a single topic, retrying up to 5 times on empty."""
     hint = _TOPIC_HINTS[topic]
     prompt = _prompt_for(topic, hint, today)
-
-    resp = await client.messages.create(
-        model=_MODEL,
-        max_tokens=16000,
-        tools=[{
-            "type": "web_search_20260209",
-            "name": "web_search",
-            "max_uses": _WEB_SEARCH_MAX_USES,
-        }],
-        messages=[{"role": "user", "content": prompt}],
-    )
-
-    text = _extract_text_blocks(resp)
-    parsed = _parse_json(text)
-    items_raw = parsed.get("items", [])
-    tldr = (parsed.get("tldr") or "").strip()
-
-    for it in items_raw:
-        it["topic"] = topic
-
-    # URLs and source_domain come from Anthropic's web_search_tool_result
-    # blocks — real publisher URLs Claude actually searched and cited, not
-    # anything the model wrote into the JSON body. Match each item to a
-    # grounded citation by title-token overlap.
-    citations = _collect_grounding_citations(resp)
-    matched = _map_items_to_grounded_citations(items_raw, citations)
-    items = _filter_quality(matched, now=now)
-
-    if items_raw and not items:
-        sample_items = "; ".join((it.get("title") or "?")[:80] for it in items_raw[:3])
-        sample_cits = "; ".join(
-            f"{(t or '(no title)')[:50]} -> {u[:80]}" for t, u in citations[:3]
+    items: list[dict] = []
+    tldr: str = ""
+    for attempt in range(5):
+        resp = client.models.generate_content(
+            model=_MODEL,
+            contents=prompt,
+            config=gt.GenerateContentConfig(
+                tools=[gt.Tool(google_search=gt.GoogleSearch())],
+                temperature=0.3 + attempt * 0.1,
+                max_output_tokens=32768,
+            ),
         )
+        text = _extract_text(resp)
+        parsed = _parse_json(text)
+        items_raw = parsed.get("items", [])
+        tldr = (parsed.get("tldr") or "").strip()
+
+        for it in items_raw:
+            it["topic"] = topic
+
+        # Gemini's JSON only carries editorial fields (title/frame/quote/tag/
+        # kind). The *URL* and source_domain come from grounding_metadata —
+        # the model is instructed not to emit URLs itself, since it frequently
+        # hallucinates them. Match each item to a grounded citation by
+        # title-token overlap.
+        citations = _collect_grounding_citations(resp)
+        resolved = await _resolve_citations(citations)
+        matched = _map_items_to_grounded_citations(items_raw, resolved)
+        items = _filter_quality(matched, now=now)
+
+        if items or tldr:
+            if items_raw and not items:
+                sample_items = "; ".join((it.get("title") or "?")[:80] for it in items_raw[:3])
+                sample_cits = "; ".join(
+                    f"{(t or '(no title)')[:50]} -> {u[:80]}" for t, u in resolved[:3]
+                )
+                log.warning(
+                    "dispatch[%s]: attempt %d — %d raw items, %d grounded, 0 matched; retrying",
+                    topic, attempt + 1, len(items_raw), len(resolved),
+                )
+                log.warning("dispatch[%s]: sample items: %s", topic, sample_items)
+                log.warning("dispatch[%s]: sample citations: %s", topic, sample_cits)
+                continue
+            return tldr, items
+        finish = _extract_finish_reason(resp)
         log.warning(
-            "dispatch[%s]: %d raw items, %d grounded, 0 matched-and-kept",
-            topic, len(items_raw), len(citations),
+            "dispatch[%s]: attempt %d empty (response %d chars, finish=%s); retrying",
+            topic,
+            attempt + 1,
+            len(text),
+            finish,
         )
-        log.warning("dispatch[%s]: sample items: %s", topic, sample_items)
-        log.warning("dispatch[%s]: sample citations: %s", topic, sample_cits)
-
-    if not items_raw and not tldr:
-        log.warning("dispatch[%s]: no items or tldr returned", topic)
-
     return tldr or "(no items surfaced this week)", items
 
 
 def _collect_grounding_citations(resp) -> list[tuple[str, str]]:
-    """Return (title, url) pairs from the ``web_search_tool_result`` content
-    blocks in the Messages response. These are the real publisher URLs
-    Anthropic's web_search actually searched — not anything the model wrote
-    into its own text output, which could be fabricated."""
+    """Return (title, redirect_uri) pairs from Gemini's grounding_metadata.
+    These are the real sources Google Search grounded against — unlike the
+    URLs the model emits into its JSON body, which are frequently fabricated."""
+    candidates = getattr(resp, "candidates", None) or []
+    if not candidates:
+        return []
+    meta = getattr(candidates[0], "grounding_metadata", None)
+    if meta is None:
+        return []
     out: list[tuple[str, str]] = []
     seen: set[str] = set()
-    for block in getattr(resp, "content", None) or []:
-        if getattr(block, "type", None) != "web_search_tool_result":
+    for chunk in getattr(meta, "grounding_chunks", None) or []:
+        web = getattr(chunk, "web", None)
+        if web is None:
             continue
-        results = getattr(block, "content", None) or []
-        for result in results:
-            if getattr(result, "type", None) != "web_search_result":
-                continue
-            url = getattr(result, "url", None) or ""
-            if not url or url in seen:
-                continue
-            seen.add(url)
-            title = getattr(result, "title", None) or url
-            out.append((title, url))
+        uri = getattr(web, "uri", None) or ""
+        if not uri or uri in seen:
+            continue
+        seen.add(uri)
+        title = getattr(web, "title", None) or uri
+        out.append((title, uri))
     return out
+
+
+async def _resolve_redirect(client: httpx.AsyncClient, uri: str) -> str:
+    """Follow a Gemini grounding-api-redirect URL to the real publisher URL."""
+    try:
+        resp = await client.get(uri)
+        return str(resp.url) if resp.url else uri
+    except Exception:
+        return uri
+
+
+_VERTEX_REDIRECT_HOST = "vertexaisearch.cloud.google.com"
 
 # Domains consistently surfacing as law-firm / SEO-farm content. These are
 # NOT reporting or commentary in the sense we want, and they rank well in
@@ -344,6 +363,26 @@ def _parse_published(raw) -> "date | None":
         return None
 
 
+async def _resolve_citations(citations: list[tuple[str, str]]) -> list[tuple[str, str]]:
+    """Follow redirect URIs in parallel so downstream gets real publisher URLs
+    (the redirect URIs expire fast and 404 for non-Gemini clients). Citations
+    whose redirect failed to resolve are dropped — they have no matchable
+    slug, and the raw redirect would 404 for our readers too."""
+    if not citations:
+        return []
+    async with httpx.AsyncClient(timeout=_REDIRECT_TIMEOUT, follow_redirects=True) as client:
+        real_urls = await asyncio.gather(
+            *[_resolve_redirect(client, uri) for _, uri in citations],
+            return_exceptions=False,
+        )
+    out: list[tuple[str, str]] = []
+    for (title, _), url in zip(citations, real_urls):
+        if _VERTEX_REDIRECT_HOST in url:
+            continue
+        out.append((title, url))
+    return out
+
+
 def _normalize_domain(d: str) -> str:
     d = (d or "").strip().lower()
     return d[4:] if d.startswith("www.") else d
@@ -426,17 +465,19 @@ def _map_items_to_grounded_citations(
     return kept
 
 
-def _extract_text_blocks(resp) -> str:
-    """Concatenate all ``text`` content blocks from an Anthropic Messages
-    response. Other block types (server_tool_use, web_search_tool_result,
-    thinking) are skipped — the JSON output lives in text blocks."""
-    out: list[str] = []
-    for block in getattr(resp, "content", None) or []:
-        if getattr(block, "type", None) == "text":
-            text = getattr(block, "text", None) or ""
-            if text:
-                out.append(text)
-    return "\n".join(out).strip()
+def _extract_text(resp) -> str:
+    candidates = getattr(resp, "candidates", None) or []
+    if not candidates:
+        return ""
+    parts = getattr(candidates[0].content, "parts", None) or []
+    return "".join(getattr(p, "text", "") or "" for p in parts).strip()
+
+
+def _extract_finish_reason(resp) -> str:
+    candidates = getattr(resp, "candidates", None) or []
+    if not candidates:
+        return "?"
+    return str(getattr(candidates[0], "finish_reason", "?"))
 
 
 _CODE_FENCE_RX = re.compile(r"^```(?:json)?\s*\n?(.*?)\n?```\s*$", re.DOTALL)

@@ -1,12 +1,14 @@
 """Tests for the Weekly Dispatch URL-grounding logic.
 
-Anthropic's Messages API with ``web_search_20260209`` returns a mixed content
-list — some blocks are ``text`` (the JSON body: title/frame/quote/tag/kind),
-others are ``web_search_tool_result`` (the real publisher URLs Claude
-searched). The matcher here pairs each JSON item to its grounded result by
+Gemini's grounded-search response ships *two* things: the JSON body (title/
+frame/quote/tag/kind — editorial fields only) and
+``grounding_metadata.grounding_chunks`` (the real grounded URIs).
+
+The matcher here pairs each Gemini item to its grounded citation by
 title-token overlap, then fills in ``url`` and ``source_domain`` from the
-matched result. If no grounded URL shares enough tokens with an item's title,
-the item is dropped rather than shipped with a potentially-wrong link.
+matched citation. If no grounded citation shares enough tokens with an
+item's title, the item is dropped rather than shipped with a hallucinated
+or wrong URL.
 """
 from __future__ import annotations
 
@@ -21,62 +23,57 @@ from pipeline.critical_reading import (
 _NOW = datetime(2026, 4, 20, tzinfo=timezone.utc)
 
 
-class _FakeSearchResult:
-    def __init__(self, url: str, title: str = ""):
-        self.type = "web_search_result"
-        self.url = url
+class _FakeWeb:
+    def __init__(self, uri: str, title: str):
+        self.uri = uri
         self.title = title
 
 
-class _FakeBlock:
-    """Mimics an Anthropic content block (type + optional content list)."""
-    def __init__(self, type_: str, content: list | None = None, text: str = ""):
-        self.type = type_
-        self.content = content or []
-        self.text = text
+class _FakeChunk:
+    def __init__(self, uri: str, title: str = ""):
+        self.web = _FakeWeb(uri, title)
+
+
+class _FakeMeta:
+    def __init__(self, chunks: list[_FakeChunk]):
+        self.grounding_chunks = chunks
+
+
+class _FakeCandidate:
+    def __init__(self, chunks: list[_FakeChunk]):
+        self.grounding_metadata = _FakeMeta(chunks)
 
 
 class _FakeResp:
-    def __init__(self, content: list[_FakeBlock]):
-        self.content = content
+    def __init__(self, chunks: list[_FakeChunk]):
+        self.candidates = [_FakeCandidate(chunks)]
 
 
-def _web_search_block(results: list[_FakeSearchResult]) -> _FakeBlock:
-    return _FakeBlock("web_search_tool_result", content=results)
-
-
-def test_collect_grounding_citations_extracts_web_search_result_urls():
-    resp = _FakeResp([
-        _FakeBlock("text", text="Some preamble from Claude."),
-        _web_search_block([
-            _FakeSearchResult("https://blog.cloudflare.com/ai-redirects/", "Cloudflare canonical"),
-            _FakeSearchResult("https://digiday.com/media/ai-bots/", "Digiday report"),
-        ]),
-    ])
+def test_collect_grounding_citations_dedupes_and_skips_empty_uris():
+    resp = _FakeResp(
+        [
+            _FakeChunk("https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc", "Cloudflare canonical"),
+            _FakeChunk("https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc", "dup of above"),
+            _FakeChunk("", "no uri, should skip"),
+            _FakeChunk("https://vertexaisearch.cloud.google.com/grounding-api-redirect/xyz", "Digiday report"),
+        ]
+    )
     out = _collect_grounding_citations(resp)
-    assert out == [
-        ("Cloudflare canonical", "https://blog.cloudflare.com/ai-redirects/"),
-        ("Digiday report", "https://digiday.com/media/ai-bots/"),
+    assert [u for _, u in out] == [
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc",
+        "https://vertexaisearch.cloud.google.com/grounding-api-redirect/xyz",
     ]
+    assert out[0][0] == "Cloudflare canonical"
 
 
-def test_collect_grounding_citations_dedupes_across_multiple_search_blocks():
-    resp = _FakeResp([
-        _web_search_block([_FakeSearchResult("https://example.com/a", "A")]),
-        _FakeBlock("text", text="..."),
-        _web_search_block([
-            _FakeSearchResult("https://example.com/a", "dup"),   # duplicate URL
-            _FakeSearchResult("https://example.com/b", "B"),
-        ]),
-    ])
-    out = _collect_grounding_citations(resp)
-    assert [u for _, u in out] == ["https://example.com/a", "https://example.com/b"]
+def test_collect_grounding_citations_handles_missing_metadata():
+    class _NoMeta:
+        grounding_metadata = None
 
+    class _Resp:
+        candidates = [_NoMeta()]
 
-def test_collect_grounding_citations_handles_missing_content():
-    class _Empty:
-        content = None
-    assert _collect_grounding_citations(_Empty()) == []
+    assert _collect_grounding_citations(_Resp()) == []
     assert _collect_grounding_citations(object()) == []
 
 
