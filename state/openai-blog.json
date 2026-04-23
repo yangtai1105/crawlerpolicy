@@ -1,11 +1,7 @@
 {
-  "last_checked_at": "2026-04-22T09:21:10.096379+00:00",
+  "last_checked_at": "2026-04-23T09:44:59.906259+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/introducing-chatgpt-pro",
-    "https://openai.com/index/openai-o1-system-card",
-    "https://openai.com/index/openai-and-future-partner-on-specialist-content",
-    "https://openai.com/index/morgan-stanley",
     "https://openai.com/index/advancing-red-teaming-with-people-and-ai",
     "https://openai.com/index/bbva",
     "https://openai.com/index/grab",
@@ -501,7 +497,11 @@
     "https://openai.com/index/teen-safety-policies-gpt-oss-safeguard",
     "https://openai.com/index/update-on-the-openai-foundation",
     "https://openai.com/index/powering-product-discovery-in-chatgpt",
-    "https://openai.com/index/creating-with-sora-safely"
+    "https://openai.com/index/creating-with-sora-safely",
+    "https://openai.com/index/making-chatgpt-better-for-clinicians",
+    "https://openai.com/academy/workspace-agents",
+    "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
+    "https://openai.com/index/speeding-up-agentic-workflows-with-websockets"
   ],
   "consecutive_failures": 0,
   "first_seen": false
