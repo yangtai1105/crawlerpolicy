@@ -1,16 +1,7 @@
 {
-  "last_checked_at": "2026-04-23T09:44:59.906259+00:00",
+  "last_checked_at": "2026-04-24T09:45:23.695231+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/advancing-red-teaming-with-people-and-ai",
-    "https://openai.com/index/bbva",
-    "https://openai.com/index/grab",
-    "https://openai.com/index/rox",
-    "https://openai.com/index/openai-en-france",
-    "https://openai.com/chatgpt/use-cases/student-writing-guide",
-    "https://openai.com/index/estee-lauder",
-    "https://openai.com/global-affairs/comments-to-the-ntia-on-data-center-growth-resilience-and-security",
-    "https://openai.com/index/introducing-chatgpt-search",
     "https://openai.com/index/promega",
     "https://openai.com/business/put-ai-to-work-for-marketing-teams",
     "https://openai.com/index/introducing-simpleqa",
@@ -501,7 +492,16 @@
     "https://openai.com/index/making-chatgpt-better-for-clinicians",
     "https://openai.com/academy/workspace-agents",
     "https://openai.com/index/introducing-workspace-agents-in-chatgpt",
-    "https://openai.com/index/speeding-up-agentic-workflows-with-websockets"
+    "https://openai.com/index/speeding-up-agentic-workflows-with-websockets",
+    "https://openai.com/index/introducing-gpt-5-5",
+    "https://openai.com/index/gpt-5-5-system-card",
+    "https://openai.com/academy/codex-automations",
+    "https://openai.com/academy/top-10-use-cases-codex-for-work",
+    "https://openai.com/academy/codex-plugins-and-skills",
+    "https://openai.com/academy/working-with-codex",
+    "https://openai.com/academy/codex-settings",
+    "https://openai.com/academy/what-is-codex",
+    "https://openai.com/academy/codex-how-to-start"
   ],
   "consecutive_failures": 0,
   "first_seen": false

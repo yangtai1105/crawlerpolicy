@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-04-23T09:44:59.906259+00:00",
+  "last_run_at": "2026-04-24T09:45:23.695231+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -34,10 +34,5 @@
     "gemini-agent-standards": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
     "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source"
   },
-  "events_written": [
-    "content/events/2026-04-22-datadome-blog-chrome-s-ai-web-apis-enable-new-hardware-fingerprinting-technique-for-bot-detect.md",
-    "content/events/2026-04-22-openai-blog-openai-academy-introduces-workspace-agents-training-for-chatgpt-workflow-automat.md",
-    "content/events/2026-04-22-openai-blog-openai-launches-workspace-agents-in-chatgpt-for-cloud-based-workflow-automation.md",
-    "content/events/2026-04-22-openai-blog-openai-details-websocket-optimization-for-agent-performance.md"
-  ]
+  "events_written": []
 }
