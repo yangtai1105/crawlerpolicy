@@ -1,8 +1,7 @@
 {
-  "last_checked_at": "2026-04-26T09:01:31.398229+00:00",
+  "last_checked_at": "2026-04-27T10:16:18.221813+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/promega",
     "https://openai.com/business/put-ai-to-work-for-marketing-teams",
     "https://openai.com/index/introducing-simpleqa",
     "https://openai.com/index/decagon",
@@ -501,7 +500,8 @@
     "https://openai.com/academy/working-with-codex",
     "https://openai.com/academy/codex-settings",
     "https://openai.com/academy/what-is-codex",
-    "https://openai.com/academy/codex-how-to-start"
+    "https://openai.com/academy/codex-how-to-start",
+    "https://openai.com/index/our-principles"
   ],
   "consecutive_failures": 0,
   "first_seen": false
