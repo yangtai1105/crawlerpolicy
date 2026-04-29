@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-04-28T10:13:58.171213+00:00",
+  "last_run_at": "2026-04-29T10:06:36.216827+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -34,5 +34,7 @@
     "gemini-agent-standards": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
     "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source"
   },
-  "events_written": []
+  "events_written": [
+    "content/events/2026-04-29-perplexitybot-perplexity-bots-doc-adds-llms-txt-documentation-index-pointer.md"
+  ]
 }
