@@ -1,9 +1,7 @@
 {
-  "last_checked_at": "2026-04-29T10:06:36.216827+00:00",
+  "last_checked_at": "2026-04-30T10:06:47.567309+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/introducing-simpleqa",
-    "https://openai.com/index/decagon",
     "https://openai.com/global-affairs/openais-approach-to-ai-and-national-security",
     "https://openai.com/index/simplifying-stabilizing-and-scaling-continuous-time-consistency-models",
     "https://openai.com/global-affairs/openai-chief-compliance-officer-announcement",
@@ -501,7 +499,9 @@
     "https://openai.com/academy/what-is-codex",
     "https://openai.com/academy/codex-how-to-start",
     "https://openai.com/index/our-principles",
-    "https://openai.com/index/openai-available-at-fedramp-moderate"
+    "https://openai.com/index/openai-available-at-fedramp-moderate",
+    "https://openai.com/index/where-the-goblins-came-from",
+    "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age"
   ],
   "consecutive_failures": 0,
   "first_seen": false
