@@ -1,0 +1,185 @@
+{
+  "generated_at": "2026-05-04T15:10:06.076996+00:00",
+  "iso_year": 2026,
+  "iso_week": 19,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's discussion highlights the growing inadequacy of traditional robots.txt for AI crawlers, with new proposals like ai.txt and llms.txt emerging for purpose-based content control, and a shift in crawler policy to a strategic, board-level concern for publishers navigating AI search visibility and monetization.",
+      "items": [
+        {
+          "tag": "#AICrawlerPolicy",
+          "title": "Search visibility now depends on being cited",
+          "published": "2026-04-30",
+          "frame": "Crawler policy is now a board-level issue, affecting AI search visibility, training, and monetization, with Cloudflare offering pay-per-crawl options.",
+          "quote": "The executive lesson is direct. Crawler policy is now a distribution decision. It belongs in legal, marketing, engineering, and leadership conversations.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://webiano.digital/search-visibility-now-depends-on-being-cited/",
+          "source_domain": "webiano.digital"
+        },
+        {
+          "tag": "#FieldReport",
+          "title": "GEO Audit on My Own Site: 59/100 — and Perplexity Already Cites Me",
+          "published": "2026-04-22",
+          "frame": "A personal site audit reveals AI crawlers have full access, with Perplexity already citing content, suggesting blocking might be strategic self-harm for solo publishers.",
+          "quote": "If you are a solo publisher, blocking is strategic self-harm.",
+          "kind": "field-report",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.rankinghacks.com/geo-audit-own-site/",
+          "source_domain": "rankinghacks.com"
+        },
+        {
+          "tag": "#OptOutMechanisms",
+          "title": "Beyond Robots.txt: Implementing AI.txt and LLMs.txt for Purpose-Based Scraping Control",
+          "published": "2026-04-27",
+          "frame": "Robots.txt is insufficient for AI scraping control; new standards like `ai.txt` and `llms.txt` are proposed for purpose-based content use and legal enforceability under the EU AI Act.",
+          "quote": "Robots.txt falls short for AI crawlers because it is a voluntary, non-enforceable guideline in an increasingly hostile data environment where many AI agents simply ignore it.",
+          "kind": "analysis",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://cookie-script.com/guides/beyond-robots-txt-implementing-ai-txt-and-llms-txt-for-purpose-based-scraping-control",
+          "source_domain": "cookie-script.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's key discussions on AI agents primarily focus on the evolving landscape of agent security, emphasizing new risks like prompt injection, over-privileged agents, and tool misuse in enterprise deployments, and the need for specialized security architectures beyond traditional controls.",
+      "items": [
+        {
+          "tag": "#AgentSecurity",
+          "title": "Multi agent security: risks and how to secure AI agent systems",
+          "published": "2026-05-02",
+          "frame": "Examines the fundamental shift in security for multi-agent AI systems, detailing new risks and the need for runtime defense and continuous visibility.",
+          "quote": "Multi-agent security is not an extension of single-model security—it is a fundamentally different problem driven by autonomous systems that plan, delegate, and act across environments.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://witness.ai/blog/multi-agent-security/",
+          "source_domain": "witness.ai"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "AI agent security: how to protect autonomous systems without slowing down the business",
+          "published": "2026-04-22",
+          "frame": "Outlines the biggest AI agent security risks, including prompt injection and excessive permissions, and proposes controls for safe enterprise deployment.",
+          "quote": "The moment an agent can read data, make decisions, and take action inside your business systems, your risk profile changes.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://witness.ai/blog/multi-agent-security/",
+          "source_domain": "witness.ai"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "What Is AI Agent Security? Risks & Fixes In 2026",
+          "published": "2026-04-22",
+          "frame": "Explores hidden threats and failures in agentic AI systems, arguing that traditional RBAC is insufficient and a data control layer is essential.",
+          "quote": "Autonomous AI agents pull data from systems you secured, pass it between pipelines, write to memory, and act on instructions without a human reviewing each step.",
+          "kind": "research",
+          "topic": "Agents",
+          "url": "https://witness.ai/blog/multi-agent-security/",
+          "source_domain": "witness.ai"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "Secure AI agents at scale using Microsoft Agent 365 | Microsoft Learn",
+          "published": "2026-04-30",
+          "frame": "Discusses new security challenges introduced by AI agents at scale, such as agent sprawl and tool misuse, and how a distributed security model can address them.",
+          "quote": "AI agents introduce new security challenges, including: Agent sprawl from user-created and SaaS agents that expands the attack surface.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://monday.com/blog/ai-agents/ai-agent-security-protection/",
+          "source_domain": "monday.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw commentary on artists' role in addressing AI's copyright impacts and a UK government initiative to support smaller creative organizations in licensing their content for AI.",
+      "items": [
+        {
+          "tag": "#CopyrightReform",
+          "title": "Artists can help us fight AI's existential threats",
+          "published": "2026-04-30",
+          "frame": "This commentary argues artists are uniquely positioned to address AI's copyright theft and calls for regulation of AI training and updated copyright laws.",
+          "quote": "Artists are disproportionately impacted by AI's tendency to steal work from creatives and deprive them of paid work – but artists are also uniquely qualified to explore the complex issues we now face.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.artshub.com.au/news/opinions-analysis/artists-can-help-us-fight-ais-existential-threats-2856826/",
+          "source_domain": "artshub.com.au"
+        },
+        {
+          "tag": "#GovernmentPolicy",
+          "title": "Wednesday 29 April 2026 Daily Report of Written Answers and Written Statements",
+          "published": "2026-04-30",
+          "frame": "A UK Parliament report details a government working group exploring support for independent and smaller creative organizations in licensing their content for AI.",
+          "quote": "In particular, the 18th March 2026 Statement on Copyright and AI Progress announced a working group on independent and smaller creative organisations to explore whether there is a role for government to support their ability to license their content.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://qna.files.parliament.uk/qnadailyreports/Written-Questions-Answers-Statements-Daily-Report-Lords-2026-04-29.pdf",
+          "source_domain": "qna.files.parliament.uk"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights the ongoing tension between Google's growing search revenue, attributed to AI Overviews, and independent research indicating significant declines in publisher traffic and organic click-through rates, particularly impacting smaller media outlets.",
+      "items": [
+        {
+          "tag": "#SearchRevenueGrowth",
+          "title": "Google Search Just Grew 19% With AI Overviews | NO-BS Marketplace Blog",
+          "published": "2026-04-30",
+          "frame": "Google's Q1 2026 earnings show 19% Search revenue growth with AI Overviews, challenging predictions of revenue collapse despite potential publisher traffic shifts.",
+          "quote": "Apparently, the user behavior changes that AI Overviews introduced did not produce the revenue collapse that critics predicted.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://nobsmarketplace.com/blog/google-search-just-grew-19-with-ai-overviews",
+          "source_domain": "nobsmarketplace.com"
+        },
+        {
+          "tag": "#AIClickImpact",
+          "title": "AI Overviews Clicks Get Tested, Earnings Tell Two Stories - SEO Pulse",
+          "published": "2026-05-01",
+          "frame": "Google's Liz Reid defends AI Overviews by claiming they reduce 'bounce clicks,' but a field experiment shows a 38% drop in organic clicks.",
+          "quote": "When AI Overviews appeared, organic clicks dropped 38%, and zero-clicks rose 33%.",
+          "kind": "investigation",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.searchenginejournal.com/seo-pulse-ai-overviews-clicks-get-tested-earnings-tell-two-stories/573505/",
+          "source_domain": "searchenginejournal.com"
+        },
+        {
+          "tag": "#PublisherTrafficDecline",
+          "title": "Google on AI Overview Traffic Loss - Digital Marketing Desk",
+          "published": "2026-04-27",
+          "frame": "Liz Reid reiterates that AI Overviews reduce 'bounce clicks,' but third-party data from Chartbeat and Pew Research indicates significant publisher traffic declines.",
+          "quote": "global publisher traffic from Google Search declined by roughly one-third.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://digitalmarketingdesk.co.uk/google-on-ai-overview-traffic-loss/",
+          "source_domain": "digitalmarketingdesk.co.uk"
+        },
+        {
+          "tag": "#NicheMediaImpact",
+          "title": "The Invisible Publisher | AIVO Perspectives",
+          "published": "2026-04-23",
+          "frame": "AI platforms are consuming publisher content, leading to a one-third collapse in search traffic and an estimated $2 billion annual ad revenue loss, especially for smaller publishers.",
+          "quote": "AI platforms are consuming publisher content, stripping away the brand, and returning almost nothing.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.tryaivo.com/perspectives/the-invisible-publisher",
+          "source_domain": "tryaivo.com"
+        },
+        {
+          "tag": "#SearchRevenueVsTraffic",
+          "title": "What Google & Microsoft Earnings Say About Search",
+          "published": "2026-05-02",
+          "frame": "Google's Search revenue is growing, but this doesn't clarify outbound clicks to publishers, as third-party data shows significant CTR drops and traffic loss for publishers.",
+          "quote": "Google's revenue can rise even as publisher traffic declines.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.searchenginejournal.com/what-google-microsoft-earnings-say-about-search/573499/",
+          "source_domain": "searchenginejournal.com"
+        }
+      ]
+    }
+  ]
+}
