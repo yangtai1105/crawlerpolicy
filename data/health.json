@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-05-07T10:24:31.231147+00:00",
+  "last_run_at": "2026-05-08T09:22:00.995931+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -35,8 +35,6 @@
     "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source"
   },
   "events_written": [
-    "content/events/2026-05-06-datadome-blog-datadome-publishes-virtual-waiting-room-guide-positioning-ai-agent-triage-as-cor.md",
-    "content/events/2026-05-07-eu-commission-digital-eu-commission-simplifies-ai-rules-and-bans-nudification-tech.md",
-    "content/events/2026-05-07-eu-commission-digital-eu-commission-announces-political-agreement-on-simplified-ai-rules.md"
+    "content/events/2026-05-07-openai-blog-openai-integrates-parloa-voice-agents-into-ecosystem.md"
   ]
 }
