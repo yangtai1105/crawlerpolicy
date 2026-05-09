@@ -1,8 +1,7 @@
 {
-  "last_checked_at": "2026-05-08T09:22:00.995931+00:00",
+  "last_checked_at": "2026-05-09T09:20:00.298674+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/global-affairs/openai-chief-economist-announcement",
     "https://openai.com/index/lenfest-institute",
     "https://openai.com/business/solving-complex-problems-with-openai-o1-models",
     "https://openai.com/index/evaluating-fairness-in-chatgpt",
@@ -501,7 +500,8 @@
     "https://openai.com/index/building-the-compute-infrastructure-for-the-intelligence-age",
     "https://openai.com/index/openai-pwc-finance-collaboration",
     "https://openai.com/index/gpt-5-5-with-trusted-access-for-cyber",
-    "https://openai.com/index/parloa"
+    "https://openai.com/index/parloa",
+    "https://openai.com/index/running-codex-safely"
   ],
   "consecutive_failures": 0,
   "first_seen": false
