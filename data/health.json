@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-05-09T09:20:00.298674+00:00",
+  "last_run_at": "2026-05-10T09:28:23.887803+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -34,7 +34,5 @@
     "gemini-agent-standards": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
     "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source"
   },
-  "events_written": [
-    "content/events/2026-05-08-openai-blog-openai-details-security-compliance-framework-for-codex-agent-deployment.md"
-  ]
+  "events_written": []
 }
