@@ -1,0 +1,482 @@
+{
+  "generated_at": "2026-05-11T15:54:54.512055+00:00",
+  "iso_year": 2026,
+  "iso_week": 20,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's discourse on AI crawling and publisher controls highlights escalating legal battles over scraped content, with new lawsuits against Meta and Udio, alongside the emergence of technical standards like AI.txt, LLMs.txt, and CoMP for granular control. Analyses reveal a surge in AI bot traffic eroding publisher revenue and the complexities of effectively blocking crawlers, often due to default platform settings overriding publisher directives.",
+      "items": [
+        {
+          "tag": "#PurposeBasedControl",
+          "title": "Beyond Robots.txt: Implementing AI.txt and LLMs.txt for Purpose-Based Scraping Control",
+          "published": "2026-04-27",
+          "frame": "Discusses proposed `ai.txt` and `llms.txt` standards for granular AI crawler control, highlighting `robots.txt` limitations and EU legal backing for purpose-based scraping.",
+          "quote": "Purpose-based control allows granular bot selection (Yes to search, No to training), and it is a legal requirement regulated by the EU AI Act and TDM Directive.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://cookie-script.com/guides/beyond-robots-txt-implementing-ai-txt-and-llms-txt-for-purpose-based-scraping-control",
+          "source_domain": "cookie-script.com"
+        },
+        {
+          "tag": "#DMCAClaims",
+          "title": "The Article III Standing Problem for AI-Scraping Anti-Circumvention Claims",
+          "published": "2026-04-27",
+          "frame": "Analyzes the vulnerability of DMCA anti-circumvention claims in AI scraping lawsuits due to plaintiffs' difficulty in proving Article III standing without demonstrable economic harm.",
+          "quote": "Paradoxically, even in courts that recognise these claims, the very feature that makes Section 1201(a)(1) attractive to plaintiffs—liability untethered from infringement—may render many such claims constitutionally defective under modern Article III standing doctrine.",
+          "kind": "legal",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.managingip.com/article/2ga02si5c24xaq46ren7k/copyright/the-article-iii-standing-problem-for-ai-scraping-anti-circumvention-claims",
+          "source_domain": "managingip.com"
+        },
+        {
+          "tag": "#AILitigation",
+          "title": "Can Companies Insure Against AI's Growing Risks?",
+          "published": "2026-05-07",
+          "frame": "Examines the proliferation of IP litigation against AI companies for scraping training data, highlighting the financial stakes and the role of insurance in managing these risks.",
+          "quote": "Several high-profile lawsuits have alleged that the developers of prominent large language models (LLMs) violated copyright protections in scraping training data for their models from the Web.",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://econofact.org/can-companies-insure-against-ais-growing-risks",
+          "source_domain": "econofact.org"
+        },
+        {
+          "tag": "#ScrapedContentLawsuit",
+          "title": "Publishers, author Scott Turow accuse Meta and Mark Zuckerberg of training AI on copyrighted works",
+          "published": "2026-05-05",
+          "frame": "Reports on a class-action lawsuit against Meta and Mark Zuckerberg for allegedly training Llama AI models on millions of copyrighted works, including from \"pirate sites,\" without permission.",
+          "quote": "The plaintiffs allege that Meta scraped millions of copyrighted works from across the internet —including from \"notorious pirate sites\"— and used the content to train Llama, Meta's suite of AI models, without permission.",
+          "kind": "investigation",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.cbsnews.com/news/meta-ai-lawsuit-copyright-scott-turow-publishers-llama/",
+          "source_domain": "cbsnews.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "TollBit: AI content licensing platform turns bot traffic into Publisher Revenue",
+          "published": "2026-05-11",
+          "frame": "Reviews TollBit, an AI content licensing platform that enables publishers to monetize AI crawler access, transforming uncompensated scraping into revenue-generating interactions.",
+          "quote": "TollBit acts as a Toll Booth on the internet, ensuring AI companies pay for the content their AI agents consume.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://reviews.thewindowsclub.com/tollbit-the-ai-content-licensing-platform/",
+          "source_domain": "reviews.thewindowsclub.com"
+        },
+        {
+          "tag": "#AILawsuit",
+          "title": "Udio admits to scraping YouTube audio for AI training in answer to Sony Music lawsuit",
+          "published": "2026-05-04",
+          "frame": "Reports that AI music startup Udio acknowledged using YouTube audio for AI training in response to a Sony Music copyright infringement lawsuit, while denying other claims.",
+          "quote": "Udio admits that it obtained audio data from YouTube for use as training data.",
+          "kind": "investigation",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.musicbusinessworldwide.com/udio-admits-to-scraping-youtube-audio-for-ai-training-in-answer-to-sony-music-lawsuit/",
+          "source_domain": "musicbusinessworldwide.com"
+        },
+        {
+          "tag": "#ContentCannibalization",
+          "title": "Landmark New Report Warns That A Flawed AI Content Market is Accelerating 'Content Cannibalization'",
+          "published": "2026-04-27",
+          "frame": "A report reveals how Big Tech's AI products are eroding website traffic and controlling licensing, leading to \"content cannibalization\" and a surge in bots bypassing restrictions.",
+          "quote": "The rate of AI bots bypassing voluntary access restrictions has quadrupled in the past six months, from 3.3% to 12.9%.",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.openmarketsinstitute.org/publications/report-mapping-the-ai-content-licensing-market",
+          "source_domain": "openmarketsinstitute.org"
+        },
+        {
+          "tag": "#CloudflareBlocking",
+          "title": "TIL Cloudflare blocks Claude's web fetch tool by default. Tested 8 AI crawlers across 50 sites",
+          "published": "2026-05-10",
+          "frame": "A field report shows Cloudflare blocks Claude's web fetch tool by default, and many sites unknowingly block AI bots, creating a \"belt-and-suspenders problem\" with `robots.txt`.",
+          "quote": "The wild part: most founders don't know Cloudflare ships with AI bots blocked out of the box now. So even if your robots.txt says 'GPTBot allow,' Cloudflare can still block it at the edge.",
+          "kind": "field-report",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.reddit.com/r/SideProject/comments/1t9gwuo/til_cloudflare_blocks_claudes_web_fetch_tool_by/",
+          "source_domain": "reddit.com"
+        },
+        {
+          "tag": "#DMCAChallenges",
+          "title": "Why DMCA Claims Against Web Scrapers Face Long Odds",
+          "published": "2026-05-06",
+          "frame": "Argues that DMCA Section 1201 claims against web scrapers are challenging for platforms as they often lack copyright ownership of user-generated content, despite potential high statutory damages.",
+          "quote": "Platforms face an uphill battle in winning on DMCA Section 1201 claims against data scrapers, as content platforms generally do not own the copyright to the user content in question.",
+          "kind": "legal",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://capstonedc.com/insights/why-dmca-claims-against-web-scrapers-face-long-odds/",
+          "source_domain": "capstonedc.com"
+        },
+        {
+          "tag": "#AIBotTraffic",
+          "title": "AI Bot Traffic Surge 300%: Why Publishers Are Losing Traffic in 2026",
+          "published": "2026-04-30",
+          "frame": "Reports a 300% surge in AI bot traffic causing publishers to lose revenue from \"zero-click search,\" prompting new strategies like selective blocking and \"pay-per-crawl\" models.",
+          "quote": "AI bot traffic has surged by 300%, rapidly changing how website traffic works. Publishers Are Losing Traffic: AI-generated answers reduce clicks, with up to 96% less traffic compared to traditional search.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://demanzo.com/ai-bot-traffic-surge-publishers-traffic-loss/",
+          "source_domain": "demanzo.com"
+        },
+        {
+          "tag": "#RobotsTxtIneffective",
+          "title": "Crawled 1M domains to see who's blocking AI bots. The numbers are worse than I expected.",
+          "published": "2026-04-27",
+          "frame": "A study of 1M domains reveals widespread inconsistencies in AI bot blocking, with many sites having conflicting `robots.txt` and Terms of Service regarding AI scraping.",
+          "quote": "7,575 sites prohibit AI scraping in their Terms of Service but don't enforce it technically. The agents see no restriction in robots.txt, the legal terms say stop. ToS gap.",
+          "kind": "field-report",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.reddit.com/r/nocode/comments/1sx6cjd/crawled_1m_domains_to_see_whos_blocking_ai_bots/",
+          "source_domain": "reddit.com"
+        },
+        {
+          "tag": "#EUCopyrightAI",
+          "title": "Navigating Copyright in the Age of Generative AI: EU, French, and UK Developments and Approaches",
+          "published": "2026-05-04",
+          "frame": "Discusses EU, French, and UK copyright developments for generative AI, emphasizing mandatory transparency for training data and requirements for crawlers to identify themselves.",
+          "quote": "The EU Resolution insists on full mandatory transparency and source documentation regarding the use of copyrighted works by providers and deployers of general-purpose AI models placed on the EU market...",
+          "kind": "legal",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.jonesday.com/en/insights/2026/05/navigating-copyright-in-the-age-of-generative-ai-eu-french-and-uk-developments-and-approaches",
+          "source_domain": "jonesday.com"
+        },
+        {
+          "tag": "#GatedContentAI",
+          "title": "Gated Content and AI Search: Why It's Invisible",
+          "published": "2026-04-30",
+          "frame": "Explains that gated content is invisible to AI search engines because crawlers cannot bypass login walls or forms, impacting AI training datasets and real-time retrieval.",
+          "quote": "Gated content is invisible to AI search engines. AI crawlers including GPTBot (OpenAI), PerplexityBot, ClaudeBot (Anthropic), and Google-Extended (Gemini) cannot fill out lead-capture forms or bypass login walls.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://ziptie.dev/blog/gated-content-and-ai-search/",
+          "source_domain": "ziptie.dev"
+        },
+        {
+          "tag": "#AIPREF",
+          "title": "AI Search and New Technical Standards for the Future Web",
+          "published": "2026-05-06",
+          "frame": "Examines the limitations of `robots.txt` for AI control and the emerging technical standards and licensing frameworks, including efforts to expand `robots.txt` for the AI age.",
+          "quote": "The AIPREF Working Group is currently working on expanding the robots.txt file to address at least some of its shortcomings in the AI age and allow distinctions for search vs AI training.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://smithcommerce.com/insights/ai-search-and-new-technical-standards-for-the-future-web/",
+          "source_domain": "smithcommerce.com"
+        },
+        {
+          "tag": "#IPTracker",
+          "title": "Generative AI – IP cases and policy tracker",
+          "published": "2026-05-06",
+          "frame": "Tracks ongoing IP cases and policy discussions concerning generative AI, including lawsuits against OpenAI and Meta for copyright infringement and web scraping.",
+          "quote": "The complaint relates to the Llama platform and covers the following issues: (1) direct copyright infringement by torrenting (through Anna's Archive, LibGen, Sci-Hub and other pirate sites) (2) direct copyright infringement by web scraping...",
+          "kind": "legal",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.mishcon.com/generative-ai-intellectual-property-cases-and-policy-tracker",
+          "source_domain": "mishcon.com"
+        },
+        {
+          "tag": "#CoMPStandard",
+          "title": "CoMP (Content Monetization Protocols) Initiative Specification",
+          "published": "2026-04-28",
+          "frame": "Introduces the IAB Tech Lab's CoMP Initiative, an open technical standard for transparent interaction and monetization between Content Owners and AI Systems, addressing usage rights and authenticity.",
+          "quote": "The CoMP Working Group is developing open technical standards to enable responsible, transparent interaction between Content Owners and AI Systems.",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://iabtechlab.com/standards/comp-content-monetization-protocols-initiative/",
+          "source_domain": "iabtechlab.com"
+        },
+        {
+          "tag": "#CommonCrawl",
+          "title": "News publishers target Common Crawl, the AI training data backdoor",
+          "published": "2026-05-01",
+          "frame": "Reports that the News/Media Alliance demanded Common Crawl cease unauthorized scraping and block AI companies from using news content for training, citing `robots.txt` insufficiency.",
+          "quote": "News/Media Alliance sent a formal letter to Common Crawl demanding it stop unauthorized scraping and block AI companies from using news content for training.",
+          "kind": "investigation",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://ppc.land/news-publishers-target-common-crawl-the-ai-training-data-backdoor/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#PublisherLeverage",
+          "title": "Publishers Back Amazon Against AI Scrapers. That Should Scare You.",
+          "published": "2026-05-01",
+          "frame": "Argues publishers' support for Amazon against Perplexity highlights their limited options, viewing Amazon as a \"known predator\" while Perplexity's model offers no compensation for scraped content.",
+          "quote": "This is publishers choosing the predator they know over the one they cannot control.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.mediabistro.com/media-news/publishers-back-amazon-against-ai-scrapers-that-should-scare-you/",
+          "source_domain": "mediabistro.com"
+        },
+        {
+          "tag": "#GoogleAIOptOut",
+          "title": "Google's AI Search Update: Better for Publishers",
+          "published": "2026-05-08",
+          "frame": "Comments on Google's AI Mode and AI Overviews updates aiming to drive traffic back to publishers through direct links and previews, addressing concerns about lost revenue from AI summaries.",
+          "quote": "Google just announced updates to AI Mode and AI Overviews that promise to surface more original content and drive traffic back to publishers.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://shellypalmer.com/2026/05/googles-ai-search-update-better-for-publishers/",
+          "source_domain": "shellypalmer.com"
+        },
+        {
+          "tag": "#AIPublisherTools",
+          "title": "Taboola's next act: an AI answer engine for publishers",
+          "published": "2026-05-01",
+          "frame": "Reports on publishers adopting AI-powered search and chatbot tools, like Taboola's DeeperDive, to enhance user engagement and mitigate the impact of zero-click search.",
+          "quote": "More publishers are turning to AI-powered search and chatbot tools to make their sites stickier to users and offset the impact of zero-click search.",
+          "kind": "investigation",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://digiday.com/media/taboolas-next-act-an-ai-answer-engine-for-publishers/",
+          "source_domain": "digiday.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's reporting emphasizes the growing security risks and incidents associated with autonomous AI agents, alongside crucial developments in agent-to-agent communication protocols for enterprise deployment. Critiques of agentic commerce highlight challenges in consumer trust, merchant adaptation, and the need for robust dispute resolution infrastructure.",
+      "items": [
+        {
+          "tag": "#AgentSecurity",
+          "title": "The AI Agent Security Surface: What Gets Exposed When You Add Tools and Memory",
+          "published": "2026-05-08",
+          "frame": "Examines the expanded attack surfaces of autonomous AI agents, highlighting the gap between deployment speed and security readiness.",
+          "quote": "88 percent of organizations reported confirmed or suspected AI agent security incidents in the past year; Only 14.4 percent of agentic systems went live with full security and IT approval.\"",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://towardsdatascience.com/the-ai-agent-security-surface-what-gets-exposed-when-you-add-tools-and-memory/",
+          "source_domain": "towardsdatascience.com"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "AI agents create new risks requiring continuous monitoring and oversight",
+          "published": "2026-05-04",
+          "frame": "Discusses the escalating risks of autonomous AI agents, emphasizing the need for stringent, continuous monitoring to prevent unintended actions and security incidents.",
+          "quote": "The recent report of Meta employees being given access to sensitive data after an engineer followed flawed advice from an AI agent, is a clear example.\"",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.techradar.com/pro/ai-agents-create-new-risks-requiring-continuous-monitoring-and-oversight",
+          "source_domain": "techradar.com"
+        },
+        {
+          "tag": "#EnterpriseDeployment",
+          "title": "Enterprise AI Agents Strategy: Where CIOs Should Deploy—and where to exercise discipline",
+          "published": "2026-05-07",
+          "frame": "Advises CIOs on strategically deploying enterprise AI agents within existing IT architecture and governance, emphasizing readiness over isolated projects.",
+          "quote": "CIOs must ask: “Where do AI agents add the most enterprise value, and where do they bring fragility, cost instability, and governance risks?”\"",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://kpmg.com/us/en/articles/2026/enterprise-ai-agents-strategy.html",
+          "source_domain": "kpmg.com"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "Agentic AI in commerce: A shift merchants can't ignore",
+          "published": "2026-04-29",
+          "frame": "Examines the impact of agentic commerce on merchants, highlighting concerns around customer ownership, loyalty, and the evolving protocol landscape.",
+          "quote": "Trust and control are the central merchant challenge. As transactions are increasingly initiated by autonomous agents, merchants face real risks: price integrity, brand experience, loyalty disruption, and fraud systems that were built to block bots rather than serve them.\"",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://www.consultancy.eu/news/13580/agentic-ai-in-commerce-a-shift-merchants-cant-ignore",
+          "source_domain": "consultancy.eu"
+        },
+        {
+          "tag": "#AgentProtocols",
+          "title": "MCP vs A2A: 7 Critical Differences Between AI Agent Protocols",
+          "published": "2026-04-29",
+          "frame": "Explains the fundamental differences between MCP (agent-to-tool) and A2A (agent-to-agent) protocols, emphasizing their complementary roles in AI agent infrastructure.",
+          "quote": "MCP vs A2A is the most misunderstood architectural decision in AI agent infrastructure right now and most teams get it wrong not because the protocols are complex, but because they're solving completely different problems at different layers of the stack.\"",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://agent-engine-optimization.com/docs/protocols/",
+          "source_domain": "agent-engine-optimization.com"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "When prompts become shells: RCE vulnerabilities in AI agent frameworks",
+          "published": "2026-05-07",
+          "frame": "Microsoft's security research uncovers critical RCE vulnerabilities in Semantic Kernel, demonstrating how prompt injection can lead to code execution in AI agents.",
+          "quote": "A single prompt was enough to launch calc.exe on the device running our AI agent, with no browser exploit, malicious attachment, or memory corruption bug needed.\"",
+          "kind": "research",
+          "topic": "Agents",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+          "source_domain": "microsoft.com"
+        },
+        {
+          "tag": "#AgentProtocols",
+          "title": "AI Agent Protocols for Agent Engine Optimization",
+          "published": "2026-05-08",
+          "frame": "Defines AI agent protocols (MCP, A2A, x402, UCP) as essential for autonomous systems to discover capabilities, exchange context, and handle payments for Agent Engine Optimization.",
+          "quote": "AI agent protocols define how autonomous systems discover capabilities, exchange context, call actions, handle payments, and verify outcomes.\"",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://agent-engine-optimization.com/docs/protocols/",
+          "source_domain": "agent-engine-optimization.com"
+        },
+        {
+          "tag": "#AgentProtocols",
+          "title": "ACP vs MCP vs A2A: The Complete Guide to AI Agent Protocols",
+          "published": "2026-05-08",
+          "frame": "Provides a comprehensive guide to three key AI agent protocols—MCP, A2A, and ACP—explaining their architectural roles and how they enable interoperability.",
+          "quote": "These three protocols are not alternatives. They are complementary layers of the same architecture.\"",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://agent-engine-optimization.com/docs/protocols/",
+          "source_domain": "agent-engine-optimization.com"
+        },
+        {
+          "tag": "#AgenticCommerceCritique",
+          "title": "The infrastructure gap in agentic commerce: payments are ready, disputes are not",
+          "published": "2026-05-07",
+          "frame": "Argues that agentic commerce lacks a crucial consent and permission architecture for dispute management, posing significant challenges for merchants, consumers, and processors.",
+          "quote": "Without a consent and permission architecture built into the transaction record, disputes in agentic commerce will become almost impossible to arbitrate fairly — for merchants, consumers, and processors alike, warns Donald Kossmann.\"",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.electronicpaymentsinternational.com/comment/infrastructure-gap-agentic-commerce-disputes-not-ready/",
+          "source_domain": "electronicpaymentsinternational.com"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "Real AI Security Incidents: Lessons from the Field",
+          "published": "2026-05-04",
+          "frame": "Analyzes real-world AI security incidents, revealing that most stem from combined system interactions, over-permissioned identities, and limited visibility.",
+          "quote": "Sensitive data leakage through generative AI tools, prompt injection attacks, and unauthorized access across SaaS environments are already occurring at scale.\"",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://www.reco.ai/blog/real-ai-security-incidents",
+          "source_domain": "reco.ai"
+        },
+        {
+          "tag": "#AgentProtocols",
+          "title": "AI Dev Patterns: A2A Protocol, MCP 2026 Roadmap, and Agent Interoperability, 2026-05-01",
+          "published": "2026-05-02",
+          "frame": "Clarifies that MCP and A2A protocols are complementary, with MCP handling agent-to-tool communication and A2A enabling agent-to-agent interoperability.",
+          "quote": "Google published a Developer's Guide to AI Agent Protocols that clarifies a distinction that has caused significant confusion in the community: the Model Context Protocol (MCP) and Agent-to-Agent Protocol (A2A) are not competing standards—they solve fundamentally different problems and are designed to be used together.\"",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/05/07/prompts-become-shells-rce-vulnerabilities-ai-agent-frameworks/",
+          "source_domain": "microsoft.com"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "How Sellers Must Adapt for Agentic Buying",
+          "published": "2026-04-30",
+          "frame": "Explains how agentic commerce fundamentally changes selling, requiring sellers to optimize for machine-readable data and adapt to new customer relationship dynamics.",
+          "quote": "In agent-mediated commerce, the customer relationship often sits with the agent, not the seller.\"",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://graybox.co/knowledge/blog/how-sellers-must-adapt-for-agentic-buying",
+          "source_domain": "graybox.co"
+        },
+        {
+          "tag": "#EnterpriseDeployment",
+          "title": "Webinar Recap: Build Safe AI Agents for an Enterprise Deployment",
+          "published": "2026-05-09",
+          "frame": "Recaps best practices for deploying safe enterprise AI agents, emphasizing layered safety controls, rigorous testing, and matching guardrails to specific contexts.",
+          "quote": "No single control ensures safe behavior. Input guardrails, output validation, prompt hardening, and testing must work together.\"",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://elevenlabs.io/blog/webinar-recap-build-safe-ai-agents-for-an-enterprise-deployment",
+          "source_domain": "elevenlabs.io"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "Adversaries Leverage AI for Vulnerability Exploitation, Augmented Operations, and Initial Access",
+          "published": "2026-05-11",
+          "frame": "Google Threat Intelligence reports on the maturing use of AI by adversaries for vulnerability exploitation, developing polymorphic malware, and orchestrating autonomous attacks.",
+          "quote": "For the first time, GTIG has identified a threat actor using a zero-day exploit that we believe was developed with AI.\"",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/ai-vulnerability-exploitation-initial-access",
+          "source_domain": "cloud.google.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw a new copyright infringement lawsuit against Meta and Mark Zuckerberg by publishers and authors over AI training data, while Japan's LDP proposed stricter AI policies and a UK parliamentary report detailed a working group on AI content licensing for smaller creators.",
+      "items": [
+        {
+          "tag": "#AICopyrightLawsuit",
+          "title": "Mark Zuckerberg 'personally authorized' Meta's copyright infringement, publishers allege - AP News",
+          "published": "2026-05-05",
+          "frame": "Five publishing houses and author Scott Turow sued Meta and Mark Zuckerberg, alleging illegal use of copyrighted works to train Llama.",
+          "quote": "“Defendants reproduced and distributed millions of copyrighted works without permission, without providing any compensation to authors or publishers, and with full knowledge that their conduct violated copyright law,” the complaint reads in part.",
+          "kind": "investigation",
+          "topic": "Copyright & Legal",
+          "url": "https://apnews.com/article/meta-mark-zuckerberg-ai-publishers-lawsuit-llama-5609846d4d840014974a847b01079c32",
+          "source_domain": "apnews.com"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "Wednesday 29 April 2026 Daily Report of Written Answers and Written Statements - UK Parliament",
+          "published": "2026-04-30",
+          "frame": "The UK government announced a working group to explore supporting independent and smaller creative organizations in licensing their content for AI.",
+          "quote": "In particular, the 18th March 2026 Statement on Copyright and AI Progress announced a working group on independent and smaller creative organisations to explore whether there is a role for government to support their ability to license their content.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://qna.files.parliament.uk/qnadailyreports/Written-Questions-Answers-Statements-Daily-Report-Lords-2026-04-29.pdf",
+          "source_domain": "qna.files.parliament.uk"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's analysis highlights Google's AI search integrating user-generated content and adding more links, while new research confirms significant organic traffic and revenue losses for publishers due to AI Overviews. Publishers are also grappling with falling display CPMs and the need to adapt to a new brand discovery landscape.",
+      "items": [
+        {
+          "tag": "#AISearchSourcing",
+          "title": "Google AI Search Now Quotes Reddit: What Marketers Must Know",
+          "published": "2026-05-07",
+          "frame": "Google's AI search now integrates user-generated content from platforms like Reddit, requiring marketers to rethink content and community strategies.",
+          "quote": "Google confirmed on May 6, 2026 that its AI search features will now surface “a preview of perspectives” from firsthand sources — including Reddit, social media platforms, and web forums — directly inside AI-generated search summaries.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://marketingagent.blog/2026/05/07/google-ai-search-now-quotes-reddit-what-marketers-must-know/",
+          "source_domain": "marketingagent.blog"
+        },
+        {
+          "tag": "#AITrafficImpact",
+          "title": "The First Causal Proof: AI Overviews Cut Organic Clicks 38% Without Improving Search Quality",
+          "published": "2026-04-30",
+          "frame": "A new study provides causal evidence that Google's AI Overviews significantly reduce organic clicks to publishers without improving search quality.",
+          "quote": "On April 3, 2026, researchers Saharsh Agarwal and Ananya Sen published a working paper on SSRN titled \"Google AI Overviews and Publisher Traffic: Evidence from a Field Experiment.\" On April 30, Search Engine Journal broke the story to the broader industry.",
+          "kind": "news reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://searchless.ai/articles/2026-05-01-ai-overviews-cut-organic-clicks-38-percent-first-causal-proof/",
+          "source_domain": "searchless.ai"
+        },
+        {
+          "tag": "#NicheMediaImpact",
+          "title": "Food blogs beat AI for recipes: what a 2026 study found",
+          "published": "2026-05-10",
+          "frame": "A study reveals strong consumer preference for human-authored food blogs over AI-generated recipes, despite AI Overviews reducing overall organic clicks.",
+          "quote": "The 300% gap between food blogs and AI is not marginal. It indicates that search infrastructure disruption and consumer trust are not the same thing.",
+          "kind": "news reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ppc.land/food-blogs-beat-ai-for-recipes-what-a-2026-study-found/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#BrandDiscoveryShift",
+          "title": "5WPR Releases The GEO Reckoning at POSSIBLE Miami, Documenting the 18-Month Replacement of the Brand Discovery Playbook",
+          "published": "2026-04-27",
+          "frame": "A new report details how AI answer engines have replaced traditional brand discovery, causing significant traffic and revenue losses for publishers across the board.",
+          "quote": "Global publisher traffic from Google fell 34% in twelve months. Business Insider lost 55% of its organic traffic and reduced staff by 21%. Chegg lost 49% and is suing Google.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ronntorossian.com/5wpr-releases-the-geo-reckoning-at-possible-miami-documenting-the-18-month-replacement-of-the-brand-discovery-playbook/",
+          "source_domain": "ronntorossian.com"
+        },
+        {
+          "tag": "#AILinkChanges",
+          "title": "Google Adds More Links to AI Search | Let's Data Science",
+          "published": "2026-05-09",
+          "frame": "Google is adding more links to AI search results, including subscription highlights, but independent studies still show reduced publisher click-through rates.",
+          "quote": "Independent studies continue to show lower publisher click-through when AI Overviews appear: Pew Research Center measured clicks of 8% with AI Overviews versus 15% without and found only 1% clicked links inside Overviews, while reporting to the UK Competition and Markets Authority from DMG Media and data from Digital Content Next documented larger CTR declines.",
+          "kind": "news reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://letsdatascience.com/news/google-adds-more-links-to-ai-search-a703ab36",
+          "source_domain": "letsdatascience.com"
+        }
+      ]
+    }
+  ]
+}
