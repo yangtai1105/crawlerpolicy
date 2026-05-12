@@ -1,8 +1,7 @@
 {
-  "last_checked_at": "2026-05-11T11:21:27.601791+00:00",
+  "last_checked_at": "2026-05-12T10:32:00.714150+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/evaluating-fairness-in-chatgpt",
     "https://openai.com/index/mle-bench",
     "https://openai.com/global-affairs/an-update-on-disrupting-deceptive-uses-of-ai",
     "https://openai.com/index/hearst",
@@ -501,7 +500,8 @@
     "https://openai.com/index/parloa",
     "https://openai.com/index/running-codex-safely",
     "https://openai.com/index/openai-campus-network-student-club-interest-form",
-    "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai"
+    "https://openai.com/business/guides-and-resources/how-enterprises-are-scaling-ai",
+    "https://openai.com/signals/research/2026q1-update"
   ],
   "consecutive_failures": 0,
   "first_seen": false
