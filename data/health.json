@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-05-12T10:32:00.714150+00:00",
+  "last_run_at": "2026-05-13T10:28:24.398606+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -34,7 +34,5 @@
     "gemini-agent-standards": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
     "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source"
   },
-  "events_written": [
-    "content/events/2026-05-11-datadome-blog-anthropic-s-connector-expansion-signals-mainstreaming-of-mcp-traffic-datadome-re.md"
-  ]
+  "events_written": []
 }
