@@ -1,5 +1,5 @@
 {
-  "last_run_at": "2026-05-13T10:28:24.398606+00:00",
+  "last_run_at": "2026-05-14T10:15:10.311486+00:00",
   "per_source_status": {
     "gptbot": "ok",
     "claudebot": "ok",
@@ -34,5 +34,8 @@
     "gemini-agent-standards": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
     "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source"
   },
-  "events_written": []
+  "events_written": [
+    "content/events/2026-05-13-datadome-blog-datadome-publishes-virtual-waiting-room-selection-guide-emphasizing-ai-agent-tri.md",
+    "content/events/2026-05-13-openai-blog-openai-releases-windows-sandbox-implementation-for-codex-agents.md"
+  ]
 }
