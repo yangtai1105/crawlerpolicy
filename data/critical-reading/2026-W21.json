@@ -1,0 +1,262 @@
+{
+  "generated_at": "2026-05-18T16:22:21.984694+00:00",
+  "iso_year": 2026,
+  "iso_week": 21,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's analysis highlights the ongoing tension between AI platforms and publishers, focusing on licensing strategies to protect content and the observed reduction in web traffic due to AI answers.",
+      "items": [
+        {
+          "tag": "#DataLicensing",
+          "title": "Reuters' AI Licensing Strategy: What Publishers Can Learn From It",
+          "published": "2026-05-12",
+          "frame": "Analyzes Reuters' approach to AI content licensing, advising publishers on protecting content and monetizing in the AI era, including robots.txt audits.",
+          "quote": "A licensing deal for your archive does not protect your live content. Those are different products, different legal questions, and different revenue problems.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.playwire.com/blog/reuters-ai-licensing-strategy-what-publishers-can-learn-from-it",
+          "source_domain": "playwire.com"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "The click gap between AI answers and the open web",
+          "published": "2026-05-14",
+          "frame": "Reports on data from Cloudflare and TollBit indicating AI answers significantly reduce outbound clicks to websites, impacting publisher referral traffic.",
+          "quote": "AI answers reduce outbound clicking for many informational searches, while AI-generated referrals remain too small to replace traditional organic search traffic for most websites.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://webiano.digital/the-click-gap-between-ai-answers-and-the-open-web/",
+          "source_domain": "webiano.digital"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's reporting highlights practical advancements in AI agent deployment, focusing on specialized skills for security operations, robust governance frameworks, and innovative solutions for managing agent context. These developments address key challenges in making agents reliable and scalable for enterprise use.",
+      "items": [
+        {
+          "tag": "#AgentSkills",
+          "title": "One agent, the right skills: Elastic Security 9.4 brings domain expertise on demand to every SOC workflow",
+          "published": "2026-05-04",
+          "frame": "Elastic introduces modular \"skills\" for its AI agent in Security 9.4, enabling specialized expertise for detection, triage, hunting, and anomaly investigation in SOC workflows.",
+          "quote": "Each skill packages domain knowledge, curated tools, and specialized instructions for a single workflow: detection, triage, hunting, entity analysis, or anomaly investigation.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://www.elastic.co/security-labs/skills-elastic-security-9-4",
+          "source_domain": "elastic.co"
+        },
+        {
+          "tag": "#AgentGovernance",
+          "title": "WWT Agentic Architecture, Governance & Microsoft Tooling",
+          "published": "2026-05-06",
+          "frame": "WWT outlines agent lifecycle states, auto-degradation, deprecation, and governance mechanisms for enterprise AI agent deployments using Microsoft tooling.",
+          "quote": "Every agent has a review_cadence_days field in the registry (default: 90 days) which triggers an automated review workflow.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://www.wwt.com/blog/wwt-agentic-architecture-governance-and-microsoft-tooling",
+          "source_domain": "wwt.com"
+        },
+        {
+          "tag": "#AgentInfrastructure",
+          "title": "Elastic Agent Builder: How we taught AI agents to manage their own context",
+          "published": "2026-05-05",
+          "frame": "Elastic details its approach to building context handling into AI agents, allowing them to manage information flow, summarize, and retain memory across steps to overcome context window limitations.",
+          "quote": "Managing context is a first-class concern. This post shares how we built context handling into agents so they can decide what to fetch, what to summarize, what to drop, and how memory should carry across steps.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://www.elastic.co/search-labs/blog/elastic-agent-builder-ai-agents-context-management",
+          "source_domain": "elastic.co"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw a new academic analysis on the shift in copyright litigation due to generative AI, a report on Japan's ruling party proposing amendments to AI and copyright laws to address unauthorized training, and news of a lawsuit against Meta and Mark Zuckerberg by publishers and authors over alleged copyright infringement in training its Llama AI.",
+      "items": [
+        {
+          "tag": "#AILawsuit",
+          "title": "Mark Zuckerberg 'personally authorized' Meta's copyright infringement, publishers allege",
+          "published": "2026-05-05",
+          "frame": "Five publishing houses and author Scott Turow sued Meta and Mark Zuckerberg, alleging illegal use of copyrighted works to train Meta's Llama AI system.",
+          "quote": "The class action lawsuit, filed in federal court in Manhattan, accuses the tech giant of copyright infringement and opens up a new front in the ongoing battle between the book community and developers of AI.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://apnews.com/article/meta-mark-zuckerberg-ai-publishers-lawsuit-llama-5609846d4d840014974a847b01079c32",
+          "source_domain": "apnews.com"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights the accelerating impact of Google's AI Overviews on publisher traffic and revenue, driving increased zero-click searches and prompting publishers to re-evaluate their SEO strategies and content monetization through cautious AI licensing deals. Concurrently, discussions are advancing on protecting Indigenous content and data sovereignty within the evolving AI ecosystem, alongside analyses of pay-per-crawl models.",
+      "items": [
+        {
+          "tag": "#SearchImpact",
+          "title": "How Google AI Overviews Are Changing SEO in 2026: Impact Data and What to Do About It",
+          "published": "2026-05-14",
+          "frame": "AI Overviews reduce publisher traffic by 15% while Google's search revenue grows, requiring new SEO tactics.",
+          "quote": "Google AI Overviews reduce publisher traffic by 15% while Google's own search revenue grows 19% YoY.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://authoritytech.io/blog/google-ai-overviews-impact-seo-2026",
+          "source_domain": "authoritytech.io"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "Google Search AI Overviews (AIO) Impact: 2026 Traffic & CTR Statistics (Latest)",
+          "published": "2026-05-07",
+          "frame": "AI Overviews cause significant drops in publisher traffic and click-through rates, creating an existential crisis for organic traffic.",
+          "quote": "In some areas, traffic has dropped as much as 89%.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.humanizeai.io/blog/article/google-search-ai-overviews-aio-impact-traffic-ctr-statistics-latest",
+          "source_domain": "humanizeai.io"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "AI Overviews Statistics 2026: Google Search Impact Data - SQ Magazine",
+          "published": "2026-05-08",
+          "frame": "Reports on AI Overviews prevalence and its negative impact on organic click-through rates and publisher referral traffic.",
+          "quote": "Organic click-through rates dropped 61% (from 1.76% to 0.61%) on queries with AI Overviews present, according to Seer Interactive's September 2025 study.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.humanizeai.io/blog/article/google-search-ai-overviews-aio-impact-traffic-ctr-statistics-latest",
+          "source_domain": "humanizeai.io"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "May 2026: What's Happening in Digital Marketing",
+          "published": "2026-05-05",
+          "frame": "Click-through rates on Google AI Overviews are climbing, with users increasingly fact-checking AI by clicking cited sources.",
+          "quote": "Increased clicks on citations suggest more people are fact-checking AI, a growing trend.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ny-ave.com/blog/may-2026-whats-happening-in-digital-marketing/",
+          "source_domain": "ny-ave.com"
+        },
+        {
+          "tag": "#IndigenousContent",
+          "title": "The Permanent Forum on Indigenous Issues and Artificial Intelligence - lacommunis.org",
+          "published": "2026-05-09",
+          "frame": "UN forum discusses AI's dual impact on Indigenous peoples, offering tools for language preservation but raising concerns about cultural appropriation and data sovereignty.",
+          "quote": "Among the possible positive uses of AI for Indigenous Peoples are the preservation and revitalization of Indigenous languages, the transmission of traditional knowledge, the management of territorial, historical, and statistical data, the protection and stewardship of territories and natural resources, among other possibilities.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.lacommunis.org/en/the-permanent-forum-on-indigenous-issues-and-artificial-intelligence/",
+          "source_domain": "lacommunis.org"
+        },
+        {
+          "tag": "#ContentLicensing",
+          "title": "Thomson Reuters boss says AI licensing deals only involve archive text - Press Gazette",
+          "published": "2026-05-12",
+          "frame": "Reuters CEO details a cautious AI licensing strategy, focusing on text archives and high prices, while expressing concern over AI's disruptive potential.",
+          "quote": "Hasker told the Truth Tellers Summit in London last week that 175-year-old Reuters has focused its deals on its text archive, while setting them at the “highest price” possible and keeping them brief in length so they will need to be renegotiated.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://pressgazette.co.uk/publishers/wires_and_agencies/thomson-reuters-boss-says-ai-licensing-deals-only-involve-archive-text/",
+          "source_domain": "pressgazette.co.uk"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "How AI search is changing PR | Rob Phillimore - Medium",
+          "published": "2026-05-15",
+          "frame": "AI search is reshaping brand discovery and media engagement, making earned credibility an AI search signal with measurable commercial consequences.",
+          "quote": "Being cited in an AI Overview drives 120% more organic clicks, as per the findings in Seer Interactive's AIO Impact on Google CTR: 2026 Update, which analysed 5.47 million tracked queries and 2.43 billion organic impressions across 53 brands.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://medium.com/@robphillimore/how-ai-search-is-changing-pr-in-2026-b1dad839fdb9",
+          "source_domain": "medium.com"
+        },
+        {
+          "tag": "#ContentLicensing",
+          "title": "Reuters: AI deals only involve archive text | Globe and Mail grows newsroom by 10%",
+          "published": "2026-05-12",
+          "frame": "Reuters' CEO states AI licensing deals are limited to text archives, highlighting challenges for publishers in controlling content use by AI.",
+          "quote": "Reuters has done a number of AI licensing deals and Hasker revealed that these involved access to the text-based archive - not live news, pictures, video or audio.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://pressgazette.co.uk/publishers/wires_and_agencies/thomson-reuters-boss-says-ai-licensing-deals-only-involve-archive-text/",
+          "source_domain": "pressgazette.co.uk"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "Health coverage is getting killed by Google AI Overviews",
+          "published": "2026-05-14",
+          "frame": "New data shows Google AI Overviews significantly reduce publisher traffic in health and other verticals, with evergreen content most at risk.",
+          "quote": "Health is the topic vertical most vulnerable to losing clicks as a result of Google's AI Overviews, according to new Sistrix data shared with Press Gazette.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://authoritytech.io/blog/google-ai-overviews-impact-seo-2026",
+          "source_domain": "authoritytech.io"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "AI Search Startup Statistics - Mean CEO's BLOG",
+          "published": "2026-05-04",
+          "frame": "AI search market is growing rapidly, but Google maintains dominance, with AI Overviews and AI Mode driving increased search usage despite publisher concerns.",
+          "quote": "Google still held 90.04% of global search engine market share in April 2026, while Alphabet said Search & Other revenue grew 19% in Q1 2026 and that AI Mode and AI Overviews were bringing people back to Search more.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://blog.mean.ceo/ai-search-startup-statistics/",
+          "source_domain": "blog.mean.ceo"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "Google AI Search Updates May 2026 | What Changed and What to Do - Impressive Digital",
+          "published": "2026-05-12",
+          "frame": "May 2026 updates to Google AI Overviews and AI Mode impact how links and citations appear, shifting SEO optimization targets.",
+          "quote": "The May 2026 updates to AI Overviews and AI Mode introduce changes that affect how links appear, how citations work and how community content surfaces inside generated responses.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://impressive.com.au/google-ai-search-updates-may-2026/",
+          "source_domain": "impressive.com.au"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Should You Charge ChatGPT to Crawl Your Landing Page? The Honest Math on Cloudflare's Pay-Per-Crawl | roast.page",
+          "published": "2026-05-04",
+          "frame": "Analyzes the economics of pay-per-crawl for publishers, concluding free crawling is often better for conversion-driving content due to low per-crawl revenue.",
+          "quote": "For now, in May 2026, the math overwhelmingly favors free crawling for any site whose content drives downstream conversion or product trial.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://roast.page/blog/cloudflare-pay-per-crawl-decision",
+          "source_domain": "roast.page"
+        },
+        {
+          "tag": "#IndigenousContent",
+          "title": "#tech: Indigenous AI Framework Offers Path for Māori in the Age of Artificial Intelligence - Waatea News",
+          "published": "2026-05-13",
+          "frame": "A new Indigenous AI framework helps Māori organizations assess AI systems for cultural value and data integrity, addressing concerns about knowledge protection.",
+          "quote": "A central focus of the framework is helping Māori organisations, iwi and communities assess whether an AI system respects cultural values and protects the integrity of Māori data.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://waateanews.com/2026/03/11/tech-indigenous-ai-framework-offers-path-for-maori-in-the-age-of-artificial-intelligence/",
+          "source_domain": "waateanews.com"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "AI Search Traffic Q3 2026 Projection: Zero-Click Acceleration - Digital Applied",
+          "published": "2026-05-16",
+          "frame": "Forecasts continued zero-click acceleration due to AI Overviews, compressing organic traffic and shifting the competitive landscape for publishers.",
+          "quote": "AI search traffic shifted again in Q2 2026 — fast enough that the blue-link organic playbook most teams still operate on no longer describes the channel they are actually competing in.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.digitalapplied.com/blog/ai-search-traffic-q3-2026-projection-zero-click-acceleration",
+          "source_domain": "digitalapplied.com"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "Google AI Search Gets More Links—But SEOs Still Lack Click Data",
+          "published": "2026-05-11",
+          "frame": "Highlights the ongoing issue of Google providing more links in AI Overviews without offering publishers corresponding click data in Search Console.",
+          "quote": "Search Console still provides zero differentiated reporting on clicks from AI Overviews, AI Mode, or standard blue-link results — a gap that has persisted through every phase of the AI Search rollout, and that remained unchanged as of the May 2026 announcement per Search Engine Journal.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://marketingagent.blog/2026/05/10/google-ai-search-gets-more-links-but-seos-still-lack-click-data/",
+          "source_domain": "marketingagent.blog"
+        }
+      ]
+    }
+  ]
+}
