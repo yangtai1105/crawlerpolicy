@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-05-20T10:50:19.093233+00:00",
+  "generated_at": "2026-05-21T11:25:41.176620+00:00",
   "entries": [
     {
       "slug": "gptbot",
@@ -7,32 +7,31 @@
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
       "policy_url": "https://openai.com/searchbot",
-      "days_since_last_change": 31,
+      "days_since_last_change": 32,
       "last_snapshot_date": "2026-04-19",
       "user_agents": [
         {
           "name": "OAI-SearchBot",
-          "purpose": "Surface websites in search results in ChatGPT's search features",
-          "scope": "Crawls web content to index for ChatGPT search results; opted-out sites won't appear in search answers",
-          "opt_out": "User-agent: OAI-SearchBot / Disallow: / in robots.txt"
+          "purpose": "Surface websites in ChatGPT search results",
+          "scope": "Web search crawl for ChatGPT search features",
+          "opt_out": "User-agent: OAI-SearchBot / Disallow: /"
         },
         {
           "name": "GPTBot",
-          "purpose": "Train generative AI foundation models with crawled content",
-          "scope": "Crawls content for training OpenAI's generative AI models; automatic web crawling",
-          "opt_out": "User-agent: GPTBot / Disallow: / in robots.txt; disallow indicates content should not be used for training"
+          "purpose": "Training generative AI foundation models",
+          "scope": "General web crawl for training data collection",
+          "opt_out": "User-agent: GPTBot / Disallow: /"
         },
         {
           "name": "OAI-AdsBot",
-          "purpose": "Validate safety of web pages submitted as ChatGPT ads",
-          "scope": "Visits only landing pages submitted as ads; checks policy compliance and relevance for ad targeting",
-          "opt_out": "Not documented; data not used for training AI models"
+          "purpose": "Validate safety of web pages submitted as ads on ChatGPT",
+          "scope": "Visits pages submitted as ads to check policy compliance",
+          "opt_out": "User-agent: OAI-AdsBot / Disallow: /"
         },
         {
           "name": "ChatGPT-User",
-          "purpose": "Handle user-triggered actions in ChatGPT and Custom GPTs",
-          "scope": "User-initiated page visits for answers and GPT Actions; not automatic crawling; robots.txt may not apply",
-          "opt_out": "Not applicable to robots.txt; user-triggered requests may bypass standard crawl rules"
+          "purpose": "User-triggered fetch for ChatGPT questions and Custom GPT interactions",
+          "scope": "User-initiated requests, not automatic crawling; may not respect robots.txt"
         }
       ]
     },
@@ -41,27 +40,27 @@
       "display_name": "Anthropic",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://support.anthropic.com/en/articles/8896520-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler",
-      "days_since_last_change": 6,
+      "policy_url": "https://support.anthropic.com/en/articles/<UNKNOWN>",
+      "days_since_last_change": 7,
       "last_snapshot_date": "2026-05-14",
       "user_agents": [
         {
           "name": "ClaudeBot",
-          "purpose": "Collect web content for AI model training and development",
-          "scope": "General web crawl for training data collection",
-          "opt_out": "User-agent: ClaudeBot / Disallow: / in robots.txt; also supports Crawl-delay directive"
+          "purpose": "Enhance utility and safety of generative AI models by collecting web content for training",
+          "scope": "Web crawling for training data collection from public web",
+          "opt_out": "Add 'User-agent: ClaudeBot' with 'Disallow: /' to robots.txt file"
         },
         {
           "name": "Claude-User",
-          "purpose": "Support Claude AI users by retrieving web content in response to user queries",
-          "scope": "User-triggered fetch for live responses to Claude user questions",
-          "opt_out": "User-agent: Claude-User / Disallow: / in robots.txt to prevent retrieval"
+          "purpose": "Support Claude AI users accessing websites in response to user queries",
+          "scope": "User-initiated web requests when individuals ask questions to Claude",
+          "opt_out": "Add 'User-agent: Claude-User' with 'Disallow: /' to robots.txt file"
         },
         {
           "name": "Claude-SearchBot",
-          "purpose": "Crawl web to improve search result quality and relevance for users",
-          "scope": "Search indexing and optimization for user-directed web search",
-          "opt_out": "User-agent: Claude-SearchBot / Disallow: / in robots.txt to prevent indexing"
+          "purpose": "Improve search result quality by analyzing online content for relevance and accuracy",
+          "scope": "Web navigation to enhance search response quality for users",
+          "opt_out": "Add 'User-agent: Claude-SearchBot' with 'Disallow: /' to robots.txt file"
         }
       ]
     },
@@ -71,74 +70,74 @@
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
       "policy_url": "https://developers.google.com/search/docs/crawling-indexing/overview",
-      "days_since_last_change": 26,
+      "days_since_last_change": 27,
       "last_snapshot_date": "2026-04-24",
       "user_agents": [
         {
           "name": "Googlebot",
-          "purpose": "Building Google Search indexes and finding information",
-          "scope": "General web crawl for Google Search, Discover, Images, Video, News",
-          "opt_out": "User-agent: Googlebot / Disallow: / in robots.txt"
+          "purpose": "Build Google Search index and support all Google Search features",
+          "scope": "General web crawl for search indexing; crawls desktop and mobile variants",
+          "opt_out": "User-agent: Googlebot / Disallow: /"
         },
         {
           "name": "Googlebot-Image",
-          "purpose": "Crawling images for Google Images and search features",
-          "scope": "Image-specific crawling for Google Images, Discover, Video, Search logos and favicons",
-          "opt_out": "User-agent: Googlebot-Image / Disallow: / in robots.txt"
+          "purpose": "Index images for Google Images and image-related search features",
+          "scope": "Image crawls for Google Images, Discover, Google Video, and search image presentation",
+          "opt_out": "User-agent: Googlebot-Image / Disallow: /"
         },
         {
           "name": "Googlebot-Video",
-          "purpose": "Crawling videos for video-related search features",
-          "scope": "Video-specific crawling for Google Search video features and dependent products",
-          "opt_out": "User-agent: Googlebot-Video / Disallow: / in robots.txt"
+          "purpose": "Index videos for video-related search features and products",
+          "scope": "Video crawls for Google Search video features and dependent products",
+          "opt_out": "User-agent: Googlebot-Video / Disallow: /"
         },
         {
           "name": "Googlebot-News",
-          "purpose": "Crawling content for Google News product",
-          "scope": "News content for Google News product, news.google.com, and Google News app",
-          "opt_out": "User-agent: Googlebot-News / Disallow: / in robots.txt"
+          "purpose": "Index content for Google News product",
+          "scope": "News crawls for news.google.com and Google News app",
+          "opt_out": "User-agent: Googlebot-News / Disallow: /"
         },
         {
           "name": "Storebot-Google",
-          "purpose": "Crawling product information for Google Shopping",
-          "scope": "Product data for Google Shopping, Shopping tab in Search, and Google Shopping",
-          "opt_out": "User-agent: Storebot-Google / Disallow: / in robots.txt"
+          "purpose": "Index products for Google Shopping surfaces",
+          "scope": "E-commerce crawls for Google Shopping tab and Shopping product",
+          "opt_out": "User-agent: Storebot-Google / Disallow: /"
         },
         {
           "name": "Google-InspectionTool",
-          "purpose": "Testing and validation for Search Console tools",
-          "scope": "Testing for Rich Result Test and URL inspection in Search Console only",
-          "opt_out": "User-agent: Google-InspectionTool / Disallow: / in robots.txt"
+          "purpose": "Support Search Console testing tools like Rich Result Test",
+          "scope": "On-demand fetches for Search Console testing and URL inspection",
+          "opt_out": "User-agent: Google-InspectionTool / Disallow: /"
         },
         {
           "name": "GoogleOther",
-          "purpose": "Generic crawling for various product teams and R&D",
-          "scope": "Generic publicly accessible content for internal research and product teams",
-          "opt_out": "User-agent: GoogleOther / Disallow: / in robots.txt"
+          "purpose": "Generic crawling for internal research and product-specific fetches",
+          "scope": "Miscellaneous crawls for various Google product teams",
+          "opt_out": "User-agent: GoogleOther / Disallow: /"
         },
         {
           "name": "GoogleOther-Image",
-          "purpose": "Generic image crawling for various products and R&D",
-          "scope": "Generic image URL fetching for internal research and product teams",
-          "opt_out": "User-agent: GoogleOther-Image / Disallow: / in robots.txt"
+          "purpose": "Generic image fetching optimized for image URLs",
+          "scope": "Image URL fetches for internal Google product use",
+          "opt_out": "User-agent: GoogleOther-Image / Disallow: /"
         },
         {
           "name": "GoogleOther-Video",
-          "purpose": "Generic video crawling for various products and R&D",
-          "scope": "Generic video URL fetching for internal research and product teams",
-          "opt_out": "User-agent: GoogleOther-Video / Disallow: / in robots.txt"
+          "purpose": "Generic video fetching optimized for video URLs",
+          "scope": "Video URL fetches for internal Google product use",
+          "opt_out": "User-agent: GoogleOther-Video / Disallow: /"
         },
         {
           "name": "Google-CloudVertexBot",
-          "purpose": "Crawling for building Vertex AI Agents",
-          "scope": "Site owner-requested crawls for Vertex AI Agents construction",
-          "opt_out": "User-agent: Google-CloudVertexBot / Disallow: / in robots.txt"
+          "purpose": "Support Vertex AI Agents building by site owners",
+          "scope": "Crawls requested by site owners for Vertex AI Agent training",
+          "opt_out": "User-agent: Google-CloudVertexBot / Disallow: /"
         },
         {
           "name": "Google-Extended",
-          "purpose": "Training data collection for Gemini models and grounding",
-          "scope": "Content for Gemini Apps, Vertex AI API for Gemini, and grounding with Google Search",
-          "opt_out": "User-agent: Google-Extended / Disallow: / in robots.txt; does not impact Google Search ranking"
+          "purpose": "Manage content use for training Gemini models and grounding",
+          "scope": "Controls whether crawled content may be used for Gemini training and Vertex AI",
+          "opt_out": "User-agent: Google-Extended / Disallow: / in robots.txt"
         }
       ]
     },
@@ -148,20 +147,20 @@
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
       "policy_url": "https://docs.perplexity.ai/llms.txt",
-      "days_since_last_change": 21,
+      "days_since_last_change": 22,
       "last_snapshot_date": "2026-04-29",
       "user_agents": [
         {
           "name": "PerplexityBot",
           "purpose": "Surface and link websites in search results on Perplexity",
-          "scope": "Search result indexing; does not crawl for AI training data",
-          "opt_out": "User-agent: PerplexityBot / Disallow: / in robots.txt"
+          "scope": "Search result surfacing; not used for crawling content for AI foundation model training",
+          "opt_out": "Disallow PerplexityBot in robots.txt file; configure WAF to block User-Agent containing 'PerplexityBot'"
         },
         {
           "name": "Perplexity-User",
-          "purpose": "Support user-triggered actions within Perplexity",
-          "scope": "Fetches web pages on-demand when users ask questions; generally ignores robots.txt",
-          "opt_out": "User-agent: Perplexity-User / Disallow: / in robots.txt (though this user-triggered fetcher may override)"
+          "purpose": "Support user actions and web page fetches when users ask Perplexity questions",
+          "scope": "User-triggered page fetches to provide accurate answers; not used for web crawling or AI model training data collection",
+          "opt_out": "Configure WAF to block User-Agent containing 'Perplexity-User'; generally ignores robots.txt but WAF configuration can block access"
         }
       ]
     },
@@ -171,26 +170,25 @@
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
       "policy_url": "https://www.apple.com/go/applebot",
-      "days_since_last_change": 31,
+      "days_since_last_change": 32,
       "last_snapshot_date": "2026-04-19",
       "user_agents": [
         {
           "name": "Applebot",
-          "purpose": "Powers search features in Spotlight, Siri, and Safari across Apple ecosystem",
-          "scope": "General web crawling for search indexing and content discovery",
-          "opt_out": "Disallow Applebot in robots.txt; respects standard robots.txt directives and Googlebot rules if Applebot-specific rules absent"
+          "purpose": "Powers search technology in Spotlight, Siri, and Safari",
+          "scope": "General web crawling to index content for Apple search features across the ecosystem",
+          "opt_out": "Disallow: / in robots.txt for Applebot user-agent"
         },
         {
           "name": "Applebot-Extended",
-          "purpose": "Determines usage of crawled content for training Apple foundation models powering generative AI features",
-          "scope": "Does not crawl webpages; processes data from Applebot crawls to control AI training usage",
-          "opt_out": "User-agent: Applebot-Extended / Disallow: / in robots.txt to opt-out of generative AI training"
+          "purpose": "Determines how crawled data is used to train Apple foundation models and generative AI features",
+          "scope": "Secondary user agent that processes data from Applebot crawls for model training purposes",
+          "opt_out": "User-agent: Applebot-Extended / Disallow: / in robots.txt file"
         },
         {
           "name": "iTMS",
           "purpose": "Crawls URLs associated with registered content on Apple Podcasts",
-          "scope": "Apple Podcasts content only; does not follow robots.txt directives",
-          "opt_out": "Does not respect robots.txt; contact Apple for iTunes/Podcasts-specific control"
+          "scope": "Specific URLs registered with Apple Podcasts; does not follow robots.txt rules"
         }
       ]
     },
@@ -200,38 +198,38 @@
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
       "policy_url": "https://developers.facebook.com/docs/sharing/webmasters/web-crawlers",
-      "days_since_last_change": 31,
+      "days_since_last_change": 32,
       "last_snapshot_date": "2026-04-19",
       "user_agents": [
         {
           "name": "FacebookExternalHit",
-          "purpose": "Crawl shared content on Meta family of apps to gather title, description, thumbnail",
-          "scope": "Content shared on Facebook, Instagram, Messenger via links or social plugins",
-          "opt_out": "Add User-agent: facebookexternalhit / Disallow: / to robots.txt; may bypass for security checks"
+          "purpose": "Crawl shared content on Meta family apps to gather title, description, thumbnail",
+          "scope": "Content shared on Facebook, Instagram, Messenger; may bypass robots.txt for security checks",
+          "opt_out": "User-agent: facebookexternalhit / Disallow: / (may bypass robots.txt for security checks)"
         },
         {
           "name": "Meta-WebIndexer",
-          "purpose": "Improve Meta AI search result quality and relevance",
-          "scope": "General web crawl to enhance Meta AI capabilities",
-          "opt_out": "Add User-agent: meta-webindexer / Disallow: / to robots.txt"
+          "purpose": "Improve Meta AI search result quality and relevance of responses",
+          "scope": "General web crawl to enhance Meta AI accuracy and citation capability",
+          "opt_out": "User-agent: meta-webindexer / Disallow: /"
         },
         {
           "name": "Meta-ExternalAds",
-          "purpose": "Improve advertising and other business-related products and services",
-          "scope": "Web crawl for advertising and business use cases",
-          "opt_out": "Add User-agent: meta-externalads / Disallow: / to robots.txt"
+          "purpose": "Crawl web for improving advertising and business-related products",
+          "scope": "General web crawl for advertising and business analytics",
+          "opt_out": "User-agent: meta-externalads / Disallow: /"
         },
         {
           "name": "Meta-ExternalAgent",
           "purpose": "Train foundation AI models and improve products by indexing content",
-          "scope": "Web crawl for AI model training and product improvement",
-          "opt_out": "Add User-agent: meta-externalagent / Disallow: / to robots.txt"
+          "scope": "General web crawl for training data and product enhancement",
+          "opt_out": "User-agent: meta-externalagent / Disallow: /"
         },
         {
           "name": "Meta-ExternalFetcher",
-          "purpose": "Fetch individual links at user request to support agentic AI capabilities",
-          "scope": "User-triggered fetches to help AI navigate websites and complete tasks",
-          "opt_out": "May bypass robots.txt as performs user-requested fetches; no standard opt-out"
+          "purpose": "Fetch links at user request to evaluate and improve agentic AI capabilities",
+          "scope": "User-triggered fetches to help AI navigate sites; may bypass robots.txt",
+          "opt_out": "User-agent: meta-externalfetcher / Disallow: / (may bypass robots.txt for user requests)"
         }
       ]
     },
@@ -240,27 +238,27 @@
       "display_name": "Microsoft",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://www.microsoft.com/en-us/ai/ai-principles-and-practices",
-      "days_since_last_change": 31,
+      "policy_url": "https://www.microsoft.com/en-us/ai/ai-privacy-principles",
+      "days_since_last_change": 32,
       "last_snapshot_date": "2026-04-19",
       "user_agents": [
         {
-          "name": "MSBot",
-          "purpose": "Web crawling for search indexing and data collection",
-          "scope": "General web crawl for Bing search engine",
-          "opt_out": "User-agent: MSBot / Disallow: /"
+          "name": "msnbot",
+          "purpose": "Web search indexing and ranking",
+          "scope": "General web crawl for Bing search results",
+          "opt_out": "User-agent: msnbot / Disallow: / in robots.txt"
         },
         {
-          "name": "MicrosoftPreview",
-          "purpose": "Content preview generation",
-          "scope": "Crawls content for preview generation in Microsoft products",
-          "opt_out": "User-agent: MicrosoftPreview / Disallow: /"
+          "name": "Bingbot",
+          "purpose": "Web search crawling for Bing search engine",
+          "scope": "General web crawl for search index updates",
+          "opt_out": "User-agent: Bingbot / Disallow: / in robots.txt"
         },
         {
-          "name": "BingBot",
-          "purpose": "Web indexing and search results",
-          "scope": "General web crawl for Bing search engine",
-          "opt_out": "User-agent: BingBot / Disallow: /"
+          "name": "Adidxbot",
+          "purpose": "Bing advertising and indexing",
+          "scope": "Crawl for ad indexing and quality signals",
+          "opt_out": "User-agent: Adidxbot / Disallow: / in robots.txt"
         }
       ]
     },
@@ -270,25 +268,25 @@
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
       "policy_url": "https://developer.amazon.com/support/amazonbot",
-      "days_since_last_change": 31,
+      "days_since_last_change": 32,
       "last_snapshot_date": "2026-04-19",
       "user_agents": [
         {
           "name": "Amazonbot",
-          "purpose": "Improve products and services; train Amazon AI models",
-          "scope": "General web crawl for product improvement and AI model training",
+          "purpose": "Improve Amazon products and services, train Amazon AI models",
+          "scope": "General web crawl for product improvement and AI training",
           "opt_out": "User-Agent: Amazonbot / Disallow: / in robots.txt"
         },
         {
           "name": "Amzn-SearchBot",
           "purpose": "Improve search experiences in Amazon products and services",
-          "scope": "Crawl content for Amazon search (Alexa, Rufus); excludes generative AI training",
+          "scope": "Crawls content for search eligibility in Alexa and Rufus, excludes generative AI training",
           "opt_out": "User-Agent: Amzn-SearchBot / Disallow: / in robots.txt"
         },
         {
           "name": "Amzn-User",
-          "purpose": "Support user actions like responding to Alexa queries with live information",
-          "scope": "User-triggered fetch for live responses; excludes generative AI training",
+          "purpose": "Support user-triggered actions and live information fetches for Alexa queries",
+          "scope": "User-triggered fetch for live responses to answer customer questions",
           "opt_out": "User-Agent: Amzn-User / Disallow: / in robots.txt"
         }
       ]
@@ -299,20 +297,20 @@
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
       "policy_url": "https://commoncrawl.org/faq/",
-      "days_since_last_change": 4,
+      "days_since_last_change": 5,
       "last_snapshot_date": "2026-05-16",
       "user_agents": [
         {
           "name": "CCBot/2.0",
-          "purpose": "Web crawling for Common Crawl dataset collection",
-          "scope": "General web crawl, respects robots.txt and crawl-delay directives",
-          "opt_out": "robots.txt: User-agent: CCBot / Disallow: /"
+          "purpose": "Web crawling for Common Crawl dataset creation",
+          "scope": "General web crawl to build Internet archive for research and analysis",
+          "opt_out": "User-agent: CCBot / Disallow: / in robots.txt; also honors Crawl-delay parameter"
         },
         {
           "name": "CCBot/1.0",
-          "purpose": "Web crawling for Common Crawl dataset collection (older version)",
-          "scope": "General web crawl, respects robots.txt and crawl-delay directives",
-          "opt_out": "robots.txt: User-agent: CCBot / Disallow: /"
+          "purpose": "Web crawling for Common Crawl dataset creation (legacy version)",
+          "scope": "General web crawl to build Internet archive for research and analysis",
+          "opt_out": "User-agent: CCBot / Disallow: / in robots.txt; also honors Crawl-delay parameter"
         }
       ]
     },
@@ -321,29 +319,10 @@
       "display_name": "Crawler insights (search)",
       "supports_robots_txt": true,
       "supports_user_agent_opt_out": true,
-      "policy_url": "https://blog.cloudflare.com/introducing-pay-per-crawl/",
-      "days_since_last_change": 31,
+      "policy_url": "<UNKNOWN>",
+      "days_since_last_change": 32,
       "last_snapshot_date": "2026-04-19",
-      "user_agents": [
-        {
-          "name": "AI Crawlers (General)",
-          "purpose": "Training data collection and content indexing for AI models",
-          "scope": "General web crawl for AI training datasets and agent interactions",
-          "opt_out": "HTTP 402 Payment Required responses; Pay-per-Crawl feature via Cloudflare; robots.txt Disallow directives"
-        },
-        {
-          "name": "Agentic Actors",
-          "purpose": "Autonomous AI agents executing tasks and queries on web content",
-          "scope": "User-triggered and scheduled automated interactions; represented ~10% of network traffic as of March 2026",
-          "opt_out": "Agent Readiness Score and Redirects for AI Training features; robots.txt-based blocking"
-        },
-        {
-          "name": "AI Bots (Malicious)",
-          "purpose": "Unauthorized content scraping, login attacks, fraud, and data theft",
-          "scope": "Adversarial crawling and bot traffic mimicking human behavior; significant portion of automated traffic",
-          "opt_out": "Bot management, application security controls, and HTTP 402 Payment Required mechanisms"
-        }
-      ]
+      "user_agents": []
     }
   ]
 }
