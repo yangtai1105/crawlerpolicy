@@ -1,8 +1,7 @@
 {
-  "last_checked_at": "2026-05-21T11:25:41.176620+00:00",
+  "last_checked_at": "2026-05-22T10:51:04.788448+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/introducing-the-realtime-api",
     "https://openai.com/index/introducing-vision-to-the-fine-tuning-api",
     "https://openai.com/index/api-prompt-caching",
     "https://openai.com/index/api-model-distillation",
@@ -501,7 +500,8 @@
     "https://openai.com/index/sea-david-chen",
     "https://openai.com/index/work-with-codex-from-anywhere",
     "https://openai.com/index/the-next-phase-of-education-for-countries",
-    "https://openai.com/index/introducing-openai-for-singapore"
+    "https://openai.com/index/introducing-openai-for-singapore",
+    "https://openai.com/index/adventhealth"
   ],
   "consecutive_failures": 0,
   "first_seen": false
