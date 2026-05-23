@@ -1,40 +1,40 @@
 {
-  "generated_at": "2026-05-22T10:51:04.788448+00:00",
+  "generated_at": "2026-05-23T09:53:39.360341+00:00",
   "crawler": {
-    "headline": "AI crawler docs consolidated, IP ranges published, and opt-out mechanisms expanded across major vendors.",
-    "body": "Over the past year, AI crawler documentation has undergone a coordinated wave of consolidation and clarification. Major vendors\u2014OpenAI, Anthropic, Amazon, Google, and Common Crawl\u2014have published or updated formal crawler-identification pages with explicit user-agent strings, IP-range JSON endpoints, and semantically distinct opt-out mechanisms (robots.txt directives, meta tags, and page-level headers). The most significant operational shift is the emergence of machine-readable IP allowlists (`googlebot.json` renamed to `common-crawlers.json`, new CCBot CIDR blocks, Anthropic's first-ever published ranges), enabling webmasters to implement IP-based verification at scale. Simultaneously, site-level opt-out granularity has expanded: Amazon's `noarchive` meta tag, Google-Extended's distinction, and OpenAI's new `OAI-AdsBot` disclosure all signal a move toward per-crawler control rather than blanket allow/block decisions. Infrastructure tooling\u2014Cloudflare's AI Crawl Control, pay-per-crawl, and canonical-redirect features\u2014has matured in parallel, giving publishers and operators new levers for monetization and content-steering. The adoption of emerging standards like `llms.txt` by major vendors (Perplexity) suggests convergence on machine-readable index structures. Collectively, these changes reduce ambiguity around crawler identity and intent, though they demand active upkeep from operators managing IP allowlists and bot-detection rules.",
+    "headline": "AI crawler docs shifted from opaque to verifiable\u2014IP ranges, UA strings, and opt-out mechanisms now standardized.",
+    "body": "Over the past year, AI crawler documentation has undergone a structural shift toward operational transparency and tooling standardization. Major vendors (OpenAI, Amazon, Google, Anthropic, Perplexity) have published or clarified IP-range JSON endpoints, consolidated user-agent strings with explicit versioning, and formalized page-level opt-out mechanisms (notably Amazon's `noarchive` meta tag for model-training exclusion). Simultaneously, infrastructure platforms\u2014chiefly Cloudflare\u2014have introduced new crawler-verification and redirection features, including canonical-URL redirects for training-specific traffic and Radar-based visibility into crawler adoption patterns across the web. The emergence of the `llms.txt` convention and the expansion of publisher blocking toward archival infrastructure (`ia_archiverbot`) signal that both vendors and site operators are converging on machine-readable, standardized controls. UA-string stability has improved (GPTBot and OAI-SearchBot pinned at v1.3; CCBot clarified with full URL), though IP-range nomenclature shifts (Google's `googlebot.json` \u2192 `common-crawlers.json`) require tooling updates. The most significant operational change is the shift from \"we do not publish IPs\" (Anthropic's prior stance) to standardized JSON feeds, enabling IP-based verification and abuse reporting at scale.",
     "themes": [
-      "IP range publication",
-      "UA string consolidation",
-      "Meta-tag opt-out expansion",
-      "Infrastructure tooling maturity",
-      "Machine-readable standards"
+      "IP ranges and verification",
+      "User-agent consolidation",
+      "Page-level opt-outs",
+      "Canonical redirects for training",
+      "Machine-readable standards adoption"
     ],
     "event_count": 15,
     "window_days": 365
   },
   "ecosystem": {
-    "headline": "AI agent traffic surges, pushing bot detection and publisher scraping protections to the center of platform infrastructure.",
-    "body": "The last 30 days revealed two colliding forces reshaping the content ecosystem. On the regulation side, the EU moved toward simplified AI rules while banning certain harmful applications, and publishers (via the News Media Alliance) escalated legal action against unauthorized scraping\u2014filing an amicus brief supporting Amazon's case against Perplexity and demanding Common Crawl establish stronger protections. Simultaneously, the infrastructure layer shifted dramatically as DataDome reported a 50x surge in model context protocol (MCP) traffic following Anthropic's connector expansion, signaling that agentic AI access to web content is now mainstream. In response, DataDome rolled out a suite of new controls\u2014Priority Protect, Agent Trust governance, intent-based policies, and vendor evaluation frameworks\u2014positioning bot and agent triage as essential infrastructure. The ecosystem is essentially bifurcating: regulators are tightening rules around harmful uses, publishers are fighting unauthorized data extraction through legal channels, and middleware vendors are racing to build the detection and governance layer that makes agent-at-scale feasible.",
+    "headline": "AI agent traffic and data scraping define regulatory and infrastructure battles in May",
+    "body": "The last 30 days split cleanly between two fronts: infrastructure vendors racing to govern agentic AI traffic, and publishers fighting unauthorized content scraping. DataDome's May activity\u2014five launches around Agent Trust, virtual waiting rooms, and intent-based triage\u2014reflects a market surge in MCP (Model Context Protocol) traffic that Anthropic's connector expansion is now legitimizing at scale. Meanwhile, the News Media Alliance escalated legal pressure on scrapers, filing an amicus brief behind Amazon's suit against Perplexity and demanding Common Crawl enforce protections. The EU simplified its AI rulebook in early May with less friction than expected, creating space for the real friction points: how to distinguish legitimate agent-generated requests from scraping, and who controls access to content at the infrastructure layer. Waiting room and intent assessment are no longer edge cases\u2014they're becoming table stakes for CDNs and platforms managing hybrid human-and-agent traffic.",
     "themes": [
-      "Agent traffic explosion",
-      "Publisher legal push-back",
-      "EU regulatory simplification",
-      "Intent-based defense",
-      "Middleware bottleneck"
+      "Agent traffic governance",
+      "Data scraping disputes",
+      "MCP mainstreaming",
+      "Intent-based triage",
+      "Publisher defense"
     ],
-    "event_count": 13,
+    "event_count": 12,
     "window_days": 30
   },
   "agent": {
-    "headline": "Codex agents move from sandbox to production with security frameworks in place.",
+    "headline": "Codex agents mature toward production deployment with security and infrastructure focus.",
+    "body": "Over the past month, OpenAI shifted the conversation around agent infrastructure from capability toward operational readiness. A security and compliance framework landed first, followed by Windows Sandbox isolation\u2014both table-stakes for enterprise trust. Sea Limited's engineering deployment signals that early adopters are moving past proofs-of-concept into scaled, production use. Meanwhile, Parloa integration suggests the ecosystem is beginning to standardize around voice as a control surface for agents, widening the surface area beyond code-execution contexts. The coherence of these moves points to a hardening of the stack: agents are no longer experimental; they're being locked down for real work.",
     "themes": [
-      "Agent operationalization",
-      "Production deployment patterns",
-      "Voice integration expansion",
-      "Security standardization"
+      "Production hardening",
+      "Security frameworks",
+      "Voice integration",
+      "Sandbox isolation"
     ],
-    "body": "The past month shows AI agent infrastructure moving from experimental to production-ready. OpenAI released a Windows sandbox environment for Codex agents, then quickly followed with a formal security and compliance framework\u2014signaling confidence in the stack's maturity. Real-world validation arrived with Sea Limited's deployment across engineering teams, demonstrating that code-generation agents can operate at scale within enterprise workflows. In parallel, the ecosystem is broadening: Parloa voice agents became integrated into OpenAI's platform, suggesting bot-identity standards are beginning to encompass modalities beyond text. The sequence reflects a maturing narrative: infrastructure \u2192 guardrails \u2192 adoption.",
     "event_count": 4,
     "window_days": 30
   }
