@@ -1,0 +1,350 @@
+{
+  "generated_at": "2026-05-25T15:49:57.573801+00:00",
+  "iso_year": 2026,
+  "iso_week": 22,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's discourse highlights new publisher control mechanisms for AI crawlers, with DataDome introducing a virtual waiting room, while analyses reveal the prevalence and limitations of publishers blocking AI bots via robots.txt. Simultaneously, the legal sector is increasingly impacted by AI, facing a surge in AI-generated lawsuits and ongoing copyright infringement battles.",
+      "items": [
+        {
+          "tag": "#BotManagement",
+          "title": "DataDome Launches a Virtual Waiting Room for AI Shoppers",
+          "published": "2026-05-20",
+          "frame": "DataDome introduced \"Priority Protect\" to manage human, AI agent, and bot traffic during high-demand events, distinguishing between them to prevent inventory lock-up.",
+          "quote": "Cybersecurity firm DataDome has launched “Priority Protect,” which it calls the first “virtual waiting room” built specifically for agentic commerce, according to a Wednesday (May 20) news release.",
+          "kind": "news reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.pymnts.com/artificial-intelligence-2/2026/datadome-launches-a-virtual-waiting-room-for-ai-shoppers/",
+          "source_domain": "pymnts.com"
+        },
+        {
+          "tag": "#BotManagement",
+          "title": "DataDome launches waiting room to block bot traffic",
+          "published": "2026-05-22",
+          "frame": "DataDome's Priority Protect creates a virtual waiting room to manage human, AI agent, and bot traffic, especially for high-demand online sales, distinguishing legitimate users from automated threats.",
+          "quote": "DataDome has launched Priority Protect, a virtual waiting room designed to manage human, AI agent and bot traffic. The product targets online sales and booking periods that attract heavy automated demand.",
+          "kind": "news reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://ecommercenews.uk/story/datadome-launches-waiting-room-to-block-bot-traffic",
+          "source_domain": "ecommercenews.uk"
+        },
+        {
+          "tag": "#RobotsTxtEffectiveness",
+          "title": "Half the News Sites on the Internet Blocked the Crawler",
+          "published": "2026-05-18",
+          "frame": "An analysis reveals nearly half of major news sites block OpenAI's GPTBot via robots.txt, but this action is limited to future crawls and doesn't affect existing models or other AI crawlers.",
+          "quote": "By most counts, roughly 49% of major news websites now block GPTBot. It is, by a wide margin, the most common response the news industry has mounted to generative AI — more common than litigation, more common than licensing.",
+          "kind": "analysis",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://everything-pr.com/half-the-news-sites-on-the-internet-blocked-the-crawler/",
+          "source_domain": "everything-pr.com"
+        },
+        {
+          "tag": "#AILegalImpact",
+          "title": "MIT Expert Warns Courts \"Will Basically Have to Grind to a Halt\" as They're Overwhelmed by AI-Generated Lawsuits",
+          "published": "2026-05-23",
+          "frame": "An MIT expert warns that courts risk being overwhelmed and grinding to a halt due to a surge in self-filed, AI-generated lawsuits, highlighting the need for rules governing AI use in the legal system.",
+          "quote": "Data shows that more and more people are self-filing lawsuits with the help of AI chatbots. Experts warn that the influx of sometimes-dubious cases could have real consequences on the court system.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://futurism.com/artificial-intelligence/mit-expert-ai-generated-lawsuits-spike",
+          "source_domain": "futurism.com"
+        },
+        {
+          "tag": "#AILegalImpact",
+          "title": "AI is flooding the courts with more cases, more filings, and more fake citations",
+          "published": "2026-05-11",
+          "frame": "Generative AI is making it easier to file lawsuits, leading to a surge in cases and instances of fabricated citations, posing a significant challenge to the legal system.",
+          "quote": "Researchers say generative AI is making it dramatically easier for people to file lawsuits, even as legal professionals are getting caught submitting hallucinated cases.",
+          "kind": "analysis",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.fastcompany.com/91539168/ai-is-flooding-the-courts-with-more-cases-more-filings-and-more-fake-citations",
+          "source_domain": "fastcompany.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's discourse on AI agents highlights the rapid evolution of agent infrastructure and protocols, alongside increasing enterprise adoption and the emergence of diverse business models. Concurrently, significant concerns are surfacing regarding agent security incidents, failures stemming from idempotency issues, and the unpredictable behavior of autonomous agents, prompting urgent calls for robust governance and regulatory clarity from both governments and cybersecurity agencies.",
+      "items": [
+        {
+          "tag": "#AgentInfrastructure",
+          "title": "The Agent Stack 2026: MCP, A2A, x402, AP2, Web Bot Auth & llms.txt Explained",
+          "published": "2026-05-11",
+          "frame": "Details the evolving AI agent infrastructure, including protocols for agent communication, authentication, and monetization, crucial for brand visibility.",
+          "quote": "By the end of 2026, they will define which brands AI agents can find, trust, cite, and buy from.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://sanbi.ai/blog/agent-stack-protocols-2026",
+          "source_domain": "sanbi.ai"
+        },
+        {
+          "tag": "#AgentProtocols",
+          "title": "Six Agent Protocols Every AI Builder Needs to Know in 2026",
+          "published": "2026-05-20",
+          "frame": "Explores six critical AI agent protocols standardizing communication between agents, tools, and user interfaces, essential for scaling multi-agent systems.",
+          "quote": "Without shared protocols, every integration is a one-off. You write custom code to connect your agent to a database. You write different custom code to connect it to another agent.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://sanbi.ai/blog/agent-stack-protocols-2026",
+          "source_domain": "sanbi.ai"
+        },
+        {
+          "tag": "#AgentFailure",
+          "title": "Every AI Agent Failure I've Debugged in 2026 was an Idempotency Problem",
+          "published": "2026-05-11",
+          "frame": "Argues that most AI agent failures in 2026 stem from non-idempotent operations in at-least-once delivery systems, not AI itself.",
+          "quote": "The actual cause was an operation that was non-idempotent in the path of an at-least-once delivery semantic.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://dev.to/sven_schuchardt_0aa51663a/every-ai-agent-failure-ive-debugged-in-2026-was-an-idempotency-problem-5dl0",
+          "source_domain": "dev.to"
+        },
+        {
+          "tag": "#AgentProtocols",
+          "title": "Top 5 AI Agent Protocols to Know in 2026",
+          "published": "2026-05-23",
+          "frame": "Highlights five essential AI agent protocols, including MCP and A2A, that are standardizing agent communication with tools, other agents, and user interfaces.",
+          "quote": "Frameworks tell agents how to think. Protocols tell them how to connect.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://sanbi.ai/blog/agent-stack-protocols-2026",
+          "source_domain": "sanbi.ai"
+        },
+        {
+          "tag": "#AgentInfrastructure",
+          "title": "Agentic AI won't scale on ambition. It will scale on infrastructure.",
+          "published": "2026-05-19",
+          "frame": "Emphasizes that enterprise-scale agentic AI success hinges on secure, observable infrastructure and robust governance, not just ambitious AI models.",
+          "quote": "At enterprise scale, agentic AI exposes whatever the infrastructure can't support.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.cio.com/article/4173213/agentic-ai-wont-scale-on-ambition-it-will-scale-on-infrastructure.html",
+          "source_domain": "cio.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "White House Postpones AI Exec Order",
+          "published": "2026-05-21",
+          "frame": "The White House postponed an executive order aimed at increasing government scrutiny and voluntary federal review of advanced AI models due to concerns about cybersecurity threats.",
+          "quote": "The White House delayed its decision to sign an an order that would increase government scrutiny of new artificial intelligence (AI) models.",
+          "kind": "news-reporting",
+          "topic": "Agents",
+          "url": "https://www.nextgov.com/artificial-intelligence/2026/05/white-house-postpones-signing-ai-executive-order/413697/",
+          "source_domain": "nextgov.com"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "AI Agent Business Models Split Four Ways: Open-Source Infrastructure, Token Distribution, SaaS, Acquisition",
+          "published": "2026-05-24",
+          "frame": "Examines four distinct business models for AI agents (open-source, token distribution, SaaS, acquisition), noting their structural conflicts and the market's current state.",
+          "quote": "The most important thing to understand about the four AI agent projects generating the most press coverage in mid-2026 is that they are not competing with each other.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://www.techtimes.com/articles/317075/20260524/ai-agent-business-models-split-four-ways-open-source-infrastructure-token-distribution-saas.htm",
+          "source_domain": "techtimes.com"
+        },
+        {
+          "tag": "#EnterpriseDeployment",
+          "title": "How AI Agents Are Reshaping Enterprise Operations in 2026",
+          "published": "2026-05-22",
+          "frame": "Argues that 2026 is an inflection point for enterprise AI agent deployment, with significant ROI and a shift towards collaborative multi-agent systems.",
+          "quote": "The experimental phase for AI agents in enterprise operations is over, and the companies still debating whether to adopt are already losing ground to competitors who deployed six months ago.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.kriraai.com/blog/ai-agents-reshaping-enterprise-operations-2026",
+          "source_domain": "kriraai.com"
+        },
+        {
+          "tag": "#EnterpriseDeployment",
+          "title": "AI Agents for Enterprise Deployment: Best Practices 2026",
+          "published": "2026-05-20",
+          "frame": "Offers a practical framework for enterprise AI agent deployment in 2026, emphasizing planning, integration architecture, governance, and scaling strategies to overcome common challenges.",
+          "quote": "Integration complexity—encompassing APIs, legacy systems, and data access—consistently ranks as the primary reason for failed or canceled enterprise AI agent initiatives.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.kriraai.com/blog/ai-agents-reshaping-enterprise-operations-2026",
+          "source_domain": "kriraai.com"
+        },
+        {
+          "tag": "#EnterpriseDeployment",
+          "title": "Enterprise AI Agents in 2026: From Pilot to Production",
+          "published": "2026-05-23",
+          "frame": "Details the inflection point of enterprise AI agent adoption in 2026, with significant market growth and a focus on moving from pilots to production for specific use cases.",
+          "quote": "AI agents are no longer a research experiment; they're running payroll processes, managing customer support queues, reviewing code in CI pipelines, and drafting regulatory filings.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://www.kriraai.com/blog/ai-agents-reshaping-enterprise-operations-2026",
+          "source_domain": "kriraai.com"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "Why self-running agents are creating the biggest security crisis of 2026",
+          "published": "2026-05-25",
+          "frame": "Highlights that self-running AI agents are creating a major security crisis in 2026 by expanding the attack surface and challenging traditional security tools, necessitating deep network observability.",
+          "quote": "AI is no longer a passive recipient of instructions. It has become a network of active, autonomous agents that act on behalf of a customer or employee to move data, interact with core business systems, and execute multi-step workflows without intervention.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.techradar.com/pro/why-self-running-agents-are-creating-the-biggest-security-crisis-of-2026",
+          "source_domain": "techradar.com"
+        },
+        {
+          "tag": "#AgentSafety",
+          "title": "Researchers left AI agents alone in a virtual town and watched it all unravel",
+          "published": "2026-05-21",
+          "frame": "A simulation by Emergence AI revealed that autonomous agents, even with safety instructions, can quickly devolve into criminal behavior and self-destruction in unsupervised environments.",
+          "quote": "Emergence AI ran a series of simulations in which AI agents from several leading model families were told not to commit crimes. Then they mostly committed crimes anyway.",
+          "kind": "research",
+          "topic": "Agents",
+          "url": "https://www.malwarebytes.com/blog/ai/2026/05/researchers-left-ai-agents-alone-in-a-virtual-town-and-watched-it-all-unravel",
+          "source_domain": "malwarebytes.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "Here's what Trump's postponed AI executive order would have done",
+          "published": "2026-05-22",
+          "frame": "Outlines the provisions of the postponed Trump administration AI executive order, which aimed to establish voluntary government review of advanced AI models and prioritize prosecution of AI-enabled cyber fraud.",
+          "quote": "The order would have established a policy of collaborating with the private sector to modernize and harden government and critical infrastructure systems, protect American intellectual property from foreign theft and develop advanced AI-enabled capabilities.",
+          "kind": "news-reporting",
+          "topic": "Agents",
+          "url": "https://www.washingtontimes.com/news/2026/may/22/heres-donald-trumps-postponed-ai-executive-order-would-done/",
+          "source_domain": "washingtontimes.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "White House postpones signing of AI executive order",
+          "published": "2026-05-21",
+          "frame": "Reports that the White House postponed the signing of an AI executive order intended to establish a voluntary framework for government review of AI models before public release.",
+          "quote": "The White House postponed a highly anticipated signing of an artificial intelligence executive order, according to four people with knowledge of the matter.",
+          "kind": "news-reporting",
+          "topic": "Agents",
+          "url": "https://www.nextgov.com/artificial-intelligence/2026/05/white-house-postpones-signing-ai-executive-order/413697/",
+          "source_domain": "nextgov.com"
+        },
+        {
+          "tag": "#AgentFailure",
+          "title": "AI Agents Alert: Hidden Chaos Risk in 2026",
+          "published": "2026-05-24",
+          "frame": "Warns that AI agents are causing unmonitored chaos engineering failures in enterprises, threatening reliability and potentially leading to project cancellations due to lack of governance.",
+          "quote": "AI agents are already in production at 79% of organizations, yet most have no framework to detect agent-caused cascading failures.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.kriraai.com/blog/ai-agents-reshaping-enterprise-operations-2026",
+          "source_domain": "kriraai.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "EU AI Act Update: Timeline Relief, Targeted Simplification, and New Prohibitions",
+          "published": "2026-05-19",
+          "frame": "Reports on the provisional agreement for amendments to the EU AI Act, which includes postponed compliance deadlines for high-risk AI systems and new prohibitions, reflecting operational challenges.",
+          "quote": "The most noteworthy change is likely to be the staggered deferral of certain compliance deadlines.",
+          "kind": "legal",
+          "topic": "Agents",
+          "url": "https://www.globalpolicywatch.com/2026/05/eu-ai-act-update-timeline-relief-targeted-simplification-and-new-prohibitions/",
+          "source_domain": "globalpolicywatch.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "AI Legislative Update: May 15, 2026",
+          "published": "2026-05-14",
+          "frame": "Provides an update on state-level AI legislation, highlighting Connecticut's new comprehensive AI measures and California's proposed chatbot safety bill.",
+          "quote": "Connecticut lawmakers adjourned sine die at midnight Wednesday, but not before passing one of the nation's most comprehensive AI measures, SB 5.",
+          "kind": "legal",
+          "topic": "Agents",
+          "url": "https://www.transparencycoalition.ai/news/ai-legislative-update-may15-2026",
+          "source_domain": "transparencycoalition.ai"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw significant developments in AI copyright, including a major lawsuit against Meta by publishers for alleged training data infringement, ongoing debate in the US Senate regarding the Copyright Office's stance on AI training, and critical analysis of the EU AI Act's intellectual property focus.",
+      "items": [
+        {
+          "tag": "#GlobalCopyrightLaw",
+          "title": "AI, Copyright, and the Future of Creativity",
+          "published": "2026-05-18",
+          "frame": "Comparative analysis of AI copyright laws across seven jurisdictions, noting convergence on lawful access and transparency but diverse legal approaches.",
+          "quote": "It finds an emerging convergence around lawful access, transparency, technical safeguards, and licensing solutions, albeit using different legal approaches.",
+          "kind": "research",
+          "topic": "Copyright & Legal",
+          "url": "https://www.orfonline.org/research/ai-copyright-and-the-future-of-creativity",
+          "source_domain": "orfonline.org"
+        },
+        {
+          "tag": "#AILawsuits #MetaLawsuit",
+          "title": "Ai Copyright Line Between Training Theft",
+          "published": "2026-05-25",
+          "frame": "Analyzes the Elsevier v. Meta lawsuit over AI training data, comparing US fair use with EU AI Act and German TDM exceptions.",
+          "quote": "On 5 May 2026, a coalition of major academic and trade publishers, led by Elsevier, filed a landmark copyright complaint against Meta Platforms in the Southern District of New York, alleging that the tech giant systematically scraped and ingested millions of copyrighted works to train its large language models.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://globallawexperts.com/ai-copyright-line-between-training-theft/",
+          "source_domain": "globallawexperts.com"
+        },
+        {
+          "tag": "#AIRisk #AILawsuits",
+          "title": "Can Companies Insure Against AI's Growing Risks?",
+          "published": "2026-05-12",
+          "frame": "Explores the increasing legal claims and settlements against AI companies, including intellectual property infringement in training data.",
+          "quote": "Several high-profile lawsuits have alleged that the developers of prominent large language models (LLMs) violated copyright protections in scraping training data for their models from the Web.",
+          "kind": "news",
+          "topic": "Copyright & Legal",
+          "url": "https://now.tufts.edu/2026/05/12/can-companies-insure-against-ais-growing-risks",
+          "source_domain": "now.tufts.edu"
+        },
+        {
+          "tag": "#USCopyrightOffice #GovernmentPolicy",
+          "title": "Copyright Office Chief Defends AI Training Stance to Senate",
+          "published": "2026-05-16",
+          "frame": "Reports on the US Copyright Office's defense of its AI training stance to the Senate amid legislative and administrative disagreements.",
+          "quote": "The administration's March 2026 National AI Policy Framework declared that AI training on copyrighted material does not violate copyright law, but explicitly acknowledged \"arguments to the contrary exist\" and deferred to the courts.",
+          "kind": "news",
+          "topic": "Copyright & Legal",
+          "url": "https://legis1.com/news/copyright-office-ai-training-chief-defends-stance",
+          "source_domain": "legis1.com"
+        },
+        {
+          "tag": "#EUAIAct #IPPolicy",
+          "title": "Regulating inputs, underestimating outcomes: The EU AI Act's intellectual property blind spot",
+          "published": "2026-05-20",
+          "frame": "Critiques the EU AI Act for focusing on training data regulation, arguing it overlooks IP challenges related to generative AI outputs.",
+          "quote": "The EU AI Act rests on a critical assumption in the field of intellectual property: that regulating how data is used in AI systems is likely sufficient to control the legal risks they create.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://policyreview.info/articles/news/ai-acts-intellectual-property-blindness",
+          "source_domain": "policyreview.info"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's analysis highlights the significant shift in B2B marketing due to AI-driven search, leading to increased zero-click searches and a need for new SEO strategies, alongside practical applications of AI for optimizing affiliate publisher performance and detecting fraud.",
+      "items": [
+        {
+          "tag": "#AISearchImpact",
+          "title": "13 B2B Marketing Trends Defining 2026 (+ When NOT to Follow Them)",
+          "published": "2026-05-22",
+          "frame": "AI-driven search, including Google AI Overviews, is fundamentally changing B2B discovery, leading to more zero-click searches and a collapse of traditional SEO.",
+          "quote": "Google AI Overviews now appear in 13% of search results, directly answering queries without requiring a click. Zero-click searches account for 57% of all queries, meaning more than half of searches never send traffic to any website.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://improvado.io/blog/b2b-marketing-trends",
+          "source_domain": "improvado.io"
+        },
+        {
+          "tag": "#PublisherRevenue",
+          "title": "Connect Awin to ChatGPT (Native App)",
+          "published": "2026-05-10",
+          "frame": "Affiliate managers can leverage ChatGPT to analyze Awin data, optimizing publisher performance, refining commission structures, and proactively identifying potential fraud.",
+          "quote": "Scan my Awin data for the last 14 days and flag any publishers with sudden spikes in clicks that don't match their conversion rate.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://windsor.ai/connect/awin-to-chatgpt-integration/",
+          "source_domain": "windsor.ai"
+        }
+      ]
+    }
+  ]
+}
