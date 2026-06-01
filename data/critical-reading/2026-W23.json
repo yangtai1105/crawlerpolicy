@@ -1,0 +1,350 @@
+{
+  "generated_at": "2026-06-01T18:37:12.684938+00:00",
+  "iso_year": 2026,
+  "iso_week": 23,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's analysis highlights the increasing need for publishers to actively monitor and manage AI crawler traffic, distinguishing between training bots and search/citation bots, and implementing granular controls through robots.txt and network-level enforcement.",
+      "items": [
+        {
+          "tag": "#AICrawlerMonitoring",
+          "title": "AI Crawler Monitoring: Track GPTBot, ClaudeBot & PerplexityBot Traffic | Webalert Blog",
+          "published": "2026-05-29",
+          "frame": "Publishers must monitor AI crawler traffic, differentiate between training and citation bots, and use rate limiting to manage access without breaking citations.",
+          "quote": "Treat all three as separate bots in monitoring - blocking GPTBot does not block search citations.",
+          "kind": "field-report",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://web-alert.io/blog/ai-crawler-bot-monitoring-gptbot-claudebot-perplexitybot-guide",
+          "source_domain": "web-alert.io"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's reporting on AI agents highlights significant advancements in enterprise deployment and agent-to-agent communication protocols, alongside critical security incidents involving authentication bypasses, autonomous cyberattacks, and database deletions. A recurring theme is the operational challenges and governance gaps in deploying AI agents, with many enterprise pilots failing due to issues beyond model quality, such as lack of observability and human-escalation paths. Critiques of agentic commerce also emerged, focusing on increased fraud risk and merchant unpreparedness.",
+      "items": [
+        {
+          "tag": "#EnterpriseAI",
+          "title": "Enterprise Software Leaders Build AI Agents With NVIDIA - Stock Titan",
+          "published": "2026-06-01",
+          "frame": "NVIDIA's new Agent Toolkit and models enable autonomous AI engineers, compressing engineering work from weeks to hours for enterprise adoption.",
+          "quote": "Cadence, Dassault Systèmes, Siemens and Synopsys are among the first to use NVIDIA NemoClaw to build autonomous AI engineers working as digital coworkers to execute simulation and verification workflows — compressing weeks of engineering work into hours.",
+          "kind": "news",
+          "topic": "Agents",
+          "url": "https://www.stocktitan.net/news/NVDA/enterprise-software-leaders-build-ai-agents-with-5g48na8udny1.html",
+          "source_domain": "stocktitan.net"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "BadHost Vulnerability Exposes AI Agents, Evaluators, and LLM Gateways - InfoQ",
+          "published": "2026-06-01",
+          "frame": "A high-severity vulnerability in Starlette allows attackers to bypass access controls and access sensitive AI agent infrastructure via malformed HTTP Host headers.",
+          "quote": "The flaw allows attackers to use malformed HTTP Host headers to bypass path-based access controls and access sensitive AI agent infrastructure, among other systems.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://www.infoq.com/news/2026/06/badhost-ai-systems-vulnerability/",
+          "source_domain": "infoq.com"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "AI Agent Conducted a Cyberattack on Its Own — It Took Less Than One Hour",
+          "published": "2026-05-28",
+          "frame": "An LLM agent autonomously exploited a vulnerability, harvested credentials, and exfiltrated data, demonstrating AI's role in accelerating complex cyberattacks.",
+          "quote": "In this intrusion, the attacker exploited a vulnerable marimo notebook to gain code execution. Then, they harvested data from the compromised workload, including AWS credentials.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://www.securitymagazine.com/articles/102325-ai-agent-conducted-a-cyberattack-on-its-own-it-took-less-than-one-hour",
+          "source_domain": "securitymagazine.com"
+        },
+        {
+          "tag": "#EnterpriseAI",
+          "title": "Itential Brings Governed AI Agents to Enterprise Infrastructure with FlowAI General Availability - PR Newswire",
+          "published": "2026-06-01",
+          "frame": "Itential's FlowAI provides a production-ready environment for deploying AI agents on enterprise infrastructure with governance, security, and operational controls.",
+          "quote": "FlowAI delivers a production-ready environment to design, deploy, and run AI agents on enterprise infrastructure with the governance, security, and operational controls native to the Itential Platform.",
+          "kind": "news",
+          "topic": "Agents",
+          "url": "https://www.prnewswire.com/news-releases/itential-brings-governed-ai-agents-to-enterprise-infrastructure-with-flowai-general-availability-302786111.html",
+          "source_domain": "prnewswire.com"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "Meta AI chatbot exploited to bypass Instagram 2FA | AI Weekly",
+          "published": "2026-06-01",
+          "frame": "Meta's Instagram AI chatbot was exploited via prompt injection to redirect password reset links, bypassing 2FA and highlighting the risk of AI agents with elevated API access.",
+          "quote": "Meta's Instagram AI chatbot could be prompt-injected to redirect password reset links to attacker addresses, bypassing 2FA entirely.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://aiweekly.co/alerts/meta-ai-chatbot-exploited-to-bypass-instagram-2fa",
+          "source_domain": "aiweekly.co"
+        },
+        {
+          "tag": "#AgentFailure",
+          "title": "Cursor agent wipes PocketOS database in 9 seconds - AI Weekly",
+          "published": "2026-05-31",
+          "frame": "A Claude-powered Cursor agent deleted a startup's production database and all backups due to unconstrained API access and lack of audit trails, revealing critical governance gaps.",
+          "quote": "A Claude-powered Cursor agent wiped PocketOS's production database and all backups in nine seconds using a Railway API token with no role-based access controls.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://aiweekly.co/alerts/cursor-agent-wipes-pocketos-database-in-9-seconds",
+          "source_domain": "aiweekly.co"
+        },
+        {
+          "tag": "#EnterpriseAI",
+          "title": "AI Agent Deployments Fail on Ops, Not Models - AI Weekly",
+          "published": "2026-06-01",
+          "frame": "Production AI agent reliability is an infrastructure problem, not a model quality problem, with failures often stemming from absent observability, undefined failure modes, and no human-escalation paths.",
+          "quote": "The real culprits are operational: undefined failure modes, absent observability, and no human-escalation path. Agents fail silently while infrastructure timeouts get misread as model errors.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://aiweekly.co/alerts/ai-agent-deployments-fail-on-ops-not-models",
+          "source_domain": "aiweekly.co"
+        },
+        {
+          "tag": "#EnterpriseAI",
+          "title": "AI agent adoption hits 95% failure rate in enterprise pilots - TechJournal.uk",
+          "published": "2026-05-29",
+          "frame": "Most enterprise AI agent pilots fail due to incorrect deployment order, lack of proper personnel, and insufficient training, rather than the technology itself.",
+          "quote": "“95% of pilots, where people were trying agentic workflows and building AI agents, are not working. That's a crazy high number, considering the amount of money and effort going into this technology,” said Faateh Dhillon, AI specialist at Dust, an agentic AI platform.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.techjournal.uk/p/ai-agent-adoption-hits-95-failure",
+          "source_domain": "techjournal.uk"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "When the AI Becomes the Attacker: The Meta Instagram Meltdown and What It Means for the Future of AI Security - Cyber News Network",
+          "published": "2026-06-01",
+          "frame": "The Meta Instagram incident highlights that AI agents must not execute sensitive identity actions without hard authorization, least privilege, auditability, and out-of-band verification.",
+          "quote": "AI agents must not be able to execute sensitive identity actions without hard authorization, least privilege, auditability, and out-of-band verification.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://aiweekly.co/alerts/meta-ai-chatbot-exploited-to-bypass-instagram-2fa",
+          "source_domain": "aiweekly.co"
+        },
+        {
+          "tag": "#A2AProtocol",
+          "title": "How to Use Agent to Agent Protocol for AI Agents | Elite AI Advantage",
+          "published": "2026-05-31",
+          "frame": "The A2A protocol standardizes how AI agents discover, delegate, and collaborate, reducing development time for multi-agent systems by eliminating custom integration code.",
+          "quote": "The Agent-to-Agent (A2A) protocol is an open standard that lets AI agents discover, delegate tasks to, and collaborate with other agents without writing custom integration code for each connection.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://eliteaiadvantage.com/blog/agent-to-agent-protocol-ai-agents-collaboration",
+          "source_domain": "eliteaiadvantage.com"
+        },
+        {
+          "tag": "#AgentFailure",
+          "title": "Email Write Agent Breaches Implicit Do-Not-Contact Rule | AI Weekly",
+          "published": "2026-06-01",
+          "frame": "An AI email agent re-engaged a client despite implicit do-not-act signals, demonstrating a failure mode where task competence doesn't translate to social and business judgment.",
+          "quote": "The agent re-engaged a deliberately abandoned client deal, revealing its inability to read implicit do-not-act signals.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://aiweekly.co/alerts/email-write-agent-breaches-implicit-do-not-contact-rule",
+          "source_domain": "aiweekly.co"
+        },
+        {
+          "tag": "#EnterpriseAI",
+          "title": "Enterprise AI Implementation is Growing -- As Are the Challenges - AI Business",
+          "published": "2026-05-29",
+          "frame": "While enterprise generative AI adoption is growing, moving from applications to fully automated AI agents presents challenges in ROI, investment, cost accounting, and employee integration.",
+          "quote": "Businesses still face significant questions about measuring ROI, how much to invest and how to account for costs when AI goes wrong.",
+          "kind": "news",
+          "topic": "Agents",
+          "url": "https://aibusiness.com/generative-ai/enterprise-ai-implementation-growing-as-are-challenges",
+          "source_domain": "aibusiness.com"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "The Real Crisis Brewing in Agentic E-Commerce",
+          "published": "2026-05-29",
+          "frame": "Agentic commerce is leading to a surge in chargebacks and fraud alerts, causing payment rails to tighten and highlighting agents' blindness to payment rules and policies.",
+          "quote": "Payment processors, banks, and fraud teams are watching the numbers spike: chargebacks, disputes, and fraud alerts are climbing sharply.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://quasa.io/media/the-real-crisis-brewing-in-agentic-e-commerce",
+          "source_domain": "quasa.io"
+        },
+        {
+          "tag": "#AgentFailure",
+          "title": "Study of 1,200 AI Agents Finds Four Fatal Patterns | AI Weekly",
+          "published": "2026-05-25",
+          "frame": "A study found most AI agent launches fail within 90 days due to issues like tool wrappers, single-purpose automations, stealth pivots, and founder burnout, not technical failures.",
+          "quote": "Most ventures fail within 90 days, not because the underlying model fails, but because discovery and retention are unsolved infrastructure problems.",
+          "kind": "research",
+          "topic": "Agents",
+          "url": "https://aiweekly.co/alerts/study-of-1200-ai-agents-finds-four-fatal-patterns",
+          "source_domain": "aiweekly.co"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "Agentic Commerce Raises False-Decline Risk in Payments | Let's Data Science",
+          "published": "2026-05-26",
+          "frame": "Agentic AI's ability to initiate purchases increases the operational cost of rejecting legitimate payments, demanding higher approval precision and identity confidence in payment systems.",
+          "quote": "Agentic AI-software that can search for, select and potentially initiate transactions on behalf of consumers-raises the operational cost of rejecting legitimate payments.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://letsdatascience.com/news/agentic-commerce-raises-false-decline-risk-in-payments-e0ccef07",
+          "source_domain": "letsdatascience.com"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "Many Not Ready for Agentic Commerce and other Digital Transactions News briefs from 5/28/26",
+          "published": "2026-05-28",
+          "frame": "A significant majority (73%) of online merchants are unprepared for AI agents, which are sometimes recommending 'unreliable merchants,' raising concerns about merchant risk and compliance.",
+          "quote": "Some 73% of online merchants are not ready for AI agents, while AI agents are at least in some cases recommending “unreliable merchants,” according to research from Ballerine, a specialist in merchant risk and compliance.",
+          "kind": "news",
+          "topic": "Agents",
+          "url": "https://www.digitaltransactions.net/many-not-ready-for-agentic-commerce-and-other-digital-transactions-news-briefs-from-5-28-26/",
+          "source_domain": "digitaltransactions.net"
+        },
+        {
+          "tag": "#EnterpriseAI",
+          "title": "Enterprise AI Agents in Production: Governance, Workflows & Deployment Strategy",
+          "published": "2026-05-28",
+          "frame": "The gap between successful AI agent pilots and production deployment is a key challenge for enterprises, with most failures stemming from operational issues rather than model capabilities.",
+          "quote": "One of the biggest AI deployment challenges enterprises face today is moving from successful pilots to production-ready AI agents.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.tothenew.com/insights/article/enterprise-ai-agents-production-2026",
+          "source_domain": "tothenew.com"
+        },
+        {
+          "tag": "#EnterpriseAI",
+          "title": "How to Automate Your Weekly Ops Report with AI Agents | Mindra Blog",
+          "published": "2026-05-26",
+          "frame": "AI agents can fully automate weekly operations reports by coordinating across multiple data sources, freeing up significant manager time, with Mindra.co offering a no-code solution.",
+          "quote": "Ops managers typically spend 90-120 minutes per week on manual data assembly for their weekly report - time that coordinated AI agents can recover entirely.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://mindra.co/blog/automate-weekly-ops-report-ai-agents-slack",
+          "source_domain": "mindra.co"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "AI Agent Deleted a Startup's Entire Database in 9 Seconds - YouTube",
+          "published": "2026-05-28",
+          "frame": "A startup lost its production database and backups to an AI coding agent, highlighting critical data protection and security concerns as AI integrates into operations.",
+          "quote": "A recent incident saw a startup lose its production database and backups in just 9 seconds, not due to an attack or human error, but an AI coding agent triggering a deletion command.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://aiweekly.co/alerts/cursor-agent-wipes-pocketos-database-in-9-seconds",
+          "source_domain": "aiweekly.co"
+        },
+        {
+          "tag": "#AgentExperience",
+          "title": "My AI agent delivered solid reports for months. I never read them until I switched the output from Markdown to HTML. : r/AgentsOfAI - Reddit",
+          "published": "2026-05-27",
+          "frame": "The format of AI agent output significantly impacts human consumption and utility, with a simple switch from Markdown to HTML dramatically increasing report readability and use.",
+          "quote": "The information quality didn't change. What changed is that I can actually use it now.",
+          "kind": "perspective",
+          "topic": "Agents",
+          "url": "https://www.reddit.com/r/AgentsOfAI/comments/1towgdx/my_ai_agent_delivered_solid_reports_for_months_i/",
+          "source_domain": "reddit.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw new legal actions and policy discussions surrounding AI and copyright, with CNN suing Perplexity AI for content scraping and Australian creatives advocating for strong copyright protections against AI companies. Meanwhile, ongoing AI copyright lawsuits continue to see discovery disputes and amicus briefs.",
+      "items": [
+        {
+          "tag": "#CopyrightLawsuit",
+          "title": "AI governance policy evolves on multiple fronts",
+          "published": "2026-06-01",
+          "frame": "CNN sued Perplexity AI for copyright and trademark infringement, while OpenAI released a governance framework, highlighting fragmented AI policy.",
+          "quote": "CNN's lawsuit, filed in federal court in New York, accuses the AI search company of scraping and republishing more than 17,000 news stories, photographs and videos without permission.",
+          "kind": "news-reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://tomorrowspublisher.today/editing-tools/ai-governance-policy-evolves-on-multiple-fronts/",
+          "source_domain": "tomorrowspublisher.today"
+        },
+        {
+          "tag": "#GovernmentPolicy",
+          "title": "Australian creatives urge the government to 'hold the line' on AI and copyright law",
+          "published": "2026-05-27",
+          "frame": "Australian creative industries are pressuring the government not to weaken copyright law in favor of AI companies seeking investment.",
+          "quote": "Organisations representing Australia's creative and content industries across the music, screen, literature, publishing, visual arts and news media sectors are sending a clear message to the Australian Government: hold the line.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://happymag.tv/australia-ai-copyright-laws-creatives-apra-amcos-opinion/",
+          "source_domain": "happymag.tv"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights the ongoing struggle of publishers with AI's impact on traffic and revenue, with new data showing significant declines due to AI Overviews. While some publishers are securing six-figure content licensing deals and exploring first-party data strategies, concerns remain about the 'double bind' of negotiating with tech giants and the limited revenue from 'pay-per-crawl' models.",
+      "items": [
+        {
+          "tag": "#SearchImpact",
+          "title": "Can't ignore the data: Google's AI Overviews have gutted news site traffic",
+          "published": "2026-05-21",
+          "frame": "New analysis shows Google AI Overviews have decimated search referral traffic to media outlets, with some losing over 90% of clicks.",
+          "quote": "New data shows Google AI Overviews have decimated search referral traffic to media outlets, with some publishers losing over 90% of clicks since 2024.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://mediacopilot.ai/google-ai-overviews-news-traffic/",
+          "source_domain": "mediacopilot.ai"
+        },
+        {
+          "tag": "#AIEcosystem",
+          "title": "AI, journalism and the uncertain future of the public square",
+          "published": "2026-06-01",
+          "frame": "AI's disruption threatens journalism's business models and the public square, with lawsuits being slow and expensive for news organizations.",
+          "quote": "The A.I. disruption is poised to be even more damaging. Until A.I. arrived, there had been a real — if skewed — value exchange between tech platforms and digital content creators like news organizations.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.editorandpublisher.com/stories/ai-journalism-and-the-uncertain-future-of-the-public-square,261890",
+          "source_domain": "editorandpublisher.com"
+        },
+        {
+          "tag": "#ContentLicensing",
+          "title": "The emerging AI content licensing market puts news publishers in a “double bind,” a new report warns",
+          "published": "2026-05-27",
+          "frame": "A report highlights that big tech companies developing AI are also dictating content licensing terms, creating a \"double bind\" for publishers.",
+          "quote": "The same big tech companies that are developing commercial AI products and stripping news publishers of site traffic are the ones dictating what alternative revenue will look like.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.niemanlab.org/2026/05/the-emerging-ai-content-licensing-market-puts-news-publishers-in-a-double-bind-a-new-report-warns/",
+          "source_domain": "niemanlab.org"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "Publishers quietly cut 'six-figure' deals via Snowflake's AI licensing platform",
+          "published": "2026-05-29",
+          "frame": "Publishers are securing six-figure AI licensing deals through Snowflake, providing a new revenue stream despite AI-driven traffic declines.",
+          "quote": "Publishers are quietly cutting six-figure AI licensing deals on Snowflake, as the data giant positions itself as matchmaker-in-chief between locked-down news content and enterprises keen to plug reliable publisher content into their own internal AI tools via retrieval-augmented generation (RAG).",
+          "kind": "news-reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://digiday.com/media/publishers-quietly-cut-six-figure-deals-via-snowflakes-ai-licensing-platform/",
+          "source_domain": "digiday.com"
+        },
+        {
+          "tag": "#FirstPartyData",
+          "title": "First-Party Data Strategy for AI Advertising in 2026",
+          "published": "2026-05-28",
+          "frame": "A first-party data strategy is crucial for AI advertising, as AI decision engines require deterministic identity and clean feedback loops for optimal performance.",
+          "quote": "A first-party data strategy is now structurally required for AI advertising — not just preferred.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://aiadvantageagency.com/first-party-data-strategy/",
+          "source_domain": "aiadvantageagency.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Cloudflare's Pay-Per-Crawl: Sustainable Income or Just Spare Change?",
+          "published": "2026-05-25",
+          "frame": "Cloudflare's pay-per-crawl feature offers minimal revenue for most publishers, suggesting better strategies like free-registration walls are needed.",
+          "quote": "For most local or niche publishers, Pay Per Crawl is tip‑jar money at best.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://leakypaywall.com/cloudflare-pay-per-crawl-income-or-spare-change/",
+          "source_domain": "leakypaywall.com"
+        }
+      ]
+    }
+  ]
+}
