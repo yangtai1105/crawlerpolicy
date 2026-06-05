@@ -200,8 +200,10 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1179",
     "https://ec.europa.eu/commission/presscorner/detail/en/inf_26_1084",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1173",
-    "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1259"
+    "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1259",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1273",
+    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1272"
   ],
-  "consecutive_failures": 0,
+  "consecutive_failures": 1,
   "first_seen": false
 }
