@@ -1,0 +1,240 @@
+{
+  "generated_at": "2026-06-08T16:48:06.351266+00:00",
+  "iso_year": 2026,
+  "iso_week": 24,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's discourse highlights the dual challenge for publishers: navigating the emerging AI content licensing market, which offers new revenue streams but raises concerns about power imbalances and data control, while simultaneously implementing granular controls over AI crawlers to manage traffic, prevent unauthorized scraping, and preserve content integrity amidst declining referral traffic.",
+      "items": [
+        {
+          "tag": "#DataLicensing",
+          "title": "Publishers quietly cut 'six-figure' deals via Snowflake's AI licensing platform",
+          "published": "2026-05-29",
+          "frame": "Publishers are securing AI licensing deals through Snowflake, enabling monetized RAG access to their content while preventing scraping.",
+          "quote": "\"Publishers are quietly cutting six-figure AI licensing deals on Snowflake, as the data giant positions itself as matchmaker-in-chief between locked-down news content and enterprises keen to plug reliable publisher content into their own internal AI tools via retrieval-augmented generation (RAG).\"",
+          "kind": "reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://digiday.com/media/publishers-quietly-cut-six-figure-deals-via-snowflakes-ai-licensing-platform/",
+          "source_domain": "digiday.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "The emerging AI content licensing market puts news publishers in a “double bind,” a new report warns",
+          "published": "2026-05-27",
+          "frame": "A report warns that the AI content licensing market creates a \"double bind\" for publishers, with Big Tech controlling both content creation and monetization.",
+          "quote": "\"The same big tech companies that are developing commercial AI products and stripping news publishers of site traffic are the ones dictating what alternative revenue will look like.\"",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.niemanlab.org/2026/05/the-emerging-ai-content-licensing-market-puts-news-publishers-in-a-double-bind-a-new-report-warns/",
+          "source_domain": "niemanlab.org"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "AI training data is becoming a seller's market. Here's what it's worth",
+          "published": "2026-05-27",
+          "frame": "The market for AI training data is evolving into a seller's market, with publishers securing significant licensing deals and shifting towards usage-based pricing models.",
+          "quote": "\"The era of free AI training data is over. What is replacing it has a price list.\"",
+          "kind": "reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://qz.com/ai-training-data-pricing-licensing-deals-market-052126",
+          "source_domain": "qz.com"
+        },
+        {
+          "tag": "#BotVerification",
+          "title": "The internet's bot majority has arrived ahead of schedule",
+          "published": "2026-06-06",
+          "frame": "Bot traffic now dominates the internet, with AI crawlers altering the traditional web economics by extracting content without returning comparable referral traffic to publishers.",
+          "quote": "\"AI breaks that loop because it can turn source material into an answer surface outside the source.\"",
+          "kind": "analysis",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://webiano.digital/the-internets-bot-majority-has-arrived-ahead-of-schedule/",
+          "source_domain": "webiano.digital"
+        },
+        {
+          "tag": "#RobotsTxt",
+          "title": "SEO was never born at Google",
+          "published": "2026-06-07",
+          "frame": "The historical tension over web crawlers and robots.txt continues with AI, as Google still frames robots.txt as a crawl-access tool, not a privacy or deindexing mechanism.",
+          "quote": "\"That same tension remains visible in debates over AI crawlers, scraping, and publisher controls. Google's current documentation still frames robots.txt as a crawl-access tool rather than a true privacy or deindexing mechanism.\"",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://webiano.digital/seo-was-never-born-at-google/",
+          "source_domain": "webiano.digital"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "Microsoft MAI-Thinking-1: Clean Licensed Data Claims Clash With Common Crawl",
+          "published": "2026-06-06",
+          "frame": "Microsoft's claims of using \"clean licensed data\" for AI training are questioned due to its reliance on Common Crawl, which blurs the line between public and commercially licensed content.",
+          "quote": "\"Common Crawl is a crawl, not a clearinghouse. It can preserve and index public pages, but the fact that a page was reachable by a crawler is not the same thing as the page being commercially licensed for model training.\"",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://windowsforum.com/threads/microsoft-mai-thinking-1-clean-licensed-data-claims-clash-with-common-crawl.423286/#post-983641",
+          "source_domain": "windowsforum.com"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "Fake Reddit posts are becoming the new SEO for AI search",
+          "published": "2026-06-06",
+          "frame": "Reddit's data is now a valuable, licensed source for AI, but this creates an asymmetry where high-quality sources block access, potentially degrading AI answer quality.",
+          "quote": "\"If high-quality sources restrict access while low-quality or manipulative sources remain open, AI systems may face a source diet problem.\"",
+          "kind": "analysis",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://webiano.digital/fake-reddit-posts-are-becoming-the-new-seo-for-ai-search/",
+          "source_domain": "webiano.digital"
+        },
+        {
+          "tag": "#BotVerification",
+          "title": "AI agents are now buying things - and fraud looks identical",
+          "published": "2026-06-02",
+          "frame": "The rise of AI agents and scrapers makes it difficult to distinguish legitimate AI crawlers from fraudulent activity, as attackers spoof user-agent strings to bypass controls.",
+          "quote": "\"Attackers spoof user-agent strings to exploit the trust organizations extend to recognized AI crawlers, bypassing robots.txt allowlists and rate-limit exemptions.\"",
+          "kind": "reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://ppc.land/ai-agents-are-now-buying-things-and-fraud-looks-identical/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#PublisherControls",
+          "title": "DuckDuckGo Makes AI-Free Search Easier To Set as Default",
+          "published": "2026-06-04",
+          "frame": "AI controls are shifting into search tools, with Google's AI rewriting headlines raising concerns about publisher control and the accuracy of information presented to users.",
+          "quote": "\"Google Search is rewriting headlines with AI, raising concerns about accuracy, trust, and publisher control.\"",
+          "kind": "reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.techrepublic.com/article/news-duckduckgo-no-ai-search/",
+          "source_domain": "techrepublic.com"
+        },
+        {
+          "tag": "#OptOut",
+          "title": "AI Crawler Access Control: The 2026 Decision Matrix",
+          "published": "2026-06-04",
+          "frame": "Publishers need a nuanced AI crawler access strategy, distinguishing between training and search bots, and potentially blocking at the WAF/IP level due to compliance inconsistencies and referral asymmetry.",
+          "quote": "\"The defensible default is to disallow training crawlers (GPTBot, ClaudeBot, CCBot, Google-Extended, Applebot-Extended) while allowing search and retrieval crawlers (OAI-SearchBot, Claude-SearchBot, PerplexityBot) that send referral traffic.\"",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.digitalapplied.com/blog/ai-crawler-access-control-2026-robots-llms-txt-decision-matrix",
+          "source_domain": "digitalapplied.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's reporting highlights the ongoing transformation of enterprise operations by agentic AI, emphasizing the critical need for robust data access protocols like MCP and careful governance to manage agent security and ensure effective deployment. Field reports also showcase practical implementations of agents for specific business functions.",
+      "items": [
+        {
+          "tag": "#EnterpriseAgents",
+          "title": "How Agentic AI is Transforming Enterprise Integration in 2026",
+          "published": "2026-06-07",
+          "frame": "Agentic AI is revolutionizing enterprise integration by enabling autonomous goal pursuit, multi-step actions, and tool use across systems, leading to structured intelligence and task completion.",
+          "quote": "Agentic AI describes AI systems that pursue goals autonomously: planning multi-step actions, calling tools such as APIs, databases, and search systems, and adapting based on results without human-defined sequences.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://ezintegrations.ai/agentic-ai-transforming-enterprise/",
+          "source_domain": "ezintegrations.ai"
+        },
+        {
+          "tag": "#MCP #AgentDataAccess",
+          "title": "AI agents can't help if they can't see your marketing data",
+          "published": "2026-06-04",
+          "frame": "AI agents require live, current, and unmediated access to enterprise data via protocols like MCP to be effective, as raw API access lacks necessary guardrails and context.",
+          "quote": "The problem is getting that data to them live, current, and without a human in the middle copying it across. It's the reason most PPC accounts in 2026 still run almost exactly the way they did before anyone started talking about agents.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://martech.org/ai-agents-cant-help-if-they-cant-see-your-marketing-data/",
+          "source_domain": "martech.org"
+        },
+        {
+          "tag": "#MCP #EnterpriseDeployment",
+          "title": "The Best Code I Ever Wrote Was the Code I Stopped Rewriting. Here Are the 3 Repos I Built Instead.",
+          "published": "2026-05-09",
+          "frame": "The author discusses building custom AI agents and an MCP Server to connect external AI clients to Salesforce, highlighting the shift towards standardized agent-to-tool communication in enterprise environments.",
+          "quote": "With Salesforce now supporting MCP natively in Agentforce, the protocol is becoming the standard for agent-to-tool communication. SAAF's MCP Server works the other direction: it exposes your Salesforce org as a set of tools for any MCP-compatible AI client.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://www.salesforcediary.com/the-best-code-i-ever-wrote-was-the-code-i-stopped-rewriting-here-are-the-3-repos-i-built-instead/",
+          "source_domain": "salesforcediary.com"
+        },
+        {
+          "tag": "#AgentSecurity #DLP",
+          "title": "DLP alerts in Security Copilot: are your controls keeping up?",
+          "published": "2026-06-02",
+          "frame": "DLP investigation agents require careful governance and context-driven approaches to ensure controls keep up with their capabilities, treating them as decision support rather than autonomous authorities.",
+          "quote": "Security teams should treat DLP agents as decision support, not as autonomous authorities.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://nhimg.org/community/nhi-product-announcements-forum/dlp-alerts-in-security-copilot-are-your-controls-keeping-up/",
+          "source_domain": "nhimg.org"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw significant developments in AI and copyright, including a major lawsuit against Meta by publishers and authors for alleged copyright infringement in training its AI models. Concurrently, the UK's competition watchdog mandated that Google allow publishers to opt out of AI content scraping for search summaries, while legal scholars analyzed AI's impact on tort litigation and the broader legal industry.",
+      "items": [
+        {
+          "tag": "#AICopyrightLawsuit",
+          "title": "Mark Zuckerberg 'personally authorized' Meta's copyright infringement, publishers allege",
+          "published": "2026-05-05",
+          "frame": "Five publishing houses and author Scott Turow sued Meta and CEO Mark Zuckerberg for allegedly using copyrighted works to train its AI system Llama.",
+          "quote": "“Defendants reproduced and distributed millions of copyrighted works without permission, without providing any compensation to authors or publishers, and with full knowledge that their conduct violated copyright law,” the complaint reads in part.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://apnews.com/article/meta-mark-zuckerberg-ai-publishers-lawsuit-llama-5609846d4d840014974a847b01079c32",
+          "source_domain": "apnews.com"
+        },
+        {
+          "tag": "#AILegalStandards",
+          "title": "Hurwitz and Lu, 'An Initial Assessment of Standards in Technology Tort Litigation'",
+          "published": "2026-06-08",
+          "frame": "This article assesses how tort law treats standards in technology litigation, finding courts resist treating them as duty-defining baselines, with implications for AI.",
+          "quote": "Because AI standards are emerging unusually early in the technological lifecycle – before stable engineering norms or accumulated accident experience exist – courts are unlikely to treat them as duty-defining baselines or safe harbors.",
+          "kind": "research",
+          "topic": "Copyright & Legal",
+          "url": "https://www.private-law-theory.org/2026/06/08/hurwitz-and-lu-an-initial-assessment-of-standards-in-technology-tort-litigation/",
+          "source_domain": "private-law-theory.org"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights Google's efforts to address publisher concerns over AI Overviews' impact on traffic, while publishers simultaneously pursue content licensing deals as a new revenue stream and engage in lawsuits against AI companies for content usage. The broader consensus is that AI answer engines are significantly reducing referral traffic, necessitating new strategies for journalism and media outlets.",
+      "items": [
+        {
+          "tag": "#AITrafficImpact",
+          "title": "Google looks to ease publisher concerns over the impact of AI Overviews on referral traffic",
+          "published": "2026-06-03",
+          "frame": "Google is introducing new tools and options to address publisher worries about traffic losses due to AI Overviews, despite past reports of significant declines.",
+          "quote": "Google's looking to ease publisher concerns about traffic losses due to the rise of AI overviews in Search.",
+          "kind": "news reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.socialmediatoday.com/news/google-looks-to-ease-publisher-concerns-over-the-impact-of-ai-overviews-on/821959/",
+          "source_domain": "socialmediatoday.com"
+        },
+        {
+          "tag": "#ContentLicensing",
+          "title": "AI Licensing Deals: A New Revenue Stream for Publishers",
+          "published": "2026-06-04",
+          "frame": "Publishers are securing incremental revenue through AI licensing deals via platforms like Snowflake, though this won't fully offset AI-driven traffic declines.",
+          "quote": "AI licensing is an incremental revenue line, not a lifeline. It won't offset the referral traffic losses that have compounded across the industry for several years.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.playwire.com/blog/ai-licensing-deals-a-new-revenue-stream-for-publishers",
+          "source_domain": "playwire.com"
+        },
+        {
+          "tag": "#JournalismAIImpact",
+          "title": "How AI Is Changing Journalism and Media in 2026 — What Nobody Is Telling You",
+          "published": "2026-06-05",
+          "frame": "AI answer engines are significantly reducing publisher referral traffic, forcing newsrooms to adapt to a new reality where direct answers bypass their sites.",
+          "quote": "AI answer engines — ChatGPT, Perplexity, Google's AI Overviews — are answering questions directly. No click required. No visit to the publisher's website. No ad revenue for the outlet that paid a journalist to do the original reporting.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://medium.com/@techrefreshing02/how-ai-is-changing-journalism-and-media-in-2026-what-nobody-is-telling-you-9bd859ff833c",
+          "source_domain": "medium.com"
+        }
+      ]
+    }
+  ]
+}
