@@ -214,8 +214,12 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1294",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1293",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1289",
-    "https://ec.europa.eu/commission/presscorner/detail/en/fs_22_3862"
+    "https://ec.europa.eu/commission/presscorner/detail/en/fs_22_3862",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1309",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1308",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1307",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1304"
   ],
-  "consecutive_failures": 4,
+  "consecutive_failures": 5,
   "first_seen": false
 }
