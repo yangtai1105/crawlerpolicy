@@ -15,6 +15,6 @@
     "https://developers.cloudflare.com/changelog/post/2025-01-07-aig-provider-deepseek/",
     "https://developers.cloudflare.com/changelog/post/2026-04-02-auto-retry-upstream-failures/"
   ],
-  "consecutive_failures": 10,
+  "consecutive_failures": 11,
   "first_seen": false
 }
