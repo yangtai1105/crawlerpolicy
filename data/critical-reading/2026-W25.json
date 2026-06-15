@@ -1,0 +1,262 @@
+{
+  "generated_at": "2026-06-15T17:59:43.366994+00:00",
+  "iso_year": 2026,
+  "iso_week": 25,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's key developments highlight new analytics tools for tracking AI crawler and search traffic, growing concerns over AI agents' access to and control over marketing data, and the implementation of data guardrails in new AI-powered search features. Discussions are also advancing on standardized AI crawler controls, including IP verification and opt-out mechanisms.",
+      "items": [
+        {
+          "tag": "#BotVerification",
+          "title": "Updates - Clickport Analytics: AI Search channel and AI Crawlers",
+          "published": "2026-06-13",
+          "frame": "An analytics platform introduces new features to categorize and track traffic from AI search engines and identify specific AI crawlers, offering publishers detailed bot behavior insights.",
+          "quote": "Traffic from AI search engines now gets its own channel. Referrals from ChatGPT, Perplexity, Claude, Gemini, Copilot, and others show up as \"AI Search\" in your Sources panel instead of being grouped with traditional search engines.",
+          "kind": "field-report",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://clickport.io/updates",
+          "source_domain": "clickport.io"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "AI agents can't help if they can't see your marketing data | MarTech",
+          "published": "2026-06-04",
+          "frame": "This commentary discusses the inherent risks of AI agents having write access to marketing data without proper institutional guardrails and the need for standardized data access protocols.",
+          "quote": "Write access to a live Google Ads account, in the hands of a probabilistic language model, without institutional constraints, is a new category of risk.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://martech.org/ai-agents-cant-help-if-they-cant-see-your-marketing-data/",
+          "source_domain": "martech.org"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "Realtor.com launches RealAssist AI home search | NWS Stock News",
+          "published": "2026-06-02",
+          "frame": "Realtor.com integrates an AI-powered home search feature, emphasizing its design with real-time guardrails to ensure compliance and protect proprietary MLS data.",
+          "quote": "It's built with real-time guardrails intended to promote compliance with Fair Housing standards and guardMLS data.",
+          "kind": "reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.stocktitan.net/news/NWS/realtor-com-launches-real-assist-tm-ai-a-completely-reimagined-way-c8c1hvf93xi1.html",
+          "source_domain": "stocktitan.net"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's reporting highlights critical security flaws in AI agents, particularly prompt injection and authentication bypasses, alongside significant challenges in enterprise deployment due to inadequate foundational infrastructure and poor data quality. Discussions also emerged on the evolving landscape of agentic commerce and the development of new standards for agent identity and trust.",
+      "items": [
+        {
+          "tag": "#AgentSecurity #PromptInjection",
+          "title": "AI Agent Security Hits Its Reckoning: Prompt Injection May Be a Permanent Flaw, Not a Patchable Bug",
+          "published": "2026-06-14",
+          "frame": "Prompt injection is an architectural flaw in LLMs, not a patchable bug, requiring new defenses for AI agent security.",
+          "quote": "The weakness is architectural: large language models have no built-in way to separate trusted commands from untrusted data, because both arrive as the same stream of tokens.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.techtimes.com/articles/318361/20260614/ai-agent-security-hits-its-reckoning-prompt-injection-may-permanent-flaw-not-patchable-bug.htm",
+          "source_domain": "techtimes.com"
+        },
+        {
+          "tag": "#AgentSecurity #AuthenticationFlaw",
+          "title": "AI Security Incident Case: Account Takeover Due to Meta AI Support Assistant Authorization Flaw",
+          "published": "2026-06-10",
+          "frame": "Attackers exploited Meta's AI support assistant to take over Instagram accounts by tricking the agent into changing recovery emails.",
+          "quote": "The core issue exposed in this incident is that the AI agent was granted execution privileges while simultaneously being entrusted with determining authorization boundaries.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://nsfocusglobal.com/ai-security-incident-case-account-takeover-due-to-meta-ai-support-assistant-authorization-flaw/",
+          "source_domain": "nsfocusglobal.com"
+        },
+        {
+          "tag": "#EnterpriseAI #AgentInfrastructure",
+          "title": "The most valuable AI asset your company is building without knowing it",
+          "published": "2026-06-15",
+          "frame": "Enterprise AI's competitive advantage shifts to the 'context layer' of accumulated organizational memory and workflow intelligence.",
+          "quote": "The durable AI competitive advantage is migrating to the context layer the accumulated organizational memory, workflow intelligence, and process knowledge that agents build over time.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://businessanalytics.substack.com/p/the-most-valuable-ai-asset-your-company",
+          "source_domain": "businessanalytics.substack.com"
+        },
+        {
+          "tag": "#AgenticCommerce #InfrastructureCritique",
+          "title": "Agentic Commerce 2026: AI Agents at Checkout",
+          "published": "2026-06-13",
+          "frame": "Agentic commerce struggles with conversion due to merchant infrastructure not being built for agents, despite rising consumer trust and payment rail advancements.",
+          "quote": "Agent-driven conversion currently runs about 86% worse than affiliate traffic because merchant infrastructure was never built for agents.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.syncsoft.ai/en/blog/agentic-commerce-ai-agents-2026",
+          "source_domain": "syncsoft.ai"
+        },
+        {
+          "tag": "#AgentFailure #DataQuality",
+          "title": "Poor Data Quality: Why Your AI Agents Keep Failing",
+          "published": "2026-06-12",
+          "frame": "Poor data quality is a primary cause of AI agent failures, leading to unreliable outputs and untrusted decisions in enterprise deployments.",
+          "quote": "If your AI agents are producing unreliable outputs, inconsistent results, or decisions that nobody trusts, data quality is almost certainly the root cause.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.ysquaretechnology.com/blog/poor-data-quality-ai-agents",
+          "source_domain": "ysquaretechnology.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw significant developments in AI and copyright, with a German court holding Google liable for false AI Overviews, the UK ordering Google to allow publishers to opt out of AI scraping, and a US Supreme Court decision reinforcing human authorship for copyright. Japan's JASRAC also moved to exclude purely AI-generated works from administration, while a US judge ruled authors must pursue individual AI copyright claims.",
+      "items": [
+        {
+          "tag": "#HumanAuthorship",
+          "title": "You Think Your AI Content Is Protected. The Supreme Court Disagrees - Forbes",
+          "published": "2026-06-11",
+          "frame": "The Supreme Court's denial of certiorari reinforces that purely AI-generated content lacks copyright protection, increasing user liability.",
+          "quote": "Works created exclusively by artificial intelligence do not meet the requirements to receive copyright protection.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.forbes.com/sites/terdawn-deboe/2026/06/11/you-think-your-ai-content-is-protected-the-supreme-court-disagrees/",
+          "source_domain": "forbes.com"
+        },
+        {
+          "tag": "#PiracyLawsuits",
+          "title": "Copyright Updates: AI Copyright Cases in the US and Denmark",
+          "published": "2026-06-02",
+          "frame": "Recent US and Danish legal actions target Anna's Archive for copyright infringement, including unauthorized generative AI reproductions of literary works.",
+          "quote": "Recent enforcement actions and legal measures targeting Anna's Archive have emerged in the United States and Denmark.",
+          "kind": "news-reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://internationalpublishers.org/copyright-updates-ai-copyright-cases-in-the-us-and-denmark/",
+          "source_domain": "internationalpublishers.org"
+        },
+        {
+          "tag": "#AICopyrightLitigation",
+          "title": "Authors must pursue AI copyright claims separately, judge rules - Daily Journal",
+          "published": "2026-06-10",
+          "frame": "A federal judge ruled that authors opting out of the Anthropic settlement must pursue individual AI copyright claims against multiple companies.",
+          "quote": "A federal judge ruled that authors who opted out of the $1.5 billion Anthropic copyright settlement cannot sue multiple AI companies in a single action, finding they failed to show the defendants' alleged conduct arose from a common transaction or occurrence.",
+          "kind": "news-reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.dailyjournal.com/article/392097-authors-must-pursue-ai-copyright-claims-separately-judge-rules",
+          "source_domain": "dailyjournal.com"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights the ongoing negative impact of AI Overviews on publisher traffic and revenue, leading to calls for new monetization strategies like pay-per-crawl and content licensing, alongside regulatory actions enabling publishers to opt out of AI summaries.",
+      "items": [
+        {
+          "tag": "#AITrafficImpact",
+          "title": "AI Overviews and Publisher Traffic: What SEO Teams Need to Measure Now",
+          "published": "2026-06-06",
+          "frame": "AI Overviews reduce organic clicks, shifting focus from ranking to actual business outcomes, requiring new measurement strategies for publishers.",
+          "quote": "AI Overviews are changing the relationship between search visibility and actual website visits.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://mocobin.com/news/ai-overviews-publisher-traffic/",
+          "source_domain": "mocobin.com"
+        },
+        {
+          "tag": "#AIOptOut",
+          "title": "Google AI Overviews: Publishers Opt-Out to Save Traffic | SynapNews",
+          "published": "2026-06-06",
+          "frame": "Publishers are opting out of Google AI Overviews, empowered by a CMA ruling, to prevent traffic cannibalization and protect revenue.",
+          "quote": "The shift towards AI-powered search is not just theoretical; its impact on publisher traffic is already a measurable concern.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.synapnews.com/articles/google-ai-overviews-publisher-opt-out",
+          "source_domain": "synapnews.com"
+        },
+        {
+          "tag": "#AIBusinessImpact",
+          "title": "The state of AI in media | How AI is transforming the business side of publishing",
+          "published": "2026-06-04",
+          "frame": "Publishers increasingly adopt AI for business, but 85% fear AI-powered search will reduce referral traffic, impacting revenue streams.",
+          "quote": "Publishers' biggest concern about AI's impact on their business in the next two years is AI-powered search... reducing referral traffic to publisher sites.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://digiday.com/sponsored/the-state-of-ai-in-media/",
+          "source_domain": "digiday.com"
+        },
+        {
+          "tag": "#ContentLicensing",
+          "title": "Full-Text Access: The Main Barrier for AI Research Tools",
+          "published": "2026-06-11",
+          "frame": "Full-text access is crucial for AI research tools, prompting calls for licensing reforms, tiered APIs, micropayments, or pay-per-crawl schemas.",
+          "quote": "In the short run, they may seek middle-ground: tiered APIs, micropayments for AI usage, or pay-per-crawl schemas.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://intuitionlabs.ai/articles/full-text-access-barriers-ai-research-tools",
+          "source_domain": "intuitionlabs.ai"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "UK Publishers Gain Power to Block Google AI Summaries: CMA Ruling Reshapes Digital Content Landscape",
+          "published": "2026-06-03",
+          "frame": "A UK CMA ruling empowers publishers to block their content from Google's AI summaries, strengthening their negotiation position for content deals.",
+          "quote": "The watchdog's ruling effectively gives publishers the power to block their articles from inclusion in Google's AI search features.",
+          "kind": "legal",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://action.alz.org/first-dry/UK-Publishers-Gain-Power-to-Block-Google-AI-Summaries-CMA-Ruling-Reshapes-Digital-Content-Landscape-31-9197",
+          "source_domain": "action.alz.org"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "Google AI Overviews cost one Berlin expat guide 70% of its traffic",
+          "published": "2026-06-14",
+          "frame": "A Berlin expat guide lost 70% of its traffic due to Google AI Overviews, illustrating the severe impact on niche publishers.",
+          "quote": "Nicolas Bouliane publishes 'AI is killing All About Berlin,' reporting a 70% loss in search traffic attributed to Google AI Overviews.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ppc.land/google-ai-overviews-cost-one-berlin-expat-guide-70-of-its-traffic/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#NicheMediaImpact",
+          "title": "AI Overviews killed overfishing.org - and it's not alone",
+          "published": "2026-06-14",
+          "frame": "The independent site overfishing.org shut down after AI Overviews caused a massive traffic collapse, exemplifying the existential threat to niche media.",
+          "quote": "Pepijn announces the closure of overfishing.org on Mastodon, citing the collapse of search traffic in a siloed internet.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ppc.land/ai-overviews-killed-overfishing-org-and-its-not-alone/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#PublisherEconomics",
+          "title": "Media lost its first two battles with Big Tech. It's unlikely to win the third one, either",
+          "published": "2026-06-02",
+          "frame": "Media faces an \"extinction-level event\" from AI Overviews, with Google's AI deals exacerbating traffic and revenue losses for publishers.",
+          "quote": "US broadcast organisation National Public Radio has described the AI search overhaul as an 'extinction-level event' for online news publishers.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.irishtimes.com/business/2026/06/02/media-lost-its-first-two-battles-with-big-tech-its-unlikely-to-win-the-third-one-either/",
+          "source_domain": "irishtimes.com"
+        },
+        {
+          "tag": "#AIOptOut",
+          "title": "Google is Finally Letting Websites Opt Out of AI Search Summaries",
+          "published": "2026-06-03",
+          "frame": "Google introduced an opt-out for AI search summaries in Search Console, driven by a UK CMA ruling, allowing publishers to control content use.",
+          "quote": "Following a landmark ruling by the UK's Competition and Markets Authority (CMA), Google has introduced a new opt-out toggle within Search Console.",
+          "kind": "legal",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://action.alz.org/first-dry/UK-Publishers-Gain-Power-to-Block-Google-AI-Summaries-CMA-Ruling-Reshapes-Digital-Content-Landscape-31-9197",
+          "source_domain": "action.alz.org"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "Reddit Usage-Based AI Data Licensing 2026: A Developer Guide",
+          "published": "2026-06-06",
+          "frame": "Reddit shifts to usage-based AI data licensing, including pay-per-crawl and pay-per-inference, to monetize content more effectively for AI.",
+          "quote": "Through 2026, public reporting describes Reddit pushing toward usage and dynamic pricing, where compensation scales with how often the data is crawled.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.redditapis.com/blogs/reddit-usage-based-ai-data-licensing-2026",
+          "source_domain": "redditapis.com"
+        }
+      ]
+    }
+  ]
+}
