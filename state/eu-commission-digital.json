@@ -277,8 +277,10 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1425",
     "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1456",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1452",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1455"
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1455",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1469",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1462"
   ],
-  "consecutive_failures": 1,
+  "consecutive_failures": 2,
   "first_seen": false
 }
