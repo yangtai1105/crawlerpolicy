@@ -1,0 +1,416 @@
+{
+  "generated_at": "2026-07-06T16:20:01.702460+00:00",
+  "iso_year": 2026,
+  "iso_week": 28,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week saw Cloudflare implement new granular controls for AI crawlers, pushing publishers to differentiate between search and training bots, while some publishers like Time are adopting 'two-track internet' strategies with tools like TollBit. Legal actions against AI companies for content scraping also continue, alongside the launch of new publisher-side bot management tools and detailed guidance on managing AI crawler access via robots.txt.",
+      "items": [
+        {
+          "tag": "#ContentAdaptation",
+          "title": "AI crawlers hit sites 50,000 times per human visit, Cloudflare data shows",
+          "published": "2026-07-06",
+          "frame": "Time converts web pages to Markdown and uses TollBit to serve simplified content to whitelisted AI bots, creating a \"two-track internet.\"",
+          "quote": "Time blocks all AI bots by default, whitelists approved operators, and redirects them to the markdown versions through TollBit, a marketplace that claims structured content can be fetched in 0.25 seconds against more than a minute for a large HTML page.",
+          "kind": "news reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://ppc.land/ai-crawlers-hit-sites-50-000-times-per-human-visit-cloudflare-data-shows/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#PublisherControls",
+          "title": "Royal AI Firewall Launched: See Every AI Agent on WordPress",
+          "published": "2026-07-03",
+          "frame": "A new free WordPress plugin, Royal AI Firewall, provides a dashboard and per-bot controls for site owners to manage AI crawler access.",
+          "quote": "Royal AI Firewall was built for that gap: a live, plain-language dashboard of every AI agent that hit your site in the last 24 hours, with a per-bot dropdown to allow, block, or log-only each one.",
+          "kind": "news reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://royalplugins.com/blog/royal-ai-firewall-launched/",
+          "source_domain": "royalplugins.com"
+        },
+        {
+          "tag": "#OptOut",
+          "title": "Should you block GPTBot, ClaudeBot, and PerplexityBot? A 2026 decision matrix",
+          "published": "2026-07-05",
+          "frame": "Guide advises allowing AI search crawlers for visibility while deliberately deciding on blocking training bots, emphasizing the distinction between their purposes.",
+          "quote": "Allow the answer-time AI fetchers that cite you and send referral traffic — ChatGPT-User, OAI-SearchBot, PerplexityBot, and Claude-Web — and decide the training crawlers (GPTBot, ClaudeBot, Google-Extended, CCBot) based on whether you want your content used to train models.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.indexernow.com/blog/block-or-allow-gptbot-perplexity-claudebot",
+          "source_domain": "indexernow.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week saw significant discussion around the standardization of AI agent protocols (MCP, A2A) and critical reports on the security implications of autonomous agents, including the first documented AI-driven ransomware attack and vulnerabilities in agentic commerce leading to merchant impersonation. Enterprise deployment challenges, especially concerning governance and authentication, also remained a key focus.",
+      "items": [
+        {
+          "tag": "#AgentSecurityIncident",
+          "title": "AI agent reportedly carried out an entire ransomware attack on its own",
+          "published": "2026-07-06",
+          "frame": "Cybersecurity researchers documented what could be the first ransomware attack executed almost entirely by an autonomous AI agent, demonstrating its adaptive capabilities.",
+          "quote": "Cybersecurity researchers say they have documented what could be the first ransomware attack carried out almost entirely by an autonomous AI agent, marking a significant shift in how cyberattacks could be conducted in the future.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://www.techzine.eu/news/security/142707/ai-agent-carries-out-ransomware-attack-independently/",
+          "source_domain": "techzine.eu"
+        },
+        {
+          "tag": "#AgentFailureInvestigation",
+          "title": "Satirical Report Reveals AI Agent Review Failure Modes | Let's Data Science",
+          "published": "2026-07-05",
+          "frame": "Analyzes a satirical report where AI security gates failed to detect malware, revealing concrete failure modes for agentic review architectures.",
+          "quote": "Andrew Nesbitt's June 26, 2026 satirical incident report imagines a malicious `foxhole-lz4` package passing seven AI security gates after every automated reviewer assumes another layer checked the code.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://letsdatascience.com/news/satirical-report-reveals-ai-agent-review-failure-modes-77250f2d",
+          "source_domain": "letsdatascience.com"
+        },
+        {
+          "tag": "#AgentSecurityIncident",
+          "title": "AI agent carries out ransomware attack independently",
+          "published": "2026-07-06",
+          "frame": "Reports on the first observed ransomware attack executed autonomously by an AI agent, demonstrating its ability to adapt and combine vulnerabilities.",
+          "quote": "Researchers at Sysdig say they have observed, for the first time, a ransomware attack carried out almost entirely by an AI agent.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://www.techzine.eu/news/security/142707/ai-agent-carries-out-ransomware-attack-independently/",
+          "source_domain": "techzine.eu"
+        },
+        {
+          "tag": "#EnterpriseAgentDeployment",
+          "title": "The Enterprise Agentic AI Landscape 2026",
+          "published": "2026-06-30",
+          "frame": "Highlights the significant gap between enterprise AI agent adoption and the readiness of governance, data quality, and process context for autonomous agents.",
+          "quote": "Enterprises have deployed generative AI broadly for everyday work, but far fewer have built the governance, data quality and process context required to let agents act autonomously inside real business processes.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://theagentics.co/insights/the-enterprise-agentic-ai-landscape-2026",
+          "source_domain": "theagentics.co"
+        },
+        {
+          "tag": "#AgenticCommerceSecurity",
+          "title": "The Missing Link in Agentic Commerce and the Threat of AI Merchant Impersonation",
+          "published": "2026-06-30",
+          "frame": "Exposes a critical vulnerability in agentic commerce where AI agents recommend fraudulent merchant websites, leading to consumer impersonation and financial risk.",
+          "quote": "Recent testing conducted by UK-based scam-detection service Ask Silver exposed a profound vulnerability in contemporary large language models. The investigation revealed that highly sophisticated fraudulent websites, designed to explicitly impersonate well-known British retail brands, were actively appearing inside ChatGPT shopping recommendations.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://thefintechtimes.com/the-missing-link-in-agentic-commerce-and-the-threat-of-ai-merchant-impersonation/",
+          "source_domain": "thefintechtimes.com"
+        },
+        {
+          "tag": "#AgentAuthentication",
+          "title": "Identity for AI Agents & Agentic Auth — 2026 - Identity Challenge Card - Avatier",
+          "published": "2026-06-24",
+          "frame": "Details the architectures and protocols for agent identity, authentication, and the delegation chain, emphasizing the need for agents' own identity class.",
+          "quote": "AI agents need identities, credentials, and authentication ceremonies of their own — separate from the humans they act on behalf of, separate from the service accounts they're often confused with.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://identitychallengecard.avatier.com/en/blog/identity-ai-agents-agentic-authentication-2026",
+          "source_domain": "identitychallengecard.avatier.com"
+        },
+        {
+          "tag": "#AgenticCommerceImpact",
+          "title": "Agentic commerce is going to require rethinking consumer payments - American Banker",
+          "published": "2026-06-30",
+          "frame": "Argues that agentic commerce will force payments processors and merchants to adapt to machine-speed purchasing decisions, necessitating a rethinking of consumer payments.",
+          "quote": "As AI agents become more of a presence in retail commerce, payments processors and merchants alike are going to have to adjust to a new world where purchasing decisions are made at machine-speed.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.americanbanker.com/payments/opinion/agentic-commerce-is-going-to-require-rethinking-consumer-payments",
+          "source_domain": "americanbanker.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw significant activity in AI copyright and regulation, with new lawsuits and cease-and-desist orders against AI companies, ongoing debates on fair use and liability, and updates on the implementation of the EU AI Act and US regulatory policy.",
+      "items": [
+        {
+          "tag": "#AICopyrightLitigation",
+          "title": "AI copyright cases hit 125 on 250th birthday of United States",
+          "published": "2026-07-06",
+          "frame": "The US has seen 125 AI copyright lawsuits, highlighting its role as a global litigation hub, with OpenAI and book authors leading.",
+          "quote": "On the 250th birthday of the United States of America, the copyright lawsuits filed against AI companies hit 125. A fitting number.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://chatgptiseatingtheworld.substack.com/p/ai-copyright-cases-hit-125-on-250th",
+          "source_domain": "chatgptiseatingtheworld.substack.com"
+        },
+        {
+          "tag": "#PublisherRights",
+          "title": "AI copyright litigation yet to resolve key questions for publishers, PLS conference hears",
+          "published": "2026-07-06",
+          "frame": "Publishers await clear legal answers on AI training, outputs, and licensing, as discussed at the Publishers' Licensing Services Conference.",
+          "quote": "Publishers are still waiting for “clear” legal answers on AI training, outputs and licensing, the Publishers' Licensing Services (PLS) Conference heard.",
+          "kind": "reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.thebookseller.com/news/ai-copyright-litigation-yet-to-resolve-key-questions-for-publishers-pls-conference-hears",
+          "source_domain": "thebookseller.com"
+        },
+        {
+          "tag": "#DeepfakeCopyright",
+          "title": "MPA Sends First-Ever AI Cease-and-Desist to ByteDance Over Seedance Deepfakes",
+          "published": "2026-07-06",
+          "frame": "The MPA issued a cease-and-desist to ByteDance for alleged copyright infringement by its Seedance AI deepfake tool, escalating licensing disputes.",
+          "quote": "No formal litigation has been filed by the studios or the MPA as of July 2026, leaving the cease-and-desist letters as the strongest legal action taken to date.",
+          "kind": "reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://mlq.ai/news/mpa-sends-first-ever-ai-cease-and-desist-to-bytedance-over-seedance-deepfakes/",
+          "source_domain": "mlq.ai"
+        },
+        {
+          "tag": "#AICopyrightLiability",
+          "title": "Could Your AI Content Land Your Business In Court?",
+          "published": "2026-07-03",
+          "frame": "Businesses face significant legal risks from AI-generated content infringing copyrights or trademarks, making them accountable for AI outputs.",
+          "quote": "Companies using AI are ultimately accountable for its output, not the AI itself.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.forbes.com/sites/bernardmarr/2026/07/03/could-your-ai-content-land-your-business-in-court/",
+          "source_domain": "forbes.com"
+        },
+        {
+          "tag": "#FairUseDefense",
+          "title": "Midjourney is Trying to Force Hollywood to Reveal How it Uses AI",
+          "published": "2026-07-06",
+          "frame": "Midjourney seeks to compel Hollywood studios to disclose their internal AI usage, arguing hypocrisy in their copyright infringement lawsuit.",
+          "quote": "If Plaintiffs are doing the very thing they seek to punish, that evidence goes to the heart of Midjourney's fair use and unclean hands defenses.",
+          "kind": "reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://petapixel.com/2026/07/06/midjourney-is-trying-to-force-hollywood-to-reveal-how-it-uses-ai/",
+          "source_domain": "petapixel.com"
+        },
+        {
+          "tag": "#AILegislationUS",
+          "title": "AI Legislative Update: July 3, 2026",
+          "published": "2026-07-02",
+          "frame": "US states are advancing bills on AI copyright, requiring disclosure of training data and addressing digital replicas and chatbot transparency.",
+          "quote": "AB 412 is a copyright protection bill that passed the Assembly during the 2025 session and was held over. It would require AI developers to document any copyrighted materials used to train an AI model...",
+          "kind": "reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.transparencycoalition.ai/news/ai-legislative-update-july3-2026",
+          "source_domain": "transparencycoalition.ai"
+        },
+        {
+          "tag": "#AITrainingFairUse",
+          "title": "Courts and Regulators Diverge on AI Training as Fair Use Debate Intensifies",
+          "published": "2026-07-03",
+          "frame": "Regulators and courts are taking different approaches to AI training data, with some focusing on transparency and others on AI-generated outcomes.",
+          "quote": "The differing positions adopted by regulators, courts, technology companies, and publishers illustrate that no single framework has yet emerged for governing AI training.",
+          "kind": "analysis",
+          "topic": "Copyright & Legal",
+          "url": "https://receivablesinfo.com/2026/07/02/ai-training-fair-use-courts-regulators-debate/",
+          "source_domain": "receivablesinfo.com"
+        },
+        {
+          "tag": "#EUAIAct",
+          "title": "Keeping Pace with the AI Act: A Snapshot of Recent Developments",
+          "published": "2026-07-06",
+          "frame": "The EU AI Act is rapidly progressing, with recent amendments and national implementation efforts shaping compliance for general-purpose AI and high-risk systems.",
+          "quote": "The EU AI Act continued to move rapidly from law on paper to law in practice in recent weeks, with significant developments at both European and national level.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://www.mccannfitzgerald.com/knowledge/technology-and-innovation/keeping-pace-with-the-ai-act-a-snapshot-of-recent-developments",
+          "source_domain": "mccannfitzgerald.com"
+        },
+        {
+          "tag": "#FTCAIRegulation",
+          "title": "FTC Seeks Public Comment on Policy Statement Addressing AI Accuracy",
+          "published": "2026-07-01",
+          "frame": "The FTC is seeking public comment on a proposed policy statement to address concerns about AI companies manipulating AI system outputs, potentially violating consumer expectations.",
+          "quote": "The Federal Trade Commission is seeking public comment on a proposed policy statement addressing concerns that AI companies may be manipulating the behavior of their AI systems contrary to reasonable consumer expectations for objectivity and accuracy.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://www.ftc.gov/news-events/news/press-releases/2026/07/ftc-seeks-public-comment-policy-statement-addressing-ai-accuracy",
+          "source_domain": "ftc.gov"
+        },
+        {
+          "tag": "#EUAIActCompliance",
+          "title": "EU AI Act Updates 2026: What Moved, What Didn't, and What US Companies Must Do Now",
+          "published": "2026-07-03",
+          "frame": "US companies must understand that while some EU AI Act deadlines were deferred, General-Purpose AI enforcement and Article 50 transparency obligations remain binding from August 2, 2026.",
+          "quote": "The obligations that land first – general-purpose AI (GPAI) enforcement and Article 50 transparency – did not move at all.",
+          "kind": "analysis",
+          "topic": "Copyright & Legal",
+          "url": "https://www.ewsolutions.com/eu-ai-act-updates-2026/",
+          "source_domain": "ewsolutions.com"
+        },
+        {
+          "tag": "#EUAIActCompliance",
+          "title": "EU AI Act update: Key changes and compliance impact",
+          "published": "2026-07-06",
+          "frame": "The EU AI Act continues rapid evolution with recent amendments and guidelines, requiring companies to adapt to new compliance landscapes.",
+          "quote": "The EU AI Act continues to evolve rapidly, with several recent developments reshaping the compliance landscape.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://www.twobirds.com/en/twobirds-tv/global/eu-ai-act-update-key-changes-and-compliance-impact",
+          "source_domain": "twobirds.com"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights a growing 'publisher traffic crisis' due to AI Overviews, with new research showing a significant drop in organic clicks. Regulators are scrutinizing AI's use of journalism, while publishers are actively pursuing content licensing deals and platforms like Cloudflare are introducing 'pay-per-use' models. Discussions also emerged on first-party data monetization strategies and the critical role of AI in protecting indigenous content and minority languages.",
+      "items": [
+        {
+          "tag": "#SearchImpact",
+          "title": "AI Overviews Are Costing Publishers~40% of Their Clicks — Findings From A Field Experiment",
+          "published": "2026-07-03",
+          "frame": "A field experiment reveals Google AI Overviews cut organic clicks by nearly 40% and increase zero-click searches, without affecting sponsored clicks.",
+          "quote": "When an AIO would have appeared, hiding it increased organic clicks by 39.8% and cut zero-click searches by 34.5%.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.karooya.com/blog/ai-overviews-are-costing-publishers40-of-their-clicks-findings-from-a-field-experiment/",
+          "source_domain": "karooya.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "Artificial intelligence: regulators scrutinise Google's use of journalism",
+          "published": "2026-06-30",
+          "frame": "UK regulators impose a new conduct requirement on Google, allowing publishers to opt out of AI summaries and demanding proper attribution.",
+          "quote": "In June, the UK's Competition and Markets Authority (CMA) announced that online publishers and news organisations will be able to opt out of their content being used in AI summaries on Google's search engine.",
+          "kind": "legal",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.ibanet.org/Artificial-intelligence-regulators-scrutinise-Googles-use-of-journalism",
+          "source_domain": "ibanet.org"
+        },
+        {
+          "tag": "#ValueExtraction",
+          "title": "Google's AI Overview Extracts Value from Publishers Without Compensation. The CMA's Remedy Leaves That Intact.",
+          "published": "2026-06-30",
+          "frame": "Commentary argues Google's AI Overviews extract value from publishers without compensation, and the CMA's remedy doesn't address the core economic harm.",
+          "quote": "Google's AI Overview doesn't renegotiate that bargain. It ends it, unilaterally, while keeping the publisher inside the index that makes the rest of Google's business model work.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.thesling.org/googles-ai-overview-extracts-value-from-publishers-without-compensation-the-cmas-remedy-leaves-that-intact/",
+          "source_domain": "thesling.org"
+        },
+        {
+          "tag": "#TrafficLoss",
+          "title": "Google AI changes could deal further blow to publisher Discover traffic",
+          "published": "2026-06-29",
+          "frame": "Google is replacing publisher links in its Discover feed with AI-written summaries, further reducing referral traffic for news organizations.",
+          "quote": "Google has started replacing publisher links in its Discover feed with AI-written posts summarising related stories.",
+          "kind": "news",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://pressgazette.co.uk/platforms/google-ai-changes-could-deal-further-blow-to-publisher-discover-traffic/",
+          "source_domain": "pressgazette.co.uk"
+        },
+        {
+          "tag": "#PublisherCrisis",
+          "title": "The Publisher Traffic Crisis in the Age of AI Answers",
+          "published": "2026-07-06",
+          "frame": "An essay details how AI-powered search is fundamentally reshaping digital publishing, leading to a crisis as AI answers reduce website visits.",
+          "quote": "Every answer generated by AI may represent a website visit that never happens. Every summarized article may represent page views that disappear.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ninthpost.com/publisher-traffic-crisis-in-the-age-of-ai-answers/",
+          "source_domain": "ninthpost.com"
+        },
+        {
+          "tag": "#DataMonetization",
+          "title": "Activating High-Value Audiences With First Party Data",
+          "published": "2026-07-01",
+          "frame": "An expert discusses strategies for brands and agencies to build high-value audiences from first-party data while maintaining privacy and ensuring data quality.",
+          "quote": "Strong first-party data strategies start with the basics. A fair value exchange where consumers share their data in return for useful content, services, or experiences that genuinely matter to them.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://talkcmo.com/interview/activate-high-value-audiences",
+          "source_domain": "talkcmo.com"
+        },
+        {
+          "tag": "#IndigenousContent",
+          "title": "Digital Stewardship Indigenous Knowledge, Colonial Power, and Artificial Intelligence.",
+          "published": "2026-07-06",
+          "frame": "Research explores how AI can either repeat colonial patterns of data extraction or become a tool for digital stewardship if guided by Indigenous ethics and consent.",
+          "quote": "The central claim is that Indigenous Knowledge should not be treated merely as content for digital preservation or computational analysis, but as a relational system governed by protocols of responsibility, consent, sacred limitation, and collective ownership.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.ibanet.org/Artificial-intelligence-regulators-scrutinise-Googles-use-of-journalism",
+          "source_domain": "ibanet.org"
+        },
+        {
+          "tag": "#MinorityLanguages",
+          "title": "Will Artificial Intelligence (AI) help or hinder the survival of minority languages into the next century?",
+          "published": "2026-06-30",
+          "frame": "An analysis discusses the controversial role of AI in the survival of minority languages, highlighting risks of bias and opportunities for preservation.",
+          "quote": "AI models predominantly trained on English reflect Western-centric views, treat dialects as less “correct” and often fail to understand regional variants.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://islandsbusiness.com/news-break/will-artificial-intelligence-ai-help-or-hinder-the-survival-of-minority-languages-into-the-next-century/",
+          "source_domain": "islandsbusiness.com"
+        },
+        {
+          "tag": "#LanguageProtection",
+          "title": "Azis Abakirov - AI for Good",
+          "published": "2026-06-30",
+          "frame": "Azis Abakirov champions AI democratization to empower minority language communities to build their own systems, safeguard cultural identity, and secure digital sovereignty.",
+          "quote": "His mission is to transform developing nations into AI powerhouses, empowering minority language communities to build their own systems, safeguard cultural identity, and secure digital sovereignty.",
+          "kind": "news",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://aiforgood.itu.int/speaker/azis-abakirov/",
+          "source_domain": "aiforgood.itu.int"
+        },
+        {
+          "tag": "#PayPerUse",
+          "title": "Cloudflare Moves To Make AI Pay For The Content It Consumes",
+          "published": "2026-07-01",
+          "frame": "Cloudflare introduces a 'Pay Per Use' model, evolving from 'Pay Per Crawl,' to compensate publishers when their content appears in AI results.",
+          "quote": "The company is also evolving its Pay Per Crawl experiment into a broader Pay Per Use model, where publishers could be paid when their content appears in an AI result or when an agent purchases premium information for a specific task.",
+          "kind": "news",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.forbes.com/sites/sandycarter/2026/07/01/cloudflare-moves-to-make-ai-pay-for-the-content-it-consumes/",
+          "source_domain": "forbes.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Cloudflare Gives AI Crawlers Until September 15 to Pay Up or Get Blocked",
+          "published": "2026-07-04",
+          "frame": "Cloudflare sets a deadline for AI crawlers to pay for content access or face blocking, shifting from a 'Pay Per Crawl' to a 'Pay Per Use' model.",
+          "quote": "Cloudflare is also rebranding its old Pay Per Crawl tool into Pay Per Use, and the shift matters: instead of billing every single fetch, site owners get paid when their content actually shows up inside an AI chatbot's answer.",
+          "kind": "news",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.aixploria.com/en/ai-radar/cloudflare-ai-crawlers-september-blocked-deadline/",
+          "source_domain": "aixploria.com"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "Nine Signs One-Year Content Deal With Microsoft Copilot",
+          "published": "2026-07-03",
+          "frame": "Australia's Nine Entertainment signs a one-year pilot deal with Microsoft Copilot for full-text journalism access, guaranteeing attribution and click-through links.",
+          "quote": "Nine Entertainment and Microsoft signed a one-year pilot letting Copilot pull full-text Nine journalism, not just previews, to ground AI search answers.",
+          "kind": "news",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://letsdatascience.com/news/nine-signs-one-year-content-deal-with-microsoft-copilot-6bf54da0",
+          "source_domain": "letsdatascience.com"
+        },
+        {
+          "tag": "#NicheMediaImpact",
+          "title": "How will AI change the indie publishing industry?",
+          "published": "2026-07-01",
+          "frame": "An analysis of AI's impact on independent magazine publishers, focusing on areas where AI can assist or undermine creativity and customer value.",
+          "quote": "While AIs are able to generate words and photographs in seconds, only parts of the indie publishing industry appear ripe for technology disruption.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.parkcom.co.uk/news/how-will-ai-change-the-indie-publishing-industry/",
+          "source_domain": "parkcom.co.uk"
+        },
+        {
+          "tag": "#SmallPublisherRevenue",
+          "title": "AI Answers Have Gatekeepers. The Missing Piece Is a Payment Rail.",
+          "published": "2026-07-04",
+          "frame": "Commentary argues publishers, especially small ones, need a payment model for AI citations as traffic recovery is unlikely, advocating for native advertising within AI answers.",
+          "quote": "Search referrals fell roughly 60% for the smallest publishers between 2024 and 2025, against approximately 22% for the largest, according to Chartbeat data reported by Axios.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.smalk.ai/blog/ai-answers-gatekeepers-missing-payment-rail",
+          "source_domain": "smalk.ai"
+        }
+      ]
+    }
+  ]
+}
