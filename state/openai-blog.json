@@ -546,8 +546,12 @@
     "https://openai.com/index/introducing-genebench-pro",
     "https://openai.com/index/genebench-pro/case-studies",
     "https://openai.com/index/australian-payments-plus",
-    "https://openai.com/index/mufg"
+    "https://openai.com/index/mufg",
+    "https://openai.com/index/government-national-security-partnerships",
+    "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
+    "https://openai.com/index/k-12-educators-practical-skills",
+    "https://openai.com/index/introducing-gpt-live"
   ],
-  "consecutive_failures": 42,
+  "consecutive_failures": 43,
   "first_seen": false
 }
