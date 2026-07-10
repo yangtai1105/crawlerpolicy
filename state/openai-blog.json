@@ -550,8 +550,11 @@
     "https://openai.com/index/government-national-security-partnerships",
     "https://openai.com/index/separating-signal-from-noise-coding-evaluations",
     "https://openai.com/index/k-12-educators-practical-skills",
-    "https://openai.com/index/introducing-gpt-live"
+    "https://openai.com/index/introducing-gpt-live",
+    "https://openai.com/index/deutsche-telekom",
+    "https://openai.com/index/gpt-5-6-preferred-model-microsoft-365-copilot",
+    "https://openai.com/index/gpt-5-6"
   ],
-  "consecutive_failures": 43,
+  "consecutive_failures": 44,
   "first_seen": false
 }

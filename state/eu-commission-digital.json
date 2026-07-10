@@ -327,8 +327,12 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1526",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1517",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1479",
-    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1571"
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1571",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1586",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1581",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1579",
+    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1572"
   ],
-  "consecutive_failures": 2,
+  "consecutive_failures": 3,
   "first_seen": false
 }
