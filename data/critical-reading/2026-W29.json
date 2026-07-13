@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-07-13T15:40:57.152477+00:00",
+  "iso_year": 2026,
+  "iso_week": 29,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's key discussions revolve around Cloudflare's new tools for publishers to manage and potentially monetize AI crawler traffic, alongside analyses highlighting the significant disparity between AI bot content fetches and actual referral traffic back to publishers.",
+      "items": [
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Cloudflare exposes AI crawlers hitting sites 50000 times per visitor",
+          "published": "2026-07-05",
+          "frame": "Cloudflare's new 'Attribution Business Insights' dashboard reveals extreme AI crawler activity, prompting a shift from per-crawl charging to citation-based payments and new default blocking policies.",
+          "quote": "a crawler operating at the high end of that range could visit the same page tens of thousands of times before a single reader clicked through from that company's product.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://ppc.land/cloudflare-exposes-ai-crawlers-hitting-sites-50000-times-per-visitor/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#PublisherControls",
+          "title": "AI Insights | Cloudflare Radar",
+          "published": "2026-07-01",
+          "frame": "Cloudflare launches 'AI Insights' and a 'Monetization Gateway' to help publishers understand and charge for AI bot traffic, marking a shift in content monetization strategies.",
+          "quote": "One year after declaring Content Independence Day, a dynamic market for monetized content has officially emerged.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://radar.cloudflare.com/ai-insights",
+          "source_domain": "radar.cloudflare.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's reporting highlights a surge in AI agent security incidents within enterprises, with over half experiencing breaches or near-misses due to inadequate identity controls, shared credentials, and a lack of formal governance. Concurrently, new analysis emphasizes the critical need for advanced 'context layers' in AI agent infrastructure to enable precise, secure actions in enterprise environments.",
+      "items": [
+        {
+          "tag": "#AgentSecurity",
+          "title": "Half of enterprises hit by AI agent security incidents as deployments surge, DigiCert finds",
+          "published": "2026-07-09",
+          "frame": "A DigiCert survey reveals 50% of enterprises experienced AI agent security incidents in the last six months, attributing issues to rapid deployment and insufficient identity controls.",
+          "quote": "Half of enterprises experienced a security incident directly tied to an unauthorized or misconfigured AI agent in the past six months.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://www.marketscale.com/industries/software-and-technology/half-of-enterprises-hit-by-ai-agent-security-incidents-as-deployments-surge-digicert-finds",
+          "source_domain": "marketscale.com"
+        },
+        {
+          "tag": "#AgentSecurity",
+          "title": "More than half of enterprises report AI agent security incidents, and most are sharing credentials across bots - Crypto Briefing",
+          "published": "2026-07-10",
+          "frame": "A VentureBeat survey indicates 54% of enterprises faced AI agent security incidents, with 69% using shared credentials and only 30% sandboxing high-risk bots.",
+          "quote": "A new survey of 107 enterprises reveals that 69% run AI agents on shared credentials while only 30% bother to sandbox high-risk bots.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://www.marketscale.com/industries/software-and-technology/half-of-enterprises-hit-by-ai-agent-security-incidents-as-deployments-surge-digicert-finds",
+          "source_domain": "marketscale.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw significant developments in AI copyright, with news outlets seeking sanctions against OpenAI in a high-stakes lawsuit, a legal analysis on whether AI model training constitutes 'probabilistic copies,' and a UN agency moving to strengthen intellectual property protection against generative AI. Additionally, Australian musicians are highlighting their lack of legal protection against AI using their works, contrasting with the EU's proactive stance.",
+      "items": [
+        {
+          "tag": "#AICopyrightLawsuit",
+          "title": "News outlets urge a judge to sanction OpenAI in a high-stakes AI copyright fight",
+          "published": "2026-07-09",
+          "frame": "News organizations are seeking sanctions against OpenAI for alleged discovery misconduct in a copyright infringement lawsuit, claiming the company is hiding evidence.",
+          "quote": "A filing Thursday in a Manhattan federal courthouse alleges OpenAI “chose obstruction” over releasing datasets and ChatGPT logs that could show how the AI system used copyrighted news content.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://apnews.com/article/openai-new-york-times-ai-copyright-lawsuit-7ce19c7a25aad60d4c94556d36e96cc9",
+          "source_domain": "apnews.com"
+        },
+        {
+          "tag": "#AIProbabilisticCopies",
+          "title": "Lemley and Cooper, 'Probabilistic “Copies” in Generative AI Models' | Private Law Theory",
+          "published": "2026-07-09",
+          "frame": "This analysis explores whether an AI model's storage of information that might generate copyrighted output constitutes a 'copy' under current copyright law.",
+          "quote": "Copyright law has not previously had to decide whether storing information that might or might not produce output similar to a copyrighted work is itself a copy of the work.",
+          "kind": "research",
+          "topic": "Copyright & Legal",
+          "url": "https://www.private-law-theory.org/2026/07/09/lemley-and-cooper-probabilistic-copies-in-generative-ai-models/",
+          "source_domain": "private-law-theory.org"
+        },
+        {
+          "tag": "#AustralianAICopyright",
+          "title": "Australian musicians hate AI using their songs, but have little legal protection",
+          "published": "2026-07-01",
+          "frame": "Australian musicians face legal challenges in protecting their copyrighted works from AI training, contrasting with the EU's approach requiring AI models to declare training data sources.",
+          "quote": "The European Union's AI act forged an alternative path, to prevent AI companies from hiding copyright infringements from artists and rights holders.",
+          "kind": "analysis",
+          "topic": "Copyright & Legal",
+          "url": "https://www.artshub.com.au/news/features/australian-musicians-hate-ai-using-their-songs-but-have-little-legal-protection-2865530/",
+          "source_domain": "artshub.com.au"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights ongoing legal battles over AI's use of copyrighted content, with news outlets seeking sanctions against OpenAI, while regulators globally are pushing for clearer content licensing deals and opt-out mechanisms. Technical developments also show Cloudflare's shift to citation-based payments for AI crawls and significant changes in AI bot traffic patterns, underscoring the evolving landscape of publisher control and monetization in the AI ecosystem.",
+      "items": [
+        {
+          "tag": "#AICopyright",
+          "title": "News Outlets Urge a Judge to Sanction Openai in a High-Stakes AI Copyright Fight",
+          "published": "2026-07-09",
+          "frame": "News organizations are seeking sanctions against OpenAI in a copyright lawsuit, alleging the company withheld evidence regarding its use of copyrighted news content for AI training.",
+          "quote": "A filing Thursday in a Manhattan federal courthouse alleges OpenAI “chose obstruction” over releasing datasets and ChatGPT logs that could show how the AI system used copyrighted news content.",
+          "kind": "legal",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://vinnews.com/2026/07/09/news-outlets-urge-a-judge-to-sanction-openai-in-a-high-stakes-ai-copyright-fight/",
+          "source_domain": "vinnews.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Cloudflare exposes AI crawlers hitting sites 50000 times per visitor",
+          "published": "2026-07-05",
+          "frame": "Cloudflare data reveals excessive AI crawler activity, leading to a shift from a 'Pay Per Crawl' model to citation-based payments for AI content use.",
+          "quote": "Cloudflare frames the shift as part of a broader move from an internet organized around search engine optimization toward one increasingly shaped by answer engine optimization and, more recently, generative engine optimization, as chatbots and AI search products synthesize responses directly from crawled material rather than sending users to the source.",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ppc.land/cloudflare-exposes-ai-crawlers-hitting-sites-50000-times-per-visitor/",
+          "source_domain": "ppc.land"
+        },
+        {
+          "tag": "#GoogleAdsAI",
+          "title": "Marketing with AI Weekly Roundup: ChatGPT Work Ships Finished Files, Claude Cowork Goes Mobile, and Google Ads Makes AI Your Default",
+          "published": "2026-07-12",
+          "frame": "This roundup discusses the shift towards AI agents performing tasks, Google Ads' new default AI authorization for ad creation, and the importance of human-checked content.",
+          "quote": "Google Ads quietly rewrote its Terms of Service — AI can now build your ads by default. On 1 July, every Google Ads account was automatically bound to a revised Terms of Service...",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://getmarketingwithai.substack.com/p/marketing-with-ai-weekly-roundup-ac8",
+          "source_domain": "getmarketingwithai.substack.com"
+        },
+        {
+          "tag": "#AICrawlerShare",
+          "title": "ChatGPT Statistics 2026 - 900M Users, $25B ARR, and the Cloudflare Crawl Data That Flipped Right Back (July 2026 Update)",
+          "published": "2026-07-01",
+          "frame": "Cloudflare data for July 2026 shows ClaudeBot has significantly surpassed GPTBot in AI crawler traffic, indicating a shift in AI model training activity.",
+          "quote": "As of June 2026, ClaudeBot has retaken the AI-crawler lead and nearly doubled it: 19.8% of AI-bot traffic versus GPTBot's 9.4% (full-month June, holding through the trailing 7- and 28-day windows into early July).",
+          "kind": "field-report",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://technologychecker.io/blog/chatgpt-statistics",
+          "source_domain": "technologychecker.io"
+        }
+      ]
+    }
+  ]
+}
