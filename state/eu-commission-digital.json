@@ -353,8 +353,11 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1618",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1617",
     "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1612",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1609"
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1609",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1639",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1625",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1635"
   ],
-  "consecutive_failures": 0,
+  "consecutive_failures": 1,
   "first_seen": false
 }
