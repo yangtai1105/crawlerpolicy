@@ -556,8 +556,9 @@
     "https://openai.com/index/gpt-5-6",
     "https://openai.com/index/bio-bug-bounty",
     "https://openai.com/index/advancing-ai-safety-through-state-and-federal-action",
-    "https://openai.com/index/unlocking-self-improvement-gpt-red"
+    "https://openai.com/index/unlocking-self-improvement-gpt-red",
+    "https://openai.com/index/why-teens-deserve-access-safe-ai"
   ],
-  "consecutive_failures": 50,
+  "consecutive_failures": 51,
   "first_seen": false
 }
