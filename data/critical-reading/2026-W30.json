@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-07-20T15:10:33.493342+00:00",
+  "iso_year": 2026,
+  "iso_week": 30,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's analysis on crawling and publisher controls highlights the importance for marketers to optimize robots.txt configurations for AI crawlers and to track AI referral traffic for improved ROI, while also noting the continued use of web scraping for competitive intelligence.",
+      "items": [
+        {
+          "tag": "#AICrawlerOptimization",
+          "title": "The Ultimate Performance Marketing Guide to Maximizing ROI",
+          "published": "2026-06-30",
+          "frame": "Marketers are advised to optimize robots.txt for AI crawlers and track AI referral traffic to enhance ROI, alongside leveraging web scraping for competitive insights.",
+          "quote": "Fix any AI crawler blocks in robots.txt or WAF settings immediately – this is the fastest, highest-impact fix available.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://paidmediaworld.com/ultimate-performance-marketing-guide/",
+          "source_domain": "paidmediaworld.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's reporting highlights significant advancements and challenges in AI agent ecosystems, focusing on emerging protocols like MCP and A2A, the evolving landscape of agent identity and security, and the critical need for robust governance and accountability frameworks, particularly in agentic commerce and enterprise deployments. Regulatory efforts, such as the proposed AI AGENT Act, are also shaping the future of consumer AI agent interactions.",
+      "items": [
+        {
+          "tag": "#AIRegulation",
+          "title": "The Federal AI AGENT Act: Consumer Protection in AI Clothing? | Davis Wright Tremaine",
+          "published": "2026-07-14",
+          "frame": "Critiques the proposed AI AGENT Act, examining its framework for consumer AI agents, platform interoperability, and unresolved liability issues.",
+          "quote": "Even in its current form, however, it provides an important indication of how policymakers may begin approaching the regulation of consumer AI agents and platform interoperability.",
+          "kind": "legal",
+          "topic": "Agents",
+          "url": "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2026/07/ai-agent-act-consumer-ai-regulation",
+          "source_domain": "dwt.com"
+        },
+        {
+          "tag": "#AgentProtocols",
+          "title": "AI Agent Protocols in 2026: MCP, A2A, A2UI, AG-UI, and UCP | Aasher Kamal",
+          "published": "2026-07-13",
+          "frame": "Provides a practical guide to the 2026 AI agent protocol stack, differentiating between MCP, A2A, and other standards for tool and agent collaboration.",
+          "quote": "Google's March 2026 guide to AI agent protocols describes MCP as the data/tool layer and A2A as the collaboration layer. That is the most useful mental model.",
+          "kind": "research",
+          "topic": "Agents",
+          "url": "https://www.dwt.com/blogs/artificial-intelligence-law-advisor/2026/07/ai-agent-act-consumer-ai-regulation",
+          "source_domain": "dwt.com"
+        },
+        {
+          "tag": "#AgentIdentity",
+          "title": "AI Agents Don't Break IAM, They Break Its Assumptions | RSAC Conference",
+          "published": "2026-07-16",
+          "frame": "Argues that AI agents fundamentally challenge traditional Identity and Access Management (IAM) by introducing non-human identities and complex delegation chains.",
+          "quote": "The real question is no longer who is this, but whose authority is being exercised, under what constraints, and for how long.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.rsaconference.com/library/blog/ai-agents-dont-break-iam-they-break-its-assumptions",
+          "source_domain": "rsaconference.com"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "State of Agentic Commerce | Protocol Tracker | agenticplug.ai",
+          "published": "2026-07-11",
+          "frame": "Reports on key developments in agentic commerce, including AWS Bedrock AgentCore Payments, Visa's collaboration with OpenAI, and Adyen's new APIs.",
+          "quote": "AWS announced Amazon Bedrock AgentCore Payments (preview), a managed service that lets AI agents autonomously pay for APIs, web content, MCP servers, and other agents.",
+          "kind": "news-reporting",
+          "topic": "Agents",
+          "url": "https://agenticplug.ai/current-state-of-agentic-commerce",
+          "source_domain": "agenticplug.ai"
+        },
+        {
+          "tag": "#AgentInfrastructure",
+          "title": "Agent Gateway: Control layer for agentic AI - Affinidi",
+          "published": "2026-07-14",
+          "frame": "Describes an 'Agent Gateway' as a control layer for agentic AI, providing a single enforcement point for compliance, security, and operational policies.",
+          "quote": "Agent Gateway is deployed between your applications and agents and the AI backend services they rely on (MCP servers, databases, external actors and beyond), routing all AI traffic through a single point.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://www.affinidi.com/agent-gateway/",
+          "source_domain": "affinidi.com"
+        },
+        {
+          "tag": "#AgentAccountability",
+          "title": "Who is accountable when AI breaks the law? - Foster Moore",
+          "published": "2026-07-09",
+          "frame": "Discusses the critical question of accountability when AI agents act on behalf of businesses, highlighting the need for infrastructure to establish identity and authority.",
+          "quote": "Ultimately, AI may change how work is performed, but it does not change where accountability rests.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://www.fostermoore.com/news/who-is-accountable-when-ai-breaks-the-law",
+          "source_domain": "fostermoore.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw a significant development in the ongoing AI copyright litigation, with news outlets seeking sanctions against OpenAI in their lawsuit. Additionally, the European Union implemented new regulations requiring Google to share search data and open its Android platform to rival AI companies.",
+      "items": [
+        {
+          "tag": "#AICopyrightLawsuits",
+          "title": "News outlets urge a judge to sanction OpenAI in a high-stakes AI copyright fight",
+          "published": "2026-07-09",
+          "frame": "News organizations are seeking attorney fees and sanctions against OpenAI in their copyright infringement lawsuit, alleging improper withholding of evidence.",
+          "quote": "Among the sanctions sought by the newspapers Thursday are attorney fees that would pay for the efforts to secure “improperly withheld” evidence.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://apnews.com/article/openai-new-york-times-ai-copyright-lawsuit-7ce19c7a25aad60d4c94556d36e96cc9",
+          "source_domain": "apnews.com"
+        },
+        {
+          "tag": "#AIRegulation",
+          "title": "EU forces Google to share search data and open Android to rival AI companies",
+          "published": "2026-07-16",
+          "frame": "The European Union has issued new rules compelling Google to share search data and allow rival AI companies access to its Android operating system.",
+          "quote": "The European Union issued two new rules for Google on Thursday to force it to share search data and open up its Android operating system to rival AI companies.",
+          "kind": "regulatory",
+          "topic": "Copyright & Legal",
+          "url": "https://apnews.com/article/eu-google-android-antitrust-184b3067120e56d858cb8c81aee26d45",
+          "source_domain": "apnews.com"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's analysis and reporting reveal a significant decline in publisher traffic due to AI Overviews, severely impacting small and medium-sized outlets. While content licensing deals with AI platforms are becoming more common, a critical issue is that publishers are not receiving a share of AI-generated ad revenue, raising concerns about fair compensation and negotiation power.",
+      "items": [
+        {
+          "tag": "#ContentLicensing",
+          "title": "AI licensing is changing which affiliate publishers matter most to your program",
+          "published": "2026-07-17",
+          "frame": "AI content licensing deals are creating a new dynamic where publishers supplying content to AI platforms gain upstream influence, impacting affiliate programs.",
+          "quote": "Publishers supply licensed content into structured pipelines and receive payment each time their content grounds an AI answer, shifting from open-web scraping to permissioned, metered access.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.accelerationpartners.com/resource/ai-licensing-is-changing-which-affiliate-publishers-matter-most-to-your-program/",
+          "source_domain": "accelerationpartners.com"
+        },
+        {
+          "tag": "#SearchTrafficImpact",
+          "title": "Why Writers Are Quitting Has Three Specific Causes. The Personal Essays Name Only One. | by Noor Mohammad - Medium",
+          "published": "2026-07-15",
+          "frame": "Google AI Overviews have severely reduced publisher traffic, leading to significant income loss for writers and a broken pre-AI revenue model.",
+          "quote": "Ahrefs' February 2026 analysis found that AI Overviews correlate with a 58% reduction in click-through rates for top-ranking pages.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://medium.com/@reactjsbd/why-writers-are-quitting-has-three-specific-causes-the-personal-essays-name-only-one-3d5498113dba",
+          "source_domain": "medium.com"
+        }
+      ]
+    }
+  ]
+}
