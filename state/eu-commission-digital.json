@@ -367,8 +367,10 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/fs_26_1599",
     "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1614",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1613",
-    "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1598"
+    "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1598",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1656",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1394"
   ],
-  "consecutive_failures": 0,
+  "consecutive_failures": 1,
   "first_seen": false
 }
