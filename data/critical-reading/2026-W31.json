@@ -1,0 +1,636 @@
+{
+  "generated_at": "2026-07-27T15:41:13.839933+00:00",
+  "iso_year": 2026,
+  "iso_week": 31,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's reporting highlights a growing publisher revolt against Google's AI Overviews due to significant traffic loss, prompting legal threats and calls for better opt-out mechanisms. Concurrently, analyses of AI crawler behavior emphasize the rapid evolution of bot activity and the need for nuanced publisher controls beyond basic robots.txt directives, distinguishing between training and retrieval bots.",
+      "items": [
+        {
+          "tag": "#AICrawlerBehavior",
+          "title": "We Published 20 Insights About AI Bots. Six Months Later, 65% Had Changed.",
+          "published": "2026-07-20",
+          "frame": "An analysis of server logs reveals that AI bot behavior is rapidly evolving, with 65% of previously identified insights changing within six months.",
+          "quote": "Meta went from absent to the heaviest AI crawler in eight weeks, the ChatGPT-User IP fingerprint inverted, llms.txt is now fetched constantly but almost entirely by scanners rather than frontier labs, and Bytespider turned out to be the third-heaviest crawler rather than a robots.txt tourist.",
+          "kind": "field-report",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.wislr.com/articles/ai-bot-behavior-six-months-later",
+          "source_domain": "wislr.com"
+        },
+        {
+          "tag": "#AILawsuits",
+          "title": "Technical and ethical debt in the AI fair use crisis",
+          "published": "2026-07-26",
+          "frame": "This analysis explores the intensifying crisis of AI fair use, copyright lawsuits, and the varied approaches to opt-out mechanisms across different jurisdictions.",
+          "quote": "Lawsuits initiated by authors and publishers question the legality of training AI with copyrighted content “without consent, credit, or compensation,” to build systems that can be used to replace or outcompete creators of copyrighted content.",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://sciencepolicyreview.org/2026/07/technical-and-ethical-debt-in-the-ai-fair-use-crisis/",
+          "source_domain": "sciencepolicyreview.org"
+        },
+        {
+          "tag": "#CopyrightLitigation",
+          "title": "Generative AI Copyright: Law, Litigation & Best Practices in 2026",
+          "published": "2026-07-24",
+          "frame": "This report details ongoing generative AI copyright litigation, including the Anthropic settlement, and outlines best practices for content creators and businesses regarding opt-out mechanisms and compliance.",
+          "quote": "Many major providers now allow rights holders to request exclusion of their works from training datasets.",
+          "kind": "legal",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://aimultiple.com/generative-ai-copyright",
+          "source_domain": "aimultiple.com"
+        },
+        {
+          "tag": "#AIImpact",
+          "title": "Cloudflare report unpacks how Google AI is killing the internet",
+          "published": "2026-07-21",
+          "frame": "A Cloudflare report indicates that Google AI Overviews are significantly reducing human web traffic, exacerbating concerns over Google's single crawler for both indexing and AI training.",
+          "quote": "Cloudflare has revealed how Google AI is resulting in large drops in human traffic on the internet.",
+          "kind": "news-reporting",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://mobilesyrup.com/2026/07/21/google-ai-killing-internet-cloudflare-report/",
+          "source_domain": "mobilesyrup.com"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week's discourse on AI agents heavily focused on security risks in enterprise deployments, including prompt injection and insider threats, alongside significant developments in agent-to-agent (A2A) and Model Context Protocol (MCP) standards for inter-agent communication and integration.",
+      "items": [
+        {
+          "tag": "#AgentSecurity",
+          "title": "What Are the Top 10 Enterprise Security Risks of Agentic AI?",
+          "published": "2026-07-24",
+          "frame": "This report details key security risks of agentic AI in enterprise settings, emphasizing identity-centric governance and Zero Trust controls.",
+          "quote": "As organizations deploy AI agents across enterprise environments, addressing these risks requires identity-centric governance and Zero Trust security controls.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://xage.com/blog/what-are-the-top-10-enterprise-security-risks-of-agentic-ai/",
+          "source_domain": "xage.com"
+        },
+        {
+          "tag": "#AgentGovernance",
+          "title": "Seeing AI Agents Is Not Enough. Security Teams Must Enforce What They Can Do",
+          "published": "2026-07-24",
+          "frame": "This commentary argues that security teams must move beyond mere visibility to enforce least privilege and intent-based controls for AI agents.",
+          "quote": "The risk is not that an organization has too many agents. The risk is that those agents can operate across systems without consistent identity, intent, ownership, and enforcement.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://thehackernews.com/2026/07/seeing-ai-agents-is-not-enough-security.html",
+          "source_domain": "thehackernews.com"
+        },
+        {
+          "tag": "#AgentIdentity",
+          "title": "AI agent insider risk: what it means for IAM and governance",
+          "published": "2026-07-22",
+          "frame": "This analysis highlights that AI agents introduce new insider risks, requiring governance to treat agent identity as a distinct, monitored population.",
+          "quote": "The insider threat model now has to include AI agents, because legitimacy no longer means predictability.",
+          "kind": "analysis",
+          "topic": "Agents",
+          "url": "https://nhimg.org/community/agentic-ai-and-nhis/ai-agent-insider-risk-what-it-means-for-iam-and-governance/",
+          "source_domain": "nhimg.org"
+        },
+        {
+          "tag": "#AgentVulnerabilities",
+          "title": "How Safe Is AI? Risks of AI Agents, Plugins and Skills Explained - ESET",
+          "published": "2026-07-21",
+          "frame": "This research explains security risks associated with AI agents, plugins, and skills, citing findings on suspicious and malicious agent skills.",
+          "quote": "ESET Research analyzed around 800,000 agentic skills between March and May 2026 and found over 25,000 suspicious cases, where a minor change could turn an agent malicious.",
+          "kind": "research",
+          "topic": "Agents",
+          "url": "https://www.eset.com/blog/en/home-topics/cybersecurity-protection/how-safe-is-ai/",
+          "source_domain": "eset.com"
+        },
+        {
+          "tag": "#A2AProtocol",
+          "title": "Agents at Scale: Multi-Agent Architecture with A2A Protocol on Agent Runtime and ADK Integration - Codelabs",
+          "published": "2026-07-22",
+          "frame": "This report details the Agent2Agent (A2A) protocol for seamless communication and collaboration between AI agents in multi-agent architectures.",
+          "quote": "The A2A (Agent2Agent) Protocol solves the communication side — standardizing how agents discover each other's capabilities and collaborate across frameworks and organizations.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://codelabs.developers.google.com/adk-a2a-agent-runtime",
+          "source_domain": "codelabs.developers.google.com"
+        },
+        {
+          "tag": "#A2AProtocol",
+          "title": "Agent2Agent (A2A) protocol, explained · AgentProtocol",
+          "published": "2026-07-24",
+          "frame": "This guide explains the Agent2Agent (A2A) protocol, an open standard for communication and task delegation between independent AI agents.",
+          "quote": "Agent2Agent (A2A) is an open protocol, introduced by Google, that lets independent AI agents talk to one another.",
+          "kind": "research",
+          "topic": "Agents",
+          "url": "https://agentprotocol.ai/agent2agent-protocol/",
+          "source_domain": "agentprotocol.ai"
+        },
+        {
+          "tag": "#MCPProtocol",
+          "title": "MCP Grows Up: What the July 28 Spec Means for Every Enterprise Agent Deployment",
+          "published": "2026-07-23",
+          "frame": "This commentary discusses updates to the Model Context Protocol (MCP) specification and their implications for enterprise AI agent deployments.",
+          "quote": "Mandatory Mcp-Method and Mcp-Name headers let load balancers and rate-limiters route on the operation without body inspection.",
+          "kind": "commentary",
+          "topic": "Agents",
+          "url": "https://trilogyai.substack.com/p/mcp-grows-up-what-the-july-28-spec",
+          "source_domain": "trilogyai.substack.com"
+        },
+        {
+          "tag": "#AgenticCommerce",
+          "title": "How Agentic AI, MCP Servers, and APIs Work Together in Financial Services Compliance",
+          "published": "2026-07-21",
+          "frame": "This report explains how agentic AI, MCP servers, and APIs integrate to enhance compliance workflows in financial services.",
+          "quote": "When properly governed and connected, they represent something compliance teams have been trying to achieve for years: a workflow that is efficient enough that employees complete it and controlled enough that regulators can audit every step.",
+          "kind": "field-report",
+          "topic": "Agents",
+          "url": "https://www.comply.com/resource/agentic-ai-mcp-api-connectors-compliance/",
+          "source_domain": "comply.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw significant developments in AI copyright, including the final approval of Anthropic's $1.5 billion settlement with authors and publishers, and news outlets seeking sanctions against OpenAI in their ongoing lawsuit. Regulatory and policy discussions also advanced, with California's AB 412 moving forward and a new study backing an EU opt-out registry for AI training data. Additionally, a landmark ruling in India dismissed an interim injunction against OpenAI, while new shareholder lawsuits emerged against tech executives over AI training disclosures.",
+      "items": [
+        {
+          "tag": "#AISettlement",
+          "title": "Harry Potter publisher to receive millions in Anthropic copyright settlement - The Guardian",
+          "published": "2026-07-22",
+          "frame": "Anthropic's $1.5 billion settlement with authors and publishers for using copyrighted works to train AI models received final court approval, marking the largest such payout.",
+          "quote": "The publisher of Harry Potter has received a multimillion-pound payout as a beneficiary of a $1.5bn (£1.12bn) copyright settlement between the AI startup Anthropic and thousands of authors over the use of their protected work to power chatbots.",
+          "kind": "news reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.theguardian.com/technology/2026/jul/22/bloomsbury-book-publisher-anthropic-copyright-settlement",
+          "source_domain": "theguardian.com"
+        },
+        {
+          "tag": "#DiscoveryMisconduct",
+          "title": "News outlets urge a judge to sanction OpenAI in a high-stakes AI copyright fight - The Akron Legal News",
+          "published": "2026-07-16",
+          "frame": "News outlets, including The New York Times, are seeking court sanctions against OpenAI for allegedly withholding evidence in their copyright infringement lawsuit.",
+          "quote": "The newspapers allege the ChatGPT maker is hiding evidence important to what could be a landmark copyright infringement trial over how OpenAI and its business partner, Microsoft, built their AI technologies using millions of news articles.",
+          "kind": "news reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.scconline.com/blog/post/2026/07/27/khaitan-co-represents-openai-copyright-dispute-delhi-high-court/",
+          "source_domain": "scconline.com"
+        },
+        {
+          "tag": "#IndianAILaw",
+          "title": "Khaitan & Co. represents OpenAI, the Developers of ChatGPT, in landmark AI copyright dispute before Delhi HC - SCC Online",
+          "published": "2026-07-27",
+          "frame": "The Delhi High Court dismissed an interim injunction against OpenAI in India's first judicial ruling on AI training and copyright, finding OpenAI's use of public content for training lawful.",
+          "quote": "In a significant and precedent-setting ruling dated 24 July 2026, Justice Amit Bansal dismissed ANI’s application for an interim injunction against OpenAI.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://www.scconline.com/blog/post/2026/07/27/khaitan-co-represents-openai-copyright-dispute-delhi-high-court/",
+          "source_domain": "scconline.com"
+        },
+        {
+          "tag": "#USCopyrightOffice",
+          "title": "AI-Generated Content Copyright: The 2026 U.S. Rule - AI Humanizer",
+          "published": "2026-07-26",
+          "frame": "The U.S. Copyright Office maintains that wholly AI-generated material is not copyrightable, requiring human authorship for protection as of July 2026.",
+          "quote": "The answer to whether AI-generated content copyright exists in 2026 is usually no for the machine-produced portion alone. The U.S. Copyright Office has held its line: copyright requires human authorship.",
+          "kind": "analysis",
+          "topic": "Copyright & Legal",
+          "url": "https://aihumanizer.com/post/ai-generated-content-copyright-the-2026-us-rule",
+          "source_domain": "aihumanizer.com"
+        },
+        {
+          "tag": "#AILegislation",
+          "title": "AI Legislative Update: July 24, 2026 - Transparency Coalition",
+          "published": "2026-07-24",
+          "frame": "California's AB 412, a copyright protection bill, is advancing in the Senate, requiring AI developers to document copyrighted training materials and provide information to rights owners.",
+          "quote": "AB 412 is a copyright protection bill that passed the Assembly during the 2025 session and was held over. It would require AI developers to document any copyrighted materials used to train an AI model, and make available a mechanism allowing a rights owner to submit a request for information regarding their copyrighted material and its use.",
+          "kind": "news reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.transparencycoalition.ai/news/ai-legislative-update-july24-2026",
+          "source_domain": "transparencycoalition.ai"
+        },
+        {
+          "tag": "#EUAIAct",
+          "title": "AI opt-out registry for content creators backed in new study - Pinsent Masons",
+          "published": "2026-07-22",
+          "frame": "A new study commissioned by the European Commission supports an AI opt-out registry for content creators to address shortcomings in existing text and data mining exceptions under EU copyright law.",
+          "quote": "EU copyright law contains a text and data mining (TDM) exception that, among other possible uses, provides scope for AI developers to use others' content in the training of their AI models, unless rightsholders explicitly exercise an opt‑out in a machine‑readable format.",
+          "kind": "news reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.pinsentmasons.com/out-law/news/ai-opt-out-registry-content-creators-backed-new-study",
+          "source_domain": "pinsentmasons.com"
+        },
+        {
+          "tag": "#ShareholderLawsuit",
+          "title": "Big Tech companies facing new wave of lawsuits over copyright and AI - ABA Journal",
+          "published": "2026-07-17",
+          "frame": "Shareholders are filing derivative suits against Microsoft and Adobe executives, alleging failure to disclose AI training methods and strategies, exposing companies to legal risks.",
+          "quote": "In recent months, three shareholder derivative suits have been filed against executives at Microsoft Corp. and Adobe Inc. for allegedly failing to disclose AI training methods or provide accurate information about AI strategies, according to a story from Bloomberg Law.",
+          "kind": "news reporting",
+          "topic": "Copyright & Legal",
+          "url": "https://www.abajournal.com/news/article/big-tech-companies-facing-new-wave-of-lawsuits-over-copyright-and-AI",
+          "source_domain": "abajournal.com"
+        },
+        {
+          "tag": "#JournalismFuture",
+          "title": "Reuters editor warns AI threatens journalism's future",
+          "published": "2026-07-25",
+          "frame": "A Reuters editor warns that AI poses a significant threat to the future of journalism, highlighting ongoing debates about AI's use of journalistic content.",
+          "quote": "Why are news organizations suing AI companies while others are signing deals? June 27, 2026: Some publishers are suing AI companies while others sign licensing deals, a rift that will determine whether tech firms must pay for using journalistic content.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.journalismpakistan.com/reuters-editor-warns-ai-threatens-journalism-s-future",
+          "source_domain": "journalismpakistan.com"
+        },
+        {
+          "tag": "#AILitigation",
+          "title": "AI Litigations 2026: What Business Owners Need to Know | Brevard SEM",
+          "published": "2026-07-15",
+          "frame": "Six landmark AI lawsuits between April and July 2026 are redefining business liability for AI tool deployment, shifting responsibility from builders to deployers.",
+          "quote": "The core shift: courts are holding the businesses that deploy AI responsible for what those tools do, not just the companies that built them.",
+          "kind": "analysis",
+          "topic": "Copyright & Legal",
+          "url": "https://www.brevardsem.com/insights/ai-litigations-2026-what-business-owners-need-to-know",
+          "source_domain": "brevardsem.com"
+        },
+        {
+          "tag": "#CopyrightBestPractices",
+          "title": "Generative AI Copyright: Law, Litigation & Best Practices in 2026 - AIMultiple",
+          "published": "2026-07-24",
+          "frame": "This article provides an overview of generative AI copyright in 2026, covering fair use for training data, human authorship requirements, and EU AI Act transparency rules.",
+          "quote": "In most jurisdictions, the legality of using copyrighted works to train AI models has been actively litigated and courts are beginning to draw lines. The picture that has emerged since mid-2025 is more nuanced than either side claimed: legal sourcing matters more than the act of training itself.",
+          "kind": "analysis",
+          "topic": "Copyright & Legal",
+          "url": "https://aimultiple.com/generative-ai-copyright",
+          "source_domain": "aimultiple.com"
+        },
+        {
+          "tag": "#AILegalRisks",
+          "title": "Emerging AI Legal Risks - July 2026 Update - Quinn Emanuel",
+          "published": "2026-07-21",
+          "frame": "This legal update discusses the evolving landscape of AI-related legal risks, including challenges in securing IP protection for AI innovations and the application of privacy laws to AI tools.",
+          "quote": "Although hundreds of billions of dollars are being invested in AI, IP protection for innovative designs and uses of AI inventions may be difficult to secure.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://www.quinnemanuel.com/the-firm/publications/emerging-ai-legal-risks-july-2026-update/",
+          "source_domain": "quinnemanuel.com"
+        },
+        {
+          "tag": "#DataMining",
+          "title": "AI firms' mass purchase and destruction of books for model training fuels copyright debate",
+          "published": "2026-07-26",
+          "frame": "The practice of AI firms acquiring and destroying books for model training is intensifying the copyright debate, particularly concerning the legality of data mining under European law.",
+          "quote": "Specifically Europe passed a law allowing data mining of books. There is an opt-out, but books from before the law don't have it. This is not fair use.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.reddit.com/r/law/comments/1v7blbl/ai_firms_mass_purchase_and_destruction_of_books/",
+          "source_domain": "reddit.com"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's analysis highlights the significant impact of AI Overviews on publisher traffic, with reported drops of 40-58% in organic clicks, prompting publishers to explore new monetization strategies like e-commerce and pay-per-crawl models. Content licensing deals are accelerating, particularly for large scholarly publishers, while smaller and niche outlets face challenges in securing equitable value. Discussions at the UN and other forums emphasize the critical need for AI systems to protect indigenous content and minority languages, addressing algorithmic bias and ensuring consent and data sovereignty.",
+      "items": [
+        {
+          "tag": "#SearchImpact",
+          "title": "AEO & GEO Statistics for 2026 (AI Search & Citation Data)",
+          "published": "2026-07-13",
+          "frame": "AI Overviews significantly reduce organic clicks (58% for #1 result, 83% zero-click rate) and shift traffic, with 84% of AI citations from earned media.",
+          "quote": "When an AI Overview appears, the #1 result loses about 58% of its clicks, and the zero-click rate jumps to roughly 83%.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.ghacks.net/2026/07/23/reddit-and-major-publishers-consider-blocking-google-as-ai-overviews-cut-search-referral-traffic/",
+          "source_domain": "ghacks.net"
+        },
+        {
+          "tag": "#OptOut",
+          "title": "Opt Out of AI Overviews: Should You Take Google's Offer?",
+          "published": "2026-07-15",
+          "frame": "Discusses the trade-offs for publishers considering opting out of Google's AI Overviews, which reduce organic traffic but can increase brand visibility.",
+          "quote": "If users can get their answer directly on the search results page, they may be less likely to click through to websites, potentially reducing organic traffic for some queries.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.ghacks.net/2026/07/23/reddit-and-major-publishers-consider-blocking-google-as-ai-overviews-cut-search-referral-traffic/",
+          "source_domain": "ghacks.net"
+        },
+        {
+          "tag": "#ContentLicensing",
+          "title": "OpenAI Publisher Deals: The Complete Map of Every Media Partnership (2023-2026)",
+          "published": "2026-07-13",
+          "frame": "Maps OpenAI's content licensing deals, highlighting how they shape ChatGPT's citations and the consolidating pool of AI information sources.",
+          "quote": "These deals are more than media industry news. They directly shape what ChatGPT says and cites: Licensed publisher content is eligible to surface.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://llmpulse.ai/blog/openai-publisher-deals/",
+          "source_domain": "llmpulse.ai"
+        },
+        {
+          "tag": "#SearchTrafficDecline",
+          "title": "How Google's AI overviews impact search traffic to media outlets.",
+          "published": "2026-07-20",
+          "frame": "Analyzes how Google's AI Overviews cause a decline in publisher traffic, especially for evergreen content, urging focus on original reporting.",
+          "quote": "Over the past year, we've seen report after report that the rise of AI overviews at the top of Google search results have led to far fewer clicks to publisher websites.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.ghacks.net/2026/07/23/reddit-and-major-publishers-consider-blocking-google-as-ai-overviews-cut-search-referral-traffic/",
+          "source_domain": "ghacks.net"
+        },
+        {
+          "tag": "#PublisherBlockade",
+          "title": "Reddit and Major Publishers Consider Blocking Google as AI Overviews Cut Search Referral Traffic",
+          "published": "2026-07-23",
+          "frame": "Major publishers, including Reddit, are considering blocking Google's AI use due to significant drops in search referral traffic caused by AI Overviews.",
+          "quote": "When an Overview appeared, that number dropped to 8 percent. Clicks on links within Google's AI summaries occurred in only 1 percent of searches.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.ghacks.net/2026/07/23/reddit-and-major-publishers-consider-blocking-google-as-ai-overviews-cut-search-referral-traffic/",
+          "source_domain": "ghacks.net"
+        },
+        {
+          "tag": "#ScholarlyLicensing",
+          "title": "Scholarly Publisher AI Licensing Deals: Inside the 2026 Numbers",
+          "published": "2026-07-23",
+          "frame": "Examines the financial impact of AI content licensing for scholarly publishers, showing large publishers securing significant revenue while smaller ones lag.",
+          "quote": "Wiley's fiscal 2026 results (year ended April 30, 2026) show $49 million in AI licensing revenue and lifetime AI revenue surpassing $110 million.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://casrai.org/news/scholarly-publisher-ai-licensing-deals-2026",
+          "source_domain": "casrai.org"
+        },
+        {
+          "tag": "#ClickImpactResearch",
+          "title": "Podcast: Quantifying the impact of AI Overviews on outbound clicks (with Ananya Sen and Saharsh Agarwal) | Mobile Dev Memo by Eric Seufert",
+          "published": "2026-07-21",
+          "frame": "Discusses research showing AI Overviews significantly reduce outbound clicks (by 40%) without improving user experience, posing risks to smaller publishers.",
+          "quote": "Showing AI Overviews reduces clicks by 40% conditional on a search happening, which is a fairly big number.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://mobiledevmemo.com/podcast-quantifying-the-impact-of-ai-overviews-on-outbound-clicks-with-ananya-sen-and-saharsh-agarwal/",
+          "source_domain": "mobiledevmemo.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "How Much Is Crawling Your Content Worth to an AI Bot?",
+          "published": "2026-07-24",
+          "frame": "Explores a new pay-per-crawl approach for publishers to charge AI crawlers, proposing a scalable tool for optimal pricing.",
+          "quote": "Pay-per-crawl is a new approach, pioneered by companies including Cloudflare and Tollbit, that allows content producers to charge AI crawlers an access fee for visiting a page.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://insights.som.yale.edu/insights/how-much-is-crawling-your-content-worth-to-an-ai-bot",
+          "source_domain": "insights.som.yale.edu"
+        },
+        {
+          "tag": "#LicensingLeverage",
+          "title": "The Google AI Deal No Publisher Wanted Just Handed Them Something Better: Clarity",
+          "published": "2026-07-22",
+          "frame": "Argues Google's explicit AI licensing terms, despite traffic loss, provide publishers with clarity and leverage in negotiations.",
+          "quote": "For publishers already watching search referral traffic fall off a cliff, it's a stark offer. But here's the thing: by making the terms explicit, Google has inadvertently handed publishers something they didn't have before - clarity.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.fastly.com/de/blog/google-ai-deal-no-publisher-wanted",
+          "source_domain": "fastly.com"
+        },
+        {
+          "tag": "#AIPaymentModels",
+          "title": "Who Pays for the Information Behind AI Answers?",
+          "published": "2026-07-24",
+          "frame": "Discusses emerging payment models like pay-per-crawl for AI access, noting large publishers have more bargaining power than small ones.",
+          "quote": "Payment per crawl is relatively simple to understand and enforce at the network edge, but it's ... Large publishers can negotiate.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://oldstackjournal.com/notes-opinions/who-pays-for-the-information-behind-ai-answers/",
+          "source_domain": "oldstackjournal.com"
+        },
+        {
+          "tag": "#EcommercePivot",
+          "title": "AI Search Has Cut Publisher Traffic by 50%+. The Pivot Most of Them Are Ignoring Is Ecommerce. Is This Actually a Viable Path? : r/EcommerceCircle",
+          "published": "2026-07-24",
+          "frame": "Argues that publishers, facing significant traffic loss from AI search, should pivot to e-commerce by leveraging their engaged audience and content engine.",
+          "quote": "Research from Pew, Ahrefs, Search Engine Land, and academic sources puts the drop in publisher search traffic from AI Overviews and AI chat at 50% or more.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.reddit.com/r/EcommerceCircle/comments/1v5ptba/ai_search_has_cut_publisher_traffic_by_50_the/",
+          "source_domain": "reddit.com"
+        },
+        {
+          "tag": "#AICitations",
+          "title": "What are AI citations? How PR teams can track and earn them | Muck Rack Blog",
+          "published": "2026-07-21",
+          "frame": "Analyzes that 84% of AI citations come from earned media, emphasizing their importance for visibility and how niche outlets can earn them.",
+          "quote": "Muck Rack's analysis of more than 25 million AI-cited links found that earned media accounts for about 84% of AI citations, while paid and advertorial content accounts for just 0.3%.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://muckrack.com/blog/ai-citations-for-pr",
+          "source_domain": "muckrack.com"
+        },
+        {
+          "tag": "#BrandStoryAI",
+          "title": "AI Is Telling Every Brand's Story. Here's How Companies Are Shaping It",
+          "published": "2026-07-14",
+          "frame": "Examines how earned media, particularly from authoritative and niche outlets, disproportionately influences AI engine responses, making PR vital for brand narratives.",
+          "quote": "ChatGPT reported that as much as 63% of its answers are derived from traditional media sources.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.forbes.com/sites/garydrenik/2026/07/14/ai-is-telling-every-brands-story-heres-how-companies-are-shaping-it/",
+          "source_domain": "forbes.com"
+        },
+        {
+          "tag": "#IndigenousAIProtection",
+          "title": "Data centers are booming. Indigenous leaders want help protecting their lands.",
+          "published": "2026-07-16",
+          "frame": "Indigenous leaders at EMRIP call for policies to protect Indigenous lands and knowledge from AI's resource-intensive infrastructure and data harvesting.",
+          "quote": "Indigenous delegates said that while there must be policies to ensure that AI does not harvest Indigenous knowledge without consent, protections for Indigenous lands and waters are equally important.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://grist.org/global-indigenous-affairs-desk/data-centers-are-booming-indigenous-leaders-want-help-protecting-their-lands/",
+          "source_domain": "grist.org"
+        },
+        {
+          "tag": "#IndigenousLanguageAI",
+          "title": "UN advances digital strategy for Indigenous language preservation",
+          "published": "2026-07-22",
+          "frame": "A UN forum highlights AI's opportunities and governance challenges for Indigenous language revitalization, stressing ownership and consent over language data.",
+          "quote": "digital technologies and AI can support language revitalisation while also raising questions about Indigenous Peoples' rights to maintain ownership and control over their languages, cultural heritage and traditional knowledge.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://dig.watch/updates/emrip-strategy-indigenous-language-preservation",
+          "source_domain": "dig.watch"
+        },
+        {
+          "tag": "#PayPerCrawlCritique",
+          "title": "Cloudflare's Pay-Per-Crawl: Sustainable Income or Just Spare Change? - Leaky Paywall",
+          "published": "2026-07-17",
+          "frame": "Critiques Cloudflare's pay-per-crawl, arguing it offers minimal revenue for most publishers, especially smaller ones, compared to direct audience engagement.",
+          "quote": "For most local or niche publishers, Pay Per Crawl is tip‑jar money at best: Looking to grow your publication?",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://leakypaywall.com/cloudflare-pay-per-crawl-income-or-spare-change/",
+          "source_domain": "leakypaywall.com"
+        },
+        {
+          "tag": "#IndigenousRightsAI",
+          "title": "Advancing Indigenous Peoples' rights at EMRIP19",
+          "published": "2026-07-17",
+          "frame": "Summarizes discussions at EMRIP19 on ensuring AI development respects Indigenous rights, prevents misuse of knowledge, and supports language revitalization.",
+          "quote": "AI systems must be developed and governed in accordance with international human rights standards, including UNDRIP.",
+          "kind": "legal",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://ganhri.org/advancing-indigenous-peoples-rights-emrip19/",
+          "source_domain": "ganhri.org"
+        },
+        {
+          "tag": "#AdSupplyCrisis",
+          "title": "AI Search Just Gutted The Open Web's Ad Supply: This Week In Marketing",
+          "published": "2026-07-17",
+          "frame": "Reports a significant drop (up to 40%) in publisher ad request volumes due to AI search answering queries directly, impacting the open web's economics.",
+          "quote": "New benchmarking data shared with Digiday shows publisher ad request volumes, the actual pipes that carry traffic and revenue across the open web, fell by up to 40% in Q2 2026.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://thedigitalmaze.com/blog/ai-search-just-gutted-the-open-webs-ad-supply-this-week-in-marketing/",
+          "source_domain": "thedigitalmaze.com"
+        },
+        {
+          "tag": "#BotManagement",
+          "title": "Don't block the bots. Build the gate",
+          "published": "2026-07-17",
+          "frame": "Argues publishers should control AI bot access to their content, viewing bots as part of the audience, rather than simply blocking them.",
+          "quote": "Publishers won't win AI by hiding from it. They'll win by controlling access to the work that gives them authority.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.fastcompany.com/91572651/dont-block-the-bots-build-the-gate",
+          "source_domain": "fastcompany.com"
+        },
+        {
+          "tag": "#UserBehaviorAI",
+          "title": "Unreliable AI answers are 'good enough' for most users of platforms - Press Gazette",
+          "published": "2026-07-22",
+          "frame": "Reports that users often accept AI answers as 'good enough,' leading to 'stop here' behavior and reduced click-through to publisher sources.",
+          "quote": "The presence of an AI Overview on a search results page causes an 18% reduction in a user's propensity to click through to the source.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://pressgazette.co.uk/comment-analysis/unreliable-ai-answers-are-good-enough-for-most-users-of-platforms/",
+          "source_domain": "pressgazette.co.uk"
+        },
+        {
+          "tag": "#GoogleZero",
+          "title": "Google's AI Search Boom Is Thrilling Advertisers and Terrifying Publishers",
+          "published": "2026-07-25",
+          "frame": "Explores 'Google Zero,' where AI search boosts Google's revenue while reducing referral traffic to publishers, fundamentally altering the web's economics.",
+          "quote": "AI search can complete much of that journey on Google itself. As The Verge explained, the old bargain depended on Google returning “oceans of traffic” to the sites it indexed. The publication argues that this bargain now appears to be dying.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.ghacks.net/2026/07/23/reddit-and-major-publishers-consider-blocking-google-as-ai-overviews-cut-search-referral-traffic/",
+          "source_domain": "ghacks.net"
+        },
+        {
+          "tag": "#AIScrapingThreat",
+          "title": "Enough Is Enough: Why AI Scraping Has Become an Existential Threat to Independent Publishers | stupidDOPE | Est. 2008",
+          "published": "2026-07-14",
+          "frame": "Argues that AI scraping without permission or compensation is an existential threat to independent publishers, demanding licensing and respect for content rules.",
+          "quote": "AI companies that want access to publisher content should ask for permission. They should negotiate licenses. They should compensate rights holders.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://stupiddope.com/2026/07/enough-is-enough-why-ai-scraping-has-become-an-existential-threat-to-independent-publishers/",
+          "source_domain": "stupiddope.com"
+        },
+        {
+          "tag": "#LanguagePreservationAI",
+          "title": "Artificial Intelligence & Language Preservation",
+          "published": "2026-07-25",
+          "frame": "Explores AI's dual role in preserving endangered languages and potentially accelerating homogenization, emphasizing the need for collaborative solutions.",
+          "quote": "Some researchers are optimistic that AI can be leveraged to help document, preserve, and revitalize at-risk languages, while others are concerned that the technology will accelerate the homogenization of human language.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://dig.watch/updates/emrip-strategy-indigenous-language-preservation",
+          "source_domain": "dig.watch"
+        },
+        {
+          "tag": "#CloudflareAITools",
+          "title": "Cloudflare expands AI content controls with new publisher tools",
+          "published": "2026-07-16",
+          "frame": "Cloudflare introduces new tools for publishers to control AI access, offering analytics and shifting towards a pay-per-use model for content monetization.",
+          "quote": "Cloudflare on July 2 unveiled new tools that allow website owners to control how artificial intelligence systems access their content while introducing analytics and payment features aimed at helping publishers monetize AI use.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://techsabado.com/2026/07/16/business-tech-cloudflare-expands-ai-content-controls-with-new-publisher-tools/",
+          "source_domain": "techsabado.com"
+        },
+        {
+          "tag": "#JournalismViability",
+          "title": "Big Tech, AI, and journalism: Visibility, authority, and viability",
+          "published": "2026-07-16",
+          "frame": "Examines how AI and Big Tech challenge the visibility, authority, and viability of journalism, questioning its future as a niche or mass force.",
+          "quote": "The question is whether it thrives as a niche or as a force for the many, and in what form, and under whose control?",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://europeanjournalists.org/blog/2026/07/16/big-tech-ai-and-journalism-visibility-authority-and-viability/",
+          "source_domain": "europeanjournalists.org"
+        },
+        {
+          "tag": "#EUAIRights",
+          "title": "19th Session - United Nations Expert Mechanism on the Rights of Indigenous Peoples - EU Statement - Item 8",
+          "published": "2026-07-16",
+          "frame": "The EU reaffirms its commitment to Indigenous rights in AI development, emphasizing meaningful participation, consent, and data governance.",
+          "quote": "AI must not reinforce existing inequalities or enable the misuse of Indigenous knowledge, data or cultural expressions.",
+          "kind": "legal",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.eeas.europa.eu/delegations/un-geneva/19th-session-united-nations-expert-mechanism-rights-indigenous-peoples-eu-statement-item-8-panel_en?s=62",
+          "source_domain": "eeas.europa.eu"
+        },
+        {
+          "tag": "#MinorityLanguageBias",
+          "title": "AI Cannot Protect What It Does Not Understand",
+          "published": "2026-07-18",
+          "frame": "Highlights AI's failure to understand and moderate content in minority languages, posing human security challenges due to algorithmic bias and data deficits.",
+          "quote": "Language models frequently miss local expressions, figurative speech and cultural nuances, allowing harmful content to evade automated moderation.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://humanglemedia.com/ai-cannot-protect-what-it-does-not-understand/",
+          "source_domain": "humanglemedia.com"
+        },
+        {
+          "tag": "#UNESCOAIRights",
+          "title": "UNESCO's A.I. Report Considers How Technology Can Serve Culture",
+          "published": "2026-07-13",
+          "frame": "Reports on a UNESCO document outlining strategies for AI to serve cultural ecosystems, including protecting cultural heritage and preserving endangered languages.",
+          "quote": "The protection of cultural heritage and preservation of endangered languages. A.I. can also contribute to the digital preservation of both tangible and, especially, intangible heritage through virtual reconstruction, data analysis and the transcription and documentation of endangered oral traditions and performance practices.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://observer.com/2026/07/art-unesco-ai-culture-survey-cultural-rights-diversity/",
+          "source_domain": "observer.com"
+        },
+        {
+          "tag": "#MultilingualAISecurity",
+          "title": "Europe's Multilingual Reality Exposes AI Security Gaps",
+          "published": "2026-07-24",
+          "frame": "Highlights how AI security layers and guardrails often fail to protect against unsafe actions in Europe's diverse regional and minority languages.",
+          "quote": "The AI security layer and guardrails on top of many AI products don't evenly protect against jailbreaking and unsafe actions in every single language.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps",
+          "source_domain": "darkreading.com"
+        },
+        {
+          "tag": "#LinguisticExclusion",
+          "title": "Linguistic Exclusion and Access to Justice under the Constitution of India By Monit Gajjar",
+          "published": "2026-07-17",
+          "frame": "Argues that India's constitution structurally excludes linguistic minorities from justice, and AI translation initiatives fail to remedy this.",
+          "quote": "This paper argues that Article 348 of the Constitution of India structurally excludes linguistic minorities from accessing justice, and that AI-driven translation initiatives fail to remedy this constitutional problem.",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://criticaldebateshsgj.scholasticahq.com/post/4061-linguistic-exclusion-and-access-to-justice-under-the-constitution-of-india-by-monit-gajjar",
+          "source_domain": "criticaldebateshsgj.scholasticahq.com"
+        },
+        {
+          "tag": "#DataMonetizationInfra",
+          "title": "Most Data Monetization Strategies Fail — The $17.6B Market Has an Infrastructure Problem, Not a Strategy One",
+          "published": "2026-07-24",
+          "frame": "Argues that data monetization strategies often fail due to a lack of proper infrastructure for structuring, registering, and licensing data for AI buyers.",
+          "quote": "Data monetization fails because enterprises treat it as a commercial problem when it is an engineering and governance problem.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://beyondelevation.com/blog/posts/why-data-monetization-fails-infrastructure-2026/",
+          "source_domain": "beyondelevation.com"
+        }
+      ]
+    }
+  ]
+}
