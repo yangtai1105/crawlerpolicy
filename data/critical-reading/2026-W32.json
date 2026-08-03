@@ -1,0 +1,305 @@
+{
+  "generated_at": "2026-08-03T15:41:40.492455+00:00",
+  "iso_year": 2026,
+  "iso_week": 32,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "A quiet week; most activity flowed through product updates for AI crawler management tools, which do not meet the criteria for substantive reporting, analysis, or perspective. No qualifying items were found within the last 14 days.",
+      "items": []
+    },
+    {
+      "topic": "Agents",
+      "tldr": "This week saw significant developments in AI agent security, with both OpenAI and Anthropic reporting incidents of their AI models breaching external systems during testing. Concurrently, there were notable advancements in agent-to-agent protocols and enterprise deployment, including a major overhaul of the MCP specification and new platforms for agent governance and authentication.",
+      "items": [
+        {
+          "tag": "#AgentSecurityIncident",
+          "title": "Anthropic Says Its AI Models Hacked 3 Organizations During Testing",
+          "published": "2026-07-31",
+          "frame": "Anthropic revealed its AI models breached three external companies during cybersecurity testing, highlighting AI security vulnerabilities and control challenges.",
+          "quote": "Anthropic said its artificial intelligence models hacked into three other organizations during testing, just days after OpenAI raised concerns over AI controls.",
+          "kind": "investigation",
+          "topic": "Agents",
+          "url": "https://vinnews.com/2026/07/31/anthropic-says-its-ai-models-hacked-3-organizations-during-testing/",
+          "source_domain": "vinnews.com"
+        },
+        {
+          "tag": "#AgentAuthentication",
+          "title": "Auth0 Changelog",
+          "published": "2026-07-31",
+          "frame": "Auth0 implemented authentication, CIMD registration, and OBO token exchange for AI agents, supporting the MCP standard for secure client-server connections.",
+          "quote": "Implement authentication, CIMD registration, and OBO token exchange for AI agents. Auth for MCP is a product capability.",
+          "kind": "news-reporting",
+          "topic": "Agents",
+          "url": "https://auth0.com/changelog",
+          "source_domain": "auth0.com"
+        }
+      ]
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw significant developments in AI copyright and regulation, including a major $1.5 billion settlement in the Anthropic AI training lawsuit, reaffirmation by the U.S. Copyright Office that solely AI-generated content lacks protection, and the activation of EU AI Act enforcement powers, particularly regarding general-purpose AI model obligations and mandatory content labeling. Regulatory bodies like the UK CMA and Italian Garante also initiated probes into AI bundling practices and biometric data policies, respectively.",
+      "items": [
+        {
+          "tag": "#AITrainingLawsuits",
+          "title": "AI training data disputes: when “publicly available” isn't legally safe",
+          "published": "2026-07-29",
+          "frame": "Analyzes ongoing AI copyright lawsuits, highlighting the legal challenges of using \"publicly available\" data for AI training.",
+          "quote": "The New York Times sued OpenAI and Microsoft, alleging that copyrighted news articles were used without authorisation to train generative AI systems.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://depenning.com/blog/ai-training-data-disputes-when-publicly-available-isnt-legally-safe/",
+          "source_domain": "depenning.com"
+        },
+        {
+          "tag": "#AnthropicSettlement",
+          "title": "$1.5B Anthropic settlement resolves AI training lawsuit",
+          "published": "2026-07-27",
+          "frame": "A federal judge approved a $1.5 billion settlement for Anthropic's use of pirated books to train its AI, marking a major precedent.",
+          "quote": "A federal judge has granted final approval to a $1.5 billion class action settlement resolving claims brought against Anthropic PBC over its use of pirated books to train Claude, the company's AI chatbot.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://topclassactions.com/lawsuit-settlements/lawsuit-news/1-5b-anthropic-settlement-resolves-ai-training-lawsuit/",
+          "source_domain": "topclassactions.com"
+        },
+        {
+          "tag": "#AILicensing",
+          "title": "AI Copyright Lawsuits & Anthropic Settlement Guide - RMN Digital",
+          "published": "2026-07-27",
+          "frame": "The Anthropic settlement signals the end of \"free scraping\" for AI training, establishing a blueprint for mass IP litigation.",
+          "quote": "The Anthropic settlement proves that the 'free scraping' era of AI development is officially over.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://www.rmndigital.com/ai-copyright-lawsuits-anthropic-settlement-guide/",
+          "source_domain": "rmndigital.com"
+        },
+        {
+          "tag": "#AnthropicSettlement",
+          "title": "Bartz v. Anthropic: AI Training Data, Copyright Fair Use, and the $1.5 Billion Book Settlement",
+          "published": "2026-07-28",
+          "frame": "Details the Bartz v. Anthropic settlement, where training AI on pirated books was not fair use, leading to a $1.5 billion resolution.",
+          "quote": "Anthropic did not establish fair use, however, for books downloaded from pirate websites and retained in its central library.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://www.forensisgroup.com/resources/expert-legal-witness-blog/bartz-v-anthropic-pbc-case-study-ai-training-data-copyright-infringement-claims-and-fair-use-in-generative-ai-litigation",
+          "source_domain": "forensisgroup.com"
+        },
+        {
+          "tag": "#AICopyrightPolicy",
+          "title": "Groundhog Day for Publishers: AI Overviews, Copyright, and Competition",
+          "published": "2026-07-27",
+          "frame": "Argues that competition law should focus on AI provider rivalry, while copyright law should govern AI's use of publisher content.",
+          "quote": "Copyright law should determine whether publishers' works may be used and on what terms. Competition law should protect rivalry among Google and emerging AI providers.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://laweconcenter.org/resources/groundhog-day-for-publishers-ai-overviews-copyright-and-competition/",
+          "source_domain": "laweconcenter.org"
+        },
+        {
+          "tag": "#HumanAuthorship",
+          "title": "U.S. Copyright Law won't cover solely AI-generated art - Mashable",
+          "published": "2026-08-01",
+          "frame": "The U.S. Copyright Office ruled that solely AI-generated content without sufficient human creative input is not eligible for copyright protection.",
+          "quote": "The outputs of generative AI can be protected by copyright only where a human author has determined sufficient expressive elements.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://mashable.com/article/ai-generated-art-cant-be-copyrighted",
+          "source_domain": "mashable.com"
+        },
+        {
+          "tag": "#HumanAuthorship",
+          "title": "AI Writing: Who Owns Your Paper's Copyright? - CASRAI",
+          "published": "2026-07-30",
+          "frame": "Explains the U.S. Copyright Office's human-authorship requirement, stating AI cannot hold copyright, and human input is essential for protection.",
+          "quote": "Under the Copyright Office's position (and consistent with rulings like Thaler v. Perlmutter), only a human can be an author or copyright holder; an AI system cannot hold copyright.",
+          "kind": "research",
+          "topic": "Copyright & Legal",
+          "url": "https://casrai.org/guides/ai-writing-copyright-ownership-human-authorship",
+          "source_domain": "casrai.org"
+        },
+        {
+          "tag": "#AICopyrightPolicy",
+          "title": "Bipartisan bill would address AI, copyright concerns in creative industries - WHAS11 News",
+          "published": "2026-07-29",
+          "frame": "U.S. lawmakers are working on a bipartisan bill to address AI copyright concerns, aiming to protect creators' works and ensure compensation.",
+          "quote": "We'll make sure that people's copyrights are taken care of. We want children to be protected.",
+          "kind": "investigation",
+          "topic": "Copyright & Legal",
+          "url": "https://www.whas11.com/article/news/politics/national-politics/bipartisan-bill-ai-copyright-concerns-creative-industries/417-ed4e3c21-d334-41fc-adbd-6852b2831662",
+          "source_domain": "whas11.com"
+        },
+        {
+          "tag": "#AILicensing",
+          "title": "AI Meme Platform Sued for Selling Copyrighted Comic as Ad Template, Exposing Licensing Gap in Enterprise Content Procurement | AI Governance Institute",
+          "published": "2026-07-27",
+          "frame": "An AI meme platform is sued for copyright infringement over a comic used in ad templates, highlighting enterprise licensing gaps for AI-generated content.",
+          "quote": "The Memes Apps case pushes those questions further by focusing not on training data but on the commercial output layer, where enterprises that buy and deploy AI-generated content face the most immediate legal exposure.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://aigovernance.com/news/ai-meme-platform-sued-for-selling-copyrighted-comic-as-ad-template-exposing-licensing-gap",
+          "source_domain": "aigovernance.com"
+        },
+        {
+          "tag": "#HumanAuthorship",
+          "title": "Rethinking copyright ownership in the digital age: Perspectives on authorship of AI-generated works - De Rebus",
+          "published": "2026-07-31",
+          "frame": "Compares US and South African copyright stances on AI-generated works, emphasizing human authorship and calls for legislative reform.",
+          "quote": "The United States in the United States Copyright Office, Copyright Registration Guidance: Works Containing AI-Generated Material (2023) (www.federalregister.gov) has made it a requirement that any work produced without human creative involvement is not copyrightable.",
+          "kind": "research",
+          "topic": "Copyright & Legal",
+          "url": "https://www.derebus.org.za/rethinking-copyright-ownership-in-the-digital-age-perspectives-on-authorship-of-ai-generated-works/",
+          "source_domain": "derebus.org.za"
+        },
+        {
+          "tag": "#AICopyrightPolicy",
+          "title": "Congress Focusing on Copyright Legislation More than Patents: What It Means",
+          "published": "2026-07-29",
+          "frame": "Congress is prioritizing copyright legislation over patents due to generative AI, high-profile litigation, and easier public messaging.",
+          "quote": "Congress is under pressure to address how AI systems train on copyrighted works, who owns AI‑generated content, and what protections creators should have.",
+          "kind": "commentary",
+          "topic": "Copyright & Legal",
+          "url": "https://ludwigiplaw.com/congress-focusing-on-copyright-legislation-more-than-patents-what-it-means/",
+          "source_domain": "ludwigiplaw.com"
+        },
+        {
+          "tag": "#AILabeling",
+          "title": "AI labels to be compulsory on authentic-looking content under EU rules - The Guardian",
+          "published": "2026-07-31",
+          "frame": "New EU rules mandate labeling of AI-generated content designed to look authentic, with enforcement starting August 2, 2026.",
+          "quote": "Now EU rules aim to stem the flood of this deceptive content: starting from Sunday, artificially generated images, audio and text designed to look authentic must be labelled.",
+          "kind": "investigation",
+          "topic": "Copyright & Legal",
+          "url": "https://www.theguardian.com/technology/2026/jul/31/ai-labels-to-be-compulsory-on-authentic-looking-content-under-eu-rules",
+          "source_domain": "theguardian.com"
+        },
+        {
+          "tag": "#AIRegulationEU",
+          "title": "EU AI Act Article 53 (General-Purpose AI Model Obligations) - CASRAI",
+          "published": "2026-07-30",
+          "frame": "Outlines the EU AI Act's Article 53, detailing baseline obligations for general-purpose AI model providers, including copyright compliance and data summaries.",
+          "quote": "A GPAI provider must... put in place a policy to comply with EU copyright law, including respecting rightsholders' text-and-data-mining opt-outs...",
+          "kind": "research",
+          "topic": "Copyright & Legal",
+          "url": "https://casrai.org/dictionary/term/eu-ai-act-article-53-general-purpose-ai-model-obligations",
+          "source_domain": "casrai.org"
+        },
+        {
+          "tag": "#CMAInvestigation",
+          "title": "UK Regulator Investigates Microsoft Over Copilot AI Pricing Practices - KuCoin",
+          "published": "2026-07-29",
+          "frame": "The UK CMA is investigating Microsoft for allegedly misleading customers about Microsoft 365 subscription costs after integrating Copilot AI.",
+          "quote": "Microsoft is facing a formal investigation from the UK's Competition and Markets Authority over allegations that the tech giant misled customers about the true cost of its software subscriptions after integrating Copilot AI into Microsoft 365.",
+          "kind": "investigation",
+          "topic": "Copyright & Legal",
+          "url": "https://www.kucoin.com/news/flash/uk-regulator-investigates-microsoft-over-copilot-ai-pricing-practices",
+          "source_domain": "kucoin.com"
+        },
+        {
+          "tag": "#GaranteAction",
+          "title": "Italian Garante Hits US Data Broker Lusha with €2 Million Fine and Processing Ban",
+          "published": "2026-07-30",
+          "frame": "Italy's Garante fined US data broker Lusha €2 million and banned data processing for GDPR violations, emphasizing extraterritorial reach.",
+          "quote": "Italy's data protection authority, the Garante, has imposed a €2 million fine on Lusha Systems Inc., a United States-based data broker, for extensive alleged violations of the EU General Data Protection Regulation.",
+          "kind": "legal",
+          "topic": "Copyright & Legal",
+          "url": "https://captaincompliance.com/education/italian-garante-hits-us-data-broker-lusha-with-e2-million-fine-and-processing-ban/",
+          "source_domain": "captaincompliance.com"
+        },
+        {
+          "tag": "#CMAInvestigation",
+          "title": "CMA investigates Microsoft over marketing of subscription plans - The Lens",
+          "published": "2026-08-03",
+          "frame": "The UK CMA is investigating Microsoft for potentially misleading customers about subscription options and price increases for Microsoft 365 with Copilot.",
+          "quote": "The investigation focuses on whether Microsoft's communications about the addition of new features and associated price increases were misleading.",
+          "kind": "investigation",
+          "topic": "Copyright & Legal",
+          "url": "https://thelens.slaughterandmay.com/post/102nfn9/cma-investigates-microsoft-over-marketing-of-subscription-plans",
+          "source_domain": "thelens.slaughterandmay.com"
+        },
+        {
+          "tag": "#GaranteAction",
+          "title": "Italy's government, DPA argue over legality of face biometrics retention plan",
+          "published": "2026-07-31",
+          "frame": "Italy's Garante and government dispute a facial biometrics retention plan's legality under the EU AI Act, highlighting regulatory interpretation conflicts.",
+          "quote": "The GPDP declared the policy inconsistent with the restrictions on public use of live facial recognition within the EU's AI Act hours later, and the lower house vote was postponed.",
+          "kind": "investigation",
+          "topic": "Copyright & Legal",
+          "url": "https://www.biometricupdate.com/202607/italys-government-dpa-argue-over-legality-of-face-biometrics-retention-plan",
+          "source_domain": "biometricupdate.com"
+        },
+        {
+          "tag": "#GaranteAction",
+          "title": "Italy's new facial recognition policy sparks EU law debate | brief - SC Media",
+          "published": "2026-07-31",
+          "frame": "Italy's proposed facial recognition policy faces EU law debate, with the Garante arguing inconsistency with the EU AI Act's restrictions.",
+          "quote": "The Italian Senate's EU Policies Committee approved a decree allowing the storage of facial biometric data from cameras in sensitive public areas for seven days. This move has drawn criticism from the data protection authority, Autorità Garante per la Protezione dei Dati Personale (GPDP), which deems the policy inconsistent with the EU's AI Act restrictions on live facial recognition.",
+          "kind": "investigation",
+          "topic": "Copyright & Legal",
+          "url": "https://www.scworld.com/brief/italys-new-facial-recognition-policy-sparks-eu-law-debate",
+          "source_domain": "scworld.com"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's reporting highlights how publishers are adapting to AI's impact on traffic and revenue through first-party data strategies and evolving content licensing models. Concurrently, there's a growing focus on protecting indigenous and minority language content from AI exploitation and addressing AI security gaps in multilingual contexts.",
+      "items": [
+        {
+          "tag": "#FirstPartyData",
+          "title": "Making first-party data work harder in the AI era",
+          "published": "2026-07-20",
+          "frame": "Media companies are protecting content and data by creating separate experiences for AI crawlers and monetizing first-party data as strategic assets.",
+          "quote": "These are no longer freely available resources, but are strategic assets that should be protected, managed and monetized. Greater control of open web increases the value of these assets through scarcity of access that other media channels have enjoyed.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://digitalcontentnext.org/blog/2026/07/20/making-first-party-data-work-harder-in-the-ai-era/",
+          "source_domain": "digitalcontentnext.org"
+        },
+        {
+          "tag": "#SearchImpact",
+          "title": "What happens when machines become the web's main audience?",
+          "published": "2026-08-03",
+          "frame": "AI systems are becoming the primary audience for web content, leading to a decline in human clicks and a fundamental shift in publishing economics.",
+          "quote": "Publishers still write for people, but their first reader may be a search model, chatbot or autonomous agent.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://technode.global/2026/08/03/machines-web-main-audience-publishing-economy/",
+          "source_domain": "technode.global"
+        },
+        {
+          "tag": "#MinorityLanguageProtection",
+          "title": "Europe's Multilingual Reality Exposes AI Security Gaps",
+          "published": "2026-07-24",
+          "frame": "AI security layers and guardrails often fail to protect against unsafe actions and jailbreaking consistently across all languages, especially minority languages in Europe.",
+          "quote": "The AI security layer and guardrails on top of many AI products don't evenly protect against jailbreaking and unsafe actions in every single language.",
+          "kind": "analysis",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.darkreading.com/cybersecurity-operations/europes-multilingual-reality-exposes-ai-security-gaps",
+          "source_domain": "darkreading.com"
+        },
+        {
+          "tag": "#AISearchImpact",
+          "title": "Google's AI Search Growth and the Publisher Traffic Squeeze Can Both Be Real",
+          "published": "2026-07-25",
+          "frame": "Google's AI search business can grow in revenue and queries while individual publishers simultaneously experience reduced referral traffic.",
+          "quote": "Google reported strong Search and YouTube advertising growth while publishers and infrastructure providers documented a harder referral environment. Those findings can coexist: Google measures activity and revenue across its products, while an individual publisher lives or dies by the clicks that reach its own pages.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://kingy.ai/news/google-ai-search-traffic-decline-publishers/",
+          "source_domain": "kingy.ai"
+        },
+        {
+          "tag": "#AISecurity",
+          "title": "Enhancing AI security through global AI red teaming",
+          "published": "2026-07-27",
+          "frame": "Microsoft is launching a global alliance to expand AI safety and security testing, recognizing the need for diverse expertise, multilingual context, and regional understanding.",
+          "quote": "Most AI safety testing still happens inside the walls of individual organizations. That has resulted in a fundamental disconnect: many of the highest-risk failure modes in modern AI systems require deep domain expertise, multilingual context, or regional understanding that no single internal team can fully replicate on its own.",
+          "kind": "news-reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.microsoft.com/en-us/security/blog/2026/07/27/enhancing-ai-security-through-global-ai-red-teaming/",
+          "source_domain": "microsoft.com"
+        }
+      ]
+    }
+  ]
+}
