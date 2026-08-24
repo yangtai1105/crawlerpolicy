@@ -1,0 +1,239 @@
+{
+  "generated_at": "2026-08-24T13:50:06.857989+00:00",
+  "iso_year": 2026,
+  "iso_week": 35,
+  "topics": [
+    {
+      "topic": "Crawling & Publisher Controls",
+      "tldr": "This week's discourse highlights a significant shift towards 'pay-per-use' models for AI content licensing, notably with Apple's reported negotiations for Siri. Publishers are increasingly implementing default blocking for AI training crawlers via tools like Cloudflare AI Crawl Control, creating scarcity that drives licensing deals. Server-log analyses reveal varying bot behaviors, including impersonation and higher scraping rates for European publishers, while robots.txt remains a primary, though not foolproof, control mechanism.",
+      "items": [
+        {
+          "tag": "#PayPerCrawl",
+          "title": "AI Content Licensing Is Moving Toward Pay-for-Use: What Small Publishers Should Do Now",
+          "published": "2026-08-22",
+          "frame": "Analysis of the evolving AI content licensing landscape, emphasizing a shift to variable, use-based payments and advising small publishers to define and price specific content uses.",
+          "quote": "The most useful shift I see in AI licensing right now is simple: stop treating your entire website as one giant asset and start separating the exact uses a buyer may want.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://app.contentdividend.com/blog/ai-content-licensing-pay-per-use-small-publishers.html",
+          "source_domain": "app.contentdividend.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Apple May Pay Publishers Per Use to Power Siri AI - Relve",
+          "published": "2026-08-14",
+          "frame": "Reports on Apple's proposed variable compensation model for publishers to license content for Siri AI, a departure from fixed fees, potentially tying revenue to actual usage.",
+          "quote": "Apple has proposed a variable compensation model that would pay publishers when their content is actually used, rather than through a fixed licensing fee, a departure from the standard practice of guaranteed fees tied to broad content access.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://relvehq.com/blog/noise/apple-may-pay-publishers-per-use-to-power-siri-ai",
+          "source_domain": "relvehq.com"
+        },
+        {
+          "tag": "#PublisherControls",
+          "title": "AI Crawler Control & Bot Management: Our Top Picks for 2026 - Startup Stash",
+          "published": "2026-08-10",
+          "frame": "Examines advanced AI crawler control and bot management solutions, highlighting Cloudflare AI Crawl Control and the growing need for granular, behavior-based policies amidst rising automated traffic.",
+          "quote": "Automated traffic now outweighs humans, reaching 53% of global web traffic in 2025, up from 51% the year before, with bad bots alone at 40% and human activity down to 47%, according to the 2026 Thales and Imperva Bad Bot Report.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://startupstash.com/best-ai-crawler-control-bot-management-tools/",
+          "source_domain": "startupstash.com"
+        },
+        {
+          "tag": "#RobotsTxt",
+          "title": "Robots.txt for SEO: The Complete Guide (Including AI Crawlers) - Similarweb",
+          "published": "2026-08-20",
+          "frame": "A comprehensive guide on configuring robots.txt for AI crawlers, distinguishing between training and search bots (GPTBot, ClaudeBot, PerplexityBot) and explaining publishers' motivations for blocking.",
+          "quote": "You can block a training crawler without affecting a retrieval crawler from the same company, and vice versa.",
+          "kind": "specialist-researcher-analysis",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.similarweb.com/blog/marketing/seo/robots-txt/",
+          "source_domain": "similarweb.com"
+        },
+        {
+          "tag": "#PublisherControls",
+          "title": "Cloudflare says blocking AI crawlers is pushing publishers into licensing deals",
+          "published": "2026-08-19",
+          "frame": "Cloudflare asserts that its default blocking of AI crawlers is creating scarcity, compelling AI companies to pursue licensing agreements with publishers, with a shift towards pay-per-use models.",
+          "quote": "Cloudflare says default AI crawler blocking is creating scarcity that pushes AI companies to license publisher content, and pay-per-use is next.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://mediacopilot.ai/cloudflare-bot-blocking-publisher-ai-deals/",
+          "source_domain": "mediacopilot.ai"
+        },
+        {
+          "tag": "#RobotsTxt",
+          "title": "Robots.txt, AI Crawlers & Web Scraping in 2026 - DataImpulse",
+          "published": "2026-08-19",
+          "frame": "Analyzes the role and limitations of robots.txt in managing AI crawlers (GPTBot, ClaudeBot, Google-Extended) in 2026, highlighting compliance nuances and newer controls like llms.txt and Cloudflare.",
+          "quote": "Robots.txt is the 30-year-old text file that tells crawlers which parts of a site they may fetch. In 2026 it's doing a job it was never designed for: refereeing the AI web, where dozens of crawlers — GPTBot, ClaudeBot, PerplexityBot, Google-Extended and more — pull content to train models and to answer questions in real time.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://dataimpulse.com/blog/robots-txt-ai-crawlers/",
+          "source_domain": "dataimpulse.com"
+        },
+        {
+          "tag": "#ServerLogs",
+          "title": "European publishers are getting hit harder by AI bot scraping, report finds - Digiday",
+          "published": "2026-08-14",
+          "frame": "Reports on a TollBit analysis indicating European publishers experience significantly higher AI bot scraping rates and fewer human referrals from AI apps compared to North American counterparts.",
+          "quote": "Median AI scrapes per site were four-times higher on European sites compared to North American sites.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://digiday.com/media/european-publishers-are-getting-hit-harder-by-ai-bot-scraping-report-finds/",
+          "source_domain": "digiday.com"
+        },
+        {
+          "tag": "#BotBehavior",
+          "title": "Tollbit's new State of the Bots report is a sobering look at a problem that threatens to undermine the health of the entire web. Bad bots are overloading the websites of news publishers and stealing their content, all while using residential proxies to hide their identities or country of origin. As this report shows, bad bots are too good - Facebook",
+          "published": "2026-08-11",
+          "frame": "Summary of TollBit's report revealing an alarming increase in bad bot traffic, driven by generative AI, which overloads publisher websites and evades protections using sophisticated tactics like residential proxies.",
+          "quote": "Bad bots are overloading the websites of news publishers and stealing their content, all while using residential proxies to hide their identities or country of origin.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.facebook.com/NewsMediaAlliance/posts/tollbits-new-state-of-the-bots-report-is-a-sobering-look-at-a-problem-that-threa/1631602472299938/",
+          "source_domain": "facebook.com"
+        },
+        {
+          "tag": "#DataLicensing",
+          "title": "AI Training Data Statistics 2026: 30+ Key Figures | Troveo",
+          "published": "2026-08-16",
+          "frame": "Presents key statistics on AI training data, including major licensing deals (News Corp/OpenAI) and legal rulings on fair use, noting the projected exhaustion of high-quality public text data.",
+          "quote": "The February 2025 ruling in Thomson Reuters v. Ross Intelligence was the first major United States decision to reject a fair use defense for AI training.",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.troveo.ai/resources/ai-training-data-statistics",
+          "source_domain": "troveo.ai"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Apple's pay-as-you-go model for Siri AI content - Facebook",
+          "published": "2026-08-21",
+          "frame": "Reports on Apple's discussions with publishers for a pay-as-you-go model for Siri AI, contrasting it with traditional fixed-fee licensing and its implications for publisher revenue.",
+          "quote": "According to The Wall Street Journal, publishers would be paid only when Siri AI uses their content. That would be different from other AI licensing deals that have involved fixed fees and broad access to publishers' work.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://www.facebook.com/niemanfoundation/posts/apple-is-reportedly-talking-with-publishers-about-a-pay-as-you-go-model-for-siri/1659876696140242/",
+          "source_domain": "facebook.com"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Apple wants publishers to help make Siri smarter, may pay hundreds of millions: Report",
+          "published": "2026-08-13",
+          "frame": "Details Apple's discussions with publishers regarding a variable compensation model and substantial budget for using their content to enhance Siri AI, moving away from guaranteed fixed fees.",
+          "quote": "Apple has proposed a variable compensation model under which participating publishers would receive payments when their content is used, the people said.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://economictimes.indiatimes.com/news/international/global-trends/apple-wants-publishers-to-help-make-siri-smarter-may-pay-hundreds-of-millions-report/articleshow/133195835.cms?from=mdr",
+          "source_domain": "economictimes.indiatimes.com"
+        },
+        {
+          "tag": "#BotVerification",
+          "title": "AI Crawler Optimization in 2026: GPTBot, Claude and Perplexity Explained - RiffinAI",
+          "published": "2026-08-13",
+          "frame": "Analyzes Generative Engine Optimization (GEO), outlining three types of AI website access (search, training, user-triggered) and a practical audit for managing crawler interaction and visibility.",
+          "quote": "A technically blocked page may contain an excellent answer and still remain unavailable at the moment a platform searches for supporting information.",
+          "kind": "commentary",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://riffinai.com/ai-crawler-optimization/",
+          "source_domain": "riffinai.com"
+        },
+        {
+          "tag": "#ServerLogs",
+          "title": "HTML vs Markdown for AI Crawlers: What the Data Shows - Prompt Insider",
+          "published": "2026-08-20",
+          "frame": "Research based on server-log analysis and experiments indicating major AI crawlers (GPTBot, ChatGPT-User, ClaudeBot) default to HTML and show no significant preference for Markdown.",
+          "quote": "Major AI crawlers, including ChatGPT-User, GPTBot, and ClaudeBot, default to fetching HTML. Markdown can reduce parsing complexity and token usage, but observed crawler behavior shows no consistent preference for it.",
+          "kind": "research",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://thepromptinsider.com/aeo/html-vs-markdown-for-ai-crawlers/",
+          "source_domain": "thepromptinsider.com"
+        },
+        {
+          "tag": "#PublisherControls",
+          "title": "Cloudflare says bot blocking is fuelling publisher AI deals - Press Gazette",
+          "published": "2026-08-17",
+          "frame": "Cloudflare claims its bot blocking policies are creating 'reliable scarcity,' pushing AI companies toward content licensing and pay-per-use models, with changes to default blocking for mixed-purpose crawlers.",
+          "quote": "Cloudflare says its technology would allow a “pay-per-crawl” model which allowed website owners to charge a fee to the AI crawlers they let in.",
+          "kind": "news",
+          "topic": "Crawling & Publisher Controls",
+          "url": "https://mediacopilot.ai/cloudflare-bot-blocking-publisher-ai-deals/",
+          "source_domain": "mediacopilot.ai"
+        }
+      ]
+    },
+    {
+      "topic": "Agents",
+      "tldr": "A quiet week for in-depth reporting, analysis, or perspective on AI agent infrastructure, protocols, security, agentic commerce, or enterprise deployment; most activity appears to have flowed through daily news feeds and product announcements, which are excluded by the prompt's criteria.",
+      "items": []
+    },
+    {
+      "topic": "Copyright & Legal",
+      "tldr": "This week saw the EU AI Act come into force, mandating transparency for AI training data and content labeling, while OpenAI faces a new class-action lawsuit over alleged copyright and privacy violations in its data usage.",
+      "items": [
+        {
+          "tag": "#AIRegulation",
+          "title": "AI Must Now Identify Itself: Europe's New Rules Signal a Global Shift",
+          "published": "2026-08-10",
+          "frame": "The EU AI Act is now in force, imposing transparency obligations on general-purpose AI, including disclosing training data and labeling AI-generated content.",
+          "quote": "General-purpose AI (AGI, AI with intelligence similar to or higher than that of humans), including ChatGPT, is subject to transparency obligations, including specifying the content used in the AI learning process.",
+          "kind": "regulatory",
+          "topic": "Copyright & Legal",
+          "url": "https://www.facebook.com/africaupdatenews/posts/ai-must-now-identify-itself-europes-new-rules-signal-a-global-shiftfor-the-first/1525557066252641/",
+          "source_domain": "facebook.com"
+        }
+      ]
+    },
+    {
+      "topic": "Web Ecosystem & AI Impact",
+      "tldr": "This week's analysis highlights the ongoing impact of AI on publisher traffic and revenue, with a focus on declining search referrals due to AI Overviews. Publishers are exploring strategies like first-party data monetization, content licensing deals, and leveraging new Google features to regain control and value in the evolving AI-driven web ecosystem.",
+      "items": [
+        {
+          "tag": "#ZeroClickSearch",
+          "title": "Large Language Models Are Pushing the Web Toward Zero Clicks",
+          "published": "2026-08-19",
+          "frame": "AI Overviews are causing significant declines in publisher traffic by answering queries directly, leading to a \"Google Zero\" future.",
+          "quote": "\"For publishers, Google Zero is already here,” Nilay Patel, editor-in-chief of The Verge, told The New York Times.",
+          "kind": "commentary",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://anderson-review.ucla.edu/large-language-models-are-pushing-the-web-toward-zero-clicks/",
+          "source_domain": "anderson-review.ucla.edu"
+        },
+        {
+          "tag": "#PayPerCrawl",
+          "title": "Cloudflare says bot blocking is fuelling publisher AI deals",
+          "published": "2026-08-17",
+          "frame": "Cloudflare's default blocking of AI crawlers creates \"reliable scarcity,\" prompting AI companies to engage in content licensing and pay-per-crawl agreements.",
+          "quote": "“People are understanding the value of our content because we are able to restrict almost everybody from using our content using our Cloudflare blocking,” Vogel said.",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://pressgazette.co.uk/platforms/cloudflare-says-bot-blocking-is-fueling-publisher-ai-deals/",
+          "source_domain": "pressgazette.co.uk"
+        },
+        {
+          "tag": "#AIOptOut",
+          "title": "Google gives publishers more control over AI‑driven traffic",
+          "published": "2026-08-21",
+          "frame": "Google introduces a \"Preferred Sources\" button, allowing readers to influence content visibility in AI Overviews, aiming to shift power back to publishers.",
+          "quote": "\"By letting readers signal which sources they trust, Google is turning audience loyalty into a new way to surface publishers' content.\"",
+          "kind": "reporting",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://yourstory.com/ai-story/google-ai-traffic-publisher-controls",
+          "source_domain": "yourstory.com"
+        },
+        {
+          "tag": "#AIBusinessImpact",
+          "title": "The state of AI in media | How AI is transforming the business side of publishing",
+          "published": "2026-08-18",
+          "frame": "Publishers are increasingly adopting AI tools across business functions like subscription marketing and ad sales, despite being in early stages of deployment.",
+          "quote": "\"The majority of respondents to the Digiday and Piano survey (76%) said they are currently piloting or experimenting with AI on the business side of their organizations.\"",
+          "kind": "research",
+          "topic": "Web Ecosystem & AI Impact",
+          "url": "https://www.piano.io/marketing/content/the-state-of-ai-in-media",
+          "source_domain": "piano.io"
+        }
+      ]
+    }
+  ]
+}
