@@ -603,37 +603,37 @@ git commit -m "refactor: separate current intelligence from legacy archive"
 - Consumes: Task 6 typed data and taxonomy.
 - Produces: reusable components used by all new pages.
 
-- [ ] **Step 1: Write the compact design token plan at the top of `global.css`**
+- [x] **Step 1: Write the compact design token plan at the top of `global.css`**
 
 Use the frontend-design skill before editing. Define 4–6 named colors, display/body/utility font roles, layout grid, and the evidence-rail signature. The chosen system must not use the generic cream/serif/terracotta, black/acid, or broadsheet defaults called out by the skill.
 
-- [ ] **Step 2: Add component fixtures to a temporary `/component-preview` page**
+- [x] **Step 2: Add component fixtures to a temporary `/component-preview` page**
 
 Render all three health states, five fronts, changed/stable trends, track tags, development cards, and an evidence rail using fixed data. This page is a visual test fixture and is removed after final QA.
 
-- [ ] **Step 3: Implement semantic, accessible components**
+- [x] **Step 3: Implement semantic, accessible components**
 
 `HealthStrip` exposes text labels and counts in addition to color. `TrackTag` uses the canonical label map. `TrendTable` sorts changed statuses before unchanged themes. `EvidenceRail` uses list semantics and direct source links. All interactive controls have visible keyboard focus.
 
-- [ ] **Step 4: Implement the new brand shell**
+- [x] **Step 4: Implement the new brand shell**
 
 Change the product name to **Crawler Policy** with the descriptor **Rights, Access & Agentic Web Intelligence**. Navigation becomes Intelligence, Developments, Fronts, Sources, Legacy Archive, About. The footer displays last fully successful run and current coverage status.
 
-- [ ] **Step 5: Run Astro build and launch the preview**
+- [x] **Step 5: Run Astro build and launch the preview**
 
 Run: `npm run build && npm run dev -- --host 127.0.0.1` from `site`.
 
 Expected: build passes and the preview exposes all components without console errors.
 
-- [ ] **Step 6: Inspect desktop and mobile screenshots**
+- [x] **Step 6: Inspect desktop and mobile screenshots**
 
 Use the Browser skill at 1440×1000 and 390×844. Verify information hierarchy, overflow, focus visibility, contrast, and reduced-motion behavior. Record concrete corrections before editing.
 
-- [ ] **Step 7: Apply one visual critique pass and rebuild**
+- [x] **Step 7: Apply one visual critique pass and rebuild**
 
 Remove any decorative element that does not encode source, status, track, or evidence. Confirm the evidence rail remains the only signature flourish.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add site/src/styles/global.css site/src/layouts/Base.astro site/src/components site/src/pages/component-preview.astro

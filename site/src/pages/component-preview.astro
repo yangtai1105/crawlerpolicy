@@ -1,0 +1,117 @@
+---
+import Base from "../layouts/Base.astro";
+import HealthStrip from "../components/HealthStrip.astro";
+import EvidenceRail from "../components/EvidenceRail.astro";
+import FrontCard from "../components/FrontCard.astro";
+import TrackTag from "../components/TrackTag.astro";
+import TrendTable from "../components/TrendTable.astro";
+import DevelopmentCard from "../components/DevelopmentCard.astro";
+import { FRONTS, TRACKS } from "../lib/taxonomy";
+import type { PipelineHealth, HealthStatus } from "../lib/health";
+import type { Trend } from "../lib/trends";
+
+function fixtureHealth(status: HealthStatus): PipelineHealth {
+  return {
+    status,
+    last_attempted_at: "2026-08-29T15:02:00Z",
+    last_fully_successful_at: status === "critical" ? "2026-08-22T15:04:00Z" : "2026-08-29T15:04:00Z",
+    coverage: { configured: 34, completed: status === "healthy" ? 34 : 29, fetched: 33, analyzed: 31, published: 29, failed: status === "healthy" ? 0 : 5, required_failed: status === "critical" ? 1 : 0 },
+    per_source: {},
+  };
+}
+
+const frontCopy = [
+  "Who can discover, crawl, index, and answer from the open web — and under which controls.",
+  "How autonomous agents identify themselves, request authority, and transact across boundaries.",
+  "Where licensing standards, creator controls, and market mechanisms are converging or splitting.",
+  "The policy, regulatory, and litigation decisions reshaping machine access and downstream use.",
+  "What traffic, referral, conversion, and compensation evidence reveals about the emerging economy.",
+];
+
+const trends: Trend[] = [
+  { key: "verified-agents", title: "Verified agent identity", status: "accelerating", previous_status: "emerging", thesis: "Identity work is moving from vendor conventions toward interoperable request signing.", evidence_event_ids: ["evt-104"], last_material_update: "2026-08-27", delta_explanation: "Two primary specifications advanced." },
+  { key: "publisher-controls", title: "Publisher controls", status: "stable", previous_status: "stable", thesis: "Crawler-specific controls continue to outpace shared machine-readable rights signals.", evidence_event_ids: ["evt-101"], last_material_update: "2026-08-24", delta_explanation: "No status change." },
+  { key: "compensation", title: "Usage-linked compensation", status: "emerging", previous_status: null, thesis: "Protocols are entering implementable drafts, but settlement evidence remains thin.", evidence_event_ids: ["evt-107"], last_material_update: "2026-08-25", delta_explanation: "First qualifying primary evidence." },
+];
+---
+
+<Base title="Component Preview" description="Internal visual fixture for the Crawler Policy design system.">
+  <div class="container preview">
+    <header class="preview-hero observation-grid">
+      <p class="utility-label">Internal visual fixture · 2026.08</p>
+      <div>
+        <h1>Protocol observatory</h1>
+        <p>Components for evidence-backed web intelligence: status is explicit, taxonomy is stable, and every conclusion can resolve to a dated source.</p>
+      </div>
+    </header>
+
+    <section class="preview-section">
+      <h2>Pipeline truth</h2>
+      <div class="health-stack">
+        <HealthStrip health={fixtureHealth("healthy")} />
+        <HealthStrip health={fixtureHealth("degraded")} />
+        <HealthStrip health={fixtureHealth("critical")} />
+      </div>
+    </section>
+
+    <section class="preview-section" id="fronts">
+      <h2>Five public fronts</h2>
+      <div class="front-grid">
+        {FRONTS.map((front, index) => <FrontCard front={front} summary={frontCopy[index]} status={index === 0 ? "active" : index < 3 ? "watch" : "quiet"} />)}
+      </div>
+    </section>
+
+    <section class="preview-section split">
+      <div>
+        <h2>Evidence rail</h2>
+        <EvidenceRail
+          thesis="Request signing is becoming the control point that connects agent identity to publisher policy."
+          items={[
+            { id: "evt-104", date: "2026-08-27", source: "IETF WebBotAuth", title: "Working group advances signed request draft", url: "https://datatracker.ietf.org/group/webbotauth/", note: "Primary standards evidence · high confidence" },
+            { id: "evt-101", date: "2026-08-24", source: "Google Search Central", title: "Crawler verification guidance adds shared infrastructure detail", url: "https://developers.google.com/search/blog", note: "Platform documentation · high confidence" },
+            { id: "trend-agents", date: "2026-W35", source: "Crawler Policy", title: "Trend moves from emerging to accelerating", url: "#trends" },
+          ]}
+        />
+      </div>
+      <div>
+        <h2>Track vocabulary</h2>
+        <div class="tag-cloud">{TRACKS.map((track) => <TrackTag track={track} linked />)}</div>
+      </div>
+    </section>
+
+    <section class="preview-section" id="trends">
+      <h2>Trend state</h2>
+      <TrendTable trends={trends} />
+    </section>
+
+    <section class="preview-section">
+      <h2>Verified developments</h2>
+      <DevelopmentCard slug="request-signing" title="WebBotAuth moves request signing into active standards work" source="IETF WebBotAuth" eventDate="2026-08-27" tracks={["standards-protocols", "agentic-web"]} tier="primary" confidence="high" summary="A concrete identity layer is beginning to connect agent requests, declared authority, and publisher enforcement." />
+      <DevelopmentCard slug="rights-reservation" title="Machine-readable rights signals gain an implementation path" source="W3C TDMRep" eventDate="2026-08-25" tracks={["asset-rights", "licensing-monetization"]} tier="primary" confidence="high" summary="The shift is from policy language toward controls that can travel with assets and support downstream negotiation." />
+    </section>
+  </div>
+</Base>
+
+<style>
+  .preview { padding-top: var(--space-8); }
+  .preview-hero { padding-bottom: var(--space-8); border-bottom: 1px solid var(--border-strong); }
+  .preview-hero > p { grid-column: 1 / 4; padding-top: var(--space-3); }
+  .preview-hero > div { grid-column: 4 / 12; }
+  .preview-hero h1 { max-width: 9ch; }
+  .preview-hero div > p { max-width: 62ch; margin-top: var(--space-5); color: var(--ink-muted); font-size: 1.02rem; }
+  .preview-section { padding-top: var(--space-8); }
+  .preview-section > h2, .split h2 { margin-bottom: var(--space-5); }
+  .health-stack { display: grid; gap: var(--space-3); }
+  .front-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
+  .front-grid > :global(article) { grid-column: span 2; }
+  .front-grid > :global(article:nth-child(4)), .front-grid > :global(article:nth-child(5)) { grid-column: span 3; }
+  .split { display: grid; grid-template-columns: 1.4fr 0.6fr; gap: var(--space-8); }
+  .tag-cloud { display: flex; gap: var(--space-2); flex-wrap: wrap; align-content: start; }
+  @media (max-width: 800px) {
+    .preview { padding-top: var(--space-6); }
+    .preview-hero { display: block; }
+    .preview-hero > p { margin-bottom: var(--space-5); }
+    .front-grid, .split { grid-template-columns: 1fr; }
+    .front-grid > :global(article), .front-grid > :global(article:nth-child(4)), .front-grid > :global(article:nth-child(5)) { grid-column: auto; }
+  }
+</style>

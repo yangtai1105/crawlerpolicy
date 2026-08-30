@@ -1,0 +1,43 @@
+---
+import type { Track } from "../lib/taxonomy";
+import TrackTag from "./TrackTag.astro";
+interface Props {
+  slug: string;
+  title: string;
+  source: string;
+  eventDate: string | Date;
+  tracks: Track[];
+  tier: string;
+  confidence: string;
+  summary?: string;
+}
+const { slug, title, source, eventDate, tracks, tier, confidence, summary } = Astro.props;
+const date = new Date(eventDate);
+---
+
+<article class="development-card">
+  <div class="development-index" aria-hidden="true">{date.toISOString().slice(5, 10).replace("-", ".")}</div>
+  <div class="development-main">
+    <div class="development-meta">
+      <span>{source}</span><span>Tier · {tier}</span><span>Confidence · {confidence}</span>
+    </div>
+    <h3><a href={`/events/${slug}`}>{title}</a></h3>
+    {summary && <p>{summary}</p>}
+    <div class="development-tracks">{tracks.map((track) => <TrackTag track={track} linked />)}</div>
+  </div>
+  <a class="development-action" href={`/events/${slug}`} aria-label={`Open evidence for ${title}`}>Evidence <span aria-hidden="true">↗</span></a>
+</article>
+
+<style>
+  .development-card { display: grid; grid-template-columns: 72px minmax(0, 1fr) auto; gap: var(--space-5); padding: var(--space-5) 0; border-top: 1px solid var(--border-strong); }
+  .development-index { color: var(--protocol-blue); font: 680 1.05rem/1.2 var(--font-mono); }
+  .development-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--ink-muted); font: 600 0.63rem/1.3 var(--font-mono); text-transform: uppercase; }
+  h3 { margin: var(--space-2) 0; font-size: clamp(1.2rem, 2.1vw, 1.7rem); }
+  p { max-width: 70ch; color: var(--ink-muted); font-size: 0.85rem; }
+  .development-tracks { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .development-action { align-self: start; font: 650 0.7rem/1.2 var(--font-mono); border-bottom: 1px solid var(--border-strong); padding-bottom: var(--space-1); }
+  @media (max-width: 640px) {
+    .development-card { grid-template-columns: 52px minmax(0, 1fr); gap: var(--space-3); }
+    .development-action { grid-column: 2; }
+  }
+</style>

@@ -1,0 +1,52 @@
+---
+import { sortTrendsByDelta, type Trend, type TrendStatus } from "../lib/trends";
+interface Props { trends: Trend[]; }
+const { trends } = Astro.props;
+const statusLabels: Record<TrendStatus, string> = {
+  accelerating: "Accelerating",
+  stable: "Stable",
+  emerging: "Emerging",
+  reversing: "Reversing",
+  stalled: "Stalled",
+};
+const sorted = sortTrendsByDelta(trends);
+---
+
+<div class="trend-wrap">
+  <table>
+    <thead><tr><th>Theme</th><th>Status</th><th>Evidence read</th><th>Last material move</th></tr></thead>
+    <tbody>
+      {sorted.map((trend) => {
+        const changed = Boolean(trend.previous_status && trend.previous_status !== trend.status);
+        return (
+          <tr class:changed>
+            <th scope="row">
+              <span>{trend.title}</span>
+              {changed && <small>Changed from {statusLabels[trend.previous_status!]}</small>}
+            </th>
+            <td><span class:list={["trend-status", `status-${trend.status}`]}>{statusLabels[trend.status]}</span></td>
+            <td>{trend.thesis}</td>
+            <td>{trend.last_material_update ?? "No verified change"}</td>
+          </tr>
+        );
+      })}
+    </tbody>
+  </table>
+  {sorted.length === 0 && <p class="empty">Trend status starts after the first completed weekly intelligence cycle.</p>}
+</div>
+
+<style>
+  .trend-wrap { overflow-x: auto; border: 1px solid var(--border-strong); background: var(--bg-elev); }
+  table { border-collapse: collapse; width: 100%; min-width: 760px; }
+  th, td { padding: var(--space-4); border-bottom: 1px solid var(--border); text-align: left; vertical-align: top; font-size: 0.78rem; }
+  thead th { font: 650 0.63rem/1.3 var(--font-mono); letter-spacing: 0.06em; text-transform: uppercase; color: var(--ink-muted); background: color-mix(in srgb, var(--bg) 62%, transparent); }
+  tbody th { width: 22%; font-family: var(--font-display); font-size: 0.95rem; }
+  tbody th small { display: block; margin-top: 4px; color: var(--trace-violet); font: 600 0.61rem/1.35 var(--font-mono); }
+  tbody td:nth-child(2) { width: 14%; }
+  tbody td:nth-child(4) { color: var(--ink-muted); font-family: var(--font-mono); font-size: 0.68rem; }
+  tr.changed { box-shadow: inset 3px 0 var(--trace-violet); }
+  .trend-status { display: inline-flex; padding: 3px 7px; border: 1px solid var(--border-strong); font: 650 0.62rem/1.3 var(--font-mono); text-transform: uppercase; }
+  .status-accelerating, .status-emerging { color: var(--alert-red); border-color: color-mix(in srgb, var(--alert-red) 55%, var(--border)); }
+  .status-reversing { color: var(--trace-violet); }
+  .empty { margin: 0; padding: var(--space-5); color: var(--ink-muted); }
+</style>

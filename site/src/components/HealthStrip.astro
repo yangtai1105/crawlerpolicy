@@ -1,0 +1,69 @@
+---
+import type { PipelineHealth } from "../lib/health";
+
+interface Props { health: PipelineHealth; compact?: boolean; }
+const { health, compact = false } = Astro.props;
+const labels = {
+  healthy: "Coverage verified",
+  degraded: "Partial coverage",
+  critical: "Intelligence paused",
+  unknown: "Awaiting verification",
+};
+const descriptions = {
+  healthy: "All required stages completed.",
+  degraded: "Some non-required sources or stages did not complete.",
+  critical: "Required evidence is incomplete; weekly conclusions are withheld.",
+  unknown: "No schema-v2 pipeline health record is available yet.",
+};
+const timestamp = health.last_fully_successful_at
+  ? new Date(health.last_fully_successful_at).toISOString().replace("T", " ").slice(0, 16) + " UTC"
+  : "No verified full run";
+---
+
+<section class:list={["health-strip", `health-${health.status}`, { compact }]} aria-label="Pipeline health">
+  <div class="health-state">
+    <span class="status-mark" aria-hidden="true"></span>
+    <div>
+      <p class="utility-label">Pipeline · {health.status}</p>
+      <strong>{labels[health.status]}</strong>
+    </div>
+  </div>
+  {!compact && <p class="health-description">{descriptions[health.status]}</p>}
+  <dl class="health-metrics">
+    <div><dt>Completed</dt><dd>{health.coverage.completed}/{health.coverage.configured}</dd></div>
+    <div><dt>Failed</dt><dd>{health.coverage.failed}</dd></div>
+    <div><dt>Last full run</dt><dd>{timestamp}</dd></div>
+  </dl>
+</section>
+
+<style>
+  .health-strip {
+    --health-color: var(--status-unknown);
+    display: grid;
+    grid-template-columns: minmax(210px, 1fr) 1.2fr auto;
+    gap: var(--space-5);
+    align-items: center;
+    padding: var(--space-4) var(--space-5);
+    border: 1px solid var(--border-strong);
+    border-left: 4px solid var(--health-color);
+    background: var(--bg-elev);
+  }
+  .health-healthy { --health-color: var(--status-healthy); }
+  .health-degraded { --health-color: var(--status-degraded); }
+  .health-critical { --health-color: var(--status-critical); }
+  .health-state { display: flex; align-items: center; gap: var(--space-3); }
+  .health-state p, .health-description { margin: 0; }
+  .health-state strong { font: 650 0.96rem/1.2 var(--font-display); }
+  .status-mark { width: 10px; height: 10px; background: var(--health-color); transform: rotate(45deg); flex: 0 0 auto; }
+  .health-description { color: var(--ink-muted); font-size: 0.82rem; max-width: 44ch; }
+  .health-metrics { margin: 0; display: flex; gap: var(--space-5); }
+  .health-metrics div { min-width: 70px; }
+  dt { font: 600 0.62rem/1.3 var(--font-mono); text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-muted); }
+  dd { margin: 2px 0 0; font: 600 0.76rem/1.4 var(--font-mono); white-space: nowrap; }
+  .compact { grid-template-columns: 1fr auto; }
+  .compact .health-metrics div:nth-child(2) { display: none; }
+  @media (max-width: 800px) {
+    .health-strip { grid-template-columns: 1fr; }
+    .health-metrics { flex-wrap: wrap; }
+  }
+</style>
