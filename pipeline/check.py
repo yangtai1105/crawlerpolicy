@@ -1,12 +1,14 @@
-"""Daily orchestrator: fetch → diff/relevance → analyze → write → commit."""
+"""Daily evidence-first orchestrator: fetch → evidence → analyze → publish."""
 from __future__ import annotations
 
 import argparse
 import asyncio
 import json
 import logging
-from collections.abc import Awaitable, Callable
-from datetime import datetime, timedelta, timezone
+import os
+from collections.abc import Awaitable, Callable, Mapping
+from dataclasses import dataclass
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 from anthropic import AsyncAnthropic
@@ -17,40 +19,49 @@ from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
 from pipeline.differ import compute_diff
 from pipeline.event_writer import write_event
-from pipeline.fetchers.base import FetchResult, ResultMode
+from pipeline.evidence import (
+    EvidenceRecord,
+    EvidenceStage,
+    make_evidence_id,
+    pending_analysis,
+    save_evidence,
+)
+from pipeline.fetchers.base import CandidateItem, FetchResult, ResultMode
 from pipeline.fetchers.cf_browser_run import fetch_cf_browser_run
 from pipeline.fetchers.gemini_search import fetch_gemini_search
 from pipeline.fetchers.github_repo import fetch_github_repo
 from pipeline.fetchers.html_page import fetch_html_page
 from pipeline.fetchers.ietf_draft import fetch_ietf_draft
 from pipeline.fetchers.rss_feed import fetch_rss_feed
+from pipeline.health import (
+    HealthStatus,
+    SourceRunStatus,
+    StageStatus,
+    build_run_health,
+    exit_code_for_health,
+)
+from pipeline.pillar_digest import build_pillar_digests
 from pipeline.relevance import haiku_relevance, keyword_match
 from pipeline.snapshots import hash_content, load_latest, save_snapshot
 from pipeline.sources import Source, SourceType, load_sources
 from pipeline.state import SourceState, load_state, save_state
-from pipeline.pillar_digest import build_pillar_digests
 from pipeline.state_of_play import build_opt_out_matrix, select_crawler_control_sources
 from pipeline.taxonomy import Track
 from pipeline.trend_context import format_trend_context, load_recent_events_for_source
 
 log = logging.getLogger("check")
 
-# On first-seen RSS/GitHub sources, process items from the last N days as
-# events (instead of silently recording state). Avoids a wall of historical
-# posts while still giving the site something to show at launch.
 BACKFILL_DAYS = 30
-
-
 FetchDispatch = Callable[[Source, SourceState], Awaitable[FetchResult]]
 
 
-def _maybe_trend_context(cfg: Config, source: Source) -> str:
-    """Build a compact history-of-this-source block for the analyzer prompt.
+@dataclass(frozen=True)
+class DependencyBlocker:
+    stage: str
+    message: str
 
-    Crawler events are rare and self-standing; skip trend context there to keep
-    focus on the specific change. For ecosystem + agent sources, the last ~10
-    events provide genuinely useful pattern context.
-    """
+
+def _maybe_trend_context(cfg: Config, source: Source) -> str:
     if Track.CRAWLER_CONTROLS in source.default_tracks:
         return ""
     recent = load_recent_events_for_source(cfg.events_dir, source.slug, limit=10)
@@ -58,25 +69,67 @@ def _maybe_trend_context(cfg: Config, source: Source) -> str:
 
 
 async def _default_fetch(source: Source, state: SourceState) -> FetchResult:
-    if source.type == SourceType.HTML_PAGE:
+    if source.type is SourceType.HTML_PAGE:
         return await fetch_html_page(source)
-    if source.type == SourceType.RSS_FEED:
+    if source.type is SourceType.RSS_FEED:
         return await fetch_rss_feed(
-            source, since=state.last_checked_at, seen_guids=state.last_seen_guids
+            source,
+            since=state.last_checked_at,
+            seen_guids=state.last_seen_guids,
         )
-    if source.type == SourceType.GITHUB_REPO:
+    if source.type is SourceType.GITHUB_REPO:
         return await fetch_github_repo(
-            source, since=state.last_checked_at, seen_guids=state.last_seen_guids
+            source,
+            since=state.last_checked_at,
+            seen_guids=state.last_seen_guids,
         )
-    if source.type == SourceType.IETF_DRAFT:
+    if source.type is SourceType.IETF_DRAFT:
         return await fetch_ietf_draft(source)
-    if source.type == SourceType.GEMINI_SEARCH:
+    if source.type is SourceType.GEMINI_SEARCH:
         return await fetch_gemini_search(
-            source, since=state.last_checked_at, seen_guids=state.last_seen_guids
+            source,
+            since=state.last_checked_at,
+            seen_guids=state.last_seen_guids,
         )
-    if source.type == SourceType.CF_BROWSER_RUN:
+    if source.type is SourceType.CF_BROWSER_RUN:
         return await fetch_cf_browser_run(source)
     raise ValueError(f"unknown source type {source.type}")
+
+
+def preflight_dependency_errors(
+    sources: list[Source], environ: Mapping[str, str]
+) -> dict[str, DependencyBlocker]:
+    """Map missing credentials to the source stage they disable."""
+    def present(name: str) -> bool:
+        return bool(environ.get(name, "").strip())
+
+    blockers: dict[str, DependencyBlocker] = {}
+    for source in sources:
+        if source.type is SourceType.GEMINI_SEARCH and not present("GEMINI_API_KEY"):
+            blockers[source.slug] = DependencyBlocker(
+                stage="fetch",
+                message="GEMINI_API_KEY is missing",
+            )
+            continue
+        if source.type is SourceType.CF_BROWSER_RUN:
+            required = (
+                "CLOUDFLARE_ACCOUNT_ID",
+                "CLOUDFLARE_EMAIL",
+                "CLOUDFLARE_CRAWLER_API_KEY",
+            )
+            missing = [name for name in required if not present(name)]
+            if missing:
+                blockers[source.slug] = DependencyBlocker(
+                    stage="fetch",
+                    message=f"missing Cloudflare credentials: {', '.join(missing)}",
+                )
+                continue
+        if not present("ANTHROPIC_API_KEY"):
+            blockers[source.slug] = DependencyBlocker(
+                stage="analysis",
+                message="ANTHROPIC_API_KEY is missing",
+            )
+    return blockers
 
 
 async def run_check(
@@ -89,65 +142,115 @@ async def run_check(
     anthropic_client: AsyncAnthropic | None = None,
     only: str | None = None,
     dry_run: bool = False,
+    dependency_blockers: dict[str, DependencyBlocker] | None = None,
 ) -> dict:
-    """Run the daily pipeline. Returns a health summary dict."""
+    """Run the pipeline and return a JSON-serializable health payload."""
     cfg = Config(repo_root=repo_root, anthropic_api_key="", alert_emails=[])
     sources = load_sources(cfg.sources_yaml)
     if only:
-        sources = [s for s in sources if s.slug == only]
+        sources = [source for source in sources if source.slug == only]
         if not sources:
             raise ValueError(f"--only {only!r} did not match any source")
 
     fetch_dispatch = fetch_dispatch or _default_fetch
-    client = anthropic_client
-
-    per_source_status: dict[str, str] = {}
+    blockers = dependency_blockers or {}
+    statuses = {source.slug: SourceRunStatus() for source in sources}
+    source_by_slug = {source.slug: source for source in sources}
     events_written: list[Path] = []
+
+    await _replay_pending(
+        cfg=cfg,
+        sources=source_by_slug,
+        statuses=statuses,
+        blockers=blockers,
+        client=anthropic_client,
+        analyze_change=analyze_change,
+        events_written=events_written,
+        dry_run=dry_run,
+    )
 
     for source in sources:
         state = load_state(cfg.state_dir, source.slug)
+        status = statuses[source.slug]
+        blocker = blockers.get(source.slug)
+        if blocker and blocker.stage == "fetch":
+            status.fetch = StageStatus.FAILED
+            status.error = blocker.message
+            state.consecutive_failures += 1
+            if not dry_run:
+                save_state(cfg.state_dir, source.slug, state)
+            continue
+
         try:
-            result = await fetch_dispatch(source, state)
-            new_events, updated_state = await _process_result(
+            result = await _fetch_source(fetch_dispatch, source, state)
+            status.fetch = StageStatus.OK
+            state.last_checked_at = now
+            state.last_fetch_succeeded_at = now
+            state.consecutive_failures = 0
+            new_events, state = await _process_result(
                 source=source,
                 state=state,
                 result=result,
                 now=now,
                 cfg=cfg,
-                client=client,
+                client=anthropic_client,
                 analyze_change=analyze_change,
+                status=status,
+                analysis_blocker=(
+                    blocker.message
+                    if blocker is not None and blocker.stage == "analysis"
+                    else None
+                ),
                 dry_run=dry_run,
             )
             events_written.extend(new_events)
-            state = updated_state
-            state.last_checked_at = now
-            state.consecutive_failures = 0
             if not dry_run:
                 save_state(cfg.state_dir, source.slug, state)
-            per_source_status[source.slug] = "ok"
-        except Exception as e:
-            log.exception("fetch failed for %s", source.slug)
+        except Exception as error:
+            log.exception("fetch/evidence failed for %s", source.slug)
+            if status.fetch is StageStatus.PENDING:
+                status.fetch = StageStatus.FAILED
+            if status.evidence is StageStatus.PENDING:
+                status.evidence = StageStatus.FAILED
+            status.error = str(error)
             state.consecutive_failures += 1
             if not dry_run:
                 save_state(cfg.state_dir, source.slug, state)
-            per_source_status[source.slug] = f"error: {e}"
 
+    derived_errors: list[str] = []
     if extract_sop is not None and not dry_run:
         try:
             await extract_sop(sources=sources, repo_root=repo_root, now=now)
-        except Exception as e:
+        except Exception as error:
             log.exception("state_of_play failed")
-            per_source_status["_sop"] = f"error: {e}"
+            derived_errors.append(f"state_of_play: {error}")
 
-    health = {
-        "last_run_at": now.isoformat(),
-        "per_source_status": per_source_status,
-        "events_written": [str(p.relative_to(repo_root)) for p in events_written],
-    }
+    previous_success = _load_last_full_success(cfg.data_dir / "health.json")
+    health = build_run_health(
+        sources=sources,
+        per_source=statuses,
+        now=now,
+        last_full_success=previous_success,
+    )
+    payload = health.model_dump(mode="json")
+    payload["events_written"] = [
+        str(path.relative_to(repo_root)) for path in events_written
+    ]
+    payload["derived_errors"] = derived_errors
     if not dry_run:
         cfg.data_dir.mkdir(parents=True, exist_ok=True)
-        (cfg.data_dir / "health.json").write_text(json.dumps(health, indent=2))
-    return health
+        (cfg.data_dir / "health.json").write_text(
+            json.dumps(payload, indent=2, ensure_ascii=False) + "\n"
+        )
+    return payload
+
+
+async def _fetch_source(
+    fetch_dispatch: FetchDispatch,
+    source: Source,
+    state: SourceState,
+) -> FetchResult:
+    return await fetch_dispatch(source, state)
 
 
 async def _process_result(
@@ -158,143 +261,465 @@ async def _process_result(
     now: datetime,
     cfg: Config,
     client: AsyncAnthropic | None,
-    analyze_change,
+    analyze_change: Callable,
+    status: SourceRunStatus,
+    analysis_blocker: str | None,
     dry_run: bool,
 ) -> tuple[list[Path], SourceState]:
-    new_events: list[Path] = []
-
-    if result.mode == ResultMode.DIFFABLE:
-        new_hash = hash_content(result.normalized_content)
-        if state.last_hash == new_hash:
-            return new_events, state
-        # Load previous BEFORE saving the new snapshot, so `prev` is the
-        # actual pre-change content, not the file we're about to write.
-        prev = load_latest(cfg.snapshots_dir, source.slug)
-        if not dry_run:
-            save_snapshot(
-                cfg.snapshots_dir,
-                source.slug,
-                now,
-                content=result.normalized_content,
-                ext=result.raw_ext,
-            )
-        # Catch-up: first-ever snapshot → no event.
-        # Exception: gemini_search "first run" is itself a valid digest event,
-        # since the query is explicitly recurring and there's no
-        # previous-page-state to silently migrate from.
-        is_catchup = (state.first_seen or prev is None) and source.type != SourceType.GEMINI_SEARCH
-        if is_catchup or (prev is not None and prev[0] == result.normalized_content):
-            state.first_seen = False
-            state.last_hash = new_hash
-            return new_events, state
-        # gemini_search + no prior snapshot: treat baseline as empty string so
-        # the first run produces a full-report event instead of crashing on prev[0].
-        prev_content = prev[0] if prev is not None else ""
-        diff = compute_diff(prev_content, result.normalized_content)
-        if not diff.has_changes:
-            state.last_hash = new_hash
-            return new_events, state
-        trend_ctx = _maybe_trend_context(cfg, source)
-        analysis: AnalysisResult = await analyze_change(
-            client=client,
+    if result.mode is ResultMode.DIFFABLE:
+        return await _process_diffable(
             source=source,
-            prev_content=prev_content,
-            curr_content=result.normalized_content,
-            unified_diff=diff.unified_diff,
-            trend_context=trend_ctx,
+            state=state,
+            result=result,
+            now=now,
+            cfg=cfg,
+            client=client,
+            analyze_change=analyze_change,
+            status=status,
+            analysis_blocker=analysis_blocker,
+            dry_run=dry_run,
         )
-        if analysis.change_kind == "material" and not dry_run:
-            path = write_event(
-                events_dir=cfg.events_dir,
-                source=source,
-                analysis=analysis,
-                event_date=now,
-                published_at=now,
-                detected_at=now,
-                evidence_ids=[],
-                unified_diff=diff.unified_diff,
-            )
-            new_events.append(path)
-        state.last_hash = new_hash
-        return new_events, state
+    return await _process_items(
+        source=source,
+        state=state,
+        result=result,
+        now=now,
+        cfg=cfg,
+        client=client,
+        analyze_change=analyze_change,
+        status=status,
+        analysis_blocker=analysis_blocker,
+        dry_run=dry_run,
+    )
 
-    # PER_ITEM
-    # Catch-up on first run: filter items to the last BACKFILL_DAYS (default
-    # 30) rather than skipping everything. A brand-new source should
-    # contribute some immediately visible history, but not a flood.
-    items_to_process = result.items
+
+async def _process_diffable(
+    *,
+    source: Source,
+    state: SourceState,
+    result: FetchResult,
+    now: datetime,
+    cfg: Config,
+    client: AsyncAnthropic | None,
+    analyze_change: Callable,
+    status: SourceRunStatus,
+    analysis_blocker: str | None,
+    dry_run: bool,
+) -> tuple[list[Path], SourceState]:
+    current = result.normalized_content or ""
+    new_hash = hash_content(current)
+    if state.last_hash == new_hash:
+        _mark_downstream_ok(status)
+        if analysis_blocker:
+            _mark_analysis_failed(status, analysis_blocker)
+        return [], state
+
+    previous = load_latest(cfg.snapshots_dir, source.slug)
+    snapshot_path = cfg.snapshots_dir / source.slug / f"{now.date()}.{result.raw_ext}"
+    if not dry_run:
+        snapshot_path = save_snapshot(
+            cfg.snapshots_dir,
+            source.slug,
+            now,
+            content=current,
+            ext=result.raw_ext,
+        )
+    is_catchup = (
+        state.first_seen or previous is None
+    ) and source.type is not SourceType.GEMINI_SEARCH
+    if is_catchup or (previous is not None and previous[0] == current):
+        state.first_seen = False
+        state.last_hash = new_hash
+        _mark_downstream_ok(status)
+        if analysis_blocker:
+            _mark_analysis_failed(status, analysis_blocker)
+        return [], state
+
+    previous_content = previous[0] if previous is not None else ""
+    diff = compute_diff(previous_content, current)
+    if not diff.has_changes:
+        state.last_hash = new_hash
+        _mark_downstream_ok(status)
+        return [], state
+
+    record = EvidenceRecord(
+        evidence_id=make_evidence_id(source.slug, new_hash),
+        source=source.slug,
+        source_url=source.url or "",
+        published_at=now,
+        detected_at=now,
+        content_path=_relative_path(snapshot_path, cfg.repo_root),
+        content_hash=f"sha256:{new_hash}",
+        external_id=new_hash,
+        stage=EvidenceStage.FETCHED,
+        content=current,
+        previous_content=previous_content,
+        unified_diff=diff.unified_diff,
+    )
+    _record_evidence(cfg, record, status, dry_run)
+    state.last_hash = new_hash
+    state.last_evidence_at = now
+    if analysis_blocker:
+        _fail_evidence_analysis(cfg, record, analysis_blocker, status, dry_run)
+        return [], state
+
+    event = await _analyze_and_publish(
+        cfg=cfg,
+        source=source,
+        record=record,
+        client=client,
+        analyze_change=analyze_change,
+        status=status,
+        dry_run=dry_run,
+    )
+    return ([event] if event is not None else []), state
+
+
+async def _process_items(
+    *,
+    source: Source,
+    state: SourceState,
+    result: FetchResult,
+    now: datetime,
+    cfg: Config,
+    client: AsyncAnthropic | None,
+    analyze_change: Callable,
+    status: SourceRunStatus,
+    analysis_blocker: str | None,
+    dry_run: bool,
+) -> tuple[list[Path], SourceState]:
+    events: list[Path] = []
+    items = result.items
     if state.first_seen:
         cutoff = now - timedelta(days=BACKFILL_DAYS)
-        items_to_process = [
-            i for i in result.items if i.published_at and i.published_at >= cutoff
+        items = [
+            item
+            for item in result.items
+            if item.published_at and item.published_at >= cutoff
         ]
-        # Record guids of items OLDER than the backfill window as "seen" so
-        # they don't get reprocessed if the state file is ever rebuilt.
-        for i in result.items:
-            if i not in items_to_process:
-                state.last_seen_guids.append(i.guid)
+        for item in result.items:
+            if item not in items:
+                state.last_seen_guids.append(item.guid)
 
-    for item in items_to_process:
-        blob = f"{item.title}\n{item.summary}"
-        keyword_pass = keyword_match(blob, source.keyword_filter or [])
-        relevance_pass: bool | None = None
-        analysis: AnalysisResult | None = None
+    if not items:
+        _mark_downstream_ok(status)
+        if analysis_blocker:
+            _mark_analysis_failed(status, analysis_blocker)
 
-        if keyword_pass:
-            verdict = await haiku_relevance(client, item.title, item.summary)
-            relevance_pass = verdict.is_relevant
-            if verdict.is_relevant:
-                trend_ctx = _maybe_trend_context(cfg, source)
-                analysis = await analyze_change(
-                    client=client,
-                    source=source,
-                    prev_content="",
-                    curr_content=item.body or item.summary,
-                    unified_diff="",
-                    trend_context=trend_ctx,
-                    item_url=item.url,
-                )
-                if analysis.change_kind == "material" and not dry_run:
-                    path = write_event(
-                        events_dir=cfg.events_dir,
-                        source=source,
-                        analysis=analysis,
-                        event_date=item.published_at or now,
-                        published_at=item.published_at or now,
-                        detected_at=now,
-                        evidence_ids=[],
-                        unified_diff="",
-                        source_url=item.url,
-                    )
-                    new_events.append(path)
-
-        # Raw log: every item that passed the keyword filter (or made it into
-        # the relevance pass) is recorded so long-term analysis has the full
-        # corpus. Items that failed the keyword filter are skipped here —
-        # they're noise that'd drown a trend query.
-        if keyword_pass and not dry_run:
-            raw_log.append(
-                cfg.raw_dir,
-                source.slug,
-                guid=item.guid,
-                title=item.title,
-                summary=item.summary,
-                url=item.url,
-                published_at=item.published_at,
-                keyword_pass=keyword_pass,
-                relevance_pass=relevance_pass,
-                change_kind=analysis.change_kind if analysis else None,
-                importance=analysis.importance if analysis else None,
-                recorded_at=now,
-            )
-
+    for item in items:
+        if item.guid in state.last_seen_guids:
+            continue
+        record = _evidence_for_item(source, item, now)
+        _record_evidence(cfg, record, status, dry_run)
         state.last_seen_guids.append(item.guid)
+        state.last_evidence_at = now
+        if analysis_blocker:
+            _fail_evidence_analysis(cfg, record, analysis_blocker, status, dry_run)
+            continue
+        event = await _analyze_and_publish(
+            cfg=cfg,
+            source=source,
+            record=record,
+            client=client,
+            analyze_change=analyze_change,
+            status=status,
+            dry_run=dry_run,
+        )
+        if event is not None:
+            events.append(event)
 
-    # Mark first_seen done AFTER processing so the flag still applies above.
-    if state.first_seen:
-        state.first_seen = False
+    state.first_seen = False
     state.last_seen_guids = state.last_seen_guids[-500:]
-    return new_events, state
+    return events, state
+
+
+def _evidence_for_item(
+    source: Source,
+    item: CandidateItem,
+    now: datetime,
+) -> EvidenceRecord:
+    evidence_id = make_evidence_id(source.slug, item.guid)
+    relative_path = Path("content") / "evidence" / source.slug / f"{evidence_id}.json"
+    content = item.body or item.summary
+    return EvidenceRecord(
+        evidence_id=evidence_id,
+        source=source.slug,
+        source_url=item.url or source.url or "",
+        published_at=item.published_at,
+        detected_at=now,
+        content_path=relative_path.as_posix(),
+        content_hash=f"sha256:{hash_content(content)}",
+        external_id=item.guid,
+        stage=EvidenceStage.FETCHED,
+        title=item.title,
+        content=content,
+    )
+
+
+def _record_evidence(
+    cfg: Config,
+    record: EvidenceRecord,
+    status: SourceRunStatus,
+    dry_run: bool,
+) -> None:
+    if not dry_run:
+        save_evidence(cfg.evidence_dir, record)
+    if status.evidence is not StageStatus.FAILED:
+        status.evidence = StageStatus.OK
+    if record.evidence_id not in status.evidence_ids:
+        status.evidence_ids.append(record.evidence_id)
+
+
+async def _analyze_and_publish(
+    *,
+    cfg: Config,
+    source: Source,
+    record: EvidenceRecord,
+    client: AsyncAnthropic | None,
+    analyze_change: Callable,
+    status: SourceRunStatus,
+    dry_run: bool,
+) -> Path | None:
+    try:
+        analysis = await _analyze_evidence(
+            cfg=cfg,
+            source=source,
+            record=record,
+            client=client,
+            analyze_change=analyze_change,
+            dry_run=dry_run,
+        )
+        if status.analysis is not StageStatus.FAILED:
+            status.analysis = StageStatus.OK
+        if analysis is None or analysis.change_kind != "material":
+            if status.publish is not StageStatus.FAILED:
+                status.publish = StageStatus.OK
+            return None
+        event = _publish_analysis(
+            cfg=cfg,
+            source=source,
+            record=record,
+            analysis=analysis,
+            dry_run=dry_run,
+        )
+        if status.publish is not StageStatus.FAILED:
+            status.publish = StageStatus.OK
+        if event is not None:
+            status.events_written.append(_relative_path(event, cfg.repo_root))
+        return event
+    except Exception as error:
+        log.exception(
+            "analysis/publish failed for %s evidence %s",
+            source.slug,
+            record.evidence_id,
+        )
+        _fail_evidence_analysis(cfg, record, str(error), status, dry_run)
+        return None
+
+
+async def _analyze_evidence(
+    *,
+    cfg: Config,
+    source: Source,
+    record: EvidenceRecord,
+    client: AsyncAnthropic | None,
+    analyze_change: Callable,
+    dry_run: bool,
+) -> AnalysisResult | None:
+    if record.title is not None:
+        blob = f"{record.title}\n{record.content}"
+        if not keyword_match(blob, source.keyword_filter or []):
+            record.stage = EvidenceStage.ANALYZED
+            record.last_error = None
+            if not dry_run:
+                save_evidence(cfg.evidence_dir, record)
+            return None
+        verdict = await haiku_relevance(client, record.title, record.content)
+        if not verdict.is_relevant:
+            record.stage = EvidenceStage.ANALYZED
+            record.last_error = None
+            if not dry_run:
+                save_evidence(cfg.evidence_dir, record)
+                _append_raw_record(
+                    cfg,
+                    source,
+                    record,
+                    keyword_pass=True,
+                    relevance_pass=False,
+                )
+            return None
+
+    analysis = await analyze_change(
+        client=client,
+        source=source,
+        prev_content=record.previous_content,
+        curr_content=record.content,
+        unified_diff=record.unified_diff,
+        trend_context=_maybe_trend_context(cfg, source),
+        item_url=record.source_url or None,
+        published_at=record.published_at,
+    )
+    record.analysis_attempts += 1
+    record.stage = EvidenceStage.ANALYZED
+    record.last_error = None
+    if not dry_run:
+        save_evidence(cfg.evidence_dir, record)
+        if record.title is not None:
+            _append_raw_record(
+                cfg,
+                source,
+                record,
+                keyword_pass=True,
+                relevance_pass=True,
+                analysis=analysis,
+            )
+    return analysis
+
+
+def _publish_analysis(
+    *,
+    cfg: Config,
+    source: Source,
+    record: EvidenceRecord,
+    analysis: AnalysisResult,
+    dry_run: bool,
+) -> Path | None:
+    if dry_run:
+        return None
+    event_date = record.published_at or record.detected_at
+    path = write_event(
+        events_dir=cfg.events_dir,
+        source=source,
+        analysis=analysis,
+        event_date=event_date,
+        published_at=record.published_at or event_date,
+        detected_at=record.detected_at,
+        evidence_ids=[record.evidence_id],
+        unified_diff=record.unified_diff,
+        source_url=record.source_url,
+    )
+    record.stage = EvidenceStage.PUBLISHED
+    record.last_error = None
+    save_evidence(cfg.evidence_dir, record)
+    return path
+
+
+async def _replay_pending(
+    *,
+    cfg: Config,
+    sources: dict[str, Source],
+    statuses: dict[str, SourceRunStatus],
+    blockers: dict[str, DependencyBlocker],
+    client: AsyncAnthropic | None,
+    analyze_change: Callable,
+    events_written: list[Path],
+    dry_run: bool,
+) -> None:
+    for _path, record in pending_analysis(cfg.evidence_dir):
+        source = sources.get(record.source)
+        if source is None:
+            continue
+        status = statuses[source.slug]
+        status.evidence = StageStatus.OK
+        if record.evidence_id not in status.evidence_ids:
+            status.evidence_ids.append(record.evidence_id)
+        blocker = blockers.get(source.slug)
+        if blocker and blocker.stage == "analysis":
+            _fail_evidence_analysis(cfg, record, blocker.message, status, dry_run)
+            continue
+        event = await _analyze_and_publish(
+            cfg=cfg,
+            source=source,
+            record=record,
+            client=client,
+            analyze_change=analyze_change,
+            status=status,
+            dry_run=dry_run,
+        )
+        if event is not None:
+            events_written.append(event)
+
+
+def _fail_evidence_analysis(
+    cfg: Config,
+    record: EvidenceRecord,
+    message: str,
+    status: SourceRunStatus,
+    dry_run: bool,
+) -> None:
+    record.stage = EvidenceStage.FAILED_ANALYSIS
+    record.analysis_attempts += 1
+    record.last_error = message
+    if not dry_run:
+        save_evidence(cfg.evidence_dir, record)
+    _mark_analysis_failed(status, message)
+
+
+def _mark_analysis_failed(status: SourceRunStatus, message: str) -> None:
+    status.analysis = StageStatus.FAILED
+    status.publish = StageStatus.FAILED
+    status.error = message
+
+
+def _mark_downstream_ok(status: SourceRunStatus) -> None:
+    for name in ("evidence", "analysis", "publish"):
+        if getattr(status, name) is not StageStatus.FAILED:
+            setattr(status, name, StageStatus.OK)
+
+
+def _append_raw_record(
+    cfg: Config,
+    source: Source,
+    record: EvidenceRecord,
+    *,
+    keyword_pass: bool,
+    relevance_pass: bool,
+    analysis: AnalysisResult | None = None,
+) -> None:
+    raw_log.append(
+        cfg.raw_dir,
+        source.slug,
+        guid=record.external_id,
+        title=record.title or "",
+        summary=record.content,
+        url=record.source_url,
+        published_at=record.published_at,
+        keyword_pass=keyword_pass,
+        relevance_pass=relevance_pass,
+        change_kind=analysis.change_kind if analysis else None,
+        importance=analysis.importance if analysis else None,
+        recorded_at=record.detected_at,
+    )
+
+
+def _relative_path(path: Path, repo_root: Path) -> str:
+    try:
+        return path.relative_to(repo_root).as_posix()
+    except ValueError:
+        return path.as_posix()
+
+
+def _load_last_full_success(path: Path) -> datetime | None:
+    if not path.exists():
+        return None
+    try:
+        raw = json.loads(path.read_text())
+        value = raw.get("last_fully_successful_at")
+        return datetime.fromisoformat(value) if value else None
+    except (json.JSONDecodeError, TypeError, ValueError):
+        return None
+
+
+def _write_workflow_summary(payload: dict) -> None:
+    summary_path = os.environ.get("GITHUB_STEP_SUMMARY")
+    if not summary_path:
+        return
+    with Path(summary_path).open("a") as handle:
+        handle.write("## Daily intelligence health\n\n")
+        handle.write(f"Status: **{payload['status']}**\n\n")
+        handle.write("```json\n")
+        handle.write(json.dumps(payload["coverage"], indent=2))
+        handle.write("\n```\n")
 
 
 def _cli() -> None:
@@ -308,13 +733,17 @@ def _cli() -> None:
         format="%(asctime)s %(levelname)s %(name)s %(message)s",
     )
     cfg = Config.from_env()
-    # max_retries=5 (default 2) absorbs intermittent connection errors during
-    # the 30-day backfill, which fans out ~30-80 API calls over a few minutes.
     client = (
         AsyncAnthropic(api_key=cfg.anthropic_api_key, max_retries=5)
         if cfg.anthropic_api_key
         else None
     )
+    configured_sources = load_sources(cfg.sources_yaml)
+    if args.only:
+        configured_sources = [
+            source for source in configured_sources if source.slug == args.only
+        ]
+    blockers = preflight_dependency_errors(configured_sources, os.environ)
 
     async def _sop(sources, repo_root, now):
         from pipeline import snapshots as snap_mod
@@ -338,16 +767,20 @@ def _cli() -> None:
             now=now,
         )
 
-    asyncio.run(
+    payload = asyncio.run(
         run_check(
             repo_root=cfg.repo_root,
-            now=datetime.now(tz=timezone.utc),
+            now=datetime.now(tz=UTC),
             anthropic_client=client,
             extract_sop=_sop if client else None,
             only=args.only,
             dry_run=args.dry_run,
+            dependency_blockers=blockers,
         )
     )
+    print(json.dumps(payload, indent=2))
+    _write_workflow_summary(payload)
+    raise SystemExit(exit_code_for_health(HealthStatus(payload["status"])))
 
 
 if __name__ == "__main__":

@@ -356,7 +356,7 @@ git commit -m "feat: emit track-aware evidence-backed events"
 - Changes: `run_check(...) -> dict` with `status`, `coverage`, `stages`, and `per_source`.
 - Adds CLI exit code `2` for critical and `0` for healthy/degraded.
 
-- [ ] **Step 1: Write failing health-threshold tests**
+- [x] **Step 1: Write failing health-threshold tests**
 
 ```python
 def test_required_source_failure_is_critical():
@@ -377,7 +377,7 @@ def test_optional_failure_with_high_coverage_is_degraded():
     assert health.status is HealthStatus.DEGRADED
 ```
 
-- [ ] **Step 2: Write a failing orchestration replay test**
+- [x] **Step 2: Write a failing orchestration replay test**
 
 ```python
 async def test_analysis_failure_saves_evidence_without_advancing_completion(repo):
@@ -389,25 +389,25 @@ async def test_analysis_failure_saves_evidence_without_advancing_completion(repo
     assert health["status"] in {"degraded", "critical"}
 ```
 
-- [ ] **Step 3: Run focused tests to confirm failure**
+- [x] **Step 3: Run focused tests to confirm failure**
 
 Run: `uv run pytest tests/test_health.py tests/test_check.py -v`
 
 Expected: FAIL because current orchestration treats the source as one opaque `ok/error` result.
 
-- [ ] **Step 4: Implement health models and calculations**
+- [x] **Step 4: Implement health models and calculations**
 
 Calculate completion as sources whose required stages all equal `ok`. Persist `last_fully_successful_at` only for a healthy run. Include stage totals and required failures. Keep full per-source errors in `data/health.json`.
 
-- [ ] **Step 5: Refactor `run_check` into explicit stage helpers**
+- [x] **Step 5: Refactor `run_check` into explicit stage helpers**
 
 Add focused internal functions `_fetch_source`, `_record_evidence`, `_analyze_evidence`, and `_publish_analysis`. A per-item guid is appended to completed state only after evidence persistence; failed analysis remains replayable. At run start, process pending analysis records before fetching new items.
 
-- [ ] **Step 6: Add CLI preflight and exit policy**
+- [x] **Step 6: Add CLI preflight and exit policy**
 
 Before processing, map missing `ANTHROPIC_API_KEY`, `GEMINI_API_KEY`, and Cloudflare credentials to affected source stages. Emit a JSON workflow summary. Exit `2` only when the computed status is critical.
 
-- [ ] **Step 7: Wire all secrets in the daily workflow**
+- [x] **Step 7: Wire all secrets in the daily workflow**
 
 ```yaml
 env:
@@ -420,13 +420,13 @@ env:
 
 Keep commit/push running under `if: always()` so health data is committed even when the pipeline exits critical; preserve the pipeline exit outcome in a later explicit failure step.
 
-- [ ] **Step 8: Run tests**
+- [x] **Step 8: Run tests**
 
 Run: `uv run pytest tests/test_health.py tests/test_check.py -v && uv run pytest`
 
 Expected: PASS.
 
-- [ ] **Step 9: Commit**
+- [x] **Step 9: Commit**
 
 ```bash
 git add pipeline/health.py pipeline/check.py pipeline/state.py .github/workflows/daily-check.yml tests/test_health.py tests/test_check.py

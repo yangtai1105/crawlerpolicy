@@ -31,6 +31,10 @@ class EvidenceRecord(BaseModel):
     stage: EvidenceStage = EvidenceStage.FETCHED
     analysis_attempts: int = Field(default=0, ge=0)
     last_error: str | None = None
+    title: str | None = None
+    content: str = ""
+    previous_content: str = ""
+    unified_diff: str = ""
 
 
 def make_evidence_id(source_slug: str, external_id: str) -> str:

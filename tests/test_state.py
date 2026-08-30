@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from pipeline.state import SourceState, load_state, save_state
 
@@ -12,18 +12,22 @@ def test_new_source_returns_empty_state(tmp_path):
 
 
 def test_round_trip_state(tmp_path):
-    t = datetime(2026, 4, 18, 12, 0, 0, tzinfo=timezone.utc)
+    t = datetime(2026, 4, 18, 12, 0, 0, tzinfo=UTC)
     state = SourceState(
         last_checked_at=t,
         last_hash="abc123",
         last_seen_guids=["g1", "g2"],
         consecutive_failures=0,
+        last_fetch_succeeded_at=t,
+        last_evidence_at=t,
     )
     save_state(tmp_path, "gptbot", state)
     loaded = load_state(tmp_path, "gptbot")
     assert loaded.last_checked_at == t
     assert loaded.last_hash == "abc123"
     assert loaded.last_seen_guids == ["g1", "g2"]
+    assert loaded.last_fetch_succeeded_at == t
+    assert loaded.last_evidence_at == t
 
 
 def test_state_file_written_atomically(tmp_path):

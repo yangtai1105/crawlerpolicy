@@ -32,14 +32,21 @@ jobs:
         run: uv sync --frozen
 
       - name: Run daily check
+        id: daily_check
+        continue-on-error: true
         env:
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
+          CLOUDFLARE_CRAWLER_API_KEY: ${{ secrets.CLOUDFLARE_CRAWLER_API_KEY }}
           ALERT_EMAILS: ${{ secrets.ALERT_EMAILS }}
           RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: uv run python -m pipeline.check
 
       - name: Commit + push if changed
+        if: always()
         run: |
           git config user.name "ai-ecosystem-tracker[bot]"
           git config user.email "bot@users.noreply.github.com"
@@ -50,3 +57,7 @@ jobs:
             git commit -m "daily-check $(date -u +%F): auto-run"
             git push origin HEAD:${{ github.ref_name }}
           fi
+
+      - name: Preserve critical pipeline outcome
+        if: always() && steps.daily_check.outcome == 'failure'
+        run: exit 1

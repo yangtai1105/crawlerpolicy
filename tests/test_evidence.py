@@ -25,6 +25,10 @@ def _record(*, evidence_id: str, stage: EvidenceStage, detected_at: datetime):
         last_error="provider unavailable"
         if stage is EvidenceStage.FAILED_ANALYSIS
         else None,
+        title="Cloudflare changes bot controls",
+        content="Normalized current content",
+        previous_content="Normalized previous content",
+        unified_diff="-old\n+new",
     )
 
 
@@ -48,6 +52,7 @@ def test_save_and_load_evidence_uses_source_directory(tmp_path):
 
     assert path == tmp_path / "cloudflare-blog" / "cloudflare-blog--abc123.json"
     assert load_evidence(path) == record
+    assert load_evidence(path).content == "Normalized current content"
     assert list(path.parent.glob("*.tmp")) == []
 
 
