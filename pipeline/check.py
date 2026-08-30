@@ -40,7 +40,6 @@ from pipeline.health import (
     build_run_health,
     exit_code_for_health,
 )
-from pipeline.pillar_digest import build_pillar_digests
 from pipeline.relevance import haiku_relevance, keyword_match
 from pipeline.snapshots import hash_content, load_latest, save_snapshot
 from pipeline.sources import Source, SourceType, load_sources
@@ -758,12 +757,6 @@ def _cli() -> None:
             crawler_sources=crawler_sources,
             load_latest_snapshot=_load,
             out_path=cfg.data_dir / "opt-out-matrix.json",
-            now=now,
-        )
-        await build_pillar_digests(
-            client=client,
-            events_dir=cfg.events_dir,
-            out_path=cfg.data_dir / "pillar-digests.json",
             now=now,
         )
 

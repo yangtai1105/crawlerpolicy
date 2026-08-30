@@ -454,7 +454,7 @@ git commit -m "feat: make pipeline health stage-aware and truthful"
 - Produces: `WeeklyIssue` Pydantic model and `build_weekly_issue(...) -> WeeklyIssue`.
 - Consumes: schema-v2 event metadata, previous weekly issue, and stage-aware health.
 
-- [ ] **Step 1: Write failing trend evidence-rule tests**
+- [x] **Step 1: Write failing trend evidence-rule tests**
 
 ```python
 def test_commentary_alone_cannot_change_trend_status():
@@ -465,7 +465,7 @@ def test_commentary_alone_cannot_change_trend_status():
     assert delta.reason == "status changes require primary or measurement evidence"
 ```
 
-- [ ] **Step 2: Write failing weekly comparison tests**
+- [x] **Step 2: Write failing weekly comparison tests**
 
 ```python
 def test_weekly_issue_compares_against_previous_status():
@@ -480,21 +480,21 @@ def test_quiet_tracks_are_explicit():
     assert quiet.material_change is False
 ```
 
-- [ ] **Step 3: Run tests and verify missing modules**
+- [x] **Step 3: Run tests and verify missing modules**
 
 Run: `uv run pytest tests/test_trends.py tests/test_weekly_intelligence.py -v`
 
 Expected: FAIL because both modules are new.
 
-- [ ] **Step 4: Implement trend models and deterministic evidence gating**
+- [x] **Step 4: Implement trend models and deterministic evidence gating**
 
 Seed `data/trends.json` with schema version 1 and an empty `trends` array. Status changes require at least one schema-v2 material event from `primary` or `measurement`; every evidence ID must resolve.
 
-- [ ] **Step 5: Implement weekly issue collection and model synthesis**
+- [x] **Step 5: Implement weekly issue collection and model synthesis**
 
 The deterministic layer selects the completed ISO week, loads schema-v2 events by `event_date`, creates all nine track buckets, loads the prior issue, and prepares allowed evidence. The model may write prose and propose trend changes only within those IDs. Validate the response with `WeeklyIssue`; reject invented source/event IDs.
 
-- [ ] **Step 6: Retire pillar digests and replace the weekly workflow entrypoint**
+- [x] **Step 6: Retire pillar digests and replace the weekly workflow entrypoint**
 
 Run the daily pipeline first or require a healthy/degraded health file from the completed window, then execute:
 
@@ -506,13 +506,13 @@ Commit `data/intelligence/YYYY-Www.json` and `data/trends.json`. Preserve old `d
 
 Remove `build_pillar_digests()` from the daily check, delete `pipeline/pillar_digest.py`, and remove its generated-data write path. Keep `pipeline/critical_reading.py` read-only for historical reproducibility, but do not invoke it from either workflow.
 
-- [ ] **Step 7: Run focused and full tests**
+- [x] **Step 7: Run focused and full tests**
 
 Run: `uv run pytest tests/test_trends.py tests/test_weekly_intelligence.py -v && uv run pytest`
 
 Expected: PASS.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add pipeline/trends.py pipeline/weekly_intelligence.py pipeline/config.py pipeline/check.py .github/workflows/weekly-reading.yml data/trends.json data/intelligence/.gitkeep tests/test_trends.py tests/test_weekly_intelligence.py

@@ -29,6 +29,14 @@ class Config:
         return self.repo_root / "data"
 
     @property
+    def intelligence_dir(self) -> Path:
+        return self.data_dir / "intelligence"
+
+    @property
+    def trends_file(self) -> Path:
+        return self.data_dir / "trends.json"
+
+    @property
     def state_dir(self) -> Path:
         return self.repo_root / "state"
 
@@ -41,7 +49,7 @@ class Config:
         return self.repo_root / "content" / "raw"
 
     @classmethod
-    def from_env(cls) -> "Config":
+    def from_env(cls) -> Config:
         repo_root_raw = os.environ.get("REPO_ROOT")
         if not repo_root_raw:
             repo_root_raw = str(Path(__file__).resolve().parent.parent)

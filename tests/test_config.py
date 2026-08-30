@@ -1,4 +1,3 @@
-from pathlib import Path
 
 from pipeline.config import Config
 
@@ -10,6 +9,8 @@ def test_config_paths_resolve_relative_to_repo_root(tmp_path, monkeypatch):
     assert cfg.snapshots_dir == tmp_path / "content" / "snapshots"
     assert cfg.events_dir == tmp_path / "content" / "events"
     assert cfg.evidence_dir == tmp_path / "content" / "evidence"
+    assert cfg.intelligence_dir == tmp_path / "data" / "intelligence"
+    assert cfg.trends_file == tmp_path / "data" / "trends.json"
     assert cfg.data_dir == tmp_path / "data"
     assert cfg.state_dir == tmp_path / "state"
     assert cfg.sources_yaml == tmp_path / "sources.yaml"
