@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "trends": [
+    {
+      "key": "signed-machine-access",
+      "title": "Signed machine access",
+      "status": "accelerating",
+      "previous_status": "emerging",
+      "thesis": "Signed requests are becoming an enforceable access primitive.",
+      "evidence_event_ids": ["primary-source-advances-signed-control"],
+      "last_material_update": "2026-08-27T08:00:00+00:00",
+      "delta_explanation": "A required primary source published an implementable control."
+    }
+  ]
+}

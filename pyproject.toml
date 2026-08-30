@@ -1,7 +1,7 @@
 [project]
 name = "ai-ecosystem-tracker"
 version = "0.1.0"
-description = "Automated tracker for AI crawler docs, content ecosystem, and agent infrastructure."
+description = "Rights, access, and agentic web intelligence for Crawler Policy."
 requires-python = ">=3.12"
 dependencies = [
     "httpx>=0.27",

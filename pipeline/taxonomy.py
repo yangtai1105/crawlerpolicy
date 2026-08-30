@@ -1,10 +1,10 @@
 """Canonical editorial taxonomy for Web intelligence."""
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 
 
-class Track(str, Enum):
+class Track(StrEnum):
     POLICY_REGULATION = "policy-regulation"
     LITIGATION_LEGAL = "litigation-legal"
     SEARCH_DISCOVERY = "search-discovery"
@@ -16,7 +16,7 @@ class Track(str, Enum):
     MEASUREMENT_ECONOMICS = "measurement-economics"
 
 
-class Front(str, Enum):
+class Front(StrEnum):
     ACCESS_DISCOVERY = "access-discovery"
     AGENTS_IDENTITY = "agents-identity"
     RIGHTS_MARKETS = "rights-markets"
@@ -24,14 +24,14 @@ class Front(str, Enum):
     MEASUREMENT_ECONOMICS = "measurement-economics"
 
 
-class SourceTier(str, Enum):
+class SourceTier(StrEnum):
     PRIMARY = "primary"
     MEASUREMENT = "measurement"
     SPECIALIST = "specialist"
     COMMENTARY = "commentary"
 
 
-class SourceRole(str, Enum):
+class SourceRole(StrEnum):
     PLATFORM_DOCS = "platform-docs"
     STANDARDS = "standards"
     REGULATOR = "regulator"

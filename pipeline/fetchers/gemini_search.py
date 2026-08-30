@@ -115,7 +115,7 @@ async def _compose_report(resp: Any) -> str:
                 *[_resolve_redirect(client, uri) for _, uri in raw_citations],
                 return_exceptions=False,
             )
-        for (title, _original), real_url in zip(raw_citations, real_urls):
+        for (title, _original), real_url in zip(raw_citations, real_urls, strict=True):
             resolved.append((title, real_url))
 
     body = full_text + "\n\n## Cited sources\n"

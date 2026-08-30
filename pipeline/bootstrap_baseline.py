@@ -16,8 +16,7 @@ from __future__ import annotations
 
 import asyncio
 import logging
-from datetime import datetime, timezone
-from pathlib import Path
+from datetime import UTC, datetime
 
 from pipeline.config import Config
 from pipeline.snapshots import save_snapshot
@@ -37,7 +36,7 @@ async def bootstrap(cfg: Config) -> None:
         existing = list((cfg.snapshots_dir / source.slug).glob("*.html")) \
             if (cfg.snapshots_dir / source.slug).exists() else []
         has_historic = any(
-            (datetime.now(tz=timezone.utc) - _date_from_filename(p.name)).days >= 30
+            (datetime.now(tz=UTC) - _date_from_filename(p.name)).days >= 30
             for p in existing
         )
         if has_historic:
@@ -80,13 +79,13 @@ async def bootstrap(cfg: Config) -> None:
             "%s: seeded baseline from %s (%d days ago) — %s",
             source.slug,
             snap.archived_at.date().isoformat(),
-            (datetime.now(tz=timezone.utc) - snap.archived_at).days,
+            (datetime.now(tz=UTC) - snap.archived_at).days,
             snap.wayback_url,
         )
 
 
 def _date_from_filename(name: str) -> datetime:
-    return datetime.strptime(name[:10], "%Y-%m-%d").replace(tzinfo=timezone.utc)
+    return datetime.strptime(name[:10], "%Y-%m-%d").replace(tzinfo=UTC)
 
 
 def _cli() -> None:

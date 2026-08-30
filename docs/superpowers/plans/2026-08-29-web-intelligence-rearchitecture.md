@@ -788,40 +788,45 @@ git commit -m "feat: expand authoritative intelligence coverage"
 **Interfaces:**
 - Verifies all preceding tasks as one product.
 
-- [ ] **Step 1: Create a three-source fixture repository**
+- [x] **Step 1: Create a four-source, two-run fixture repository**
 
 Include:
 
 - Required primary source with a successful schema-v2 event.
 - Optional specialist source whose fetch fails.
-- Measurement source whose fetch succeeds but analysis fails and remains replayable.
+- Measurement source whose fetch succeeds but analysis fails on the first run and remains replayable.
+- Supporting stable source that completes without emitting an event.
 - Previous weekly issue with an `emerging` trend.
 
-- [ ] **Step 2: Write the failing end-to-end test**
+- [x] **Step 2: Write the failing end-to-end test**
 
 ```python
 async def test_pipeline_preserves_partial_success_and_weekly_delta(fixture_repo):
-    health = await run_check(...)
-    assert health["status"] == "degraded"
+    first_health = await run_check(...)
+    assert first_health["status"] == "critical"
     assert len(list((fixture_repo / "content/events").glob("*.md"))) == 1
     assert len(pending_analysis(fixture_repo / "content/evidence")) == 1
+
+    second_health = await run_check(...)
+    assert second_health["status"] == "degraded"
+    assert len(pending_analysis(fixture_repo / "content/evidence")) == 0
 
     issue = await generate_weekly_intelligence(repo_root=fixture_repo, now=WEEK_END, client=fake_client)
     assert issue.trend_deltas[0].previous_status == "emerging"
     assert issue.trend_deltas[0].current_status == "accelerating"
 ```
 
-- [ ] **Step 3: Run the end-to-end test and fix only integration defects**
+- [x] **Step 3: Run the end-to-end test and fix only integration defects**
 
 Run: `uv run pytest tests/test_intelligence_e2e.py -v`
 
 Expected: PASS after resolving interface mismatches; do not add new product behavior here.
 
-- [ ] **Step 4: Update project documentation**
+- [x] **Step 4: Update project documentation**
 
 Document nine tracks, five fronts, evidence replay, health statuses, weekly commands, new file layout, Legacy Archive, secret requirements, and manual verification commands. Remove statements claiming the site still has three pillars or that the footer timestamp proves a successful run.
 
-- [ ] **Step 5: Run all verification commands from a clean process**
+- [x] **Step 5: Run all verification commands from a clean process**
 
 ```bash
 uv run pytest
@@ -831,11 +836,11 @@ cd site && npm run build
 
 Expected: 0 test failures, 0 Ruff errors, successful Astro build.
 
-- [ ] **Step 6: Run final browser verification**
+- [x] **Step 6: Run final browser verification**
 
 Start the static preview and inspect homepage, intelligence empty/current states, all five fronts, developments filters, sources health, archive, one new event fixture and one legacy event. Check browser console errors and broken internal links.
 
-- [ ] **Step 7: Review git state and commit**
+- [x] **Step 7: Review git state and commit**
 
 ```bash
 git status --short
@@ -844,7 +849,7 @@ git add README.md CLAUDE.md site/README.md tests/fixtures tests/test_intelligenc
 git commit -m "test: verify web intelligence rearchitecture"
 ```
 
-- [ ] **Step 8: Run final verification after the commit**
+- [x] **Step 8: Run final verification after the commit**
 
 Run: `uv run pytest && uv run ruff check pipeline tests && (cd site && npm run build)`
 

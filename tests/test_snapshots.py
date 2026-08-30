@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from pipeline.snapshots import hash_content, load_latest, save_snapshot
@@ -13,14 +13,14 @@ def test_save_and_load_latest(tmp_path: Path):
     save_snapshot(
         tmp_path,
         "gptbot",
-        datetime(2026, 3, 1, tzinfo=timezone.utc),
+        datetime(2026, 3, 1, tzinfo=UTC),
         content="v1",
         ext="html",
     )
     save_snapshot(
         tmp_path,
         "gptbot",
-        datetime(2026, 4, 18, tzinfo=timezone.utc),
+        datetime(2026, 4, 18, tzinfo=UTC),
         content="v2",
         ext="html",
     )

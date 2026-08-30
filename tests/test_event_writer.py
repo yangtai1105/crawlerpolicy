@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 from pipeline.analyzer import AnalysisResult
@@ -29,9 +29,9 @@ def test_write_event_creates_file_with_frontmatter(tmp_path: Path):
         trend_signals=["training-search-separation"],
         confidence="high",
     )
-    event_date = datetime(2026, 4, 17, 0, 0, 0, tzinfo=timezone.utc)
-    published_at = datetime(2026, 4, 17, 6, 0, 0, tzinfo=timezone.utc)
-    detected_at = datetime(2026, 4, 18, 8, 0, 0, tzinfo=timezone.utc)
+    event_date = datetime(2026, 4, 17, 0, 0, 0, tzinfo=UTC)
+    published_at = datetime(2026, 4, 17, 6, 0, 0, tzinfo=UTC)
+    detected_at = datetime(2026, 4, 18, 8, 0, 0, tzinfo=UTC)
 
     path = write_event(
         events_dir=tmp_path,
@@ -91,7 +91,7 @@ def test_write_event_filename_convention(tmp_path: Path):
         trend_signals=[],
         confidence="medium",
     )
-    detected_at = datetime(2026, 4, 18, 12, 0, 0, tzinfo=timezone.utc)
+    detected_at = datetime(2026, 4, 18, 12, 0, 0, tzinfo=UTC)
 
     path = write_event(
         events_dir=tmp_path,

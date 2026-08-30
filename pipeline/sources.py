@@ -1,7 +1,7 @@
 """Source configuration schema and loader."""
 from __future__ import annotations
 
-from enum import Enum
+from enum import StrEnum
 from pathlib import Path
 from typing import Self
 
@@ -11,13 +11,13 @@ from pydantic import BaseModel, Field, model_validator
 from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
-class Pillar(str, Enum):
+class Pillar(StrEnum):
     CRAWLER = "crawler"
     ECOSYSTEM = "ecosystem"
     AGENT = "agent"
 
 
-class SourceType(str, Enum):
+class SourceType(StrEnum):
     HTML_PAGE = "html_page"
     RSS_FEED = "rss_feed"
     GITHUB_REPO = "github_repo"
@@ -68,7 +68,12 @@ class Source(BaseModel):
             raise ValueError(f"source {self.slug}: `default_tracks` must not be empty")
         if len(self.default_tracks) != len(set(self.default_tracks)):
             raise ValueError(f"source {self.slug}: `default_tracks` must not contain duplicates")
-        if self.type in (SourceType.HTML_PAGE, SourceType.RSS_FEED, SourceType.CF_BROWSER_RUN) and not self.url:
+        url_source_types = {
+            SourceType.HTML_PAGE,
+            SourceType.RSS_FEED,
+            SourceType.CF_BROWSER_RUN,
+        }
+        if self.type in url_source_types and not self.url:
             raise ValueError(f"source {self.slug}: {self.type} requires `url`")
         # keyword_filter is optional for rss_feed: product-specific changelog
         # feeds (e.g. Cloudflare ai-crawl-control.xml) are pre-filtered at the

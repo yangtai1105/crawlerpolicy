@@ -3,7 +3,7 @@ from __future__ import annotations
 
 import hashlib
 import re
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 
 
@@ -34,7 +34,7 @@ def load_latest(snapshots_root: Path, slug: str) -> tuple[str, datetime] | None:
         if not m:
             continue
         y, mo, d = (int(x) for x in m.groups())
-        candidates.append((datetime(y, mo, d, tzinfo=timezone.utc), p))
+        candidates.append((datetime(y, mo, d, tzinfo=UTC), p))
     if not candidates:
         return None
     candidates.sort(key=lambda x: x[0], reverse=True)

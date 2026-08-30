@@ -3,10 +3,10 @@ from __future__ import annotations
 
 from dataclasses import dataclass, field
 from datetime import datetime
-from enum import Enum
+from enum import StrEnum
 
 
-class ResultMode(str, Enum):
+class ResultMode(StrEnum):
     # html_page / ietf_draft: full content diffed against previous snapshot
     DIFFABLE = "diffable"
     # rss_feed / github_repo: list of candidate items, each potentially a separate event

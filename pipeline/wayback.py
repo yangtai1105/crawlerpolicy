@@ -8,7 +8,7 @@ first live pipeline run produces a meaningful "6 months ago vs today" diff.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from datetime import datetime, timedelta, timezone
+from datetime import UTC, datetime, timedelta
 from urllib.parse import quote
 
 import httpx
@@ -40,7 +40,7 @@ async def fetch_wayback_snapshot(
     [window_start_days, window_end_days] and picks the one closest to
     target_days_ago. Returns None if no snapshot exists in that range.
     """
-    now = datetime.now(tz=timezone.utc)
+    now = datetime.now(tz=UTC)
     window_start = now - timedelta(days=window_end_days)
     window_end = now - timedelta(days=window_start_days)
     target = now - timedelta(days=target_days_ago)
@@ -62,7 +62,7 @@ async def fetch_wayback_snapshot(
         resp = await client.get(cdx_url)
         resp.raise_for_status()
         rows = resp.json()
-        # First row is header: ["urlkey","timestamp","original","mimetype","statuscode","digest","length"]
+        # First row is the CDX header; remaining rows are snapshot records.
         if len(rows) <= 1:
             return None
 
@@ -71,7 +71,7 @@ async def fetch_wayback_snapshot(
         for row in rows[1:]:
             ts, original = row[1], row[2]
             try:
-                snap_dt = datetime.strptime(ts, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+                snap_dt = datetime.strptime(ts, "%Y%m%d%H%M%S").replace(tzinfo=UTC)
             except ValueError:
                 continue
             distance = abs(snap_dt - target)
@@ -81,7 +81,7 @@ async def fetch_wayback_snapshot(
             return None
 
         _, ts, original = best
-        snap_dt = datetime.strptime(ts, "%Y%m%d%H%M%S").replace(tzinfo=timezone.utc)
+        snap_dt = datetime.strptime(ts, "%Y%m%d%H%M%S").replace(tzinfo=UTC)
         # `id_` suffix on the timestamp returns the raw archived HTML
         # without Wayback's injected toolbar frame.
         wayback_url = f"https://web.archive.org/web/{ts}id_/{original}"

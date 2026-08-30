@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import pytest
 import respx
@@ -60,7 +60,7 @@ async def test_fetches_all_items_when_no_state(rss_source):
 
 @respx.mock
 async def test_excludes_items_older_than_since(rss_source):
-    since = datetime(2026, 4, 1, tzinfo=timezone.utc)
+    since = datetime(2026, 4, 1, tzinfo=UTC)
     respx.get(rss_source.url).mock(return_value=Response(200, text=RSS))
 
     result = await fetch_rss_feed(rss_source, since=since, seen_guids=[])

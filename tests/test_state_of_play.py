@@ -1,5 +1,5 @@
 import json
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from unittest.mock import AsyncMock, MagicMock
 
@@ -70,7 +70,7 @@ async def test_build_opt_out_matrix_writes_json(tmp_path: Path, crawler_sources,
     ]
 
     def load_latest_snapshot(slug: str) -> tuple[str, datetime] | None:
-        return ("dummy content", datetime(2026, 4, 18, tzinfo=timezone.utc))
+        return ("dummy content", datetime(2026, 4, 18, tzinfo=UTC))
 
     out_path = tmp_path / "opt-out-matrix.json"
     await build_opt_out_matrix(
@@ -78,7 +78,7 @@ async def test_build_opt_out_matrix_writes_json(tmp_path: Path, crawler_sources,
         crawler_sources=crawler_sources,
         load_latest_snapshot=load_latest_snapshot,
         out_path=out_path,
-        now=datetime(2026, 4, 20, tzinfo=timezone.utc),
+        now=datetime(2026, 4, 20, tzinfo=UTC),
     )
 
     data = json.loads(out_path.read_text())

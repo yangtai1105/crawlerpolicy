@@ -1,4 +1,4 @@
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 import pytest
 import respx
@@ -67,7 +67,7 @@ async def test_includes_releases_and_merged_prs_since_cutoff(gh_source):
         )
     )
 
-    since = datetime(2026, 4, 16, tzinfo=timezone.utc)
+    since = datetime(2026, 4, 16, tzinfo=UTC)
     result = await fetch_github_repo(gh_source, since=since, seen_guids=[])
 
     assert result.mode == ResultMode.PER_ITEM

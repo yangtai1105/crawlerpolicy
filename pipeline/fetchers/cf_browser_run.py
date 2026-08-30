@@ -94,7 +94,13 @@ async def fetch_cf_browser_run(source: Source) -> FetchResult:
             status = (result_json.get("result") or {}).get("status", "")
             if status == "completed":
                 break
-            if status in ("errored", "cancelled_due_to_timeout", "cancelled_due_to_limits", "cancelled_by_user"):
+            terminal_failures = {
+                "errored",
+                "cancelled_due_to_timeout",
+                "cancelled_due_to_limits",
+                "cancelled_by_user",
+            }
+            if status in terminal_failures:
                 raise RuntimeError(f"cf_browser_run {source.slug} terminal status: {status}")
         else:
             raise RuntimeError(f"cf_browser_run {source.slug}: timed out after {_POLL_MAX_SEC}s")

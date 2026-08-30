@@ -230,4 +230,8 @@ def _validated_classification(
 def _clean_string_list(value: object) -> list[str]:
     if not isinstance(value, list):
         return []
-    return list(dict.fromkeys(item.strip() for item in value if isinstance(item, str) and item.strip()))
+    return list(
+        dict.fromkeys(
+            item.strip() for item in value if isinstance(item, str) and item.strip()
+        )
+    )

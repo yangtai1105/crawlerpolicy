@@ -1,5 +1,6 @@
-import pytest
 from pathlib import Path
+
+import pytest
 from pydantic import ValidationError
 
 from pipeline.sources import Source, SourceType, load_sources

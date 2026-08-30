@@ -19,7 +19,8 @@ import json
 import logging
 import os
 import re
-from datetime import date, datetime, timedelta
+from contextlib import suppress
+from datetime import UTC, date, datetime, timedelta
 from pathlib import Path
 from urllib.parse import urlparse
 
@@ -107,7 +108,11 @@ the same lawsuit does not.
 
 Return ONLY this JSON (no prose, no code fences):
 
-{{"tldr":"1–2 sentence synthesis of THIS week's thread on this topic","items":[{{"tag":"#CamelCase","title":"exact published headline","published":"YYYY-MM-DD","frame":"what the author argues or reports, ≤25 words","quote":"verbatim pull-quote, ≤30 words","kind":"investigation|commentary|field-report|legal|research"}}]}}
+{{"tldr":"1–2 sentence synthesis of THIS week's thread on this topic",
+"items":[{{"tag":"#CamelCase","title":"exact published headline",
+"published":"YYYY-MM-DD","frame":"what the author argues or reports, ≤25 words",
+"quote":"verbatim pull-quote, ≤30 words",
+"kind":"investigation|commentary|field-report|legal|research"}}]}}
 
 Hard rules:
 - title MUST be the exact published headline as it appears at the source.
@@ -145,7 +150,7 @@ async def build_weekly_dispatch(
     )
 
     topics_payload: list[dict] = []
-    for t, res in zip(TOPIC_GROUPS, topic_results):
+    for t, res in zip(TOPIC_GROUPS, topic_results, strict=True):
         if isinstance(res, Exception):
             log.exception("dispatch: topic %s errored", t)
             topics_payload.append({"topic": t, "tldr": f"(error generating: {res})", "items": []})
@@ -326,10 +331,8 @@ def _filter_quality(items: list[dict], *, now: datetime, max_age_days: int = 60)
         url = it.get("url", "")
         domain = (it.get("source_domain") or _url_domain(url) or "").lower()
         path_lower = ""
-        try:
+        with suppress(Exception):
             path_lower = urlparse(url).path.lower()
-        except Exception:
-            pass
 
         if any(domain == b or domain.endswith("." + b) for b in _BLOCKED_DOMAINS):
             log.info("dispatch: drop %s (blocked domain)", url)
@@ -354,7 +357,7 @@ def _filter_quality(items: list[dict], *, now: datetime, max_age_days: int = 60)
     return kept
 
 
-def _parse_published(raw) -> "date | None":
+def _parse_published(raw) -> date | None:
     if not raw or not isinstance(raw, str):
         return None
     try:
@@ -376,7 +379,7 @@ async def _resolve_citations(citations: list[tuple[str, str]]) -> list[tuple[str
             return_exceptions=False,
         )
     out: list[tuple[str, str]] = []
-    for (title, _), url in zip(citations, real_urls):
+    for (title, _), url in zip(citations, real_urls, strict=True):
         if _VERTEX_REDIRECT_HOST in url:
             continue
         out.append((title, url))
@@ -511,7 +514,6 @@ def _parse_json(text: str) -> dict:
 
 def _cli() -> None:
     import argparse
-    from datetime import timezone
 
     from pipeline.config import Config
 
@@ -526,7 +528,7 @@ def _cli() -> None:
     cfg = Config.from_env()
     # Migrate display name but keep file path backwards-compatible for now.
     out_dir = args.out_dir or (cfg.data_dir / "critical-reading")
-    asyncio.run(build_weekly_dispatch(out_dir=out_dir, now=datetime.now(tz=timezone.utc)))
+    asyncio.run(build_weekly_dispatch(out_dir=out_dir, now=datetime.now(tz=UTC)))
 
 
 # Backwards-compat alias for any callers still using the old name.

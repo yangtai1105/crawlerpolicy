@@ -1,7 +1,7 @@
 """RSS feed fetcher. Returns items newer than `since` and not in `seen_guids`."""
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from time import mktime
 
 import feedparser
@@ -54,7 +54,7 @@ def _parse_date(entry) -> datetime | None:
     for attr in ("published_parsed", "updated_parsed"):
         v = getattr(entry, attr, None)
         if v:
-            return datetime.fromtimestamp(mktime(v), tz=timezone.utc)
+            return datetime.fromtimestamp(mktime(v), tz=UTC)
     return None
 
 

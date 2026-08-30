@@ -1,43 +1,42 @@
-# Astro Starter Kit: Minimal
+# Crawler Policy site
 
-```sh
-npm create astro@latest -- --template minimal
+Astro static publication for [crawlerpolicy.com](https://crawlerpolicy.com). It presents current schema-v2 developments, five intelligence fronts, durable trends, weekly intelligence, source health, and a clearly separated Legacy Archive.
+
+## Local development
+
+Run from this directory:
+
+```bash
+npm ci
+npm run check
+npm run dev
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+The dev server opens at `http://localhost:4321`. Production verification is:
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```bash
+npm run check
+npm run build
+npm run preview
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Data boundaries
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+- `../content/events` supplies current developments.
+- `../content/legacy-events` supplies archive pages only.
+- `../data/intelligence` supplies completed weekly issues.
+- `../data/trends.json` supplies persistent trend state.
+- `../data/health.json` supplies stage-aware pipeline status.
+- `../sources.yaml` supplies source metadata and coverage.
 
-Any static assets, like images, can be placed in the `public/` directory.
+Do not merge legacy events into current counts, front pages, trend calculations, or intelligence issues. If health is stale or not schema-compatible, render it as `unknown`; the footer only shows a timestamp for the last fully successful run.
 
-## 🧞 Commands
+## Main routes
 
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+- `/` — current intelligence overview
+- `/intelligence` and `/intelligence/{week}` — weekly issues
+- `/fronts/{front}` — exactly five canonical fronts
+- `/developments` — current schema-v2 developments
+- `/sources` and `/sources/{slug}` — coverage and evidence context
+- `/archive` — preserved schema-v1 events and old reading dispatches
+- `/about` — methodology and editorial model

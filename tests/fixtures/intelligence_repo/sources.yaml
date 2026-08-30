@@ -1,0 +1,35 @@
+- slug: primary-control
+  type: html_page
+  url: https://primary.example.test/control
+  display_name: Primary Control
+  default_tracks: [crawler-controls, standards-protocols]
+  tier: primary
+  role: platform-docs
+  required_for_coverage: true
+
+- slug: optional-reporting
+  type: html_page
+  url: https://reporting.example.test/feed
+  display_name: Optional Reporting
+  default_tracks: [policy-regulation]
+  tier: specialist
+  role: reporting
+  required_for_coverage: false
+
+- slug: measurement-signal
+  type: html_page
+  url: https://measurement.example.test/signal
+  display_name: Measurement Signal
+  default_tracks: [measurement-economics]
+  tier: measurement
+  role: measurement
+  required_for_coverage: false
+
+- slug: supporting-standard
+  type: html_page
+  url: https://standards.example.test/baseline
+  display_name: Supporting Standard
+  default_tracks: [asset-rights, licensing-monetization]
+  tier: primary
+  role: standards
+  required_for_coverage: false

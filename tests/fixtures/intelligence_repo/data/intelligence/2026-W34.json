@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "week": "2026-W34",
+  "generated_at": "2026-08-24T13:00:00+00:00",
+  "window_start": "2026-08-17",
+  "window_end": "2026-08-23",
+  "trend_deltas": [
+    {
+      "trend_key": "signed-machine-access",
+      "previous_status": "emerging",
+      "current_status": "emerging",
+      "accepted": true,
+      "reason": "previous verified issue",
+      "evidence_event_ids": [],
+      "explanation": "Initial authoritative signal."
+    }
+  ]
+}

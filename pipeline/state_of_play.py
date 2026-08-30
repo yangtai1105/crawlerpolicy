@@ -57,26 +57,45 @@ _CRAWLER_FACTS_TOOL = {
                     "properties": {
                         "name": {
                             "type": "string",
-                            "description": "The UA string or product name (e.g. 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User')",
+                            "description": (
+                                "The UA string or product name "
+                                "(e.g. 'GPTBot', 'OAI-SearchBot', 'ChatGPT-User')"
+                            ),
                         },
                         "purpose": {
                             "type": "string",
-                            "description": "≤15 words — what this UA is for (e.g. 'training data collection', 'search index updates')",
+                            "description": (
+                                "≤15 words — what this UA is for "
+                                "(e.g. 'training data collection', 'search index updates')"
+                            ),
                         },
                         "scope": {
                             "type": "string",
-                            "description": "≤25 words — what it crawls or when it fires (e.g. 'general web crawl', 'user-triggered fetch for live responses')",
+                            "description": (
+                                "≤25 words — what it crawls or when it fires "
+                                "(e.g. 'general web crawl', "
+                                "'user-triggered fetch for live responses')"
+                            ),
                         },
                         "opt_out": {
                             "type": "string",
-                            "description": "≤20 words — documented opt-out mechanism for THIS specific UA (e.g. 'User-agent: GPTBot / Disallow: /', 'honors Google-Extended robots token')",
+                            "description": (
+                                "≤20 words — documented opt-out mechanism for THIS specific UA "
+                                "(e.g. 'User-agent: GPTBot / Disallow: /', "
+                                "'honors Google-Extended robots token')"
+                            ),
                         },
                     },
                     "required": ["name", "purpose"],
                 },
             },
         },
-        "required": ["supports_robots_txt", "supports_user_agent_opt_out", "policy_url", "user_agents"],
+        "required": [
+            "supports_robots_txt",
+            "supports_user_agent_opt_out",
+            "policy_url",
+            "user_agents",
+        ],
     },
 }
 

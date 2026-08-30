@@ -12,7 +12,7 @@ or wrong URL.
 """
 from __future__ import annotations
 
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 
 from pipeline.critical_reading import (
     _collect_grounding_citations,
@@ -20,7 +20,7 @@ from pipeline.critical_reading import (
     _map_items_to_grounded_citations,
 )
 
-_NOW = datetime(2026, 4, 20, tzinfo=timezone.utc)
+_NOW = datetime(2026, 4, 20, tzinfo=UTC)
 
 
 class _FakeWeb:
@@ -52,10 +52,19 @@ class _FakeResp:
 def test_collect_grounding_citations_dedupes_and_skips_empty_uris():
     resp = _FakeResp(
         [
-            _FakeChunk("https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc", "Cloudflare canonical"),
-            _FakeChunk("https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc", "dup of above"),
+            _FakeChunk(
+                "https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc",
+                "Cloudflare canonical",
+            ),
+            _FakeChunk(
+                "https://vertexaisearch.cloud.google.com/grounding-api-redirect/abc",
+                "dup of above",
+            ),
             _FakeChunk("", "no uri, should skip"),
-            _FakeChunk("https://vertexaisearch.cloud.google.com/grounding-api-redirect/xyz", "Digiday report"),
+            _FakeChunk(
+                "https://vertexaisearch.cloud.google.com/grounding-api-redirect/xyz",
+                "Digiday report",
+            ),
         ]
     )
     out = _collect_grounding_citations(resp)
@@ -211,7 +220,10 @@ def test_filter_quality_drops_old_year_in_url_path():
 
 def test_filter_quality_drops_explainer_slugs():
     items = [
-        {"url": "https://reuters.com/openai-copyright-lawsuit-explained/", "source_domain": "reuters.com"},
+        {
+            "url": "https://reuters.com/openai-copyright-lawsuit-explained/",
+            "source_domain": "reuters.com",
+        },
         {"url": "https://example.com/what-is-mcp/", "source_domain": "example.com"},
         {"url": "https://example.com/how-to-block-ai-bots/", "source_domain": "example.com"},
         {"url": "https://example.com/who-owns-ai-training-data/", "source_domain": "example.com"},
@@ -223,7 +235,10 @@ def test_filter_quality_drops_explainer_slugs():
 
 def test_filter_quality_drops_blocked_domains():
     items = [
-        {"url": "https://www.mondaq.com/unitedstates/copyright/123456/fresh", "source_domain": "mondaq.com"},
+        {
+            "url": "https://www.mondaq.com/unitedstates/copyright/123456/fresh",
+            "source_domain": "mondaq.com",
+        },
         {"url": "https://jdsupra.com/legalnews/something", "source_domain": "jdsupra.com"},
         {"url": "https://lexology.com/library/foo", "source_domain": "lexology.com"},
         {"url": "https://reuters.com/tech/article", "source_domain": "reuters.com"},
@@ -236,9 +251,21 @@ def test_filter_quality_drops_stale_published_date():
     # Default cutoff is 60 days — generous on purpose because Gemini's
     # self-reported dates are flaky.
     items = [
-        {"url": "https://reuters.com/a", "source_domain": "reuters.com", "published": "2025-11-01"},  # >60d
-        {"url": "https://reuters.com/b", "source_domain": "reuters.com", "published": "2026-04-15"},  # ~5d
-        {"url": "https://reuters.com/c", "source_domain": "reuters.com", "published": "2026-03-10"},  # ~40d
+        {
+            "url": "https://reuters.com/a",
+            "source_domain": "reuters.com",
+            "published": "2025-11-01",  # >60d
+        },
+        {
+            "url": "https://reuters.com/b",
+            "source_domain": "reuters.com",
+            "published": "2026-04-15",  # ~5d
+        },
+        {
+            "url": "https://reuters.com/c",
+            "source_domain": "reuters.com",
+            "published": "2026-03-10",  # ~40d
+        },
     ]
     out = _filter_quality(items, now=_NOW)
     assert [it["url"] for it in out] == ["https://reuters.com/b", "https://reuters.com/c"]
