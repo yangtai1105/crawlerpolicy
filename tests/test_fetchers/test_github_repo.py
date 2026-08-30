@@ -6,17 +6,20 @@ from httpx import Response
 
 from pipeline.fetchers.base import ResultMode
 from pipeline.fetchers.github_repo import fetch_github_repo
-from pipeline.sources import Pillar, Source, SourceType
+from pipeline.sources import Source, SourceType
+from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
 @pytest.fixture
 def gh_source():
     return Source(
         slug="mcp",
-        pillar=Pillar.AGENT,
         type=SourceType.GITHUB_REPO,
         repo="modelcontextprotocol/specification",
         display_name="MCP",
+        default_tracks=[Track.STANDARDS_PROTOCOLS, Track.AGENTIC_WEB],
+        tier=SourceTier.PRIMARY,
+        role=SourceRole.STANDARDS,
     )
 
 

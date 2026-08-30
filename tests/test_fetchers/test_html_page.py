@@ -4,17 +4,20 @@ from httpx import Response
 
 from pipeline.fetchers.base import ResultMode
 from pipeline.fetchers.html_page import fetch_html_page
-from pipeline.sources import Pillar, Source, SourceType
+from pipeline.sources import Source, SourceType
+from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
 @pytest.fixture
 def html_source():
     return Source(
         slug="gptbot",
-        pillar=Pillar.CRAWLER,
         type=SourceType.HTML_PAGE,
         url="https://platform.openai.com/docs/gptbot",
         display_name="OpenAI GPTBot",
+        default_tracks=[Track.CRAWLER_CONTROLS],
+        tier=SourceTier.PRIMARY,
+        role=SourceRole.PLATFORM_DOCS,
     )
 
 

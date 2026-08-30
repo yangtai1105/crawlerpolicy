@@ -105,7 +105,7 @@
 - Produces: `Source.default_tracks: list[Track]`, `Source.tier: SourceTier`, `Source.role: SourceRole`, `Source.required_for_coverage: bool`.
 - Removes: required `Source.pillar`; runtime code and tests select source behavior from type, role, tier, or `default_tracks` instead.
 
-- [ ] **Step 1: Write failing taxonomy tests**
+- [x] **Step 1: Write failing taxonomy tests**
 
 ```python
 from pipeline.taxonomy import FRONT_TRACKS, Front, Track, validate_tracks
@@ -123,7 +123,7 @@ def test_validate_tracks_requires_primary_in_tracks():
         validate_tracks(Track.SEARCH_DISCOVERY, [Track.CRAWLER_CONTROLS])
 ```
 
-- [ ] **Step 2: Write failing source-schema tests**
+- [x] **Step 2: Write failing source-schema tests**
 
 ```python
 def test_source_uses_track_tier_and_role_without_pillar():
@@ -141,13 +141,13 @@ def test_source_uses_track_tier_and_role_without_pillar():
     assert source.required_for_coverage is True
 ```
 
-- [ ] **Step 3: Run tests and confirm the old schema fails**
+- [x] **Step 3: Run tests and confirm the old schema fails**
 
 Run: `uv run pytest tests/test_taxonomy.py tests/test_sources.py -v`
 
 Expected: import failures for `pipeline.taxonomy` and validation failures because `pillar` is still required.
 
-- [ ] **Step 4: Implement taxonomy enums and mappings**
+- [x] **Step 4: Implement taxonomy enums and mappings**
 
 ```python
 class Track(str, Enum):
@@ -172,21 +172,21 @@ class Front(str, Enum):
 
 Define all `FRONT_TRACKS`, `SourceTier`, and `SourceRole` values exactly as specified in the design document. `validate_tracks(primary, tracks)` rejects an empty list, duplicates, and a missing primary.
 
-- [ ] **Step 5: Update `Source` and migrate every current source entry**
+- [x] **Step 5: Update `Source` and migrate every current source entry**
 
 Remove `pillar` from the Pydantic model. Add non-empty `default_tracks`, required `tier`, required `role`, and default `required_for_coverage=False`. Assign current crawler documentation to `crawler-controls`, Web Bot Auth to `standards-protocols` plus `agentic-web`, licensing searches to `licensing-monetization`, and regulator sources to `policy-regulation`.
 
-- [ ] **Step 6: Migrate all runtime and test consumers off `Source.pillar`**
+- [x] **Step 6: Migrate all runtime and test consumers off `Source.pillar`**
 
 Use `Track.CRAWLER_CONTROLS in source.default_tracks` for state-of-play selection, source role/type for analyzer prompt choice, and source tier/default tracks for model routing. Update all fetcher/analyzer/event-writer fixtures to construct the new source shape. Keep the standalone `Pillar` enum only until Task 5 removes the legacy digest module; no `Source` instance exposes it.
 
-- [ ] **Step 7: Run focused and full tests**
+- [x] **Step 7: Run focused and full tests**
 
 Run: `uv run pytest tests/test_taxonomy.py tests/test_sources.py tests/test_state_of_play.py tests/test_fetchers -v && uv run pytest`
 
 Expected: PASS.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add pipeline/taxonomy.py pipeline/sources.py pipeline/analyzer.py pipeline/check.py pipeline/state_of_play.py sources.yaml tests/test_taxonomy.py tests/test_sources.py tests/test_state_of_play.py tests/test_analyzer.py tests/test_event_writer.py tests/test_fetchers

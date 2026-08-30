@@ -8,6 +8,8 @@ from typing import Self
 import yaml
 from pydantic import BaseModel, Field, model_validator
 
+from pipeline.taxonomy import SourceRole, SourceTier, Track
+
 
 class Pillar(str, Enum):
     CRAWLER = "crawler"
@@ -26,9 +28,12 @@ class SourceType(str, Enum):
 
 class Source(BaseModel):
     slug: str
-    pillar: Pillar
     type: SourceType
     display_name: str
+    default_tracks: list[Track]
+    tier: SourceTier
+    role: SourceRole
+    required_for_coverage: bool = False
 
     # html_page + rss_feed
     url: str | None = None
@@ -59,6 +64,10 @@ class Source(BaseModel):
 
     @model_validator(mode="after")
     def _validate_type_requirements(self) -> Self:
+        if not self.default_tracks:
+            raise ValueError(f"source {self.slug}: `default_tracks` must not be empty")
+        if len(self.default_tracks) != len(set(self.default_tracks)):
+            raise ValueError(f"source {self.slug}: `default_tracks` must not contain duplicates")
         if self.type in (SourceType.HTML_PAGE, SourceType.RSS_FEED, SourceType.CF_BROWSER_RUN) and not self.url:
             raise ValueError(f"source {self.slug}: {self.type} requires `url`")
         # keyword_filter is optional for rss_feed: product-specific changelog

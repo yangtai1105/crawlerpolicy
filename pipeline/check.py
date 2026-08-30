@@ -26,10 +26,11 @@ from pipeline.fetchers.ietf_draft import fetch_ietf_draft
 from pipeline.fetchers.rss_feed import fetch_rss_feed
 from pipeline.relevance import haiku_relevance, keyword_match
 from pipeline.snapshots import hash_content, load_latest, save_snapshot
-from pipeline.sources import Pillar, Source, SourceType, load_sources
+from pipeline.sources import Source, SourceType, load_sources
 from pipeline.state import SourceState, load_state, save_state
 from pipeline.pillar_digest import build_pillar_digests
-from pipeline.state_of_play import build_opt_out_matrix
+from pipeline.state_of_play import build_opt_out_matrix, select_crawler_control_sources
+from pipeline.taxonomy import Track
 from pipeline.trend_context import format_trend_context, load_recent_events_for_source
 
 log = logging.getLogger("check")
@@ -50,7 +51,7 @@ def _maybe_trend_context(cfg: Config, source: Source) -> str:
     focus on the specific change. For ecosystem + agent sources, the last ~10
     events provide genuinely useful pattern context.
     """
-    if source.pillar == Pillar.CRAWLER:
+    if Track.CRAWLER_CONTROLS in source.default_tracks:
         return ""
     recent = load_recent_events_for_source(cfg.events_dir, source.slug, limit=10)
     return format_trend_context(recent)
@@ -312,7 +313,7 @@ def _cli() -> None:
     async def _sop(sources, repo_root, now):
         from pipeline import snapshots as snap_mod
 
-        crawler_sources = [s for s in sources if s.pillar == Pillar.CRAWLER]
+        crawler_sources = select_crawler_control_sources(sources)
 
         def _load(slug: str):
             return snap_mod.load_latest(cfg.snapshots_dir, slug)

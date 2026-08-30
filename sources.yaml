@@ -5,61 +5,82 @@
 # ─── Pillar 1: Crawler / Bot documentation (HTML diff) ───
 
 - slug: gptbot
-  pillar: crawler
   type: html_page
   url: https://developers.openai.com/api/docs/bots
   # Old canonical URL (pre-2026 rebrand) — Wayback has archives there, so we
   # use it to seed a ~6-month historical baseline for comparison.
   baseline_url: https://platform.openai.com/docs/gptbot
   display_name: OpenAI
+  default_tracks: [crawler-controls, search-discovery, agentic-web]
+  tier: primary
+  role: platform-docs
+  required_for_coverage: true
 
 - slug: claudebot
-  pillar: crawler
   type: html_page
   url: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
   display_name: Anthropic
+  default_tracks: [crawler-controls, search-discovery, agentic-web]
+  tier: primary
+  role: platform-docs
+  required_for_coverage: true
 
 - slug: google-extended
-  pillar: crawler
   type: html_page
   url: https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers
   display_name: Google
+  default_tracks: [crawler-controls, search-discovery]
+  tier: primary
+  role: platform-docs
+  required_for_coverage: true
 
 - slug: perplexitybot
-  pillar: crawler
   type: html_page
   url: https://docs.perplexity.ai/guides/bots
   display_name: Perplexity
+  default_tracks: [crawler-controls, search-discovery, agentic-web]
+  tier: primary
+  role: platform-docs
 
 - slug: applebot-extended
-  pillar: crawler
   type: html_page
   url: https://support.apple.com/en-us/119829
   display_name: Apple
+  default_tracks: [crawler-controls, search-discovery]
+  tier: primary
+  role: platform-docs
 
 - slug: meta-externalagent
-  pillar: crawler
   type: cf_browser_run
   url: https://developers.facebook.com/docs/sharing/webmasters/web-crawlers
   display_name: Meta
+  default_tracks: [crawler-controls, agentic-web]
+  tier: primary
+  role: platform-docs
 
 - slug: microsoft-bot-docs
-  pillar: crawler
   type: html_page
   url: https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
   display_name: Microsoft
+  default_tracks: [crawler-controls, search-discovery]
+  tier: primary
+  role: platform-docs
 
 - slug: amazonbot
-  pillar: crawler
   type: html_page
   url: https://developer.amazon.com/amazonbot
   display_name: Amazon
+  default_tracks: [crawler-controls]
+  tier: primary
+  role: platform-docs
 
 - slug: ccbot
-  pillar: crawler
   type: html_page
   url: https://commoncrawl.org/faq
   display_name: Common Crawl
+  default_tracks: [crawler-controls, asset-rights]
+  tier: primary
+  role: platform-docs
 
 # Cloudflare product-specific changelog RSS feeds. These are pre-filtered at
 # the publisher — every item is in-scope for the assigned pillar, so no
@@ -67,24 +88,28 @@
 # defensive pass.
 
 - slug: cf-changelog-ai-crawl-control
-  pillar: crawler
   type: rss_feed
   url: https://developers.cloudflare.com/changelog/rss/ai-crawl-control.xml
   display_name: Cloudflare AI Crawl Control changelog
+  default_tracks: [crawler-controls, licensing-monetization]
+  tier: primary
+  role: infrastructure
 
 - slug: cf-changelog-radar
-  pillar: crawler
   type: rss_feed
   url: https://developers.cloudflare.com/changelog/rss/radar.xml
   keyword_filter: ["AI", "crawler", "bot", "agent", "training"]
   display_name: Cloudflare Radar changelog
+  default_tracks: [measurement-economics, crawler-controls, agentic-web]
+  tier: measurement
+  role: measurement
+  required_for_coverage: true
 
 # Gemini grounded-search coverage for crawler-ecosystem movement that
 # never lands on vendor doc pages (third-party observation, CDN analytics,
 # ecosystem commentary). References knownagents and Cloudflare Radar
 # explicitly so Gemini prioritizes them when relevant.
 - slug: gemini-crawler-insights
-  pillar: crawler
   type: gemini_search
   query: >-
     AI crawler observations, bot behavior analytics, and crawler-policy news —
@@ -94,110 +119,146 @@
     and any vendor announcements about new crawler UAs or scope changes.
   lookback_days: 30
   display_name: Crawler insights (search)
+  default_tracks: [crawler-controls, agentic-web, measurement-economics]
+  tier: commentary
+  role: reporting
 
 # ─── Pillar 2: Content ecosystem news (RSS + keyword filter + Haiku) ───
 
 - slug: cloudflare-blog
-  pillar: ecosystem
   type: rss_feed
   url: https://blog.cloudflare.com/rss/
   keyword_filter: ["AI bot", "crawler", "scraper", "content", "robots.txt", "training", "AI training"]
   display_name: Cloudflare Blog
+  default_tracks: [crawler-controls, licensing-monetization, measurement-economics]
+  tier: specialist
+  role: infrastructure
 
 - slug: datadome-blog
-  pillar: ecosystem
   type: rss_feed
   url: https://datadome.co/feed/
   keyword_filter: ["AI", "crawler", "scraper", "bot", "LLM"]
   display_name: DataDome Blog
+  default_tracks: [crawler-controls, agentic-web, measurement-economics]
+  tier: specialist
+  role: infrastructure
 
 - slug: uk-cma
-  pillar: ecosystem
   type: rss_feed
   url: https://www.gov.uk/government/organisations/competition-and-markets-authority.atom
   keyword_filter: ["AI", "artificial intelligence", "foundation model", "generative"]
   display_name: UK CMA
+  default_tracks: [policy-regulation, litigation-legal]
+  tier: primary
+  role: regulator
+  required_for_coverage: true
 
 - slug: uk-cma-google-search-case
-  pillar: ecosystem
   type: html_page
   url: https://www.gov.uk/cma-cases/googles-general-search-and-search-advertising-services
   display_name: UK CMA — Google Search case docs index
+  default_tracks: [policy-regulation, litigation-legal, search-discovery]
+  tier: primary
+  role: legal-primary
 
 - slug: uk-gov-agentic-ai
-  pillar: ecosystem
   type: html_page
   url: https://www.gov.uk/government/publications/agentic-ai-and-consumers/agentic-ai-and-consumers
   display_name: UK Gov — Agentic AI and Consumers
+  default_tracks: [policy-regulation, agentic-web]
+  tier: primary
+  role: regulator
 
 - slug: eu-commission-digital
-  pillar: ecosystem
   type: rss_feed
   url: https://ec.europa.eu/commission/presscorner/api/rss?language=EN
   keyword_filter: ["AI", "artificial intelligence", "generative", "AI Act", "DSA", "DMA"]
   display_name: EU Commission Press
+  default_tracks: [policy-regulation, litigation-legal]
+  tier: primary
+  role: regulator
 
 - slug: us-ftc
-  pillar: ecosystem
   type: rss_feed
   url: https://www.ftc.gov/news-events/news/press-releases/rss
   keyword_filter: ["AI", "artificial intelligence", "generative", "chatbot", "training data", "large language"]
   display_name: US FTC
+  default_tracks: [policy-regulation, litigation-legal]
+  tier: primary
+  role: regulator
 
 - slug: news-media-alliance
-  pillar: ecosystem
   type: rss_feed
   url: https://www.newsmediaalliance.org/feed/
   keyword_filter: ["AI", "artificial intelligence", "LLM", "scraper", "training"]
   display_name: News/Media Alliance
+  default_tracks: [licensing-monetization, asset-rights, policy-regulation]
+  tier: specialist
+  role: publisher
 
 - slug: reddit-corporate
-  pillar: ecosystem
   type: rss_feed
   url: https://redditinc.com/news/rss.xml
   keyword_filter: ["AI", "data", "API", "license", "bot"]
   display_name: Reddit Corporate Blog
+  default_tracks: [licensing-monetization, asset-rights]
+  tier: primary
+  role: publisher
+  required_for_coverage: true
 
 # ─── Pillar 3: AI Agent ecosystem (mixed) ───
 
 - slug: web-bot-auth-repo
-  pillar: agent
   type: github_repo
   repo: cloudflareresearch/web-bot-auth
   display_name: Web Bot Auth (spec repo)
+  default_tracks: [standards-protocols, agentic-web]
+  tier: primary
+  role: standards
+  required_for_coverage: true
 
 - slug: mcp-spec
-  pillar: agent
   type: github_repo
   repo: modelcontextprotocol/specification
   pr_labels: ["spec", "rfc"]
   display_name: Model Context Protocol (spec)
+  default_tracks: [standards-protocols, agentic-web]
+  tier: primary
+  role: standards
 
 - slug: cloudflare-research
-  pillar: agent
   type: rss_feed
   url: https://blog.cloudflare.com/tag/research/rss/
   keyword_filter: ["bot", "agent", "auth", "identity", "scraper"]
   display_name: Cloudflare Research Blog
+  default_tracks: [agentic-web, standards-protocols, measurement-economics]
+  tier: specialist
+  role: reporting
 
 - slug: openai-blog
-  pillar: agent
   type: rss_feed
   url: https://openai.com/news/rss.xml
   keyword_filter: ["agent", "operator", "bot", "crawler", "Assistants", "ChatGPT agents"]
   display_name: OpenAI News
+  default_tracks: [agentic-web, search-discovery]
+  tier: primary
+  role: platform-docs
 
 - slug: cf-changelog-ai-gateway
-  pillar: agent
   type: rss_feed
   url: https://developers.cloudflare.com/changelog/rss/ai-gateway.xml
   display_name: Cloudflare AI Gateway changelog
+  default_tracks: [agentic-web, standards-protocols]
+  tier: primary
+  role: infrastructure
 
 - slug: cf-changelog-ai-search
-  pillar: agent
   type: rss_feed
   url: https://developers.cloudflare.com/changelog/rss/ai-search.xml
   display_name: Cloudflare AI Search changelog
+  default_tracks: [search-discovery, agentic-web]
+  tier: primary
+  role: infrastructure
 
 # ─── Gemini grounded-search discovery (one call/day per query) ───
 # Each of these runs once per day, returns the top grounded search results
@@ -206,36 +267,46 @@
 # emerging agent/standards movement).
 
 - slug: gemini-ai-licensing-deals
-  pillar: ecosystem
   type: gemini_search
   query: "New AI training data licensing deals, content partnerships, or lawsuits between AI companies and publishers, rights holders, or platforms"
   lookback_days: 14
   display_name: AI licensing & training deals (search)
+  default_tracks: [licensing-monetization, litigation-legal, asset-rights]
+  tier: commentary
+  role: reporting
 
 - slug: gemini-content-blocking
-  pillar: ecosystem
   type: gemini_search
   query: "New tools, policies, or announcements for publishers to block, charge, or control AI crawlers (e.g. robots.txt changes, paywalls for AI training, pay-per-crawl, content authenticity / provenance)"
   lookback_days: 14
   display_name: Content-blocking & pay-for-content (search)
+  default_tracks: [crawler-controls, licensing-monetization, asset-rights]
+  tier: commentary
+  role: reporting
 
 - slug: gemini-regulator-ai-content
-  pillar: ecosystem
   type: gemini_search
   query: "Regulatory action from UK CMA, EU Commission, EU AI Office, Italian Garante, US FTC, or US Copyright Office specifically concerning AI training data, AI crawlers, content licensing, or generative AI and copyright"
   lookback_days: 30
   display_name: Regulator action on AI content (search)
+  default_tracks: [policy-regulation, litigation-legal, asset-rights]
+  tier: commentary
+  role: reporting
 
 - slug: gemini-agent-standards
-  pillar: agent
   type: gemini_search
   query: "New or updated IETF drafts, W3C proposals, or standards-body activity on AI agent authentication, web bot auth, agents.txt, llms.txt, or agent identity"
   lookback_days: 30
   display_name: Agent & bot-auth standards (search)
+  default_tracks: [standards-protocols, agentic-web]
+  tier: commentary
+  role: reporting
 
 - slug: gemini-agent-infra
-  pillar: agent
   type: gemini_search
   query: "New features, integrations, or announcements from AI agent infrastructure vendors (Browserbase, Stagehand, LangChain agents, CrewAI, AutoGen, Anthropic Computer Use, OpenAI Operator, Google Agent Development Kit) — focus on protocol and bot-identity features"
   lookback_days: 14
   display_name: Agent infrastructure movement (search)
+  default_tracks: [agentic-web, standards-protocols]
+  tier: commentary
+  role: reporting

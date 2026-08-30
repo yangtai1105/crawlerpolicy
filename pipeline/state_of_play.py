@@ -9,8 +9,18 @@ from pathlib import Path
 from anthropic import AsyncAnthropic
 
 from pipeline.sources import Source
+from pipeline.taxonomy import Track
 
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
+
+
+def select_crawler_control_sources(sources: list[Source]) -> list[Source]:
+    """Return sources that document crawler access controls."""
+    return [
+        source
+        for source in sources
+        if Track.CRAWLER_CONTROLS in source.default_tracks
+    ]
 
 
 def _as_bool(v) -> bool | None:

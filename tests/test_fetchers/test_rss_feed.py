@@ -6,7 +6,8 @@ from httpx import Response
 
 from pipeline.fetchers.base import ResultMode
 from pipeline.fetchers.rss_feed import fetch_rss_feed
-from pipeline.sources import Pillar, Source, SourceType
+from pipeline.sources import Source, SourceType
+from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 RSS = """<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
@@ -35,11 +36,13 @@ RSS = """<?xml version="1.0" encoding="UTF-8"?>
 def rss_source():
     return Source(
         slug="example",
-        pillar=Pillar.ECOSYSTEM,
         type=SourceType.RSS_FEED,
         url="https://example.com/rss",
         display_name="Example",
         keyword_filter=["AI bot", "crawler"],
+        default_tracks=[Track.MEASUREMENT_ECONOMICS],
+        tier=SourceTier.SPECIALIST,
+        role=SourceRole.REPORTING,
     )
 
 

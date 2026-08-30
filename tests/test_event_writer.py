@@ -3,16 +3,19 @@ from pathlib import Path
 
 from pipeline.analyzer import AnalysisResult
 from pipeline.event_writer import write_event
-from pipeline.sources import Pillar, Source, SourceType
+from pipeline.sources import Source, SourceType
+from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
 def test_write_event_creates_file_with_frontmatter(tmp_path: Path):
     source = Source(
         slug="gptbot",
-        pillar=Pillar.CRAWLER,
         type=SourceType.HTML_PAGE,
         url="https://x",
         display_name="OpenAI GPTBot",
+        default_tracks=[Track.CRAWLER_CONTROLS],
+        tier=SourceTier.PRIMARY,
+        role=SourceRole.PLATFORM_DOCS,
     )
     analysis = AnalysisResult(
         change_kind="material",
@@ -46,11 +49,13 @@ def test_write_event_creates_file_with_frontmatter(tmp_path: Path):
 def test_write_event_filename_convention(tmp_path: Path):
     source = Source(
         slug="cloudflare-blog",
-        pillar=Pillar.ECOSYSTEM,
         type=SourceType.RSS_FEED,
         url="https://x/rss",
         keyword_filter=["AI"],
         display_name="Cloudflare",
+        default_tracks=[Track.MEASUREMENT_ECONOMICS],
+        tier=SourceTier.SPECIALIST,
+        role=SourceRole.REPORTING,
     )
     analysis = AnalysisResult(
         change_kind="material",

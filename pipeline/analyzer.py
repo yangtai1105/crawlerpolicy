@@ -6,7 +6,8 @@ from typing import Literal
 
 from anthropic import AsyncAnthropic
 
-from pipeline.sources import Pillar, Source
+from pipeline.sources import Source
+from pipeline.taxonomy import Track
 
 # Per-pillar default routing: crawler events are rare (1-2/month) and
 # high-stakes (the whole site's point is catching these), so they get the
@@ -15,13 +16,6 @@ from pipeline.sources import Pillar, Source
 SONNET_MODEL = "claude-sonnet-4-6"
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
 OPUS_MODEL = "claude-opus-4-7"
-
-DEFAULT_MODEL_BY_PILLAR: dict[Pillar, str] = {
-    Pillar.CRAWLER: SONNET_MODEL,
-    Pillar.ECOSYSTEM: HAIKU_MODEL,
-    Pillar.AGENT: HAIKU_MODEL,
-}
-
 
 @dataclass
 class AnalysisResult:
@@ -110,11 +104,13 @@ async def analyze_change(
     trend_context: str = "",
     item_url: str | None = None,
 ) -> AnalysisResult:
-    system = _SYSTEM_BASE + (_CRAWLER_ADDON if source.pillar == Pillar.CRAWLER else _NEWS_ADDON)
+    crawler_control_source = Track.CRAWLER_CONTROLS in source.default_tracks
+    system = _SYSTEM_BASE + (_CRAWLER_ADDON if crawler_control_source else _NEWS_ADDON)
     model = _resolve_model(source)
     primary_url = item_url or source.url or ""
     user_content_parts = [
-        f"Source: {source.display_name} ({source.pillar.value})",
+        f"Source: {source.display_name}",
+        f"Default tracks: {', '.join(track.value for track in source.default_tracks)}",
         f"URL: {primary_url}",
         "",
     ]
@@ -164,4 +160,6 @@ def _resolve_model(source: Source) -> str:
         return HAIKU_MODEL
     if override and override.startswith("claude-"):
         return override
-    return DEFAULT_MODEL_BY_PILLAR.get(source.pillar, SONNET_MODEL)
+    if Track.CRAWLER_CONTROLS in source.default_tracks:
+        return SONNET_MODEL
+    return HAIKU_MODEL

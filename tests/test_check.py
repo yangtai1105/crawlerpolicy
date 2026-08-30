@@ -22,10 +22,13 @@ def repo(tmp_path):
             [
                 {
                     "slug": "gptbot",
-                    "pillar": "crawler",
                     "type": "html_page",
                     "url": "https://platform.openai.com/docs/gptbot",
                     "display_name": "OpenAI GPTBot",
+                    "default_tracks": ["crawler-controls"],
+                    "tier": "primary",
+                    "role": "platform-docs",
+                    "required_for_coverage": True,
                 }
             ]
         )

@@ -4,17 +4,20 @@ from httpx import Response
 
 from pipeline.fetchers.base import ResultMode
 from pipeline.fetchers.ietf_draft import fetch_ietf_draft
-from pipeline.sources import Pillar, Source, SourceType
+from pipeline.sources import Source, SourceType
+from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
 @pytest.fixture
 def ietf_source():
     return Source(
         slug="wba",
-        pillar=Pillar.AGENT,
         type=SourceType.IETF_DRAFT,
         draft_name="draft-cloudflare-httpbis-web-bot-auth",
         display_name="Web Bot Auth",
+        default_tracks=[Track.STANDARDS_PROTOCOLS, Track.AGENTIC_WEB],
+        tier=SourceTier.PRIMARY,
+        role=SourceRole.STANDARDS,
     )
 
 

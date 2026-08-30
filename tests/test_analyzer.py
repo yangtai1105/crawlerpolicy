@@ -3,7 +3,8 @@ from unittest.mock import AsyncMock, MagicMock
 import pytest
 
 from pipeline.analyzer import AnalysisResult, analyze_change
-from pipeline.sources import Pillar, Source, SourceType
+from pipeline.sources import Source, SourceType
+from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
 @pytest.fixture
@@ -28,10 +29,12 @@ def _tool_response(arguments: dict):
 def crawler_source():
     return Source(
         slug="gptbot",
-        pillar=Pillar.CRAWLER,
         type=SourceType.HTML_PAGE,
         url="https://x",
         display_name="OpenAI GPTBot",
+        default_tracks=[Track.CRAWLER_CONTROLS],
+        tier=SourceTier.PRIMARY,
+        role=SourceRole.PLATFORM_DOCS,
     )
 
 

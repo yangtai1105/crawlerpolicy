@@ -7,6 +7,7 @@ from pathlib import Path
 
 from pipeline.analyzer import AnalysisResult
 from pipeline.sources import Source
+from pipeline.taxonomy import Track
 
 
 def write_event(
@@ -45,12 +46,13 @@ def _slugify(title: str) -> str:
 
 
 def _compose(*, source, analysis, detected_at, source_url, unified_diff, event_slug) -> str:
+    legacy_pillar = _legacy_pillar(source)
     frontmatter = (
         "---\n"
         f"slug: {event_slug}\n"
         f'title: "{_yaml_escape(analysis.title)}"\n'
         f"source: {source.slug}\n"
-        f"pillar: {source.pillar.value}\n"
+        f"pillar: {legacy_pillar}\n"
         f"detected_at: {detected_at.isoformat()}\n"
         f'source_url: "{_yaml_escape(source_url or "")}"\n'
         f"change_kind: {analysis.change_kind}\n"
@@ -60,7 +62,7 @@ def _compose(*, source, analysis, detected_at, source_url, unified_diff, event_s
     # Crawler events are page-diff signals — the "what changed" framing + raw
     # diff is accurate and useful. Ecosystem + agent events are NEWS items —
     # they report a happening and its implication, not a diff.
-    pillar_is_crawler = source.pillar.value == "crawler"
+    pillar_is_crawler = legacy_pillar == "crawler"
 
     body = ""
     if pillar_is_crawler:
@@ -80,3 +82,13 @@ def _compose(*, source, analysis, detected_at, source_url, unified_diff, event_s
 
 def _yaml_escape(s: str) -> str:
     return s.replace('"', '\\"')
+
+
+def _legacy_pillar(source: Source) -> str:
+    """Keep schema-v1 output working until Task 3 replaces the writer."""
+    tracks = set(source.default_tracks)
+    if Track.CRAWLER_CONTROLS in tracks:
+        return "crawler"
+    if tracks.intersection({Track.AGENTIC_WEB, Track.STANDARDS_PROTOCOLS}):
+        return "agent"
+    return "ecosystem"
