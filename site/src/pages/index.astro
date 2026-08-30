@@ -1,318 +1,168 @@
 ---
-import { getCollection } from "astro:content";
 import Base from "../layouts/Base.astro";
-import EventCard from "../components/EventCard.astro";
-import PillarDigestCard from "../components/PillarDigestCard.astro";
-import StateOfPlay from "../components/StateOfPlay.astro";
-import { countsByPillar, findSource } from "../lib/sources";
-import { loadPillarDigests } from "../lib/pillar_digests";
-import { loadLatest as loadLatestReading } from "../lib/critical_reading";
+import HealthStrip from "../components/HealthStrip.astro";
+import FrontCard from "../components/FrontCard.astro";
+import TrendTable from "../components/TrendTable.astro";
+import DevelopmentCard from "../components/DevelopmentCard.astro";
+import EvidenceRail from "../components/EvidenceRail.astro";
+import { loadHealth } from "../lib/health";
+import { loadLatestIntelligence } from "../lib/intelligence";
+import { loadTrends } from "../lib/trends";
+import { FRONTS, frontForTrack, type Front } from "../lib/taxonomy";
+import { findSource } from "../lib/sources";
+import { loadCurrentEvents } from "../lib/events";
 
-const events = (await getCollection("events"))
-  .filter((e) => e.data.change_kind === "material")
-  .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime());
+const health = loadHealth();
+const issue = loadLatestIntelligence();
+const trends = loadTrends();
+const events = (await loadCurrentEvents())
+  .filter((event) => event.data.change_kind === "material")
+  .sort((a, b) => b.data.event_date.getTime() - a.data.event_date.getTime());
+const byId = new Map(events.map((event) => [event.data.slug, event]));
+const activeFronts = new Set(events.map((event) => frontForTrack(event.data.primary_track)));
 
-const digests = loadPillarDigests();
-const latestReading = loadLatestReading();
-const counts = countsByPillar();
+const frontCopy: Record<Front, string> = {
+  "access-discovery": "Who can discover, crawl, index, and answer from the open web — and under which controls.",
+  "agents-identity": "How autonomous agents identify themselves, request authority, and cross system boundaries.",
+  "rights-markets": "Where licensing standards, creator controls, and market mechanisms are converging or splitting.",
+  "governance-law": "The policy, regulatory, and litigation decisions reshaping machine access and downstream use.",
+  "measurement-economics": "What traffic, referral, conversion, and compensation evidence reveals about the emerging economy.",
+};
 
-// "Key content" grid below the pillar cards: show the most recent event
-// per (source, pillar) cluster so readers get a menu of fronts rather than
-// a flat reverse-chron scroll.
-const latestBySource = new Map<string, typeof events[number]>();
-for (const e of events) {
-  if (!latestBySource.has(e.data.source)) latestBySource.set(e.data.source, e);
+const evidenceItems = issue?.executive_shifts.flatMap((shift) =>
+  shift.evidence_event_ids.flatMap((id) => {
+    const event = byId.get(id);
+    return event ? [{
+      id,
+      date: event.data.event_date.toISOString().slice(0, 10),
+      title: event.data.title,
+      source: findSource(event.data.source)?.display_name ?? event.data.source,
+      url: `/events/${event.data.slug}`,
+    }] : [];
+  }),
+) ?? [];
+
+function summary(body: string | undefined): string {
+  const match = body?.match(/## Why it matters\s*\n+([^#]+)/);
+  return match?.[1].trim().slice(0, 260) ?? "";
 }
-const keyContent = Array.from(latestBySource.values())
-  .sort((a, b) => {
-    // Prioritize by detection recency, but weight by importance.
-    const scoreA = a.data.importance + (a.data.detected_at.getTime() / 1e13);
-    const scoreB = b.data.importance + (b.data.detected_at.getTime() / 1e13);
-    return scoreB - scoreA;
-  })
-  .slice(0, 12);
-
-const feedEntries = await Promise.all(
-  events.slice(0, 25).map(async (e) => ({
-    slug: e.id,
-    data: e.data,
-    body: e.body ?? "",
-  })),
-);
 ---
 
-<Base title="Feed">
-  {digests ? (
-    <section class="pillars-strip">
-      <div class="container">
-        <div class="pillars-grid">
-          <PillarDigestCard pillar="crawler" digest={digests.crawler}  />
-          <PillarDigestCard pillar="ecosystem" digest={digests.ecosystem}  />
-          <PillarDigestCard pillar="agent" digest={digests.agent}  />
-        </div>
-        {latestReading && (() => {
-          const total = latestReading.topics.reduce((n, t) => n + t.items.length, 0);
-          return (
-            <a href="/reading" class="reading-strip">
-              <span class="rs-label">Weekly Dispatch · W{latestReading.iso_week}</span>
-              <span class="rs-meta">
-                {total} items — reporting, investigations, and perspectives (not vendor announcements)
-              </span>
-              <span class="rs-cta">Open →</span>
-            </a>
-          );
-        })()}
+<Base title="Web intelligence">
+  <div class="container home">
+    <header class="hero observation-grid">
+      <div class="hero-index">
+        <p class="utility-label">Current intelligence</p>
+        <p>{issue ? `${issue.week} · completed window` : "First verified cycle pending"}</p>
       </div>
-    </section>
-  ) : (
-    <section class="empty-hero">
-      <div class="container">
-        <p class="label">Status</p>
-        <h1>Pillar digests not yet generated.</h1>
-        <p class="lede">
-          Run <code>uv run python -m pipeline.check</code> to produce the first 30-day rollups.
-          Tracking {counts.crawler} crawler sources, {counts.ecosystem} ecosystem sources,
-          and {counts.agent} agent-infra sources.
+      <div class="hero-thesis">
+        <h1>{issue ? issue.thesis : "New intelligence cycle starting."}</h1>
+        <p>
+          {issue
+            ? issue.intelligence_read
+            : "Crawler Policy now separates collected evidence, verified developments, durable trends, and weekly conclusions. Current intelligence begins with post-refactor evidence only."}
         </p>
+        <div class="hero-actions">
+          <a href="/intelligence">Open weekly intelligence →</a>
+          {!issue && <a href="/archive">Browse historical records</a>}
+        </div>
+      </div>
+    </header>
+
+    <HealthStrip health={health} />
+
+    <section class="section shifts">
+      <div class="section-heading">
+        <p class="utility-label">Executive shifts</p>
+        <h2>{issue ? "What moved this week" : "No verified weekly shift yet"}</h2>
+      </div>
+      {issue && issue.executive_shifts.length ? (
+        <div class="shift-grid">
+          {issue.executive_shifts.map((shift) => (
+            <article><h3>{shift.headline}</h3><p>{shift.summary}</p></article>
+          ))}
+        </div>
+      ) : (
+        <p class="empty-read">The first completed run will place only evidence-backed, material changes here. Legacy records stay separate.</p>
+      )}
+      {evidenceItems.length > 0 && <EvidenceRail thesis="Primary records supporting this week’s executive read." items={evidenceItems} />}
+    </section>
+
+    <section class="section" id="fronts">
+      <div class="section-heading compact-heading">
+        <div><p class="utility-label">Five public fronts</p><h2>The control plane</h2></div>
+        <p>Nine internal tracks roll up into five stable questions readers can follow.</p>
+      </div>
+      <div class="front-grid">
+        {FRONTS.map((front) => <FrontCard front={front} summary={frontCopy[front]} status={activeFronts.has(front) ? "active" : "quiet"} />)}
       </div>
     </section>
-  )}
 
-  <div class="container home-body">
-    <div class="home-grid">
-      <section class="feed">
-        {keyContent.length > 0 && (
-          <section class="key-content">
-            <div class="label">Key sources</div>
-            <p class="section-lede">
-              Latest material change per tracked source — one card per front.
-              Click any card for the full LLM-written implication.
-            </p>
-            <div class="keys-grid">
-              {keyContent.map((e) => {
-                const src = findSource(e.data.source);
-                return (
-                  <a href={`/events/${e.id}`} class={`key-card pillar-${e.data.pillar}`}>
-                    <div class="key-source">
-                      <span class="key-source-name">{src?.display_name ?? e.data.source}</span>
-                      <span class="key-date">
-                        {e.data.detected_at.toISOString().slice(0, 10)}
-                      </span>
-                    </div>
-                    <div class="key-title">{e.data.title}</div>
-                  </a>
-                );
-              })}
-            </div>
-          </section>
-        )}
+    <section class="section">
+      <div class="section-heading compact-heading">
+        <div><p class="utility-label">Durable signals</p><h2>Trend state</h2></div>
+        <p>Status changes require primary or measurement evidence.</p>
+      </div>
+      <TrendTable trends={trends} />
+    </section>
 
-        <section class="all-feed">
-          <div class="filter-bar">
-            <span class="label">Recent events</span>
-            <button class="chip active" data-filter="all">All · {events.length}</button>
-            <button class="chip" data-filter="crawler">
-              Crawler · {events.filter((e) => e.data.pillar === "crawler").length}
-            </button>
-            <button class="chip" data-filter="ecosystem">
-              Ecosystem · {events.filter((e) => e.data.pillar === "ecosystem").length}
-            </button>
-            <button class="chip" data-filter="agent">
-              Agent · {events.filter((e) => e.data.pillar === "agent").length}
-            </button>
-          </div>
+    <section class="section">
+      <div class="section-heading compact-heading">
+        <div><p class="utility-label">Current record</p><h2>Latest verified developments</h2></div>
+        <a href="/developments">All developments →</a>
+      </div>
+      {events.length ? events.slice(0, 6).map((event) => (
+        <DevelopmentCard slug={event.data.slug} title={event.data.title} source={findSource(event.data.source)?.display_name ?? event.data.source} eventDate={event.data.event_date} tracks={[...event.data.tracks]} tier={event.data.source_tier} confidence={event.data.confidence} summary={summary(event.body)} />
+      )) : <p class="empty-read">No schema-v2 material developments yet. The pipeline is establishing its first verified baseline.</p>}
+    </section>
 
-          {feedEntries.length > 0 ? (
-            <div class="feed-list">
-              {feedEntries.map((e) => (
-                <div class="feed-item" data-pillar={e.data.pillar}>
-                  <EventCard slug={e.slug} data={e.data} body={e.body} />
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div class="feed-empty">
-              <p>No material events yet.</p>
-            </div>
-          )}
-        </section>
-      </section>
-
-      <StateOfPlay />
-    </div>
+    <section class="section watchlist">
+      <div><p class="utility-label">Next evidence</p><h2>Watchlist</h2></div>
+      <ol>
+        {(issue?.watchlist.length ? issue.watchlist : [
+          { question: "Which primary source will produce the first post-refactor material development?", tracks: [] },
+          { question: "Will identity and rights signals become deployable controls rather than policy statements?", tracks: [] },
+        ]).map((item) => <li>{item.question}</li>)}
+      </ol>
+    </section>
   </div>
 </Base>
 
-<script is:inline>
-  // Filter chips (also honor ?pillar= from PillarDigestCard links)
-  const chips = document.querySelectorAll(".filter-bar .chip");
-  const items = document.querySelectorAll(".feed-item");
-  function applyFilter(f) {
-    chips.forEach((b) => b.classList.toggle("active", b.dataset.filter === f));
-    items.forEach((item) => {
-      item.style.display = f === "all" || item.dataset.pillar === f ? "" : "none";
-    });
-  }
-  chips.forEach((btn) => {
-    btn.addEventListener("click", () => applyFilter(btn.dataset.filter));
-  });
-  const urlFilter = new URLSearchParams(location.search).get("pillar");
-  if (urlFilter && ["crawler", "ecosystem", "agent"].includes(urlFilter)) {
-    applyFilter(urlFilter);
-    // scroll to recent events section
-    document.querySelector(".filter-bar")?.scrollIntoView({ behavior: "smooth", block: "start" });
-  }
-</script>
-
 <style>
-  /* Pillar strip at top */
-  .pillars-strip {
-    background: var(--bg);
-    padding: var(--space-6) 0 var(--space-4);
-    border-bottom: 1px solid var(--border);
-  }
-  .reading-strip {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-4);
-    padding: var(--space-3) var(--space-4);
-    margin-top: var(--space-4);
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--pillar-agent);
-    border-radius: 4px;
-    color: var(--ink);
-    transition: border-color 120ms, background 120ms;
-  }
-  .reading-strip:hover { background: var(--bg-hover); color: var(--ink); }
-  .rs-label { font-weight: 500; font-size: 0.95rem; }
-  .rs-meta { color: var(--ink-muted); font-size: 0.82rem; flex: 1; margin-left: var(--space-3); }
-  .rs-cta { color: var(--ink-muted); font-size: 0.82rem; }
-  .reading-strip:hover .rs-cta { color: var(--pillar-agent); }
-  @media (max-width: 640px) {
-    .reading-strip { flex-wrap: wrap; }
-    .rs-meta { flex: 0 0 100%; margin-left: 0; }
-  }
-  .pillars-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-4);
-    align-items: stretch;
-  }
-  @media (max-width: 900px) {
-    .pillars-grid { grid-template-columns: 1fr; }
-  }
-
-  .empty-hero {
-    background: #0a0a0a;
-    color: #f5f5f0;
-    padding: var(--space-7) 0;
-  }
-  .empty-hero h1 { font-size: 1.6rem; margin: var(--space-3) 0; max-width: 720px; }
-  .empty-hero .lede { color: rgba(245, 245, 240, 0.75); font-size: 0.95rem; }
-  .empty-hero .label { color: rgba(245, 245, 240, 0.55); }
-  .empty-hero code {
-    background: #222; padding: 2px 8px; border-radius: 3px; font-size: 0.85rem;
-  }
-
-  .home-body { padding: var(--space-6) 0; }
-
-  .home-grid {
-    display: grid;
-    grid-template-columns: 1fr var(--sidebar-w);
-    gap: var(--space-6);
-  }
-  @media (max-width: 860px) {
-    .home-grid { grid-template-columns: 1fr; }
-  }
-
-  /* Key content grid */
-  .key-content { margin-bottom: var(--space-7); }
-  .section-lede {
-    color: var(--ink-muted);
-    font-size: 0.88rem;
-    margin: var(--space-2) 0 var(--space-5);
-    max-width: 640px;
-  }
-  .keys-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-3);
-  }
-  @media (max-width: 640px) {
-    .keys-grid { grid-template-columns: 1fr; }
-  }
-  .key-card {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-2);
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-left: 3px solid var(--border);
-    border-radius: 4px;
-    padding: var(--space-4);
-    color: var(--ink);
-    transition: border-color 120ms, background 120ms;
-  }
-  .key-card:hover {
-    border-color: var(--border-strong);
-    background: var(--bg-hover);
-    color: var(--ink);
-  }
-  .key-card.pillar-crawler { border-left-color: var(--pillar-crawler); }
-  .key-card.pillar-ecosystem { border-left-color: var(--pillar-ecosystem); }
-  .key-card.pillar-agent { border-left-color: var(--pillar-agent); }
-
-  .key-source {
-    display: flex;
-    justify-content: space-between;
-    font-size: 0.72rem;
-    color: var(--ink-muted);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-  }
-  .key-source-name { color: var(--ink-muted); }
-  .key-date { font-variant-numeric: tabular-nums; }
-  .key-title {
-    font-family: var(--font-display);
-    font-size: 1rem;
-    line-height: 1.3;
-    font-weight: 500;
-  }
-
-  /* Filter bar + recent feed (unchanged) */
-  .filter-bar {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    flex-wrap: wrap;
-    margin-bottom: var(--space-4);
-    padding-bottom: var(--space-4);
-    border-bottom: 1px solid var(--border);
-  }
-  .filter-bar .label { margin-right: var(--space-2); }
-  .chip {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--ink-muted);
-    padding: 4px 12px;
-    border-radius: 999px;
-    font-family: inherit;
-    font-size: 0.78rem;
-    cursor: pointer;
-  }
-  .chip:hover { border-color: var(--border-strong); color: var(--ink); }
-  .chip.active {
-    background: var(--ink);
-    color: var(--bg);
-    border-color: var(--ink);
-  }
-  .feed-empty {
-    border: 1px dashed var(--border);
-    padding: var(--space-6);
-    border-radius: 4px;
-    color: var(--ink-muted);
-    font-size: 0.92rem;
+  .home { padding-top: var(--space-8); }
+  .hero { padding: var(--space-5) 0 var(--space-8); }
+  .hero-index { grid-column: 1 / 4; color: var(--ink-muted); font-size: 0.78rem; }
+  .hero-index p:last-child { margin-top: var(--space-3); font-family: var(--font-mono); }
+  .hero-thesis { grid-column: 4 / 12; }
+  .hero-thesis h1 { max-width: 11ch; }
+  .hero-thesis > p { max-width: 66ch; margin: var(--space-5) 0; color: var(--ink-muted); font-size: 1.02rem; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-5); font: 650 0.72rem var(--font-mono); }
+  .hero-actions a { border-bottom: 1px solid var(--border-strong); padding-bottom: var(--space-1); }
+  .section { padding-top: var(--space-9); }
+  .section-heading { margin-bottom: var(--space-6); }
+  .section-heading .utility-label { margin-bottom: var(--space-2); }
+  .compact-heading { display: flex; justify-content: space-between; gap: var(--space-6); align-items: end; }
+  .compact-heading > p { max-width: 44ch; margin: 0; color: var(--ink-muted); font-size: 0.82rem; }
+  .compact-heading > a { font: 650 0.72rem var(--font-mono); white-space: nowrap; }
+  .shift-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border-strong); }
+  .shift-grid article { padding: var(--space-5); border-right: 1px solid var(--border); background: color-mix(in srgb, var(--bg-elev) 72%, transparent); }
+  .shift-grid article:last-child { border-right: 0; }
+  .shift-grid h3 { margin-bottom: var(--space-3); }
+  .shift-grid p, .empty-read { color: var(--ink-muted); font-size: 0.86rem; max-width: 68ch; }
+  .shifts :global(.evidence-rail) { margin-top: var(--space-7); max-width: 880px; }
+  .front-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
+  .front-grid > :global(article) { grid-column: span 2; }
+  .front-grid > :global(article:nth-child(4)), .front-grid > :global(article:nth-child(5)) { grid-column: span 3; }
+  .watchlist { display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-7); padding-bottom: var(--space-6); border-top: 1px solid var(--border-strong); padding-top: var(--space-7); }
+  .watchlist ol { margin: 0; padding-left: 1.4rem; }
+  .watchlist li { padding: 0 0 var(--space-4) var(--space-2); border-bottom: 1px solid var(--border); margin-bottom: var(--space-4); }
+  @media (max-width: 800px) {
+    .hero { display: block; }
+    .hero-index { margin-bottom: var(--space-6); }
+    .compact-heading, .watchlist { display: block; }
+    .compact-heading > p, .compact-heading > a { display: block; margin-top: var(--space-3); }
+    .shift-grid, .front-grid { grid-template-columns: 1fr; }
+    .front-grid > :global(article), .front-grid > :global(article:nth-child(4)), .front-grid > :global(article:nth-child(5)) { grid-column: auto; }
+    .watchlist ol { margin-top: var(--space-5); }
   }
 </style>

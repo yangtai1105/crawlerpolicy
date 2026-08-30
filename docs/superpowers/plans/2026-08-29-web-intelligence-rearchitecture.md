@@ -659,41 +659,41 @@ git commit -m "feat: establish web intelligence visual system"
 - Consumes: Tasks 6–7 loaders/components.
 - Produces: the public information architecture from the approved spec.
 
-- [ ] **Step 1: Add data fixtures for an empty first launch**
+- [x] **Step 1: Add data fixtures for an empty first launch**
 
 Use empty `data/intelligence/`, empty schema-v2 events, empty trends, and the real health file. Every page must render a useful empty/degraded state without substituting legacy events.
 
-- [ ] **Step 2: Rewrite the homepage in the specified order**
+- [x] **Step 2: Rewrite the homepage in the specified order**
 
 Render weekly thesis, HealthStrip, executive shifts, five FrontCards, TrendTable, latest verified developments, and watchlist. With no current weekly issue, lead with `New intelligence cycle starting` and explain that verified post-refactor evidence will appear here; link Legacy Archive separately.
 
-- [ ] **Step 3: Implement current and archived intelligence routes**
+- [x] **Step 3: Implement current and archived intelligence routes**
 
 `/intelligence` renders the latest verified issue or the empty launch state. `/intelligence/[week]` builds one route per JSON issue. Each claim uses EvidenceRail and shows coverage for that week.
 
-- [ ] **Step 4: Implement five static front routes**
+- [x] **Step 4: Implement five static front routes**
 
 Generate exactly the five `Front` keys. Each page shows its mapped tracks, current trend theses, latest material events by `event_date`, required source coverage, and explicit no-change language when empty.
 
-- [ ] **Step 5: Implement developments filtering**
+- [x] **Step 5: Implement developments filtering**
 
 Render server-built data attributes for track, front, actor, tier, and date. Client JavaScript updates visible cards and URL query parameters. With JavaScript disabled, all current developments remain readable.
 
-- [ ] **Step 6: Rewrite Sources and About**
+- [x] **Step 6: Rewrite Sources and About**
 
 Sources group by role and tier, show default tracks and stage health, and separate required coverage. About explains evidence → event → trend → weekly intelligence, model disclosure, health semantics, and Legacy Archive boundaries.
 
-- [ ] **Step 7: Build and inspect every route**
+- [x] **Step 7: Build and inspect every route**
 
 Run: `npm run build` from `site`.
 
 Expected: new homepage, five fronts, developments, sources, intelligence, archive, existing legacy events, old reading pages and about all build.
 
-- [ ] **Step 8: Browser QA**
+- [x] **Step 8: Browser QA**
 
 Open homepage, one front, Sources, Legacy Archive, and one legacy event at desktop/mobile widths. Verify route links, empty states, filters, health truthfulness and absence of old events from current counts.
 
-- [ ] **Step 9: Remove the component preview and commit**
+- [x] **Step 9: Remove the component preview and commit**
 
 ```bash
 git rm site/src/pages/component-preview.astro

@@ -1,106 +1,69 @@
 ---
 import Base from "../../layouts/Base.astro";
-import PillarTag from "../../components/PillarTag.astro";
-import { loadSources } from "../../lib/sources";
-import { daysSinceLatest } from "../../lib/snapshots";
+import TrackTag from "../../components/TrackTag.astro";
+import { loadHealth } from "../../lib/health";
+import { loadSources, type SourceRole } from "../../lib/sources";
 
 const sources = loadSources();
-const byPillar = {
-  crawler: sources.filter((s) => s.pillar === "crawler"),
-  ecosystem: sources.filter((s) => s.pillar === "ecosystem"),
-  agent: sources.filter((s) => s.pillar === "agent"),
+const health = loadHealth();
+const roles: SourceRole[] = ["platform-docs", "standards", "regulator", "legal-primary", "publisher", "infrastructure", "measurement", "reporting"];
+const roleLabels: Record<SourceRole, string> = {
+  "platform-docs": "Platform documentation", standards: "Standards bodies", regulator: "Regulators", "legal-primary": "Primary legal records", publisher: "Publishers & rights groups", infrastructure: "Web infrastructure", measurement: "Measurement", reporting: "Specialist reporting",
 };
 ---
 
 <Base title="Sources">
-  <div class="container sources-page">
-    <header class="sources-header">
-      <h1>Sources</h1>
-      <p class="lede">
-        {sources.length} sources under daily watch. Each source produces one or more entries in the feed
-        when its content materially changes.
-      </p>
+  <main class="container sources-page">
+    <header class="page-header observation-grid">
+      <p class="utility-label">Coverage registry · {sources.length} configured</p>
+      <div><h1>Sources by authority and role</h1><p>Sources are classified by what they can prove. Required coverage and stage health are visible; commentary cannot silently stand in for a primary record.</p></div>
     </header>
 
-    {(["crawler", "ecosystem", "agent"] as const).map((pillar) => (
-      <section class="sources-section">
-        <div class="sources-section-header">
-          <PillarTag pillar={pillar} />
-          <span class="label">{byPillar[pillar].length} sources</span>
-        </div>
-        <ul class="sources-list">
-          {byPillar[pillar].map((s) => {
-            const days = s.pillar === "crawler" ? daysSinceLatest(s.slug) : null;
-            return (
-              <li>
-                <a href={`/sources/${s.slug}`}>
-                  <span class="source-name">{s.display_name}</span>
-                  <span class="source-type">{s.type}</span>
-                  {days !== null && (
-                    <span class={`source-days ${days < 14 ? "hot" : ""}`}>
-                      {days === 0 ? "snapshotted today" : `${days}d stable`}
-                    </span>
-                  )}
-                </a>
-              </li>
-            );
-          })}
-        </ul>
-      </section>
-    ))}
-  </div>
+    <section class="coverage-summary">
+      <div><span class="utility-label">Required</span><strong>{sources.filter((source) => source.required_for_coverage).length}</strong></div>
+      <div><span class="utility-label">Primary</span><strong>{sources.filter((source) => source.tier === "primary").length}</strong></div>
+      <div><span class="utility-label">Completed</span><strong>{health.coverage.completed}/{health.coverage.configured}</strong></div>
+      <p>Health: <strong>{health.status}</strong>. A missing schema-v2 health record is displayed as unknown, never inferred from a previous check timestamp.</p>
+    </section>
+
+    {roles.map((role) => {
+      const group = sources.filter((source) => source.role === role);
+      return group.length > 0 && <section class="role-section">
+        <div class="role-heading"><div><p class="utility-label">Source role</p><h2>{roleLabels[role]}</h2></div><span>{group.length} sources</span></div>
+        <ul>{group.map((source) => {
+          const stage = health.per_source[source.slug];
+          return <li>
+            <div class="source-identity"><a href={`/sources/${source.slug}`}>{source.display_name}</a>{source.required_for_coverage && <strong>Required</strong>}</div>
+            <div class="source-tracks">{source.default_tracks.map((track) => <TrackTag track={track} />)}</div>
+            <div class="source-meta"><span>{source.tier}</span><span>{source.type}</span><span>{stage ? `${stage.fetch}/${stage.evidence}/${stage.analysis}/${stage.publish}` : "health pending"}</span></div>
+          </li>;
+        })}</ul>
+      </section>;
+    })}
+  </main>
 </Base>
 
 <style>
-  .sources-page {
-    max-width: 900px;
-    padding: var(--space-6) var(--space-5);
-  }
-  .sources-header {
-    margin-bottom: var(--space-7);
-    padding-bottom: var(--space-5);
-    border-bottom: 1px solid var(--border);
-  }
-  .sources-header h1 { margin-bottom: var(--space-3); }
-  .lede { color: var(--ink-muted); font-size: 1rem; max-width: 640px; }
-
-  .sources-section { margin-bottom: var(--space-7); }
-  .sources-section-header {
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    margin-bottom: var(--space-4);
-  }
-
-  .sources-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    background: var(--bg-elev);
-  }
-  .sources-list li { border-bottom: 1px solid var(--border); }
-  .sources-list li:last-child { border-bottom: 0; }
-  .sources-list a {
-    display: grid;
-    grid-template-columns: 1fr auto auto;
-    gap: var(--space-4);
-    padding: var(--space-3) var(--space-4);
-    align-items: center;
-    color: var(--ink);
-  }
-  .sources-list a:hover { background: var(--bg-hover); color: var(--pillar-ecosystem); }
-  .source-name { font-weight: 500; }
-  .source-type {
-    font-family: var(--font-mono);
-    font-size: 0.75rem;
-    color: var(--ink-muted);
-  }
-  .source-days {
-    font-size: 0.78rem;
-    color: var(--ink-muted);
-    font-variant-numeric: tabular-nums;
-  }
-  .source-days.hot { color: var(--signal-hot); }
+  .sources-page { padding-top: var(--space-8); }
+  .page-header { padding-bottom: var(--space-8); }
+  .page-header > p { grid-column: 1 / 4; }
+  .page-header > div { grid-column: 4 / 12; }
+  .page-header h1 { max-width: 12ch; }
+  .page-header div p { max-width: 66ch; margin-top: var(--space-5); color: var(--ink-muted); }
+  .coverage-summary { display: grid; grid-template-columns: repeat(3, 130px) 1fr; gap: var(--space-5); padding: var(--space-5); border: 1px solid var(--border-strong); background: var(--bg-elev); }
+  .coverage-summary div { display: grid; gap: var(--space-2); }
+  .coverage-summary div strong { font: 680 1.7rem var(--font-display); }
+  .coverage-summary p { margin: 0; color: var(--ink-muted); font-size: 0.8rem; }
+  .role-section { padding-top: var(--space-8); }
+  .role-heading { display: flex; justify-content: space-between; align-items: end; gap: var(--space-4); margin-bottom: var(--space-4); }
+  .role-heading p { margin-bottom: var(--space-2); }
+  .role-heading span { color: var(--ink-muted); font: 0.68rem var(--font-mono); }
+  ul { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--border-strong); }
+  li { display: grid; grid-template-columns: 1.1fr 1.2fr 1fr; gap: var(--space-5); align-items: center; padding: var(--space-4) 0; border-bottom: 1px solid var(--border); }
+  .source-identity { display: flex; align-items: center; gap: var(--space-3); }
+  .source-identity a { font-weight: 650; }
+  .source-identity strong { padding: 2px 5px; border: 1px solid var(--alert-red); color: var(--alert-red); font: 650 0.58rem var(--font-mono); text-transform: uppercase; }
+  .source-tracks { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+  .source-meta { display: flex; justify-content: flex-end; gap: var(--space-3); color: var(--ink-muted); font: 0.62rem var(--font-mono); text-transform: uppercase; }
+  @media (max-width: 850px) { .page-header { display: block; } .page-header > p { margin-bottom: var(--space-5); } .coverage-summary { grid-template-columns: repeat(3, 1fr); } .coverage-summary p { grid-column: 1 / -1; } li { grid-template-columns: 1fr; gap: var(--space-3); } .source-meta { justify-content: flex-start; flex-wrap: wrap; } }
 </style>

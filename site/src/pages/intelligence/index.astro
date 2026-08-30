@@ -1,0 +1,43 @@
+---
+import Base from "../../layouts/Base.astro";
+import IntelligenceIssue from "../../components/IntelligenceIssue.astro";
+import HealthStrip from "../../components/HealthStrip.astro";
+import { loadHealth } from "../../lib/health";
+import { loadIntelligenceArchive, loadLatestIntelligence } from "../../lib/intelligence";
+import { loadCurrentEvents } from "../../lib/events";
+
+const latest = loadLatestIntelligence();
+const archive = loadIntelligenceArchive();
+const events = await loadCurrentEvents();
+---
+
+<Base title="Weekly Intelligence">
+  <main class="container intelligence-page">
+    {latest ? <IntelligenceIssue issue={latest} events={events} /> : (
+      <>
+        <header class="empty-hero observation-grid">
+          <p class="utility-label">Weekly intelligence</p>
+          <div><h1>New intelligence cycle starting.</h1><p>The first issue will publish after a completed weekly window has current health coverage and resolvable schema-v2 evidence. Historical events are not used to manufacture a launch issue.</p></div>
+        </header>
+        <HealthStrip health={loadHealth()} />
+        <section class="method-note"><h2>What will appear here</h2><p>A weekly thesis, executive shifts, nine-track change ledger, trend deltas, actor moves, a watchlist, and direct evidence links.</p><a href="/archive">Open Legacy Archive →</a></section>
+      </>
+    )}
+    {archive.length > 1 && <nav class="issue-archive" aria-label="Weekly intelligence archive"><p class="utility-label">Previous issues</p>{archive.slice(1).map((issue) => <a href={`/intelligence/${issue.week}`}>{issue.week}</a>)}</nav>}
+  </main>
+</Base>
+
+<style>
+  .intelligence-page { padding-top: var(--space-3); }
+  .empty-hero { padding: var(--space-9) 0 var(--space-8); }
+  .empty-hero > p { grid-column: 1 / 4; }
+  .empty-hero > div { grid-column: 4 / 12; }
+  .empty-hero h1 { max-width: 10ch; }
+  .empty-hero div p { max-width: 64ch; margin-top: var(--space-5); color: var(--ink-muted); }
+  .method-note { max-width: 700px; padding-top: var(--space-9); }
+  .method-note p { color: var(--ink-muted); margin: var(--space-4) 0; }
+  .method-note a { font: 650 0.72rem var(--font-mono); }
+  .issue-archive { display: flex; gap: var(--space-4); margin-top: var(--space-9); padding-top: var(--space-5); border-top: 1px solid var(--border-strong); }
+  .issue-archive a { font: 650 0.72rem var(--font-mono); }
+  @media (max-width: 800px) { .empty-hero { display: block; } .empty-hero > p { margin-bottom: var(--space-5); } }
+</style>

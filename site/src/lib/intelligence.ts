@@ -22,10 +22,27 @@ export interface WeeklyIntelligence {
     summary: string;
   }>;
   intelligence_read: string;
-  trend_deltas: Array<Record<string, unknown>>;
-  actor_moves: Array<Record<string, unknown>>;
+  trend_deltas: Array<{
+    trend_key: string;
+    previous_status: string;
+    current_status: string;
+    accepted: boolean;
+    reason: string;
+    evidence_event_ids: string[];
+    explanation: string;
+  }>;
+  actor_moves: Array<{
+    actor: string;
+    direction: string;
+    evidence_event_ids: string[];
+  }>;
   watchlist: Array<{ question: string; tracks: string[] }>;
-  source_ledger: Array<Record<string, unknown>>;
+  source_ledger: Array<{
+    source: string;
+    tier: string;
+    event_ids: string[];
+    latest_event_date: string;
+  }>;
   model_generated: boolean;
 }
 

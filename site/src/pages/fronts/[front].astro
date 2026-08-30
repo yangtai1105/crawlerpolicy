@@ -1,0 +1,79 @@
+---
+import Base from "../../layouts/Base.astro";
+import HealthStrip from "../../components/HealthStrip.astro";
+import TrackTag from "../../components/TrackTag.astro";
+import TrendTable from "../../components/TrendTable.astro";
+import DevelopmentCard from "../../components/DevelopmentCard.astro";
+import { FRONTS, FRONT_LABELS, FRONT_TRACKS, type Front } from "../../lib/taxonomy";
+import { loadHealth } from "../../lib/health";
+import { loadTrends } from "../../lib/trends";
+import { findSource, loadSources } from "../../lib/sources";
+import { loadCurrentEvents } from "../../lib/events";
+
+export function getStaticPaths() {
+  return FRONTS.map((front) => ({ params: { front }, props: { front } }));
+}
+const { front } = Astro.props as { front: Front };
+const tracks = FRONT_TRACKS[front];
+const health = loadHealth();
+const events = (await loadCurrentEvents())
+  .filter((event) => event.data.change_kind === "material" && event.data.tracks.some((track) => tracks.includes(track)))
+  .sort((a, b) => b.data.event_date.getTime() - a.data.event_date.getTime());
+const requiredSources = loadSources().filter((source) => source.required_for_coverage && source.default_tracks.some((track) => tracks.includes(track)));
+const trends = loadTrends().filter((trend) => tracks.some((track) => trend.key.includes(track)));
+const frontCopy: Record<Front, string> = {
+  "access-discovery": "Machine access is fragmenting across crawling, search inclusion, answer surfaces, and publisher-side controls. This front tracks what is actually deployable.",
+  "agents-identity": "Agent identity becomes useful only when a request can prove who sent it, what authority it carries, and which policy should apply.",
+  "rights-markets": "Rights expressions, licensing mechanisms, and payment protocols are converging unevenly. This front separates implementable controls from market narrative.",
+  "governance-law": "Policy and litigation determine which controls have force, where duties attach, and how jurisdiction changes the operational web.",
+  "measurement-economics": "Traffic and compensation claims need measurement evidence. This front follows the observable economics behind discovery and machine use.",
+};
+function bodySummary(body: string | undefined) { return body?.match(/## Why it matters\s*\n+([^#]+)/)?.[1].trim().slice(0, 240) ?? ""; }
+---
+
+<Base title={FRONT_LABELS[front]}>
+  <main class="container front-page">
+    <header class="front-header observation-grid">
+      <div class="front-index"><p class="utility-label">Public front</p><div>{tracks.map((track) => <TrackTag track={track} linked />)}</div></div>
+      <div><h1>{FRONT_LABELS[front]}</h1><p>{frontCopy[front]}</p></div>
+    </header>
+    <HealthStrip health={health} compact />
+
+    <section>
+      <div class="section-heading"><p class="utility-label">Current read</p><h2>Trend theses</h2></div>
+      <TrendTable trends={trends} />
+      {trends.length === 0 && <p class="context-note">No verified trend thesis has been established for this front. Status remains intentionally quiet.</p>}
+    </section>
+
+    <section>
+      <div class="section-heading"><p class="utility-label">Material record</p><h2>Latest developments</h2></div>
+      {events.length ? events.map((event) => <DevelopmentCard slug={event.data.slug} title={event.data.title} source={findSource(event.data.source)?.display_name ?? event.data.source} eventDate={event.data.event_date} tracks={[...event.data.tracks]} tier={event.data.source_tier} confidence={event.data.confidence} summary={bodySummary(event.body)} />) : <p class="empty">No verified material change in this front since the schema-v2 baseline.</p>}
+    </section>
+
+    <section>
+      <div class="section-heading"><p class="utility-label">Coverage lane</p><h2>Required sources</h2></div>
+      {requiredSources.length ? <ul class="source-ledger">{requiredSources.map((source) => {
+        const stage = health.per_source[source.slug];
+        return <li><a href={`/sources/${source.slug}`}>{source.display_name}</a><span>{source.tier} · {source.role}</span><strong>{stage ? `${stage.fetch}/${stage.evidence}/${stage.analysis}/${stage.publish}` : "awaiting schema-v2 health"}</strong></li>;
+      })}</ul> : <p class="empty">No source is currently marked required for this front; coverage expansion is pending.</p>}
+    </section>
+  </main>
+</Base>
+
+<style>
+  .front-page { padding-top: var(--space-8); }
+  .front-header { padding-bottom: var(--space-8); }
+  .front-index { grid-column: 1 / 4; }
+  .front-index > div { display: flex; flex-wrap: wrap; gap: var(--space-2); margin-top: var(--space-4); }
+  .front-header > div:last-child { grid-column: 4 / 12; }
+  .front-header h1 { max-width: 11ch; }
+  .front-header > div:last-child p { max-width: 65ch; color: var(--ink-muted); margin-top: var(--space-5); }
+  section { padding-top: var(--space-9); }
+  .section-heading { margin-bottom: var(--space-6); }
+  .section-heading p { margin-bottom: var(--space-2); }
+  .context-note, .empty { color: var(--ink-muted); max-width: 68ch; margin-top: var(--space-4); }
+  .source-ledger { list-style: none; padding: 0; margin: 0; border-top: 1px solid var(--border-strong); }
+  .source-ledger li { display: grid; grid-template-columns: 1fr 1fr auto; gap: var(--space-5); padding: var(--space-4) 0; border-bottom: 1px solid var(--border); font-size: 0.82rem; }
+  .source-ledger span, .source-ledger strong { color: var(--ink-muted); font: 600 0.68rem var(--font-mono); }
+  @media (max-width: 800px) { .front-header { display: block; } .front-index { margin-bottom: var(--space-6); } .source-ledger li { grid-template-columns: 1fr; gap: var(--space-1); } }
+</style>

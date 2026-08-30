@@ -1,12 +1,13 @@
 ---
-import { getCollection, render } from "astro:content";
+import { getCollection, render, type CollectionEntry } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import PillarTag from "../../components/PillarTag.astro";
+import TrackTag from "../../components/TrackTag.astro";
 import TimeAgo from "../../components/TimeAgo.astro";
 import { findSource } from "../../lib/sources";
+import { loadCurrentEvents } from "../../lib/events";
 
 export async function getStaticPaths() {
-  const current = await getCollection("events");
+  const current = await loadCurrentEvents();
   const legacy = await getCollection("legacyEvents");
   const currentSlugs = new Set(current.map((event) => event.data.slug));
   return [
@@ -26,7 +27,9 @@ export async function getStaticPaths() {
 const { event, isLegacy } = Astro.props;
 const { Content } = await render(event);
 const source = findSource(event.data.source);
-const displayDate = isLegacy ? event.data.detected_at : event.data.event_date;
+const legacyData = isLegacy ? event.data as CollectionEntry<"legacyEvents">["data"] : null;
+const currentData = isLegacy ? null : event.data as CollectionEntry<"events">["data"];
+const displayDate = legacyData?.detected_at ?? currentData!.event_date;
 ---
 
 <Base title={event.data.title} description={`Tracked change from ${source?.display_name ?? event.data.source}`}>
@@ -34,12 +37,9 @@ const displayDate = isLegacy ? event.data.detected_at : event.data.event_date;
     <header class="event-page-header">
       <div class="event-page-meta">
         {isLegacy ? (
-          <>
-            <span class="legacy-label">Legacy record</span>
-            <PillarTag pillar={event.data.pillar} />
-          </>
+          <span class="legacy-label">Legacy record · {legacyData!.pillar}</span>
         ) : (
-          <span class="current-track">{event.data.primary_track}</span>
+          <span class="current-tracks">{currentData!.tracks.map((track) => <TrackTag track={track} linked />)}</span>
         )}
         <span class="source-name">
           {source?.display_name ?? event.data.source}
@@ -114,8 +114,7 @@ const displayDate = isLegacy ? event.data.detected_at : event.data.event_date;
     word-break: break-all;
   }
   .event-page-url a { color: var(--pillar-ecosystem); }
-  .legacy-label,
-  .current-track {
+  .legacy-label {
     border: 1px solid var(--border-strong);
     border-radius: 999px;
     padding: 0.15rem 0.5rem;
@@ -123,6 +122,7 @@ const displayDate = isLegacy ? event.data.detected_at : event.data.event_date;
     font-family: var(--font-mono);
     font-size: 0.72rem;
   }
+  .current-tracks { display: inline-flex; flex-wrap: wrap; gap: var(--space-2); }
 
   .event-page-body :global(h2) {
     font-size: 1.15rem;

@@ -1,0 +1,90 @@
+---
+import Base from "../../layouts/Base.astro";
+import DevelopmentCard from "../../components/DevelopmentCard.astro";
+import { FRONTS, FRONT_LABELS, TRACKS, TRACK_LABELS, frontForTrack } from "../../lib/taxonomy";
+import { findSource } from "../../lib/sources";
+import { loadCurrentEvents } from "../../lib/events";
+
+const events = (await loadCurrentEvents())
+  .filter((event) => event.data.change_kind === "material")
+  .sort((a, b) => b.data.event_date.getTime() - a.data.event_date.getTime());
+const actors = [...new Set(events.flatMap((event) => event.data.actors))].sort();
+function bodySummary(body: string | undefined) { return body?.match(/## Why it matters\s*\n+([^#]+)/)?.[1].trim().slice(0, 260) ?? ""; }
+---
+
+<Base title="Developments">
+  <main class="container developments-page">
+    <header class="page-header observation-grid">
+      <p class="utility-label">Schema v2 · current only</p>
+      <div><h1>Verified developments</h1><p>Material changes ordered by when the underlying event happened. Filter by the stable taxonomy; every result remains readable without JavaScript.</p></div>
+    </header>
+
+    <form class="filters" aria-label="Filter developments">
+      <label>Track<select name="track"><option value="">All tracks</option>{TRACKS.map((track) => <option value={track}>{TRACK_LABELS[track]}</option>)}</select></label>
+      <label>Front<select name="front"><option value="">All fronts</option>{FRONTS.map((front) => <option value={front}>{FRONT_LABELS[front]}</option>)}</select></label>
+      <label>Actor<select name="actor"><option value="">All actors</option>{actors.map((actor) => <option value={actor}>{actor}</option>)}</select></label>
+      <label>Source tier<select name="tier"><option value="">All tiers</option><option value="primary">Primary</option><option value="measurement">Measurement</option><option value="specialist">Specialist</option><option value="commentary">Commentary</option></select></label>
+      <label>Since<input name="since" type="date" /></label>
+      <button type="button" data-clear>Clear</button>
+    </form>
+    <p class="result-count" aria-live="polite"><strong data-count>{events.length}</strong> current developments</p>
+
+    <section class="development-list">
+      {events.map((event) => (
+        <div class="filter-item" data-tracks={event.data.tracks.join("|")} data-front={frontForTrack(event.data.primary_track)} data-actors={event.data.actors.join("|")} data-tier={event.data.source_tier} data-date={event.data.event_date.toISOString().slice(0, 10)}>
+          <DevelopmentCard slug={event.data.slug} title={event.data.title} source={findSource(event.data.source)?.display_name ?? event.data.source} eventDate={event.data.event_date} tracks={[...event.data.tracks]} tier={event.data.source_tier} confidence={event.data.confidence} summary={bodySummary(event.body)} />
+        </div>
+      ))}
+      {events.length === 0 && <div class="empty"><h2>No current developments yet</h2><p>The first schema-v2 material event will appear here after evidence, analysis, and publish stages complete. <a href="/archive">Historical records remain in Legacy Archive.</a></p></div>}
+    </section>
+  </main>
+</Base>
+
+<script is:inline>
+  const form = document.querySelector(".filters");
+  const items = [...document.querySelectorAll(".filter-item")];
+  const count = document.querySelector("[data-count]");
+  const fields = ["track", "front", "actor", "tier", "since"];
+  form.addEventListener("submit", (event) => event.preventDefault());
+  function apply() {
+    const values = Object.fromEntries(fields.map((name) => [name, form.elements[name].value]));
+    let visible = 0;
+    items.forEach((item) => {
+      const show = (!values.track || item.dataset.tracks.split("|").includes(values.track))
+        && (!values.front || item.dataset.front === values.front)
+        && (!values.actor || item.dataset.actors.split("|").includes(values.actor))
+        && (!values.tier || item.dataset.tier === values.tier)
+        && (!values.since || item.dataset.date >= values.since);
+      item.hidden = !show;
+      if (show) visible += 1;
+    });
+    count.textContent = visible;
+    const params = new URLSearchParams();
+    fields.forEach((name) => values[name] && params.set(name, values[name]));
+    history.replaceState(null, "", `${location.pathname}${params.size ? `?${params}` : ""}`);
+  }
+  const initial = new URLSearchParams(location.search);
+  fields.forEach((name) => { if (initial.has(name)) form.elements[name].value = initial.get(name); });
+  form.addEventListener("change", apply);
+  form.querySelector("[data-clear]").addEventListener("click", () => { form.reset(); apply(); });
+  apply();
+</script>
+
+<style>
+  .developments-page { padding-top: var(--space-8); }
+  .page-header { padding-bottom: var(--space-8); }
+  .page-header > p { grid-column: 1 / 4; }
+  .page-header > div { grid-column: 4 / 12; }
+  .page-header h1 { max-width: 10ch; }
+  .page-header div p { max-width: 64ch; color: var(--ink-muted); margin-top: var(--space-5); }
+  .filters { display: grid; grid-template-columns: repeat(5, 1fr) auto; gap: var(--space-3); padding: var(--space-4); border: 1px solid var(--border-strong); background: var(--bg-elev); }
+  label { display: grid; gap: var(--space-2); color: var(--ink-muted); font: 650 0.62rem var(--font-mono); text-transform: uppercase; }
+  select, input, button { min-width: 0; border: 1px solid var(--border); background: var(--bg); color: var(--ink); padding: 8px; font: 0.72rem var(--font-mono); }
+  button { align-self: end; cursor: pointer; }
+  .result-count { margin: var(--space-4) 0 var(--space-7); color: var(--ink-muted); font: 0.7rem var(--font-mono); }
+  .empty { max-width: 680px; padding: var(--space-7) 0; }
+  .empty h2 { margin-bottom: var(--space-4); }
+  .empty p { color: var(--ink-muted); }
+  @media (max-width: 900px) { .page-header { display: block; } .page-header > p { margin-bottom: var(--space-5); } .filters { grid-template-columns: 1fr 1fr; } }
+  @media (max-width: 520px) { .filters { grid-template-columns: 1fr; } }
+</style>

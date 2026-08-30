@@ -19,7 +19,7 @@ const sorted = sortTrendsByDelta(trends);
       {sorted.map((trend) => {
         const changed = Boolean(trend.previous_status && trend.previous_status !== trend.status);
         return (
-          <tr class:changed>
+          <tr class:list={{ changed }}>
             <th scope="row">
               <span>{trend.title}</span>
               {changed && <small>Changed from {statusLabels[trend.previous_status!]}</small>}

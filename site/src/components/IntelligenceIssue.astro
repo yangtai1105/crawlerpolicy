@@ -1,0 +1,138 @@
+---
+import type { WeeklyIntelligence } from "../lib/intelligence";
+import EvidenceRail from "./EvidenceRail.astro";
+import TrackTag from "./TrackTag.astro";
+import { findSource } from "../lib/sources";
+import { TRACKS, type Track } from "../lib/taxonomy";
+
+interface EventRecord {
+  data: {
+    slug: string;
+    title: string;
+    source: string;
+    event_date: Date;
+  };
+}
+interface Props { issue: WeeklyIntelligence; events: EventRecord[]; }
+const { issue, events } = Astro.props;
+const byId = new Map(events.map((event) => [event.data.slug, event]));
+
+function evidence(ids: string[]) {
+  return ids.flatMap((id) => {
+    const event = byId.get(id);
+    return event ? [{
+      id,
+      date: event.data.event_date.toISOString().slice(0, 10),
+      title: event.data.title,
+      source: findSource(event.data.source)?.display_name ?? event.data.source,
+      url: `/events/${event.data.slug}`,
+    }] : [];
+  });
+}
+function isTrack(value: string): value is Track { return TRACKS.includes(value as Track); }
+---
+
+<article class="issue">
+  <header class="issue-header observation-grid">
+    <div class="issue-index"><p class="utility-label">Completed window</p><p>{issue.window_start}<br />→ {issue.window_end}</p></div>
+    <div class="issue-thesis">
+      <p class="utility-label">Weekly intelligence · {issue.week}</p>
+      <h1>{issue.thesis}</h1>
+      <p>{issue.intelligence_read}</p>
+      <dl>
+        <div><dt>Pipeline</dt><dd>{issue.health_status}</dd></div>
+        <div><dt>Coverage</dt><dd>{issue.coverage.completed}/{issue.coverage.configured}</dd></div>
+        <div><dt>Generated</dt><dd>{new Date(issue.generated_at).toISOString().slice(0, 16).replace("T", " ")} UTC</dd></div>
+      </dl>
+    </div>
+  </header>
+
+  <section>
+    <div class="section-heading"><p class="utility-label">Executive shifts</p><h2>What changed the read</h2></div>
+    {issue.executive_shifts.map((shift) => (
+      <div class="shift">
+        <EvidenceRail thesis={shift.headline} items={evidence(shift.evidence_event_ids)} />
+        <p>{shift.summary}</p>
+      </div>
+    ))}
+    {issue.executive_shifts.length === 0 && <p class="empty">No verified material shift in this completed window.</p>}
+  </section>
+
+  <section>
+    <div class="section-heading"><p class="utility-label">Nine-track ledger</p><h2>Material developments</h2></div>
+    <div class="track-ledger">
+      {issue.material_developments.map((development) => (
+        <article class:list={{ changed: development.material_change }}>
+          {isTrack(development.track) && <TrackTag track={development.track} />}
+          <strong>{development.material_change ? "Material change" : "No verified change"}</strong>
+          <p>{development.summary}</p>
+          {development.event_ids.map((id) => byId.has(id) && <a href={`/events/${id}`}>{byId.get(id)!.data.title} →</a>)}
+        </article>
+      ))}
+    </div>
+  </section>
+
+  {issue.trend_deltas.length > 0 && <section>
+    <div class="section-heading"><p class="utility-label">Compared with prior issue</p><h2>Trend deltas</h2></div>
+    <div class="delta-list">
+      {issue.trend_deltas.map((delta) => (
+        <article>
+          <h3>{delta.trend_key}</h3>
+          <p class="delta-status">{delta.previous_status} → <strong>{delta.current_status}</strong></p>
+          <p>{delta.explanation || delta.reason}</p>
+        </article>
+      ))}
+    </div>
+  </section>}
+
+  <section class="closing-grid">
+    <div>
+      <div class="section-heading"><p class="utility-label">Actors</p><h2>Moves</h2></div>
+      {issue.actor_moves.map((move) => <article class="move"><h3>{move.actor}</h3><p>{move.direction}</p></article>)}
+      {issue.actor_moves.length === 0 && <p class="empty">No actor move met the evidence threshold.</p>}
+    </div>
+    <div>
+      <div class="section-heading"><p class="utility-label">Next evidence</p><h2>Watchlist</h2></div>
+      <ol>{issue.watchlist.map((item) => <li>{item.question}</li>)}</ol>
+    </div>
+  </section>
+</article>
+
+<style>
+  .issue-header { padding: var(--space-8) 0; border-bottom: 1px solid var(--border-strong); }
+  .issue-index { grid-column: 1 / 4; color: var(--ink-muted); font: 0.75rem/1.6 var(--font-mono); }
+  .issue-thesis { grid-column: 4 / 12; }
+  .issue-thesis h1 { max-width: 12ch; margin: var(--space-3) 0 var(--space-5); }
+  .issue-thesis > p { max-width: 66ch; color: var(--ink-muted); }
+  dl { display: flex; flex-wrap: wrap; gap: var(--space-6); margin: var(--space-6) 0 0; }
+  dl div { min-width: 110px; }
+  dt { font: 650 0.62rem var(--font-mono); text-transform: uppercase; color: var(--ink-muted); }
+  dd { margin: var(--space-1) 0 0; font: 650 0.72rem var(--font-mono); }
+  section { padding-top: var(--space-9); }
+  .section-heading { margin-bottom: var(--space-6); }
+  .section-heading p { margin-bottom: var(--space-2); }
+  .shift { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: var(--space-8); padding: var(--space-6) 0; border-top: 1px solid var(--border-strong); }
+  .shift > p { color: var(--ink-muted); font-size: 0.86rem; }
+  .track-ledger { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border-strong); border-left: 1px solid var(--border); }
+  .track-ledger article { min-height: 190px; padding: var(--space-4); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--bg-elev) 65%, transparent); }
+  .track-ledger article.changed { box-shadow: inset 3px 0 var(--protocol-blue); }
+  .track-ledger strong { display: block; margin: var(--space-5) 0 var(--space-2); font-family: var(--font-display); }
+  .track-ledger p { color: var(--ink-muted); font-size: 0.78rem; }
+  .track-ledger a { display: block; margin-top: var(--space-2); font: 650 0.68rem/1.4 var(--font-mono); }
+  .delta-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
+  .delta-list article { padding: var(--space-5); border-top: 3px solid var(--trace-violet); background: var(--bg-elev); }
+  .delta-list p { color: var(--ink-muted); font-size: 0.8rem; }
+  .delta-status { font-family: var(--font-mono); }
+  .closing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); }
+  .move, .closing-grid li { padding: var(--space-4) 0; border-top: 1px solid var(--border); }
+  .move p { color: var(--ink-muted); font-size: 0.82rem; }
+  .closing-grid ol { margin: 0; padding-left: 1.3rem; }
+  .empty { color: var(--ink-muted); }
+  @media (max-width: 800px) {
+    .issue-header, .shift, .closing-grid { display: block; }
+    .issue-index { margin-bottom: var(--space-6); }
+    .shift > p { margin-top: var(--space-5); }
+    .track-ledger, .delta-list { grid-template-columns: 1fr; }
+    .closing-grid > div + div { margin-top: var(--space-8); }
+  }
+</style>

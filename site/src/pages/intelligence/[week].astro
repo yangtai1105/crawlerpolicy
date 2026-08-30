@@ -1,0 +1,16 @@
+---
+import Base from "../../layouts/Base.astro";
+import IntelligenceIssue from "../../components/IntelligenceIssue.astro";
+import { loadIntelligenceArchive } from "../../lib/intelligence";
+import { loadCurrentEvents } from "../../lib/events";
+
+export function getStaticPaths() {
+  return loadIntelligenceArchive().map((issue) => ({ params: { week: issue.week }, props: { issue } }));
+}
+const { issue } = Astro.props;
+const events = await loadCurrentEvents();
+---
+
+<Base title={`${issue.week} Weekly Intelligence`}>
+  <main class="container"><IntelligenceIssue issue={issue} events={events} /></main>
+</Base>

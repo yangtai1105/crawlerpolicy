@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
 import { listWeeks } from "../../lib/critical_reading";
 import { findSource } from "../../lib/sources";
+import { FRONTS, FRONT_LABELS } from "../../lib/taxonomy";
 
 const events = (await getCollection("legacyEvents"))
   .filter((event) => event.data.change_kind === "material")
@@ -19,6 +20,10 @@ const dispatches = listWeeks();
         Schema-v1 events and the former Weekly Dispatch are preserved unchanged. They remain
         useful context, but are excluded from current developments, trends, and intelligence.
       </p>
+      <nav class="current-fronts" aria-label="Current intelligence fronts">
+        <span class="utility-label">Continue with current intelligence</span>
+        {FRONTS.map((front) => <a href={`/fronts/${front}`}>{FRONT_LABELS[front]}</a>)}
+      </nav>
     </header>
 
     <section>
@@ -52,6 +57,9 @@ const dispatches = listWeeks();
   header { max-width: 720px; margin-bottom: var(--space-7); }
   h1 { margin: var(--space-2) 0 var(--space-3); }
   .lede { color: var(--ink-muted); line-height: 1.65; }
+  .current-fronts { display: flex; flex-wrap: wrap; gap: var(--space-3); margin-top: var(--space-5); }
+  .current-fronts span { flex: 0 0 100%; }
+  .current-fronts a { font: 650 0.68rem var(--font-mono); border-bottom: 1px solid var(--border-strong); }
   section { margin-top: var(--space-7); }
   h2 { display: flex; gap: var(--space-3); align-items: baseline; }
   h2 span { color: var(--ink-muted); font: 0.8rem var(--font-mono); }

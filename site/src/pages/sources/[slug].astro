@@ -1,392 +1,68 @@
 ---
-import { getCollection } from "astro:content";
 import Base from "../../layouts/Base.astro";
-import EventCard from "../../components/EventCard.astro";
-import PillarTag from "../../components/PillarTag.astro";
+import TrackTag from "../../components/TrackTag.astro";
+import DevelopmentCard from "../../components/DevelopmentCard.astro";
+import { loadHealth } from "../../lib/health";
 import { loadSources } from "../../lib/sources";
-import { listSnapshots, listTransitions, daysSinceLatest } from "../../lib/snapshots";
-import { findOptOutEntry } from "../../lib/sop";
+import { listSnapshots } from "../../lib/snapshots";
+import { loadCurrentEvents } from "../../lib/events";
 
-export async function getStaticPaths() {
-  const sources = loadSources();
-  return sources.map((s) => ({ params: { slug: s.slug }, props: { source: s } }));
-}
-
+export function getStaticPaths() { return loadSources().map((source) => ({ params: { slug: source.slug }, props: { source } })); }
 const { source } = Astro.props;
-
-const allEvents = (await getCollection("events")).filter(
-  (e) => e.data.source === source.slug,
-);
-allEvents.sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime());
-const materialCount = allEvents.filter((e) => e.data.change_kind === "material").length;
-
+const health = loadHealth();
+const stage = health.per_source[source.slug];
+const events = (await loadCurrentEvents()).filter((event) => event.data.source === source.slug).sort((a, b) => b.data.event_date.getTime() - a.data.event_date.getTime());
 const snapshots = listSnapshots(source.slug);
-const daysSince = daysSinceLatest(source.slug);
-
-// Only crawler pillar gets the diff-over-time viewer — for news sources the
-// diff is either non-existent (RSS items) or noisy (Gemini digest churn).
-const isCrawler = source.pillar === "crawler";
-const transitions = isCrawler ? listTransitions(source.slug) : [];
-const optOutEntry = isCrawler ? findOptOutEntry(source.slug) : undefined;
-const userAgents = optOutEntry?.user_agents ?? [];
-
-// Pair each transition with the event (if any) whose detected_at matches
-// the `next` snapshot date, so readers see the LLM insight next to the diff.
-const eventsByDate = new Map(
-  allEvents.map((e) => [e.data.detected_at.toISOString().slice(0, 10), e]),
-);
-
-const stabilityLabel =
-  daysSince === null
-    ? "no snapshots yet"
-    : daysSince === 0
-      ? "snapshotted today"
-      : `stable for ${daysSince} days`;
+const sourceUrl = source.url ?? (source.repo ? `https://github.com/${source.repo}` : source.draft_name ? `https://datatracker.ietf.org/doc/${source.draft_name}/` : null);
+function bodySummary(body: string | undefined) { return body?.match(/## Why it matters\s*\n+([^#]+)/)?.[1].trim().slice(0, 260) ?? ""; }
 ---
 
 <Base title={source.display_name}>
-  <div class="container source-page">
-    <header class="source-header">
-      <div class="source-meta">
-        <PillarTag pillar={source.pillar} />
-        <span class="source-type">type: {source.type}</span>
-        {source.url && (
-          <a href={source.url} target="_blank" rel="noopener noreferrer" class="source-link">
-            {new URL(source.url).hostname}↗
-          </a>
-        )}
-        {source.repo && (
-          <a href={`https://github.com/${source.repo}`} target="_blank" rel="noopener noreferrer" class="source-link">
-            github.com/{source.repo}↗
-          </a>
-        )}
-        {source.draft_name && <code>{source.draft_name}</code>}
-      </div>
-      <h1>{source.display_name}</h1>
-      <p class="source-stats">
-        <strong>{stabilityLabel}</strong> · {materialCount} material event{materialCount !== 1 ? "s" : ""} tracked ·
-        {snapshots.length} snapshot{snapshots.length !== 1 ? "s" : ""} in history
-      </p>
+  <main class="container source-page">
+    <header class="source-header observation-grid">
+      <div class="source-index"><p class="utility-label">{source.role}</p><p>{source.tier} tier<br />{source.type}</p>{source.required_for_coverage && <strong>Required coverage</strong>}</div>
+      <div><h1>{source.display_name}</h1><div class="tracks">{source.default_tracks.map((track) => <TrackTag track={track} linked />)}</div>{sourceUrl && <a class="official-link" href={sourceUrl}>Open official source ↗</a>}</div>
     </header>
 
-    {isCrawler && userAgents.length > 0 && (
-      <section class="source-section">
-        <div class="label">Documented user-agents ({userAgents.length})</div>
-        <p class="section-lede">
-          Each distinct UA this vendor publishes on its docs page, extracted by Haiku from
-          the latest snapshot. New UAs appearing or scope changes here are the high-signal
-          events to watch.
-        </p>
-        <table class="ua-table">
-          <thead>
-            <tr>
-              <th scope="col">User-agent</th>
-              <th scope="col">Purpose</th>
-              <th scope="col">Scope / when it fires</th>
-              <th scope="col">Opt-out</th>
-            </tr>
-          </thead>
-          <tbody>
-            {userAgents.map((ua) => (
-              <tr>
-                <td><code>{ua.name}</code></td>
-                <td>{ua.purpose}</td>
-                <td>{ua.scope || <span class="dim">—</span>}</td>
-                <td>{ua.opt_out ? <code class="opt-code">{ua.opt_out}</code> : <span class="dim">—</span>}</td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </section>
-    )}
-
-    {isCrawler && transitions.length > 0 && (
-      <section class="source-section">
-        <div class="label">Change timeline — diffs over time with insights</div>
-        <p class="timeline-intro">
-          Each block is a detected change: the new-vs-prior snapshot diff and the
-          LLM-written insight. Newest first.
-        </p>
-        {transitions.map((t) => {
-          const ev = eventsByDate.get(t.next.date);
-          return (
-            <article class="transition">
-              <div class="transition-head">
-                <div class="transition-dates">
-                  <span class="date-old">{t.prev.date}</span>
-                  <span class="arrow">→</span>
-                  <span class="date-new">{t.next.date}</span>
-                  <span class="span-label">
-                    {t.daysSpanned} day{t.daysSpanned !== 1 ? "s" : ""} apart
-                  </span>
-                </div>
-                <div class="transition-counts">
-                  <span class="add">+{t.added}</span>
-                  <span class="rem">−{t.removed}</span>
-                </div>
-              </div>
-              {ev && (
-                <div class="transition-insight">
-                  <a href={`/events/${ev.id}`} class="insight-title">{ev.data.title}</a>
-                  <div class="insight-meta">
-                    <span class={`kind kind-${ev.data.change_kind}`}>{ev.data.change_kind}</span>
-                    <span>importance {ev.data.importance.toFixed(2)}</span>
-                  </div>
-                </div>
-              )}
-              <details class="diff-wrap">
-                <summary>View diff</summary>
-                <pre class="diff-pre">{t.unifiedDiff}</pre>
-              </details>
-            </article>
-          );
-        })}
-      </section>
-    )}
-
-    <section class="source-section">
-      <div class="label">Events</div>
-      {allEvents.length > 0 ? (
-        <div>
-          {allEvents.map((e) => (
-            <EventCard slug={e.id} data={e.data} body={e.body ?? ""} />
-          ))}
-        </div>
-      ) : (
-        <p class="empty">No material changes detected yet.</p>
-      )}
+    <section class="stage-health" aria-label="Source pipeline stages">
+      {(["fetch", "evidence", "analysis", "publish"] as const).map((name) => <div><span class="utility-label">{name}</span><strong>{stage?.[name] ?? "pending"}</strong></div>)}
+      <p>{stage?.error ?? "No schema-v2 stage result is available for this source yet."}</p>
     </section>
 
-    {!isCrawler && snapshots.length > 0 && (
-      <section class="source-section">
-        <div class="label">Snapshot history</div>
-        <ul class="snapshot-list">
-          {snapshots.map((s) => (
-            <li>
-              <code>{s.filename}</code>
-              <span class="muted">{s.date}</span>
-            </li>
-          ))}
-        </ul>
-      </section>
-    )}
-  </div>
+    <section>
+      <div class="section-heading"><p class="utility-label">Current material record</p><h2>Developments</h2></div>
+      {events.length ? events.map((event) => <DevelopmentCard slug={event.data.slug} title={event.data.title} source={source.display_name} eventDate={event.data.event_date} tracks={[...event.data.tracks]} tier={event.data.source_tier} confidence={event.data.confidence} summary={bodySummary(event.body)} />) : <p class="empty">No post-refactor material development has been published from this source.</p>}
+    </section>
+
+    <section>
+      <div class="section-heading"><p class="utility-label">Collected artifacts</p><h2>Snapshot ledger</h2></div>
+      <p class="ledger-copy">{snapshots.length} stored snapshot{snapshots.length === 1 ? "" : "s"}. Snapshots support evidence creation but do not become current intelligence by themselves.</p>
+      {snapshots.length > 0 && <ul class="snapshot-list">{snapshots.slice(0, 24).map((snapshot) => <li><code>{snapshot.filename}</code><time>{snapshot.date}</time></li>)}</ul>}
+      <a class="archive-link" href="/archive">Legacy events from this source remain in the historical archive →</a>
+    </section>
+  </main>
 </Base>
 
 <style>
-  .source-page {
-    max-width: 960px;
-    padding: var(--space-6) var(--space-5);
-  }
-  .source-header {
-    padding-bottom: var(--space-5);
-    border-bottom: 1px solid var(--border);
-    margin-bottom: var(--space-6);
-  }
-  .source-meta {
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: var(--space-3);
-    font-size: 0.82rem;
-    color: var(--ink-muted);
-    margin-bottom: var(--space-3);
-  }
-  .source-type { font-family: var(--font-mono); font-size: 0.75rem; }
-  .source-link { color: var(--pillar-ecosystem); font-size: 0.8rem; }
-  .source-meta code {
-    background: var(--bg-elev);
-    padding: 2px 6px;
-    border-radius: 3px;
-    color: var(--ink);
-    font-size: 0.78rem;
-  }
-  .source-header h1 {
-    font-size: 2rem;
-    margin-bottom: var(--space-3);
-  }
-  .source-stats {
-    font-size: 0.9rem;
-    color: var(--ink-muted);
-    margin: 0;
-  }
-  .source-stats strong { color: var(--ink); font-weight: 600; }
-
-  .source-section { margin-bottom: var(--space-7); }
-  .source-section .label { margin-bottom: var(--space-3); }
-
-  .timeline-intro {
-    color: var(--ink-muted);
-    font-size: 0.88rem;
-    margin: 0 0 var(--space-5);
-    max-width: 620px;
-  }
-
-  .transition {
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    background: var(--bg-elev);
-    padding: var(--space-4);
-    margin-bottom: var(--space-4);
-  }
-  .transition-head {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: var(--space-4);
-    padding-bottom: var(--space-3);
-    border-bottom: 1px solid var(--border);
-    margin-bottom: var(--space-3);
-  }
-  .transition-dates {
-    display: flex;
-    align-items: baseline;
-    gap: var(--space-2);
-    font-family: var(--font-mono);
-    font-size: 0.88rem;
-  }
-  .date-old { color: var(--ink-muted); }
-  .date-new { color: var(--ink); font-weight: 600; }
-  .arrow { color: var(--ink-dim); }
-  .span-label {
-    font-family: var(--font-body);
-    font-size: 0.78rem;
-    color: var(--ink-muted);
-    margin-left: var(--space-3);
-  }
-  .transition-counts {
-    display: flex;
-    gap: var(--space-3);
-    font-family: var(--font-mono);
-    font-size: 0.85rem;
-  }
-  .add { color: var(--pillar-agent); }
-  .rem { color: var(--signal-hot); }
-
-  .transition-insight {
-    margin-bottom: var(--space-3);
-  }
-  .insight-title {
-    display: block;
-    font-family: var(--font-display);
-    font-size: 1.05rem;
-    font-weight: 500;
-    line-height: 1.3;
-    color: var(--ink);
-    margin-bottom: var(--space-2);
-  }
-  .insight-title:hover { color: var(--pillar-ecosystem); }
-  .insight-meta {
-    display: flex;
-    gap: var(--space-3);
-    font-size: 0.78rem;
-    color: var(--ink-muted);
-  }
-  .kind {
-    padding: 1px 8px;
-    border-radius: 3px;
-    font-weight: 600;
-    text-transform: uppercase;
-    font-size: 0.68rem;
-    letter-spacing: 0.06em;
-  }
-  .kind-material {
-    background: color-mix(in oklch, var(--pillar-crawler) 18%, transparent);
-    color: var(--pillar-crawler);
-  }
-  .kind-cosmetic { background: var(--bg); color: var(--ink-muted); border: 1px solid var(--border); }
-  .kind-noise { background: var(--bg); color: var(--ink-dim); border: 1px solid var(--border); }
-
-  .diff-wrap {
-    border-top: 1px dashed var(--border);
-    padding-top: var(--space-3);
-  }
-  .diff-wrap summary {
-    cursor: pointer;
-    font-size: 0.82rem;
-    color: var(--ink-muted);
-  }
-  .diff-pre {
-    background: var(--bg);
-    border: 1px solid var(--border);
-    border-radius: 3px;
-    padding: var(--space-3);
-    margin-top: var(--space-3);
-    font-size: 0.75rem;
-    line-height: 1.5;
-    max-height: 480px;
-    overflow: auto;
-    white-space: pre;
-    font-family: var(--font-mono);
-  }
-
-  .empty { color: var(--ink-muted); font-size: 0.88rem; }
-  .muted { color: var(--ink-muted); }
-
-  .snapshot-list {
-    list-style: none;
-    margin: 0 0 var(--space-4);
-    padding: 0;
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    background: var(--bg-elev);
-  }
-  .snapshot-list li {
-    display: flex;
-    justify-content: space-between;
-    padding: var(--space-2) var(--space-4);
-    border-bottom: 1px solid var(--border);
-    font-size: 0.85rem;
-  }
-  .snapshot-list li:last-child { border-bottom: 0; }
-  .snapshot-list code { color: var(--ink); }
-
-  .section-lede {
-    color: var(--ink-muted);
-    font-size: 0.88rem;
-    margin: 0 0 var(--space-4);
-    max-width: 620px;
-  }
-
-  .ua-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: var(--bg-elev);
-    border: 1px solid var(--border);
-    border-radius: 4px;
-    overflow: hidden;
-    font-size: 0.88rem;
-  }
-  .ua-table thead {
-    background: var(--bg);
-  }
-  .ua-table th {
-    text-align: left;
-    padding: var(--space-3) var(--space-4);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: var(--ink-muted);
-    font-weight: 600;
-    border-bottom: 1px solid var(--border);
-  }
-  .ua-table td {
-    padding: var(--space-3) var(--space-4);
-    border-bottom: 1px solid var(--border);
-    vertical-align: top;
-  }
-  .ua-table tbody tr:last-child td { border-bottom: 0; }
-  .ua-table td code {
-    font-size: 0.82rem;
-    background: var(--bg);
-    padding: 2px 6px;
-    border-radius: 3px;
-    color: var(--ink);
-  }
-  .ua-table code.opt-code {
-    display: inline-block;
-    max-width: 100%;
-    word-break: break-word;
-  }
-  .ua-table .dim { color: var(--ink-dim); }
+  .source-page { padding-top: var(--space-8); }
+  .source-header { padding-bottom: var(--space-8); }
+  .source-index { grid-column: 1 / 4; color: var(--ink-muted); font: 0.72rem/1.6 var(--font-mono); }
+  .source-index strong { display: inline-block; margin-top: var(--space-3); padding: 3px 6px; border: 1px solid var(--alert-red); color: var(--alert-red); font-size: 0.62rem; text-transform: uppercase; }
+  .source-header > div:last-child { grid-column: 4 / 12; }
+  .source-header h1 { max-width: 13ch; }
+  .tracks { display: flex; flex-wrap: wrap; gap: var(--space-2); margin: var(--space-5) 0; }
+  .official-link { font: 650 0.72rem var(--font-mono); border-bottom: 1px solid var(--border-strong); padding-bottom: 3px; }
+  .stage-health { display: grid; grid-template-columns: repeat(4, 1fr) 2fr; gap: var(--space-4); padding: var(--space-5); border: 1px solid var(--border-strong); background: var(--bg-elev); }
+  .stage-health div { display: grid; gap: var(--space-2); }
+  .stage-health div strong { font: 650 0.72rem var(--font-mono); text-transform: uppercase; }
+  .stage-health p { margin: 0; color: var(--ink-muted); font-size: 0.75rem; overflow-wrap: anywhere; }
+  section { padding-top: var(--space-9); }
+  .section-heading { margin-bottom: var(--space-5); }
+  .section-heading p { margin-bottom: var(--space-2); }
+  .empty, .ledger-copy { color: var(--ink-muted); max-width: 68ch; }
+  .snapshot-list { list-style: none; margin: var(--space-5) 0; padding: 0; border-top: 1px solid var(--border); }
+  .snapshot-list li { display: flex; justify-content: space-between; gap: var(--space-4); padding: var(--space-2) 0; border-bottom: 1px solid var(--border); }
+  .snapshot-list code, .snapshot-list time { font: 0.68rem var(--font-mono); color: var(--ink-muted); }
+  .archive-link { font: 650 0.7rem var(--font-mono); }
+  @media (max-width: 800px) { .source-header { display: block; } .source-index { margin-bottom: var(--space-5); } .stage-health { grid-template-columns: 1fr 1fr; } .stage-health p { grid-column: 1 / -1; } }
 </style>

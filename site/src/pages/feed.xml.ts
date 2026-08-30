@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
-import { getCollection } from "astro:content";
 import { findSource } from "../lib/sources";
+import { loadCurrentEvents } from "../lib/events";
 
 function esc(s: string): string {
   return s
@@ -13,7 +13,7 @@ function esc(s: string): string {
 
 export const GET: APIRoute = async ({ site }) => {
   const siteUrl = site?.toString().replace(/\/$/, "") ?? "https://tracker.example.com";
-  const events = (await getCollection("events"))
+  const events = (await loadCurrentEvents())
     .filter((e) => e.data.change_kind === "material")
     .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime())
     .slice(0, 100);
@@ -39,10 +39,10 @@ export const GET: APIRoute = async ({ site }) => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>AI Content Ecosystem Insights</title>
+    <title>Crawler Policy Developments</title>
     <link>${siteUrl}</link>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Automated tracker for AI crawler documentation, content ecosystem, and agent infrastructure.</description>
+    <description>Evidence-backed developments in machine access, content rights, agent identity, and web economics.</description>
     <language>en-US</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>${items}
   </channel>

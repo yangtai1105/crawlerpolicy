@@ -60,11 +60,3 @@ export function frontForTrack(track: Track): Front {
   if (!front) throw new Error(`No front configured for track: ${track}`);
   return front;
 }
-
-export type LegacyPillar = "crawler" | "ecosystem" | "agent";
-
-export function legacyPillarForTracks(tracks: readonly Track[]): LegacyPillar {
-  if (tracks.includes("crawler-controls")) return "crawler";
-  if (tracks.includes("agentic-web") || tracks.includes("standards-protocols")) return "agent";
-  return "ecosystem";
-}
