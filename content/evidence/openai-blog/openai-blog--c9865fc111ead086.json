@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--c9865fc111ead086",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/introducing-the-openai-economic-research-exchange",
+  "published_at": "2026-06-08T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--c9865fc111ead086.json",
+  "content_hash": "sha256:c4874855a864d1bfc2b5ea52536f3de4134984cfa10118098893ba51fd38dcd8",
+  "external_id": "https://openai.com/index/introducing-the-openai-economic-research-exchange",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing the OpenAI Economic Research Exchange",
+  "content": "OpenAI launches the Economic Research Exchange to study AI’s impact on jobs, productivity, and the economy. Applications are now open for selected research projects.",
+  "previous_content": "",
+  "unified_diff": ""
+}

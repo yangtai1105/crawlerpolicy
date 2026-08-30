@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--346cc8059ba2242e",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+  "published_at": "2026-07-09T10:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--346cc8059ba2242e.json",
+  "content_hash": "sha256:536566f836a08707b56ed865d217b93706c151229ae4c0a202fb8d34c1398fa3",
+  "external_id": "https://openai.com/index/chatgpt-for-your-most-ambitious-work",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrXHUAu7MWeat61nbN'}",
+  "title": "ChatGPT is now a partner for your most ambitious work",
+  "content": "ChatGPT Work is an agent that can take action across your apps and files, stay with a project for hours if needed, and turn a goal into finished work.",
+  "previous_content": "",
+  "unified_diff": ""
+}

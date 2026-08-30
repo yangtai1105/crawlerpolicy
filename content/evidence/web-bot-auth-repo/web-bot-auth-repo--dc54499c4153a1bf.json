@@ -1,0 +1,17 @@
+{
+  "evidence_id": "web-bot-auth-repo--dc54499c4153a1bf",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/130",
+  "published_at": "2026-08-26T08:08:12Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--dc54499c4153a1bf.json",
+  "content_hash": "sha256:48c8df9a62888d296e1656fb0785ea1c3e4a701f59d26a57df266bfff8d1beb2",
+  "external_id": "pr:130",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQr2W6bAkyM9ZhhrMVg'}",
+  "title": "PR #130: test: add signed directory response vector",
+  "content": "Reproduces the test vector generation that is proposed in https://github.com/thibmeu/http-message-signatures-directory/pull/121/, and cross validate them\r\n\r\nTLDR: it works",
+  "previous_content": "",
+  "unified_diff": ""
+}

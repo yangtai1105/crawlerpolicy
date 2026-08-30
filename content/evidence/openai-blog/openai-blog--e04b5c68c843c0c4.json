@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--e04b5c68c843c0c4",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/endava-frontiers",
+  "published_at": "2026-06-04T12:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--e04b5c68c843c0c4.json",
+  "content_hash": "sha256:d1fffbf7be8fa308764f980d53a446f89414640641a25f4e86a2adb764a8c811",
+  "external_id": "https://openai.com/index/endava-frontiers",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrZzSU6uS1VBMhS4hh'}",
+  "title": "How Endava is redesigning software delivery around AI agents",
+  "content": "Learn how Endava is using AI agents, ChatGPT Enterprise, and Codex to accelerate software delivery, automate workflows, and build an AI-native culture across the enterprise.",
+  "previous_content": "",
+  "unified_diff": ""
+}

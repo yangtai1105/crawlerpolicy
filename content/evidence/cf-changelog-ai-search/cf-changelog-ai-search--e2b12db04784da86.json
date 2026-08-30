@@ -1,0 +1,17 @@
+{
+  "evidence_id": "cf-changelog-ai-search--e2b12db04784da86",
+  "source": "cf-changelog-ai-search",
+  "source_url": "https://developers.cloudflare.com/changelog/post/2026-08-25-larger-custom-metadata-values/",
+  "published_at": "2026-08-25T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/cf-changelog-ai-search/cf-changelog-ai-search--e2b12db04784da86.json",
+  "content_hash": "sha256:2a73d00ff3d5cd8f7fbb8121ff546dfcd6a043695553bde14f9aea894d40fd64",
+  "external_id": "https://developers.cloudflare.com/changelog/post/2026-08-25-larger-custom-metadata-values/",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrhh3AoCr2wBN4ApDz'}",
+  "title": "AI Search - Store larger custom metadata values in AI Search",
+  "content": "<p>AI Search supports larger custom metadata values within a shared 10 KiB metadata envelope for each vector. The envelope includes AI Search system metadata and JSON overhead, so it is not a per-field limit. The first 64 UTF-8 bytes of each indexed string remain filterable.</p>\n<p>For details, refer to <a href=\"https://developers.cloudflare.com/ai-search/configuration/indexing/metadata/\">Metadata attributes</a>.</p>",
+  "previous_content": "",
+  "unified_diff": ""
+}

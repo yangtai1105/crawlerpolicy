@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--f95be38afd7e67d6",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/codex-collaborator-creative-team",
+  "published_at": "2026-07-16T07:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--f95be38afd7e67d6.json",
+  "content_hash": "sha256:02e34836c9aeb0672e3123922158f4d85d573518486be6c80690558d93974a15",
+  "external_id": "https://openai.com/index/codex-collaborator-creative-team",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How Codex became a collaborator for OpenAI’s creative team",
+  "content": "How OpenAI’s creative team uses Codex to build custom creative tools, accelerate ideation, and prototype faster with context-aware AI.",
+  "previous_content": "",
+  "unified_diff": ""
+}

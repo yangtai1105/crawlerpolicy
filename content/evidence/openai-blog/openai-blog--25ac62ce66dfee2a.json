@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--25ac62ce66dfee2a",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/wasmer",
+  "published_at": "2026-06-03T12:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--25ac62ce66dfee2a.json",
+  "content_hash": "sha256:dfa8c37a29b9b0ae7b987f99dd9e3ec72a5704b42643404df2263e823a78a8b7",
+  "external_id": "https://openai.com/index/wasmer",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How Wasmer used Codex to build a Node.js runtime for the edge",
+  "content": "See how Wasmer used Codex with GPT-5.5 to build a Node.js runtime for the edge, accelerating development 10x to 20x and shipping in weeks instead of months.",
+  "previous_content": "",
+  "unified_diff": ""
+}

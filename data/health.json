@@ -1,39 +1,514 @@
 {
-  "last_run_at": "2026-08-29T13:38:37.684111+00:00",
-  "per_source_status": {
-    "gptbot": "ok",
-    "claudebot": "ok",
-    "google-extended": "ok",
-    "perplexitybot": "ok",
-    "applebot-extended": "ok",
-    "meta-externalagent": "error: CLOUDFLARE_EMAIL and CLOUDFLARE_CRAWLER_API_KEY must be set to use cf_browser_run sources",
-    "microsoft-bot-docs": "ok",
-    "amazonbot": "ok",
-    "ccbot": "ok",
-    "cf-changelog-ai-crawl-control": "ok",
-    "cf-changelog-radar": "ok",
-    "gemini-crawler-insights": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
-    "cloudflare-blog": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8cqvdQX29tRfHgt6zv'}",
-    "datadome-blog": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8csTuVrt5nDHbfD4ju'}",
-    "uk-cma": "ok",
-    "uk-cma-google-search-case": "ok",
-    "uk-gov-agentic-ai": "ok",
-    "eu-commission-digital": "ok",
-    "us-ftc": "ok",
-    "news-media-alliance": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dBgXRxUR92GARF2hS'}",
-    "reddit-corporate": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dCoVW6ZwikdiH2xdX'}",
-    "web-bot-auth-repo": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dJVYoX2tNVP1b1WJw'}",
-    "mcp-spec": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dRRWt3SJBQoM31Tqo'}",
-    "cloudflare-research": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dStKqa7PLA16ft4TK'}",
-    "openai-blog": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dUst5R2if7FMwHTPK'}",
-    "cf-changelog-ai-gateway": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dVzMVdf7Y7kVua62p'}",
-    "cf-changelog-ai-search": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dXHjsYxqiE9g7RNjX'}",
-    "gemini-ai-licensing-deals": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
-    "gemini-content-blocking": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
-    "gemini-regulator-ai-content": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
-    "gemini-agent-standards": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
-    "gemini-agent-infra": "error: GEMINI_API_KEY not set; cannot run gemini_search source",
-    "_sop": "error: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeX8dXpV4XsVbAe1aWXPF'}"
+  "status": "critical",
+  "last_attempted_at": "2026-08-30T05:51:00.726967Z",
+  "last_fully_successful_at": null,
+  "coverage": {
+    "configured": 40,
+    "completed": 23,
+    "fetched": 40,
+    "analyzed": 23,
+    "published": 23,
+    "failed": 17,
+    "required_failed": 2
   },
-  "events_written": []
+  "stages": {
+    "fetch": {
+      "ok": 40,
+      "failed": 0,
+      "pending": 0
+    },
+    "evidence": {
+      "ok": 40,
+      "failed": 0,
+      "pending": 0
+    },
+    "analysis": {
+      "ok": 23,
+      "failed": 17,
+      "pending": 0
+    },
+    "publish": {
+      "ok": 23,
+      "failed": 17,
+      "pending": 0
+    }
+  },
+  "per_source": {
+    "gptbot": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "claudebot": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "google-extended": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "perplexitybot": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "applebot-extended": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "meta-externalagent": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQnvT8kJxpETPbFboBx'}",
+      "evidence_ids": [
+        "meta-externalagent--362f1270a4f29e97"
+      ],
+      "events_written": []
+    },
+    "microsoft-bot-docs": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "amazonbot": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "ccbot": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "cf-changelog-ai-crawl-control": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "cf-changelog-radar": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "gemini-crawler-insights": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQqSVTmHMSns9uzcFYM'}",
+      "evidence_ids": [
+        "gemini-crawler-insights--8e6f542d69407db8"
+      ],
+      "events_written": []
+    },
+    "cloudflare-blog": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQqUS3DY3DHeKkn3ujo'}",
+      "evidence_ids": [
+        "cloudflare-blog--f60ce8b1568d3253",
+        "cloudflare-blog--cd3d6d166caebcad"
+      ],
+      "events_written": []
+    },
+    "datadome-blog": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQqZtCxSpdcszSj3Aa7'}",
+      "evidence_ids": [
+        "datadome-blog--c3c7ab9d7e041aee",
+        "datadome-blog--755c63a34d1a876b",
+        "datadome-blog--2888ac0be415e3f9",
+        "datadome-blog--a8fff30eb5ae03a5",
+        "datadome-blog--64ba625bb94dac22",
+        "datadome-blog--a1d9e27a13a81a8c",
+        "datadome-blog--1099b754313ba148",
+        "datadome-blog--7165f7135311b83d",
+        "datadome-blog--c7820e3cf039276f"
+      ],
+      "events_written": []
+    },
+    "uk-cma": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "uk-cma-google-search-case": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "uk-gov-agentic-ai": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "eu-commission-digital": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "us-ftc": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "news-media-alliance": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQqspiCTSQdmj7wS3WD'}",
+      "evidence_ids": [
+        "news-media-alliance--73e71d06a6c0bfb3"
+      ],
+      "events_written": []
+    },
+    "reddit-corporate": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQquC4WEvVex6LDqbhk'}",
+      "evidence_ids": [
+        "reddit-corporate--c27e8d09cd7c676a"
+      ],
+      "events_written": []
+    },
+    "web-bot-auth-repo": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrF9N4iZ38xpaUfsjY'}",
+      "evidence_ids": [
+        "web-bot-auth-repo--dc54499c4153a1bf",
+        "web-bot-auth-repo--9e1fc744e65dd8c5",
+        "web-bot-auth-repo--c36a4f45582793db",
+        "web-bot-auth-repo--8ef2e2da2c049220",
+        "web-bot-auth-repo--1fa8d57cb4122f97",
+        "web-bot-auth-repo--aa18efd7c08ab295",
+        "web-bot-auth-repo--00e99ad983f4c922",
+        "web-bot-auth-repo--2725d674e678ab27",
+        "web-bot-auth-repo--e4a2896c558393fc",
+        "web-bot-auth-repo--3b0de7ba4d3633a7",
+        "web-bot-auth-repo--46fc250d51a5ff52",
+        "web-bot-auth-repo--2a38e760292cbde1",
+        "web-bot-auth-repo--1b77cd2d0104888d",
+        "web-bot-auth-repo--02f881034ab676ef",
+        "web-bot-auth-repo--5aefe19448b89b8f",
+        "web-bot-auth-repo--2e464f48615e12b1",
+        "web-bot-auth-repo--6e15a6645777c72e",
+        "web-bot-auth-repo--fcc9a13deed4c166",
+        "web-bot-auth-repo--087780ba5d46b288",
+        "web-bot-auth-repo--62163f22ffa3e882",
+        "web-bot-auth-repo--d06db3319ff9cf1e",
+        "web-bot-auth-repo--98578b723b4c28db",
+        "web-bot-auth-repo--52616651e6183b17"
+      ],
+      "events_written": []
+    },
+    "mcp-spec": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrMmUVEB74ba9iVQVN'}",
+      "evidence_ids": [
+        "mcp-spec--98e8b4f866834ac4",
+        "mcp-spec--affffb5addc9efc4"
+      ],
+      "events_written": []
+    },
+    "cloudflare-research": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrQzhNcRrGz35NVjNY'}",
+      "evidence_ids": [
+        "cloudflare-research--a6ea15206ae8897a"
+      ],
+      "events_written": []
+    },
+    "openai-blog": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrbcfbLbN5bFcZLz5a'}",
+      "evidence_ids": [
+        "openai-blog--af5b983acf27c9d4",
+        "openai-blog--76352d73c6486f40",
+        "openai-blog--542478186fb5bdaa",
+        "openai-blog--408b69f0c321236b",
+        "openai-blog--c4c3e76d96dede81",
+        "openai-blog--edcc031cad3d2c5d",
+        "openai-blog--b1363cc540120d6b",
+        "openai-blog--242ce53ef31d4fe2",
+        "openai-blog--596effd090726f8b",
+        "openai-blog--d16d9ce752cee8f8",
+        "openai-blog--f95be38afd7e67d6",
+        "openai-blog--484685011b63bf20",
+        "openai-blog--f0ec778079870455",
+        "openai-blog--6368e2a31a3ca88c",
+        "openai-blog--2dd9113012914e65",
+        "openai-blog--346cc8059ba2242e",
+        "openai-blog--c3a64a983b03d35d",
+        "openai-blog--2a2936604646235b",
+        "openai-blog--f45d90d91f144c18",
+        "openai-blog--f4313ed0c57d3c82",
+        "openai-blog--02578b0bca888ffd",
+        "openai-blog--e2ffdb5e41493b3d",
+        "openai-blog--c9865fc111ead086",
+        "openai-blog--e04b5c68c843c0c4",
+        "openai-blog--9dd1e57c10a6d9c4",
+        "openai-blog--51fb0a25aaa1a02a",
+        "openai-blog--e0725e136719a74a",
+        "openai-blog--25ac62ce66dfee2a",
+        "openai-blog--fce84d5540e40f06",
+        "openai-blog--62e1144f198c00c4",
+        "openai-blog--269b76803ec53061",
+        "openai-blog--46ffad518648735e",
+        "openai-blog--d045e1d290423d2d",
+        "openai-blog--8f986bf28e0fce54",
+        "openai-blog--61c4fc4bda46a4b5",
+        "openai-blog--fc09d249ac037164",
+        "openai-blog--9a153b8855a3627e",
+        "openai-blog--6bf0486cce41afda"
+      ],
+      "events_written": []
+    },
+    "cf-changelog-ai-gateway": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrfRs1xP5LT2VJJ8J1'}",
+      "evidence_ids": [
+        "cf-changelog-ai-gateway--eee8c4decd518a01",
+        "cf-changelog-ai-gateway--cb99566ef4716236",
+        "cf-changelog-ai-gateway--281cd8a5076c71c9",
+        "cf-changelog-ai-gateway--4c0b7107dec9e987",
+        "cf-changelog-ai-gateway--5122ae7cb6371559",
+        "cf-changelog-ai-gateway--3ba35636f28b3262"
+      ],
+      "events_written": []
+    },
+    "cf-changelog-ai-search": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrirVNXwNwqpLSfqnf'}",
+      "evidence_ids": [
+        "cf-changelog-ai-search--b89bf4222811eeaf",
+        "cf-changelog-ai-search--7917e84f8e9813f8",
+        "cf-changelog-ai-search--e2b12db04784da86",
+        "cf-changelog-ai-search--d0c79db373ba0a55",
+        "cf-changelog-ai-search--baac17b3a7ddd9de"
+      ],
+      "events_written": []
+    },
+    "google-search-central-blog": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "ietf-webbotauth-wg": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "c2pa-specifications": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "w3c-tdmrep": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "rsl-standard": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "iab-comp": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "us-copyright-office-ai": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "cloudflare-radar-ai-insights": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": []
+    },
+    "gemini-ai-licensing-deals": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYR1vVyGEBxedAhXdLx2'}",
+      "evidence_ids": [
+        "gemini-ai-licensing-deals--7594d67fac756304"
+      ],
+      "events_written": []
+    },
+    "gemini-content-blocking": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYR3mM7NTkgANADnJhoN'}",
+      "evidence_ids": [
+        "gemini-content-blocking--b0ebac99f2f5a179"
+      ],
+      "events_written": []
+    },
+    "gemini-regulator-ai-content": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYR5VjKGKoLfMz9R11tT'}",
+      "evidence_ids": [
+        "gemini-regulator-ai-content--d5a0956096b0cfef"
+      ],
+      "events_written": []
+    },
+    "gemini-agent-standards": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYR8W3Vxj1KLsSmcEgpE'}",
+      "evidence_ids": [
+        "gemini-agent-standards--7667bce506bc8002"
+      ],
+      "events_written": []
+    },
+    "gemini-agent-infra": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYRAxjfa3E6LqbM4j3iV'}",
+      "evidence_ids": [
+        "gemini-agent-infra--ce4ce213a68c587f"
+      ],
+      "events_written": []
+    }
+  },
+  "events_written": [],
+  "derived_errors": [
+    "state_of_play: Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYRAySL9ntLYc4Cm8N28'}"
+  ]
 }

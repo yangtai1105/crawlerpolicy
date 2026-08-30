@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--76352d73c6486f40",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/previewing-ultrafast",
+  "published_at": "2026-08-13T10:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--76352d73c6486f40.json",
+  "content_hash": "sha256:6ab3262733fba3c4c1f4a4038623e72805d883f31784cc1ade285c1a3d3be4ae",
+  "external_id": "https://openai.com/index/previewing-ultrafast",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Previewing Ultrafast mode: GPT-5.6 Sol at up to 14X the speed",
+  "content": "Preview Ultrafast, a new OpenAI API service tier that runs GPT-5.6 Sol up to 14× faster. Powered by Cerebras, it delivers up to 750 output tokens per second.",
+  "previous_content": "",
+  "unified_diff": ""
+}

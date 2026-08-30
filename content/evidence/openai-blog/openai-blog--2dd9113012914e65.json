@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--2dd9113012914e65",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex",
+  "published_at": "2026-07-14T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--2dd9113012914e65.json",
+  "content_hash": "sha256:22f48a42fc495dc0f6bb2fa0460b5a534d25ed858a9e2e6e19e466ef2e3e1dda",
+  "external_id": "https://openai.com/academy/chatgpt-work/how-sales-teams-use-codex",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Sales workflows with ChatGPT Work",
+  "content": "Learn practical ChatGPT Work workflows for pipeline briefs, meeting prep, account plans, forecast reviews, and deal diagnosis.",
+  "previous_content": "",
+  "unified_diff": ""
+}

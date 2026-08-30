@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--269b76803ec53061",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/academy/chatgpt-sites",
+  "published_at": "2026-06-02T10:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--269b76803ec53061.json",
+  "content_hash": "sha256:5302cec7d7546f19e75ef486bc5d6455aef87654ff8f73cba0683dda8c3125b4",
+  "external_id": "https://openai.com/academy/chatgpt-sites",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "ChatGPT Sites",
+  "content": "Create that kind of lightweight website or app with Codex.",
+  "previous_content": "",
+  "unified_diff": ""
+}

@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--46ffad518648735e",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/disrupting-malicious-uses-of-ai-tech-and-tariffs",
+  "published_at": "2026-06-01T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--46ffad518648735e.json",
+  "content_hash": "sha256:730bcc7ceee962f9d2cff96c564c0dd446fe5df82ad902f36274269a59beaaee",
+  "external_id": "https://openai.com/index/disrupting-malicious-uses-of-ai-tech-and-tariffs",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "“Tech and Tariffs” Campaign: Influence activity targeting US tech policy",
+  "content": "OpenAI banned likely PRC-origin accounts using AI to create comments and cartoons about US tech policy, tariffs, and trade restrictions.",
+  "previous_content": "",
+  "unified_diff": ""
+}

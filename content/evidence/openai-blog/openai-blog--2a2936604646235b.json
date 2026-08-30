@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--2a2936604646235b",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/how-agents-are-transforming-work",
+  "published_at": "2026-06-25T02:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--2a2936604646235b.json",
+  "content_hash": "sha256:e94b7ed8a958748b07d5edf8255b2b9e5d15b3a4113074f068122c26d97ae0a8",
+  "external_id": "https://openai.com/index/how-agents-are-transforming-work",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrYMDPmLY14AuMCyzk'}",
+  "title": "How agents are transforming work",
+  "content": "A new OpenAI research paper shows how AI agents are transforming work, enabling longer, more complex tasks and expanding productivity across roles.",
+  "previous_content": "",
+  "unified_diff": ""
+}

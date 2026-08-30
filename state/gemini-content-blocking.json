@@ -1,7 +1,9 @@
 {
-  "last_checked_at": "2026-04-19T22:16:04.328018+00:00",
-  "last_hash": "1487bb7a0892d2086459902bf13d78298020d7b09d0895b73e94feb67b1b0a1c",
+  "last_checked_at": "2026-08-30T05:51:00.726967+00:00",
+  "last_fetch_succeeded_at": "2026-08-30T05:51:00.726967+00:00",
+  "last_evidence_at": "2026-08-30T05:51:00.726967+00:00",
+  "last_hash": "e739aaed9664ad51703f99174d11422a802fca9034b0371eab6d8d0ab76aa58a",
   "last_seen_guids": [],
-  "consecutive_failures": 131,
+  "consecutive_failures": 0,
   "first_seen": true
 }

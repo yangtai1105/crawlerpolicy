@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--596effd090726f8b",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/introducing-openai-presence",
+  "published_at": "2026-07-22T05:30:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--596effd090726f8b.json",
+  "content_hash": "sha256:a882fc39774d2ad79190999146a86d841726afc118c595499656418d56cd7f08",
+  "external_id": "https://openai.com/index/introducing-openai-presence",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrVgUUyrvRXwSXSRC7'}",
+  "title": "Introducing OpenAI Presence",
+  "content": "Introducing OpenAI Presence, a proven enterprise AI agent platform that helps organizations deploy trusted voice and chat agents for customer and internal workflows.",
+  "previous_content": "",
+  "unified_diff": ""
+}

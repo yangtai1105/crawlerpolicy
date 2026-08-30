@@ -1,0 +1,17 @@
+{
+  "evidence_id": "reddit-corporate--c27e8d09cd7c676a",
+  "source": "reddit-corporate",
+  "source_url": "https://redditinc.com/news/how-were-keeping-reddit-real-and-safe-in-the-ai-era",
+  "published_at": "2026-07-06T11:44:59Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/reddit-corporate/reddit-corporate--c27e8d09cd7c676a.json",
+  "content_hash": "sha256:f35eb6500cea4ea5444843dbda2b085873c2fa6ab50397ea16a5cec738ac6f79",
+  "external_id": "https://redditinc.com/news/how-were-keeping-reddit-real-and-safe-in-the-ai-era",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQquC4WEvVex6LDqbhk'}",
+  "title": "How We’re Keeping Reddit Real and Safe in the AI Era",
+  "content": "<div class=\"hs-featured-image-wrapper\"> \n <a class=\"hs-featured-image-link\" href=\"https://redditinc.com/news/how-were-keeping-reddit-real-and-safe-in-the-ai-era?hsLang=en\" title=\"\"> <img alt=\"How We’re Keeping Reddit Real and Safe in the AI Era\" class=\"hs-featured-image\" src=\"https://redditinc.com/hubfs/BlogHeader_Snoo_Blue_001@2x.jpg\" style=\"width: auto !important; float: left; margin: 0 15px 15px 0;\" /> </a> \n</div> \n<p><em><span>TLDR: We’ve upgraded our automated defenses to catch violating behavior before our communities ever see it. By deploying advanced AI tools, we’ve reduced user exposure to spam by 20%, revoked nearly 2M fake votes daily, and slashed our enforcement time on hateful or violent content from hours to under five seconds.</span></em></p>  \n<img alt=\"\" height=\"1\" src=\"https://track.hubspot.com/__ptq.gif?a=40687240&amp;k=14&amp;r=https%3A%2F%2Fredditinc.com%2Fnews%2Fhow-were-keeping-reddit-real-and-safe-in-the-ai-era&amp;bu=https%253A%252F%252Fredditinc.com%252Fnews&amp;bvt=rss\" style=\"width: 1px!important;\" width=\"1\" />",
+  "previous_content": "",
+  "unified_diff": ""
+}

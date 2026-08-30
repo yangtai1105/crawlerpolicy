@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--51fb0a25aaa1a02a",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/biodefense-in-the-intelligence-age",
+  "published_at": "2026-06-04T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--51fb0a25aaa1a02a.json",
+  "content_hash": "sha256:b27e963061128f9228545d096a93a94125dbbd4ba1d22aa88d2acfb574776a71",
+  "external_id": "https://openai.com/index/biodefense-in-the-intelligence-age",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Biodefense in the Intelligence Age",
+  "content": "An action plan for AI-powered biological resilience",
+  "previous_content": "",
+  "unified_diff": ""
+}

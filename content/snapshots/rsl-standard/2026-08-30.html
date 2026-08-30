@@ -1,0 +1,4111 @@
+Really Simple Licensing (RSL) 1.0 Specification
+​
+Abstract
+​
+This document defines the
+Really Simple Licensing (RSL) 1.0
+protocol, a standardized XML vocabulary and associated discovery and authorization mechanisms for expressing
+machine-readable usage, licensing, payment, and legal terms
+that govern how digital assets may be accessed or licensed by AI systems and automated agents. RSL provides an open, interoperable mechanism for license discovery, automated authorization and acquisition, rights verification, and auditable proof of permission across publishers, platforms, and automated clients.
+Status of This Document
+​
+This document was published by the
+RSL Technical Steering Committee (TSC)
+as a
+Recommendation
+. A Recommendation is considered stable, has received broad review, and is suitable for implementation and deployment. Future revisions may supersede or update this specification. Errata and change history are maintained at:
+https://rslstandard.org/rsl/errata
+.
+All interested parties are invited to provide implementation and bug reports and other comments through the TSC
+Issue tracker
+. These will be discussed by the RSL TSC and considered in any future versions of this specification.
+1. Introduction
+​
+Really Simple Licensing (RSL) is an open, XML-based standard that enables publishers and platforms to define machine-readable usage, licensing, and legal terms of service for digital assets on the web. RSL builds on the ideas of the
+RSS
+syndication format and the Robots Exclusion Protocol [
+RFC 9309
+] to provide an interoperable way for websites, creators, crawlers, and agents to declare how their content MUST be accessed, processed, or compensated.
+RSL defines:
+A core XML vocabulary for describing usage, licensing, and legal terms of service (
+rsl
+namespace).
+Integrations with existing discovery mechanisms such as
+robots.txt
+, HTTP headers, RSS feeds, and HTML
+<link>
+and
+<script>
+elements.
+Standard network protocols for license acquisition and enforcement, including:
+Open License Protocol (OLP)
+: an OAuth 2.0 extension for acquiring and validating RSL licenses.
+Crawler Authorization Protocol (CAP)
+: an HTTP authorization scheme for licensed crawlers.
+Encrypted Media Standard (EMS)
+: a format for securely encrypting and licensing digital assets.
+RSL enables content owners, platforms, crawlers, and agents to:
+Define machine-readable usage, licensing, compensation, and legal rules governing how digital assets may be accessed or processed by AI systems and automated agents.
+Automate license discovery, authorization, acquisition, and proof-of-permission, enabling lawful AI content use at Internet scale.
+Verify rights, maintain audit trails, and provide transparent evidence of authorization to support contractual and regulatory compliance.
+Protect proprietary or paywalled content through secure encryption.
+Demonstrate scalable compliance across millions of sources through a consistent, interoperable licensing and authorization framework.
+1.1 Examples
+​
+This section provides non-normative examples illustrating how RSL expresses common licensing scenarios for digital publishers.
+Example: Prohibit AI Use and Search Summaries
+The publisher allows access to its site for indexing and linking in search results, but prohibits any use by AI systems, including model training or reuse of the content in grounding, retrieval, or generative search summaries.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+prohibits
+type
+=
+"usage"
+>ai-all</
+prohibits
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+Example: AI Use Requires a Custom License
+The publisher allows access to its site for indexing and linking in search results, but requires obtaining a royalty license through the publisher’s licensing endpoint for any use by AI systems, including model training or reuse of the content in grounding, retrieval, or generative search summaries.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>ai-all</
+permits
+>
+<
+payment
+>
+<
+custom
+>https://example.com/ai-license-request</
+custom
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+Example: Pay-Per-Crawl License
+The publisher requires payment through a third-party platform (
+example.com
+) each time an automated agent wants to crawl content on its site.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+server
+=
+"https://api.example.com"
+>
+<
+license
+>
+<
+payment
+type
+=
+"crawl"
+>
+<
+standard
+>https://example.com/pay-per-crawl</
+standard
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+Example: Attribution-Only License
+The publisher permits free reuse of the content on its site, provided that visible credit and a functional link to the original source are included.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+payment
+type
+=
+"attribution"
+>
+<
+standard
+>https://creativecommons.org/licenses/by/4.0/</
+standard
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+1.2 Scope and Extensibility
+​
+The core RSL specification defines a declarative, machine-readable format for terms of service and a set of standard discovery mechanisms for associating those licenses with digital assets on the web. These capabilities, the RSL XML vocabulary, and the discovery methods described in
+Section 4
+, are the required foundation of any conformant RSL implementation.
+The accompanying Open License Protocol, Crawler Authorization Protocol, and Encrypted Media Standard protocols are OPTIONAL extensions that provide additional content rights enforcement, authorization, or encryption functions. Implementers MAY adopt RSL as a licensing and discovery framework without implementing any of these network protocols.
+For example, a publishing or hosting platform that already operates its own licensing server can expose RSL licenses to ensure its terms are discoverable and machine-readable while continuing to use its existing authorization or payment infrastructure.
+This layered approach ensures that RSL remains interoperable, incremental, and compatible with both open-web and proprietary licensing ecosystems.
+RSL documents MAY include elements, attributes, and tokens from XML namespaces other than the RSL namespace. Such constructs are considered
+extensions
+. RSL processors MUST ignore any extensions they do not recognize, including their contents, for RSL Core conformance and evaluation. Extensions MUST NOT change the meaning of elements defined in this specification. An extension profile MAY impose additional conformance requirements on RSL elements used within its extension elements.
+1.3 Versioning and Namespace Policy
+​
+This specification defines version 1.0 of the Really Simple Licensing (RSL) standard and establishes the permanent namespace
+https://rslstandard.org/rsl
+.
+Future revisions of RSL MAY be published under incremented namespace URIs (for example,
+/1.1/
+,
+/2.0/
+) to maintain backward compatibility. Each versioned namespace is stable and immutable once published. Implementations referencing this namespace can rely on its definitions and semantics remaining unchanged over time.
+2. Terminology and Conventions
+​
+The keywords MUST, MUST NOT, REQUIRED, SHOULD, MAY, and OPTIONAL follow [
+RFC 2119
+] and [
+RFC 8174
+].
+2.1 Core Terms
+​
+Term
+Definition
+RSL License
+An XML document conforming to this specification that defines rights and payment terms for one or more digital assets.
+License Server
+A web service, acting as an OAuth Authorization Server that implements the RSL Open License Protocol (OLP) for issuing, validating, and managing licenses.
+Resource Server
+Hosts the licensed digital asset and enforces access control or payment requirements based on License Tokens.
+License Token
+An OAuth access token with
+token_type
+set to
+"License"
+, used over HTTP with the
+License
+authentication scheme.
+Client
+A web crawler, agent, or application that retrieves, parses, or processes digital content subject to RSL licenses.
+Publisher
+The owner or controller of digital assets who defines their RSL licensing terms.
+Asset
+Any digital work, including web pages, images, videos, datasets, and software code, that is identified by a URL and covered by an RSL license.
+The XML namespace name for this specification is:
+https://rslstandard.org/rsl
+All RSL documents MUST declare this namespace as the default namespace on the root
+<rsl>
+element and SHOULD NOT use a prefix.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+...
+</
+rsl
+>
+The media type associated with RSL documents is:
+RSL documents MUST be served with this media type when transmitted over HTTP or other Internet protocols.
+3. RSL Documents
+​
+An RSL document, also called a
+license
+, defines machine-readable licensing terms for one or more digital assets, extension declarations defined by profiles or modules that build on RSL, or both. Each RSL document MUST conform to the
+XML 1.0
+specification and declare the RSL namespace, as described in
+Section 2.2
+.
+All RSL implementations MUST recognize the RSL namespace URI as the authoritative identifier for the standard. Only elements and attributes defined in this namespace participate in RSL license evaluation; outside an extension that the processor does not recognize, any unknown element or attribute in the RSL namespace MUST render the document non-conformant, and elements from other namespaces MUST be ignored for RSL Core evaluation.
+Example
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+prohibits
+type
+=
+"usage"
+>ai-train ai-input</
+prohibits
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+3.1 Overview and Structure
+​
+An RSL document consists of a
+<rsl>
+root element containing one or more
+<content>
+elements, one or more extension elements from non-RSL namespaces, or both. Each
+<content>
+element identifies a digital asset or group of assets and defines one or more
+<license>
+elements describing the permitted uses, restrictions, payment terms, and reporting requirements for those assets.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+>
+<
+license
+>
+<
+permits
+/>
+<
+prohibits
+/>
+<
+payment
+>
+<
+standard
+/>
+<
+custom
+/>
+<
+amount
+/>
+<
+accepts
+/>
+</
+payment
+>
+<
+reporting
+/>
+<
+legal
+/>
+</
+license
+>
+<
+schema
+/>
+<
+alternate
+/>
+<
+copyright
+/>
+<
+terms
+/>
+</
+content
+>
+</
+rsl
+>
+3.1.1 License Evaluation and Conflict Resolution
+​
+An RSL document MAY contain multiple
+<content>
+and
+<license>
+elements, as well as multiple licensing terms, that apply to the same asset or request. The order in which these elements or terms appear in the document MUST NOT affect their interpretation.
+An RSL processor MUST evaluate all applicable licensing terms together to determine the effective license.
+When multiple declarations apply to the same scope, more specific declarations, such as those with narrower asset scope or more constrained usage or user classes, MUST take precedence over less specific declarations.
+If a licensing term both permits and prohibits the same usage, user class, or capability within the effective scope, the prohibition MUST take precedence and the usage MUST be treated as not licensed.
+In all cases, RSL licenses MUST be interpreted conservatively to avoid the unintended expansion of rights. Only licensing terms defined in the RSL namespace are considered when determining the effective RSL license.
+3.1.2 Non-Normative Example
+​
+The following example illustrates how overlapping declarations are evaluated.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>all</
+permits
+>
+</
+license
+>
+</
+content
+>
+<
+content
+url
+=
+"/articles/"
+>
+<
+license
+>
+<
+prohibits
+type
+=
+"usage"
+>ai-train</
+prohibits
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+In this example, all automated uses are generally permitted across the site. However, for assets under
+/articles/
+, AI training is prohibited. Because the second
+<content>
+element has a more specific scope, its restriction takes precedence for those assets.
+Similarly, if a license contained both:
+xml
+<
+permits
+type
+=
+"usage"
+>ai-train</
+permits
+>
+<
+prohibits
+type
+=
+"usage"
+>ai-train</
+prohibits
+>
+the prohibition would take precedence, and AI training would be treated as not licensed.
+3.2
+<rsl>
+: Root Element
+​
+The
+<rsl>
+element is the top-level container for all RSL documents. It defines the namespace and encloses one or more
+<content>
+elements to declare the document as an RSL license and establish scope for all contained licensing information.
+Attribute
+Description
+xmlns
+Required
+. Must be set to
+https://rslstandard.org/rsl
+.
+max-age
+Optional.
+Number of days defining the maximum period during which a Client MAY treat this RSL document and its license association as authoritative without confirming that either has changed.
+Example
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+...
+</
+rsl
+>
+3.2.1 Revalidation of RSL Documents and License Associations
+​
+RSL documents are not permanent grants, and their licensing terms or governing associations may change over time. Clients MUST ensure that the RSL document and license association they rely on are revalidated in accordance with the
+max-age
+attribute, which defines how long a Client MAY treat the RSL document and the license association mechanism used to discover it as authoritative.
+max-age
+MUST be a positive integer number of days.
+If
+max-age
+is not present, Clients MUST apply a default value of 30 days.
+A Client MAY confirm that the RSL document has not changed by retrieving it or by using authoritative modification signals that indicate whether it has been updated, including:
+HTTP response metadata such as
+Last-Modified
+or
+ETag
+the Sitemaps Protocol
+<lastmod>
+value for the RSL document URL
+equivalent mechanisms that provide authoritative modification signals
+A Client MUST apply the same revalidation requirement to the discovery mechanism that established the binding between the asset and the RSL document, including:
+robots.txt
+License:
+directives
+HTTP
+Link
+headers with
+rel="license"
+HTML license associations established using
+<link>
+or
+<script>
+elements
+RSS
+<rsl:content>
+associations
+If a Client determines that the discovery mechanism now references a different RSL document, it MUST retrieve and re-evaluate the newly referenced document before relying on its licensing terms.
+3.3
+<content>
+: Digital Asset Definition
+​
+The
+<content>
+element identifies a specific digital asset (or a collection of assets) subject to licensing terms. Each
+<content>
+element MUST include a
+url
+attribute and at least one
+<license>
+child element. This element defines the scope of a licensable work (web page, image, dataset, etc.) and connects it to its governing license and metadata.
+Attribute
+Description
+url
+Required
+. Identifies the canonical path or URL of the asset governed by this license. This value also serves as the canonical identifier for the license, except where an association mechanism permits
+url=""
+as described in
+Section 3.3.1
+. Unless the license is associated with HTML content as described in
+Section 4.6
+, associated through an RSS feed as described in
+Section 4.7
+, or embedded within a media or data file as described in
+Section 4.8
+, this value MUST be a path conforming to the rules defined in [
+RFC 9309
+], including the use of wildcards (
+*
+,
+$
+).
+server
+Optional
+. URL of an RSL License Server that manages this asset and implements the
+Open License Protocol (OLP)
+. If this attribute is present, the
+url
+attribute MUST be non-empty, and clients MUST obtain a license from this server for the specified asset before access, even if the license type is
+free
+.
+encrypted
+Optional
+. Boolean (
+true
+/
+false
+, default
+false
+). If
+true
+, the file is encrypted, and the
+server
+MUST support the
+Encrypted Media Standard
+. Boolean value MUST be lowercase.
+lastmod
+Optional
+. [
+RFC 3339
+] timestamp indicating the date and time the asset was last modified.
+Example
+xml
+<
+content
+url
+=
+"/"
+server
+=
+"https://api.example.com"
+>
+<
+license
+>...</
+license
+>
+</
+content
+>
+3.3.1 Canonical License Identifiers
+​
+The
+url
+attribute identifies the asset or asset scope governed by the associated
+<license>
+terms, except where an association mechanism defines the licensed scope independently of the
+url
+value.
+When
+url
+contains a non-empty value, Clients and servers MUST treat that value as an opaque, stable identifier for license evaluation, license acquisition, caching, and provenance. When a
+<content>
+element includes a
+server
+attribute, the combination of that License Server and the non-empty
+url
+value defines a single authoritative license entry.
+When
+url=""
+is permitted by an association mechanism, the empty value identifies the scope established by that association mechanism rather than a separately identified asset URL. Such association-defined scopes MUST be interpreted only as provided by the applicable association mechanism.
+3.3.2 Custom Licensing Servers
+​
+Publishing or licensing platforms MAY support RSL licenses without implementing OLP by omitting the
+server
+attribute and using the
+<standard>
+element to reference the platform’s proprietary licensing framework. This allows hosting providers, CDNs, or pay-per-crawl services to keep their existing registration, payment, and enforcement flows while remaining interoperable with RSL.
+As defined in
+Section 3.8
+, the value of
+<standard>
+is a stable, issuer-controlled URL that acts as a canonical identifier for the license framework. Clients MUST treat this URL as an opaque identifier for matching and policy decisions. For this application, the URL SHOULD dereference to human-readable instructions (e.g., registration/payment).
+Typical deployment
+Define a platform license
+: The platform publishes a static RSL document describing the policy it applies to hosted sites. The document includes a
+<standard>
+URL that identifies the shared license framework and SHOULD host registration/payment instructions. The URL SHOULD be stable over time to preserve identifier semantics.
+Adopt via discovery
+: Each hosted site references the platform license via
+robots.txt
+(
+License:
+), HTTP
+Link
+headers, or HTML
+<link>
+so clients can discover and apply the policy.
+Example Step 1: Define platform RSL license
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>ai-train</
+permits
+>
+<
+payment
+type
+=
+"crawl"
+>
+<
+standard
+>https://example.com/pay-per-crawl-license</
+standard
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+Example Step 2: Associate the platform license with hosts
+Robots.txt File
+User-agent: *
+License: https://example.com/rsl-license.xml
+HTTP Response Header
+http
+HTTP
+/
+1.1
+402
+Payment Required
+Content-Type
+:
+application/json
+Link
+:
+<https://example.com/rsl-license.xml>; rel="license"; type="application/rsl+xml"
+3.4
+<license>
+: Rights and Terms Container
+​
+The
+<license>
+element defines the
+rights, costs, restrictions, and reporting requirements
+associated with a digital asset. It MAY contain
+<permits>
+,
+<prohibits>
+,
+<payment>
+,
+<reporting>
+, and
+<legal>
+child elements. Multiple
+<license>
+elements MAY appear within the same
+<content>
+to express distinct term sets. This element establishes the legal framework for the use of the digital asset by defining the scope of a licensable work (web page, image, dataset, etc.) and connecting it to its governing license and metadata.
+3.4.1 Licensing Vocabularies
+​
+RSL defines standard vocabularies for expressing categories of restrictions and permissions that govern how automated processing systems may access or use digital assets, including categories of use and the classes of users or operators under which such use is authorized or restricted.
+The vocabularies defined in this section are normative and are used by the
+<permits>
+and
+<prohibits>
+elements to express authorization, restriction, and scope. Tokens from extension namespaces MAY appear but MUST NOT be interpreted unless explicitly recognized and supported by the processor.
+3.4.1.1 Usage Vocabulary
+​
+The
+usage
+vocabulary defines constraints on the categories of automated processing that MAY or MUST NOT be performed on a digital asset. This category includes the Cloudflare
+Content Signals
+vocabulary and MAY include terms from additional standardized vocabularies as they become available (e.g.,
+IETF AI Preferences
+).
+This vocabulary is used with
+<permits type="usage">
+and
+<prohibits type="usage">
+.
+Token
+Definition
+all
+Any automated processing, including AI training and search.
+ai-all
+Any use by AI systems, including training, inference, indexing, retrieval, generation, grounding, or model evaluation. This term explicitly includes the
+ai-train
+,
+ai-input
+, and
+ai-index
+usage types defined below, as well as other AI-related uses not yet enumerated.
+ai-train
+Training or fine-tuning AI models.
+ai-input
+Input into AI models, including retrieval-augmented generation, grounding, or other use of the content to produce generative AI responses or search summaries.
+ai-index
+Inclusion in an AI system’s internal index or retrieval database.
+search
+Building a search index and providing search results (e.g., returning hyperlinks and short excerpts from your website's contents). Search does not include providing AI-generated search summaries.
+3.4.1.2 User Vocabulary
+​
+The
+user
+vocabulary defines constraints on the categories of users or operators under which automated use of a digital asset is permitted or prohibited. User classification applies to the entity or operational context responsible for the automated use, not the ultimate audience or beneficiary of any output derived from the asset.
+This vocabulary is used with
+<permits type="user">
+and
+<prohibits type="user">
+.
+Token
+Definition
+commercial
+General commercial use.
+non-commercial
+Non-commercial purposes.
+education
+Educational use in schools or universities.
+government
+Government or public sector purposes.
+personal
+Individual or personal use only.
+3.5
+<permits>
+: Allowed Uses
+​
+The
+<permits>
+element specifies which activities, users, or jurisdictions are explicitly allowed under this license. A
+<license>
+element MAY contain at most one
+<permits>
+element for each distinct value of the
+type
+attribute. If a
+<permits>
+element exists for a given
+type
+, only the listed values, separated by one or more spaces, are allowed. This element positively enumerates what a Client MAY do with the content, overriding implicit restrictions.
+Attribute
+Description
+type="usage"
+Optional
+. Defines categories of automated use for the digital asset that are explicitly permitted. The allowed values and their normative definitions are specified in
+Section 3.4.1.1 (Usage Vocabulary)
+.
+type="user"
+Optional
+. Restricts license to certain classes of end users. The allowed values and their normative definitions are specified in
+Section 3.4.1.2 (User Classification Vocabulary)
+.
+type="geo"
+Optional
+. Restricts usage to within specified
+ISO 3166-1 alpha-2
+country or region codes (e.g.,
+US
+,
+EU
+).
+Example
+The following example illustrates how multiple
+<permits>
+elements define the allowed activities, user classes, and geographic scope for a license.
+xml
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>ai-input</
+permits
+>
+<
+permits
+type
+=
+"user"
+>non-commercial education</
+permits
+>
+<
+permits
+type
+=
+"geo"
+>US EU</
+permits
+>
+</
+license
+>
+The first
+<permits>
+element authorizes AI input uses (e.g., retrieval-augmented generation or grounding) and prohibits all other uses. The second limits access to non-commercial and educational users. The third restricts the license to U.S. and E.U. jurisdictions, using ISO 3166-1 alpha-2 country codes.
+3.6
+<prohibits>
+: Disallowed Uses
+​
+The
+<prohibits>
+element lists activities that are explicitly forbidden, even if they would otherwise be permitted. A
+<license>
+element MAY contain at most one
+<prohibits>
+element for each distinct value of the
+type
+attribute. This element negatively enumerates what a Client MUST NOT do with the content. If both
+<permits>
+and
+<prohibits>
+appear for the same
+type
+, prohibitions take precedence.
+Attribute
+Description
+type="usage"
+Optional
+. Defines categories of automated use for the digital asset that are explicitly prohibited. The allowed values and their normative definitions are specified in
+Section 3.4.1.1 (Usage Vocabulary)
+.
+type="user"
+Optional
+. Restricts license to exclude certain classes of end users. The allowed values and their normative definitions are specified in
+Section 3.4.1.2 (User Classification Vocabulary)
+.
+type="geo"
+Optional
+. Restricts usage by excluding specified
+ISO 3166-1 alpha-2
+country or region codes (e.g.,
+US
+,
+EU
+).
+Example
+The following example illustrates how the
+<prohibits>
+element explicitly forbids certain uses, user types, and geographic regions—even when other activities are permitted under the license. The first
+<prohibits>
+forbids any AI model training, grounding, or generation using the content. The second excludes commercial users, limiting access to non-commercial or educational contexts. The third restricts access within the European Union (EU) region (which might be covered by a different license), following ISO 3166-1 alpha-2 codes.
+xml
+<
+license
+>
+<
+prohibits
+type
+=
+"usage"
+>ai-train ai-input</
+prohibits
+>
+<
+prohibits
+type
+=
+"user"
+>commercial</
+prohibits
+>
+<
+prohibits
+type
+=
+"geo"
+>EU</
+prohibits
+>
+</
+license
+>
+3.7
+<payment>
+: Compensation Terms
+​
+The
+<payment>
+element defines how a licensee MUST compensate the licensor for permitted uses of the enclosing license. If omitted, the license is assumed to be
+free
+. If the parent
+<content>
+element defines a
+server
+attribute, clients MUST obtain a license from the License Server,
+regardless of the payment
+type
+, including when
+type="free"
+or
+type="attribution"
+. This requirement allows the License Server to maintain a consistent registry of licensees and usage events for all licensed content.
+Attribute
+Description
+type
+Optional
+. MUST be one of the following values:
+•
+purchase
+: One-time payment.
+•
+subscription
+: Recurring payment for access.
+•
+training
+: Payment every time the content is used for AI training.
+•
+crawl
+: Payment every time the content is crawled.
+•
+use
+: Payment each time the content contributes to an AI-generated output, including use in inference, grounding, or generation processes.
+•
+contribution
+: A good faith monetary or in-kind contribution that supports the development or maintenance of the assets, or the broader content ecosystem.
+•
+attribution
+: Licensees MUST provide visible credit and a functional link to the original source.
+•
+free
+: No payment or attribution required.
+Child Elements
+​
+The
+<payment>
+element MAY include zero or one of each of the following child elements, in any combination or order.
+Child
+Purpose
+<standard>
+Points to a public or collective license (e.g.,
+Creative Commons
+).
+<custom>
+Points to a publisher-specific licensing page (e.g., contact form).
+<amount>
+Specifies explicit cost and currency.
+<accepts>
+Specifies supported payment methods.
+Example
+This example defines a pay-per-crawl license that charges AI crawlers or automated agents $0.015 per crawl when accessing any page on the site. The
+<amount>
+defines the fee, and the
+<standard>
+points to a stable URL describing the publisher’s crawl-payment policy.
+xml
+<
+license
+>
+<
+payment
+type
+=
+"crawl"
+>
+<
+amount
+currency
+=
+"USD"
+>0.015</
+amount
+>
+<
+standard
+>https://example.com/licenses/pay-per-crawl</
+standard
+>
+</
+payment
+>
+</
+license
+>
+3.8
+<standard>
+: Shared Licensing Frameworks
+​
+The
+<standard>
+element enables multiple publishers or content owners to reference a shared set of licensing terms by URL. This mechanism allows different websites and digital asset owners to declare that their content is governed by the same standard license agreement, such as a Creative Commons, open source, or commercial licensing framework.
+The value of the
+<standard>
+element MUST be a URL that serves as a unique identifier for a shared license framework. While the URL MAY dereference to a human-readable document, this is
+not required
+for conformance. The URL itself functions as a persistent, canonical identifier for the license, similar to the use of namespace URIs in XML or RDF, and must comply with the following rules:
+The URL referenced by
+<standard>
+represents the license; it is not required to resolve to textual content.
+License consumers MUST treat the URL string as an opaque identifier when comparing or matching licenses.
+Publishers SHOULD ensure that the URL is stable, globally unique, and controlled by the license issuer.
+License servers or repositories MAY provide human- or machine-readable content at the referenced URL to improve discoverability and validation, but this is OPTIONAL.
+This element provides a means for grouping or federating content under a common rights framework, enabling scalable, interoperable licensing relationships between publishers, publishing platforms, licensing organizations, and clients. When a client application (for example, an AI crawler or agent) accepts the terms of a
+standard
+license, it gains access to all content covered by RSL licenses that reference the same standard license URL through their
+<standard>
+element.
+Example
+This example license allows anyone to reuse the content under the Creative Commons Attribution 4.0 terms. By referencing the public CC BY 4.0 URL, the publisher signals that the content covered by this license can be freely shared and adapted with attribution.
+xml
+<
+license
+>
+<
+payment
+type
+=
+"attribution"
+>
+<
+standard
+>https://creativecommons.org/licenses/by/4.0/</
+standard
+>
+</
+payment
+>
+</
+license
+>
+3.9
+<custom>
+: Publisher-Defined Licensing Process
+​
+The
+<custom>
+element allows a publisher or content owner to define the URL of a custom licensing process for a specific digital asset or group of assets. Unlike
+<standard>
+, which points to a shared or collective framework,
+<custom>
+identifies the location or path of a publisher-specific license endpoint (e.g., a contact form or license agreement page). The value of
+<custom>
+MUST be a valid URL or path identifying the publisher’s licensing endpoint.
+The
+<custom>
+element enables publishers to maintain direct control over licensing terms while preserving compatibility with RSL’s machine-readable format. This element is typically used when licensing terms:
+Are specific to a single organization or asset type.
+Require custom registration, payment, or negotiation processes.
+Cannot be expressed through standardized or collective licenses.
+Example
+This example license defines a custom licensing endpoint that directs licensees to the publisher’s own subscription or contact page.
+xml
+<
+license
+>
+<
+payment
+type
+=
+"subscription"
+>
+<
+custom
+>https://publisher.example.com/licensing/subscribe.html</
+custom
+>
+</
+payment
+>
+</
+license
+>
+3.10
+<amount>
+: License Cost
+​
+The
+<amount>
+element specifies an explicit monetary cost for the permitted use or term, enabling automated billing or reporting.
+Attribute
+Description
+currency
+Required
+.
+ISO 4217
+currency code (e.g.,
+USD
+,
+EUR
+).
+Example
+This example license specifies that the report can be purchased outright for €49. The
+<amount>
+element states the price in euros, allowing automated systems to recognize and process a one-time purchase fee.
+xml
+<
+license
+>
+<
+payment
+type
+=
+"purchase"
+>
+<
+amount
+currency
+=
+"EUR"
+>49.00</
+amount
+>
+</
+payment
+>
+</
+license
+>
+3.11
+<accepts>
+: Payment Methods
+​
+The
+<accepts>
+element advertises one or more payment methods and capabilities, such as the
+x402
+payments protocol, that Clients MUST use to satisfy the enclosing
+<payment>
+term set.
+The element MAY contain protocol-specific metadata in the body, and authoritative pricing and settlement instructions MAY be provided dynamically by the payment protocol at runtime. Publishers SHOULD wrap inline text in
+<![CDATA[ ... ]]>
+to avoid XML escaping issues.
+Attribute
+Description
+type
+Required.
+Media type identifying the payment protocol and payload format. For the x402 protocol, this MUST be
+application/x402+json
+. Other payment systems MAY define and register their own media types.
+Example
+This example license specifies that the publisher requires payments via the x402 protocol for any automated crawling of site content, subject to the referenced
+<standard>
+license conditions. Authoritative pricing, payment commitment, and settlement instructions are negotiated dynamically through the
+HTTP 402 Payment Required
+protocol exchange when the client accesses any digital content covered by the license.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+payment
+type
+=
+"crawl"
+>
+<
+standard
+>https://example.com/licenses/pay-per-crawl</
+standard
+>
+<
+accepts
+type
+=
+"application/x402+json"
+>
+{
+"scheme": "deferred",
+"network": "example-network-provider",
+"resource": "https://example.com/",
+"...": "...",
+"extras": {
+"id": "abc123"
+}
+}
+</
+accepts
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+3.12
+<reporting>
+: Reporting Requirements
+​
+The
+<reporting>
+element defines machine-readable reporting requirements that a Client MUST satisfy when performing activity authorized by the enclosing license, independent of any payment terms.
+A
+<license>
+element MAY contain one or more
+<reporting>
+elements, each identifying a reporting category, reporting profile, and, when specified, an endpoint for submitting reports. A
+<reporting>
+element MAY also include a JSON object in its body for profile-specific configuration, and publishers SHOULD wrap inline JSON in
+<![CDATA[ ... ]]>
+when needed to avoid XML escaping issues.
+Attribute
+Description
+type
+Required.
+Reporting category. MUST be one of the following values:
+•
+telemetry
+: Event-level reporting about access, grounding, citation, or similar use of licensed content.
+•
+provenance
+: Reporting content-origin or provenance information.
+•
+audit
+: Periodic or aggregate compliance reporting.
+profile
+Required.
+Absolute URI identifying the reporting profile.
+endpoint
+Optional.
+HTTPS URL designated by the publisher or licensing authority to receive reports.
+The
+profile
+value is a stable, issuer-controlled URI that identifies the reporting profile, which defines the reporting protocol, report format, required fields, and any profile-specific configuration. Clients MUST treat the
+profile
+URI as an opaque identifier when determining whether they recognize and support it. The URI is not required to resolve to textual content, although profile issuers MAY provide human- or machine-readable documentation at that location.
+When a
+<license>
+element includes
+<reporting>
+, the Client MUST submit reports for activity authorized by the license in accordance with the identified profile. A Client that does not recognize or cannot comply with the profile MUST treat that activity as not licensed under the enclosing license.
+When multiple
+<reporting>
+elements apply to the same asset or activity, the Client MUST satisfy each applicable reporting requirement.
+Example: Telemetry Reporting
+This example requires telemetry reporting for licensed AI input uses. The reporting profile defines the telemetry protocol and the meaning of the JSON configuration.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>ai-input</
+permits
+>
+<
+reporting
+type
+=
+"telemetry"
+profile
+=
+"https://contenttelemetry.org/profiles/spur"
+endpoint
+=
+"https://reports.example.com/telemetry"
+>
+{
+"conformance_level": "grounding",
+"privacy_level": "minimal"
+}
+</
+reporting
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+3.13
+<legal>
+: Legal Statements
+​
+The
+<legal>
+element defines legal representations about the license. It provides legally binding metadata specifying the authority, guarantees, and disclaimers of the license. Each
+type
+of legal representation (e.g.,
+warranty
+) MAY appear no more than once within a given
+<license>
+element.
+Attribute
+Description
+type="warranty"
+Optional
+. Declares warranties made by the licensor about the asset. Entities must be one or more of the following values, separated by one or more spaces:
+•
+ownership
+: Licensor owns/controls copyright or exclusive licensing rights.
+•
+authority
+: Licensor is authorized to grant the rights described.
+•
+no-infringement
+: To licensor’s knowledge, the asset does not infringe third-party IP.
+•
+privacy-consent
+: Required consents for personal data in this asset have been obtained.
+•
+no-malware
+: Asset is free from malicious code and does not intentionally impair systems.
+type="disclaimer"
+Optional
+. Declares disclaimers that qualify or negate warranties or liability. Entities must be one or more of the following values, separated by one or more spaces:
+•
+as-is
+: Asset provided "as is".
+•
+no-warranty
+: No express or implied warranties.
+•
+no-liability
+: Licensor disclaims liability for damages arising from use.
+•
+no-indemnity
+: Licensor does not provide indemnification.
+type="attestation"
+Optional
+. Boolean (
+true
+/
+false
+, default
+false
+). Boolean value MUST be lowercase. When set to
+true
+, declares:
+“The party responsible for the declaration affirms that they own, administer, or are authorized to assert the rights described in this declaration, and that appropriate documentation or authority is on file”.
+type="contact"
+Optional
+. A single, valid URL (including
+mailto:
+) or email address where others can reach the rights holder or their representative with questions, verification requests, or disputes.
+type="proof"
+Optional
+. One or more absolute URIs (space-separated) referencing cryptographically verifiable evidence that this license was issued or endorsed by the asserted authority. Examples include transparency-log entries, verifiable credentials, or blockchain transaction pages published by official rights registries, law firms, or other trusted entities that maintain verified records of ownership or representation. This element does not replace
+attestation
+or
+contact
+.
+Example
+This example license declares that the publisher owns the rights to the material, disclaims liability, affirms authorization, and provides both contact and verifiable proof issued by a rights registry.
+xml
+<
+license
+>
+<
+legal
+type
+=
+"warranty"
+>ownership authority no-infringement</
+legal
+>
+<
+legal
+type
+=
+"disclaimer"
+>as-is no-liability</
+legal
+>
+<
+legal
+type
+=
+"attestation"
+>true</
+legal
+>
+<
+legal
+type
+=
+"contact"
+>https://example.com/contact</
+legal
+>
+<
+legal
+type
+=
+"proof"
+>https://blockscan.example/tx/0x9aBcD123... </
+legal
+>
+</
+license
+>
+3.14
+<alternate>
+: Alternative Representation
+​
+The
+<alternate>
+element identifies an alternative representation of the digital asset defined by the enclosing
+<content>
+element. This element provides a mechanism for publishers to expose additional or simplified versions of the same content, such as web archives, plain text, JSON, or Markdown files. All URLs listed in
+<alternate>
+elements inherit the licensing terms of their parent
+<content>
+element.
+Attribute
+Description
+type
+Optional.
+The media type of the alternate representation (e.g.,
+text/plain
+,
+application/json
+,
+application/warc
+).
+Example
+This example license advertises alternative representations of the same content: as a WARC site archive and as a JSON file.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+payment
+type
+=
+"free"
+/>
+</
+license
+>
+<
+alternate
+type
+=
+"application/warc"
+>/exports/site-2025-10-20.warc</
+alternate
+>
+<
+alternate
+type
+=
+"application/json"
+>/exports/site-2025-10-20.json</
+alternate
+>
+</
+content
+>
+</
+rsl
+>
+The
+<schema>
+element associates
+Schema.org
+metadata (e.g,
+CreativeWork
+,
+Book
+, or
+Person
+) with the enclosing
+<content>
+. It supports either a link to a Schema.org JSON-LD resource or an inline Schema.org JSON-LD object. Publishers SHOULD wrap inline JSON-LD in
+<![CDATA[ ... ]]>
+to avoid XML escaping issues.
+Attribute
+Description
+type="application/ld+json"
+Optional.
+When present, the element contains an inline Schema.org JSON-LD object serialized as UTF-8 text. When absent, the element’s content MUST specify the URL or path of a Schema.org JSON-LD resource.
+Example: Linked Schema
+This example license references an external Schema.org object that provides structured metadata about the enclosing
+<content>
+.
+xml
+<
+schema
+>/metadata/books/moby-dick.jsonld</
+schema
+>
+Example: Inline Schema
+This example license embeds a Schema.org
+Book
+object to provide structured metadata about the enclosing
+<content>
+.
+xml
+<
+schema
+type
+=
+"application/ld+json"
+>
+{
+"@context": "https://schema.org",
+"@type": "Book",
+"name": "Moby-Dick",
+"author": "Herman Melville"
+}
+</
+schema
+>
+3.16
+<copyright>
+: Rights Holder
+​
+The
+<copyright>
+element identifies the individual or organization owning or controlling the asset’s rights, providing authoritative attribution and contact metadata for rights management.
+Attribute
+Description
+type
+Optional
+. Specifies whether the copyright holder is a
+person
+or an
+organization
+.
+contactEmail
+Optional
+. An email address for inquiries or licensing negotiations.
+contactUrl
+Optional
+. A URL to a web-based contact method, such as a contact form or page.
+Example
+This example license identifies Example Media LLC as the rights holder for an image and provides a direct contact URL for license inquiries, takedown requests, or permission extensions.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/images/hero.jpg"
+>
+<
+license
+>
+<
+payment
+type
+=
+"attribution"
+/>
+</
+license
+>
+<
+copyright
+type
+=
+"organization"
+contactUrl
+=
+"https://example.com/contact.html"
+>
+Example Media LLC
+</
+copyright
+>
+</
+content
+>
+</
+rsl
+>
+3.17
+<terms>
+: Supplemental Legal Information
+​
+The
+<terms>
+element specifies a URL linking to human-readable terms of service or supplemental legal information not encoded in XML. It allows publishers to reference full legal text or policy documents without modifying the machine-readable RSL license structure.
+Example
+This example links to a separate
+terms-of-use document
+that provides full legal text for dataset access and reuse. Crawlers and users can read these terms to understand broader obligations not expressed in the XML license.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+prohibits
+type
+=
+"usage"
+>ai-all</
+prohibits
+>
+</
+license
+>
+<
+terms
+>https://example.com/legal/data-terms.html</
+terms
+>
+</
+content
+>
+</
+rsl
+>
+3.17.1 RSL Default Access Terms
+​
+RSL provides a set of default terms that define standard conditions governing automated access and processing of content under RSL. These are published as the
+RSL Default Access Terms
+at:
+https://rslstandard.org/rsl/default-terms
+Example
+Publishers MAY reference the standard access terms by including:
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+prohibits
+type
+=
+"usage"
+>ai-all</
+prohibits
+>
+</
+license
+>
+<
+terms
+>https://rslstandard.org/rsl/default-terms</
+terms
+>
+</
+content
+>
+</
+rsl
+>
+4. Associating RSL Licenses with Digital Assets
+​
+An RSL license defines the machine-readable usage, licensing, and legal terms of service that govern access to a digital asset. Every digital asset covered by this specification MUST have an explicit or discoverable association with its corresponding RSL license.
+Any crawler, agent, or automated system that requests, retrieves, or processes a digital asset covered by an RSL license MUST:
+Locate
+the associated license using one of the discovery mechanisms described below.
+Retrieve and parse
+the RSL license before accessing or processing the asset.
+Comply
+with the terms and restrictions defined in that license.
+Obtain a valid license token
+or authorization, if required, from the designated License Server.
+Failure to do so constitutes non-conformance with the terms of service governing the digital asset.
+4.1 Purpose
+​
+This section defines how an RSL license is linked to or discovered by client applications for any digital asset available on the web. The goal is to ensure that rights and compensation terms are machine-discoverable, unambiguous, and enforceable prior to content use.
+Each method described below establishes a binding association between a digital asset and its RSL license.
+4.2 Discovery and Association Mechanisms
+​
+RSL supports multiple mechanisms for associating a license with an asset. All mechanisms are functionally equivalent; clients MUST honor whichever is provided.
+Mechanism
+Location
+Description
+robots.txt
+directive
+License: [absoluteURL]
+Declares a site-level license reference for crawlers before any access.
+HTTP
+Link
+header
+Link: <license-URL>; rel="license"
+Attaches the license relationship at the HTTP protocol level.
+HTML
+<link>
+or
+<script>
+HTML document
+Associates HTML content with a linked or embedded RSL license.
+RSS module
+<rsl:content>
+inside
+<item>
+Declares licensing terms for content distributed through RSS or syndication feeds.
+Media or data file
+File metadata (e.g., XMP, ID3, EPUB
+<metadata>
+)
+Embeds the license in the digital asset so that licensing metadata travels with the file.
+Clients MUST check all available association points and MAY cache previously retrieved licenses according to standard caching semantics.
+4.3 Normative Behavior for Clients
+​
+A conformant client accessing any web resource or asset MUST:
+Identify the governing RSL license
+using one of the supported discovery methods.
+Retrieve or extract
+the referenced license file.
+Validate
+its XML structure and confirm that it conforms to the RSL namespace.
+Interpret
+all
+<permits>
+,
+<prohibits>
+,
+<payment>
+, and
+<reporting>
+elements to determine permitted uses and applicable obligations.
+Obtain a license token
+from the associated License Server if required (
+server
+attribute present).
+Honor
+all specified usage, user, and geographic restrictions.
+Respect payment, attribution, and reporting requirements
+before accessing, copying, or processing the asset.
+A Client that cannot obtain a valid RSL document for the asset MUST treat the asset as unlicensed.
+4.4
+robots.txt
+License Association
+​
+RSL extends the Robots Exclusion Protocol (REP) [
+RFC 9309
+] with a new directive,
+License
+, that associates a website or section of a website with one or more governing RSL license documents.
+The
+License
+directive MAY be specified either:
+globally (outside any
+User-agent
+group), in which case it applies to all clients, or
+within a
+User-agent
+group, in which case it applies only to clients that select that group under REP group selection rules.
+4.4.1 Syntax
+​
+The
+License
+directive specifies an absolute URL that resolves to a valid RSL license document. ABNF [
+RFC 5234
+] and absolute-URI [
+RFC 3986
+]:
+ini
+license-directive
+=
+"License"
+":"
+OWS absolute-URI OWS
+The value MUST be an absolute URI.
+Comments (
+# …
+) follow standard REP conventions and are ignored.
+Multiple
+License
+directives MAY appear in a single
+robots.txt
+file; each provides an additional candidate license for clients to discover and evaluate.
+4.4.2 Semantics
+​
+The
+License
+directive declares the location(s) of one or more RSL license documents that define the licensing terms for content under the website’s control.
+Scope is determined by placement:
+Group-scoped
+: A
+License
+directive that appears within a
+User-agent
+group applies only to clients that select that group under [
+RFC 9309
+].
+Global
+: A
+License
+directive that appears outside any
+User-agent
+group applies to all clients.
+If a client selects a
+User-agent
+group that contains one or more
+License
+directives, the client MUST treat those group-scoped directives as the candidate license set for that client, and MUST ignore any global
+License
+directives.
+If the selected
+User-agent
+group contains no
+License
+directives, the client MUST use any global
+License
+directives as the candidate license set.
+The
+License
+directive does not modify the access permissions expressed by
+Allow
+or
+Disallow
+fields. It solely identifies the governing license document(s). Clients MUST retrieve and interpret these licenses before accessing or processing any content from the origin.
+4.4.3 Multiple Directives and Precedence
+​
+If multiple
+License
+directives are present in the applicable scope (group-scoped for the selected
+User-agent
+group, otherwise global), clients MAY retrieve each listed license document. The effective license for any given resource is determined according to
+Section 4.9
+.
+If no valid License directive exists, Clients SHOULD attempt other discovery mechanisms (
+Section 4.2
+). If none succeed, the resource MUST be treated as unlicensed for the purposes of this specification.
+4.4.4 Examples
+​
+In this example, all crawlers accessing any resource under
+/
+MUST first retrieve and interpret
+https://example.com/license.xml
+and comply with its defined terms.
+robots.txt
+License: https://example.com/license.xml
+User-agent: *
+Allow: /
+license.xml
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>search</
+permits
+>
+<
+payment
+type
+=
+"attribution"
+/>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+In this example,
+ExampleBot
+MUST first retrieve and interpret
+https://example.com/examplebot-license.xml
+. All other crawlers MUST first retrieve and interpret
+https://example.com/default-license.xml
+.
+robots.txt
+User-agent: ExampleBot
+Allow: /
+License: https://example.com/examplebot-license.xml
+User-agent: *
+Allow: /
+License: https://example.com/default-license.xml
+4.5 HTTP Header License Association
+​
+Servers MAY associate a returned resource with its governing RSL license using the HTTP
+Link
+header. The
+Link
+header
+rel
+attribute MUST be
+"license"
+, the
+type
+attribute MUST be
+"application/rsl+xml"
+, and the target MUST be an absolute URL to a valid RSL license file.
+This mechanism applies equally to non-HTML responses (e.g., JSON, images, video, datasets) and enables license discovery at the protocol layer without requiring an HTML
+<link>
+or
+<script>
+association.
+Example Response
+http
+HTTP
+/
+1.1
+200
+OK
+Content-Type
+:
+text/html; charset=UTF-8
+Link
+:
+<https://example.com/license.xml>; rel="license"; type="application/rsl+xml"
+4.6 HTML License Association
+​
+RSL licenses can be associated with HTML content using either a
+linked RSL license file
+with a
+<link>
+element or an
+embedded RSL license
+with a
+<script>
+element.
+An HTML license association applies to the parent element containing the
+<link>
+or
+<script>
+element and its descendants. When the parent element is
+<head>
+, the association applies to the containing HTML document.
+4.6.1 Linked License Association
+​
+A linked license uses a
+<link>
+element to associate an HTML element and its descendants with an external RSL license document. The
+rel
+attribute MUST be
+"license"
+, the
+type
+attribute MUST be
+"application/rsl+xml"
+, and the
+href
+value MUST be an absolute URL pointing to a valid RSL license file. The same RSL license document MAY be associated with multiple HTML documents or elements.
+A linked RSL document MAY include
+<content>
+elements with explicit
+url
+values that identify the governed asset or asset scope. To apply the same linked RSL document to the scope established by each HTML
+<link>
+association, the linked RSL document MAY use
+<content url="">
+. The empty
+url
+value identifies the scope established by the HTML
+<link>
+association rather than a separately identified asset URL. When a linked RSL document uses a path-based
+url
+value, the path is interpreted relative to the origin of the HTML content that established the association, not the origin of the linked RSL document.
+Note that the use of
+<link rel="license">
+outside
+<head>
+is an RSL client extension; authors requiring conforming HTML SHOULD use inline license associations for element-scoped licensing.
+Example
+This example shows a linked RSL license associated with an HTML document. In the linked RSL document,
+<content url="">
+identifies the scope established by the HTML
+<link>
+association, allowing the same RSL license document to be referenced by multiple HTML documents.
+4.6.2 Inline License Association
+​
+An inline license uses a
+<script>
+element with
+type="application/rsl+xml"
+to associate an HTML element and its descendants with a complete embedded RSL license document. The embedded RSL document MUST include exactly one
+<content>
+element.
+The embedded RSL document MAY specify a non-empty
+url
+value to provide a canonical identifier for the governed HTML content. When the license is intended to remain associated with that content across locations, copies, syndicated uses, license acquisition, caching, or provenance, the
+url
+attribute MUST specify a stable canonical URL that uniquely identifies the licensed content.
+To apply an inline RSL license to the scope established by the placement of the HTML
+<script>
+element, the embedded RSL document MAY use
+<content url="">
+. The empty
+url
+value identifies the scope established by the inline association rather than a separately identified asset URL.
+Example
+This example shows an inline RSL license associated with a syndicated article contained in a
+<section>
+element. The
+<content url>
+value identifies the syndicated article by its canonical URL, allowing the license to remain associated with that content across locations, copies, or syndicated uses while preserving provenance.
+html
+<
+section
+>
+<
+h2
+>Syndicated Article</
+h2
+>
+<
+p
+>...</
+p
+>
+<
+script
+type
+=
+"application/rsl+xml"
+>
+<rsl xmlns="https://rslstandard.org/rsl">
+<content url="https://syndicator.example.com/articles/123">
+<license>
+<prohibits type="usage">ai-all</prohibits>
+</license>
+</content>
+</rsl>
+</
+script
+>
+</
+section
+>
+4.7 RSS License Association
+​
+RSL can be used within
+RSS feeds
+to associate license information with standardized, machine-readable catalogs of digital assets, including articles, images, podcasts, videos, or datasets. When included in a feed, RSL functions as an
+RSS module
+that extends the RSS
+<item>
+element with explicit licensing metadata.
+The
+<rss>
+root element MUST declare the namespace
+xmlns:rsl="https://rslstandard.org/rsl"
+. Each
+<item>
+describing a licensed asset SHOULD include an
+<rsl:content>
+element that identifies the asset and contains a corresponding
+<rsl:license>
+element describing the applicable terms. To preserve the authority model used by RSL discovery mechanisms, the
+url
+attribute of
+<rsl:content>
+MUST identify an asset governed by the same origin that publishes the feed and MAY be either a path or an absolute URL. All RSL elements within the feed MUST use the
+rsl:
+prefix.
+This mechanism allows publishers to expose large collections of content through a familiar syndication format while adding structured information about permitted uses, payments, and license servers. Clients consuming RSS feeds containing RSL metadata MUST retrieve and parse the
+<rsl:license>
+element for each
+<item>
+and comply with its defined terms before downloading or processing the referenced asset.
+Example
+This example shows an RSS feed item that identifies the Iris dataset as a licensed asset. The
+<rsl:content>
+element specifies the dataset file URL, and the nested
+<rsl:license>
+element declares that the dataset is available under a free license.
+xml
+<
+rss
+xmlns:rsl
+=
+"https://rslstandard.org/rsl"
+version
+=
+"2.0"
+>
+<
+channel
+>
+<
+title
+>Datasets</
+title
+>
+<
+item
+>
+<
+title
+>Iris dataset</
+title
+>
+<
+link
+>https://archive.ics.uci.edu/dataset/53/iris</
+link
+>
+<
+rsl:content
+url
+=
+"/public/53/iris.zip"
+>
+<
+rsl:license
+>
+<
+rsl:payment
+type
+=
+"free"
+/>
+</
+rsl:license
+>
+</
+rsl:content
+>
+</
+item
+>
+</
+channel
+>
+</
+rss
+>
+RSL licenses MAY be embedded directly in the metadata facility of media or data files. Embedded media and data file association applies RSL licensing terms to the containing file.
+The embedded RSL document MUST specify a stable canonical URL in the
+url
+attribute of the
+<rsl:content>
+element. This value identifies the containing file for license evaluation, license acquisition, caching, and provenance across locations, copies, or syndicated uses.
+An embedded RSL license fragment MUST:
+Be valid XML in the
+https://rslstandard.org/rsl
+namespace.
+Be enclosed in an
+<rsl:rsl>
+element that declares
+xmlns:rsl="https://rslstandard.org/rsl"
+, with all child elements namespace-qualified (for example,
+rsl:content
+,
+rsl:license
+) when embedded in a non-RSL container.
+Include exactly one
+<rsl:content>
+element.
+Specify a non-empty, stable canonical URL in the
+url
+attribute of the
+<rsl:content>
+element.
+Conform to all structural and processing requirements of this specification.
+Be stored in a metadata facility appropriate to the container format (e.g., EPUB
+<metadata>
+, XMP for image/PDF, ID3/atoms for audio/video, PNG
+iTXt
+, or equivalent).
+EPUB Example
+This example shows an embedded RSL license in an EPUB document that applies licensing terms for AI training to the EPUB document. The
+url
+attribute of the
+<rsl:content>
+element specifies
+https://press.example.com/example-book.epub
+as the canonical RSL asset identifier for the document, allowing the license to remain associated with the same asset regardless of the location from which the EPUB file is retrieved and preserving provenance for the associated content.
+xml
+<
+package
+version
+=
+"3.0"
+xmlns
+=
+"http://www.idpf.org/2007/opf"
+xmlns:dc
+=
+"http://purl.org/dc/elements/1.1/"
+xmlns:rsl
+=
+"https://rslstandard.org/rsl"
+>
+<
+metadata
+>
+<
+dc:title
+>Scaling People: Tactics for Company Building</
+dc:title
+>
+<
+rsl:rsl
+>
+<
+rsl:content
+url
+=
+"https://press.example.com/example-book.epub"
+server
+=
+"https://api.example.com"
+>
+<
+rsl:license
+>
+<
+rsl:permits
+type
+=
+"usage"
+>ai-train</
+rsl:permits
+>
+<
+rsl:payment
+type
+=
+"crawl"
+>
+<
+rsl:standard
+>https://example.com/license</
+rsl:standard
+>
+</
+rsl:payment
+>
+</
+rsl:license
+>
+</
+rsl:content
+>
+</
+rsl:rsl
+>
+</
+metadata
+>
+</
+package
+>
+4.9 Precedence and Specificity
+​
+When multiple licenses are discoverable for the same asset (for example, both a site-wide license in
+robots.txt
+and a page-specific embedded license):
+For
+robots.txt
+associations, a group-scoped
+License
+directive for the selected
+User-agent
+group takes precedence over a global
+License
+directive.
+The most specific license (e.g., page-level) takes precedence over broader site-level licenses.
+If two licenses define conflicting terms, clients MUST honor the most restrictive combination of rights.
+Publishers SHOULD ensure consistency across discovery channels to avoid ambiguity.
+4.10 Enforcement and Compliance
+​
+Servers MAY enforce licensing compliance through paywalls,
+bot management services
+, or the RSL
+Crawler Authorization Protocol (CAP)
+(
+Section 6
+) and
+Open License Protocol (OLP)
+(
+Section 5
+). A server receiving requests for licensed content MAY respond with a
+401 Unauthorized
+or
+402 Payment Required
+status code when access to a resource is contingent on obtaining a license.
+The response SHOULD include either:
+a response body with
+Content-Type: application/rsl+xml
+containing an inline RSL license document representing a dynamic or request-specific license.
+a
+Link
+header pointing to the governing RSL license (
+rel="license"; type="application/rsl+xml"
+), or
+These mechanisms enable clients to discover applicable terms and proceed with license acquisition or renewal before retrying the request.
+Example Response: Inline License
+http
+HTTP
+/
+1.1
+401
+Unauthorized
+Content-Type
+:
+application/rsl+xml
+Cache-Control
+:
+no-store
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/article/123.html"
+server
+=
+"https://api.example.com"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>search</
+permits
+>
+<
+payment
+type
+=
+"crawl"
+>
+<
+amount
+currency
+=
+"USD"
+>0.015</
+amount
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+Example Response: Linked License
+http
+HTTP
+/
+1.1
+402
+Payment Required
+Content-Type
+:
+application/json
+Link
+:
+<https://example.com/license.xml>; rel="license"; type="application/rsl+xml"
+5. Open License Protocol (OLP)
+​
+The RSL
+Open License Protocol (OLP)
+defines a set of Web APIs for acquiring, validating, and enforcing RSL licenses. It replaces proprietary or ad-hoc solutions with a uniform, open protocol for clients and license servers to exchange licensing information using secure HTTPS endpoints. OLP extends the OAuth 2.0 authorization framework [
+RFC 6749
+] and related specifications to support machine-readable licensing.
+OLP enables:
+License acquisition
+: allowing clients to obtain verifiable authorization to access or use digital assets governed by RSL licenses.
+License validation
+: enabling publishers and resource servers to confirm that a license token is valid and covers the requested asset.
+Key retrieval
+: providing secure distribution of encryption keys for assets protected under the Encrypted Media Standard (EMS).
+The OLP layer operationalizes the RSL metadata model by defining how that metadata is acted upon by network participants through authenticated API calls. Together, these layers form a
+complete lifecycle
+for digital rights on the open web: declaration, discovery, licensing, and enforcement.
+OLP endpoints are implemented by RSL License Servers, which MAY be operated by individual publishers, publishing platforms, licensing agencies, or other parties that manage digital asset rights. License servers are identified by the
+server
+attribute on the
+<content>
+element of an RSL license. Each
+<content>
+element in an RSL license MAY include a
+server
+attribute that points to an HTTPS endpoint implementing the OLP protocol. Clients accessing a licensed asset MUST have previously acquired a license or used that endpoint to obtain a license before accessing or processing the associated content.
+5.1 Protocol Architecture
+​
+The RSL ecosystem consists of four interacting entities:
+OLP extends OAuth 2.0 to represent licenses as tokens and to bind them to specific digital assets. The ecosystem involves four roles that align with standard OAuth components:
+RSL Role
+Purpose
+OAuth Analog
+Publisher
+Defines licensing terms for digital assets via an RSL document.
+Resource Owner
+(policy authority)
+Client
+Automated agent/crawler requesting access to digital assets under a license.
+OAuth Client
+(confidential or public)
+License Server
+Implements the Open License Protocol (OLP) to issue license tokens and enforces payment requirements on behalf of Publishers.
+Authorization Server (AS)
+Resource Server
+Web server or CDN that serves the licensable digital assets and enforces license controls.
+Resource Server (RS)
+A typical interaction proceeds as follows:
+The Client discovers the RSL license associated with an asset using one of the discovery mechanisms defined in
+Section 4
+(e.g.,
+robots.txt
+, HTTP
+Link
+, or embedded RSL).
+If the
+server
+attribute in the
+<content>
+element is set, the client sends a licensing request to that License server’s
+/token
+endpoint,
+unless
+it has already obtained a license, or accepted the terms of a
+<standard>
+or
+<custom>
+license that governs the asset.
+The License Server authenticates the Client, evaluates the request against the publisher’s terms, and issues a License Token.
+If the content is encrypted, the Client uses the
+/key
+endpoint of the License Server to obtain a decryption key governed by the license.
+This model preserves the decentralized nature of the web while ensuring that every automated interaction with licensed content is traceable, auditable, and compliant with the publisher’s terms. License servers MAY support additional operational features, such as registration, billing, or reporting, but these are outside the normative scope of this specification.
+All OLP communications MUST occur over HTTPS, and clients MUST authenticate according to OAuth 2.0 client authentication procedures before any license-related requests.
+5.2 Endpoints Summary
+​
+An RSL License Server implementing the OLP API MUST expose a set of standardized HTTPS endpoints that together provide the core licensing functionality described in this section, using the
+server
+attribute value as the base URL.
+Each endpoint follows REST-style semantics and uses conventional HTTP methods and status codes. Unless otherwise noted, all requests and responses MUST use UTF-8 encoding and the
+application/json
+or
+application/x-www-form-urlencoded
+media type, as appropriate to the operation.
+Endpoint
+Method
+Description
+/token
+POST
+Acquire a License Token representing authorization to access a licensed asset.
+/introspect
+POST
+Validate an existing License Token and determine whether it grants access to a specified resource.
+/key
+POST
+Retrieve a key for decrypting an asset protected under the
+Encrypted Media Standard (EMS)
+.
+License Servers MAY provide additional implementation-specific endpoints (for example, for registration or billing), but such endpoints are non-normative and outside the scope of this specification. A conformant implementation of OLP MUST, at minimum, support all endpoints described above.
+5.3 Client Authentication
+​
+RSL License Servers implementing the OLP API MUST authenticate all clients before issuing, validating, or disclosing license information. Authentication follows the OAuth 2.0 client authentication framework defined in [
+RFC 6749
+]. Each client application that interacts with a License Server is assigned a unique
+client_id
+and
+client_secret
+by the server operator during registration and the client must use these credentials to authenticate itself when making requests to the server.
+5.3.1 Authentication Method
+​
+Clients MUST authenticate to all OLP endpoints using the
+HTTP Basic
+scheme as defined in [
+RFC 7617
+]. The Authorization header MUST contain a Base64-encoded string of the form
+client_id:client_secret
+. The
+client_id
+value MUST first be form-URL-encoded as specified in [
+RFC 6749
+] before concatenation with
+":"
+and the
+client_secret
+.
+Example Request
+http
+POST
+/token
+HTTP
+/
+1.1
+Host
+:
+api.example.com
+Content-Type
+:
+application/x-www-form-urlencoded
+Authorization
+:
+Basic base64(client_id:client_secret)
+5.3.2 Error Handling
+​
+If the
+Authorization
+header is missing, malformed, or invalid, the License Server MUST respond with HTTP 401 and an
+invalid_client
+JSON error object.
+Example Response
+json
+{
+"error"
+:
+"invalid_client"
+,
+"error_description"
+:
+"Client authentication failed."
+}
+5.4 License Acquisition (
+/token
+)
+​
+The
+/token
+endpoint enables a client to acquire a License Token representing authorization to access or use a digital asset under the terms of its governing RSL license. This endpoint uses the OAuth 2.0 Token Endpoint defined in [
+RFC 6749
+] with the
+client_credentials
+grant type.
+Clients use this endpoint to obtain a verifiable
+License
+credential that can later be presented to resource servers or introspected by other systems to confirm licensing rights.
+5.4.1 Endpoint
+​
+5.4.2 Request Parameters
+​
+Parameter
+Type
+Required
+Description
+grant_type
+string
+YES
+MUST be set to
+client_credentials
+.
+license
+string
+YES
+A complete
+<license>
+XML element describing the requested terms. The XML MUST be well-formed, conform to the RSL namespace, and be URL-encoded. Other licensing formats MAY be provided when specified by the accompanying
+license_type
+parameter.
+license_type
+string
+NO
+Media type of the license parameter. Defaults to
+application/rsl+xml
+. Used to indicate support for other licensing formats.
+resource
+string
+YES
+The value of the
+url
+attribute of the parent
+<content>
+element for the
+<license>
+being requested, as defined in
+Section 3.3.1
+.
+The request MUST use the media type
+application/x-www-form-urlencoded
+.
+Example Request
+This example illustrates a request to the
+/token
+endpoint of the license server at
+https://api.example.com
+to obtain a License Token for the following RSL license governing content rooted at
+https://example.com/
+.
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/"
+server
+=
+"https://api.example.com"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>search</
+permits
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+http
+POST
+/token
+HTTP
+/
+1.1
+Host
+:
+api.example.com
+Authorization
+:
+Basic base64(client_id:client_secret)
+Content-Type
+:
+application/x-www-form-urlencoded
+grant_type=client_credentials&
+license=%3Clicense%3E%3Cpermits%20type%3D%22usage%22%3Esearch%3C%2Fpermits%3E%3C%2Flicense%3E&
+resource=https%3A%2F%2Fexample.com%2F
+5.4.3 Successful Response
+​
+If the request is valid and authorized, the License Server MUST issue a
+License Token
+and return it as a JSON object in the response body.
+Field
+Type
+Description
+access_token
+string
+A token representing the acquired RSL license.
+token_type
+string
+Always
+License
+.
+expires_in
+integer
+Lifetime of the token in seconds. A value of
+0
+indicates a non-expiring license.
+Example Response
+json
+{
+"access_token"
+:
+"rsl_cnNsLWNsaWVudC0xMjM6czNjcjN0S0VZ"
+,
+"token_type"
+:
+"License"
+,
+"expires_in"
+:
+0
+}
+Clients MUST treat the
+access_token
+as opaque and MUST NOT attempt to parse its internal structure. Tokens MAY encode claims such as license scope, expiration, and resource bindings, but such encoding is implementation-specific.
+5.4.4 Error Responses
+​
+If the request is malformed, unauthorized, or references an invalid license, the server MUST respond with an appropriate HTTP status code (
+400
+,
+401
+, or
+403
+) and a JSON error object:
+Error Code
+Description
+invalid_request
+The request is missing a required parameter, includes an invalid parameter value, or is malformed.
+invalid_client
+Client authentication failed (e.g., bad credentials or unrecognized client).
+unauthorized_client
+The client is not permitted access to this server.
+invalid_license
+The provided
+<license>
+element is invalid or not supported by the publisher.
+invalid_resource
+The specified resource is not managed or licensable by this server.
+unsupported_grant_type
+The
+grant_type
+value is not recognized or supported.
+server_error
+The server encountered an unexpected condition that prevented completion of the request.
+Example Error Response
+json
+{
+"error"
+:
+"invalid_license"
+,
+"error_description"
+:
+"The license terms are invalid or not available for the specified resource."
+}
+5.5 License Validation (
+/introspect
+)
+​
+The
+/introspect
+endpoint enables a client or resource server to verify the status and scope of a License Token previously issued by a License Server. This operation confirms whether the token is valid, active, and grants access to a specific digital asset. The endpoint conforms to the OAuth 2.0 Token Introspection specification [
+RFC 7662
+] with RSL-specific extensions.
+A License Server implementing this endpoint acts as the authoritative source of truth for the validity and scope of issued tokens. Resource servers and clients MUST rely on the introspection response when determining whether access to an asset is permitted.
+5.5.1 Endpoint
+​
+5.5.2 Request Parameters
+​
+Parameter
+Type
+Required
+Description
+token
+string
+YES
+The License Token to be validated.
+resource
+string
+YES
+The UTF-8 encoded URL of the digital asset for which access is being checked.
+Example Request
+This example illustrates a request to the
+/introspect
+endpoint of the license server at
+https://api.example.com
+to validate whether a previously issued License Token authorizes access to the resource
+https://example.com/article/abc
+.
+http
+POST
+/introspect
+HTTP
+/
+1.1
+Host
+:
+api.example.com
+Authorization
+:
+Basic base64(client_id:client_secret)
+Content-Type
+:
+application/x-www-form-urlencoded
+token=rsl_cnNsLWNsaWVudC0xMjM6czNjcjN0S0VZ\
+&
+resource=
+https%3A%2F%2Fexample.com%2Farticle%2Fabc
+5.5.3 Successful Response
+​
+If the token is recognized and valid, the License Server MUST return a JSON object containing token metadata and authorization status.
+Field
+Type
+Description
+active
+boolean
+Indicates whether the token is valid and recognized by the License Server.
+token_type
+string
+Always
+License
+.
+license
+string
+The RSL
+<license>
+XML element represented by the token.
+resource
+string
+The URL of the digital asset covered by the license.
+permitted
+boolean
+Indicates whether the license permits access to the specified resource.
+reason
+string
+Optional.
+Human-readable explanation if
+permitted
+is
+false
+.
+Example Response: Authorized License
+json
+{
+"active"
+:
+true
+,
+"token_type"
+:
+"License"
+,
+"license"
+:
+"<license><permits type=
+\"
+usage
+\"
+>search</permits></license>"
+,
+"resource"
+:
+"https://example.com/article/abc"
+,
+"permitted"
+:
+true
+}
+Example Response: Denied License
+json
+{
+"active"
+:
+true
+,
+"token_type"
+:
+"License"
+,
+"license"
+:
+"<license><permits type=
+\"
+usage
+\"
+>search</permits></license>"
+,
+"resource"
+:
+"https://example.com/private/def"
+,
+"permitted"
+:
+false
+,
+"reason"
+:
+"License does not cover this resource."
+}
+Example Response: Expired or Revoked Token
+5.5.4 Error Responses
+​
+If the request is malformed or unauthorized, the License Server MUST return an appropriate HTTP status code (
+400
+or
+401
+) and a JSON error object.
+Error Code
+Description
+invalid_request
+The request is missing a required parameter or contains invalid syntax.
+invalid_token
+The token is expired, revoked, or unrecognized.
+unauthorized_client
+Client authentication failed or is not permitted to use this endpoint.
+server_error
+The server encountered an unexpected condition.
+Example Response
+json
+{
+"error"
+:
+"invalid_request"
+,
+"error_description"
+:
+"Missing required parameter: resource"
+}
+5.6 Key Retrieval (
+/key
+)
+​
+The
+/key
+endpoint enables a client holding a valid License Token to retrieve a symmetric encryption key used to encrypt and decrypt a digital asset, including paywalled web content, images, videos, books, and datasets, protected under the
+Encrypted Media Standard (EMS)
+. This endpoint allows publishers and platforms to distribute encrypted content securely while ensuring that decryption keys are issued only to licensed and authenticated clients.
+Key retrieval is optional and applies only when the
+<content>
+element associated with an asset includes the attribute
+encrypted="true"
+.
+5.6.1 Endpoint
+​
+5.6.2 Request Parameters
+​
+Field
+Type
+Required
+Description
+token
+string
+YES
+A valid License Token obtained via the
+/token
+endpoint.
+resource
+string
+YES
+The absolute URL of the encrypted asset file for which the key is being requested.
+The client MUST submit the request body as a JSON object with the media type
+application/json
+.
+Example Request
+This example illustrates a request to the
+/key
+endpoint of the license server at
+https://api.example.com
+to obtain a decryption key for the encrypted media asset
+https://example.com/media/episode-1.mp4.enc
+.
+http
+POST
+/key
+HTTP
+/
+1.1
+Host
+:
+api.example.com
+Authorization
+:
+Basic base64(client_id:client_secret)
+Content-Type
+:
+application/json
+{
+"token"
+:
+"rsl_cnNsLWNsaWVudC0xMjM6czNjcjN0S0VZ"
+,
+"resource"
+:
+"https://example.com/media/episode-1.mp4.enc"
+}
+5.6.3 Successful Response
+​
+If the request is valid, authorized, and the license permits key access, the License Server MUST respond with a JSON object containing a JSON Web Key (JWK) and initialization vector (IV). The key.k and iv values MUST use base64url encoding without padding characters.
+Field
+Type
+Description
+key
+JWK object
+A symmetric key represented in JWK format.
+iv
+string
+(Optional)
+Base64url-encoded initialization vector, if required by the encryption algorithm.
+resource
+string
+The URL of the asset for which the key applies.
+The key object MUST conform to the JWK format defined in [
+RFC 7517
+] and the key type (
+kty
+) MUST be
+"oct"
+.
+Example Response
+json
+{
+"key"
+: {
+"kty"
+:
+"oct"
+,
+"kid"
+:
+"sym-2025-09-30"
+,
+"alg"
+:
+"A256GCM"
+,
+"use"
+:
+"enc"
+,
+"key_ops"
+: [
+"encrypt"
+,
+"decrypt"
+],
+"k"
+:
+"pPq7oHq3bqv3r5wW2y0mJ1m8lqP0d7yQmW3cR9Zf9gE"
+},
+"iv"
+:
+"Z3VJc0hYb0NQbWl2"
+,
+"resource"
+:
+"https://example.com/media/episode-1.mp4.enc"
+}
+Clients receiving a valid key MAY use it to decrypt or encrypt the specified asset according to the terms of the governing RSL license.
+5.6.4 Example Usage
+​
+A client might use the following
+OpenSSL
+command to decrypt an AES-256-GCM encrypted EMS file using the returned
+key
+and
+iv
+values:
+sh
+openssl
+enc
+-d
+-aes-256-gcm
+\
+-in
+episode-1.mp4.enc
+-out
+episode-1.mp4
+\
+-K
+1a7d9af3c8e2b8f7e1a6c0b3d5e8f2a1c6b9d4e7f8a3b2c1d0e9f6
+\
+-iv
+f1e2d3c4b5a6987867564534
+This example is informative and provided only for interoperability reference.
+5.6.5 Error Responses
+​
+If the license token is invalid, expired, or does not permit access to the requested resource, the License Server MUST return an appropriate HTTP status code (
+400
+,
+401
+, or
+403
+) and a JSON error object.
+Error Code
+Description
+invalid_token
+The license token is expired, revoked, or unrecognized.
+insufficient_scope
+The license does not permit access to the encryption key for this resource.
+invalid_request
+Missing or malformed
+token
+or
+resource
+parameter.
+unauthorized_client
+Client authentication failed.
+server_error
+The server encountered an unexpected condition.
+Example Error
+json
+{
+"error"
+:
+"insufficient_scope"
+,
+"error_description"
+:
+"The license does not permit key access for this resource."
+}
+6. Crawler Authorization Protocol (CAP)
+​
+The RSL
+Crawler Authorization Protocol (CAP)
+defines a standardized mechanism for confirming that a crawler, agent, or other automated application has obtained a valid
+license
+before accessing digital assets governed by RSL licenses.
+Websites traditionally rely on the
+User-Agent
+header and
+robots.txt
+rules to identify and regulate crawler activity. In practice, many automated agents spoof trusted identities or disregard access restrictions, making it difficult for publishers to distinguish legitimate, licensed clients from unauthorized scraping or AI-training activity.
+CAP addresses this problem by providing a lightweight, interoperable protocol that enables a resource server to verify, at the time of request, that a crawler holds an active
+License Token
+issued via the Open License Protocol (
+Section 5
+). This allows consistent, machine-verifiable enforcement of licensing requirements across the web.
+CAP is based on the HTTP Authentication Framework [
+RFC 9110
+]. It introduces a new authentication scheme,
+License
+, which uses the standard
+Authorization
+and
+WWW-Authenticate
+headers to transmit and validate License Tokens over HTTPS connections. This ensures full interoperability with existing HTTP infrastructure, intermediaries, and caching systems.
+CAP operates at the
+application layer
+and focuses exclusively on verifying license compliance. To fully protect digital assets from unauthorized access, CAP SHOULD be paired with a bot management or [
+Web Bot Auth
+] service that identifies crawlers at the network or transport layer. Together, these mechanisms provide layered defense against unauthorized crawlers or agents: identity validation through network-level services, and rights enforcement through CAP.
+6.1 Protocol Architecture
+​
+CAP defines the interaction between three entities:
+Entity
+Role
+Client
+A crawler, agent, or automated system operating under an RSL license.
+Resource Server
+The origin or CDN that enforces RSL license compliance when serving content.
+License Server
+The authorization service that issues and validates License Tokens via OLP.
+A typical CAP flow proceeds as follows:
+The client discovers the RSL license governing a digital asset using one of the discovery mechanisms defined in
+Section 4
+.
+Unless the client has already licensed the asset, it obtains a License Token with
+token_type = "License"
+from the associated License Server via the OLP
+/token
+endpoint.
+The client requests the content from the Resource Server, including the License Token value in the HTTP
+Authorization
+header.
+The Resource Server validates the token, either locally or by calling the License Server’s
+/introspect
+endpoint, and verifies that the license terms permit access to the requested resource.
+If the token is valid and the license authorizes the request, the Resource Server serves the content. Otherwise, it returns a
+401 Unauthorized
+or
+402 Payment Required
+response with a
+Link
+header referencing the governing RSL license.
+This architecture enables interoperable, verifiable enforcement of RSL license terms across automated web clients while remaining fully compatible with existing HTTP infrastructure and preserving the decentralized, permission-based design of the web.
+6.2 The
+License
+Authentication Scheme
+​
+CAP introduces a new HTTP Authentication [
+RFC 9110
+] scheme,
+License
+, that uses the standard
+Authorization
+and
+WWW-Authenticate
+headers to transmit and validate License Tokens over HTTPS connections. The
+License
+scheme follows the semantics of the OAuth 2.0 “Bearer” token type [
+RFC 6750
+] but uses a distinct authentication scheme name to indicate that the credential represents a License Token.
+6.2.1 Authorization Header
+​
+Clients accessing licensed resources MUST include the License Token in the HTTP
+Authorization
+header using the following syntax:
+http
+Authorization
+:
+License <rsl-license-token>
+Example Request
+This example illustrates use of the
+License
+HTTP authentication scheme to convey a License Token in the Authorization header of a request to the protected resource
+https://data.example.com/dataset/iris.csv
+.
+http
+GET
+/dataset/iris.csv
+HTTP
+/
+1.1
+Host
+:
+data.example.com
+Authorization
+:
+License rsl_cnNsLWNsaWVudC0xMjM6czNjcjN0S0VZ
+6.3 Error Responses
+​
+Servers implementing the CAP API MUST return standardized error responses when a client request fails authentication or license validation. Error information is conveyed using the HTTP status code,
+WWW-Authenticate
+parameters, and license reference (either a
+Link
+header or an inline RSL license body).
+This section defines normative error codes and their usage to ensure consistent client behavior across implementations.
+6.3.1 HTTP Status Codes
+​
+HTTP Code
+Meaning
+Usage
+401 Unauthorized
+The request lacks valid licensing credentials.
+Returned when the
+Authorization
+header is missing, invalid, or expired.
+402 Payment Required
+Access requires a valid RSL license or payment.
+Returned when a license has not been acquired or payment terms are unmet.
+403 Forbidden
+The provided license does not grant permission for the requested operation.
+Returned when the requested use is explicitly prohibited under the license.
+503 Service Unavailable
+Temporary validation or introspection failure.
+Returned when the License Server is unreachable or validation cannot be completed.
+6.3.2
+WWW-Authenticate
+Parameters
+​
+When responding with a
+401
+or
+402
+status, servers MUST include a
+WWW-Authenticate
+header using the
+License
+scheme. The following parameters are defined:
+Parameter
+Description
+error
+Short machine-readable error code describing the cause of failure.
+error_description
+(Optional)
+Human-readable explanation intended for logging or debugging.
+6.3.3 License Reference
+​
+The response MUST include either:
+a
+Link
+header pointing to the governing RSL license (
+rel="license"; type="application/rsl+xml"
+), or
+a response body with
+Content-Type: application/rsl+xml
+containing an inline RSL license document representing a dynamic or request-specific license.
+These mechanisms enable clients to discover applicable terms and proceed with license acquisition or renewal before retrying the request. See also
+Section 4.10
+.
+6.3.4 Error Codes
+​
+Servers implementing the
+License
+scheme SHOULD provide clear error semantics to assist compliant clients in obtaining or renewing authorization. Error parameters MAY include:
+Error Code
+Description
+invalid_request
+Malformed request (missing/duplicate/unsupported params).
+invalid_token
+The provided license token is expired, revoked, or malformed.
+insufficient_scope
+The license does not permit access to the requested resource.
+server_error
+The server encountered an unexpected condition while processing the request.
+6.3.5 Example Error Responses
+​
+Example Response: Linked License
+http
+HTTP
+/
+1.1
+401
+Unauthorized
+WWW-Authenticate
+:
+License error="invalid_token", error_description="License token missing, expired, revoked, or malformed"
+Link
+:
+<https://example.com/license.xml>; rel="license"; type="application/rsl+xml"
+Example Response: Inline License
+http
+HTTP
+/
+1.1
+402
+Payment Required
+WWW-Authenticate
+:
+License error="invalid_token", error_description="License token missing, expired, revoked, or malformed"
+Content-Type
+:
+application/rsl+xml
+Cache-Control
+:
+no-store
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"/article/123.html"
+server
+=
+"https://api.example.com"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>search</
+permits
+>
+<
+payment
+type
+=
+"crawl"
+>
+<
+amount
+currency
+=
+"USD"
+>0.015</
+amount
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+The RSL Encrypted Media Standard (EMS) defines a mechanism for publishers and platforms to securely license, distribute, and access encrypted digital assets under the control of an RSL license. EMS extends the RSL model to include cryptographically protected files, ensuring that access to paywalled or proprietary media is possible only for clients holding a valid License Token.
+Encrypted assets are identified in RSL documents using the
+encrypted="true"
+attribute on the
+<content>
+element. When this attribute is present, clients MUST obtain both (a) a valid RSL license from the designated License Server, and (b) an associated decryption key retrieved through the OLP
+/key
+endpoint (
+Section 5.6
+) before accessing the file contents.
+EMS supports a wide range of symmetric encryption algorithms and key-management implementations. The selection of encryption algorithm, key length, and rotation policy is implementation-defined and controlled by the License Server operator. This specification does not mandate any particular cipher or key format beyond conformance to the JSON Web Key (JWK) [
+RFC 7517
+] structure and use of a symmetric key type (
+kty="oct"
+).
+EMS is designed to complement, not replace, other RSL components:
+It integrates with OLP for key retrieval and license validation.
+It interoperates with CAP for token-based crawler authorization and access enforcement.
+It provides a standardized method for encrypting any media type referenced by RSL, including HTML, JSON, XML, audio, video, and dataset files.
+EMS enables a unified framework for protecting licensable assets on the open web, combining discoverability, machine-readable licensing, and encryption-based access control. By binding encryption and access control to the same licensing framework, EMS ensures that digital assets remain protected, traceable, and licensable throughout their full lifecycle: from creation and encryption to discovery, licensing, and lawful access.
+7.1 Encrypted Asset Identification
+​
+An RSL license identifies encrypted assets through the use of the
+encrypted="true"
+attribute on the
+<content>
+element. This attribute indicates that the digital asset referenced by the
+url
+attribute is cryptographically protected and requires a valid license and key retrieval step before access.
+When
+encrypted="true"
+, the
+<content>
+element MUST also include a
+server
+attribute identifying the RSL License Server that manages key issuance via the OLP
+/key
+endpoint. The License Server acts as the key authority for that asset and enforces access control in accordance with the RSL license terms.
+Example
+xml
+<
+rsl
+xmlns
+=
+"https://rslstandard.org/rsl"
+>
+<
+content
+url
+=
+"https://example.com/books/book1.epub.enc"
+encrypted
+=
+"true"
+server
+=
+"https://api.example.com"
+>
+<
+license
+>
+<
+permits
+type
+=
+"usage"
+>ai-train</
+permits
+>
+<
+payment
+type
+=
+"purchase"
+>
+<
+custom
+>https://example.com/contact.html</
+custom
+>
+</
+payment
+>
+</
+license
+>
+</
+content
+>
+</
+rsl
+>
+In this example:
+The
+encrypted="true"
+attribute designates the asset as an
+EMS file
+(
+.enc
+extension).
+The server attribute points to the License Server responsible for issuing and validating License Tokens.
+The client MUST first acquire a valid RSL license and then retrieve the decryption key from the server’s
+/key
+endpoint before attempting to decrypt or process the file.
+7.2 Encryption and Decryption Workflow
+​
+EMS defines a uniform workflow for publishers and clients to encrypt, distribute, and access digital assets under RSL licensing control. This workflow ensures that all encryption, key retrieval, and decryption actions are tied to valid RSL licenses issued through the Open License Protocol.
+7.2.1 Overview
+​
+An EMS transaction consists of three primary phases:
+Encryption by the Publisher
+: The publisher encrypts a digital asset using a symmetric key generated and managed by its License Server.
+License Acquisition by the Client
+: The client obtains a valid License Token via the
+/token
+endpoint and uses it to request the key from
+/key
+.
+Decryption by the Client
+: The client decrypts the asset locally using the retrieved key, subject to the terms of the governing RSL license.
+7.2.2 Publisher Encryption Process
+​
+Before distributing an EMS file, the publisher or License Server MUST:
+Generate a unique symmetric key for the asset (conforming to [
+RFC 7517
+]).
+Encrypt the digital asset with that key using a supported symmetric cipher (algorithm choice is implementation-defined).
+Host the encrypted file at a publicly accessible URL (typically ending with
+.enc
+).
+Publish an RSL license referencing the encrypted asset with the attributes
+encrypted="true"
+and
+server="..."
+identifying the key authority.
+Example Encryption Command (informative)
+bash
+openssl
+enc
+-aes-256-gcm
+-in
+episode-1.mp4
+-out
+episode-1.mp4.enc
+\
+-K
+1a7d9af3c8e2b8f7e1a6c0b3d5e8f2a1c6b9d4e7f8a3b2c1d0e9f6
+\
+-iv
+f1e2d3c4b5a6987867564534
+The resulting
+.enc
+file may be distributed through a CDN or content-delivery service. Only clients presenting a valid License Token can subsequently obtain the decryption key.
+7.2.3 Client Decryption Process
+​
+To access an EMS-protected asset, a client MUST perform the following sequence:
+Discover the RSL license for the asset (see
+Section 4
+).
+Obtain a License Token from the designated License Server using
+/token
+.
+Request the decryption key by calling the License Server’s
+/key
+endpoint with the token and the asset URL.
+Decrypt the asset locally using the returned JWK and (if provided) initialization vector (iv).
+Example Decryption Command (informative)
+bash
+openssl
+enc
+-d
+-aes-256-gcm
+-in
+episode-1.mp4.enc
+-out
+episode-1.mp4
+\
+-K
+1a7d9af3c8e2b8f7e1a6c0b3d5e8f2a1c6b9d4e7f8a3b2c1d0e9f6
+\
+-iv
+f1e2d3c4b5a6987867564534
+8. Security Considerations
+​
+RSL license documents can influence automated access-control and payment decisions. Implementations MUST retrieve RSL files and related license metadata only over HTTPS to ensure authenticity and confidentiality. Clients SHOULD validate integrity where digital signatures or authenticated transport mechanisms are available.
+License servers and resource servers MUST authenticate clients before issuing or honoring license tokens. Endpoints that provide
+/token
+,
+/introspect
+, or
+/key
+functions SHOULD apply rate limiting and input validation to prevent enumeration and abuse.
+When distributing encryption keys through the Encrypted Media Standard (EMS), implementers MUST protect key material using authenticated encryption and ensure that symmetric keys are never transmitted in plaintext. Replay protection, token expiration, and clock synchronization SHOULD be implemented to reduce the risk of replay or timing attacks.
+9. Privacy Considerations
+​
+RSL deployments may involve processing identifiers for publishers, platforms, crawlers, or end-users. Logs of license acquisition or token validation events may constitute personal data under applicable privacy regulations.
+Operators SHOULD minimize data collection, avoid correlating identifiers across services, and apply strict data-retention limits. Where feasible, RSL tokens SHOULD be treated as opaque and non-reversible to prevent linking client activity across domains.
+License servers and resource servers SHOULD disclose their privacy practices in human-readable form and MUST comply with relevant data-protection laws. Implementations SHOULD avoid embedding personally identifiable information within license metadata or XML attributes.
+10. IANA Considerations and Normative Changes to RFCs
+​
+This section registers new protocol elements and proposes normative updates to existing RFCs required for the implementation of the Really Simple Licensing (RSL) standard. Unless otherwise specified, all IANA actions defined in this section are
+permanent
+.
+IANA is requested to register the following media type in the
+application
+tree defined by [
+RFC 6838
+]:
+Type & Subtype name
+Reference
+Notes
+application
+,
+rsl+xml
+Section 2.2
+RSL License media type
+10.2. HTTP Authentication Scheme Registration
+​
+IANA is requested to register the following authentication scheme in the
+HTTP Authentication Scheme Registry
+defined by [
+RFC 9110
+]:
+Scheme name
+Reference
+Notes
+License
+Section 6.2
+Carries a License Token
+10.3. Extension to the Robots Exclusion Protocol (RFC 9309)
+​
+This document normatively extends the
+Robots Exclusion Protocol
+[
+RFC 9309
+] defining a new directive for declaring the license governing a website or resource set.
+Directive name
+Reference
+Description
+License
+Section 4.4
+Specifies a URL pointing to an RSL license document
+11. Acknowledgments
+​
+Development of the Really Simple Licensing (RSL) standard was a collaborative effort by publishers, technologists, standards engineers, and platform operators committed to building a sustainable, rights-respecting foundation for the open web.
+The authors thank the following individuals and organizations for their substantial contributions to the design, review, and testing of this specification:
+Elisabeth Douglas (Wikihow)
+Tony Stubblebine (Medium)
+Tim O'Reilly (O'Reilly Publishing)
+Doug Leeds (RSL Collective)
+Jonathan Roberts (People Inc.)
+Will Allen (Cloudflare)
+Timid Robot Zehta (Creative Commons)
+This document draws inspiration from earlier web standards, particularly RSS, Robots Exclusion Protocol, Creative Commons, HTML Encrypted Media Extensions, and OAuth 2.0, whose enduring influence helped define this specification.
+12. References
+​
+12.1 Normative References
+​
+[RFC 2119]
+S. Bradner, “
+Key words for use in RFCs to Indicate Requirement Levels
+”, BCP 14,
+RFC 2119
+, March 1997.
+[RFC 3339]
+G. Klyne and C. Newman, “
+Date and Time on the Internet: Timestamps
+”,
+RFC 3339
+, July 2002.
+[RFC 3986]
+T. Berners-Lee, R. Fielding, and L. Masinter, “
+Uniform Resource Identifier (URI): Generic Syntax
+”,
+RFC 3986
+, January 2005.
+[RFC 6749]
+D. Hardt, “
+The OAuth 2.0 Authorization Framework
+”,
+RFC 6749
+, October 2012.
+[RFC 6750]
+M. B. Jones, D. Hardt, and D. Recordon, “
+The OAuth 2.0 Authorization Framework: Bearer Token Usage
+”,
+RFC 6750
+, October 2012.
+[RFC 7517]
+M. Jones, “
+JSON Web Key (JWK)
+”,
+RFC 7517
+, May 2015.
+[RFC 7617]
+J. Reschke,
+The “Basic” HTTP Authentication Scheme
+,
+RFC 7617
+, September 2015.
+[RFC 7662]
+J. Richer, “
+OAuth 2.0 Token Introspection
+”,
+RFC 7662
+, October 2015.
+[RFC 9110]
+R. Fielding, M. Nottingham, J. Reschke “
+HTTP Semantics
+”,
+RFC 9110
+, June 2022.
+[RFC 9309]
+M. D. Brown and E. B. Klein, “
+Robots Exclusion Protocol
+”,
+RFC 9309
+, August 2022.
+[ISO 3166-1]
+ISO,
+"
+Codes for the representation of names of countries and their subdivisions — Part 1: Country code
+"
+, ISO 3166-1:2020, 2020.
+[Content Signals]
+Cloudflare,
+"
+Content Signals
+"
+, September 2025.
+[RELAX NG]
+M. Murata, et al., “RELAX NG Specification”, OASIS, December 2001.
+12.2 Informative References
+​
+[RSS]
+RSS Advisory Board,
+“
+RSS 2.0 Specification
+”
+, March, 2009.
+[ATOM]
+M. Nottingham and R. Sayre, “
+The Atom Syndication Format
+”,
+RFC 4287
+, December 2005.
+[AI Preferences]
+P. Keller and M. Thomson, "
+A Vocabulary For Expressing AI Usage Preferences
+",
+IETF Draft
+, October 2025.
+[x402]
+x402 Foundation,
+"
+x402 payments protocol
+"
+, October 2025.
+[Web Bot Auth]
+T. Meunier, "
+HTTP Message Signatures for automated traffic Architecture
+",
+IETF Draft
+, October 2025.
+[Dublin Core]
+DCMI,
+"
+Dublin Core Metadata Initiative
+"
+, January 2020.
+[Schema.org]
+Schema.org,
+"
+CreativeWork schema
+"
+, June 2011.
+[Creative Commons]
+Creative Commons,
+"
+CC Licenses
+"
+, 2019.
+[RightsML]
+IPTC,
+"
+IPTC RightsML Standard 2.0
+"
+, August 2018.
+[ODRL]
+W3C,
+"
+ODRL Information Model 2.2
+"
+, February 2018.
+Appendix A. RSL Relax NG Compact Schema
+​
+This Relax NG schema defines the XML structure of RSL documents and explicitly excludes elements in the RSL namespace that are not defined in this revision of the specification.
+All elements and attributes are in the
+https://rslstandard.org/rsl
+namespace unless otherwise noted.
+text
+# RELAX NG Compact Syntax Grammar for RSL Version 1.0 (STRICT)
+default namespace = "https://rslstandard.org/rsl"
+namespace rsl = "https://rslstandard.org/rsl"
+namespace xsd = "http://www.w3.org/2001/XMLSchema-datatypes"
+# Namespace extensions
+foreignAttribute =
+attribute * - rsl:* { text }
+foreignElement =
+element * - rsl:* {
+(attribute * { text } | text | foreignElementContent)*
+}
+foreignElementContent =
+element * {
+(attribute * { text } | text | foreignElementContent)*
+}
+qnameToken = xsd:token {
+pattern = "[A-Za-z_][A-Za-z0-9_.-]*:[A-Za-z_][A-Za-z0-9_.-]*"
+}
+# Primitives
+boolLower   = "true" | "false"
+iso4217     = xsd:string { pattern = "[A-Z]{3}" }
+geoToken    = xsd:token  { pattern = "([A-Z]{2}|EU)" }
+absoluteURI = xsd:anyURI { pattern = "[A-Za-z][A-Za-z0-9+.-]*:.*" }
+httpsURI = xsd:anyURI { pattern = "https://.+" }
+# Vocabularies
+rslUsageToken   = "all" | "ai-all" | "ai-train" |
+"ai-input" | "ai-index" | "search"
+usageToken      = rslUsageToken | qnameToken
+rslUserToken    = "commercial" | "non-commercial" |
+"education" | "government" | "personal"
+userToken       = rslUserToken | qnameToken
+rslPaymentToken = "purchase" | "subscription" | "training" |
+"crawl" | "use" | "contribution" |
+"attribution" | "free"
+paymentToken    = rslPaymentToken | qnameToken
+reportingToken = "telemetry" | "provenance" | "audit"
+warrantyToken   = "ownership" | "authority" | "no-infringement" |
+"privacy-consent" | "no-malware"
+disclaimerToken = "as-is" | "no-warranty" |
+"no-liability" | "no-indemnity"
+# Lists
+usageList      = list { usageToken+ }
+userList       = list { userToken+ }
+geoList        = list { geoToken+ }
+warrantyList   = list { warrantyToken+ }
+disclaimerList = list { disclaimerToken+ }
+# Root
+start =
+element rsl {
+attribute max-age { xsd:positiveInteger }?,
+foreignAttribute*,
+( (content+ & foreignElement*) | foreignElement+ )
+}
+# Content Element
+content =
+element content {
+attribute url       { xsd:anyURI | "" },
+attribute server    { xsd:anyURI }?,
+attribute encrypted { boolLower }?,
+attribute lastmod   { xsd:dateTime }?,
+( license+ &
+alternate* &
+schema? &
+copyright? &
+terms? &
+foreignElement*
+)
+}
+# License Element
+license =
+element license {
+( permitsUsage? & permitsUser? & permitsGeo? &
+prohibitsUsage? & prohibitsUser? & prohibitsGeo? &
+payment? &
+reporting* &
+legalWarranty? & legalDisclaimer? &
+legalAttestation? & legalContact? & legalProof? &
+foreignElement*
+)
+}
+# Permits Types
+permitsUsage = element permits { attribute type { "usage" }, usageList }
+permitsUser  = element permits { attribute type { "user"  }, userList  }
+permitsGeo   = element permits { attribute type { "geo"   }, geoList   }
+# Prohibits Types
+prohibitsUsage = element prohibits { attribute type { "usage" }, usageList }
+prohibitsUser  = element prohibits { attribute type { "user"  }, userList  }
+prohibitsGeo   = element prohibits { attribute type { "geo"   }, geoList   }
+# Payment Element
+payment =
+element payment {
+attribute type { paymentToken }?,
+(standard? & custom? & amount? & accepts? & foreignElement*)
+}
+# Reporting Element
+reporting =
+element reporting {
+attribute type { reportingToken },
+attribute profile { absoluteURI },
+attribute endpoint { httpsURI }?,
+text?
+}
+# Standard Element
+standard = element standard { absoluteURI }
+# Custom Element
+custom = element custom { xsd:anyURI }
+# Amount Element
+amount =
+element amount {
+attribute currency { iso4217 },
+xsd:decimal
+}
+# Accepts Element
+accepts =
+element accepts {
+attribute type { xsd:string },
+text
+}
+# Legal Element
+legalWarranty =
+element legal { attribute type { "warranty"  }, warrantyList }
+legalDisclaimer =
+element legal { attribute type { "disclaimer" }, disclaimerList }
+legalAttestation =
+element legal { attribute type { "attestation" }, boolLower }
+legalContact =
+element legal { attribute type { "contact" }, xsd:anyURI | xsd:string }
+legalProof =
+element legal { attribute type { "proof" }, list { absoluteURI+ } }
+# Alternate Element
+alternate =
+element alternate {
+attribute type { xsd:string }?,
+xsd:anyURI
+}
+# Schema Element
+schema =
+element schema {
+attribute type { "application/ld+json" }?,
+( xsd:anyURI | text )
+}
+# Copyright Element
+copyright =
+element copyright {
+attribute type         { "person" | "organization" }?,
+attribute contactEmail { xsd:string }?,
+attribute contactUrl   { xsd:anyURI }?,
+text
+}
+# Terms Element
+terms = element terms { xsd:anyURI }
+Copyright © 2025 RSL Collective. Licensed under
+CC BY-ND 4.0
+.
+“RSL” and “Really Simple Licensing” are trademarks of the RSL Collective.

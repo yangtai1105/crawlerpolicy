@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--c3a64a983b03d35d",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
+  "published_at": "2026-06-30T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--c3a64a983b03d35d.json",
+  "content_hash": "sha256:3faffbe8499ba311861cd2afb9b3ce5b6886e1b8939aad758928536968d5d0cb",
+  "external_id": "https://openai.com/index/core-dump-epidemiology-data-infrastructure-bug",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrXqTMfjgpJXPkZvGZ'}",
+  "title": "Core dump epidemiology: fixing an 18-year-old bug",
+  "content": "OpenAI engineers used large-scale core dump analysis to debug rare infrastructure crashes, uncovering both a hardware fault and a long-standing software bug.",
+  "previous_content": "",
+  "unified_diff": ""
+}

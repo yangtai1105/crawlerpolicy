@@ -1,0 +1,17 @@
+{
+  "evidence_id": "mcp-spec--98e8b4f866834ac4",
+  "source": "mcp-spec",
+  "source_url": "https://github.com/modelcontextprotocol/modelcontextprotocol/releases/tag/2026-07-28",
+  "published_at": "2026-07-28T16:47:49Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/mcp-spec/mcp-spec--98e8b4f866834ac4.json",
+  "content_hash": "sha256:84c12ccaf10a6a674c706a7bbb9b9a74af19e683928c1238d40c9b2387efaa43",
+  "external_id": "release:361238863",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrMGxTRnKCitLdZW5r'}",
+  "title": "Release 2026-07-28",
+  "content": "This release marks the **stable release** of the `2026-07-28` revision of the Model Context Protocol.\n\nThe specification is available on the [official Model Context Protocol website](https://modelcontextprotocol.io/specification/2026-07-28).\n\nFor a detailed overview of changes, see [2026-07-28 changelog](https://modelcontextprotocol.io/specification/2026-07-28/changelog).\n",
+  "previous_content": "",
+  "unified_diff": ""
+}

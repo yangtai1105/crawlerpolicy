@@ -1,5 +1,7 @@
 {
-  "last_checked_at": "2026-08-21T08:39:10.617241+00:00",
+  "last_checked_at": "2026-08-30T05:51:00.726967+00:00",
+  "last_fetch_succeeded_at": "2026-08-30T05:51:00.726967+00:00",
+  "last_evidence_at": "2026-08-30T05:51:00.726967+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "5t83bTn7Vt1EudTxQQ97NY",
@@ -112,8 +114,10 @@
     "01M00Y54SDH5EBZBFJ1FQZ2BX9",
     "01M0E1JC8D74SDDVJCVBVX8EFA",
     "01M0TDEVJZ66N7RGSKFA27M2WZ",
-    "01M11810QJGXPR0NHE510EFS6F"
+    "01M11810QJGXPR0NHE510EFS6F",
+    "01M0GDENDTZTAJ4BWXRH29NYBZ",
+    "01M0GEDGHWE8A801RQP25T1R91"
   ],
-  "consecutive_failures": 8,
+  "consecutive_failures": 0,
   "first_seen": false
 }

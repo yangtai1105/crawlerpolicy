@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--d045e1d290423d2d",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/disrupting-malicious-uses-of-ai-data-center-bandwagon",
+  "published_at": "2026-06-01T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--d045e1d290423d2d.json",
+  "content_hash": "sha256:4114955257eeb47a0e02b5a062e30acdb82731f867b9fecddc6c50e0ff8db20d",
+  "external_id": "https://openai.com/index/disrupting-malicious-uses-of-ai-data-center-bandwagon",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "“Data Center Bandwagon” Campaign: US-targeted influence activity",
+  "content": "OpenAI banned a likely PRC-origin cluster using AI to generate social media content criticizing US data centers and AI infrastructure.",
+  "previous_content": "",
+  "unified_diff": ""
+}

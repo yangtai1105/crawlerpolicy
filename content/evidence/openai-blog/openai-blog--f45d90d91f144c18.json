@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--f45d90d91f144c18",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+  "published_at": "2026-06-24T06:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--f45d90d91f144c18.json",
+  "content_hash": "sha256:68954a1debf608068a5f0676e70e90760bcc0a960d5de1faee3610213f73e302",
+  "external_id": "https://openai.com/index/openai-broadcom-jalapeno-inference-chip",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "OpenAI and Broadcom unveil LLM-optimized inference chip",
+  "content": "OpenAI and Broadcom introduce Jalapeño, a custom AI chip built for LLM inference to improve performance, efficiency, and scale across AI systems.",
+  "previous_content": "",
+  "unified_diff": ""
+}

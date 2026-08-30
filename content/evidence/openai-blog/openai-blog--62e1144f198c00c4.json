@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--62e1144f198c00c4",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/public-policy-agenda",
+  "published_at": "2026-06-03T10:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--62e1144f198c00c4.json",
+  "content_hash": "sha256:12a5774a41cebf6ea0d66d5cd25ca923e1a7aa39f47f5075ba880e15814d30dd",
+  "external_id": "https://openai.com/index/public-policy-agenda",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "OpenAI public policy agenda",
+  "content": "OpenAI outlines its public policy agenda for AI, including safety, youth protection, workforce transition, and global standards to ensure AI benefits society.",
+  "previous_content": "",
+  "unified_diff": ""
+}

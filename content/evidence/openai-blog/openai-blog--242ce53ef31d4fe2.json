@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--242ce53ef31d4fe2",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/scientific-computing-agentic-ai",
+  "published_at": "2026-07-28T17:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--242ce53ef31d4fe2.json",
+  "content_hash": "sha256:b91892fe79fc855f8254bf94a1d4f651402cacca1e558fd8c3d0a9c10b0c6d04",
+  "external_id": "https://openai.com/index/scientific-computing-agentic-ai",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrV9UymdqHQh9s5QTo'}",
+  "title": "Scientific computing in the age of agentic AI",
+  "content": "A new field report shows how scientists use AI coding agents to modernize scientific computing, accelerating software development and discovery in genomics and beyond.",
+  "previous_content": "",
+  "unified_diff": ""
+}

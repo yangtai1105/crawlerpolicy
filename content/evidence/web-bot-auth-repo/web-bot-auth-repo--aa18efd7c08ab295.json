@@ -1,0 +1,17 @@
+{
+  "evidence_id": "web-bot-auth-repo--aa18efd7c08ab295",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/125",
+  "published_at": "2026-08-13T03:22:43Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--aa18efd7c08ab295.json",
+  "content_hash": "sha256:d3c9617684044e760a911056c575e7d64f15821104514ee8e9a1c7a2aec67478",
+  "external_id": "pr:125",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQr5LGBNHWgJDrb8VKz'}",
+  "title": "PR #125: fix(web-bot-auth): fail closed on expired signatures in Rust verify",
+  "content": "## Summary\n\n`WebBotAuthVerifier::verify` accepted cryptographically valid signatures after `expires`, even though `WebBotAuthError::SignatureIsExpired` already exists and the TypeScript `http-message-sig` verifier rejects expired inputs before crypto verify.\n\nThis makes the Rust Web Bot Auth verifier fail closed on an expired (or unparsable) `expires` window, then proceeds to cryptographic verification only when the window is still valid. The sample under `examples/rust/verify.rs` is updated to match.\n\nAdvisory inspection via `possibly_insecure` remains available through `get_parsed_label()` for callers that want the soft check separately. Generic `MessageVerifier::verify` is unchanged.\n\n## Test plan\n\n- [x] `cargo test -p web-bot-auth --lib` (29 passed)\n- [x] `cargo run -p rust-examples --bin verify`\n- [ ] CI green on this PR\n\n\nMade with [Cursor](https://cursor.com)",
+  "previous_content": "",
+  "unified_diff": ""
+}

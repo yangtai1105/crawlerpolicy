@@ -1,0 +1,17 @@
+{
+  "evidence_id": "datadome-blog--2888ac0be415e3f9",
+  "source": "datadome-blog",
+  "source_url": "https://datadome.co/press/0dwwnt6c/",
+  "published_at": "2026-08-14T17:55:47Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/datadome-blog/datadome-blog--2888ac0be415e3f9.json",
+  "content_hash": "sha256:1cebfcac57499e5f35ba56d89dae285582434e73a1966ac50fec46e738a302d4",
+  "external_id": "https://datadome.co/?p=137391",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQqYKwvsgCVPeGBBFLe'}",
+  "title": "European publishers are getting hit harder by AI bot scraping, report finds",
+  "content": "<div class=\" normal__dots \">\n  \n    <div class=\"component\">\n        <div class=\"content\">\n                    </div>\n\t</div>\n</div>",
+  "previous_content": "",
+  "unified_diff": ""
+}

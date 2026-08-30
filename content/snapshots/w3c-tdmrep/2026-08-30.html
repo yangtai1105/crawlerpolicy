@@ -1,0 +1,477 @@
+This specification defines a simple and practical Web protocol, capable of expressing the reservation of rights relative to text & data mining (TDM) applied to lawfully accessible Web content, and to ease the discovery of TDM licensing policies associated with such content.
+This initiative is a technical answer to the constraints set by the Article 4 of the new
+European Directive on copyright and related rights in the Digital Single Market
+.
+Introduction
+In addition to their significance in the context of scientific research, text and data mining techniques (TDM) are widely used both by private and public entities to analyse large amounts of data (including copyright protected content like text, images, video etc.) in different areas of life and for various purposes, including for government services, complex business decisions and the development of new applications or technologies.
+In a digital environment, TDM usage of copyright protected works can be subject to different terms and conditions, depending on the legal framework. In generic terms, an act of reproduction is required before TDM can be applied on content accessible on the Web; international laws stipulate that such act of reproduction is subject to authorization by rightsholders. So far, analyzing and processing the terms and conditions of a website, contacting rightsholders, seeking for permission and concluding licensing agreements require time and resources.
+In such context, a machine-readable solution which streamlines the communication of TDM rights and licenses available for online copyrighted content is necessary to facilitate the development of TDM applications and reduce the risks of legal uncertainty for TDM actors. Such a solution, that shall rely on a consensus by rightsholders and TDM actors, will optimize the capacity of TDM actors to lawfully access and process useful content at large scale.
+The Directive on copyright and related rights in the Digital Single Market or
+EU Directive 2019/790
+, better known as the "CDSM Directive" (CDSM meaning Copryright in the Digital Single Market), introduces two exceptions or limitations to the rights of rightsholders on lawfully accessible content, for reproductions and extractions for the purposes of TDM:
+In its Article 3, a mandatory exception for research organisations and cultural heritage institutions which carry out TDM for the purposes of scientific research.
+In its Article 4, an exception for any organisation willing to carry out TDM for any purpose other than scientific research, including commercial purposes, which applies on the condition that the use of content for TDM has not been expressly reserved by their rightsholders in an appropriate manner, such as machine-readable means.
+These TDM exceptions apply to TDM usage in the European Union in relation to content from European and foreign rightsholders. Outside of the EU, where the CDSM legislation does not apply, the said exception does not apply: exclusive rights of rightsholders to authorize acts of reproduction are maintained. In such cases, no TDM can be performed without the explicit authorisation of these rightsholders: in these countries, the absence of a reservation of rights by rightsholders cannot be considered as an implicit authorization to reproduce copyrighted content for TDM purpose, and advocating fair use or a similar rule is legally uncertain, as these actions are judged on a case-per-case basis.
+The “opt-out” mechanism introduced by the CDSM Directive is therefore a real opportunity for TDM actors and publishers across countries to define a machine-readable technique able to express not only if TDM rights on specific Web content are reserved or not, but also how rightsholders can be contacted and which licenses are available, if any. This is a tremendous help for TDM actors from all countries looking for legal certainty.
+Terminology
+Rightsholder
+Person or organization that owns the legal rights to something, in our case Web resources
+Wiktionary
+.
+Publisher
+Person or organization that makes Web resources available to the public.
+TDM Actor
+Person or organization practicing TDM (on Web resources in our case).
+TDM Agent
+Software accessing Web resources for TDM purposes.
+TDM License
+Description of the terms and conditions by which a
+TDM Actor
+can process a given Web resource.
+TDM Policy
+Description of the kind of
+TDM Licenses
+a
+TDM Actor
+may obtain from a
+Rightsholder
+.
+TDM Rights
+Rights to process a Web resource via TDM techniques, for a certain purpose (e.g scientific research, commercial).
+Web Resource
+Identifiable thing available on the Web
+Wikipedia
+. Web resources are located using URLs.
+Web page
+Web resource
+formatted in HTML.
+Requirements
+The technical specification shall:
+Specify how
+rightsholders
+can declare the reservation of
+TDM Rights
+on each individual
+Web resource
+they controls.
+Specify how rightsholders can indicate the location of a
+TDM Policy
+associated with each individual Web resource they controls.
+Specify a machine-readable format for TDM Policies.
+Declaring the reservation of TDM Rights
+The goal of this protocol is to allow a rightsholder to declare his choice regarding text & data mining of Web resources he controls, thereby allowing recipients of that declaration to adjust their scraping behavior, or to reach a separate agreement with the rightsholder that satisfies all parties.
+Such a preference is expressed via two complementary properties, `tdm-reservation` and `tdm-policy`.
+tdm-reservation
+`tdm-reservation` is a boolean value.
+tdm-reservation
+meaning
+1
+TDM rights are reserved. If a TDM Policy is set,
+TDM Agents
+MAY use it to get information on how they can acquire from the rightsholder an authorization to mine the content.
+0
+TDM rights are not reserved. TDM agents can mine the content for TDM purposes without having to contact the rightsholder.
+Other values are considered protocol errors. In such a case the TDM Agents MUST consider that `tdm-reservation` is
+unset
+.
+The "opt-out" option specified by the Article 4 of the CDSM Directive is expressed by the use of `tdm-reservation` with value equal
+1
+.
+tdm-policy
+`tdm-policy` is a URL pointing to a TDM Policy set by the rightsholder.
+The presence of `tdm-policy` when the value of `tdm-reservation` is
+0
+is not considered a protocol error. TDM Agents SHOULD NOT process `tdm-policy` in this case.
+A TDM Policy is considered human readable if its content-type is
+text/html
+. It is considered machine-readable if its content-type is either
+application/json
+or
+application/ld+json
+.
+Being unable to access or parse a TDM Policy is not considered a protocol error. In such a case, the TDM Agent MUST consider that there is no way to know at this time which conditions would allow it to process the resource.
+Protocol
+This specification provides four complementary techniques for expressing rightsholders' choices. These  techniques correspond to different situations and technical skills a
+Publisher
+may have. The first two techniques are independant from the nature and format of the content on which an "opt-out" is applied. The other one refer to formats seen as particularly important in the publishing industry: HTML and EPUB.
+TDM File on the Origin Server
+The TDM file on the origin server is a mechanism for declaring site-wide righsholder's choices in a file hosted on the Web server a TDM Agent wishes to mine. Checking this file is the first thing an TDM Agent must do (see section
+Processing Priority
+).
+An origin server that receives a valid GET request targeting this resource MUST send either a successful response containing a machine-readable representation of the site-wide righsholder's choices, as defined below, or a sequence of redirects that leads to such a representation. Failure to provide access to such a representation implies that the origin server does not implement this protocol.
+This specification defines a JSON file named
+tdmrep.json
+, which MUST be hosted in the
+/.well-known
+repository of a Web server.
+This file contains an array of JSON objects; each object represents a rule and accepts three properties:
+location
+: a pattern matching the path of a set of files hosted on the server, associated with the sibling TDM properties.
+tdm-reservation
+: a TDM reservation value associated with the current pattern.
+tdm-policy
+: an optional TDM Policy value associated with the current pattern.
+In each rule, `location` and `tdm-reservation` are mandatory, `tdm-policy` is optional.
+To evaluate if the URL of a Web resource is subject to a given pattern, a TDM Agent MUST match the paths inferred from the pattern against the URL. The matching SHOULD be case sensitive. The most specific match found MUST be used. The most specific match is the first in sequence.
+If no match is found, a TDM Agent MUST consider that `tdm-reservation` is
+unset
+for the given URL.
+If a percent-encoded US-ASCII character is encountered in the URI, it MUST be unencoded prior to comparison, unless it is a reserved character in the URI as defined by RFC3986 or the character is outside the unreserved character range.  The match evaluates positively if and only if the end of the path from the rule is reached before a difference in octets is encountered.
+Use of regular expressions
+There are many variants of regular expressions. In order to simplify the work of TDM Agents, this specification is re-using the specification and wording of the
+robots.txt draft-koster-rep-00 2.2.3
+.
+TDM Agents MUST allow the following special characters:
+Character
+Description
+Example
+"$"
+Designates the end of the match pattern.
+"tdm-policy: /this/path/exactly$"
+"*"
+Designates 0 or more instances of any character.
+"tdm-policy: /this/*/then"
+If TDM Agents match special characters verbatim in the URI, they MUST use "%" encoding.  For example:
+Pattern
+URI
+/path/foo-%24
+https://provider.com/path/foo-$
+Examples
+In the following example, a rightsholder wants to "opt-out" for every file present on a Web server.
+`tdmrep.json` is therefore simply structured as:
+[
+{
+"location": "/",
+"tdm-reservation": 1
+}
+]
+Note the brackets at the start and end of the file. They indicate that this is a JSON array, and they are mandatory even if you express only one rule. In this example, the provider has decided not to offer a TDM policy.
+In the following example, a Web server is hosting three groups of files. The rightsholder of the first group of files (PDF documents) wants to express that TDM rights are reserved on these files with no way to acquire a
+TDM License
+. The rightsholder of the second group of files (html pages) wants to express that TDM rights are reserved with a TDM Policy. TDM rights are not reserved for all JPEG images contained in the third group.
+In this example, the first group is a set of files stored in /directory-a; the second group is stored in /directory-b/html and the third group in /directory-b/images.
+`tdmrep.json` is therefore structured as:
+[
+{
+"location": "/directory-a/",
+"tdm-reservation": 1
+},
+{
+"location": "/directory-b/html/",
+"tdm-reservation": 1,
+"tdm-policy":"https://provider.com/policies/policy.json"
+},
+{
+"location": "/directory-b/images/*.jpg",
+"tdm-reservation": 0
+}
+]
+TDM Metadata in EPUB 2 files
+This technique provides a way to embed the rightsholder's choice into an EPUB 2 file.
+`tdm:reservation` and the optional `tdm:policy` are two metadata elements added to the metadata section of the EPUB Package Document, using the <meta> element and the associated `name` and `content` properties.
+These properties cover TDM rights for every resource in the package, and this specification does not cover the definition of specific TDM rights for the different resources present in the package.
+In the following example, the rightsowner signals that he reserves TDM rights on every resource of the EPUB file, but a TDM License may be acquired.
+<package version="2.0" ...>
+<metadata ...>
+<dc:title>Document title</dc:title>
+<meta name="tdm:reservation" content="1" />
+<meta name="tdm:policy" content="https://provider.com/policies/policy.json" />
+</metadata>
+</package>
+TDM Metadata in EPUB 3 files
+This technique provides a way to embed the rightsholder's choice into an EPUB 3 file.
+`tdm:reservation` and the optional `tdm:policy` are two properties added to the metadata section of the EPUB Package Document, using the <meta> element and the associated `property` attribute. They both use the `tdm` prefix, which is a shorthand mapping for the `http://www.w3.org/ns/tdmrep#` URL.
+These properties cover TDM rights for every resource in the package, and this specification does not cover the definition of specific TDM rights for the different resources present in the package.
+In the following example, the rightsowner signals that he reserves TDM rights on every resource of the EPUB file, but a TDM License may be acquired.
+<package prefix="tdm: http://www.w3.org/ns/tdmrep#" ...>
+<metadata ...>
+<dc:title>Document title</dc:title>
+<meta property="tdm:reservation">1</meta>
+<meta property="tdm:policy">https://provider.com/policies/policy.json</meta>
+</metadata>
+</package>
+TDM Metadata in PDF files
+This technique provides a way to embed the rightsholder's choice into a PDF file.
+`tdm:reservation` and the optional `tdm:policy` are two elements added to the XMP metadata section of the PDF. They both use the `tdm` namespace prefix, which is a shorthand mapping for the `http://www.w3.org/ns/tdmrep/` URL.
+These properties cover TDM rights for every page in the document.
+In the following example, the rightsowner signals that he reserves TDM rights on the PDF document, but a TDM License may be acquired.
+<rdf:RDF xmlns:rdf=http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+<rdf:Description rdf:about=""
+...
+xmlns:tdm="http://www.w3.org/ns/tdmrep/">
+<tdm:reservation>1</tdm:reservation>
+<tdm:policy>https://publisher.com/policies/policy.json</tdm:policy>
+</rdf:Description>
+</rdf:RDF>
+A PDF/A validator will raise errors if TDMRep properties are present in the XMP metadata section of a PDF document.
+Processing priority
+Rightsholders SHOULD only use one of the techniques specified in the previous section. In case TDM rights are expressed using several techniques on a given Web Server, TDM Agents need a way to unambiguously define rightsholder's choices. This is why the following processing rules are specified.
+A TDM Agent MUST check the presence of a TDM file on the origin server before it starts scraping the content of the Web server.
+A TDM Agent must keep in cache the content of the TDM file, usually as an in-memory object, to optimize further processing.
+A TDM Agent MUST check the presence of a TDM Header Field in every http header it gets from fetching a resource on the Web server. The values of `tdm-reservation` and `tdm-policy` found in this header supercede any value inferred from a TDM file on the origin server.
+A TDM Agent MUST check the presence of TDM Metadata in every html file fetched from the Web server. The values of `tdm-reservation` and `tdm-policy` found here supercede previous values.
+A TDM Agent MUST check the presence of TDM Metadata in every EPUB or PDF file fetched from the Web server. The values of `tdm:reservation` and `tdm:policy` found here supercede previous values.
+At every step, the absence of `tdm-reservation` and `tdm-policy` MUST not reset current values.
+Expressing a TDM Policy
+Policies are machine-readable structures referenced from the `tdm-policy` property defined in the specification. They provide ways for TDM Actors to contact content rightsholder and they offer details about available TDM licenses. Thus, they facilitate the acquisition of TDM licenses from rightsholders by TDM Actors.
+The format of policies defined in this specification is a profile of the Open Digital Rights Language 2.2 [[ODRL]].
+This specification assumes basic knowledge of JSON-LD and the ODRL model and vocabulary.
+Specification of the TDM Policy
+JSON-LD context and identifier of a Policy
+The `@context` of a Policy MUST be an array of two values: `http://www.w3.org/ns/odrl.jsonld` and `http://www.w3.org/ns/tdmrep.jsonld`.
+A policy identifier MUST also be added to the policy, expressed as a URI.
+It is not required that the policy identifier is dereferencable. Our recommendation is to use the domain name of the Web server, add "/policies/", and add a number to it, just in case you decided later to manage different license policies. An alternative solution is to use as identifier the URL of the Terms of Use of the Web Site, where the TDM policy is described in human language.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+]
+"uid": "https://provider.com/policies/1",
+...
+}
+Type of a Policy
+The `@type` of a Policy MUST have `Offer` as value.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"uid": "https://provider.com/policies/1",
+"@type": "Offer",
+...
+}
+Identification of the profile
+A Policy MUST have a `profile` property with value `http://www.w3.org/ns/tdmrep`
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"uid": "https://provider.com/policies/1",
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+...
+}
+The value of the `profile` property is not dereferencable. This is simply an identifier in the form of a URL.
+Assigner
+A Policy MUST contain one `assigner` property. The `assigner` property of the Offer MUST use a limited number of vCard properties ([[vcard-rdf]]):
+"fn": full name of the rightsholder, as a string
+"nickname": acronym of the rightsholder, as a string
+"hasEmail": email address of the rightsholder, as a URI starting with "mailto:"
+"hasAddress": postal address of the righsholder, as an object containing "vcard:street-address", "vcard:postal-code", "vcard:locality" and "vcard:country-name", which have string values
+"hasTelephone": telephone of the rightsholder, as a URI starting with "tel:"
+"hasURL": URL of a Web page containing information about TDM License acquisition.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"uid": "https://provider.com/policies/1",
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"assigner": {
+"uid": "https://provider.com",
+"vcard:fn": "Provider Name",
+"vcard:nickname": "PRV",
+"vcard:hasEmail": "mailto:contact@provider.com",
+"vcard:hasAddress": {
+"vcard:street-address": "111 Street Address",
+"vcard:postal-code": "5555",
+"vcard:locality": "Espérance",
+"vcard:country-name": "France"
+},
+"vcard:hasTelephone": "tel:+61755555555",
+"vcard:hasURL": "https://provider.com/tdm/licensing.html"
+}
+...,
+}
+Permissions
+A Policy MUST contain one `permission` property, which represents an array of permissions. A Policy SHOULD not contain any `obligation` or `prohibition` property.
+Expressing the target of a permission
+A permission MAY have a `target` property. If present, the `target` property MUST be a URI identifying the collection of resources associated with the permission.
+This property is optional. It can be used by a publisher to identify a collection of resources on which a specific permission applies. If present, it should be used by TDM Agents in their messages to publishers.
+The target URI is not necessarily dereferenceable, even if it is a URL. Accessing such URL may end with an http error: this is not a processing error.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"uid": "https://provider.com/policies/1",
+...
+"permission": [{
+"target": "https://provider.com/research-papers",
+...
+}
+]
+}
+Expressing the action of a permission
+The mandatory action of a permission, which is expressed via the `action` property, MUST be the following:
+tdm:mine
+Definition
+: analyse, via automated analytical technique, text and data in digital form in order to generate information which includes but is not limited to patterns, trends and correlations.
+Label
+: Text & Data Mine
+Identifier
+: http://www.w3.org/ns/tdmrep#mine
+Included in
+: http://www.w3.org/ns/odrl/2/use
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"uid": "https://provider.com/policies/1",
+...
+"permission": [{
+"action": "tdm:mine"
+}
+]
+}
+Expressing the duty to contact the rightsholder before getting a permission
+The duty to obtain verifiable consent before performing TDM on content is expressed by adding an `duty` property to the Policy. The duty is expressed as an `action` property with an `obtainConsent` value.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"uid": "https://provider.com/policies/1",
+...
+"permission": [{
+"action": "tdm:mine",
+"duty": [{
+"action": "obtainConsent"
+}
+]
+}
+]
+}
+Expressing the duty to compensate financially the rightsholder
+The duty to compensate financially the mining of content is expressed by adding a `duty` property to the Permission. The duty is expressed as an `action` property with a `compensate` value.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"uid": "https://provider.com/policies/1",
+...,
+"permission": [{
+"action": "tdm:mine",
+"duty": [{
+"action": "compensate"
+}
+]
+}
+]
+}
+Expressing a constraint on the type of usage
+The permission to mine content for a given type of usage only is expressed by adding a `constraint` property to the Policy. The usage type is expressed as a `purpose` value on a `leftOperand` property, the `operator` property takes `eq` as value and the `rightOperand` property takes one of the following values:
+The following properties, `tdm:research` and `tdm:non-research`, are experimental at this point. They have been discussed in the context of the use of the TDM Reservation Protocol outside Europe, where TDM by scientific research organizations and for research purposes is legally allowed without restriction. They may well be soon replaced by other kinds of constraints of mining purposes.
+tdm:research
+Definition
+: designates research purposes.
+Label
+: Research purpose
+Identifier
+: http://www.w3.org/ns/tdmrep#research
+Included in
+: http://www.w3.org/ns/odrl/2/rightOperand
+tdm:non-research
+Definition
+: designates non-research purposes, including commercial ones.
+Label
+: Non-research purpose
+Identifier
+: http://www.w3.org/ns/tdmrep#non-research
+Included in
+: http://www.w3.org/ns/odrl/2/rightOperand
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"uid": "https://provider.com/policies/1",
+...
+"permission": [{
+"action": "tdm:mine",
+"constraint": [{
+"leftOperand": "purpose",
+"operator": "eq",
+"rightOperand": "tdm:research"
+}
+]
+}
+]
+}
+Full Examples
+In this example, the rightsholder requires TDM Actors to contact him for obtaining licensing rights. The rightsholder provides detailed contact information using the W3C vCard Ontology.
+Important note: TDM Actors which benefit from the Article 3 of the CDSM Directive do not have to comply to this requirement.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"uid": "https://provider.com/policies/1",
+"assigner": {
+"uid": "https://provider.com",
+"vcard:fn": "Provider",
+"vcard:hasEmail": "mailto:contact@provider.com",
+"vcard:hasAddress": {
+"vcard:street-address": "111 Street Address",
+"vcard:postal-code": "5555",
+"vcard:locality": "Espérance",
+"vcard:country-name": "France"
+},
+"vcard:hasTelephone": "tel:+61755555555",
+"vcard:hasURL": "https://provider.com/tdm/licensing.html"
+},
+"permission": [{
+"action": "tdm:mine",
+"duty": [{
+"action": "obtainConsent"
+}
+]
+}
+]
+}
+There is no mandatory property in the previous example. Just keep the properties you really see as useful. The `vcard:hasURL` property is especially useful if a Web page explains in human language what is the publisher's TDM policy.
+In this example, the rightsholder expresses that non-research Actors from any country can mine its content if they agree to pay a fee.
+{
+"@context": [
+"http://www.w3.org/ns/odrl.jsonld",
+"http://www.w3.org/ns/tdmrep.jsonld"
+],
+"@type": "Offer",
+"profile": "http://www.w3.org/ns/tdmrep",
+"uid": "https://provider.com/policies/1",
+"assigner": {
+"uid": "https://provider.com",
+"vcard:fn": "Provider",
+"vcard:hasEmail": "mailto:contact@provider.com",
+},
+"permission": [{
+"action": "tdm:mine",
+"duty": [{
+"action": "compensate"
+}
+],
+"constraint": [{
+"leftOperand": "purpose",
+"operator": "eq",
+"rightOperand": "tdm:non-research"
+}
+]
+}
+]
+}

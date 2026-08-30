@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--e0725e136719a74a",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+  "published_at": "2026-06-03T13:15:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--e0725e136719a74a.json",
+  "content_hash": "sha256:5f03c2475dcddacab2d3692cfc5b502ee249942c4505656e0864e7ef90bf6cf6",
+  "external_id": "https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing new capabilities to GPT-Rosalind",
+  "content": "GPT-Rosalind advances life sciences research with enhanced biological reasoning, medicinal chemistry expertise, genomics analysis, and experimental workflow capabilities.",
+  "previous_content": "",
+  "unified_diff": ""
+}

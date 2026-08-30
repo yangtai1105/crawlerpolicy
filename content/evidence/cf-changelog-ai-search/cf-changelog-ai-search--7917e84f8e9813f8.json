@@ -1,0 +1,17 @@
+{
+  "evidence_id": "cf-changelog-ai-search--7917e84f8e9813f8",
+  "source": "cf-changelog-ai-search",
+  "source_url": "https://developers.cloudflare.com/changelog/post/2026-08-26-new-workers-ai-models/",
+  "published_at": "2026-08-26T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/cf-changelog-ai-search/cf-changelog-ai-search--7917e84f8e9813f8.json",
+  "content_hash": "sha256:cbec215a8b6a68692a11d7f575b86fdf62081dd35101213faff6e89d4c8127a2",
+  "external_id": "https://developers.cloudflare.com/changelog/post/2026-08-26-new-workers-ai-models/",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrhBHVsza1c3bGBwAv'}",
+  "title": "AI Search - New Workers AI text generation models in AI Search",
+  "content": "<p><a href=\"https://developers.cloudflare.com/ai-search/\">AI Search</a> now supports six additional <a href=\"https://developers.cloudflare.com/workers-ai/\">Workers AI</a> models for text generation:</p>\n<div class=\"table-scroll\" tabindex=\"0\"><table>\n<thead>\n<tr>\n<th>Model</th>\n<th>Context window (tokens)</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><code>@cf/deepseek-ai/deepseek-v4-flash-0731</code></td>\n<td>1,048,576</td>\n</tr>\n<tr>\n<td><code>@cf/deepseek-ai/deepseek-v4-pro-0813</code></td>\n<td>1,048,576</td>\n</tr>\n<tr>\n<td><code>@cf/openai/gpt-oss-120b</code></td>\n<td>128,000</td>\n</tr>\n<tr>\n<td><code>@cf/openai/gpt-oss-20b</code></td>\n<td>128,000</td>\n</tr>\n<tr>\n<td><code>@cf/qwen/qwen3.8-27b</code></td>\n<td>262,144</td>\n</tr>\n<tr>\n<td><code>@cf/moonshotai/kimi-k2.7-code</code></td>\n<td>262,144</td>\n</tr>\n</tbody>\n</table></div>\n<p>These models run on Workers AI, so they do not require an additional provider key. Select a model when creating or updating an AI Search instance in the dashboard or through the API.</p>\n<p>For the full list of supported models, refer to <a href=\"https://developers.cloudflare.com/ai-search/configuration/models/supported-models/\">Supported models</a>.</p>",
+  "previous_content": "",
+  "unified_diff": ""
+}

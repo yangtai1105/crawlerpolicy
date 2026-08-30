@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--6bf0486cce41afda",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/election-safeguards-2026",
+  "published_at": "2026-05-27T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--6bf0486cce41afda.json",
+  "content_hash": "sha256:de550757df7b4be613b3101cd913d8b34802f1048a850abe8940fa77d861b20c",
+  "external_id": "https://openai.com/index/election-safeguards-2026",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Election information and safeguards in 2026",
+  "content": "Ahead of global elections, we’re helping people access information, supporting cyber defenders, and increasing AI transparency",
+  "previous_content": "",
+  "unified_diff": ""
+}

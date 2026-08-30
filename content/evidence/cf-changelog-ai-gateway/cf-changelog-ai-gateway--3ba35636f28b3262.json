@@ -1,0 +1,17 @@
+{
+  "evidence_id": "cf-changelog-ai-gateway--3ba35636f28b3262",
+  "source": "cf-changelog-ai-gateway",
+  "source_url": "https://developers.cloudflare.com/changelog/post/2026-06-05-spend-limits/",
+  "published_at": "2026-06-05T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/cf-changelog-ai-gateway/cf-changelog-ai-gateway--3ba35636f28b3262.json",
+  "content_hash": "sha256:bbbcc3d047b6642d105df49e34209ae4f9e47c33fbab543ca3ab679c9553d4ee",
+  "external_id": "https://developers.cloudflare.com/changelog/post/2026-06-05-spend-limits/",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrfRs1xP5LT2VJJ8J1'}",
+  "title": "AI Gateway - Control AI costs with spend limits",
+  "content": "<p>AI Gateway now supports spend limits — cost-based budgets that track cumulative dollar spend and block requests when the budget is exceeded. Unlike rate limiting, which caps the number of requests, spend limits track actual cost based on token usage and model pricing.</p>\n<p>You can scope limits by model, provider, or custom metadata dimensions. For example, give each user a $200/day budget, cap total gateway spend at $10,000/day, or limit a specific model to $50/day per user. Each rule uses a configurable time window with fixed or sliding enforcement.</p>\n<p>Spend limits work with both <a href=\"https://developers.cloudflare.com/ai-gateway/features/unified-billing/\">Unified Billing</a> and <a href=\"https://developers.cloudflare.com/ai-gateway/configuration/bring-your-own-keys/\">BYOK</a> requests for models with known pricing.</p>\n<p>For more details, refer to the <a href=\"https://developers.cloudflare.com/ai-gateway/features/spend-limits/\">Spend limits documentation</a>.</p>",
+  "previous_content": "",
+  "unified_diff": ""
+}

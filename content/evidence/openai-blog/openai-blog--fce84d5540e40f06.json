@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--fce84d5540e40f06",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/frontier-safety-blueprint",
+  "published_at": "2026-06-03T10:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--fce84d5540e40f06.json",
+  "content_hash": "sha256:8233f48809e14cde99d6eeea1a14fc1b15505f39ad942f872dd6db4a2f014d37",
+  "external_id": "https://openai.com/index/frontier-safety-blueprint",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "A blueprint for democratic governance of frontier AI",
+  "content": "OpenAI outlines a blueprint for U.S. governance of frontier AI, proposing a federal framework for safety, resilience, and national security.",
+  "previous_content": "",
+  "unified_diff": ""
+}

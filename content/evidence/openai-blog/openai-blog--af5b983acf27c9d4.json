@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--af5b983acf27c9d4",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/builders-guide-to-gpt-5-6",
+  "published_at": "2026-08-13T11:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--af5b983acf27c9d4.json",
+  "content_hash": "sha256:b034ac5d559c4a15aca5fd4b8faf622a4f823a045cc39cf3b9867bc49bc0b67d",
+  "external_id": "https://openai.com/index/builders-guide-to-gpt-5-6",
+  "stage": "failed_analysis",
+  "analysis_attempts": 1,
+  "last_error": "Error code: 400 - {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}, 'request_id': 'req_011CeYQrT3jDUVtCaQss7XMm'}",
+  "title": "The builder’s guide to GPT‑5.6",
+  "content": "Learn how startups use GPT-5.6 to build faster, more cost-efficient AI agents with smarter model selection and new Responses API capabilities.",
+  "previous_content": "",
+  "unified_diff": ""
+}

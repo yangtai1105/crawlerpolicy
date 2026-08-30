@@ -1,0 +1,17 @@
+{
+  "evidence_id": "openai-blog--02578b0bca888ffd",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/bbva",
+  "published_at": "2026-06-11T00:00:00Z",
+  "detected_at": "2026-08-30T05:51:00.726967Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--02578b0bca888ffd.json",
+  "content_hash": "sha256:462f763e81375c42a6c04235c4ebbf197337190c8b021b4e6e4dc5051bc60fab",
+  "external_id": "https://openai.com/index/bbva",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "BBVA puts AI at the core of banking with OpenAI",
+  "content": "Learn how BBVA scaled ChatGPT Enterprise to 100,000 employees and partnered with OpenAI to accelerate AI-powered banking transformation worldwide.",
+  "previous_content": "",
+  "unified_diff": ""
+}
