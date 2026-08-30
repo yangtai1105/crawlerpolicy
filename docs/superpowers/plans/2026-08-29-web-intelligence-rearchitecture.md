@@ -270,7 +270,7 @@ git commit -m "feat: preserve replayable evidence records"
 - Changes: `write_event(..., event_date, published_at, detected_at, evidence_ids) -> Path`.
 - Consumes: Task 1 `Track`, `SourceTier`; Task 2 evidence IDs.
 
-- [ ] **Step 1: Extend the analyzer fixture and write a failing multi-track test**
+- [x] **Step 1: Extend the analyzer fixture and write a failing multi-track test**
 
 ```python
 async def test_analyzer_returns_tracks_actors_and_confidence(fake_client, primary_source):
@@ -292,7 +292,7 @@ async def test_analyzer_returns_tracks_actors_and_confidence(fake_client, primar
     assert result.confidence == "high"
 ```
 
-- [ ] **Step 2: Write failing schema-v2 writer assertions**
+- [x] **Step 2: Write failing schema-v2 writer assertions**
 
 ```python
 assert "schema_version: 2" in text
@@ -306,31 +306,31 @@ assert "## Why it matters" in text
 assert "## Trend impact" in text
 ```
 
-- [ ] **Step 3: Run tests and confirm schema mismatch**
+- [x] **Step 3: Run tests and confirm schema mismatch**
 
 Run: `uv run pytest tests/test_analyzer.py tests/test_event_writer.py -v`
 
 Expected: FAIL because the current result and frontmatter only know `pillar` and `detected_at`.
 
-- [ ] **Step 4: Expand the analyzer tool schema and prompts**
+- [x] **Step 4: Expand the analyzer tool schema and prompts**
 
 Require `primary_track`, `tracks`, `actors`, `trend_signals`, and `confidence`. Give the model source tier, source default tracks, publication date, and allowed track values. Validate tool output through `validate_tracks`; invalid output falls back to the source's first default track and records `confidence="low"` rather than inventing a category.
 
-- [ ] **Step 5: Replace event frontmatter/body with schema v2**
+- [x] **Step 5: Replace event frontmatter/body with schema v2**
 
 Write canonical YAML lists without adding a YAML dependency. Preserve raw diff only for diffable evidence. Use `Development`, `Why it matters`, `Trend impact`, and `Evidence` headings for all source types.
 
-- [ ] **Step 6: Make trend context schema-v2-only**
+- [x] **Step 6: Make trend context schema-v2-only**
 
 Load current events only from `content/events`, order by `event_date`, and match by source/track without reading `content/legacy-events`. Add a regression test proving a recently detected legacy event cannot enter current trend context.
 
-- [ ] **Step 7: Run focused and full Python tests**
+- [x] **Step 7: Run focused and full Python tests**
 
 Run: `uv run pytest tests/test_analyzer.py tests/test_event_writer.py tests/test_trend_context.py -v && uv run pytest`
 
 Expected: PASS.
 
-- [ ] **Step 8: Commit**
+- [x] **Step 8: Commit**
 
 ```bash
 git add pipeline/analyzer.py pipeline/event_writer.py pipeline/trend_context.py tests/test_analyzer.py tests/test_event_writer.py tests/test_trend_context.py

@@ -208,7 +208,10 @@ async def _process_result(
                 events_dir=cfg.events_dir,
                 source=source,
                 analysis=analysis,
+                event_date=now,
+                published_at=now,
                 detected_at=now,
+                evidence_ids=[],
                 unified_diff=diff.unified_diff,
             )
             new_events.append(path)
@@ -256,7 +259,10 @@ async def _process_result(
                         events_dir=cfg.events_dir,
                         source=source,
                         analysis=analysis,
-                        detected_at=item.published_at or now,
+                        event_date=item.published_at or now,
+                        published_at=item.published_at or now,
+                        detected_at=now,
+                        evidence_ids=[],
                         unified_diff="",
                         source_url=item.url,
                     )

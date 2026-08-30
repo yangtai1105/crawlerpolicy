@@ -17,9 +17,10 @@ from pathlib import Path
 _SLUG_RX = re.compile(r"^slug:\s*(\S+)\s*$", re.MULTILINE)
 _TITLE_RX = re.compile(r'^title:\s*"?(.+?)"?\s*$', re.MULTILINE)
 _SOURCE_RX = re.compile(r"^source:\s*(\S+)\s*$", re.MULTILINE)
-_DETECTED_RX = re.compile(r"^detected_at:\s*(\S+)\s*$", re.MULTILINE)
+_SCHEMA_RX = re.compile(r"^schema_version:\s*(\d+)\s*$", re.MULTILINE)
+_EVENT_DATE_RX = re.compile(r"^event_date:\s*(\S+)\s*$", re.MULTILINE)
 _IMPORTANCE_RX = re.compile(r"^importance:\s*([0-9.]+)\s*$", re.MULTILINE)
-_IMPL_RX = re.compile(r"## Implication\s*\n+(.+?)(?=\n## |\Z)", re.DOTALL)
+_IMPL_RX = re.compile(r"## Why it matters\s*\n+(.+?)(?=\n## |\Z)", re.DOTALL)
 
 
 def load_recent_events_for_source(
@@ -32,37 +33,33 @@ def load_recent_events_for_source(
     """
     if not events_dir.exists():
         return []
-    # Files are named {YYYY-MM-DD}-{source}-{slug}.md — prefix match on source.
-    candidates = sorted(
-        events_dir.glob(f"*-{source_slug}-*.md"),
-        key=lambda p: p.name,
-        reverse=True,
-    )
     events: list[dict] = []
-    for path in candidates[: limit * 2]:  # read a few extra in case of parse fails
+    for path in events_dir.glob("*.md"):
         text = path.read_text()
+        m_schema = _SCHEMA_RX.search(text)
+        if not m_schema or m_schema.group(1) != "2":
+            continue
         # Only keep events whose source field matches exactly (guard against
         # false-positive prefix matches like source=gemini-agent vs gemini-agent-infra).
         m_source = _SOURCE_RX.search(text)
         if not m_source or m_source.group(1) != source_slug:
             continue
         m_title = _TITLE_RX.search(text)
-        m_detected = _DETECTED_RX.search(text)
+        m_event_date = _EVENT_DATE_RX.search(text)
         m_importance = _IMPORTANCE_RX.search(text)
         m_impl = _IMPL_RX.search(text)
-        if not (m_title and m_detected):
+        if not (m_title and m_event_date):
             continue
         events.append(
             {
                 "title": m_title.group(1),
-                "detected_at": m_detected.group(1),
+                "event_date": m_event_date.group(1),
                 "importance": float(m_importance.group(1)) if m_importance else 0.0,
                 "implication": (m_impl.group(1).strip() if m_impl else "")[:400],
             }
         )
-        if len(events) >= limit:
-            break
-    return events
+    events.sort(key=lambda event: event["event_date"], reverse=True)
+    return events[:limit]
 
 
 def format_trend_context(events: list[dict]) -> str:
@@ -74,7 +71,7 @@ def format_trend_context(events: list[dict]) -> str:
         "new item in context; note any patterns, continuations, or reversals):"
     ]
     for e in events:
-        date = e["detected_at"][:10]
+        date = e["event_date"][:10]
         lines.append(f"- [{date}] {e['title']} (importance {e['importance']:.2f})")
         if e["implication"]:
             lines.append(f"  prior implication: {e['implication']}")

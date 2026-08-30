@@ -2,12 +2,13 @@
 from __future__ import annotations
 
 from dataclasses import dataclass
+from datetime import datetime
 from typing import Literal
 
 from anthropic import AsyncAnthropic
 
 from pipeline.sources import Source
-from pipeline.taxonomy import Track
+from pipeline.taxonomy import Track, validate_tracks
 
 # Per-pillar default routing: crawler events are rare (1-2/month) and
 # high-stakes (the whole site's point is catching these), so they get the
@@ -17,6 +18,9 @@ SONNET_MODEL = "claude-sonnet-4-6"
 HAIKU_MODEL = "claude-haiku-4-5-20251001"
 OPUS_MODEL = "claude-opus-4-7"
 
+Confidence = Literal["low", "medium", "high"]
+
+
 @dataclass
 class AnalysisResult:
     change_kind: Literal["material", "cosmetic", "noise"]
@@ -24,6 +28,11 @@ class AnalysisResult:
     title: str
     what_changed: str
     implication: str
+    primary_track: Track
+    tracks: list[Track]
+    actors: list[str]
+    trend_signals: list[str]
+    confidence: Confidence
 
 
 _TOOL = {
@@ -37,8 +46,35 @@ _TOOL = {
             "title": {"type": "string"},
             "what_changed": {"type": "string"},
             "implication": {"type": "string"},
+            "primary_track": {
+                "type": "string",
+                "enum": [track.value for track in Track],
+            },
+            "tracks": {
+                "type": "array",
+                "items": {"type": "string", "enum": [track.value for track in Track]},
+                "minItems": 1,
+                "uniqueItems": True,
+            },
+            "actors": {"type": "array", "items": {"type": "string"}},
+            "trend_signals": {"type": "array", "items": {"type": "string"}},
+            "confidence": {
+                "type": "string",
+                "enum": ["low", "medium", "high"],
+            },
         },
-        "required": ["change_kind", "importance", "title", "what_changed", "implication"],
+        "required": [
+            "change_kind",
+            "importance",
+            "title",
+            "what_changed",
+            "implication",
+            "primary_track",
+            "tracks",
+            "actors",
+            "trend_signals",
+            "confidence",
+        ],
     },
 }
 
@@ -103,6 +139,7 @@ async def analyze_change(
     unified_diff: str,
     trend_context: str = "",
     item_url: str | None = None,
+    published_at: datetime | None = None,
 ) -> AnalysisResult:
     crawler_control_source = Track.CRAWLER_CONTROLS in source.default_tracks
     system = _SYSTEM_BASE + (_CRAWLER_ADDON if crawler_control_source else _NEWS_ADDON)
@@ -110,7 +147,10 @@ async def analyze_change(
     primary_url = item_url or source.url or ""
     user_content_parts = [
         f"Source: {source.display_name}",
+        f"Source tier: {source.tier.value}",
         f"Default tracks: {', '.join(track.value for track in source.default_tracks)}",
+        f"Allowed tracks: {', '.join(track.value for track in Track)}",
+        f"Published at: {published_at.isoformat() if published_at else 'unknown'}",
         f"URL: {primary_url}",
         "",
     ]
@@ -140,12 +180,18 @@ async def analyze_change(
             # (particularly Haiku on long prompts). Fill with safe defaults
             # rather than crashing the whole pipeline run.
             args = dict(block.input or {})
+            primary_track, tracks, confidence = _validated_classification(args, source)
             return AnalysisResult(
                 change_kind=args.get("change_kind", "cosmetic"),
                 importance=float(args.get("importance", 0.3) or 0.3),
                 title=args.get("title") or "(untitled change)",
                 what_changed=args.get("what_changed") or "",
                 implication=args.get("implication") or "",
+                primary_track=primary_track,
+                tracks=tracks,
+                actors=_clean_string_list(args.get("actors")),
+                trend_signals=_clean_string_list(args.get("trend_signals")),
+                confidence=confidence,
             )
     raise RuntimeError("analyzer did not return tool_use")
 
@@ -163,3 +209,25 @@ def _resolve_model(source: Source) -> str:
     if Track.CRAWLER_CONTROLS in source.default_tracks:
         return SONNET_MODEL
     return HAIKU_MODEL
+
+
+def _validated_classification(
+    args: dict, source: Source
+) -> tuple[Track, list[Track], Confidence]:
+    try:
+        primary_track = Track(args.get("primary_track"))
+        tracks = [Track(value) for value in args.get("tracks", [])]
+        validate_tracks(primary_track, tracks)
+        confidence = args.get("confidence", "low")
+        if confidence not in {"low", "medium", "high"}:
+            raise ValueError("invalid confidence")
+        return primary_track, tracks, confidence
+    except (TypeError, ValueError):
+        fallback = source.default_tracks[0]
+        return fallback, [fallback], "low"
+
+
+def _clean_string_list(value: object) -> list[str]:
+    if not isinstance(value, list):
+        return []
+    return list(dict.fromkeys(item.strip() for item in value if isinstance(item, str) and item.strip()))

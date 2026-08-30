@@ -9,6 +9,7 @@ import yaml
 from pipeline.analyzer import AnalysisResult
 from pipeline.check import run_check
 from pipeline.fetchers.base import FetchResult, ResultMode
+from pipeline.taxonomy import Track
 
 
 @pytest.fixture
@@ -80,10 +81,15 @@ async def test_subsequent_change_emits_event(repo):
         return_value=AnalysisResult(
             change_kind="material",
             importance=0.85,
-            title="GPTBot adds section",
-            what_changed="Added.",
-            implication="Important.",
-        )
+                title="GPTBot adds section",
+                what_changed="Added.",
+                implication="Important.",
+                primary_track=Track.CRAWLER_CONTROLS,
+                tracks=[Track.CRAWLER_CONTROLS],
+                actors=["OpenAI"],
+                trend_signals=[],
+                confidence="high",
+            )
     )
     now = datetime(2026, 4, 18, 8, tzinfo=timezone.utc)
 
