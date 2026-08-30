@@ -21,6 +21,10 @@ class Config:
         return self.repo_root / "content" / "events"
 
     @property
+    def evidence_dir(self) -> Path:
+        return self.repo_root / "content" / "evidence"
+
+    @property
     def data_dir(self) -> Path:
         return self.repo_root / "data"
 

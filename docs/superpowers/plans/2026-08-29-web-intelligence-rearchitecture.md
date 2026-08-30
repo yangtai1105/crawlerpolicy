@@ -210,7 +210,7 @@ git commit -m "refactor: introduce web intelligence taxonomy"
 - Produces: `load_evidence(path: Path) -> EvidenceRecord`.
 - Produces: `pending_analysis(root: Path) -> list[tuple[Path, EvidenceRecord]]`.
 
-- [ ] **Step 1: Write failing evidence lifecycle tests**
+- [x] **Step 1: Write failing evidence lifecycle tests**
 
 ```python
 def test_failed_analysis_remains_replayable(tmp_path):
@@ -229,23 +229,23 @@ def test_failed_analysis_remains_replayable(tmp_path):
     assert [item[1].evidence_id for item in queued] == [record.evidence_id]
 ```
 
-- [ ] **Step 2: Run the test to verify failure**
+- [x] **Step 2: Run the test to verify failure**
 
 Run: `uv run pytest tests/test_evidence.py -v`
 
 Expected: FAIL because `pipeline.evidence` does not exist.
 
-- [ ] **Step 3: Implement evidence persistence**
+- [x] **Step 3: Implement evidence persistence**
 
 Use deterministic SHA-256 IDs derived from `source_slug + NUL + external_id`, JSON files at `content/evidence/<source>/<evidence_id>.json`, atomic temp-file replacement, and UTC ISO timestamps. `pending_analysis()` returns `fetched` and `failed_analysis` records ordered by `detected_at`.
 
-- [ ] **Step 4: Add `Config.evidence_dir` and run tests**
+- [x] **Step 4: Add `Config.evidence_dir` and run tests**
 
 Run: `uv run pytest tests/test_evidence.py tests/test_config.py -v`
 
 Expected: PASS.
 
-- [ ] **Step 5: Commit**
+- [x] **Step 5: Commit**
 
 ```bash
 git add pipeline/evidence.py pipeline/config.py tests/test_evidence.py tests/test_config.py
