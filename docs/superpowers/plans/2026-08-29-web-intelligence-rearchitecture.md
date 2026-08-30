@@ -536,23 +536,18 @@ git commit -m "feat: generate persistent weekly intelligence"
 - Modify: `site/src/lib/sources.ts`
 - Modify: `site/src/pages/events/[slug].astro`
 - Create: `site/src/pages/archive/index.astro`
-- Modify: `site/src/components/EventCard.astro`
-- Modify: `site/src/components/HeroBlock.astro`
-- Remove: `site/src/pages/pillars/[pillar].astro`
-- Remove: `site/src/lib/pillar_digests.ts`
-- Remove: `site/src/components/PillarDigestCard.astro`
-- Remove: `site/src/components/PillarTag.astro`
+- Defer to Task 8: replace `EventCard.astro` and `HeroBlock.astro`, then remove the old pillar route, digest loader, and pillar components.
 
 **Interfaces:**
 - Produces Astro collections `events` (schema v2) and `legacyEvents` (schema v1).
 - Produces `loadHealth()`, `loadLatestIntelligence()`, `loadIntelligenceArchive()`, and `loadTrends()`.
 - Preserves `/events/<existing-slug>` for legacy entries.
 
-- [ ] **Step 1: Add schema-v2 fixture and failing Astro build validation**
+- [x] **Step 1: Add schema-v2 fixture and failing Astro build validation**
 
 Create a temporary test fixture under `content/events/` with schema-v2 frontmatter and change the collection schema first. Run `npm run build` from `site`; expect failure until the legacy collection and route resolver are defined.
 
-- [ ] **Step 2: Move legacy content mechanically**
+- [x] **Step 2: Move legacy content mechanically**
 
 ```bash
 mkdir -p content/legacy-events content/events content/evidence data/intelligence
@@ -563,27 +558,27 @@ Create the three `.gitkeep` files with `apply_patch`; do not rewrite moved Markd
 
 Do not edit legacy Markdown or historical Dispatch JSON.
 
-- [ ] **Step 3: Define both Astro collections**
+- [x] **Step 3: Define both Astro collections**
 
 The new `events` Zod schema requires `schema_version: z.literal(2)`, source tier, primary track, tracks, three dates, confidence and importance. `legacyEvents` retains the current pillar schema.
 
-- [ ] **Step 4: Implement typed loaders and identical taxonomy keys**
+- [x] **Step 4: Implement typed loaders and identical taxonomy keys**
 
 Define `TRACKS`, `FRONTS`, and `FRONT_TRACKS` with `as const`. Add a build-time invariant that every track appears in exactly one front. Health loader accepts missing data and returns an explicit `unknown` state, never `healthy`.
 
-- [ ] **Step 5: Preserve event URLs, remove pillar routes, and add Legacy Archive**
+- [x] **Step 5: Preserve event URLs and add Legacy Archive**
 
 `events/[slug].astro` resolves schema-v2 first and legacy second. Legacy pages receive a visible `Legacy record` label and link to `/archive`; current pages render the new evidence sections. `/archive` lists legacy events and old `/reading` issues separately.
 
-Delete `/pillars/*` generation and the old pillar digest/tag modules after `EventCard` and `HeroBlock` use track/front metadata. Do not redirect legacy pillar URLs into a misleading new category; link the new five fronts from the archive and 404 retired pillar routes.
+Keep the old pillar UI only as a transitional compatibility layer in this commit. Task 8 replaces `EventCard` and `HeroBlock` with track/front metadata, then deletes `/pillars/*` generation and the old pillar digest/tag modules. Do not redirect legacy pillar URLs into a misleading new category; link the new five fronts from the archive and 404 retired pillar routes.
 
-- [ ] **Step 6: Remove the temporary fixture and run the build**
+- [x] **Step 6: Remove the temporary fixture and run the build**
 
 Run: `npm run build` from `site`.
 
 Expected: all existing event URLs plus `/archive` build successfully; no legacy item appears in the schema-v2 collection.
 
-- [ ] **Step 7: Commit**
+- [x] **Step 7: Commit**
 
 ```bash
 git add content data/intelligence site/src/content.config.ts site/src/lib site/src/pages/events site/src/pages/archive

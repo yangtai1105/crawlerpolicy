@@ -1,0 +1,72 @@
+---
+import { getCollection } from "astro:content";
+import Base from "../../layouts/Base.astro";
+import { listWeeks } from "../../lib/critical_reading";
+import { findSource } from "../../lib/sources";
+
+const events = (await getCollection("legacyEvents"))
+  .filter((event) => event.data.change_kind === "material")
+  .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime());
+const dispatches = listWeeks();
+---
+
+<Base title="Legacy Archive" description="Pre-refactor crawler policy events and weekly dispatches">
+  <main class="container archive-page">
+    <header>
+      <p class="label">Historical record</p>
+      <h1>Legacy Archive</h1>
+      <p class="lede">
+        Schema-v1 events and the former Weekly Dispatch are preserved unchanged. They remain
+        useful context, but are excluded from current developments, trends, and intelligence.
+      </p>
+    </header>
+
+    <section>
+      <h2>Legacy events <span>{events.length}</span></h2>
+      <ol class="archive-list">
+        {events.map((event) => (
+          <li>
+            <time datetime={event.data.detected_at.toISOString()}>
+              {event.data.detected_at.toISOString().slice(0, 10)}
+            </time>
+            <a href={`/events/${event.data.slug}`}>{event.data.title}</a>
+            <small>{findSource(event.data.source)?.display_name ?? event.data.source}</small>
+          </li>
+        ))}
+      </ol>
+    </section>
+
+    <section>
+      <h2>Weekly Dispatch archive <span>{dispatches.length}</span></h2>
+      <ol class="dispatch-list">
+        {dispatches.map((dispatch) => (
+          <li><a href={`/reading/${dispatch.year}-W${String(dispatch.week).padStart(2, "0")}`}>Week {dispatch.year}-W{String(dispatch.week).padStart(2, "0")}</a></li>
+        ))}
+      </ol>
+    </section>
+  </main>
+</Base>
+
+<style>
+  .archive-page { max-width: 980px; padding: var(--space-7) var(--space-5); }
+  header { max-width: 720px; margin-bottom: var(--space-7); }
+  h1 { margin: var(--space-2) 0 var(--space-3); }
+  .lede { color: var(--ink-muted); line-height: 1.65; }
+  section { margin-top: var(--space-7); }
+  h2 { display: flex; gap: var(--space-3); align-items: baseline; }
+  h2 span { color: var(--ink-muted); font: 0.8rem var(--font-mono); }
+  .archive-list, .dispatch-list { list-style: none; padding: 0; margin: var(--space-4) 0 0; }
+  .archive-list li {
+    display: grid;
+    grid-template-columns: 7rem minmax(0, 1fr) 11rem;
+    gap: var(--space-4);
+    padding: var(--space-3) 0;
+    border-top: 1px solid var(--border);
+  }
+  time, small { color: var(--ink-muted); font-size: 0.78rem; }
+  .dispatch-list { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .dispatch-list a { display: block; border: 1px solid var(--border); padding: var(--space-2) var(--space-3); }
+  @media (max-width: 680px) {
+    .archive-list li { grid-template-columns: 1fr; gap: var(--space-1); }
+  }
+</style>

@@ -1,10 +1,47 @@
 import { defineCollection, z } from "astro:content";
 import { glob } from "astro/loaders";
 
+const track = z.enum([
+  "policy-regulation",
+  "litigation-legal",
+  "search-discovery",
+  "crawler-controls",
+  "agentic-web",
+  "licensing-monetization",
+  "standards-protocols",
+  "asset-rights",
+  "measurement-economics",
+]);
+
 const events = defineCollection({
   loader: glob({
     pattern: "**/*.md",
     base: "../content/events",
+  }),
+  schema: z.object({
+    schema_version: z.literal(2),
+    slug: z.string(),
+    title: z.string(),
+    source: z.string(),
+    source_tier: z.enum(["primary", "measurement", "specialist", "commentary"]),
+    primary_track: track,
+    tracks: z.array(track).min(1),
+    actors: z.array(z.string()).default([]),
+    event_date: z.coerce.date(),
+    published_at: z.coerce.date(),
+    detected_at: z.coerce.date(),
+    source_url: z.string().optional().default(""),
+    change_kind: z.enum(["material", "cosmetic", "noise"]),
+    importance: z.number().min(0).max(1),
+    confidence: z.enum(["low", "medium", "high"]),
+    evidence_ids: z.array(z.string()).min(1),
+  }),
+});
+
+const legacyEvents = defineCollection({
+  loader: glob({
+    pattern: "**/*.md",
+    base: "../content/legacy-events",
   }),
   schema: z.object({
     slug: z.string(),
@@ -18,4 +55,4 @@ const events = defineCollection({
   }),
 });
 
-export const collections = { events };
+export const collections = { events, legacyEvents };

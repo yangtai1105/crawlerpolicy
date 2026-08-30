@@ -21,14 +21,15 @@ export const GET: APIRoute = async ({ site }) => {
   const items = events
     .map((e) => {
       const source = findSource(e.data.source);
-      const link = `${siteUrl}/events/${e.id}`;
+      const link = `${siteUrl}/events/${e.data.slug}`;
       return `
     <item>
       <title>${esc(e.data.title)}</title>
       <link>${link}</link>
       <guid isPermaLink="true">${link}</guid>
-      <pubDate>${e.data.detected_at.toUTCString()}</pubDate>
-      <category>${esc(e.data.pillar)}</category>
+      <pubDate>${e.data.event_date.toUTCString()}</pubDate>
+      <category>${esc(e.data.primary_track)}</category>
+      ${e.data.tracks.map((track) => `<category>${esc(track)}</category>`).join("\n      ")}
       <category>${esc(source?.display_name ?? e.data.source)}</category>
       <description>${esc(e.body?.slice(0, 4000) ?? "")}</description>
     </item>`;
