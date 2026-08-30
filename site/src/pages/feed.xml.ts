@@ -12,7 +12,7 @@ function esc(s: string): string {
 }
 
 export const GET: APIRoute = async ({ site }) => {
-  const siteUrl = site?.toString().replace(/\/$/, "") ?? "https://tracker.example.com";
+  const siteUrl = site?.toString().replace(/\/$/, "") ?? "https://crawlerpolicy.com";
   const events = (await loadCurrentEvents())
     .filter((e) => e.data.change_kind === "material")
     .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime())
