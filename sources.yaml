@@ -2,7 +2,7 @@
 # Types: html_page | rss_feed | github_repo | ietf_draft | gemini_search | cf_browser_run
 # Use cf_browser_run ONLY for sites Python/httpx can't fetch directly.
 
-# ─── Pillar 1: Crawler / Bot documentation (HTML diff) ───
+# ─── Access & discovery: crawler / bot documentation ───
 
 - slug: gptbot
   type: html_page
@@ -123,7 +123,7 @@
   tier: commentary
   role: reporting
 
-# ─── Pillar 2: Content ecosystem news (RSS + keyword filter + Haiku) ───
+# ─── Governance, rights, and market signals ───
 
 - slug: cloudflare-blog
   type: rss_feed
@@ -206,7 +206,7 @@
   role: publisher
   required_for_coverage: true
 
-# ─── Pillar 3: AI Agent ecosystem (mixed) ───
+# ─── Agents, identity, and infrastructure ───
 
 - slug: web-bot-auth-repo
   type: github_repo
@@ -259,6 +259,84 @@
   default_tracks: [search-discovery, agentic-web]
   tier: primary
   role: infrastructure
+
+# ─── Canonical cross-front coverage anchors ───
+# These fixed endpoints strengthen authority and do not trigger historical
+# backfill. One resilient anchor per public front is required; adjacent
+# standards sources remain explicit but non-blocking.
+
+- slug: google-search-central-blog
+  type: html_page
+  url: https://developers.google.com/search/blog
+  display_name: Google Search Central Blog
+  default_tracks: [search-discovery, crawler-controls]
+  tier: primary
+  role: platform-docs
+  required_for_coverage: true
+
+- slug: ietf-webbotauth-wg
+  type: html_page
+  url: https://datatracker.ietf.org/group/webbotauth/
+  display_name: IETF Web Bot Auth Working Group
+  default_tracks: [standards-protocols, agentic-web]
+  tier: primary
+  role: standards
+  required_for_coverage: true
+
+- slug: c2pa-specifications
+  type: html_page
+  url: https://spec.c2pa.org/
+  display_name: C2PA Specifications
+  default_tracks: [asset-rights, standards-protocols]
+  tier: primary
+  role: standards
+  required_for_coverage: false
+
+- slug: w3c-tdmrep
+  type: html_page
+  url: https://w3c.github.io/tdm-reservation-protocol/spec/
+  display_name: W3C TDM Reservation Protocol
+  default_tracks: [asset-rights, licensing-monetization, standards-protocols]
+  tier: primary
+  role: standards
+  required_for_coverage: true
+
+- slug: rsl-standard
+  type: html_page
+  url: https://rslstandard.org/rsl
+  display_name: Really Simple Licensing
+  default_tracks: [licensing-monetization, asset-rights, crawler-controls]
+  tier: primary
+  role: standards
+  required_for_coverage: false
+
+- slug: iab-comp
+  type: html_page
+  url: https://iabtechlab.com/standards/comp-content-monetization-protocols-initiative/
+  display_name: IAB Tech Lab CoMP
+  default_tracks: [licensing-monetization, standards-protocols]
+  tier: primary
+  role: standards
+  required_for_coverage: false
+
+- slug: us-copyright-office-ai
+  type: html_page
+  url: https://www.copyright.gov/ai/
+  display_name: U.S. Copyright Office AI Initiative
+  default_tracks: [policy-regulation, litigation-legal, asset-rights]
+  tier: primary
+  role: regulator
+  required_for_coverage: true
+
+- slug: cloudflare-radar-ai-insights
+  # Direct html_page smoke returns 403; use the existing rendered single-page adapter.
+  type: cf_browser_run
+  url: https://radar.cloudflare.com/ai-insights
+  display_name: Cloudflare Radar AI Insights
+  default_tracks: [measurement-economics, crawler-controls, agentic-web]
+  tier: measurement
+  role: measurement
+  required_for_coverage: true
 
 # ─── Gemini grounded-search discovery (one call/day per query) ───
 # Each of these runs once per day, returns the top grounded search results

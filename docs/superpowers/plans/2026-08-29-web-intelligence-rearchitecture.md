@@ -716,7 +716,7 @@ git commit -m "feat: launch intelligence-first site architecture"
 - Verifies all nine tracks have configured coverage and every front has at least one required primary or measurement source.
 - Does not backfill, re-fetch, or classify historical material.
 
-- [ ] **Step 1: Write failing coverage-invariant tests**
+- [x] **Step 1: Write failing coverage-invariant tests**
 
 ```python
 def test_all_tracks_have_configured_coverage():
@@ -736,7 +736,7 @@ def test_every_front_has_required_authoritative_coverage():
         ), front
 ```
 
-- [ ] **Step 2: Add the verified canonical source batch**
+- [x] **Step 2: Add the verified canonical source batch**
 
 Add these exact endpoints with explicit tier, role, default tracks, and coverage requirement:
 
@@ -753,21 +753,21 @@ Add these exact endpoints with explicit tier, role, default tracks, and coverage
 
 Keep discovery searches as commentary-tier leads. They may surface candidates, but they do not satisfy authoritative coverage invariants and cannot independently change trend status.
 
-- [ ] **Step 3: Mark a minimal required coverage set**
+- [x] **Step 3: Mark a minimal required coverage set**
 
 Select required sources by lane, not by vendor count: platform crawler controls, search/discovery, agent identity/standards, rights/licensing, governance/legal, and measurement/economics. Do not mark every source required; one vendor outage must not make unrelated fronts critical.
 
-- [ ] **Step 4: Prove every endpoint is fetchable through its configured adapter**
+- [x] **Step 4: Prove every endpoint is fetchable through its configured adapter**
 
 Add parametrized mocked adapter tests for the source types, then run one non-mutating live smoke fetch per new endpoint with a short timeout. If a dynamic endpoint cannot be normalized by `html_page`, use the existing browser-backed fetcher and document why in `sources.yaml`; do not add scraping bypasses.
 
-- [ ] **Step 5: Run coverage and full test suites**
+- [x] **Step 5: Run coverage and full test suites**
 
 Run: `uv run pytest tests/test_source_coverage.py tests/test_fetchers -v && uv run pytest`
 
 Expected: PASS, with exactly nine canonical tracks covered and all five fronts backed by required authoritative evidence.
 
-- [ ] **Step 6: Commit**
+- [x] **Step 6: Commit**
 
 ```bash
 git add sources.yaml pipeline/fetchers/html_page.py tests/test_source_coverage.py tests/test_fetchers/test_html_page.py

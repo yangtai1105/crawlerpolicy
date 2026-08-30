@@ -1,6 +1,8 @@
 """HTML page fetcher. Normalizes page content for day-over-day diffing."""
 from __future__ import annotations
 
+from urllib.parse import urljoin, urlparse
+
 import httpx
 from bs4 import BeautifulSoup
 from readability import Document
@@ -28,6 +30,14 @@ async def fetch_html_page(source: Source) -> FetchResult:
     ) as client:
         resp = await client.get(source.url)
         resp.raise_for_status()
+        seen_urls = {str(resp.url)}
+        for _ in range(3):
+            redirect_url = _document_redirect_target(resp.text, str(resp.url))
+            if not redirect_url or redirect_url in seen_urls:
+                break
+            seen_urls.add(redirect_url)
+            resp = await client.get(redirect_url)
+            resp.raise_for_status()
 
     html = resp.text
     if source.content_selector:
@@ -40,6 +50,35 @@ async def fetch_html_page(source: Source) -> FetchResult:
         text = _extract_main_text(html)
 
     return FetchResult(mode=ResultMode.DIFFABLE, normalized_content=text, raw_ext="html")
+
+
+def _document_redirect_target(html: str, base_url: str) -> str | None:
+    """Resolve an explicit HTML-level relocation without crawling arbitrary links."""
+    soup = BeautifulSoup(html, "lxml")
+    meta = soup.find(
+        "meta",
+        attrs={"http-equiv": lambda value: value and value.lower() == "refresh"},
+    )
+    target: str | None = None
+    if meta:
+        content = str(meta.get("content", ""))
+        for part in content.split(";")[1:]:
+            key, separator, value = part.partition("=")
+            if separator and key.strip().lower() == "url":
+                target = value.strip().strip("'\"")
+                break
+
+    visible = _clean_text(soup)
+    links = soup.select("a[href]")
+    explicit_move = visible.lower().startswith("moved to") and len(links) == 1
+    if target is None and len(visible) < 500 and explicit_move:
+        target = str(links[0].get("href", "")).strip()
+
+    if not target:
+        return None
+    resolved = urljoin(base_url, target)
+    parsed = urlparse(resolved)
+    return resolved if parsed.scheme in {"http", "https"} and parsed.netloc else None
 
 
 # Below this threshold, readability-lxml probably picked the wrong element —
