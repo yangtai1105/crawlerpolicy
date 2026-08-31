@@ -28,6 +28,7 @@ export interface Source {
   default_tracks: Track[];
   tier: SourceTier;
   role: SourceRole;
+  enabled?: boolean;
   required_for_coverage?: boolean;
   url?: string;
   repo?: string;

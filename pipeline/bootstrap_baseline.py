@@ -28,7 +28,7 @@ log = logging.getLogger("bootstrap")
 
 
 async def bootstrap(cfg: Config) -> None:
-    sources = load_sources(cfg.sources_yaml)
+    sources = [source for source in load_sources(cfg.sources_yaml) if source.enabled]
     html_sources = [s for s in sources if s.type == SourceType.HTML_PAGE]
     log.info("bootstrapping %d html_page sources", len(html_sources))
 

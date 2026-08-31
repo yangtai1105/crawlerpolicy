@@ -84,7 +84,7 @@
 
 # Cloudflare product-specific changelog RSS feeds. These are pre-filtered at
 # the publisher — every item is in-scope for the assigned pillar, so no
-# keyword_filter needed. The Haiku relevance classifier still runs as a cheap
+# keyword_filter needed. The Gemini relevance classifier still runs as a
 # defensive pass.
 
 - slug: cf-changelog-ai-crawl-control
@@ -105,12 +105,13 @@
   role: measurement
   required_for_coverage: true
 
-# Gemini grounded-search coverage for crawler-ecosystem movement that
+# Disabled Gemini grounded-search coverage for crawler-ecosystem movement that
 # never lands on vendor doc pages (third-party observation, CDN analytics,
 # ecosystem commentary). References knownagents and Cloudflare Radar
 # explicitly so Gemini prioritizes them when relevant.
 - slug: gemini-crawler-insights
   type: gemini_search
+  enabled: false
   query: >-
     AI crawler observations, bot behavior analytics, and crawler-policy news —
     including pay-per-crawl developments, bot verification / Signed Agents adoption,
@@ -338,14 +339,14 @@
   role: measurement
   required_for_coverage: true
 
-# ─── Gemini grounded-search discovery (one call/day per query) ───
-# Each of these runs once per day, returns the top grounded search results
-# as candidate items. Covers territory that's hard to track via fixed URLs
-# (news across many outlets, regulator actions not in any single feed,
-# emerging agent/standards movement).
+# ─── Gemini grounded-search discovery (disabled for publication) ───
+# Retained as registry context, but excluded from automatic runs while product
+# use and retention constraints are reviewed. Fixed direct sources provide the
+# evidence used by the public feed.
 
 - slug: gemini-ai-licensing-deals
   type: gemini_search
+  enabled: false
   query: "New AI training data licensing deals, content partnerships, or lawsuits between AI companies and publishers, rights holders, or platforms"
   lookback_days: 14
   display_name: AI licensing & training deals (search)
@@ -355,6 +356,7 @@
 
 - slug: gemini-content-blocking
   type: gemini_search
+  enabled: false
   query: "New tools, policies, or announcements for publishers to block, charge, or control AI crawlers (e.g. robots.txt changes, paywalls for AI training, pay-per-crawl, content authenticity / provenance)"
   lookback_days: 14
   display_name: Content-blocking & pay-for-content (search)
@@ -364,6 +366,7 @@
 
 - slug: gemini-regulator-ai-content
   type: gemini_search
+  enabled: false
   query: "Regulatory action from UK CMA, EU Commission, EU AI Office, Italian Garante, US FTC, or US Copyright Office specifically concerning AI training data, AI crawlers, content licensing, or generative AI and copyright"
   lookback_days: 30
   display_name: Regulator action on AI content (search)
@@ -373,6 +376,7 @@
 
 - slug: gemini-agent-standards
   type: gemini_search
+  enabled: false
   query: "New or updated IETF drafts, W3C proposals, or standards-body activity on AI agent authentication, web bot auth, agents.txt, llms.txt, or agent identity"
   lookback_days: 30
   display_name: Agent & bot-auth standards (search)
@@ -382,6 +386,7 @@
 
 - slug: gemini-agent-infra
   type: gemini_search
+  enabled: false
   query: "New features, integrations, or announcements from AI agent infrastructure vendors (Browserbase, Stagehand, LangChain agents, CrewAI, AutoGen, Anthropic Computer Use, OpenAI Operator, Google Agent Development Kit) — focus on protocol and bot-identity features"
   lookback_days: 14
   display_name: Agent infrastructure movement (search)

@@ -121,6 +121,8 @@ def preflight_dependency_errors(
 
     blockers: dict[str, DependencyBlocker] = {}
     for source in sources:
+        if not source.enabled:
+            continue
         if source.type is SourceType.GEMINI_SEARCH and not present("GEMINI_API_KEY"):
             blockers[source.slug] = DependencyBlocker(
                 stage="fetch",
@@ -170,7 +172,7 @@ async def run_check(
         or datetime(2026, 8, 30, tzinfo=UTC),
         alert_emails=[],
     )
-    sources = load_sources(cfg.sources_yaml)
+    sources = [source for source in load_sources(cfg.sources_yaml) if source.enabled]
     if only:
         sources = [source for source in sources if source.slug == only]
         if not sources:
@@ -845,7 +847,9 @@ def _cli() -> None:
         if cfg.gemini_api_key
         else None
     )
-    configured_sources = load_sources(cfg.sources_yaml)
+    configured_sources = [
+        source for source in load_sources(cfg.sources_yaml) if source.enabled
+    ]
     if args.only:
         configured_sources = [
             source for source in configured_sources if source.slug == args.only

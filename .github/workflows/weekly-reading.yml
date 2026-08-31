@@ -31,7 +31,8 @@ jobs:
 
       - name: Build weekly intelligence
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_ANALYSIS_MODEL: gemini-3.7-flash
         run: uv run python -m pipeline.weekly_intelligence
 
       - name: Commit + push if changed

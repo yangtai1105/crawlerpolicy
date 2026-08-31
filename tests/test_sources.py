@@ -21,6 +21,7 @@ def test_html_page_source_minimum_fields():
     assert s.slug == "gptbot"
     assert s.default_tracks == [Track.CRAWLER_CONTROLS]
     assert s.required_for_coverage is True
+    assert s.enabled is True
 
 
 def test_rss_feed_accepts_no_keyword_filter():
@@ -131,6 +132,21 @@ def test_load_sources_rejects_duplicate_slugs(tmp_path):
     p.write_text(yaml_text)
     with pytest.raises(ValueError, match="duplicate slug"):
         load_sources(p)
+
+
+def test_source_can_be_disabled_without_removing_its_registry_entry():
+    source = Source(
+        slug="discovery-lead",
+        type=SourceType.GEMINI_SEARCH,
+        query="crawler policy changes",
+        display_name="Discovery lead",
+        default_tracks=[Track.CRAWLER_CONTROLS],
+        tier=SourceTier.COMMENTARY,
+        role=SourceRole.REPORTING,
+        enabled=False,
+    )
+
+    assert source.enabled is False
 
 
 def test_repository_sources_use_track_tier_and_role_schema():

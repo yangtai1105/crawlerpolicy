@@ -49,3 +49,9 @@ def test_initial_canonical_coverage_batch_is_configured():
         "us-copyright-office-ai",
         "cloudflare-radar-ai-insights",
     }
+
+
+def test_publication_sources_do_not_enable_gemini_search():
+    enabled = [source for source in load_sources(Path("sources.yaml")) if source.enabled]
+
+    assert all(source.type is not SourceType.GEMINI_SEARCH for source in enabled)

@@ -35,8 +35,9 @@ jobs:
         id: daily_check
         continue-on-error: true
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_ANALYSIS_MODEL: gemini-3.7-flash
+          PUBLICATION_CUTOFF: "2026-08-30T00:00:00Z"
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}
           CLOUDFLARE_CRAWLER_API_KEY: ${{ secrets.CLOUDFLARE_CRAWLER_API_KEY }}

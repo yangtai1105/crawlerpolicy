@@ -194,8 +194,7 @@ def test_preflight_maps_missing_credentials_to_affected_stage():
         },
     )
 
-    assert blockers["gemini-agent-infra"].stage == "fetch"
-    assert "GEMINI_API_KEY" in blockers["gemini-agent-infra"].message
+    assert "gemini-agent-infra" not in blockers
     assert blockers["gptbot"].stage == "analysis"
     assert "GEMINI_API_KEY" in blockers["gptbot"].message
     assert blockers["meta-externalagent"].stage == "analysis"

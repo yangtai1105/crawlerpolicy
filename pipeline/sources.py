@@ -33,6 +33,7 @@ class Source(BaseModel):
     default_tracks: list[Track]
     tier: SourceTier
     role: SourceRole
+    enabled: bool = True
     required_for_coverage: bool = False
 
     # html_page + rss_feed
@@ -59,7 +60,7 @@ class Source(BaseModel):
     query: str | None = None
     lookback_days: int | None = None
 
-    # Optional Sonnet/Opus override per source
+    # Optional analysis-model override per source.
     model: str | None = None
 
     @model_validator(mode="after")
