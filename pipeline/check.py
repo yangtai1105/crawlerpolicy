@@ -8,17 +8,15 @@ import logging
 import os
 from collections.abc import Awaitable, Callable, Mapping
 from dataclasses import dataclass
-from datetime import UTC, datetime, timedelta
+from datetime import UTC, datetime
 from pathlib import Path
-
-from anthropic import AsyncAnthropic
 
 from pipeline import raw_log
 from pipeline.analyzer import AnalysisResult
 from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
 from pipeline.differ import compute_diff
-from pipeline.event_writer import write_event
+from pipeline.event_writer import event_slug, write_event
 from pipeline.evidence import (
     EvidenceRecord,
     EvidenceStage,
@@ -33,6 +31,8 @@ from pipeline.fetchers.github_repo import fetch_github_repo
 from pipeline.fetchers.html_page import fetch_html_page
 from pipeline.fetchers.ietf_draft import fetch_ietf_draft
 from pipeline.fetchers.rss_feed import fetch_rss_feed
+from pipeline.feed import publication_status, should_promote
+from pipeline.feed_writer import write_feed_item
 from pipeline.health import (
     HealthStatus,
     SourceRunStatus,
@@ -40,7 +40,12 @@ from pipeline.health import (
     build_run_health,
     exit_code_for_health,
 )
-from pipeline.relevance import haiku_relevance, keyword_match
+from pipeline.model_provider import (
+    GeminiStructuredModel,
+    ProviderFailure,
+    StructuredModel,
+)
+from pipeline.relevance import keyword_match, model_relevance
 from pipeline.snapshots import hash_content, load_latest, save_snapshot
 from pipeline.sources import Source, SourceType, load_sources
 from pipeline.state import SourceState, load_state, save_state
@@ -50,7 +55,6 @@ from pipeline.trend_context import format_trend_context, load_recent_events_for_
 
 log = logging.getLogger("check")
 
-BACKFILL_DAYS = 30
 FetchDispatch = Callable[[Source, SourceState], Awaitable[FetchResult]]
 
 
@@ -58,6 +62,19 @@ FetchDispatch = Callable[[Source, SourceState], Awaitable[FetchResult]]
 class DependencyBlocker:
     stage: str
     message: str
+
+
+@dataclass
+class ProviderCircuit:
+    failure: ProviderFailure | None = None
+
+    @property
+    def is_open(self) -> bool:
+        return self.failure is not None
+
+    def open(self, failure: ProviderFailure) -> None:
+        if failure.blocks_run and self.failure is None:
+            self.failure = failure
 
 
 def _maybe_trend_context(cfg: Config, source: Source) -> str:
@@ -123,10 +140,10 @@ def preflight_dependency_errors(
                     message=f"missing Cloudflare credentials: {', '.join(missing)}",
                 )
                 continue
-        if not present("ANTHROPIC_API_KEY"):
+        if not present("GEMINI_API_KEY"):
             blockers[source.slug] = DependencyBlocker(
                 stage="analysis",
-                message="ANTHROPIC_API_KEY is missing",
+                message="GEMINI_API_KEY is missing",
             )
     return blockers
 
@@ -138,13 +155,21 @@ async def run_check(
     fetch_dispatch: FetchDispatch | None = None,
     analyze_change: Callable = _default_analyze_change,
     extract_sop: Callable | None = None,
-    anthropic_client: AsyncAnthropic | None = None,
+    model: StructuredModel | None = None,
+    publication_cutoff: datetime | None = None,
     only: str | None = None,
     dry_run: bool = False,
     dependency_blockers: dict[str, DependencyBlocker] | None = None,
 ) -> dict:
     """Run the pipeline and return a JSON-serializable health payload."""
-    cfg = Config(repo_root=repo_root, anthropic_api_key="", alert_emails=[])
+    cfg = Config(
+        repo_root=repo_root,
+        gemini_api_key="",
+        gemini_analysis_model="gemini-3.7-flash",
+        publication_cutoff=publication_cutoff
+        or datetime(2026, 8, 30, tzinfo=UTC),
+        alert_emails=[],
+    )
     sources = load_sources(cfg.sources_yaml)
     if only:
         sources = [source for source in sources if source.slug == only]
@@ -156,13 +181,15 @@ async def run_check(
     statuses = {source.slug: SourceRunStatus() for source in sources}
     source_by_slug = {source.slug: source for source in sources}
     events_written: list[Path] = []
+    circuit = ProviderCircuit()
 
     await _replay_pending(
         cfg=cfg,
         sources=source_by_slug,
         statuses=statuses,
         blockers=blockers,
-        client=anthropic_client,
+        model=model,
+        circuit=circuit,
         analyze_change=analyze_change,
         events_written=events_written,
         dry_run=dry_run,
@@ -192,7 +219,8 @@ async def run_check(
                 result=result,
                 now=now,
                 cfg=cfg,
-                client=anthropic_client,
+                model=model,
+                circuit=circuit,
                 analyze_change=analyze_change,
                 status=status,
                 analysis_blocker=(
@@ -235,6 +263,26 @@ async def run_check(
     payload["events_written"] = [
         str(path.relative_to(repo_root)) for path in events_written
     ]
+    payload["feed_items_written"] = [
+        path
+        for source_status in statuses.values()
+        for path in source_status.feed_items_written
+    ]
+    provider_error = str(circuit.failure) if circuit.failure else None
+    provider_unavailable = any(
+        blocker.stage == "analysis" for blocker in blockers.values()
+    )
+    payload["provider"] = {
+        "name": "gemini",
+        "status": (
+            "blocked"
+            if circuit.is_open
+            else "unavailable"
+            if provider_unavailable
+            else "ok"
+        ),
+        "error": provider_error,
+    }
     payload["derived_errors"] = derived_errors
     if not dry_run:
         cfg.data_dir.mkdir(parents=True, exist_ok=True)
@@ -259,7 +307,8 @@ async def _process_result(
     result: FetchResult,
     now: datetime,
     cfg: Config,
-    client: AsyncAnthropic | None,
+    model: StructuredModel | None,
+    circuit: ProviderCircuit,
     analyze_change: Callable,
     status: SourceRunStatus,
     analysis_blocker: str | None,
@@ -272,7 +321,8 @@ async def _process_result(
             result=result,
             now=now,
             cfg=cfg,
-            client=client,
+            model=model,
+            circuit=circuit,
             analyze_change=analyze_change,
             status=status,
             analysis_blocker=analysis_blocker,
@@ -284,7 +334,8 @@ async def _process_result(
         result=result,
         now=now,
         cfg=cfg,
-        client=client,
+        model=model,
+        circuit=circuit,
         analyze_change=analyze_change,
         status=status,
         analysis_blocker=analysis_blocker,
@@ -299,7 +350,8 @@ async def _process_diffable(
     result: FetchResult,
     now: datetime,
     cfg: Config,
-    client: AsyncAnthropic | None,
+    model: StructuredModel | None,
+    circuit: ProviderCircuit,
     analyze_change: Callable,
     status: SourceRunStatus,
     analysis_blocker: str | None,
@@ -366,7 +418,8 @@ async def _process_diffable(
         cfg=cfg,
         source=source,
         record=record,
-        client=client,
+        model=model,
+        circuit=circuit,
         analyze_change=analyze_change,
         status=status,
         dry_run=dry_run,
@@ -381,7 +434,8 @@ async def _process_items(
     result: FetchResult,
     now: datetime,
     cfg: Config,
-    client: AsyncAnthropic | None,
+    model: StructuredModel | None,
+    circuit: ProviderCircuit,
     analyze_change: Callable,
     status: SourceRunStatus,
     analysis_blocker: str | None,
@@ -389,16 +443,6 @@ async def _process_items(
 ) -> tuple[list[Path], SourceState]:
     events: list[Path] = []
     items = result.items
-    if state.first_seen:
-        cutoff = now - timedelta(days=BACKFILL_DAYS)
-        items = [
-            item
-            for item in result.items
-            if item.published_at and item.published_at >= cutoff
-        ]
-        for item in result.items:
-            if item not in items:
-                state.last_seen_guids.append(item.guid)
 
     if not items:
         _mark_downstream_ok(status)
@@ -412,6 +456,13 @@ async def _process_items(
         _record_evidence(cfg, record, status, dry_run)
         state.last_seen_guids.append(item.guid)
         state.last_evidence_at = now
+        if not _is_after_publication_cutoff(record, cfg.publication_cutoff):
+            record.stage = EvidenceStage.SKIPPED_CUTOFF
+            record.last_error = "item predates publication cutoff"
+            if not dry_run:
+                save_evidence(cfg.evidence_dir, record)
+            _mark_downstream_ok(status)
+            continue
         if analysis_blocker:
             _fail_evidence_analysis(cfg, record, analysis_blocker, status, dry_run)
             continue
@@ -419,7 +470,8 @@ async def _process_items(
             cfg=cfg,
             source=source,
             record=record,
-            client=client,
+            model=model,
+            circuit=circuit,
             analyze_change=analyze_change,
             status=status,
             dry_run=dry_run,
@@ -474,17 +526,25 @@ async def _analyze_and_publish(
     cfg: Config,
     source: Source,
     record: EvidenceRecord,
-    client: AsyncAnthropic | None,
+    model: StructuredModel | None,
+    circuit: ProviderCircuit,
     analyze_change: Callable,
     status: SourceRunStatus,
     dry_run: bool,
 ) -> Path | None:
+    if circuit.is_open:
+        message = str(circuit.failure)
+        record.last_error = message
+        if not dry_run:
+            save_evidence(cfg.evidence_dir, record)
+        _mark_analysis_failed(status, message)
+        return None
     try:
         analysis = await _analyze_evidence(
             cfg=cfg,
             source=source,
             record=record,
-            client=client,
+            model=model,
             analyze_change=analyze_change,
             dry_run=dry_run,
         )
@@ -494,7 +554,7 @@ async def _analyze_and_publish(
             if status.publish is not StageStatus.FAILED:
                 status.publish = StageStatus.OK
             return None
-        event = _publish_analysis(
+        event, feed_item = _publish_analysis(
             cfg=cfg,
             source=source,
             record=record,
@@ -505,6 +565,8 @@ async def _analyze_and_publish(
             status.publish = StageStatus.OK
         if event is not None:
             status.events_written.append(_relative_path(event, cfg.repo_root))
+        if feed_item is not None:
+            status.feed_items_written.append(_relative_path(feed_item, cfg.repo_root))
         return event
     except Exception as error:
         log.exception(
@@ -512,6 +574,8 @@ async def _analyze_and_publish(
             source.slug,
             record.evidence_id,
         )
+        if isinstance(error, ProviderFailure):
+            circuit.open(error)
         _fail_evidence_analysis(cfg, record, str(error), status, dry_run)
         return None
 
@@ -521,7 +585,7 @@ async def _analyze_evidence(
     cfg: Config,
     source: Source,
     record: EvidenceRecord,
-    client: AsyncAnthropic | None,
+    model: StructuredModel | None,
     analyze_change: Callable,
     dry_run: bool,
 ) -> AnalysisResult | None:
@@ -533,8 +597,12 @@ async def _analyze_evidence(
             if not dry_run:
                 save_evidence(cfg.evidence_dir, record)
             return None
-        verdict = await haiku_relevance(client, record.title, record.content)
-        if not verdict.is_relevant:
+        verdict = (
+            await model_relevance(model, record.title, record.content)
+            if model is not None
+            else None
+        )
+        if verdict is not None and not verdict.is_relevant:
             record.stage = EvidenceStage.ANALYZED
             record.last_error = None
             if not dry_run:
@@ -549,7 +617,7 @@ async def _analyze_evidence(
             return None
 
     analysis = await analyze_change(
-        client=client,
+        model=model,
         source=source,
         prev_content=record.previous_content,
         curr_content=record.content,
@@ -582,25 +650,45 @@ def _publish_analysis(
     record: EvidenceRecord,
     analysis: AnalysisResult,
     dry_run: bool,
-) -> Path | None:
+) -> tuple[Path | None, Path | None]:
     if dry_run:
-        return None
+        return None, None
     event_date = record.published_at or record.detected_at
-    path = write_event(
-        events_dir=cfg.events_dir,
+    status = publication_status(source)
+    development_path = (
+        write_event(
+            events_dir=cfg.events_dir,
+            source=source,
+            analysis=analysis,
+            event_date=event_date,
+            published_at=record.published_at or event_date,
+            detected_at=record.detected_at,
+            evidence_ids=[record.evidence_id],
+            unified_diff=record.unified_diff,
+            source_url=record.source_url,
+        )
+        if should_promote(status, analysis)
+        else None
+    )
+    feed_path = write_feed_item(
+        feed_dir=cfg.feed_dir,
         source=source,
         analysis=analysis,
+        status=status,
         event_date=event_date,
         published_at=record.published_at or event_date,
         detected_at=record.detected_at,
         evidence_ids=[record.evidence_id],
+        source_urls=[record.source_url] if record.source_url else [],
         unified_diff=record.unified_diff,
-        source_url=record.source_url,
+        development_slug=(
+            event_slug(analysis.title) if development_path is not None else None
+        ),
     )
     record.stage = EvidenceStage.PUBLISHED
     record.last_error = None
     save_evidence(cfg.evidence_dir, record)
-    return path
+    return development_path, feed_path
 
 
 async def _replay_pending(
@@ -609,7 +697,8 @@ async def _replay_pending(
     sources: dict[str, Source],
     statuses: dict[str, SourceRunStatus],
     blockers: dict[str, DependencyBlocker],
-    client: AsyncAnthropic | None,
+    model: StructuredModel | None,
+    circuit: ProviderCircuit,
     analyze_change: Callable,
     events_written: list[Path],
     dry_run: bool,
@@ -622,6 +711,13 @@ async def _replay_pending(
         status.evidence = StageStatus.OK
         if record.evidence_id not in status.evidence_ids:
             status.evidence_ids.append(record.evidence_id)
+        if not _is_after_publication_cutoff(record, cfg.publication_cutoff):
+            record.stage = EvidenceStage.SKIPPED_CUTOFF
+            record.last_error = "item predates publication cutoff"
+            if not dry_run:
+                save_evidence(cfg.evidence_dir, record)
+            _mark_downstream_ok(status)
+            continue
         blocker = blockers.get(source.slug)
         if blocker and blocker.stage == "analysis":
             _fail_evidence_analysis(cfg, record, blocker.message, status, dry_run)
@@ -630,7 +726,8 @@ async def _replay_pending(
             cfg=cfg,
             source=source,
             record=record,
-            client=client,
+            model=model,
+            circuit=circuit,
             analyze_change=analyze_change,
             status=status,
             dry_run=dry_run,
@@ -698,6 +795,14 @@ def _relative_path(path: Path, repo_root: Path) -> str:
         return path.as_posix()
 
 
+def _is_after_publication_cutoff(
+    record: EvidenceRecord,
+    cutoff: datetime,
+) -> bool:
+    item_date = record.published_at or record.detected_at
+    return item_date >= cutoff
+
+
 def _load_last_full_success(path: Path) -> datetime | None:
     if not path.exists():
         return None
@@ -732,9 +837,12 @@ def _cli() -> None:
         format="%(asctime)s %(levelname)s %(name)s %(message)s",
     )
     cfg = Config.from_env()
-    client = (
-        AsyncAnthropic(api_key=cfg.anthropic_api_key, max_retries=5)
-        if cfg.anthropic_api_key
+    model = (
+        GeminiStructuredModel(
+            api_key=cfg.gemini_api_key,
+            model=cfg.gemini_analysis_model,
+        )
+        if cfg.gemini_api_key
         else None
     )
     configured_sources = load_sources(cfg.sources_yaml)
@@ -753,7 +861,7 @@ def _cli() -> None:
             return snap_mod.load_latest(cfg.snapshots_dir, slug)
 
         await build_opt_out_matrix(
-            client=client,
+            model=model,
             crawler_sources=crawler_sources,
             load_latest_snapshot=_load,
             out_path=cfg.data_dir / "opt-out-matrix.json",
@@ -764,8 +872,9 @@ def _cli() -> None:
         run_check(
             repo_root=cfg.repo_root,
             now=datetime.now(tz=UTC),
-            anthropic_client=client,
-            extract_sop=_sop if client else None,
+            model=model,
+            publication_cutoff=cfg.publication_cutoff,
+            extract_sop=_sop if model else None,
             only=args.only,
             dry_run=args.dry_run,
             dependency_blockers=blockers,

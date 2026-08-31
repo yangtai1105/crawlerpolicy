@@ -72,7 +72,12 @@ def test_failed_analysis_remains_replayable_and_queue_is_chronological(tmp_path)
         stage=EvidenceStage.PUBLISHED,
         detected_at=datetime(2026, 8, 29, 8, tzinfo=UTC),
     )
-    for record in (failed, fetched, published):
+    skipped = _record(
+        evidence_id="cloudflare-blog--historical",
+        stage=EvidenceStage.SKIPPED_CUTOFF,
+        detected_at=datetime(2026, 8, 29, 7, tzinfo=UTC),
+    )
+    for record in (failed, fetched, published, skipped):
         save_evidence(tmp_path, record)
 
     queued = pending_analysis(tmp_path)

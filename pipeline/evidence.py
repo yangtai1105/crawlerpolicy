@@ -17,6 +17,7 @@ class EvidenceStage(StrEnum):
     ANALYZED = "analyzed"
     PUBLISHED = "published"
     FAILED_ANALYSIS = "failed_analysis"
+    SKIPPED_CUTOFF = "skipped_cutoff"
 
 
 class EvidenceRecord(BaseModel):

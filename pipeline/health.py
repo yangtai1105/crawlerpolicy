@@ -29,6 +29,7 @@ class SourceRunStatus(BaseModel):
     error: str | None = None
     evidence_ids: list[str] = Field(default_factory=list)
     events_written: list[str] = Field(default_factory=list)
+    feed_items_written: list[str] = Field(default_factory=list)
 
     @property
     def completed(self) -> bool:

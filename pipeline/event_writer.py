@@ -45,6 +45,10 @@ def write_event(
 _SLUG_RX = re.compile(r"[^a-z0-9]+")
 
 
+def event_slug(title: str) -> str:
+    return _slugify(title)
+
+
 def _slugify(title: str) -> str:
     s = _SLUG_RX.sub("-", title.lower()).strip("-")
     return s[:80] or "untitled"
