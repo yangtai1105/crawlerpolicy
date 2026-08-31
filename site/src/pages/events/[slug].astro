@@ -40,7 +40,9 @@ const legacyData = isLegacy ? event.data as CollectionEntry<"legacyEvents">["dat
 const currentData = kind === "event" ? event.data as CollectionEntry<"events">["data"] : null;
 const feedData = isFeed ? event.data as CollectionEntry<"feed">["data"] : null;
 const displayDate = legacyData?.detected_at ?? currentData?.event_date ?? feedData!.event_date;
-const sourceUrls = feedData?.source_urls ?? (event.data.source_url ? [event.data.source_url] : []);
+const legacyOrCurrentUrl = legacyData?.source_url ?? currentData?.source_url ?? "";
+const sourceUrls = feedData?.source_urls ?? (legacyOrCurrentUrl ? [legacyOrCurrentUrl] : []);
+const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.status.slice(1) : "";
 ---
 
 <Base title={event.data.title} description={`Tracked change from ${source?.display_name ?? event.data.source}`}>
@@ -50,7 +52,7 @@ const sourceUrls = feedData?.source_urls ?? (event.data.source_url ? [event.data
         {isLegacy ? (
           <span class="legacy-label">Legacy record · {legacyData!.pillar}</span>
         ) : isFeed ? (
-          <><span class={`publication-status status-${feedData!.status}`}>{feedData!.status}</span><span class="current-tracks">{feedData!.tracks.map((track) => <TrackTag track={track} linked />)}</span></>
+          <><span class={`publication-status status-${feedData!.status}`}>{publicationLabel}</span><span class="current-tracks">{feedData!.tracks.map((track) => <TrackTag track={track} linked />)}</span></>
         ) : (
           <span class="current-tracks">{currentData!.tracks.map((track) => <TrackTag track={track} linked />)}</span>
         )}
@@ -99,8 +101,8 @@ const sourceUrls = feedData?.source_urls ?? (event.data.source_url ? [event.data
 
 <style>
   .event-page {
-    max-width: 780px;
-    padding: var(--space-6) var(--space-5);
+    max-width: 860px;
+    padding: var(--space-8) var(--space-5);
   }
   .event-page-header {
     padding-bottom: var(--space-5);
@@ -118,8 +120,9 @@ const sourceUrls = feedData?.source_urls ?? (event.data.source_url ? [event.data
   .source-name { color: var(--ink); }
   .dot { opacity: 0.5; }
   .event-page-title {
-    font-size: 2rem;
-    line-height: 1.2;
+    max-width: 18ch;
+    font-size: clamp(2.3rem, 5vw, 4.8rem);
+    line-height: 1.05;
   }
   .event-page-url {
     margin-top: var(--space-3);
@@ -136,18 +139,20 @@ const sourceUrls = feedData?.source_urls ?? (event.data.source_url ? [event.data
     font-family: var(--font-mono);
     font-size: 0.72rem;
   }
-  .publication-status { border: 1px solid currentColor; border-radius: 999px; padding: .16rem .5rem; font: 650 .66rem var(--font-mono); text-transform: uppercase; }
+  .publication-status { border: 1px solid currentColor; border-radius: 999px; padding: .16rem .5rem; font: 500 .63rem var(--font-mono); text-transform: uppercase; }
   .status-verified { color: var(--status-healthy); }
   .status-reported { color: var(--pillar-ecosystem); }
   .status-signal { color: var(--status-degraded); }
   .current-tracks { display: inline-flex; flex-wrap: wrap; gap: var(--space-2); }
 
   .event-page-body :global(h2) {
-    font-size: 1.15rem;
-    margin-top: var(--space-6);
+    font-size: 1.35rem;
+    margin-top: var(--space-7);
     margin-bottom: var(--space-3);
   }
   .event-page-body :global(h2):first-of-type { margin-top: 0; }
+  .event-page-body :global(p) { max-width: 72ch; color: #d8d1e4; font-size: .98rem; line-height: 1.75; }
+  .event-page-body :global(h2:nth-of-type(4)) { color: var(--pink); }
 
   .event-page-body :global(details) {
     border: 1px solid var(--border);

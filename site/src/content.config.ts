@@ -57,7 +57,7 @@ const feed = defineCollection({
     event_date: z.coerce.date(),
     published_at: z.coerce.date(),
     detected_at: z.coerce.date(),
-    source_urls: z.array(z.string().url()).min(1),
+    source_urls: z.array(z.url()).min(1),
     change_kind: z.enum(["material", "cosmetic", "noise"]),
     importance: z.number().min(0).max(1),
     confidence: z.enum(["low", "medium", "high"]),

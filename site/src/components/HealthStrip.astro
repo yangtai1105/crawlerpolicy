@@ -4,10 +4,10 @@ import type { PipelineHealth } from "../lib/health";
 interface Props { health: PipelineHealth; compact?: boolean; }
 const { health, compact = false } = Astro.props;
 const labels = {
-  healthy: "Coverage verified",
-  degraded: "Partial coverage",
-  critical: "Intelligence paused",
-  unknown: "Awaiting verification",
+  healthy: "Updates current",
+  degraded: "Updates delayed",
+  critical: "Updates delayed",
+  unknown: "Updates pending",
 };
 const descriptions = {
   healthy: "All required stages completed.",
@@ -24,7 +24,7 @@ const timestamp = health.last_fully_successful_at
   <div class="health-state">
     <span class="status-mark" aria-hidden="true"></span>
     <div>
-      <p class="utility-label">Pipeline · {health.status}</p>
+      <p class="utility-label">Publication status</p>
       <strong>{labels[health.status]}</strong>
     </div>
   </div>
@@ -44,9 +44,9 @@ const timestamp = health.last_fully_successful_at
     gap: var(--space-5);
     align-items: center;
     padding: var(--space-4) var(--space-5);
-    border: 1px solid var(--border-strong);
+    border: 1px solid var(--border);
     border-left: 4px solid var(--health-color);
-    background: var(--bg-elev);
+    background: rgba(33, 24, 58, .72);
   }
   .health-healthy { --health-color: var(--status-healthy); }
   .health-degraded { --health-color: var(--status-degraded); }
@@ -54,7 +54,7 @@ const timestamp = health.last_fully_successful_at
   .health-state { display: flex; align-items: center; gap: var(--space-3); }
   .health-state p, .health-description { margin: 0; }
   .health-state strong { font: 650 0.96rem/1.2 var(--font-display); }
-  .status-mark { width: 10px; height: 10px; background: var(--health-color); transform: rotate(45deg); flex: 0 0 auto; }
+  .status-mark { width: 8px; height: 8px; border-radius: 50%; background: var(--health-color); flex: 0 0 auto; box-shadow: 0 0 16px var(--health-color); }
   .health-description { color: var(--ink-muted); font-size: 0.82rem; max-width: 44ch; }
   .health-metrics { margin: 0; display: flex; gap: var(--space-5); }
   .health-metrics div { min-width: 70px; }

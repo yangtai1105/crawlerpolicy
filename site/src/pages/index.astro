@@ -2,27 +2,35 @@
 import Base from "../layouts/Base.astro";
 import HealthStrip from "../components/HealthStrip.astro";
 import FrontCard from "../components/FrontCard.astro";
-import TrendTable from "../components/TrendTable.astro";
-import DevelopmentCard from "../components/DevelopmentCard.astro";
-import EvidenceRail from "../components/EvidenceRail.astro";
+import FeedCard from "../components/FeedCard.astro";
+import TrackTag from "../components/TrackTag.astro";
 import { loadHealth } from "../lib/health";
 import { loadLatestIntelligence } from "../lib/intelligence";
-import { loadTrends } from "../lib/trends";
 import { FRONTS, frontForTrack, type Front } from "../lib/taxonomy";
 import { findSource } from "../lib/sources";
 import { loadCurrentEvents } from "../lib/events";
 import { feedSection, loadFeedItems } from "../lib/feed";
-import FeedCard from "../components/FeedCard.astro";
 
 const health = loadHealth();
 const issue = loadLatestIntelligence();
-const trends = loadTrends();
-const events = (await loadCurrentEvents())
-  .filter((event) => event.data.change_kind === "material")
-  .sort((a, b) => b.data.event_date.getTime() - a.data.event_date.getTime());
+const events = (await loadCurrentEvents()).filter((event) => event.data.change_kind === "material");
 const feedItems = await loadFeedItems();
-const byId = new Map(events.map((event) => [event.data.slug, event]));
-const activeFronts = new Set(events.map((event) => frontForTrack(event.data.primary_track)));
+const verifiedByImportance = feedItems
+  .filter((item) => item.data.status === "verified")
+  .sort((a, b) => b.data.importance - a.data.importance || b.data.published_at.getTime() - a.data.published_at.getTime());
+const lead = verifiedByImportance[0] ?? feedItems[0];
+const latest = feedItems.filter((item) => item.data.slug !== lead?.data.slug).slice(0, 8);
+const activeFronts = new Set([
+  ...events.map((event) => frontForTrack(event.data.primary_track)),
+  ...feedItems.slice(0, 12).map((item) => frontForTrack(item.data.primary_track)),
+]);
+const publicationDate = (lead?.data.published_at ?? new Date()).toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+const statusLabel = lead ? lead.data.status[0].toUpperCase() + lead.data.status.slice(1) : "Awaiting first signal";
 
 const frontCopy: Record<Front, string> = {
   "access-discovery": "Who can discover, crawl, index, and answer from the open web — and under which controls.",
@@ -31,161 +39,148 @@ const frontCopy: Record<Front, string> = {
   "governance-law": "The policy, regulatory, and litigation decisions reshaping machine access and downstream use.",
   "measurement-economics": "What traffic, referral, conversion, and compensation evidence reveals about the emerging economy.",
 };
-
-const evidenceItems = issue?.executive_shifts.flatMap((shift) =>
-  shift.evidence_event_ids.flatMap((id) => {
-    const event = byId.get(id);
-    return event ? [{
-      id,
-      date: event.data.event_date.toISOString().slice(0, 10),
-      title: event.data.title,
-      source: findSource(event.data.source)?.display_name ?? event.data.source,
-      url: `/events/${event.data.slug}`,
-    }] : [];
-  }),
-) ?? [];
-
-function summary(body: string | undefined): string {
-  const match = body?.match(/## Why it matters\s*\n+([^#]+)/);
-  return match?.[1].trim().slice(0, 260) ?? "";
-}
 ---
 
-<Base title="Web intelligence">
+<Base title="The AI × web ecosystem" description="Readable intelligence on AI crawlers, agent identity, content rights, and the economics of the open web.">
   <div class="container home">
-    <header class="hero observation-grid">
-      <div class="hero-index">
-        <p class="utility-label">Current intelligence</p>
-        <p>{issue ? `${issue.week} · completed window` : "First verified cycle pending"}</p>
+    <header class="hero">
+      <div class="hero-meta">
+        <p class="utility-label">Today in the ecosystem</p>
+        <time datetime={(lead?.data.published_at ?? new Date()).toISOString()}>{publicationDate}</time>
       </div>
-      <div class="hero-thesis">
-        <h1>{issue ? issue.thesis : "New intelligence cycle starting."}</h1>
-        <p>
-          {issue
-            ? issue.intelligence_read
-            : "Crawler Policy now separates collected evidence, verified developments, durable trends, and weekly conclusions. Current intelligence begins with post-refactor evidence only."}
-        </p>
-        <div class="hero-actions">
-          <a href="/intelligence">Open weekly intelligence →</a>
-          {!issue && <a href="/archive">Browse historical records</a>}
-        </div>
-      </div>
+      <h1>The web is negotiating with its new readers.</h1>
+      <p class="hero-deck">A daily intelligence feed about AI access, agent identity, content rights, policy, and the emerging machine-traffic economy.</p>
     </header>
 
-    <HealthStrip health={health} />
-
-    <section class="section">
-      <div class="section-heading compact-heading">
-        <div><p class="utility-label">Daily ecosystem feed</p><h2>Latest signals</h2></div>
-        <p>Readable analysis separated by evidence level.</p>
-      </div>
-      {feedItems.length ? feedItems.slice(0, 10).map((item) => (
-        <FeedCard
-          slug={item.data.slug}
-          title={item.data.title}
-          source={findSource(item.data.source)?.display_name ?? item.data.source}
-          publishedAt={item.data.published_at}
-          status={item.data.status}
-          summary={feedSection(item.body, "Summary")}
-          analyticalLabel="Why it matters"
-          analyticalText={feedSection(item.body, "Why it matters")}
-          tracks={[...item.data.tracks]}
-        />
-      )) : <p class="empty-read">The first post-launch ecosystem items will appear here.</p>}
-    </section>
-
-    <section class="section shifts">
-      <div class="section-heading">
-        <p class="utility-label">Executive shifts</p>
-        <h2>{issue ? "What moved this week" : "No verified weekly shift yet"}</h2>
-      </div>
-      {issue && issue.executive_shifts.length ? (
-        <div class="shift-grid">
-          {issue.executive_shifts.map((shift) => (
-            <article><h3>{shift.headline}</h3><p>{shift.summary}</p></article>
-          ))}
+    {lead ? (
+      <article class="lead-signal" data-status={lead.data.status}>
+        <div class="lead-glow" aria-hidden="true"></div>
+        <div class="lead-meta">
+          <span class="lead-status">{statusLabel}</span>
+          <span>{findSource(lead.data.source)?.display_name ?? lead.data.source}</span>
+          <span>Lead signal</span>
         </div>
-      ) : (
-        <p class="empty-read">The first completed run will place only evidence-backed, material changes here. Legacy records stay separate.</p>
-      )}
-      {evidenceItems.length > 0 && <EvidenceRail thesis="Primary records supporting this week’s executive read." items={evidenceItems} />}
+        <h2><a href={`/events/${lead.data.slug}`}>{lead.data.title}</a></h2>
+        <div class="lead-reading">
+          <div><p class="utility-label">Summary</p><p>{feedSection(lead.body, "Summary")}</p></div>
+          <div class="lead-why"><p class="utility-label">Why it matters</p><p>{feedSection(lead.body, "Why it matters")}</p></div>
+        </div>
+        <footer>
+          <div>{lead.data.tracks.map((track) => <TrackTag track={track} linked />)}</div>
+          <a href={`/events/${lead.data.slug}`}>Read the full analysis →</a>
+        </footer>
+      </article>
+    ) : (
+      <section class="lead-empty">
+        <p class="utility-label">Publication opening</p>
+        <h2>No new verified developments today.</h2>
+        <p>The new feed begins with evidence published on or after August 30, 2026. Sources are being checked; historical items will not be republished as current news.</p>
+      </section>
+    )}
+
+    {health.status !== "healthy" && <HealthStrip health={health} compact />}
+
+    <section class="section latest-section">
+      <div class="section-heading">
+        <div><p class="utility-label">Daily ecosystem feed</p><h2>Latest signals</h2></div>
+        <p>Summary first. Analysis next. Evidence always available.</p>
+      </div>
+      <div class="feed-list">
+        {latest.length ? latest.map((item) => (
+          <FeedCard
+            slug={item.data.slug}
+            title={item.data.title}
+            source={findSource(item.data.source)?.display_name ?? item.data.source}
+            publishedAt={item.data.published_at}
+            status={item.data.status}
+            summary={feedSection(item.body, "Summary")}
+            analyticalLabel={item.data.importance >= 0.7 ? "Why it matters" : "Insight"}
+            analyticalText={feedSection(item.body, item.data.importance >= 0.7 ? "Why it matters" : "Insight")}
+            tracks={[...item.data.tracks]}
+          />
+        )) : (
+          <p class="empty-read">{lead ? "No additional signals in this publication window." : "The first post-launch ecosystem items will appear here."}</p>
+        )}
+      </div>
     </section>
 
-    <section class="section" id="fronts">
-      <div class="section-heading compact-heading">
-        <div><p class="utility-label">Five public fronts</p><h2>The control plane</h2></div>
-        <p>Nine internal tracks roll up into five stable questions readers can follow.</p>
+    <section class="section themes-section">
+      <div class="section-heading">
+        <div><p class="utility-label">Follow the structure</p><h2>Active themes</h2></div>
+        <a href="/fronts">Explore all themes →</a>
       </div>
       <div class="front-grid">
         {FRONTS.map((front) => <FrontCard front={front} summary={frontCopy[front]} status={activeFronts.has(front) ? "active" : "quiet"} />)}
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-heading compact-heading">
-        <div><p class="utility-label">Durable signals</p><h2>Trend state</h2></div>
-        <p>Status changes require primary or measurement evidence.</p>
+    <section class="weekly-entry">
+      <div>
+        <p class="utility-label">Weekly intelligence</p>
+        <h2>{issue?.thesis ?? "The durable read begins after a complete evidence window."}</h2>
       </div>
-      <TrendTable trends={trends} />
-    </section>
-
-    <section class="section">
-      <div class="section-heading compact-heading">
-        <div><p class="utility-label">Current record</p><h2>Latest verified developments</h2></div>
-        <a href="/developments">All developments →</a>
+      <div>
+        <p>{issue?.intelligence_read ?? "Daily signals become weekly intelligence only when verified evidence supports a durable shift. Reported stories and early signals remain visible without moving the conclusion."}</p>
+        <a href="/intelligence">Open the weekly read →</a>
       </div>
-      {events.length ? events.slice(0, 6).map((event) => (
-        <DevelopmentCard slug={event.data.slug} title={event.data.title} source={findSource(event.data.source)?.display_name ?? event.data.source} eventDate={event.data.event_date} tracks={[...event.data.tracks]} tier={event.data.source_tier} confidence={event.data.confidence} summary={summary(event.body)} />
-      )) : <p class="empty-read">No schema-v2 material developments yet. The pipeline is establishing its first verified baseline.</p>}
-    </section>
-
-    <section class="section watchlist">
-      <div><p class="utility-label">Next evidence</p><h2>Watchlist</h2></div>
-      <ol>
-        {(issue?.watchlist.length ? issue.watchlist : [
-          { question: "Which primary source will produce the first post-refactor material development?", tracks: [] },
-          { question: "Will identity and rights signals become deployable controls rather than policy statements?", tracks: [] },
-        ]).map((item) => <li>{item.question}</li>)}
-      </ol>
     </section>
   </div>
 </Base>
 
 <style>
-  .home { padding-top: var(--space-8); }
-  .hero { padding: var(--space-5) 0 var(--space-8); }
-  .hero-index { grid-column: 1 / 4; color: var(--ink-muted); font-size: 0.78rem; }
-  .hero-index p:last-child { margin-top: var(--space-3); font-family: var(--font-mono); }
-  .hero-thesis { grid-column: 4 / 12; }
-  .hero-thesis h1 { max-width: 11ch; }
-  .hero-thesis > p { max-width: 66ch; margin: var(--space-5) 0; color: var(--ink-muted); font-size: 1.02rem; }
-  .hero-actions { display: flex; flex-wrap: wrap; gap: var(--space-5); font: 650 0.72rem var(--font-mono); }
-  .hero-actions a { border-bottom: 1px solid var(--border-strong); padding-bottom: var(--space-1); }
+  .home { padding-top: var(--space-7); }
+  .hero { position: relative; padding: var(--space-5) 0 var(--space-8); }
+  .hero::before { position: absolute; top: 1.1rem; right: 0; width: min(34vw, 390px); height: 1px; background: var(--spectrum); content: ""; opacity: .8; }
+  .hero-meta { display: flex; justify-content: space-between; gap: var(--space-5); color: var(--muted); font: 400 .67rem var(--font-mono); }
+  .hero h1 { max-width: 12ch; margin-top: var(--space-6); }
+  .hero-deck { max-width: 720px; margin: var(--space-5) 0 0; color: var(--muted); font-size: clamp(1rem, 1.5vw, 1.2rem); }
+  .lead-signal { position: relative; isolation: isolate; overflow: hidden; padding: clamp(28px, 5vw, 64px); border: 1px solid rgba(139,109,255,.4); border-radius: var(--radius-md); background: linear-gradient(135deg, rgba(42,31,73,.96), rgba(23,18,44,.96)); box-shadow: 0 26px 90px rgba(0,0,0,.28), inset 0 1px rgba(255,255,255,.08); }
+  .lead-signal::before { position: absolute; inset: 0 auto 0 0; width: 4px; background: var(--spectrum); content: ""; }
+  .lead-glow { position: absolute; z-index: -1; top: -55%; right: -12%; width: 520px; height: 520px; border-radius: 50%; background: radial-gradient(circle, rgba(88,222,253,.18), rgba(139,109,255,.12) 35%, transparent 70%); filter: blur(8px); }
+  .lead-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--muted); font: 500 .63rem var(--font-mono); text-transform: uppercase; }
+  .lead-meta span + span::before { margin-right: var(--space-3); color: var(--dim); content: "·"; }
+  .lead-status { color: var(--cyan); }
+  .lead-signal[data-status="reported"] .lead-status { color: #b9a8ff; }
+  .lead-signal[data-status="signal"] .lead-status { color: var(--amber); }
+  .lead-signal h2 { max-width: 21ch; margin: var(--space-5) 0 var(--space-7); font-size: clamp(2rem, 4.5vw, 4.7rem); }
+  .lead-reading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 80px); max-width: 1000px; }
+  .lead-reading > div > p:last-child { color: #e2dced; font-size: .94rem; }
+  .lead-why { padding-left: var(--space-5); border-left: 2px solid var(--pink); }
+  .lead-why .utility-label { color: var(--pink); }
+  .lead-signal footer { display: flex; justify-content: space-between; gap: var(--space-5); align-items: end; margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--border); }
+  .lead-signal footer > div { display: flex; flex-wrap: wrap; gap: var(--space-2); }
+  .lead-signal footer > a { color: var(--cyan); font: 500 .68rem var(--font-mono); white-space: nowrap; }
+  .lead-empty { padding: clamp(32px, 6vw, 72px); border: 1px solid var(--border-strong); border-radius: var(--radius-md); background: rgba(33,24,58,.72); }
+  .lead-empty h2 { max-width: 18ch; margin: var(--space-4) 0; }
+  .lead-empty > p:last-child { max-width: 68ch; color: var(--muted); }
+  :global(.health-strip) { margin-top: var(--space-4); }
   .section { padding-top: var(--space-9); }
-  .section-heading { margin-bottom: var(--space-6); }
+  .section-heading { display: flex; justify-content: space-between; gap: var(--space-6); align-items: end; margin-bottom: var(--space-6); }
   .section-heading .utility-label { margin-bottom: var(--space-2); }
-  .compact-heading { display: flex; justify-content: space-between; gap: var(--space-6); align-items: end; }
-  .compact-heading > p { max-width: 44ch; margin: 0; color: var(--ink-muted); font-size: 0.82rem; }
-  .compact-heading > a { font: 650 0.72rem var(--font-mono); white-space: nowrap; }
-  .shift-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border-strong); }
-  .shift-grid article { padding: var(--space-5); border-right: 1px solid var(--border); background: color-mix(in srgb, var(--bg-elev) 72%, transparent); }
-  .shift-grid article:last-child { border-right: 0; }
-  .shift-grid h3 { margin-bottom: var(--space-3); }
-  .shift-grid p, .empty-read { color: var(--ink-muted); font-size: 0.86rem; max-width: 68ch; }
-  .shifts :global(.evidence-rail) { margin-top: var(--space-7); max-width: 880px; }
+  .section-heading > p { max-width: 43ch; margin: 0; color: var(--muted); font-size: .82rem; }
+  .section-heading > a { color: var(--cyan); font: 500 .68rem var(--font-mono); white-space: nowrap; }
+  .feed-list { border-bottom: 1px solid var(--border-strong); }
+  .empty-read { max-width: 68ch; padding: var(--space-5) 0; border-top: 1px solid var(--border-strong); color: var(--muted); }
   .front-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
   .front-grid > :global(article) { grid-column: span 2; }
   .front-grid > :global(article:nth-child(4)), .front-grid > :global(article:nth-child(5)) { grid-column: span 3; }
-  .watchlist { display: grid; grid-template-columns: 1fr 2fr; gap: var(--space-7); padding-bottom: var(--space-6); border-top: 1px solid var(--border-strong); padding-top: var(--space-7); }
-  .watchlist ol { margin: 0; padding-left: 1.4rem; }
-  .watchlist li { padding: 0 0 var(--space-4) var(--space-2); border-bottom: 1px solid var(--border); margin-bottom: var(--space-4); }
+  .weekly-entry { display: grid; grid-template-columns: 1.25fr .75fr; gap: var(--space-8); margin-top: var(--space-9); padding: var(--space-8) 0; border-top: 1px solid var(--border-strong); border-bottom: 1px solid var(--border-strong); }
+  .weekly-entry h2 { max-width: 17ch; margin-top: var(--space-3); }
+  .weekly-entry > div:last-child { align-self: end; }
+  .weekly-entry > div:last-child p { color: var(--muted); font-size: .88rem; }
+  .weekly-entry a { color: var(--pink); font: 500 .68rem var(--font-mono); }
   @media (max-width: 800px) {
-    .hero { display: block; }
-    .hero-index { margin-bottom: var(--space-6); }
-    .compact-heading, .watchlist { display: block; }
-    .compact-heading > p, .compact-heading > a { display: block; margin-top: var(--space-3); }
-    .shift-grid, .front-grid { grid-template-columns: 1fr; }
+    .lead-reading, .weekly-entry { grid-template-columns: 1fr; gap: var(--space-5); }
+    .lead-signal footer, .section-heading { align-items: start; flex-direction: column; }
+    .front-grid { grid-template-columns: 1fr; }
     .front-grid > :global(article), .front-grid > :global(article:nth-child(4)), .front-grid > :global(article:nth-child(5)) { grid-column: auto; }
-    .watchlist ol { margin-top: var(--space-5); }
+  }
+  @media (max-width: 480px) {
+    .home { padding-top: var(--space-5); }
+    .hero::before { display: none; }
+    .hero-meta { align-items: start; flex-direction: column; gap: var(--space-2); }
+    .lead-signal { padding: var(--space-5); }
+    .lead-signal h2 { margin-bottom: var(--space-6); }
+    .lead-signal footer > a { white-space: normal; }
   }
 </style>

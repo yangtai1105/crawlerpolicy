@@ -10,14 +10,14 @@ const sources = loadSources();
   <main class="container about-page">
     <header class="about-header observation-grid">
       <p class="utility-label">Method & boundaries</p>
-      <div><h1>Intelligence for the machine-readable web.</h1><p>Crawler Policy tracks how machine access, content rights, agent identity, governance, and web economics are changing — with conclusions constrained to replayable evidence.</p></div>
+      <div><h1>A readable record of the AI × web negotiation.</h1><p>Crawler Policy turns changes in machine access, content rights, agent identity, governance, and web economics into concise English analysis — while keeping every conclusion tied to replayable evidence.</p></div>
     </header>
 
     <section>
-      <div class="section-index"><span class="utility-label">Pipeline</span><strong>Evidence → Event → Trend → Weekly</strong></div>
+      <div class="section-index"><span class="utility-label">Editorial flow</span><strong>Evidence → Feed → Development → Weekly</strong></div>
       <div class="process">
         <article><span>Evidence</span><h2>Preserve what was observed</h2><p>Every successful fetch can create an immutable evidence record with source identity, timestamps, content hashes, and raw or normalized material. Failed analysis does not discard it.</p></article>
-        <article><span>Event</span><h2>Publish a material development</h2><p>Analysis assigns dates, actors, tracks, confidence, and evidence IDs. Only schema-v2 material changes enter the current developments record.</p></article>
+        <article><span>Feed</span><h2>Explain what happened</h2><p>Gemini produces a structured Summary, Insight, Implication, and Why it matters. Deterministic source rules label the result Verified, Reported, or Signal.</p></article>
         <article><span>Trend</span><h2>Change status with authority</h2><p>A durable trend can move only when primary or measurement-tier evidence supports the delta. No-change is a real result.</p></article>
         <article><span>Weekly</span><h2>Synthesize a completed window</h2><p>The weekly issue compares a full ISO week, shows quiet tracks, and refuses to publish when required health coverage is critical or stale.</p></article>
       </div>
@@ -32,7 +32,8 @@ const sources = loadSources();
       <div class="section-index"><span class="utility-label">Trust model</span><strong>What the labels mean</strong></div>
       <div class="rule-grid">
         <article><h2>Pipeline health is stage-aware</h2><p><strong>Healthy</strong> means all configured sources completed. <strong>Degraded</strong> means useful output exists but some non-required work failed. <strong>Critical</strong> means required evidence is incomplete, so weekly conclusions are withheld. <strong>Unknown</strong> is never promoted to healthy.</p></article>
-        <article><h2>Models assist; evidence governs</h2><p>Models help classify relevance, identify material change, and synthesize implications. Generated analysis is labeled. Source records, evidence IDs, and raw diffs remain authoritative.</p></article>
+        <article><h2>Gemini assists; evidence governs</h2><p>Gemini helps classify relevance, identify material change, and write the four analytical layers. It cannot promote a reported story into verified evidence. Source records, evidence IDs, and raw diffs remain authoritative.</p></article>
+        <article><h2>Publication labels have consequences</h2><p><strong>Verified</strong> items use primary or measurement evidence. <strong>Reported</strong> items come from configured specialist reporting. <strong>Signals</strong> are early observations. Only verified material items can move trends or weekly conclusions.</p></article>
         <article><h2>Three dates stay separate</h2><p><code>event_date</code> is when the development occurred; <code>published_at</code> is when the source published it; <code>detected_at</code> is when this pipeline observed it.</p></article>
         <article><h2>Legacy is not current intelligence</h2><p>Schema-v1 events and the former Weekly Dispatch are preserved unchanged in <a href="/archive">Legacy Archive</a>. They remain useful context but never seed current trends or weekly issues.</p></article>
       </div>

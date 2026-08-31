@@ -25,11 +25,12 @@ const {
   analyticalText,
   tracks,
 } = Astro.props;
+const statusLabel = status[0].toUpperCase() + status.slice(1);
 ---
 
 <article class="feed-card" data-status={status}>
   <div class="feed-card-meta">
-    <span class="feed-status">{status}</span>
+    <span class="feed-status">{statusLabel}</span>
     <span>{source}</span>
     <time datetime={publishedAt.toISOString()}>{publishedAt.toISOString().slice(0, 10)}</time>
   </div>
@@ -46,15 +47,20 @@ const {
 </article>
 
 <style>
-  .feed-card { padding: var(--space-5) 0; border-top: 1px solid var(--border-strong); }
-  .feed-card-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--ink-muted); font: 600 .65rem var(--font-mono); text-transform: uppercase; }
-  .feed-status { color: var(--protocol-blue); }
-  h3 { margin: var(--space-3) 0; font-size: clamp(1.3rem, 2.3vw, 1.9rem); }
-  .feed-summary { max-width: 72ch; color: var(--ink-muted); }
-  .feed-analysis { max-width: 72ch; padding-left: var(--space-3); border-left: 2px solid var(--pillar-ecosystem); }
-  .feed-analysis > span { color: var(--pillar-ecosystem); font: 650 .63rem var(--font-mono); text-transform: uppercase; }
-  .feed-analysis p { margin: var(--space-1) 0 0; font-size: .86rem; }
-  .feed-footer { display: flex; justify-content: space-between; gap: var(--space-4); align-items: end; margin-top: var(--space-4); }
+  .feed-card { --rail: var(--violet); position: relative; padding: var(--space-6) var(--space-5) var(--space-6) var(--space-6); border-top: 1px solid var(--border-strong); background: linear-gradient(90deg, rgba(139,109,255,.055), transparent 48%); }
+  .feed-card::before { position: absolute; top: var(--space-6); bottom: var(--space-6); left: 0; width: 2px; background: var(--rail); content: ""; }
+  .feed-card[data-status="verified"] { --rail: var(--cyan); }
+  .feed-card[data-status="signal"] { --rail: var(--amber); }
+  .feed-card-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--muted); font: 500 .62rem var(--font-mono); text-transform: uppercase; }
+  .feed-card-meta span + span::before, .feed-card-meta time::before { margin-right: var(--space-3); color: var(--dim); content: "·"; }
+  .feed-status { color: var(--rail); }
+  h3 { max-width: 25ch; margin: var(--space-3) 0; font-size: clamp(1.35rem, 2.3vw, 2rem); }
+  .feed-summary { max-width: 74ch; color: #d5cee1; font-size: .9rem; }
+  .feed-analysis { max-width: 74ch; margin-top: var(--space-5); padding-left: var(--space-4); border-left: 1px solid var(--rail); }
+  .feed-analysis > span { color: var(--rail); font: 500 .61rem var(--font-mono); text-transform: uppercase; }
+  .feed-analysis p { margin: var(--space-1) 0 0; color: var(--muted); font-size: .83rem; }
+  .feed-footer { display: flex; justify-content: space-between; gap: var(--space-4); align-items: end; margin-top: var(--space-5); }
   .feed-footer > div { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-  .feed-footer > a { font: 650 .7rem var(--font-mono); white-space: nowrap; }
+  .feed-footer > a { color: var(--cyan); font: 500 .67rem var(--font-mono); white-space: nowrap; }
+  @media (max-width: 600px) { .feed-card { padding-right: 0; } .feed-footer { align-items: start; flex-direction: column; } }
 </style>

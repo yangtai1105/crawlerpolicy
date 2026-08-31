@@ -39,6 +39,12 @@ test("reported feed item is readable without becoming a verified development", a
 
   assert.match(home, /Agent access develops a market layer/);
   assert.match(home, /\breported\b/i);
+  assert.match(home, /Today in the ecosystem/);
+  assert.match(home, /Latest signals/);
+  assert.match(home, />Feed</);
+  assert.match(home, />Weekly</);
+  assert.match(home, />Themes</);
+  assert.doesNotMatch(home, /The control plane/);
   assert.match(detail, /Crawler control is expanding beyond allow and block decisions/);
   assert.match(detail, /Why it matters/);
   assert.doesNotMatch(developments, /Agent access develops a market layer/);

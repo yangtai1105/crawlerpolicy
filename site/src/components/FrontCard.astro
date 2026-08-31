@@ -7,7 +7,7 @@ const { front, summary, status = "quiet" } = Astro.props;
 
 <article class="front-card" data-status={status}>
   <div class="front-topline">
-    <span class="utility-label">Public front</span>
+    <span class="utility-label">Theme</span>
     <span class="front-status">{status}</span>
   </div>
   <h3><a href={`/fronts/${front}`}>{FRONT_LABELS[front]}</a></h3>
@@ -15,18 +15,18 @@ const { front, summary, status = "quiet" } = Astro.props;
   <div class="front-tracks">
     {FRONT_TRACKS[front].map((track) => <TrackTag track={track} />)}
   </div>
-  <a class="front-link" href={`/fronts/${front}`} aria-label={`Open ${FRONT_LABELS[front]} intelligence`}>Open front <span aria-hidden="true">→</span></a>
+  <a class="front-link" href={`/fronts/${front}`} aria-label={`Open ${FRONT_LABELS[front]} intelligence`}>Follow theme <span aria-hidden="true">→</span></a>
 </article>
 
 <style>
-  .front-card { min-height: 290px; display: flex; flex-direction: column; padding: var(--space-5); border-top: 3px solid var(--border-strong); background: var(--bg-elev); box-shadow: 0 0 0 1px var(--border); }
-  .front-card[data-status="active"] { border-top-color: var(--alert-red); }
+  .front-card { min-height: 280px; display: flex; flex-direction: column; padding: var(--space-5); border: 1px solid var(--border); border-top: 2px solid var(--border-strong); border-radius: var(--radius-sm); background: rgba(33,24,58,.62); }
+  .front-card[data-status="active"] { border-top-color: var(--pink); background: linear-gradient(145deg, rgba(139,109,255,.12), rgba(33,24,58,.72)); }
   .front-card[data-status="watch"] { border-top-color: var(--trace-violet); }
   .front-topline { display: flex; justify-content: space-between; gap: var(--space-3); }
-  .front-status { font: 650 0.63rem/1.3 var(--font-mono); text-transform: uppercase; color: var(--ink-muted); }
+  .front-status { font: 500 0.61rem/1.3 var(--font-mono); text-transform: uppercase; color: var(--muted); }
   h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); margin: var(--space-5) 0 var(--space-3); }
-  p { color: var(--ink-muted); font-size: 0.88rem; line-height: 1.6; }
+  p { color: var(--muted); font-size: 0.84rem; line-height: 1.62; }
   .front-tracks { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: auto; padding-top: var(--space-4); }
-  .front-link { margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--border); font: 650 0.72rem/1.2 var(--font-mono); }
+  .front-link { margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--border); color: var(--cyan); font: 500 0.67rem/1.2 var(--font-mono); }
   .front-link span { float: right; }
 </style>

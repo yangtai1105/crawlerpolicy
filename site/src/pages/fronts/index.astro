@@ -1,0 +1,41 @@
+---
+import Base from "../../layouts/Base.astro";
+import FrontCard from "../../components/FrontCard.astro";
+import { FRONTS, type Front } from "../../lib/taxonomy";
+import { loadCurrentEvents } from "../../lib/events";
+import { frontForTrack } from "../../lib/taxonomy";
+
+const events = await loadCurrentEvents();
+const activeFronts = new Set(events.map((event) => frontForTrack(event.data.primary_track)));
+const frontCopy: Record<Front, string> = {
+  "access-discovery": "Who can discover, crawl, index, and answer from the open web — and under which controls.",
+  "agents-identity": "How autonomous agents identify themselves, request authority, and cross system boundaries.",
+  "rights-markets": "Where licensing standards, creator controls, and market mechanisms are converging or splitting.",
+  "governance-law": "The policy, regulatory, and litigation decisions reshaping machine access and downstream use.",
+  "measurement-economics": "What traffic, referral, conversion, and compensation evidence reveals about the emerging economy.",
+};
+---
+
+<Base title="Themes" description="Five durable themes organizing the AI and open-web ecosystem.">
+  <main class="container themes-page">
+    <header>
+      <p class="utility-label">Five durable questions</p>
+      <h1>Follow the ecosystem by theme.</h1>
+      <p>Daily stories move quickly. These themes make the slower structural shifts visible across access, identity, rights, law, and economics.</p>
+    </header>
+    <div class="theme-grid">
+      {FRONTS.map((front) => <FrontCard front={front} summary={frontCopy[front]} status={activeFronts.has(front) ? "active" : "quiet"} />)}
+    </div>
+  </main>
+</Base>
+
+<style>
+  .themes-page { padding-top: var(--space-8); }
+  header { padding-bottom: var(--space-8); }
+  header h1 { max-width: 11ch; margin: var(--space-4) 0; }
+  header > p:last-child { max-width: 66ch; color: var(--muted); }
+  .theme-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
+  .theme-grid > :global(article) { grid-column: span 2; }
+  .theme-grid > :global(article:nth-child(4)), .theme-grid > :global(article:nth-child(5)) { grid-column: span 3; }
+  @media (max-width: 800px) { .theme-grid { grid-template-columns: 1fr; } .theme-grid > :global(article), .theme-grid > :global(article:nth-child(4)), .theme-grid > :global(article:nth-child(5)) { grid-column: auto; } }
+</style>

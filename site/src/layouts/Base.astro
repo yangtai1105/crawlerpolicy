@@ -1,6 +1,8 @@
 ---
-import "@fontsource-variable/inter/index.css";
-import "@fontsource-variable/archivo/index.css";
+import "@fontsource-variable/syne/index.css";
+import "@fontsource-variable/manrope/index.css";
+import "@fontsource/dm-mono/400.css";
+import "@fontsource/dm-mono/500.css";
 import "../styles/global.css";
 import { loadHealth } from "../lib/health";
 
@@ -21,7 +23,7 @@ const coverage = health.coverage.configured
 ---
 
 <!doctype html>
-<html lang="en" data-theme="light">
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -37,25 +39,13 @@ const coverage = health.coverage.configured
           <span class="brand-descriptor">Rights, Access &amp; Agentic Web Intelligence</span>
         </a>
         <div class="links">
-          <a href="/intelligence">Intelligence</a>
-          <a href="/developments">Developments</a>
-          <a href="/#fronts">Fronts</a>
+          <a href="/">Feed</a>
+          <a href="/intelligence">Weekly</a>
+          <a href="/fronts">Themes</a>
           <a href="/sources">Sources</a>
-          <a href="/archive">Legacy Archive</a>
           <a href="/about">About</a>
         </div>
-        <button
-          class="theme-toggle"
-          type="button"
-          aria-label="Switch color theme"
-          title="Switch color theme"
-          onclick="
-            const el = document.documentElement;
-            const next = el.dataset.theme === 'dark' ? 'light' : 'dark';
-            el.dataset.theme = next;
-            localStorage.setItem('theme', next);
-          "
-        >◐</button>
+        <a class="nav-rss" href="/feed.xml">RSS ↗</a>
       </div>
     </nav>
 
@@ -70,25 +60,15 @@ const coverage = health.coverage.configured
           <strong>{lastSuccess}</strong>
         </p>
         <p>
-          Pipeline status: <strong>{health.status}</strong> · {coverage}. Analysis is model-assisted;
-          linked evidence remains the record of authority.
+          <strong>{health.status === "healthy" ? "Updates current" : "Updates delayed"}</strong> · {coverage}.
+          Gemini assists the analysis; linked evidence remains authoritative.
         </p>
         <div class="footer-links">
           <a href="/feed.xml">RSS</a>
-          <a href="/about">Method</a>
-          <a href="/archive">Archive</a>
+          <a href="/developments">Verified developments</a>
+          <a href="/archive">Legacy archive</a>
         </div>
       </div>
     </footer>
-
-    <script is:inline>
-      // Apply saved theme before hydration to avoid flash.
-      (function () {
-        const saved = localStorage.getItem("theme");
-        if (saved === "light" || saved === "dark") {
-          document.documentElement.dataset.theme = saved;
-        }
-      })();
-    </script>
   </body>
 </html>
