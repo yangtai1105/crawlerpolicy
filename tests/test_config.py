@@ -1,4 +1,6 @@
 
+from datetime import UTC, datetime
+
 from pipeline.config import Config
 
 
@@ -18,8 +20,24 @@ def test_config_paths_resolve_relative_to_repo_root(tmp_path, monkeypatch):
 
 def test_config_reads_required_env(monkeypatch, tmp_path):
     monkeypatch.setenv("REPO_ROOT", str(tmp_path))
-    monkeypatch.setenv("ANTHROPIC_API_KEY", "sk-ant-test")
+    monkeypatch.setenv("GEMINI_API_KEY", "gemini-test")
+    monkeypatch.setenv("GEMINI_ANALYSIS_MODEL", "gemini-3.7-flash-preview")
+    monkeypatch.setenv("PUBLICATION_CUTOFF", "2026-09-01T00:00:00Z")
     monkeypatch.setenv("ALERT_EMAILS", "a@x.com,b@x.com")
     cfg = Config.from_env()
-    assert cfg.anthropic_api_key == "sk-ant-test"
+    assert cfg.gemini_api_key == "gemini-test"
+    assert cfg.gemini_analysis_model == "gemini-3.7-flash-preview"
+    assert cfg.publication_cutoff == datetime(2026, 9, 1, tzinfo=UTC)
     assert cfg.alert_emails == ["a@x.com", "b@x.com"]
+
+
+def test_config_uses_publication_defaults(monkeypatch, tmp_path):
+    monkeypatch.setenv("REPO_ROOT", str(tmp_path))
+    monkeypatch.delenv("GEMINI_ANALYSIS_MODEL", raising=False)
+    monkeypatch.delenv("PUBLICATION_CUTOFF", raising=False)
+
+    cfg = Config.from_env()
+
+    assert cfg.gemini_analysis_model == "gemini-3.7-flash"
+    assert cfg.publication_cutoff == datetime(2026, 8, 30, tzinfo=UTC)
+    assert cfg.feed_dir == tmp_path / "content" / "feed"

@@ -3,13 +3,16 @@ from __future__ import annotations
 
 import os
 from dataclasses import dataclass, field
+from datetime import UTC, datetime
 from pathlib import Path
 
 
 @dataclass(frozen=True)
 class Config:
     repo_root: Path
-    anthropic_api_key: str
+    gemini_api_key: str
+    gemini_analysis_model: str
+    publication_cutoff: datetime
     alert_emails: list[str] = field(default_factory=list)
 
     @property
@@ -19,6 +22,10 @@ class Config:
     @property
     def events_dir(self) -> Path:
         return self.repo_root / "content" / "events"
+
+    @property
+    def feed_dir(self) -> Path:
+        return self.repo_root / "content" / "feed"
 
     @property
     def evidence_dir(self) -> Path:
@@ -55,8 +62,16 @@ class Config:
             repo_root_raw = str(Path(__file__).resolve().parent.parent)
         emails_raw = os.environ.get("ALERT_EMAILS", "")
         emails = [e.strip() for e in emails_raw.split(",") if e.strip()]
+        cutoff_raw = os.environ.get("PUBLICATION_CUTOFF", "2026-08-30T00:00:00Z")
+        cutoff = datetime.fromisoformat(cutoff_raw.replace("Z", "+00:00"))
+        if cutoff.tzinfo is None:
+            cutoff = cutoff.replace(tzinfo=UTC)
         return cls(
             repo_root=Path(repo_root_raw).resolve(),
-            anthropic_api_key=os.environ.get("ANTHROPIC_API_KEY", ""),
+            gemini_api_key=os.environ.get("GEMINI_API_KEY", ""),
+            gemini_analysis_model=os.environ.get(
+                "GEMINI_ANALYSIS_MODEL", "gemini-3.7-flash"
+            ),
+            publication_cutoff=cutoff.astimezone(UTC),
             alert_emails=emails,
         )

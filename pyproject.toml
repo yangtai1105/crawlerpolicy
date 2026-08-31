@@ -9,7 +9,6 @@ dependencies = [
     "readability-lxml>=0.8.1",
     "beautifulsoup4>=4.12",
     "lxml>=5.2",
-    "anthropic>=0.40",
     "pyyaml>=6.0",
     "pydantic>=2.7",
     "python-dotenv>=1.0",
