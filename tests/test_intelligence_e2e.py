@@ -100,7 +100,7 @@ async def test_pipeline_replay_and_weekly_delta_work_end_to_end(fixture_repo):
     issue = await generate_weekly_intelligence(
         repo_root=fixture_repo,
         now=datetime(2026, 8, 31, 13, tzinfo=UTC),
-        client=None,
+        model=None,
     )
 
     assert issue.health_status == "degraded"

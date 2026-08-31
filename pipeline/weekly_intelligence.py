@@ -11,10 +11,10 @@ from pathlib import Path
 from typing import Literal
 
 import yaml
-from anthropic import AsyncAnthropic
 from pydantic import BaseModel, Field
 
 from pipeline.config import Config
+from pipeline.model_provider import GeminiStructuredModel, StructuredModel
 from pipeline.taxonomy import SourceTier, Track
 from pipeline.trends import Trend, TrendDelta, TrendStatus, load_trends, save_trends
 
@@ -97,6 +97,12 @@ class WeeklyIssue(BaseModel):
     watchlist: list[WatchItem] = Field(default_factory=list)
     source_ledger: list[SourceLedgerEntry] = Field(default_factory=list)
     model_generated: bool = False
+
+
+class WeeklySynthesis(BaseModel):
+    thesis: str
+    intelligence_read: str
+    executive_shifts: list[ExecutiveShift]
 
 
 def build_weekly_issue(
@@ -333,9 +339,15 @@ async def generate_weekly_intelligence(
     *,
     repo_root: Path,
     now: datetime,
-    client: AsyncAnthropic | None,
+    model: StructuredModel | None,
 ) -> WeeklyIssue:
-    cfg = Config(repo_root=repo_root, anthropic_api_key="", alert_emails=[])
+    cfg = Config(
+        repo_root=repo_root,
+        gemini_api_key="",
+        gemini_analysis_model="gemini-3.7-flash",
+        publication_cutoff=datetime(2026, 8, 30, tzinfo=UTC),
+        alert_emails=[],
+    )
     week, window_start, window_end = completed_iso_window(now)
     health_path = cfg.data_dir / "health.json"
     if not health_path.exists():
@@ -370,8 +382,8 @@ async def generate_weekly_intelligence(
         window_start=window_start,
         window_end=window_end,
     )
-    if client is not None and events:
-        issue = await _synthesize_issue(client, issue, events)
+    if model is not None and events:
+        issue = await _synthesize_issue(model, issue, events)
     validate_issue_evidence(issue, {event.event_id for event in events})
 
     cfg.intelligence_dir.mkdir(parents=True, exist_ok=True)
@@ -393,38 +405,11 @@ def _load_previous_issue(directory: Path, current_week: str) -> WeeklyIssue | No
 
 
 async def _synthesize_issue(
-    client: AsyncAnthropic,
+    model: StructuredModel,
     issue: WeeklyIssue,
     events: list[MaterialEvent],
 ) -> WeeklyIssue:
     """Constrain model prose to event IDs selected by the deterministic layer."""
-    tool = {
-        "name": "emit_weekly_synthesis",
-        "description": "Write concise synthesis using only the supplied event IDs.",
-        "input_schema": {
-            "type": "object",
-            "properties": {
-                "thesis": {"type": "string"},
-                "intelligence_read": {"type": "string"},
-                "executive_shifts": {
-                    "type": "array",
-                    "items": {
-                        "type": "object",
-                        "properties": {
-                            "headline": {"type": "string"},
-                            "summary": {"type": "string"},
-                            "evidence_event_ids": {
-                                "type": "array",
-                                "items": {"type": "string"},
-                            },
-                        },
-                        "required": ["headline", "summary", "evidence_event_ids"],
-                    },
-                },
-            },
-            "required": ["thesis", "intelligence_read", "executive_shifts"],
-        },
-    }
     event_payload = [
         {
             "event_id": event.event_id,
@@ -436,39 +421,24 @@ async def _synthesize_issue(
         }
         for event in events
     ]
-    response = await client.messages.create(
-        model="claude-sonnet-4-6",
-        max_tokens=2500,
-        system=(
-            "You write a weekly Web-content intelligence brief. Use only supplied "
-            "facts and event IDs. Never invent an ID or unsupported claim."
+    synthesis = await model.generate(
+        response_model=WeeklySynthesis,
+        system_instruction=(
+            "Write a concise English weekly Web ecosystem intelligence brief. "
+            "Use only the supplied facts and event IDs. Never invent an ID, source, "
+            "causal claim, or unsupported conclusion."
         ),
-        tools=[tool],
-        tool_choice={"type": "tool", "name": "emit_weekly_synthesis"},
-        messages=[
-            {
-                "role": "user",
-                "content": json.dumps(event_payload, ensure_ascii=False),
-            }
-        ],
+        prompt=json.dumps(event_payload, ensure_ascii=False),
     )
-    for block in response.content:
-        if getattr(block, "type", None) != "tool_use":
-            continue
-        args = dict(block.input or {})
-        candidate = issue.model_copy(deep=True)
-        candidate.thesis = str(args.get("thesis") or issue.thesis)
-        candidate.intelligence_read = str(
-            args.get("intelligence_read") or issue.intelligence_read
-        )
-        candidate.executive_shifts = [
-            ExecutiveShift.model_validate(item)
-            for item in args.get("executive_shifts", [])
-        ]
-        candidate.model_generated = True
-        validate_issue_evidence(candidate, {event.event_id for event in events})
-        return candidate
-    raise RuntimeError("weekly synthesis did not return tool_use")
+    candidate = issue.model_copy(deep=True)
+    candidate.thesis = synthesis.thesis or issue.thesis
+    candidate.intelligence_read = (
+        synthesis.intelligence_read or issue.intelligence_read
+    )
+    candidate.executive_shifts = synthesis.executive_shifts
+    candidate.model_generated = True
+    validate_issue_evidence(candidate, {event.event_id for event in events})
+    return candidate
 
 
 def _atomic_json_write(path: Path, payload: dict) -> None:
@@ -481,16 +451,19 @@ def _cli() -> None:
     parser = argparse.ArgumentParser()
     parser.parse_args()
     cfg = Config.from_env()
-    client = (
-        AsyncAnthropic(api_key=cfg.anthropic_api_key)
-        if cfg.anthropic_api_key
+    model = (
+        GeminiStructuredModel(
+            api_key=cfg.gemini_api_key,
+            model=cfg.gemini_analysis_model,
+        )
+        if cfg.gemini_api_key
         else None
     )
     issue = asyncio.run(
         generate_weekly_intelligence(
             repo_root=cfg.repo_root,
             now=datetime.now(tz=UTC),
-            client=client,
+            model=model,
         )
     )
     print(json.dumps(issue.model_dump(mode="json"), indent=2))

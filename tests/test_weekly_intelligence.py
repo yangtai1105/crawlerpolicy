@@ -1,6 +1,7 @@
 import json
 from datetime import UTC, date, datetime
 from pathlib import Path
+from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
@@ -8,6 +9,7 @@ from pipeline.taxonomy import SourceTier, Track
 from pipeline.trends import Trend, TrendDelta, TrendStatus
 from pipeline.weekly_intelligence import (
     MaterialEvent,
+    WeeklySynthesis,
     WeeklyIssue,
     build_weekly_issue,
     completed_iso_window,
@@ -224,7 +226,7 @@ async def test_generate_weekly_intelligence_writes_verified_issue(tmp_path):
     issue = await generate_weekly_intelligence(
         repo_root=tmp_path,
         now=NOW,
-        client=None,
+        model=None,
     )
 
     output = data_dir / "intelligence" / "2026-W35.json"
@@ -243,7 +245,7 @@ async def test_generate_weekly_intelligence_refuses_critical_health(tmp_path):
     (data_dir / "trends.json").write_text('{"schema_version": 1, "trends": []}')
 
     with pytest.raises(RuntimeError, match="critical"):
-        await generate_weekly_intelligence(repo_root=tmp_path, now=NOW, client=None)
+        await generate_weekly_intelligence(repo_root=tmp_path, now=NOW, model=None)
 
     assert not (data_dir / "intelligence" / "2026-W35.json").exists()
 
@@ -258,4 +260,41 @@ async def test_generate_weekly_intelligence_refuses_stale_health(tmp_path):
     (data_dir / "trends.json").write_text('{"schema_version": 1, "trends": []}')
 
     with pytest.raises(RuntimeError, match="completed weekly window"):
-        await generate_weekly_intelligence(repo_root=tmp_path, now=NOW, client=None)
+        await generate_weekly_intelligence(repo_root=tmp_path, now=NOW, model=None)
+
+
+async def test_weekly_synthesis_uses_structured_model_and_preserves_evidence(tmp_path):
+    events_dir = tmp_path / "content" / "events"
+    events_dir.mkdir(parents=True)
+    _write_schema_v2_event(
+        events_dir / "current.md",
+        event_date="2026-08-27T00:00:00+00:00",
+    )
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "health.json").write_text(json.dumps(_health()))
+    (data_dir / "trends.json").write_text('{"schema_version": 1, "trends": []}')
+    model = MagicMock()
+    model.generate = AsyncMock(
+        return_value=WeeklySynthesis(
+            thesis="Access controls are becoming more specific.",
+            intelligence_read="One verified development separated search and training controls.",
+            executive_shifts=[
+                {
+                    "headline": "Google separates an AI Search control",
+                    "summary": "Publishers gained a more specific control.",
+                    "evidence_event_ids": ["google-ai-control"],
+                }
+            ],
+        )
+    )
+
+    issue = await generate_weekly_intelligence(
+        repo_root=tmp_path,
+        now=NOW,
+        model=model,
+    )
+
+    assert issue.model_generated is True
+    assert issue.executive_shifts[0].evidence_event_ids == ["google-ai-control"]
+    assert issue.thesis == "Access controls are becoming more specific."

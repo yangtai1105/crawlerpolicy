@@ -6,7 +6,12 @@ from unittest.mock import AsyncMock, MagicMock
 import pytest
 
 from pipeline.sources import Source, SourceType
-from pipeline.state_of_play import build_opt_out_matrix, select_crawler_control_sources
+from pipeline.state_of_play import (
+    CrawlerFacts,
+    UserAgentFact,
+    build_opt_out_matrix,
+    select_crawler_control_sources,
+)
 from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
@@ -36,36 +41,28 @@ def crawler_sources():
 
 @pytest.fixture
 def fake_client():
-    client = MagicMock()
-    client.messages.create = AsyncMock()
-    return client
-
-
-def _tool_response(args):
-    block = MagicMock()
-    block.type = "tool_use"
-    block.name = "emit_crawler_facts"
-    block.input = args
-    msg = MagicMock()
-    msg.content = [block]
-    return msg
+    model = MagicMock()
+    model.generate = AsyncMock()
+    return model
 
 
 async def test_build_opt_out_matrix_writes_json(tmp_path: Path, crawler_sources, fake_client):
-    fake_client.messages.create.side_effect = [
-        _tool_response(
-            {
-                "supports_robots_txt": True,
-                "supports_user_agent_opt_out": True,
-                "policy_url": "https://x/docs",
-            }
+    fake_client.generate.side_effect = [
+        CrawlerFacts(
+            supports_robots_txt=True,
+            supports_user_agent_opt_out=True,
+            policy_url="https://x/docs",
+            user_agents=[
+                UserAgentFact(name="GPTBot", purpose="Training crawl")
+            ],
         ),
-        _tool_response(
-            {
-                "supports_robots_txt": True,
-                "supports_user_agent_opt_out": True,
-                "policy_url": "https://y/docs",
-            }
+        CrawlerFacts(
+            supports_robots_txt=True,
+            supports_user_agent_opt_out=True,
+            policy_url="https://y/docs",
+            user_agents=[
+                UserAgentFact(name="ClaudeBot", purpose="Training crawl")
+            ],
         ),
     ]
 
@@ -74,7 +71,7 @@ async def test_build_opt_out_matrix_writes_json(tmp_path: Path, crawler_sources,
 
     out_path = tmp_path / "opt-out-matrix.json"
     await build_opt_out_matrix(
-        client=fake_client,
+        model=fake_client,
         crawler_sources=crawler_sources,
         load_latest_snapshot=load_latest_snapshot,
         out_path=out_path,
@@ -86,6 +83,7 @@ async def test_build_opt_out_matrix_writes_json(tmp_path: Path, crawler_sources,
     first = data["entries"][0]
     assert first["supports_robots_txt"] is True
     assert first["days_since_last_change"] == 2
+    assert first["user_agents"][0]["name"] == "GPTBot"
 
 
 def test_select_crawler_control_sources_uses_tracks_not_source_type(crawler_sources):
