@@ -5,31 +5,42 @@ import TrackTag from "../../components/TrackTag.astro";
 import TimeAgo from "../../components/TimeAgo.astro";
 import { findSource } from "../../lib/sources";
 import { loadCurrentEvents } from "../../lib/events";
+import { loadFeedItems } from "../../lib/feed";
 
 export async function getStaticPaths() {
+  const feed = await loadFeedItems();
   const current = await loadCurrentEvents();
   const legacy = await getCollection("legacyEvents");
+  const feedSlugs = new Set(feed.map((item) => item.data.slug));
   const currentSlugs = new Set(current.map((event) => event.data.slug));
   return [
+    ...feed.map((event) => ({
+      params: { slug: event.data.slug },
+      props: { event, kind: "feed" },
+    })),
     ...current.map((event) => ({
       params: { slug: event.data.slug },
-      props: { event, isLegacy: false },
-    })),
+      props: { event, kind: "event" },
+    })).filter((entry) => !feedSlugs.has(entry.params.slug)),
     ...legacy
-      .filter((event) => !currentSlugs.has(event.data.slug))
+      .filter((event) => !currentSlugs.has(event.data.slug) && !feedSlugs.has(event.data.slug))
       .map((event) => ({
         params: { slug: event.data.slug },
-        props: { event, isLegacy: true },
+        props: { event, kind: "legacy" },
       })),
   ];
 }
 
-const { event, isLegacy } = Astro.props;
+const { event, kind } = Astro.props;
+const isLegacy = kind === "legacy";
+const isFeed = kind === "feed";
 const { Content } = await render(event);
 const source = findSource(event.data.source);
 const legacyData = isLegacy ? event.data as CollectionEntry<"legacyEvents">["data"] : null;
-const currentData = isLegacy ? null : event.data as CollectionEntry<"events">["data"];
-const displayDate = legacyData?.detected_at ?? currentData!.event_date;
+const currentData = kind === "event" ? event.data as CollectionEntry<"events">["data"] : null;
+const feedData = isFeed ? event.data as CollectionEntry<"feed">["data"] : null;
+const displayDate = legacyData?.detected_at ?? currentData?.event_date ?? feedData!.event_date;
+const sourceUrls = feedData?.source_urls ?? (event.data.source_url ? [event.data.source_url] : []);
 ---
 
 <Base title={event.data.title} description={`Tracked change from ${source?.display_name ?? event.data.source}`}>
@@ -38,6 +49,8 @@ const displayDate = legacyData?.detected_at ?? currentData!.event_date;
       <div class="event-page-meta">
         {isLegacy ? (
           <span class="legacy-label">Legacy record · {legacyData!.pillar}</span>
+        ) : isFeed ? (
+          <><span class={`publication-status status-${feedData!.status}`}>{feedData!.status}</span><span class="current-tracks">{feedData!.tracks.map((track) => <TrackTag track={track} linked />)}</span></>
         ) : (
           <span class="current-tracks">{currentData!.tracks.map((track) => <TrackTag track={track} linked />)}</span>
         )}
@@ -48,12 +61,9 @@ const displayDate = legacyData?.detected_at ?? currentData!.event_date;
         <TimeAgo date={displayDate} />
       </div>
       <h1 class="event-page-title">{event.data.title}</h1>
-      {event.data.source_url && (
+      {sourceUrls.length > 0 && (
         <p class="event-page-url">
-          Source:
-          <a href={event.data.source_url} target="_blank" rel="noopener noreferrer">
-            {event.data.source_url}
-          </a>
+          {sourceUrls.map((url) => <a href={url} target="_blank" rel="noopener noreferrer">Open source ↗</a>)}
         </p>
       )}
     </header>
@@ -67,6 +77,10 @@ const displayDate = legacyData?.detected_at ?? currentData!.event_date;
         <p>
           This schema-v1 item is preserved unchanged for historical reference and is excluded
           from current intelligence, trend status, and weekly calculations. <a href="/archive">Open Legacy Archive →</a>
+        </p>
+      ) : isFeed ? (
+        <p>
+          {feedData!.status === "verified" ? "Verified against primary or measurement evidence." : feedData!.status === "reported" ? "Reported from a configured specialist source; it does not independently move a trend." : "Early signal; not yet verified by primary evidence."}
         </p>
       ) : (
         <p>
@@ -122,6 +136,10 @@ const displayDate = legacyData?.detected_at ?? currentData!.event_date;
     font-family: var(--font-mono);
     font-size: 0.72rem;
   }
+  .publication-status { border: 1px solid currentColor; border-radius: 999px; padding: .16rem .5rem; font: 650 .66rem var(--font-mono); text-transform: uppercase; }
+  .status-verified { color: var(--status-healthy); }
+  .status-reported { color: var(--pillar-ecosystem); }
+  .status-signal { color: var(--status-degraded); }
   .current-tracks { display: inline-flex; flex-wrap: wrap; gap: var(--space-2); }
 
   .event-page-body :global(h2) {

@@ -1,6 +1,6 @@
 import type { APIRoute } from "astro";
 import { findSource } from "../lib/sources";
-import { loadCurrentEvents } from "../lib/events";
+import { feedSection, loadFeedItems } from "../lib/feed";
 
 function esc(s: string): string {
   return s
@@ -13,10 +13,7 @@ function esc(s: string): string {
 
 export const GET: APIRoute = async ({ site }) => {
   const siteUrl = site?.toString().replace(/\/$/, "") ?? "https://crawlerpolicy.com";
-  const events = (await loadCurrentEvents())
-    .filter((e) => e.data.change_kind === "material")
-    .sort((a, b) => b.data.detected_at.getTime() - a.data.detected_at.getTime())
-    .slice(0, 100);
+  const events = (await loadFeedItems()).slice(0, 100);
 
   const items = events
     .map((e) => {
@@ -24,14 +21,14 @@ export const GET: APIRoute = async ({ site }) => {
       const link = `${siteUrl}/events/${e.data.slug}`;
       return `
     <item>
-      <title>${esc(e.data.title)}</title>
+      <title>${esc(`[${e.data.status[0].toUpperCase()}${e.data.status.slice(1)}] ${e.data.title}`)}</title>
       <link>${link}</link>
       <guid isPermaLink="true">${link}</guid>
       <pubDate>${e.data.event_date.toUTCString()}</pubDate>
       <category>${esc(e.data.primary_track)}</category>
       ${e.data.tracks.map((track) => `<category>${esc(track)}</category>`).join("\n      ")}
       <category>${esc(source?.display_name ?? e.data.source)}</category>
-      <description>${esc(e.body?.slice(0, 4000) ?? "")}</description>
+      <description>${esc(`${feedSection(e.body, "Summary")}\n\nWhy it matters: ${feedSection(e.body, "Why it matters")}`)}</description>
     </item>`;
     })
     .join("");
@@ -39,10 +36,10 @@ export const GET: APIRoute = async ({ site }) => {
   const xml = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Crawler Policy Developments</title>
+    <title>Crawler Policy Ecosystem Feed</title>
     <link>${siteUrl}</link>
     <atom:link href="${siteUrl}/feed.xml" rel="self" type="application/rss+xml" />
-    <description>Evidence-backed developments in machine access, content rights, agent identity, and web economics.</description>
+    <description>Daily verified developments, reported intelligence, and early signals across the machine-readable web.</description>
     <language>en-US</language>
     <lastBuildDate>${new Date().toUTCString()}</lastBuildDate>${items}
   </channel>

@@ -11,6 +11,8 @@ import { loadTrends } from "../lib/trends";
 import { FRONTS, frontForTrack, type Front } from "../lib/taxonomy";
 import { findSource } from "../lib/sources";
 import { loadCurrentEvents } from "../lib/events";
+import { feedSection, loadFeedItems } from "../lib/feed";
+import FeedCard from "../components/FeedCard.astro";
 
 const health = loadHealth();
 const issue = loadLatestIntelligence();
@@ -18,6 +20,7 @@ const trends = loadTrends();
 const events = (await loadCurrentEvents())
   .filter((event) => event.data.change_kind === "material")
   .sort((a, b) => b.data.event_date.getTime() - a.data.event_date.getTime());
+const feedItems = await loadFeedItems();
 const byId = new Map(events.map((event) => [event.data.slug, event]));
 const activeFronts = new Set(events.map((event) => frontForTrack(event.data.primary_track)));
 
@@ -70,6 +73,26 @@ function summary(body: string | undefined): string {
     </header>
 
     <HealthStrip health={health} />
+
+    <section class="section">
+      <div class="section-heading compact-heading">
+        <div><p class="utility-label">Daily ecosystem feed</p><h2>Latest signals</h2></div>
+        <p>Readable analysis separated by evidence level.</p>
+      </div>
+      {feedItems.length ? feedItems.slice(0, 10).map((item) => (
+        <FeedCard
+          slug={item.data.slug}
+          title={item.data.title}
+          source={findSource(item.data.source)?.display_name ?? item.data.source}
+          publishedAt={item.data.published_at}
+          status={item.data.status}
+          summary={feedSection(item.body, "Summary")}
+          analyticalLabel="Why it matters"
+          analyticalText={feedSection(item.body, "Why it matters")}
+          tracks={[...item.data.tracks]}
+        />
+      )) : <p class="empty-read">The first post-launch ecosystem items will appear here.</p>}
+    </section>
 
     <section class="section shifts">
       <div class="section-heading">
