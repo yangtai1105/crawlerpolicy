@@ -24,6 +24,8 @@ from pipeline.evidence import (
     pending_analysis,
     save_evidence,
 )
+from pipeline.feed import publication_status, should_promote
+from pipeline.feed_writer import write_feed_item
 from pipeline.fetchers.base import CandidateItem, FetchResult, ResultMode
 from pipeline.fetchers.cf_browser_run import fetch_cf_browser_run
 from pipeline.fetchers.gemini_search import fetch_gemini_search
@@ -31,8 +33,6 @@ from pipeline.fetchers.github_repo import fetch_github_repo
 from pipeline.fetchers.html_page import fetch_html_page
 from pipeline.fetchers.ietf_draft import fetch_ietf_draft
 from pipeline.fetchers.rss_feed import fetch_rss_feed
-from pipeline.feed import publication_status, should_promote
-from pipeline.feed_writer import write_feed_item
 from pipeline.health import (
     HealthStatus,
     SourceRunStatus,

@@ -9,8 +9,8 @@ from pipeline.taxonomy import SourceTier, Track
 from pipeline.trends import Trend, TrendDelta, TrendStatus
 from pipeline.weekly_intelligence import (
     MaterialEvent,
-    WeeklySynthesis,
     WeeklyIssue,
+    WeeklySynthesis,
     build_weekly_issue,
     completed_iso_window,
     generate_weekly_intelligence,
