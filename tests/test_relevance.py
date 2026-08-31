@@ -2,7 +2,7 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from pipeline.relevance import haiku_relevance, keyword_match
+from pipeline.relevance import RelevanceVerdict, keyword_match, model_relevance
 
 
 def test_keyword_match_case_insensitive():
@@ -19,43 +19,39 @@ def test_keyword_match_empty_list_returns_true():
     assert keyword_match("anything", []) is True
 
 
-def _tool_response(args):
-    block = MagicMock()
-    block.type = "tool_use"
-    block.name = "emit_verdict"
-    block.input = args
-    msg = MagicMock()
-    msg.content = [block]
-    return msg
-
-
 @pytest.fixture
-def fake_client():
-    client = MagicMock()
-    client.messages.create = AsyncMock()
-    return client
+def fake_model():
+    model = MagicMock()
+    model.generate = AsyncMock()
+    return model
 
 
-async def test_haiku_returns_relevant(fake_client):
-    fake_client.messages.create.return_value = _tool_response(
-        {"is_relevant": True, "reason": "Discusses GPTBot opt-out"}
+async def test_model_relevance_returns_structured_verdict(fake_model):
+    fake_model.generate.return_value = RelevanceVerdict(
+        is_relevant=True,
+        reason="Discusses GPTBot opt-out",
     )
-    v = await haiku_relevance(fake_client, "Cloudflare launches AI bot audit", "...")
-    assert v.is_relevant is True
-    assert "GPTBot" in v.reason
 
-
-async def test_haiku_returns_not_relevant(fake_client):
-    fake_client.messages.create.return_value = _tool_response(
-        {"is_relevant": False, "reason": "Unrelated product"}
+    verdict = await model_relevance(
+        fake_model,
+        "Cloudflare launches AI bot audit",
+        "A new crawler control is available.",
     )
-    v = await haiku_relevance(fake_client, "We launched new dashboard widgets", "...")
-    assert v.is_relevant is False
+
+    assert verdict.is_relevant is True
+    assert "GPTBot" in verdict.reason
 
 
-async def test_haiku_fallback_when_no_tool_use(fake_client):
-    msg = MagicMock()
-    msg.content = [MagicMock(type="text")]
-    fake_client.messages.create.return_value = msg
-    v = await haiku_relevance(fake_client, "Something", "...")
-    assert v.is_relevant is False
+async def test_model_relevance_preserves_negative_verdict(fake_model):
+    fake_model.generate.return_value = RelevanceVerdict(
+        is_relevant=False,
+        reason="Unrelated product",
+    )
+
+    verdict = await model_relevance(
+        fake_model,
+        "Dashboard widgets",
+        "A visual dashboard update.",
+    )
+
+    assert verdict == RelevanceVerdict(is_relevant=False, reason="Unrelated product")

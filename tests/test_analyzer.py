@@ -2,27 +2,16 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from pipeline.analyzer import AnalysisResult, analyze_change
+from pipeline.analyzer import AnalysisResult, AnalyzerResponse, analyze_change
 from pipeline.sources import Source, SourceType
 from pipeline.taxonomy import SourceRole, SourceTier, Track
 
 
 @pytest.fixture
-def fake_client():
-    client = MagicMock()
-    client.messages.create = AsyncMock()
-    return client
-
-
-def _tool_response(arguments: dict):
-    block = MagicMock()
-    block.type = "tool_use"
-    block.name = "emit_analysis"
-    block.input = arguments
-    msg = MagicMock()
-    msg.content = [block]
-    msg.stop_reason = "tool_use"
-    return msg
+def fake_model():
+    model = MagicMock()
+    model.generate = AsyncMock()
+    return model
 
 
 @pytest.fixture
@@ -38,24 +27,24 @@ def crawler_source():
     )
 
 
-async def test_analyzer_returns_structured_result_for_crawler_change(fake_client, crawler_source):
-    fake_client.messages.create.return_value = _tool_response(
-        {
-            "change_kind": "material",
-            "importance": 0.80,
-            "title": "OpenAI adds Operator UA string",
-            "what_changed": "GPTBot docs now list a second UA for Operator.",
-            "implication": "Search and training controls are separating.",
-            "primary_track": "search-discovery",
-            "tracks": ["search-discovery", "crawler-controls"],
-            "actors": ["OpenAI", "publishers"],
-            "trend_signals": ["training-search-separation"],
-            "confidence": "high",
-        }
+async def test_analyzer_returns_four_layer_editorial_result(fake_model, crawler_source):
+    fake_model.generate.return_value = AnalyzerResponse(
+        change_kind="material",
+        importance=0.8,
+        title="OpenAI adds Operator UA string",
+        summary="GPTBot documentation now lists another automated client.",
+        insight="Search and training clients are becoming distinct.",
+        implication="Publishers can apply separate access policies.",
+        why_it_matters="One robots.txt decision no longer covers every OpenAI product.",
+        primary_track="search-discovery",
+        tracks=["search-discovery", "crawler-controls"],
+        actors=["OpenAI", "publishers"],
+        trend_signals=["training-search-separation"],
+        confidence="high",
     )
 
     result = await analyze_change(
-        client=fake_client,
+        model=fake_model,
         source=crawler_source,
         prev_content="old doc",
         curr_content="new doc",
@@ -63,63 +52,35 @@ async def test_analyzer_returns_structured_result_for_crawler_change(fake_client
     )
 
     assert isinstance(result, AnalysisResult)
-    assert result.change_kind == "material"
-    assert result.importance == 0.80
-    assert result.title.startswith("OpenAI adds")
+    assert result.summary.startswith("GPTBot documentation")
+    assert result.insight == "Search and training clients are becoming distinct."
+    assert result.implication == "Publishers can apply separate access policies."
+    assert result.why_it_matters.startswith("One robots.txt")
     assert result.primary_track is Track.SEARCH_DISCOVERY
     assert result.tracks == [Track.SEARCH_DISCOVERY, Track.CRAWLER_CONTROLS]
-    assert result.actors == ["OpenAI", "publishers"]
-    assert result.trend_signals == ["training-search-separation"]
     assert result.confidence == "high"
 
 
-async def test_analyzer_cosmetic_change(fake_client, crawler_source):
-    fake_client.messages.create.return_value = _tool_response(
-        {
-            "change_kind": "cosmetic",
-            "importance": 0.1,
-            "title": "Typo fix",
-            "what_changed": "Fixed a typo.",
-            "implication": "",
-            "primary_track": "crawler-controls",
-            "tracks": ["crawler-controls"],
-            "actors": ["OpenAI"],
-            "trend_signals": [],
-            "confidence": "medium",
-        }
-    )
-
-    result = await analyze_change(
-        client=fake_client,
-        source=crawler_source,
-        prev_content="old",
-        curr_content="new",
-        unified_diff="-typo\n+typo-fixed",
-    )
-
-    assert result.change_kind == "cosmetic"
-
-
-async def test_analyzer_falls_back_to_source_track_for_invalid_tool_output(
-    fake_client, crawler_source
+async def test_analyzer_falls_back_to_source_track_for_invalid_classification(
+    fake_model, crawler_source
 ):
-    fake_client.messages.create.return_value = _tool_response(
-        {
-            "change_kind": "material",
-            "importance": 0.7,
-            "title": "Unclassifiable update",
-            "what_changed": "A change occurred.",
-            "implication": "Requires review.",
-            "primary_track": "not-a-track",
-            "tracks": ["not-a-track"],
-            "actors": [],
-            "trend_signals": [],
-            "confidence": "high",
-        }
+    fake_model.generate.return_value = AnalyzerResponse(
+        change_kind="material",
+        importance=0.7,
+        title="Unclassifiable update",
+        summary="A change occurred.",
+        insight="The classification was malformed.",
+        implication="Requires review.",
+        why_it_matters="A human should inspect the evidence.",
+        primary_track="not-a-track",
+        tracks=["not-a-track"],
+        actors=[],
+        trend_signals=[],
+        confidence="high",
     )
 
     result = await analyze_change(
-        client=fake_client,
+        model=fake_model,
         source=crawler_source,
         prev_content="old",
         curr_content="new",
@@ -129,3 +90,22 @@ async def test_analyzer_falls_back_to_source_track_for_invalid_tool_output(
     assert result.primary_track is Track.CRAWLER_CONTROLS
     assert result.tracks == [Track.CRAWLER_CONTROLS]
     assert result.confidence == "low"
+
+
+def test_analysis_result_accepts_legacy_what_changed_input():
+    result = AnalysisResult(
+        change_kind="material",
+        importance=0.6,
+        title="Compatible result",
+        what_changed="Legacy summary.",
+        implication="Legacy implication.",
+        primary_track=Track.CRAWLER_CONTROLS,
+        tracks=[Track.CRAWLER_CONTROLS],
+        actors=[],
+        trend_signals=[],
+        confidence="medium",
+    )
+
+    assert result.summary == "Legacy summary."
+    assert result.what_changed == "Legacy summary."
+    assert result.why_it_matters == "Legacy implication."

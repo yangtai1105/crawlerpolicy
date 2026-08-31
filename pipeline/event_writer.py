@@ -83,9 +83,9 @@ def _compose(
         "---\n\n"
     )
 
-    body = f"## Development\n\n{analysis.what_changed}\n\n"
-    implication = analysis.implication or "No material implication recorded."
-    body += f"## Why it matters\n\n{implication}\n\n"
+    body = f"## Development\n\n{analysis.summary}\n\n"
+    why_it_matters = analysis.why_it_matters or analysis.implication
+    body += f"## Why it matters\n\n{why_it_matters}\n\n"
     body += "## Trend impact\n\n"
     if analysis.trend_signals:
         body += "\n".join(f"- {signal}" for signal in analysis.trend_signals) + "\n\n"
