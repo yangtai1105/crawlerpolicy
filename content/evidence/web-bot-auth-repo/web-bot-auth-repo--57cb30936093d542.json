@@ -1,0 +1,17 @@
+{
+  "evidence_id": "web-bot-auth-repo--57cb30936093d542",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/135",
+  "published_at": "2026-08-31T07:19:47Z",
+  "detected_at": "2026-08-31T15:52:33.051479Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--57cb30936093d542.json",
+  "content_hash": "sha256:fa47cf824ecac90583b2851e83cbdde3c95af97613eaeefa890132bc85d9bac6",
+  "external_id": "pr:135",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #135: Rewrite http-message-sig with an explicit RFC 9421 API",
+  "content": "This matches #122 more closely, and should allow for a more informed choice about http-message-sig library.\r\n\r\n```typescript\r\n// Before\r\nconst headers = await signatureHeaders(request, { signer });\r\nawait verify(request, verifier);\r\n```\r\n\r\n```typescript\r\n// After\r\nconst fields = await createSignature(request, {\r\n  signer,\r\n  components: [\"@method\", \"@authority\"],\r\n  parameters: { created, keyid, alg },\r\n});\r\n\r\nconst result = await verifySignature(request, {\r\n  policy,\r\n  resolveVerifier,\r\n});\r\n```\r\n\r\n\r\nChanges:\r\n- explicit components and signature parameters\r\n- byte-oriented, algorithm-bound signers/verifiers\r\n- authenticated verification result\r\n- structured policy and errors\r\n- sync signing via createSignatureSync",
+  "previous_content": "",
+  "unified_diff": ""
+}

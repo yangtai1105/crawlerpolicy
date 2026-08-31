@@ -1,0 +1,17 @@
+{
+  "evidence_id": "web-bot-auth-repo--387420d62eef79cc",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/138",
+  "published_at": "2026-08-31T13:53:58Z",
+  "detected_at": "2026-08-31T15:52:33.051479Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--387420d62eef79cc.json",
+  "content_hash": "sha256:733e1a3ce67fa85f192f51d86e8259946217e1618b17fc154eef07af3377184d",
+  "external_id": "pr:138",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #138: Use package-specific npm release tags",
+  "content": "Improve trusted publisher publication pipeline for npm packages\r\n\r\nOnly trigger the relevant packages, with specific tags",
+  "previous_content": "",
+  "unified_diff": ""
+}

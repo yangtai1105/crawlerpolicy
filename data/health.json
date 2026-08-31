@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-08-31T05:45:20.868927Z",
-  "last_fully_successful_at": "2026-08-31T05:45:20.868927Z",
+  "last_attempted_at": "2026-08-31T15:52:33.051479Z",
+  "last_fully_successful_at": "2026-08-31T15:52:33.051479Z",
   "coverage": {
     "configured": 34,
     "completed": 34,
@@ -90,9 +90,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "meta-externalagent--362f1270a4f29e97"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -153,11 +151,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--cd3d6d166caebcad",
-        "cloudflare-blog--f60ce8b1568d3253"
+        "cloudflare-blog--0c79232daf595900"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-08-31-cloudflare-blog-cloudflare-launches-adaptive-intelligence-bot-detection-engine.md"
+      ]
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -165,14 +164,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--1099b754313ba148",
-        "datadome-blog--2888ac0be415e3f9",
-        "datadome-blog--7165f7135311b83d",
-        "datadome-blog--755c63a34d1a876b",
-        "datadome-blog--a8fff30eb5ae03a5",
-        "datadome-blog--c3c7ab9d7e041aee"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -212,7 +204,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--2ea6abe2de164008",
+        "eu-commission-digital--4470d13825213236",
+        "eu-commission-digital--9faf6ec6b8222ff6",
+        "eu-commission-digital--d2c1a34b5f9b5b7d",
+        "eu-commission-digital--a3445c4aa5c2c432"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -232,9 +230,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--73e71d06a6c0bfb3"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -244,9 +240,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "reddit-corporate--c27e8d09cd7c676a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -257,29 +251,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "web-bot-auth-repo--00e99ad983f4c922",
-        "web-bot-auth-repo--02f881034ab676ef",
-        "web-bot-auth-repo--087780ba5d46b288",
-        "web-bot-auth-repo--1b77cd2d0104888d",
-        "web-bot-auth-repo--1fa8d57cb4122f97",
-        "web-bot-auth-repo--2725d674e678ab27",
-        "web-bot-auth-repo--2a38e760292cbde1",
-        "web-bot-auth-repo--2e464f48615e12b1",
-        "web-bot-auth-repo--3b0de7ba4d3633a7",
-        "web-bot-auth-repo--46fc250d51a5ff52",
-        "web-bot-auth-repo--52616651e6183b17",
-        "web-bot-auth-repo--5aefe19448b89b8f",
-        "web-bot-auth-repo--62163f22ffa3e882",
-        "web-bot-auth-repo--6e15a6645777c72e",
-        "web-bot-auth-repo--8ef2e2da2c049220",
-        "web-bot-auth-repo--98578b723b4c28db",
-        "web-bot-auth-repo--9e1fc744e65dd8c5",
-        "web-bot-auth-repo--aa18efd7c08ab295",
-        "web-bot-auth-repo--c36a4f45582793db",
-        "web-bot-auth-repo--d06db3319ff9cf1e",
-        "web-bot-auth-repo--dc54499c4153a1bf",
-        "web-bot-auth-repo--e4a2896c558393fc",
-        "web-bot-auth-repo--fcc9a13deed4c166"
+        "web-bot-auth-repo--387420d62eef79cc",
+        "web-bot-auth-repo--b4ba5e1d73c111a0",
+        "web-bot-auth-repo--c72c4a3172377f0f",
+        "web-bot-auth-repo--57cb30936093d542"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -290,10 +265,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "mcp-spec--98e8b4f866834ac4",
-        "mcp-spec--affffb5addc9efc4"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -303,9 +275,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-research--a6ea15206ae8897a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -315,25 +285,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--242ce53ef31d4fe2",
-        "openai-blog--2a2936604646235b",
-        "openai-blog--346cc8059ba2242e",
-        "openai-blog--408b69f0c321236b",
-        "openai-blog--484685011b63bf20",
-        "openai-blog--596effd090726f8b",
-        "openai-blog--8f986bf28e0fce54",
-        "openai-blog--9a153b8855a3627e",
-        "openai-blog--af5b983acf27c9d4",
-        "openai-blog--b1363cc540120d6b",
-        "openai-blog--c3a64a983b03d35d",
-        "openai-blog--e04b5c68c843c0c4",
-        "openai-blog--e2ffdb5e41493b3d",
-        "openai-blog--edcc031cad3d2c5d",
-        "openai-blog--f0ec778079870455",
-        "openai-blog--f4313ed0c57d3c82",
-        "openai-blog--fc09d249ac037164"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -343,14 +295,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-ai-gateway--281cd8a5076c71c9",
-        "cf-changelog-ai-gateway--3ba35636f28b3262",
-        "cf-changelog-ai-gateway--4c0b7107dec9e987",
-        "cf-changelog-ai-gateway--5122ae7cb6371559",
-        "cf-changelog-ai-gateway--cb99566ef4716236",
-        "cf-changelog-ai-gateway--eee8c4decd518a01"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -360,13 +305,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-ai-search--7917e84f8e9813f8",
-        "cf-changelog-ai-search--b89bf4222811eeaf",
-        "cf-changelog-ai-search--baac17b3a7ddd9de",
-        "cf-changelog-ai-search--d0c79db373ba0a55",
-        "cf-changelog-ai-search--e2b12db04784da86"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -452,7 +391,9 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [],
+  "feed_items_written": [
+    "content/feed/2026-08-31-cloudflare-blog-cloudflare-launches-adaptive-intelligence-bot-detection-engine.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
