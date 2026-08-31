@@ -1,0 +1,136 @@
+{
+  "schema_version": 1,
+  "week": "2026-W35",
+  "generated_at": "2026-08-31T19:23:38.780215Z",
+  "window_start": "2026-08-24",
+  "window_end": "2026-08-30",
+  "health_status": "healthy",
+  "coverage": {
+    "configured": 34,
+    "completed": 34,
+    "fetched": 34,
+    "analyzed": 34,
+    "published": 34,
+    "failed": 0,
+    "required_failed": 0
+  },
+  "thesis": "No verified material developments in the completed window.",
+  "executive_shifts": [],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "crawler-controls",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "agentic-web",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "0 material developments across 0 tracks.",
+  "trend_deltas": [],
+  "actor_moves": [],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make policy-regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make litigation-legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make search-discovery materially change?",
+      "tracks": [
+        "search-discovery"
+      ]
+    },
+    {
+      "question": "What primary evidence would make crawler-controls materially change?",
+      "tracks": [
+        "crawler-controls"
+      ]
+    },
+    {
+      "question": "What primary evidence would make agentic-web materially change?",
+      "tracks": [
+        "agentic-web"
+      ]
+    },
+    {
+      "question": "What primary evidence would make licensing-monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make standards-protocols materially change?",
+      "tracks": [
+        "standards-protocols"
+      ]
+    },
+    {
+      "question": "What primary evidence would make asset-rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make measurement-economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [],
+  "model_generated": false
+}
