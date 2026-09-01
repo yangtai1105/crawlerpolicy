@@ -1,0 +1,17 @@
+{
+  "evidence_id": "web-bot-auth-repo--9198d961ca29cac4",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/139",
+  "published_at": "2026-08-31T16:22:52Z",
+  "detected_at": "2026-09-01T13:08:58.830967Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--9198d961ca29cac4.json",
+  "content_hash": "sha256:8e6d05b59b61c2e0d2d1674513b9f9829690160d1bebbf00ff0864d569c5eb4b",
+  "external_id": "pr:139",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #139: perf: prepare Ed25519 verifying keys at import time",
+  "content": "## Summary\n\n`MessageVerifier::verify` ran `VerifyingKey::try_from` on every Ed25519 request, repeating point decompression for keys that never change. Keys are now prepared once when a keyring entry is created (`import_raw`, `FromIterator`, JWK import, rename all covered) and borrowed during verification.\n\nInternally the ring stores `{ raw, prepared }` entries; `raw` keeps the public `get` API unchanged. `prepared` is `Option<VerifyingKey>`: `None` preserves the existing deferred `InvalidKeyLength` result for raw bytes that cannot form a valid key. No public API or error-behavior changes. We run this verifier in a high-throughput edge component, where the per-request savings accumulate.\n\n## Testing\n\n- `cargo +stable test --workspace --all-features --all-targets`: 38 pass, incl. new tests for invalid key material, invalid signature, unsupported algorithm, duplicate import, renamed key.\n- `cargo +stable clippy --workspace --all-features --all-targets -- -D warnings`: clean. `cargo fmt --check`: clean.\n- `cargo +stable bench -p web-bot-auth --bench keyring_verify`: runs both `verify-only` and `end-to-end` with 30,000 iterations and prints nanoseconds per iteration. No additional benchmark dependency is required.\n\nA three-run local A/B using the committed `cargo bench` target produced these median results:\n\n| mode | baseline | optimized | delta |\n|---|---:|---:|---:|\n| verify-only | 20,770 ns/iteration | 18,613 ns/iteration | -10.4% |\n| end-to-end | 21,741 ns/iteration | 19,514 ns/iteration | -10.2% |\n\nAs an additional manual cross-check, I ran a locally installed Hyperfine binary against baseline and optimized executables built with identical flags (`-C llvm-args=-align-all-functions=6`). Hyperfine is not a project dependency and is not required to run the committed benchmark. Twenty runs in both command orderings produced:\n\n| mode | baseline | optimized | delta |\n|---|---|---|---|\n| verify-only | 1.277s / 1.255s | 1.153s / 1.130s | ~-10% |\n| end-to-end | 1.323s / 1.301s | 1.186s / 1.179s | ~-10% |\n\nApproximately 2.1 microseconds saved per verification; no end-to-end regression.\n",
+  "previous_content": "",
+  "unified_diff": ""
+}

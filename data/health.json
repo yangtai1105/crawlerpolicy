@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-08-31T15:52:33.051479Z",
-  "last_fully_successful_at": "2026-08-31T15:52:33.051479Z",
+  "last_attempted_at": "2026-09-01T13:08:58.830967Z",
+  "last_fully_successful_at": "2026-09-01T13:08:58.830967Z",
   "coverage": {
     "configured": 34,
     "completed": 34,
@@ -151,12 +151,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--0c79232daf595900"
+        "cloudflare-blog--c65f2cf729640181"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-08-31-cloudflare-blog-cloudflare-launches-adaptive-intelligence-bot-detection-engine.md"
-      ]
+      "feed_items_written": []
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -174,7 +172,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--11270b9a733175f7"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -205,11 +205,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--2ea6abe2de164008",
-        "eu-commission-digital--4470d13825213236",
-        "eu-commission-digital--9faf6ec6b8222ff6",
-        "eu-commission-digital--d2c1a34b5f9b5b7d",
-        "eu-commission-digital--a3445c4aa5c2c432"
+        "eu-commission-digital--3af16d6a4673737d",
+        "eu-commission-digital--0402cdb98d813eb5",
+        "eu-commission-digital--202a9d07210adab0",
+        "eu-commission-digital--4c5cb06e9dbbd8f4"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -230,7 +229,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--3d3e3001f4aa8084"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -251,13 +252,14 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "web-bot-auth-repo--387420d62eef79cc",
-        "web-bot-auth-repo--b4ba5e1d73c111a0",
-        "web-bot-auth-repo--c72c4a3172377f0f",
-        "web-bot-auth-repo--57cb30936093d542"
+        "web-bot-auth-repo--9198d961ca29cac4"
       ],
-      "events_written": [],
-      "feed_items_written": []
+      "events_written": [
+        "content/events/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
+      ]
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -390,9 +392,11 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
+  "events_written": [
+    "content/events/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
+  ],
   "feed_items_written": [
-    "content/feed/2026-08-31-cloudflare-blog-cloudflare-launches-adaptive-intelligence-bot-detection-engine.md"
+    "content/feed/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
   ],
   "provider": {
     "name": "gemini",
