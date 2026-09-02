@@ -642,16 +642,136 @@
       "feed_path": "content/feed/2026-07-23-news-media-alliance-bipartisan-u-s-house-bill-targets-undisclosed-ai-stealth-crawlers.md",
       "development_path": null,
       "reason": null
+    },
+    "openai-blog--596effd090726f8b": {
+      "evidence_id": "openai-blog--596effd090726f8b",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item discusses an enterprise platform for deploying voice and chat agents for internal and customer workflows, which is unrelated to AI crawler policies, training data, bot access, or content rights."
+    },
+    "openai-blog--d16d9ce752cee8f8": {
+      "evidence_id": "openai-blog--d16d9ce752cee8f8",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "web-bot-auth-repo--1b77cd2d0104888d": {
+      "evidence_id": "web-bot-auth-repo--1b77cd2d0104888d",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": "content/feed/2026-07-21-web-bot-auth-repo-web-bot-auth-fixes-signature-verification-bypass-allowing-request-replay.md",
+      "development_path": "content/events/2026-07-21-web-bot-auth-repo-web-bot-auth-fixes-signature-verification-bypass-allowing-request-replay.md",
+      "reason": null
+    },
+    "web-bot-auth-repo--02f881034ab676ef": {
+      "evidence_id": "web-bot-auth-repo--02f881034ab676ef",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The content is an automated Dependabot pull request updating standard software dependencies (such as linters, build tools, and parsers) and does not discuss crawler policies, bot access rules, or related standards."
+    },
+    "web-bot-auth-repo--5aefe19448b89b8f": {
+      "evidence_id": "web-bot-auth-repo--5aefe19448b89b8f",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated software dependency update (Dependabot PR) for generic Rust crates (serde_json, regex, clap) and does not relate to crawler policies, bots, or AI content regulation."
+    },
+    "web-bot-auth-repo--2e464f48615e12b1": {
+      "evidence_id": "web-bot-auth-repo--2e464f48615e12b1",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item is a routine software dependency upgrade for Go dependencies and does not relate to crawler policy, bot access, or AI regulation."
+    },
+    "web-bot-auth-repo--6e15a6645777c72e": {
+      "evidence_id": "web-bot-auth-repo--6e15a6645777c72e",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is a routine automated dependency bump for the GitHub Actions setup-node action and does not involve web crawling, bot management, AI training data, or crawler policy."
+    },
+    "web-bot-auth-repo--fcc9a13deed4c166": {
+      "evidence_id": "web-bot-auth-repo--fcc9a13deed4c166",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item is a routine code maintenance pull request that fixes a Rust compiler lint warning and does not discuss crawler policy, bot access rules, or crawler authentication mechanisms."
+    },
+    "openai-blog--f95be38afd7e67d6": {
+      "evidence_id": "openai-blog--f95be38afd7e67d6",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--484685011b63bf20": {
+      "evidence_id": "openai-blog--484685011b63bf20",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item discusses Cars24 using OpenAI voice and chat agents for customer service conversations and lead recovery, which is unrelated to web crawler policy, bot access, or AI training data."
+    },
+    "openai-blog--f0ec778079870455": {
+      "evidence_id": "openai-blog--f0ec778079870455",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item focuses on enterprise AI investment management, financial efficiency metrics, and scaling workflows, rather than crawler policy, bot access, content rights, or machine traffic."
+    },
+    "openai-blog--6368e2a31a3ca88c": {
+      "evidence_id": "openai-blog--6368e2a31a3ca88c",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--2dd9113012914e65": {
+      "evidence_id": "openai-blog--2dd9113012914e65",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "web-bot-auth-repo--087780ba5d46b288": {
+      "evidence_id": "web-bot-auth-repo--087780ba5d46b288",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated Dependabot pull request updating standard software development dependencies (ESLint, Prettier, TypeScript, Vitest, Wrangler) and does not relate to crawler policies, bot traffic, or AI data governance."
+    },
+    "web-bot-auth-repo--62163f22ffa3e882": {
+      "evidence_id": "web-bot-auth-repo--62163f22ffa3e882",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:19:21.357490Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated Dependabot pull request updating Rust software dependencies (ed25519-dalek and regex) and does not relate to crawler policy, bot access, or AI content regulation."
     }
   },
   "summary": {
     "batch_id": "direct-evidence_2026-06-01_2026-09-01",
-    "eligible": 90,
+    "eligible": 86,
     "attempted": 15,
-    "remaining": 39,
-    "published": 4,
-    "irrelevant": 11,
-    "duplicate": 11,
+    "remaining": 24,
+    "published": 1,
+    "irrelevant": 14,
+    "duplicate": 15,
     "excluded": 12,
     "failed": 0,
     "provider_status": "ok"
