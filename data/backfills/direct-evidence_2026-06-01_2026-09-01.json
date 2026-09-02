@@ -762,16 +762,136 @@
       "feed_path": null,
       "development_path": null,
       "reason": "This is an automated Dependabot pull request updating Rust software dependencies (ed25519-dalek and regex) and does not relate to crawler policy, bot access, or AI content regulation."
+    },
+    "openai-blog--346cc8059ba2242e": {
+      "evidence_id": "openai-blog--346cc8059ba2242e",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The text focuses on a workplace productivity agent that works across apps and files, without addressing crawler policies, bot access, training data, or machine traffic."
+    },
+    "reddit-corporate--c27e8d09cd7c676a": {
+      "evidence_id": "reddit-corporate--c27e8d09cd7c676a",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article focuses on Reddit using AI tools for internal content moderation, spam detection, and safety enforcement, rather than crawler policy, bot access rules, or AI training data rights."
+    },
+    "web-bot-auth-repo--d06db3319ff9cf1e": {
+      "evidence_id": "web-bot-auth-repo--d06db3319ff9cf1e",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated dependency update PR for standard developer tooling and Cloudflare Worker development packages, with no connection to crawler policy, bot traffic, or AI data governance."
+    },
+    "web-bot-auth-repo--98578b723b4c28db": {
+      "evidence_id": "web-bot-auth-repo--98578b723b4c28db",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated software dependency update for a Rust time crate and does not involve crawler policy, bot access, AI training data, or related topics."
+    },
+    "openai-blog--c3a64a983b03d35d": {
+      "evidence_id": "openai-blog--c3a64a983b03d35d",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article discusses debugging general infrastructure crashes, hardware faults, and software bugs using core dump analysis, and does not mention crawler policies, bot traffic, or AI data licensing."
+    },
+    "web-bot-auth-repo--52616651e6183b17": {
+      "evidence_id": "web-bot-auth-repo--52616651e6183b17",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is a routine Dependabot dependency version bump for the Rust crate 'clap' and does not relate to crawler policies, bots, or AI content regulation."
+    },
+    "openai-blog--2a2936604646235b": {
+      "evidence_id": "openai-blog--2a2936604646235b",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article discusses the impact of AI agents on workplace productivity and complex tasks rather than crawler policy, training data, bot access, or agent infrastructure."
+    },
+    "openai-blog--f45d90d91f144c18": {
+      "evidence_id": "openai-blog--f45d90d91f144c18",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--f4313ed0c57d3c82": {
+      "evidence_id": "openai-blog--f4313ed0c57d3c82",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The provided text discusses educational courses for building practical AI skills and workflows, which does not relate to crawler policies, bot access, training data, or content rights."
+    },
+    "cf-changelog-ai-gateway--5122ae7cb6371559": {
+      "evidence_id": "cf-changelog-ai-gateway--5122ae7cb6371559",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": "content/feed/2026-06-12-cf-changelog-ai-gateway-cloudflare-adds-user-agent-logging-and-filtering-to-ai-gateway.md",
+      "development_path": "content/events/2026-06-12-cf-changelog-ai-gateway-cloudflare-adds-user-agent-logging-and-filtering-to-ai-gateway.md",
+      "reason": null
+    },
+    "openai-blog--e2ffdb5e41493b3d": {
+      "evidence_id": "openai-blog--e2ffdb5e41493b3d",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": "content/feed/2026-06-11-openai-blog-openai-plans-acquisition-of-ona-to-power-persistent-cloud-environments-for-codex.md",
+      "development_path": "content/events/2026-06-11-openai-blog-openai-plans-acquisition-of-ona-to-power-persistent-cloud-environments-for-codex.md",
+      "reason": null
+    },
+    "openai-blog--02578b0bca888ffd": {
+      "evidence_id": "openai-blog--02578b0bca888ffd",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--c9865fc111ead086": {
+      "evidence_id": "openai-blog--c9865fc111ead086",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "cf-changelog-ai-gateway--3ba35636f28b3262": {
+      "evidence_id": "cf-changelog-ai-gateway--3ba35636f28b3262",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article focuses on AI Gateway spend limits for managing AI API token costs and budgets, not crawler policies, bot access, or machine traffic economics."
+    },
+    "openai-blog--e04b5c68c843c0c4": {
+      "evidence_id": "openai-blog--e04b5c68c843c0c4",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:20:30.360226Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item focuses on internal enterprise software delivery, workflow automation, and adoption of ChatGPT Enterprise and Codex, with no discussion of web crawler policy, bot access, or related regulatory issues."
     }
   },
   "summary": {
     "batch_id": "direct-evidence_2026-06-01_2026-09-01",
-    "eligible": 86,
+    "eligible": 85,
     "attempted": 15,
-    "remaining": 24,
-    "published": 1,
-    "irrelevant": 14,
-    "duplicate": 15,
+    "remaining": 9,
+    "published": 2,
+    "irrelevant": 13,
+    "duplicate": 16,
     "excluded": 12,
     "failed": 0,
     "provider_status": "ok"
