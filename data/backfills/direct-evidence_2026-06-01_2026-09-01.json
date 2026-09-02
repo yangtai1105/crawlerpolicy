@@ -882,16 +882,88 @@
       "feed_path": null,
       "development_path": null,
       "reason": "The item focuses on internal enterprise software delivery, workflow automation, and adoption of ChatGPT Enterprise and Codex, with no discussion of web crawler policy, bot access, or related regulatory issues."
+    },
+    "openai-blog--9dd1e57c10a6d9c4": {
+      "evidence_id": "openai-blog--9dd1e57c10a6d9c4",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--51fb0a25aaa1a02a": {
+      "evidence_id": "openai-blog--51fb0a25aaa1a02a",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--e0725e136719a74a": {
+      "evidence_id": "openai-blog--e0725e136719a74a",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--25ac62ce66dfee2a": {
+      "evidence_id": "openai-blog--25ac62ce66dfee2a",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--fce84d5540e40f06": {
+      "evidence_id": "openai-blog--fce84d5540e40f06",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--62e1144f198c00c4": {
+      "evidence_id": "openai-blog--62e1144f198c00c4",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--269b76803ec53061": {
+      "evidence_id": "openai-blog--269b76803ec53061",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--d045e1d290423d2d": {
+      "evidence_id": "openai-blog--d045e1d290423d2d",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--46ffad518648735e": {
+      "evidence_id": "openai-blog--46ffad518648735e",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:21:48.848679Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
     }
   },
   "summary": {
     "batch_id": "direct-evidence_2026-06-01_2026-09-01",
-    "eligible": 85,
-    "attempted": 15,
-    "remaining": 9,
-    "published": 2,
-    "irrelevant": 13,
-    "duplicate": 16,
+    "eligible": 83,
+    "attempted": 9,
+    "remaining": 0,
+    "published": 0,
+    "irrelevant": 9,
+    "duplicate": 18,
     "excluded": 12,
     "failed": 0,
     "provider_status": "ok"
