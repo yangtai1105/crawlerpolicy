@@ -1,3 +1,4 @@
+from copy import deepcopy
 from pathlib import Path
 
 import yaml
@@ -7,7 +8,8 @@ class WorkflowLoader(yaml.SafeLoader):
     pass
 
 
-for first_char, resolvers in WorkflowLoader.yaml_implicit_resolvers.copy().items():
+WorkflowLoader.yaml_implicit_resolvers = deepcopy(yaml.SafeLoader.yaml_implicit_resolvers)
+for first_char, resolvers in WorkflowLoader.yaml_implicit_resolvers.items():
     WorkflowLoader.yaml_implicit_resolvers[first_char] = [
         resolver
         for resolver in resolvers
@@ -30,3 +32,7 @@ def test_backfill_workflow_is_manual_bounded_and_gemini_only():
     assert "pipeline.backfill_feed" in run_step["run"]
     assert "--direct-only" in run_step["run"]
     assert any(step.get("run") == "npm run build" for step in job["steps"])
+
+
+def test_workflow_loader_does_not_change_normal_yaml_boolean_parsing():
+    assert yaml.safe_load("backfilled: true")["backfilled"] is True
