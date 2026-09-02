@@ -23,7 +23,7 @@ const verifiedByImportance = newestWindow
   .filter((item) => item.data.status === "verified")
   .sort((a, b) => b.data.importance - a.data.importance || b.data.published_at.getTime() - a.data.published_at.getTime());
 const lead = verifiedByImportance[0] ?? feedItems[0];
-const latest = feedItems.filter((item) => item.data.slug !== lead?.data.slug).slice(0, 8);
+const latest = feedItems.filter((item) => item.data.slug !== lead?.data.slug).slice(0, 40);
 const activeFronts = new Set([
   ...events.map((event) => frontForTrack(event.data.primary_track)),
   ...feedItems.slice(0, 12).map((item) => frontForTrack(item.data.primary_track)),
