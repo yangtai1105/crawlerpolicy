@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-09-01T13:08:58.830967Z",
-  "last_fully_successful_at": "2026-09-01T13:08:58.830967Z",
+  "last_attempted_at": "2026-09-02T12:35:00.275423Z",
+  "last_fully_successful_at": "2026-09-02T12:35:00.275423Z",
   "coverage": {
     "configured": 34,
     "completed": 34,
@@ -150,9 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--c65f2cf729640181"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -173,7 +171,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--11270b9a733175f7"
+        "uk-cma--b8a80e2efdc7610a",
+        "uk-cma--5409edcd3eaf173c"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -205,10 +204,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--3af16d6a4673737d",
-        "eu-commission-digital--0402cdb98d813eb5",
-        "eu-commission-digital--202a9d07210adab0",
-        "eu-commission-digital--4c5cb06e9dbbd8f4"
+        "eu-commission-digital--8ca4e4ff2c782c23",
+        "eu-commission-digital--db7c24ffa866d4d8",
+        "eu-commission-digital--521daf214b3e8cd8",
+        "eu-commission-digital--03fa865c95ee32d3",
+        "eu-commission-digital--37974d99a07d3cb7"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -229,9 +229,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--3d3e3001f4aa8084"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -251,15 +249,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--9198d961ca29cac4"
-      ],
-      "events_written": [
-        "content/events/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -287,7 +279,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--731042dfc6158772"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -327,9 +321,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ietf-webbotauth-wg--72f735794900da14"
+      ],
+      "events_written": [
+        "content/events/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -393,10 +393,10 @@
     }
   },
   "events_written": [
-    "content/events/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
+    "content/events/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
+    "content/feed/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
   ],
   "provider": {
     "name": "gemini",
