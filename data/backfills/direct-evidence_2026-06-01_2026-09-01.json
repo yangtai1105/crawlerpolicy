@@ -522,16 +522,136 @@
       "feed_path": "content/feed/2026-08-06-cf-changelog-ai-search-cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-.md",
       "development_path": "content/events/2026-08-06-cf-changelog-ai-search-cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-.md",
       "reason": null
+    },
+    "cf-changelog-ai-gateway--281cd8a5076c71c9": {
+      "evidence_id": "cf-changelog-ai-gateway--281cd8a5076c71c9",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article discusses Cloudflare AI Gateway's User Insights tool for tracking internal organization AI API spend, token usage, and anomalous API requests, which does not relate to web crawler policies, bot access, or scraping."
+    },
+    "cf-changelog-ai-gateway--4c0b7107dec9e987": {
+      "evidence_id": "cf-changelog-ai-gateway--4c0b7107dec9e987",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item focuses on user access management and spend controls for Cloudflare's AI Gateway endpoints, rather than crawler policy, bot access, crawler identity, or content rights."
+    },
+    "web-bot-auth-repo--e4a2896c558393fc": {
+      "evidence_id": "web-bot-auth-repo--e4a2896c558393fc",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The content describes an automated Dependabot pull request updating development dependencies (such as oxlint, tsdown, and Cloudflare Workers tooling), with no relevance to crawler policies, bot access, or AI content scraping."
+    },
+    "datadome-blog--7165f7135311b83d": {
+      "evidence_id": "datadome-blog--7165f7135311b83d",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": "content/feed/2026-08-01-datadome-blog-datadome-outlines-framework-for-non-human-identity-and-ai-agent-access-control.md",
+      "development_path": null,
+      "reason": null
+    },
+    "datadome-blog--c7820e3cf039276f": {
+      "evidence_id": "datadome-blog--c7820e3cf039276f",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "web-bot-auth-repo--3b0de7ba4d3633a7": {
+      "evidence_id": "web-bot-auth-repo--3b0de7ba4d3633a7",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The provided text describes a code fix for RFC 9421 authority port normalization in Rust and TypeScript, with no mention of crawler policy, bot access, AI training data, or agent infrastructure."
+    },
+    "openai-blog--edcc031cad3d2c5d": {
+      "evidence_id": "openai-blog--edcc031cad3d2c5d",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article focuses on building a 24/7 multilingual retail customer support agent using GPT-Realtime and does not address crawler policy, bot access, or machine traffic."
+    },
+    "cf-changelog-ai-search--baac17b3a7ddd9de": {
+      "evidence_id": "cf-changelog-ai-search--baac17b3a7ddd9de",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": "content/feed/2026-07-30-cf-changelog-ai-search-cloudflare-adds-ai-search-integrations-for-vercel-ai-sdk-langchain-and-agents-sd.md",
+      "development_path": "content/events/2026-07-30-cf-changelog-ai-search-cloudflare-adds-ai-search-integrations-for-vercel-ai-sdk-langchain-and-agents-sd.md",
+      "reason": null
+    },
+    "cloudflare-research--a6ea15206ae8897a": {
+      "evidence_id": "cloudflare-research--a6ea15206ae8897a",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article focuses on post-quantum TLS cryptography and mutual authentication between Cloudflare and origin servers, rather than web crawlers, bot policies, or AI traffic."
+    },
+    "openai-blog--b1363cc540120d6b": {
+      "evidence_id": "openai-blog--b1363cc540120d6b",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item focuses on AI model and inference efficiency and general agentic workflows for GPT-5.6, rather than crawler policy, bot access, licensing, or machine traffic regulation."
+    },
+    "openai-blog--242ce53ef31d4fe2": {
+      "evidence_id": "openai-blog--242ce53ef31d4fe2",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The report focuses on scientists using AI coding agents for scientific computing and software development, which is unrelated to web crawlers, bot policies, or content access."
+    },
+    "mcp-spec--98e8b4f866834ac4": {
+      "evidence_id": "mcp-spec--98e8b4f866834ac4",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": "content/feed/2026-07-28-mcp-spec-model-context-protocol-issues-stable-2026-07-28-specification-release.md",
+      "development_path": "content/events/2026-07-28-mcp-spec-model-context-protocol-issues-stable-2026-07-28-specification-release.md",
+      "reason": null
+    },
+    "web-bot-auth-repo--46fc250d51a5ff52": {
+      "evidence_id": "web-bot-auth-repo--46fc250d51a5ff52",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated software dependency update PR for development tooling (oxlint, prettier, vitest-pool-workers, wrangler) and does not involve crawler policy, bot traffic, or AI data collection."
+    },
+    "web-bot-auth-repo--2a38e760292cbde1": {
+      "evidence_id": "web-bot-auth-repo--2a38e760292cbde1",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated pull request updating software dependencies (Rust crates base64, time, and clap) and does not relate to crawler policies, bot access, AI training data, or content regulation."
+    },
+    "news-media-alliance--73e71d06a6c0bfb3": {
+      "evidence_id": "news-media-alliance--73e71d06a6c0bfb3",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:17:55.298617Z",
+      "feed_path": "content/feed/2026-07-23-news-media-alliance-bipartisan-u-s-house-bill-targets-undisclosed-ai-stealth-crawlers.md",
+      "development_path": null,
+      "reason": null
     }
   },
   "summary": {
     "batch_id": "direct-evidence_2026-06-01_2026-09-01",
-    "eligible": 94,
+    "eligible": 90,
     "attempted": 15,
-    "remaining": 54,
+    "remaining": 39,
     "published": 4,
     "irrelevant": 11,
-    "duplicate": 7,
+    "duplicate": 11,
     "excluded": 12,
     "failed": 0,
     "provider_status": "ok"
