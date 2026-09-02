@@ -1,0 +1,81 @@
+name: Backfill Feed
+
+on:
+  workflow_dispatch:
+    inputs:
+      since:
+        description: Inclusive ISO timestamp for original publication dates
+        required: true
+        default: "2026-06-01T00:00:00Z"
+      until:
+        description: Inclusive ISO timestamp for original publication dates
+        required: true
+        default: "2026-09-01T23:59:59Z"
+      limit:
+        description: Maximum unfinished direct-source records to process
+        required: true
+        default: "15"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: backfill-feed
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+
+      - name: Install Python
+        run: uv python install 3.12
+
+      - name: Sync Python dependencies
+        run: uv sync --frozen
+
+      - name: Process bounded direct-evidence batch
+        id: backfill
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_ANALYSIS_MODEL: gemini-3.7-flash
+        run: |
+          uv run python -m pipeline.backfill_feed \
+            --since "${{ inputs.since }}" \
+            --until "${{ inputs.until }}" \
+            --limit "${{ inputs.limit }}" \
+            --direct-only
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: site/package-lock.json
+
+      - name: Install site dependencies
+        working-directory: site
+        run: npm ci
+
+      - name: Build publication
+        working-directory: site
+        run: npm run build
+
+      - name: Commit and push published records
+        run: |
+          git config user.name "ai-ecosystem-tracker[bot]"
+          git config user.email "bot@users.noreply.github.com"
+          git add content/feed content/events data/backfills
+          if git diff --cached --quiet; then
+            echo "No backfill changes to commit."
+          else
+            git commit -m "backfill-feed ${{ inputs.since }} to ${{ inputs.until }}: auto-run"
+            git push origin HEAD:${{ github.ref_name }}
+          fi
