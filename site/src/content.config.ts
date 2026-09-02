@@ -63,6 +63,16 @@ const feed = defineCollection({
     confidence: z.enum(["low", "medium", "high"]),
     evidence_ids: z.array(z.string()).min(1),
     development_slug: z.string().optional(),
+    backfilled: z.boolean().default(false),
+    processed_at: z.coerce.date().optional(),
+    backfill_batch: z.string().optional(),
+  }).superRefine((item, ctx) => {
+    if (item.backfilled && (!item.processed_at || !item.backfill_batch)) {
+      ctx.addIssue({
+        code: "custom",
+        message: "Backfilled feed items require processed_at and backfill_batch",
+      });
+    }
   }),
 });
 

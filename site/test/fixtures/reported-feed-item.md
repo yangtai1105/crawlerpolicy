@@ -20,6 +20,9 @@ importance: 0.71
 confidence: medium
 evidence_ids:
   - "test-source--abc123"
+backfilled: true
+processed_at: 2026-09-01T18:00:00Z
+backfill_batch: direct-evidence_2026-06-01_2026-09-01
 ---
 
 ## Summary

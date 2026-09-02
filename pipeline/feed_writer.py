@@ -25,7 +25,12 @@ def write_feed_item(
     source_urls: list[str],
     unified_diff: str,
     development_slug: str | None = None,
+    backfilled: bool = False,
+    processed_at: datetime | None = None,
+    backfill_batch: str | None = None,
 ) -> Path:
+    if backfilled and (processed_at is None or not backfill_batch):
+        raise ValueError("backfilled feed items require processed_at and backfill_batch")
     feed_dir.mkdir(parents=True, exist_ok=True)
     slug = f"{source.slug}-{_slugify(analysis.title)}"
     path = feed_dir / f"{event_date.date().isoformat()}-{slug}.md"
@@ -42,6 +47,9 @@ def write_feed_item(
             source_urls=source_urls,
             unified_diff=unified_diff,
             development_slug=development_slug,
+            backfilled=backfilled,
+            processed_at=processed_at,
+            backfill_batch=backfill_batch,
         )
     )
     return path
@@ -64,6 +72,9 @@ def _compose(
     source_urls: list[str],
     unified_diff: str,
     development_slug: str | None,
+    backfilled: bool,
+    processed_at: datetime | None,
+    backfill_batch: str | None,
 ) -> str:
     frontmatter = (
         "---\n"
@@ -87,6 +98,10 @@ def _compose(
     )
     if development_slug:
         frontmatter += f"development_slug: {development_slug}\n"
+    frontmatter += f"backfilled: {str(backfilled).lower()}\n"
+    if backfilled:
+        frontmatter += f"processed_at: {processed_at.isoformat()}\n"
+        frontmatter += f"backfill_batch: {backfill_batch}\n"
     frontmatter += "---\n\n"
 
     body = (
