@@ -43,6 +43,12 @@ const displayDate = legacyData?.detected_at ?? currentData?.event_date ?? feedDa
 const legacyOrCurrentUrl = legacyData?.source_url ?? currentData?.source_url ?? "";
 const sourceUrls = feedData?.source_urls ?? (legacyOrCurrentUrl ? [legacyOrCurrentUrl] : []);
 const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.status.slice(1) : "";
+const originalPublicationDate = feedData?.published_at.toLocaleDateString("en-US", {
+  month: "long",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
 ---
 
 <Base title={event.data.title} description={`Tracked change from ${source?.display_name ?? event.data.source}`}>
@@ -52,7 +58,11 @@ const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.
         {isLegacy ? (
           <span class="legacy-label">Legacy record · {legacyData!.pillar}</span>
         ) : isFeed ? (
-          <><span class={`publication-status status-${feedData!.status}`}>{publicationLabel}</span><span class="current-tracks">{feedData!.tracks.map((track) => <TrackTag track={track} linked />)}</span></>
+          <>
+            <span class={`publication-status status-${feedData!.status}`}>{publicationLabel}</span>
+            {feedData!.backfilled && <span class="backfill-note">Backfilled · Original publication {originalPublicationDate}</span>}
+            <span class="current-tracks">{feedData!.tracks.map((track) => <TrackTag track={track} linked />)}</span>
+          </>
         ) : (
           <span class="current-tracks">{currentData!.tracks.map((track) => <TrackTag track={track} linked />)}</span>
         )}
@@ -101,7 +111,7 @@ const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.
 
 <style>
   .event-page {
-    max-width: 860px;
+    max-width: 920px;
     padding: var(--space-8) var(--space-5);
   }
   .event-page-header {
@@ -113,6 +123,7 @@ const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.
     display: flex;
     align-items: center;
     gap: var(--space-3);
+    flex-wrap: wrap;
     font-size: 0.85rem;
     color: var(--ink-muted);
     margin-bottom: var(--space-3);
@@ -139,10 +150,11 @@ const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.
     font-family: var(--font-mono);
     font-size: 0.72rem;
   }
-  .publication-status { border: 1px solid currentColor; border-radius: 999px; padding: .16rem .5rem; font: 500 .63rem var(--font-mono); text-transform: uppercase; }
+  .publication-status { border-top: 3px solid currentColor; padding: .2rem 0; font: 600 .63rem var(--font-mono); text-transform: uppercase; }
   .status-verified { color: var(--status-healthy); }
   .status-reported { color: var(--pillar-ecosystem); }
   .status-signal { color: var(--status-degraded); }
+  .backfill-note { color: var(--clay-marker); font: 600 .66rem/1.4 var(--font-mono); text-transform: uppercase; }
   .current-tracks { display: inline-flex; flex-wrap: wrap; gap: var(--space-2); }
 
   .event-page-body :global(h2) {
@@ -151,15 +163,19 @@ const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.
     margin-bottom: var(--space-3);
   }
   .event-page-body :global(h2):first-of-type { margin-top: 0; }
-  .event-page-body :global(p) { max-width: 72ch; color: #d8d1e4; font-size: .98rem; line-height: 1.75; }
-  .event-page-body :global(h2:nth-of-type(4)) { color: var(--pink); }
+  .event-page-body :global(p) { max-width: 72ch; color: var(--ledger-ink); font-size: 1rem; line-height: 1.75; }
+  .event-page-body :global(h2:nth-of-type(4)) { color: var(--clay-marker); }
+  .event-page-body :global(h2:nth-of-type(5)) { margin-top: var(--space-8); padding: var(--space-6) var(--space-6) var(--space-3); background: var(--forest-block); color: var(--paper-high); }
+  .event-page-body :global(h2:nth-of-type(5) ~ *) { margin-top: 0; margin-bottom: 0; padding: 0 var(--space-6) var(--space-4); background: var(--forest-block); color: #dce8e0; }
+  .event-page-body :global(h2:nth-of-type(5) ~ *:last-child) { padding-bottom: var(--space-6); }
+  .event-page-body :global(h2:nth-of-type(5) ~ * a) { color: #b6dcc7; text-decoration: underline; }
 
   .event-page-body :global(details) {
     border: 1px solid var(--border);
     border-radius: 4px;
     padding: var(--space-3) var(--space-4);
     margin-top: var(--space-5);
-    background: var(--bg-elev);
+    background: var(--paper-high);
   }
   .event-page-body :global(summary) {
     cursor: pointer;

@@ -19,9 +19,12 @@ export const GET: APIRoute = async ({ site }) => {
     .map((e) => {
       const source = findSource(e.data.source);
       const link = `${siteUrl}/events/${e.data.slug}`;
+      const label = e.data.backfilled
+        ? "Backfilled"
+        : e.data.status[0].toUpperCase() + e.data.status.slice(1);
       return `
     <item>
-      <title>${esc(`[${e.data.status[0].toUpperCase()}${e.data.status.slice(1)}] ${e.data.title}`)}</title>
+      <title>${esc(`[${label}] ${e.data.title}`)}</title>
       <link>${link}</link>
       <guid isPermaLink="true">${link}</guid>
       <pubDate>${e.data.event_date.toUTCString()}</pubDate>

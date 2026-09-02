@@ -12,6 +12,7 @@ interface Props {
   analyticalLabel: "Insight" | "Implication" | "Why it matters";
   analyticalText: string;
   tracks: Track[];
+  backfilled: boolean;
 }
 
 const {
@@ -24,43 +25,63 @@ const {
   analyticalLabel,
   analyticalText,
   tracks,
+  backfilled,
 } = Astro.props;
 const statusLabel = status[0].toUpperCase() + status.slice(1);
+const dateLabel = publishedAt.toLocaleDateString("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
 ---
 
 <article class="feed-card" data-status={status}>
-  <div class="feed-card-meta">
+  <aside class="feed-card-meta">
     <span class="feed-status">{statusLabel}</span>
-    <span>{source}</span>
-    <time datetime={publishedAt.toISOString()}>{publishedAt.toISOString().slice(0, 10)}</time>
-  </div>
-  <h3><a href={`/events/${slug}`}>{title}</a></h3>
-  <p class="feed-summary">{summary}</p>
-  <div class="feed-analysis">
-    <span>{analyticalLabel}</span>
-    <p>{analyticalText}</p>
-  </div>
-  <div class="feed-footer">
-    <div>{tracks.map((track) => <TrackTag track={track} linked />)}</div>
-    <a href={`/events/${slug}`}>Read analysis <span aria-hidden="true">→</span></a>
+    {backfilled && <span class="backfill-label">Backfilled</span>}
+    <span class="date-caption">{backfilled ? "Original publication" : "Published"}</span>
+    <time datetime={publishedAt.toISOString()}>{dateLabel}</time>
+    <span class="feed-source">{source}</span>
+  </aside>
+  <div class="feed-card-reading">
+    <h3><a href={`/events/${slug}`}>{title}</a></h3>
+    <p class="feed-summary">{summary}</p>
+    <div class="feed-analysis">
+      <span>{analyticalLabel}</span>
+      <p>{analyticalText}</p>
+    </div>
+    <div class="feed-footer">
+      <div>{tracks.map((track) => <TrackTag track={track} linked />)}</div>
+      <a href={`/events/${slug}`}>Read analysis <span aria-hidden="true">→</span></a>
+    </div>
   </div>
 </article>
 
 <style>
-  .feed-card { --rail: var(--violet); position: relative; padding: var(--space-6) var(--space-5) var(--space-6) var(--space-6); border-top: 1px solid var(--border-strong); background: linear-gradient(90deg, rgba(139,109,255,.055), transparent 48%); }
-  .feed-card::before { position: absolute; top: var(--space-6); bottom: var(--space-6); left: 0; width: 2px; background: var(--rail); content: ""; }
-  .feed-card[data-status="verified"] { --rail: var(--cyan); }
-  .feed-card[data-status="signal"] { --rail: var(--amber); }
-  .feed-card-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--muted); font: 500 .62rem var(--font-mono); text-transform: uppercase; }
-  .feed-card-meta span + span::before, .feed-card-meta time::before { margin-right: var(--space-3); color: var(--dim); content: "·"; }
-  .feed-status { color: var(--rail); }
-  h3 { max-width: 25ch; margin: var(--space-3) 0; font-size: clamp(1.35rem, 2.3vw, 2rem); }
-  .feed-summary { max-width: 74ch; color: #d5cee1; font-size: .9rem; }
-  .feed-analysis { max-width: 74ch; margin-top: var(--space-5); padding-left: var(--space-4); border-left: 1px solid var(--rail); }
-  .feed-analysis > span { color: var(--rail); font: 500 .61rem var(--font-mono); text-transform: uppercase; }
-  .feed-analysis p { margin: var(--space-1) 0 0; color: var(--muted); font-size: .83rem; }
+  .feed-card { --rail: var(--clay-marker); display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); padding: var(--space-7) 0; border-top: 1px solid var(--quiet-rule); }
+  .feed-card[data-status="verified"] { --rail: #327257; }
+  .feed-card[data-status="signal"] { --rail: #9a632f; }
+  .feed-card-meta { display: flex; align-items: flex-start; flex-direction: column; gap: var(--space-1); color: var(--ink-muted); font: 500 .65rem/1.45 var(--font-mono); text-transform: uppercase; }
+  .feed-status { margin-bottom: var(--space-3); padding-top: var(--space-1); border-top: 3px solid var(--rail); color: var(--rail); font-weight: 600; }
+  .backfill-label { color: var(--clay-marker); font-weight: 600; }
+  .date-caption { margin-top: var(--space-3); color: var(--ink-dim); font-size: .57rem; letter-spacing: .05em; }
+  .feed-card-meta time { color: var(--ledger-ink); font-weight: 600; }
+  .feed-source { margin-top: var(--space-3); text-transform: none; }
+  h3 { max-width: 27ch; margin: 0 0 var(--space-3); font-size: clamp(1.5rem, 2.5vw, 2.2rem); }
+  .feed-summary { max-width: 72ch; color: var(--ledger-ink); font-size: .96rem; line-height: 1.72; }
+  .feed-analysis { max-width: 72ch; margin-top: var(--space-5); padding: var(--space-4); border-left: 3px solid var(--rail); background: var(--paper-high); }
+  .feed-analysis > span { color: var(--rail); font: 600 .61rem var(--font-mono); text-transform: uppercase; }
+  .feed-analysis p { margin: var(--space-1) 0 0; color: var(--ink-muted); font-size: .88rem; }
   .feed-footer { display: flex; justify-content: space-between; gap: var(--space-4); align-items: end; margin-top: var(--space-5); }
   .feed-footer > div { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-  .feed-footer > a { color: var(--cyan); font: 500 .67rem var(--font-mono); white-space: nowrap; }
-  @media (max-width: 600px) { .feed-card { padding-right: 0; } .feed-footer { align-items: start; flex-direction: column; } }
+  .feed-footer > a { color: var(--forest-block); font: 600 .67rem var(--font-mono); white-space: nowrap; }
+  @media (max-width: 700px) {
+    .feed-card { grid-template-columns: 1fr; gap: var(--space-5); }
+    .feed-card-meta { display: grid; grid-template-columns: auto auto; justify-content: start; column-gap: var(--space-4); }
+    .feed-status { grid-column: 1; }
+    .backfill-label { grid-column: 2; margin-top: var(--space-1); }
+    .date-caption, .feed-card-meta time, .feed-source { grid-column: 1 / -1; }
+    .feed-footer { align-items: start; flex-direction: column; }
+  }
 </style>

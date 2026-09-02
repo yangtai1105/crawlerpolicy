@@ -19,14 +19,14 @@ const { front, summary, status = "quiet" } = Astro.props;
 </article>
 
 <style>
-  .front-card { min-height: 280px; display: flex; flex-direction: column; padding: var(--space-5); border: 1px solid var(--border); border-top: 2px solid var(--border-strong); border-radius: var(--radius-sm); background: rgba(33,24,58,.62); }
-  .front-card[data-status="active"] { border-top-color: var(--pink); background: linear-gradient(145deg, rgba(139,109,255,.12), rgba(33,24,58,.72)); }
+  .front-card { min-height: 280px; display: flex; flex-direction: column; padding: var(--space-5); border: 1px solid var(--quiet-rule); border-top: 4px solid var(--quiet-rule); border-radius: var(--radius-sm); background: var(--paper-high); }
+  .front-card[data-status="active"] { border-top-color: var(--clay-marker); }
   .front-card[data-status="watch"] { border-top-color: var(--trace-violet); }
   .front-topline { display: flex; justify-content: space-between; gap: var(--space-3); }
-  .front-status { font: 500 0.61rem/1.3 var(--font-mono); text-transform: uppercase; color: var(--muted); }
+  .front-status { font: 600 0.61rem/1.3 var(--font-mono); text-transform: uppercase; color: var(--ink-muted); }
   h3 { font-size: clamp(1.45rem, 2.2vw, 2rem); margin: var(--space-5) 0 var(--space-3); }
-  p { color: var(--muted); font-size: 0.84rem; line-height: 1.62; }
+  p { color: var(--ink-muted); font-size: 0.88rem; line-height: 1.68; }
   .front-tracks { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-top: auto; padding-top: var(--space-4); }
-  .front-link { margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--border); color: var(--cyan); font: 500 0.67rem/1.2 var(--font-mono); }
+  .front-link { margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--border); color: var(--forest-block); font: 600 0.67rem/1.2 var(--font-mono); }
   .front-link span { float: right; }
 </style>

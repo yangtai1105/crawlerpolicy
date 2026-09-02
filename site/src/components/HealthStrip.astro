@@ -46,7 +46,7 @@ const timestamp = health.last_fully_successful_at
     padding: var(--space-4) var(--space-5);
     border: 1px solid var(--border);
     border-left: 4px solid var(--health-color);
-    background: rgba(33, 24, 58, .72);
+    background: var(--paper-high);
   }
   .health-healthy { --health-color: var(--status-healthy); }
   .health-degraded { --health-color: var(--status-degraded); }
@@ -54,7 +54,7 @@ const timestamp = health.last_fully_successful_at
   .health-state { display: flex; align-items: center; gap: var(--space-3); }
   .health-state p, .health-description { margin: 0; }
   .health-state strong { font: 650 0.96rem/1.2 var(--font-display); }
-  .status-mark { width: 8px; height: 8px; border-radius: 50%; background: var(--health-color); flex: 0 0 auto; box-shadow: 0 0 16px var(--health-color); }
+  .status-mark { width: 9px; height: 9px; border-radius: 50%; background: var(--health-color); flex: 0 0 auto; }
   .health-description { color: var(--ink-muted); font-size: 0.82rem; max-width: 44ch; }
   .health-metrics { margin: 0; display: flex; gap: var(--space-5); }
   .health-metrics div { min-width: 70px; }
