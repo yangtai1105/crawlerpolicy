@@ -282,16 +282,136 @@
       "feed_path": null,
       "development_path": null,
       "reason": "This is an automated dependency update (Dependabot PR) for the Rust 'log' crate and does not involve crawler policy, bot access, or AI data governance."
+    },
+    "web-bot-auth-repo--57cb30936093d542": {
+      "evidence_id": "web-bot-auth-repo--57cb30936093d542",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item is a pull request refactoring a general HTTP message signature library (RFC 9421) and does not mention web crawlers, AI, bot access, or agent identity."
+    },
+    "meta-externalagent--362f1270a4f29e97": {
+      "evidence_id": "meta-externalagent--362f1270a4f29e97",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "cosmetic"
+    },
+    "cf-changelog-ai-search--b89bf4222811eeaf": {
+      "evidence_id": "cf-changelog-ai-search--b89bf4222811eeaf",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The announcement only concerns support for the GLM-5.3 Flash model in Cloudflare AI Search and does not touch upon crawler policies, bot access, training data, or machine traffic."
+    },
+    "cloudflare-blog--f60ce8b1568d3253": {
+      "evidence_id": "cloudflare-blog--f60ce8b1568d3253",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": "content/feed/2026-08-28-cloudflare-blog-cloudflare-launches-botbase-for-operators-with-automated-verification-and-conten.md",
+      "development_path": null,
+      "reason": null
+    },
+    "datadome-blog--c3c7ab9d7e041aee": {
+      "evidence_id": "datadome-blog--c3c7ab9d7e041aee",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": "content/feed/2026-08-27-datadome-blog-datadome-launches-hosted-model-context-protocol-server-for-bot-telemetry.md",
+      "development_path": null,
+      "reason": null
+    },
+    "web-bot-auth-repo--dc54499c4153a1bf": {
+      "evidence_id": "web-bot-auth-repo--dc54499c4153a1bf",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item discusses test vector generation and cross-validation for HTTP message signatures, with no direct connection to crawler policy, bot access, AI training, or machine traffic."
+    },
+    "web-bot-auth-repo--9e1fc744e65dd8c5": {
+      "evidence_id": "web-bot-auth-repo--9e1fc744e65dd8c5",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated dependency update pull request bumping standard development packages (oxlint, vitest, wrangler, and Cloudflare types) and contains no discussion or features related to crawler policy or bot access."
+    },
+    "cf-changelog-ai-search--7917e84f8e9813f8": {
+      "evidence_id": "cf-changelog-ai-search--7917e84f8e9813f8",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The provided text is a product update announcing the addition of new text generation models to Cloudflare AI Search and does not address crawler policies, bot access, training data, or content licensing."
+    },
+    "cf-changelog-ai-search--e2b12db04784da86": {
+      "evidence_id": "cf-changelog-ai-search--e2b12db04784da86",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item is a technical update regarding metadata envelope size limits for vectors in AI Search and does not discuss crawler policies, bot access, training data, or machine traffic."
+    },
+    "cloudflare-blog--cd3d6d166caebcad": {
+      "evidence_id": "cloudflare-blog--cd3d6d166caebcad",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": "content/feed/2026-08-21-cloudflare-blog-cloudflare-launches-bot-preference-sync-to-automatically-align-robots-txt-with-e.md",
+      "development_path": null,
+      "reason": null
+    },
+    "datadome-blog--755c63a34d1a876b": {
+      "evidence_id": "datadome-blog--755c63a34d1a876b",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item is about retail scalper bots purchasing DDR5 hardware and does not pertain to AI crawlers, bot access policy, robots.txt, or web scraping."
+    },
+    "cf-changelog-ai-gateway--eee8c4decd518a01": {
+      "evidence_id": "cf-changelog-ai-gateway--eee8c4decd518a01",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item is a promotional announcement offering discounted token pricing for a specific AI model via AI Gateway, and does not discuss crawler policies, bot access, training data, or machine traffic measurement."
+    },
+    "web-bot-auth-repo--c36a4f45582793db": {
+      "evidence_id": "web-bot-auth-repo--c36a4f45582793db",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated dependency update pull request bumping the Rust library 'clap' and does not relate to crawler policies, bots, or AI content regulation."
+    },
+    "web-bot-auth-repo--8ef2e2da2c049220": {
+      "evidence_id": "web-bot-auth-repo--8ef2e2da2c049220",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The text is an automated Dependabot pull request bumping software development dependencies (oxlint, wrangler, and Cloudflare testing packages) and does not relate to crawler policies or bot management."
+    },
+    "web-bot-auth-repo--1fa8d57cb4122f97": {
+      "evidence_id": "web-bot-auth-repo--1fa8d57cb4122f97",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:15:06.311359Z",
+      "feed_path": "content/feed/2026-08-18-web-bot-auth-repo-web-bot-auth-rust-verifier-hardened-against-future-dated-signatures.md",
+      "development_path": "content/events/2026-08-18-web-bot-auth-repo-web-bot-auth-rust-verifier-hardened-against-future-dated-signatures.md",
+      "reason": null
     }
   },
   "summary": {
     "batch_id": "direct-evidence_2026-06-01_2026-09-01",
-    "eligible": 99,
+    "eligible": 98,
     "attempted": 15,
-    "remaining": 84,
-    "published": 1,
-    "irrelevant": 14,
-    "duplicate": 2,
+    "remaining": 69,
+    "published": 4,
+    "irrelevant": 11,
+    "duplicate": 3,
     "excluded": 12,
     "failed": 0,
     "provider_status": "ok"
