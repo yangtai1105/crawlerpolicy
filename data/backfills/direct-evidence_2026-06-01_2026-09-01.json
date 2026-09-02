@@ -1,0 +1,299 @@
+{
+  "batch_id": "direct-evidence_2026-06-01_2026-09-01",
+  "since": "2026-06-01T00:00:00Z",
+  "until": "2026-09-01T23:59:59Z",
+  "entries": {
+    "gemini-agent-infra--b4e6ad5c5e92a5db": {
+      "evidence_id": "gemini-agent-infra--b4e6ad5c5e92a5db",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-agent-infra--ce4ce213a68c587f": {
+      "evidence_id": "gemini-agent-infra--ce4ce213a68c587f",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-agent-standards--7667bce506bc8002": {
+      "evidence_id": "gemini-agent-standards--7667bce506bc8002",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-agent-standards--8568a01d3fb7b67d": {
+      "evidence_id": "gemini-agent-standards--8568a01d3fb7b67d",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-ai-licensing-deals--009ebfceb33b96c8": {
+      "evidence_id": "gemini-ai-licensing-deals--009ebfceb33b96c8",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-ai-licensing-deals--7594d67fac756304": {
+      "evidence_id": "gemini-ai-licensing-deals--7594d67fac756304",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-content-blocking--89b863e0045a74a1": {
+      "evidence_id": "gemini-content-blocking--89b863e0045a74a1",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-content-blocking--b0ebac99f2f5a179": {
+      "evidence_id": "gemini-content-blocking--b0ebac99f2f5a179",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-crawler-insights--8e6f542d69407db8": {
+      "evidence_id": "gemini-crawler-insights--8e6f542d69407db8",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-crawler-insights--a34a2c8d856961e9": {
+      "evidence_id": "gemini-crawler-insights--a34a2c8d856961e9",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-regulator-ai-content--2241f908bbfbe88a": {
+      "evidence_id": "gemini-regulator-ai-content--2241f908bbfbe88a",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "gemini-regulator-ai-content--d5a0956096b0cfef": {
+      "evidence_id": "gemini-regulator-ai-content--d5a0956096b0cfef",
+      "outcome": "excluded_source",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "Gemini Search evidence"
+    },
+    "mcp-spec--affffb5addc9efc4": {
+      "evidence_id": "mcp-spec--affffb5addc9efc4",
+      "outcome": "outside_window",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "outside requested window"
+    },
+    "openai-blog--61c4fc4bda46a4b5": {
+      "evidence_id": "openai-blog--61c4fc4bda46a4b5",
+      "outcome": "outside_window",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "outside requested window"
+    },
+    "openai-blog--6bf0486cce41afda": {
+      "evidence_id": "openai-blog--6bf0486cce41afda",
+      "outcome": "outside_window",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "outside requested window"
+    },
+    "openai-blog--8f986bf28e0fce54": {
+      "evidence_id": "openai-blog--8f986bf28e0fce54",
+      "outcome": "outside_window",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "outside requested window"
+    },
+    "openai-blog--9a153b8855a3627e": {
+      "evidence_id": "openai-blog--9a153b8855a3627e",
+      "outcome": "outside_window",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "outside requested window"
+    },
+    "openai-blog--fc09d249ac037164": {
+      "evidence_id": "openai-blog--fc09d249ac037164",
+      "outcome": "outside_window",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "outside requested window"
+    },
+    "cloudflare-blog--0c79232daf595900": {
+      "evidence_id": "cloudflare-blog--0c79232daf595900",
+      "outcome": "duplicate",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "already published"
+    },
+    "web-bot-auth-repo--9198d961ca29cac4": {
+      "evidence_id": "web-bot-auth-repo--9198d961ca29cac4",
+      "outcome": "duplicate",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "already published"
+    },
+    "uk-cma--11270b9a733175f7": {
+      "evidence_id": "uk-cma--11270b9a733175f7",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "cloudflare-blog--c65f2cf729640181": {
+      "evidence_id": "cloudflare-blog--c65f2cf729640181",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The article focuses on CDN caching architecture, storage optimization, and compression algorithms (Zstandard and Pingora) rather than crawler policies, bot traffic, or AI data harvesting."
+    },
+    "eu-commission-digital--3af16d6a4673737d": {
+      "evidence_id": "eu-commission-digital--3af16d6a4673737d",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "eu-commission-digital--0402cdb98d813eb5": {
+      "evidence_id": "eu-commission-digital--0402cdb98d813eb5",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "eu-commission-digital--202a9d07210adab0": {
+      "evidence_id": "eu-commission-digital--202a9d07210adab0",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "news-media-alliance--3d3e3001f4aa8084": {
+      "evidence_id": "news-media-alliance--3d3e3001f4aa8084",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "eu-commission-digital--4c5cb06e9dbbd8f4": {
+      "evidence_id": "eu-commission-digital--4c5cb06e9dbbd8f4",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "web-bot-auth-repo--387420d62eef79cc": {
+      "evidence_id": "web-bot-auth-repo--387420d62eef79cc",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item is about improving an npm package publication pipeline and does not relate to AI crawler policy, bots, or content regulation."
+    },
+    "eu-commission-digital--2ea6abe2de164008": {
+      "evidence_id": "eu-commission-digital--2ea6abe2de164008",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "eu-commission-digital--4470d13825213236": {
+      "evidence_id": "eu-commission-digital--4470d13825213236",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "eu-commission-digital--9faf6ec6b8222ff6": {
+      "evidence_id": "eu-commission-digital--9faf6ec6b8222ff6",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "eu-commission-digital--d2c1a34b5f9b5b7d": {
+      "evidence_id": "eu-commission-digital--d2c1a34b5f9b5b7d",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "web-bot-auth-repo--b4ba5e1d73c111a0": {
+      "evidence_id": "web-bot-auth-repo--b4ba5e1d73c111a0",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is a routine automated dependency update pull request for developer packages such as oxlint, @types/chrome, @cloudflare/workers-types, and wrangler, with no relation to crawler policy, bot traffic, or AI data governance."
+    },
+    "eu-commission-digital--a3445c4aa5c2c432": {
+      "evidence_id": "eu-commission-digital--a3445c4aa5c2c432",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": "content/feed/2026-08-31-eu-commission-digital-european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under.md",
+      "development_path": "content/events/2026-08-31-eu-commission-digital-european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under.md",
+      "reason": null
+    },
+    "web-bot-auth-repo--c72c4a3172377f0f": {
+      "evidence_id": "web-bot-auth-repo--c72c4a3172377f0f",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:13:32.278544Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated dependency update (Dependabot PR) for the Rust 'log' crate and does not involve crawler policy, bot access, or AI data governance."
+    }
+  },
+  "summary": {
+    "batch_id": "direct-evidence_2026-06-01_2026-09-01",
+    "eligible": 99,
+    "attempted": 15,
+    "remaining": 84,
+    "published": 1,
+    "irrelevant": 14,
+    "duplicate": 2,
+    "excluded": 12,
+    "failed": 0,
+    "provider_status": "ok"
+  }
+}
