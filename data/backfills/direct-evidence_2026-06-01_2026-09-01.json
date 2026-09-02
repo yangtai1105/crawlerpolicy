@@ -402,16 +402,136 @@
       "feed_path": "content/feed/2026-08-18-web-bot-auth-repo-web-bot-auth-rust-verifier-hardened-against-future-dated-signatures.md",
       "development_path": "content/events/2026-08-18-web-bot-auth-repo-web-bot-auth-rust-verifier-hardened-against-future-dated-signatures.md",
       "reason": null
+    },
+    "datadome-blog--2888ac0be415e3f9": {
+      "evidence_id": "datadome-blog--2888ac0be415e3f9",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "noise"
+    },
+    "openai-blog--af5b983acf27c9d4": {
+      "evidence_id": "openai-blog--af5b983acf27c9d4",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item focuses on building AI agents and utilizing the Responses API for GPT-5.6, rather than crawler policies, bot access, training data rights, or machine traffic."
+    },
+    "openai-blog--76352d73c6486f40": {
+      "evidence_id": "openai-blog--76352d73c6486f40",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "openai-blog--542478186fb5bdaa": {
+      "evidence_id": "openai-blog--542478186fb5bdaa",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "web-bot-auth-repo--aa18efd7c08ab295": {
+      "evidence_id": "web-bot-auth-repo--aa18efd7c08ab295",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": "content/feed/2026-08-13-web-bot-auth-repo-cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks.md",
+      "development_path": "content/events/2026-08-13-web-bot-auth-repo-cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks.md",
+      "reason": null
+    },
+    "openai-blog--408b69f0c321236b": {
+      "evidence_id": "openai-blog--408b69f0c321236b",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The item focuses on enterprise adoption of agentic AI tools like ChatGPT and Codex, without addressing crawler policy, bot access, data scraping, or machine traffic."
+    },
+    "openai-blog--c4c3e76d96dede81": {
+      "evidence_id": "openai-blog--c4c3e76d96dede81",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "datadome-blog--a8fff30eb5ae03a5": {
+      "evidence_id": "datadome-blog--a8fff30eb5ae03a5",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": "content/feed/2026-08-10-datadome-blog-forrester-expands-bot-management-category-to-bot-and-agent-trust-management.md",
+      "development_path": null,
+      "reason": null
+    },
+    "datadome-blog--64ba625bb94dac22": {
+      "evidence_id": "datadome-blog--64ba625bb94dac22",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "datadome-blog--a1d9e27a13a81a8c": {
+      "evidence_id": "datadome-blog--a1d9e27a13a81a8c",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "keyword filter"
+    },
+    "web-bot-auth-repo--00e99ad983f4c922": {
+      "evidence_id": "web-bot-auth-repo--00e99ad983f4c922",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated dependency update PR bumping Rust crates (base64, time, clap) and contains no content related to crawler policy, AI data, bots, or web crawling."
+    },
+    "web-bot-auth-repo--2725d674e678ab27": {
+      "evidence_id": "web-bot-auth-repo--2725d674e678ab27",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "This is an automated pull request updating software dependencies and developer tooling packages (such as oxlint, wrangler, and vitest-pool-workers) and does not focus on crawler policy, bot access controls, or AI data governance."
+    },
+    "cf-changelog-ai-gateway--cb99566ef4716236": {
+      "evidence_id": "cf-changelog-ai-gateway--cb99566ef4716236",
+      "outcome": "irrelevant",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": null,
+      "development_path": null,
+      "reason": "The text focuses on model inference routing, API bindings, observability, and unified billing for Cloudflare's Workers AI and AI Gateway, rather than crawler policies, bot access, training data, or content licensing."
+    },
+    "datadome-blog--1099b754313ba148": {
+      "evidence_id": "datadome-blog--1099b754313ba148",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": "content/feed/2026-08-06-datadome-blog-datadome-publishes-ai-crawler-taxonomy-and-verification-guidance-across-2026-bot.md",
+      "development_path": null,
+      "reason": null
+    },
+    "cf-changelog-ai-search--d0c79db373ba0a55": {
+      "evidence_id": "cf-changelog-ai-search--d0c79db373ba0a55",
+      "outcome": "published",
+      "updated_at": "2026-09-02T06:16:39.453289Z",
+      "feed_path": "content/feed/2026-08-06-cf-changelog-ai-search-cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-.md",
+      "development_path": "content/events/2026-08-06-cf-changelog-ai-search-cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-.md",
+      "reason": null
     }
   },
   "summary": {
     "batch_id": "direct-evidence_2026-06-01_2026-09-01",
-    "eligible": 98,
+    "eligible": 94,
     "attempted": 15,
-    "remaining": 69,
+    "remaining": 54,
     "published": 4,
     "irrelevant": 11,
-    "duplicate": 3,
+    "duplicate": 7,
     "excluded": 12,
     "failed": 0,
     "provider_status": "ok"
