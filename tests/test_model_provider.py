@@ -5,6 +5,7 @@ from pydantic import BaseModel
 
 from pipeline.model_provider import (
     GeminiStructuredModel,
+    ProviderCircuit,
     ProviderFailure,
     classify_provider_failure,
 )
@@ -73,3 +74,11 @@ async def test_gemini_provider_classifies_billing_failure():
 )
 def test_provider_failure_classification(message, expected_kind):
     assert classify_provider_failure(RuntimeError(message)).kind == expected_kind
+
+
+def test_provider_circuit_opens_only_for_blocking_failures():
+    circuit = ProviderCircuit()
+    circuit.open(ProviderFailure("transient", "temporary"))
+    assert circuit.is_open is False
+    circuit.open(ProviderFailure("quota", "exhausted"))
+    assert circuit.is_open is True

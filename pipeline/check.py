@@ -42,6 +42,7 @@ from pipeline.health import (
 )
 from pipeline.model_provider import (
     GeminiStructuredModel,
+    ProviderCircuit,
     ProviderFailure,
     StructuredModel,
 )
@@ -62,19 +63,6 @@ FetchDispatch = Callable[[Source, SourceState], Awaitable[FetchResult]]
 class DependencyBlocker:
     stage: str
     message: str
-
-
-@dataclass
-class ProviderCircuit:
-    failure: ProviderFailure | None = None
-
-    @property
-    def is_open(self) -> bool:
-        return self.failure is not None
-
-    def open(self, failure: ProviderFailure) -> None:
-        if failure.blocks_run and self.failure is None:
-            self.failure = failure
 
 
 def _maybe_trend_context(cfg: Config, source: Source) -> str:

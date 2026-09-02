@@ -1,6 +1,7 @@
 """Provider-neutral structured model calls backed by Gemini."""
 from __future__ import annotations
 
+from dataclasses import dataclass
 from typing import Protocol, TypeVar
 
 from google import genai
@@ -32,6 +33,21 @@ class ProviderFailure(RuntimeError):
     @property
     def blocks_run(self) -> bool:
         return self.kind in {"authentication", "quota", "billing"}
+
+
+@dataclass
+class ProviderCircuit:
+    """Stop further model calls after a run-blocking provider failure."""
+
+    failure: ProviderFailure | None = None
+
+    @property
+    def is_open(self) -> bool:
+        return self.failure is not None
+
+    def open(self, failure: ProviderFailure) -> None:
+        if failure.blocks_run and self.failure is None:
+            self.failure = failure
 
 
 def classify_provider_failure(error: Exception) -> ProviderFailure:
