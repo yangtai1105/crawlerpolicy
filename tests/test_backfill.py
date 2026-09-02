@@ -1,6 +1,16 @@
 from datetime import UTC, datetime
 
-from pipeline.backfill import select_candidates
+import pytest
+
+from pipeline.backfill import (
+    BackfillEntry,
+    BackfillManifest,
+    BackfillOutcome,
+    batch_id,
+    load_manifest,
+    save_manifest,
+    select_candidates,
+)
 from pipeline.evidence import EvidenceRecord, save_evidence
 from pipeline.sources import load_sources
 
@@ -71,3 +81,44 @@ def test_selection_uses_only_unpublished_direct_evidence(tmp_path):
     assert selection.outside_window_ids == ["direct--old"]
     assert selection.duplicate_ids == ["direct--published"]
     assert selection.counts.eligible == 2
+
+
+def test_manifest_batch_id_and_round_trip(tmp_path):
+    since = datetime(2026, 6, 1, tzinfo=UTC)
+    until = datetime(2026, 9, 1, 23, 59, 59, tzinfo=UTC)
+    manifest = BackfillManifest(
+        batch_id=batch_id(since, until),
+        since=since,
+        until=until,
+        entries={
+            "source--abc": BackfillEntry(
+                evidence_id="source--abc",
+                outcome=BackfillOutcome.PUBLISHED,
+                updated_at=until,
+                feed_path="content/feed/item.md",
+            )
+        },
+        summary={"published": 1, "remaining": 0},
+    )
+    path = tmp_path / "manifest.json"
+    save_manifest(path, manifest)
+    assert load_manifest(path, since=since, until=until) == manifest
+    assert not list(tmp_path.glob("*.tmp"))
+
+
+def test_manifest_rejects_a_different_window(tmp_path):
+    path = tmp_path / "manifest.json"
+    save_manifest(
+        path,
+        BackfillManifest(
+            batch_id="direct-evidence_2026-06-01_2026-09-01",
+            since=datetime(2026, 6, 1, tzinfo=UTC),
+            until=datetime(2026, 9, 1, 23, 59, 59, tzinfo=UTC),
+        ),
+    )
+    with pytest.raises(ValueError, match="window does not match"):
+        load_manifest(
+            path,
+            since=datetime(2026, 7, 1, tzinfo=UTC),
+            until=datetime(2026, 9, 1, 23, 59, 59, tzinfo=UTC),
+        )
