@@ -38,7 +38,7 @@ configured direct sources
 
 Ordinary HTML, RSS, GitHub, IETF, and browser-rendered sources are fetched without an LLM. Gemini receives the already-fetched evidence and returns structured analysis. If authentication, quota, or billing fails, the provider circuit stops additional model calls; fetched evidence remains pending and can be replayed on a later run.
 
-The publication cutoff is `2026-08-30T00:00:00Z`. Earlier underlying items are not backfilled as current news. The first successful fetch of a stable HTML source establishes a baseline instead of inventing a change.
+The daily publication cutoff is `2026-08-30T00:00:00Z`. Earlier underlying items are never presented as current news. A separate, explicitly labeled backfill can publish preserved direct-source evidence with its original date and processing provenance. The first successful fetch of a stable HTML source establishes a baseline instead of inventing a change.
 
 Google Search grounding is not part of the active publication pipeline. `gemini_search` entries remain in `sources.yaml` with `enabled: false` while their retention and product-use constraints are reviewed.
 
@@ -85,6 +85,18 @@ GEMINI_API_KEY=... uv run python -m pipeline.check
 
 # Builds a weekly issue from a completed verified window.
 GEMINI_API_KEY=... uv run python -m pipeline.weekly_intelligence
+
+# Count eligible direct-source records without model calls or writes.
+uv run python -m pipeline.backfill_feed \
+  --since 2026-06-01T00:00:00Z \
+  --until 2026-09-01T23:59:59Z \
+  --limit 15 --direct-only --dry-run
+
+# Process one resumable local backfill batch.
+GEMINI_API_KEY=... uv run python -m pipeline.backfill_feed \
+  --since 2026-06-01T00:00:00Z \
+  --until 2026-09-01T23:59:59Z \
+  --limit 15 --direct-only
 
 cd site
 npm ci
