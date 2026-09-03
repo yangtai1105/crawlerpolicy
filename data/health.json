@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-09-02T12:35:00.275423Z",
-  "last_fully_successful_at": "2026-09-02T12:35:00.275423Z",
+  "last_attempted_at": "2026-09-03T12:37:50.015970Z",
+  "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 34,
     "completed": 34,
@@ -171,8 +171,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--b8a80e2efdc7610a",
-        "uk-cma--5409edcd3eaf173c"
+        "uk-cma--61408a0330678cfe",
+        "uk-cma--f3a8f0726919d5cd",
+        "uk-cma--6e9772640e29c9c1"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -204,11 +205,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--8ca4e4ff2c782c23",
-        "eu-commission-digital--db7c24ffa866d4d8",
-        "eu-commission-digital--521daf214b3e8cd8",
-        "eu-commission-digital--03fa865c95ee32d3",
-        "eu-commission-digital--37974d99a07d3cb7"
+        "eu-commission-digital--5e1e806ef6b47747"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -229,7 +226,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--8ade4da1cf708dfa"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -279,9 +278,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--731042dfc6158772"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -321,15 +318,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--72f735794900da14"
-      ],
-      "events_written": [
-        "content/events/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -392,12 +383,8 @@
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
-  ],
-  "feed_items_written": [
-    "content/feed/2026-09-02-ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft.md"
-  ],
+  "events_written": [],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
