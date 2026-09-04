@@ -1,6 +1,6 @@
 # Crawler Policy site
 
-Astro static publication for [crawlerpolicy.com](https://crawlerpolicy.com). It presents current schema-v2 developments, five intelligence fronts, durable trends, weekly intelligence, source health, and a clearly separated Legacy Archive.
+Astro static publication for [crawlerpolicy.com](https://crawlerpolicy.com). Its home page is a date-led reading product: a selective Daily Brief, persistent developing insights, the broader evidence ledger, five intelligence fronts, and weekly synthesis. The Legacy Archive remains clearly separated.
 
 ## Local development
 
@@ -25,6 +25,8 @@ npm run preview
 - `../content/events` supplies current developments.
 - `../content/legacy-events` supplies archive pages only.
 - `../data/intelligence` supplies completed weekly issues.
+- `../data/daily` supplies the latest dated Daily Brief, including quiet editions.
+- `../data/insight-threads.json` supplies evidence-linked interpretations that persist across daily runs.
 - `../data/trends.json` supplies persistent trend state.
 - `../data/health.json` supplies stage-aware pipeline status.
 - `../sources.yaml` supplies source metadata and coverage.
@@ -33,7 +35,7 @@ Do not merge legacy events into current counts, front pages, trend calculations,
 
 ## Main routes
 
-- `/` — current intelligence overview
+- `/` — latest Daily Brief, developing insights, and recent evidence
 - `/intelligence` and `/intelligence/{week}` — weekly issues
 - `/fronts/{front}` — exactly five canonical fronts
 - `/developments` — current schema-v2 developments

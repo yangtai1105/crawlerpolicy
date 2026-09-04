@@ -615,7 +615,7 @@ git commit -m "feat: track persistent ecosystem insights"
 - Produces: `loadLatestDailyBrief()` and `loadInsightThreads()`
 - Produces: home-page sections `Today's Brief`, `Developing insights`, `Latest from the field`, and `Weekly synthesis`
 
-- [ ] **Step 1: Write failing built-output assertions**
+- [x] **Step 1: Write failing built-output assertions**
 
 ```javascript
 test("home page leads with the dated brief and durable insight context", async () => {
@@ -630,13 +630,13 @@ test("home page leads with the dated brief and durable insight context", async (
 });
 ```
 
-- [ ] **Step 2: Run the site test and verify RED**
+- [x] **Step 2: Run the site test and verify RED**
 
 Run: `cd site && node --test test/feed-publication.test.mjs`
 
 Expected: failure because the dated-edition and developing-insight sections are absent.
 
-- [ ] **Step 3: Implement the date-led reading hierarchy**
+- [x] **Step 3: Implement the date-led reading hierarchy**
 
 Use the existing Field Ledger palette and typography. The page's signature element becomes a vertical “evidence seam” connecting each Daily Brief item to its status and source; it encodes provenance rather than adding decoration.
 
@@ -660,13 +660,13 @@ Use the existing Field Ledger palette and typography. The page's signature eleme
 
 Daily Brief item order must come from the edition JSON, not from a 48-hour heuristic. Older feed items remain under “Latest from the field.” Backfilled content never becomes today's lead.
 
-- [ ] **Step 4: Run Astro checks and built-output tests and verify GREEN**
+- [x] **Step 4: Run Astro checks and built-output tests and verify GREEN**
 
 Run: `cd site && npm run check && node --test test/feed-publication.test.mjs`
 
 Expected: zero Astro errors and all Node tests pass.
 
-- [ ] **Step 5: Commit the reading experience**
+- [x] **Step 5: Commit the reading experience**
 
 ```bash
 git add site/src/lib/daily.ts site/src/lib/insight-threads.ts site/src/components/InsightThreadCard.astro site/src/pages/index.astro site/src/components/FeedCard.astro site/src/styles/global.css site/test
@@ -686,7 +686,7 @@ git commit -m "feat: present daily brief and developing insights"
 - Documents: `XAI_API_KEY`, cost controls, shadow mode, the seven-window promotion criterion, local dry runs, and GitHub Secrets setup
 - Verifies: all Python tests, lint, Astro type checks, production build, and desktop/mobile visual behavior
 
-- [ ] **Step 1: Document exact setup and operating commands**
+- [x] **Step 1: Document exact setup and operating commands**
 
 ```bash
 export XAI_API_KEY="xai-your-key"
@@ -697,29 +697,29 @@ uv run python -m pipeline.check
 
 Explain that the xAI sources initially save candidates in shadow mode and how to inspect health `discovery` metrics before setting their `shadow` fields to `false` after seven acceptable windows.
 
-- [ ] **Step 2: Run the complete Python verification suite**
+- [x] **Step 2: Run the complete Python verification suite**
 
 Run: `uv run pytest -q && uv run ruff check pipeline tests`
 
 Expected: every Python test passes and Ruff reports no violations.
 
-- [ ] **Step 3: Run the complete site verification suite**
+- [x] **Step 3: Run the complete site verification suite**
 
 Run: `cd site && npm run check && npm run build && node --test test/*.test.mjs`
 
 Expected: Astro reports zero errors, the production build succeeds, and all Node tests pass.
 
-- [ ] **Step 4: Run a credential-free production dry run**
+- [x] **Step 4: Run a credential-free production dry run**
 
 Run: `env -u XAI_API_KEY uv run python -m pipeline.check --dry-run`
 
 Expected: direct sources still run, X discovery is reported unavailable/degraded, no files are written, and the process is not critical solely because xAI is missing.
 
-- [ ] **Step 5: Inspect desktop and mobile renders**
+- [x] **Step 5: Inspect desktop and mobile renders**
 
 Start the site with `cd site && npm run dev -- --host 127.0.0.1`, then inspect `/` at approximately 1440×1000 and 390×844. Verify hierarchy, evidence-seam alignment, readable line length, focus visibility, status text, overflow, quiet state, and reduced-motion behavior.
 
-- [ ] **Step 6: Mark completed checklist items and commit documentation**
+- [x] **Step 6: Mark completed checklist items and commit documentation**
 
 ```bash
 git add README.md site/README.md docs/superpowers/plans/2026-09-03-daily-x-intelligence.md

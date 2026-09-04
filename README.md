@@ -24,19 +24,23 @@ Only a `verified` and `material` item can enter `content/events/`, move a durabl
 ## How it works
 
 ```text
-configured direct sources
-  -> fetch and normalize
+configured direct sources          xAI X Search (optional, shadow first)
+  -> fetch and normalize             -> five narrow 36-hour searches
+  -> direct evidence                 -> validated X candidate evidence
+                  -> combined evidence queue
   -> persist immutable evidence before analysis
   -> enforce the 2026-08-30 publication cutoff
   -> Gemini 3.7 structured analysis
   -> deterministic publication status
   -> content/feed daily item
+  -> dated data/daily edition (zero to five items)
+  -> persistent data/insight-threads.json
   -> optional verified development
   -> trends and completed weekly intelligence
   -> Astro build and Vercel deployment
 ```
 
-Ordinary HTML, RSS, GitHub, IETF, and browser-rendered sources are fetched without an LLM. Gemini receives the already-fetched evidence and returns structured analysis. If authentication, quota, or billing fails, the provider circuit stops additional model calls; fetched evidence remains pending and can be replayed on a later run.
+Ordinary HTML, RSS, GitHub, IETF, and browser-rendered sources are fetched without an LLM. xAI X Search is a separate real-time discovery lane: it finds narrowly scoped X posts, records their attribution and linked URLs, and never replaces direct evidence. Gemini receives the already-fetched evidence and returns structured analysis. If authentication, quota, or billing fails, the affected provider stops additional model calls; fetched evidence remains pending and can be replayed on a later run.
 
 The daily publication cutoff is `2026-08-30T00:00:00Z`. Earlier underlying items are never presented as current news. A separate, explicitly labeled backfill can publish preserved direct-source evidence with its original date and processing provenance. The first successful fetch of a stable HTML source establishes a baseline instead of inventing a change.
 
@@ -52,6 +56,8 @@ Google Search grounding is not part of the active publication pipeline. `gemini_
 - `content/legacy-events/` — preserved schema-v1 records, excluded from current intelligence
 - `content/snapshots/` and `content/raw/` — source snapshots and raw discovery corpus
 - `data/health.json` — stage-aware pipeline health
+- `data/daily/` — one dated Daily Brief edition per full run, including quiet days
+- `data/insight-threads.json` — persistent interpretations assembled from related feed evidence
 - `data/trends.json` — durable trend state
 - `data/intelligence/` — completed weekly issues
 - `site/` — Astro static publication
@@ -60,15 +66,19 @@ Older `/reading` dispatches and schema-v1 events remain available through the Le
 
 ## Required APIs and secrets
 
-The analysis layer uses one model provider:
+The workflow uses two model providers with separate jobs:
 
 - `GEMINI_API_KEY` — required for daily relevance, four-layer analysis, state of play, and weekly synthesis.
 - `GEMINI_ANALYSIS_MODEL` — optional; defaults to `gemini-3.7-flash`.
+- `XAI_API_KEY` — optional; enables the X discovery lane. Without it, direct-source publication continues and discovery health is marked unavailable.
+- `XAI_DISCOVERY_MODEL` — optional; defaults to `grok-4.6`.
+- `XAI_MAX_DAILY_SEARCH_CALLS` — optional hard per-run cap; defaults to `6`.
+- `XAI_MONTHLY_SOFT_BUDGET_USD` — optional operating target; defaults to `10`. Run health records successful search calls and estimated tool cost for review.
 - `GITHUB_TOKEN` — supplied automatically in GitHub Actions and used for GitHub source fetching and commits.
 - `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_EMAIL`, and `CLOUDFLARE_CRAWLER_API_KEY` — required only for enabled `cf_browser_run` sources.
 - `PUBLICATION_CUTOFF` — optional ISO timestamp; production pins it to `2026-08-30T00:00:00Z`.
 
-An Anthropic API key is not required. The legacy `ALERT_EMAILS` and `RESEND_API_KEY` workflow values are reserved for future notifications; the current pipeline does not send email.
+An Anthropic API key is not required. xAI discovers timely X leads; Gemini remains the editorial analysis model. The legacy `ALERT_EMAILS` and `RESEND_API_KEY` workflow values are reserved for future notifications; the current pipeline does not send email.
 
 ## Local development
 
@@ -80,8 +90,12 @@ uv run pytest -q
 # Validates a source path without writing publication files.
 GEMINI_API_KEY=... uv run python -m pipeline.check --dry-run --only gptbot
 
+# Exercises one X discovery query. It saves no public item while shadow is true.
+XAI_API_KEY=... GEMINI_API_KEY=... \
+  uv run python -m pipeline.check --only x-access-discovery
+
 # Runs all enabled sources and writes replayable content.
-GEMINI_API_KEY=... uv run python -m pipeline.check
+XAI_API_KEY=... GEMINI_API_KEY=... uv run python -m pipeline.check
 
 # Builds a weekly issue from a completed verified window.
 GEMINI_API_KEY=... uv run python -m pipeline.weekly_intelligence
@@ -105,7 +119,9 @@ npm run build
 npm run dev
 ```
 
-The scheduled workflows are `.github/workflows/daily-check.yml` and `.github/workflows/weekly-reading.yml`. Daily Check runs at 08:00 UTC, commits newly fetched evidence and publication records, and lets Vercel deploy the static site from `main`. Weekly Intelligence runs on Mondays at 13:00 UTC and refuses critical or stale evidence windows.
+The scheduled workflows are `.github/workflows/daily-check.yml` and `.github/workflows/weekly-reading.yml`. Daily Check runs at 08:00 UTC, commits newly fetched evidence, the dated edition, insight threads, and publication records, then lets Vercel deploy the static site from `main`. Weekly Intelligence runs on Mondays at 13:00 UTC and refuses critical or stale evidence windows.
+
+Add `GEMINI_API_KEY` and `XAI_API_KEY` in **GitHub repository → Settings → Secrets and variables → Actions**. The five `xai_search` sources begin with `shadow: true`: candidates are retained as evidence but cannot publish. After seven daily windows, inspect `data/health.json` under `discovery` for candidate yield, completed searches, failures, and estimated cost. Change individual source entries to `shadow: false` only when their results are consistently unique, in scope, and trustworthy; a live X-only item still publishes only as `signal` and cannot update verified developments or weekly conclusions.
 
 ## Failure behavior
 
