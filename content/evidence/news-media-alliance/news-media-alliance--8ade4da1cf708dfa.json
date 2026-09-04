@@ -1,0 +1,17 @@
+{
+  "evidence_id": "news-media-alliance--8ade4da1cf708dfa",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/google-ad-tech-remedies-ruling/",
+  "published_at": "2026-09-02T20:57:30Z",
+  "detected_at": "2026-09-03T12:37:50.015970Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--8ade4da1cf708dfa.json",
+  "content_hash": "sha256:f2cfaa029f2b91a0ffb087052307d533a341b416d68fd0c3f18ddaffffb0e835",
+  "external_id": "https://www.newsmediaalliance.org/?p=18612",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "News/Media Alliance Statement on Google Ad Tech Remedies Ruling",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"1707\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2026/05/GettyImages-2230622982-scaled.jpg\" width=\"2560\" /></p>Judge Leonie Brinkema announced a remedies ruling requiring Google to change its ad-tech business practices, while not forcing it to sell its AdX advertising exchange, following an earlier ruling that Google acted illegally to acquire and maintain monopoly power in online advertising.",
+  "previous_content": "",
+  "unified_diff": ""
+}

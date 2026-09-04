@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-09-01T13:08:58.830967Z",
-  "last_fully_successful_at": "2026-09-01T13:08:58.830967Z",
+  "last_attempted_at": "2026-09-03T12:37:50.015970Z",
+  "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 34,
     "completed": 34,
@@ -150,9 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--c65f2cf729640181"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -173,7 +171,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--11270b9a733175f7"
+        "uk-cma--61408a0330678cfe",
+        "uk-cma--f3a8f0726919d5cd",
+        "uk-cma--6e9772640e29c9c1"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -205,10 +205,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--3af16d6a4673737d",
-        "eu-commission-digital--0402cdb98d813eb5",
-        "eu-commission-digital--202a9d07210adab0",
-        "eu-commission-digital--4c5cb06e9dbbd8f4"
+        "eu-commission-digital--5e1e806ef6b47747"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -230,7 +227,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "news-media-alliance--3d3e3001f4aa8084"
+        "news-media-alliance--8ade4da1cf708dfa"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -251,15 +248,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--9198d961ca29cac4"
-      ],
-      "events_written": [
-        "content/events/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -392,12 +383,8 @@
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
-  ],
-  "feed_items_written": [
-    "content/feed/2026-08-31-web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo.md"
-  ],
+  "events_written": [],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",

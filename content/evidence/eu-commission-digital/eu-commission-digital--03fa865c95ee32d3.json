@@ -1,0 +1,17 @@
+{
+  "evidence_id": "eu-commission-digital--03fa865c95ee32d3",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1778",
+  "published_at": "2026-09-01T22:00:00Z",
+  "detected_at": "2026-09-02T12:35:00.275423Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--03fa865c95ee32d3.json",
+  "content_hash": "sha256:3a15449f9160ecd724025acf221bb58de99ab9e1a3030ad941da508869363baf",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1778",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission approves German capacity mechanism of up to €35 billion to secure electricity supply",
+  "content": "European Commission Press release Brussels, 02 Sep 2026 The European Commission has approved, under EU State aid rules, a capacity mechanism for Germany available from 2031. This measure, with an estimated cost between €15.6 billion and €35.2 billion, aims to ensure sufficient capacity to produce, store or flexibly consume electricity, so that electricity production can consistently meet expected demand.",
+  "previous_content": "",
+  "unified_diff": ""
+}
