@@ -62,6 +62,7 @@ const feed = defineCollection({
     importance: z.number().min(0).max(1),
     confidence: z.enum(["low", "medium", "high"]),
     evidence_ids: z.array(z.string()).min(1),
+    trend_signals: z.array(z.string()).default([]),
     development_slug: z.string().optional(),
     backfilled: z.boolean().default(false),
     processed_at: z.coerce.date().optional(),

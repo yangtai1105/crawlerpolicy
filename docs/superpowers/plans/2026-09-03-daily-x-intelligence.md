@@ -508,7 +508,7 @@ git commit -m "feat: publish dated daily brief editions"
 - Produces: `Config.insight_threads_file`
 - Consumes: feed `status`, `development_slug`, `trend_signals`, Insight body section, and `detected_at`
 
-- [ ] **Step 1: Write failing persistence and evidence-gating tests**
+- [x] **Step 1: Write failing persistence and evidence-gating tests**
 
 ```python
 def test_signal_adds_context_without_verified_evidence(tmp_path):
@@ -551,13 +551,13 @@ def test_verified_item_adds_durable_thread_evidence(tmp_path):
     assert registry.threads[0].confidence == "high"
 ```
 
-- [ ] **Step 2: Run insight-thread tests and verify RED**
+- [x] **Step 2: Run insight-thread tests and verify RED**
 
 Run: `uv run pytest tests/test_insight_threads.py tests/test_feed_writer.py -q`
 
 Expected: failure because trend signals are not persisted and the registry does not exist.
 
-- [ ] **Step 3: Persist trend signals and derive stable threads**
+- [x] **Step 3: Persist trend signals and derive stable threads**
 
 ```python
 class InsightThread(BaseModel):
@@ -582,13 +582,13 @@ def confidence_for_thread(verified_count: int, reported_count: int) -> str:
 
 Normalize each trend signal to a stable lowercase hyphenated key. Use the newest item's Insight paragraph as the current thesis, deduplicate references, and update timestamps only when a new feed slug is attached. Reprocessing the same feed set must leave the JSON byte-stable.
 
-- [ ] **Step 4: Run insight and feed tests and verify GREEN**
+- [x] **Step 4: Run insight and feed tests and verify GREEN**
 
 Run: `uv run pytest tests/test_insight_threads.py tests/test_feed_writer.py -q`
 
 Expected: all focused tests pass.
 
-- [ ] **Step 5: Commit persistent insight threads**
+- [x] **Step 5: Commit persistent insight threads**
 
 ```bash
 git add pipeline/insight_threads.py pipeline/feed_writer.py pipeline/config.py pipeline/check.py site/src/content.config.ts tests/test_insight_threads.py tests/test_feed_writer.py

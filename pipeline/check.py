@@ -42,6 +42,7 @@ from pipeline.health import (
     build_run_health,
     exit_code_for_health,
 )
+from pipeline.insight_threads import build_insight_threads, save_insight_threads
 from pipeline.model_provider import (
     GeminiStructuredModel,
     ProviderCircuit,
@@ -326,6 +327,21 @@ async def run_check(
             "path": None,
         }
 
+    insight_threads_payload: dict[str, object]
+    if only is None:
+        insight_registry = build_insight_threads(cfg.feed_dir, cfg.events_dir)
+        if not dry_run:
+            save_insight_threads(cfg.insight_threads_file, insight_registry)
+        insight_threads_payload = {
+            "thread_count": len(insight_registry.threads),
+            "path": _relative_path(cfg.insight_threads_file, cfg.repo_root),
+        }
+    else:
+        insight_threads_payload = {
+            "thread_count": 0,
+            "path": None,
+        }
+
     previous_success = _load_last_full_success(cfg.data_dir / "health.json")
     health = build_run_health(
         sources=sources,
@@ -359,6 +375,7 @@ async def run_check(
     }
     payload["derived_errors"] = derived_errors
     payload["daily_brief"] = daily_brief_payload
+    payload["insight_threads"] = insight_threads_payload
     x_sources = [source for source in sources if source.type is SourceType.XAI_SEARCH]
     x_completed = sum(statuses[source.slug].completed for source in x_sources)
     x_failed = sum(

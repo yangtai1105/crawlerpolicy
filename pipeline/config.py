@@ -52,6 +52,10 @@ class Config:
         return self.data_dir / "trends.json"
 
     @property
+    def insight_threads_file(self) -> Path:
+        return self.data_dir / "insight-threads.json"
+
+    @property
     def state_dir(self) -> Path:
         return self.repo_root / "state"
 

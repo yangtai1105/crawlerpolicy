@@ -295,13 +295,15 @@ async def test_full_check_writes_daily_brief_for_detection_date(repo):
     current = _item("daily", datetime(2026, 9, 2, 23, tzinfo=UTC))
     now = datetime(2026, 9, 3, 8, tzinfo=UTC)
 
+    analysis = _material_analysis()
+    analysis.trend_signals = ["verifiable-agent-identity"]
     health = await run_check(
         repo_root=repo,
         now=now,
         fetch_dispatch=AsyncMock(
             return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
         ),
-        analyze_change=AsyncMock(return_value=_material_analysis()),
+        analyze_change=AsyncMock(return_value=analysis),
     )
 
     edition_path = repo / "data/daily/2026-09-03.json"
@@ -314,6 +316,13 @@ async def test_full_check_writes_daily_brief_for_detection_date(repo):
         "edition_date": "2026-09-03",
         "item_count": 1,
         "path": "data/daily/2026-09-03.json",
+    }
+    insight_path = repo / "data/insight-threads.json"
+    insights = json.loads(insight_path.read_text())
+    assert insights["threads"][0]["key"] == "verifiable-agent-identity"
+    assert health["insight_threads"] == {
+        "thread_count": 1,
+        "path": "data/insight-threads.json",
     }
 
 

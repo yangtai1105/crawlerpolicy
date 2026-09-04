@@ -95,6 +95,7 @@ def _compose(
         f"importance: {analysis.importance:.2f}\n"
         f"confidence: {analysis.confidence}\n"
         f"evidence_ids:\n{_yaml_list(evidence_ids, quoted=True)}"
+        f"trend_signals:\n{_yaml_list(analysis.trend_signals)}"
     )
     if development_slug:
         frontmatter += f"development_slug: {development_slug}\n"

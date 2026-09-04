@@ -63,6 +63,7 @@ def test_feed_writer_persists_four_editorial_layers_and_evidence(tmp_path, sourc
     assert frontmatter["status"] == "verified"
     assert frontmatter["evidence_ids"] == ["cloudflare--abc123"]
     assert frontmatter["development_slug"] == "signed-agents-become-enforceable"
+    assert frontmatter["trend_signals"] == ["verifiable-agent-identity"]
     assert "## Summary\n\nCloudflare documented" in text
     assert "## Insight\n\nIdentity is becoming infrastructure." in text
     assert "## Implication\n\nSites can distinguish accountable clients." in text
