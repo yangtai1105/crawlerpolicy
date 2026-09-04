@@ -4,6 +4,7 @@ from __future__ import annotations
 from dataclasses import dataclass, field
 from datetime import datetime
 from enum import StrEnum
+from typing import Any
 
 
 class ResultMode(StrEnum):
@@ -22,6 +23,7 @@ class CandidateItem:
     url: str | None
     summary: str
     body: str
+    metadata: dict[str, Any] = field(default_factory=dict)
 
 
 @dataclass
@@ -30,3 +32,4 @@ class FetchResult:
     normalized_content: str | None = None
     raw_ext: str = "html"
     items: list[CandidateItem] = field(default_factory=list)
+    metadata: dict[str, Any] = field(default_factory=dict)

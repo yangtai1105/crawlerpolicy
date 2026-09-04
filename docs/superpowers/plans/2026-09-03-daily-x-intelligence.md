@@ -195,7 +195,7 @@ git commit -m "feat: configure x discovery sources"
 - Produces: `CandidateItem.metadata` containing `author_handle`, `post_url`, `linked_urls`, and provider citations
 - Produces: `FetchResult.metadata` containing `x_search_calls`, `estimated_tool_cost_usd`, and `model`
 
-- [ ] **Step 1: Write failing parser and HTTP-boundary tests**
+- [x] **Step 1: Write failing parser and HTTP-boundary tests**
 
 ```python
 @respx.mock
@@ -232,13 +232,13 @@ async def test_xai_search_rejects_post_outside_requested_window(x_source):
 
 The response fixture must mirror a real Responses API result with `output`, `citations`, `usage`, and `server_side_tool_usage` fields.
 
-- [ ] **Step 2: Run the fetcher tests and verify RED**
+- [x] **Step 2: Run the fetcher tests and verify RED**
 
 Run: `uv run pytest tests/test_fetchers/test_xai_search.py -q`
 
 Expected: collection failure because `pipeline.fetchers.xai_search` does not exist.
 
-- [ ] **Step 3: Implement validated candidate parsing and the API call**
+- [x] **Step 3: Implement validated candidate parsing and the API call**
 
 ```python
 class XSearchCandidate(BaseModel):
@@ -282,13 +282,13 @@ async def fetch_xai_search(
 
 The request payload must set `tools: [{"type": "x_search", "from_date": "2026-09-02", "to_date": "2026-09-03"}]` for the example window, derive those dates from the runtime window in production, add `allowed_x_handles` only when configured, cap `max_turns` at two, and demand one JSON object matching `XSearchEnvelope`.
 
-- [ ] **Step 4: Run fetcher tests and verify GREEN**
+- [x] **Step 4: Run fetcher tests and verify GREEN**
 
 Run: `uv run pytest tests/test_fetchers/test_xai_search.py -q`
 
 Expected: all xAI fetcher tests pass without a real network call.
 
-- [ ] **Step 5: Commit the fetcher**
+- [x] **Step 5: Commit the fetcher**
 
 ```bash
 git add pipeline/fetchers/base.py pipeline/fetchers/xai_search.py tests/test_fetchers/test_xai_search.py
