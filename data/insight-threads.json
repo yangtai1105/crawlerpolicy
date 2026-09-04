@@ -2,6 +2,21 @@
   "schema_version": 1,
   "threads": [
     {
+      "key": "agent-authentication",
+      "title": "Agent Authentication",
+      "thesis": "Working group adoption signals formal consensus within the IETF that HTTP Message Signatures will serve as the baseline technical mechanism for verifying bot identity, moving the ecosystem beyond basic User-Agent heuristics and IP allowlists.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-02T12:35:00.275423Z",
+      "last_updated_at": "2026-09-02T12:35:00.275423Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ]
+    },
+    {
       "key": "agent-protocol-standardization",
       "title": "Agent Protocol Standardization",
       "thesis": "Establishing versioned, stable releases for model context protocols provides a dependable foundation for agent tool-use and structured context retrieval.",
@@ -186,6 +201,21 @@
       ]
     },
     {
+      "key": "cryptographic-bot-verification",
+      "title": "Cryptographic Bot Verification",
+      "thesis": "Working group adoption signals formal consensus within the IETF that HTTP Message Signatures will serve as the baseline technical mechanism for verifying bot identity, moving the ecosystem beyond basic User-Agent heuristics and IP allowlists.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-02T12:35:00.275423Z",
+      "last_updated_at": "2026-09-02T12:35:00.275423Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ]
+    },
+    {
       "key": "dsa-enforcement",
       "title": "DSA Enforcement",
       "thesis": "Categorizing an AI conversational system as a search engine under the DSA formally bridges generative AI tools and traditional web search regulations, subjecting AI-driven retrieval to systemic risk assessments, transparency requirements, and algorithmic oversight.",
@@ -303,6 +333,21 @@
       ],
       "verified_development_slugs": [
         "web-bot-auth-fixes-signature-verification-bypass-allowing-request-replay"
+      ]
+    },
+    {
+      "key": "ietf-standardization",
+      "title": "Ietf Standardization",
+      "thesis": "Working group adoption signals formal consensus within the IETF that HTTP Message Signatures will serve as the baseline technical mechanism for verifying bot identity, moving the ecosystem beyond basic User-Agent heuristics and IP allowlists.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-02T12:35:00.275423Z",
+      "last_updated_at": "2026-09-02T12:35:00.275423Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
       ]
     },
     {
