@@ -15,6 +15,7 @@ from pipeline import raw_log
 from pipeline.analyzer import AnalysisResult
 from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
+from pipeline.daily_brief import build_daily_brief, save_daily_brief
 from pipeline.differ import compute_diff
 from pipeline.event_writer import event_slug, write_event
 from pipeline.evidence import (
@@ -301,6 +302,30 @@ async def run_check(
             log.exception("state_of_play failed")
             derived_errors.append(f"state_of_play: {error}")
 
+    daily_brief_payload: dict[str, object]
+    if only is None:
+        brief = build_daily_brief(
+            feed_dir=cfg.feed_dir,
+            edition_date=now.date(),
+            generated_at=now,
+        )
+        brief_path = cfg.daily_dir / f"{now.date().isoformat()}.json"
+        if not dry_run:
+            save_daily_brief(brief_path, brief)
+        daily_brief_payload = {
+            "status": brief.status,
+            "edition_date": brief.edition_date.isoformat(),
+            "item_count": len(brief.items),
+            "path": _relative_path(brief_path, cfg.repo_root),
+        }
+    else:
+        daily_brief_payload = {
+            "status": "skipped_partial",
+            "edition_date": now.date().isoformat(),
+            "item_count": 0,
+            "path": None,
+        }
+
     previous_success = _load_last_full_success(cfg.data_dir / "health.json")
     health = build_run_health(
         sources=sources,
@@ -333,6 +358,7 @@ async def run_check(
         "error": provider_error,
     }
     payload["derived_errors"] = derived_errors
+    payload["daily_brief"] = daily_brief_payload
     x_sources = [source for source in sources if source.type is SourceType.XAI_SEARCH]
     x_completed = sum(statuses[source.slug].completed for source in x_sources)
     x_failed = sum(

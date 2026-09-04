@@ -408,7 +408,7 @@ git commit -m "feat: integrate optional x discovery lane"
 - Produces: `Config.daily_dir`
 - Consumes: feed frontmatter fields `slug`, `detected_at`, `published_at`, `importance`, `status`, and `backfilled`
 
-- [ ] **Step 1: Write failing daily-selection tests**
+- [x] **Step 1: Write failing daily-selection tests**
 
 ```python
 def test_daily_brief_uses_detection_date_and_caps_at_five(tmp_path):
@@ -437,13 +437,13 @@ def test_daily_brief_writes_truthful_quiet_edition(tmp_path):
     assert brief.note == "No material ecosystem developments were published in this daily window."
 ```
 
-- [ ] **Step 2: Run daily-brief tests and verify RED**
+- [x] **Step 2: Run daily-brief tests and verify RED**
 
 Run: `uv run pytest tests/test_daily_brief.py -q`
 
 Expected: collection failure because `pipeline.daily_brief` does not exist.
 
-- [ ] **Step 3: Implement the deterministic edition builder**
+- [x] **Step 3: Implement the deterministic edition builder**
 
 ```python
 class DailyBriefItem(BaseModel):
@@ -476,13 +476,13 @@ def build_daily_brief(*, feed_dir: Path, edition_date: date, generated_at: datet
 
 Call and atomically save the edition after source processing, including degraded runs. A rerun replaces only the same date's derived JSON and remains idempotent.
 
-- [ ] **Step 4: Run daily-brief and orchestration tests and verify GREEN**
+- [x] **Step 4: Run daily-brief and orchestration tests and verify GREEN**
 
 Run: `uv run pytest tests/test_daily_brief.py tests/test_check.py -q`
 
 Expected: all focused tests pass and a run writes `data/daily/YYYY-MM-DD.json`.
 
-- [ ] **Step 5: Commit daily editions**
+- [x] **Step 5: Commit daily editions**
 
 ```bash
 git add pipeline/daily_brief.py pipeline/config.py pipeline/check.py tests/test_daily_brief.py tests/test_check.py

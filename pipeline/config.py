@@ -44,6 +44,10 @@ class Config:
         return self.data_dir / "intelligence"
 
     @property
+    def daily_dir(self) -> Path:
+        return self.data_dir / "daily"
+
+    @property
     def trends_file(self) -> Path:
         return self.data_dir / "trends.json"
 
