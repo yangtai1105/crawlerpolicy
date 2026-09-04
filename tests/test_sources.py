@@ -149,6 +149,62 @@ def test_source_can_be_disabled_without_removing_its_registry_entry():
     assert source.enabled is False
 
 
+def test_xai_search_source_accepts_bounded_handle_allowlist():
+    source = Source(
+        slug="x-access",
+        type=SourceType.XAI_SEARCH,
+        query="crawler policy changes",
+        x_handles=["Cloudflare", "GoogleSearchC"],
+        lookback_hours=36,
+        shadow=True,
+        display_name="X access signals",
+        default_tracks=[Track.CRAWLER_CONTROLS],
+        tier=SourceTier.COMMENTARY,
+        role=SourceRole.REPORTING,
+    )
+
+    assert source.x_handles == ["Cloudflare", "GoogleSearchC"]
+    assert source.lookback_hours == 36
+    assert source.shadow is True
+
+
+def test_xai_search_requires_query_and_commentary_tier():
+    with pytest.raises(ValidationError):
+        Source(
+            slug="x-access",
+            type=SourceType.XAI_SEARCH,
+            display_name="X access signals",
+            default_tracks=[Track.CRAWLER_CONTROLS],
+            tier=SourceTier.COMMENTARY,
+            role=SourceRole.REPORTING,
+        )
+
+    with pytest.raises(ValidationError):
+        Source(
+            slug="x-access",
+            type=SourceType.XAI_SEARCH,
+            display_name="X access signals",
+            default_tracks=[Track.CRAWLER_CONTROLS],
+            tier=SourceTier.PRIMARY,
+            role=SourceRole.REPORTING,
+            query="crawler policy",
+        )
+
+
+def test_xai_search_rejects_more_than_twenty_handles():
+    with pytest.raises(ValidationError):
+        Source(
+            slug="x-access",
+            type=SourceType.XAI_SEARCH,
+            display_name="X access signals",
+            default_tracks=[Track.CRAWLER_CONTROLS],
+            tier=SourceTier.COMMENTARY,
+            role=SourceRole.REPORTING,
+            query="crawler policy",
+            x_handles=[f"account{index}" for index in range(21)],
+        )
+
+
 def test_repository_sources_use_track_tier_and_role_schema():
     sources = load_sources(Path("sources.yaml"))
 

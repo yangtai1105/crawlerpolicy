@@ -39,7 +39,7 @@
 - Produces: `Config.xai_api_key`, `Config.xai_discovery_model`, `Config.xai_max_daily_search_calls`, `Config.xai_monthly_soft_budget_usd`
 - Consumes: existing `Source.default_tracks`, `SourceTier.COMMENTARY`, and `SourceRole.REPORTING`
 
-- [ ] **Step 1: Write failing configuration and source-schema tests**
+- [x] **Step 1: Write failing configuration and source-schema tests**
 
 ```python
 def test_config_reads_xai_discovery_limits(monkeypatch, tmp_path):
@@ -70,13 +70,13 @@ def test_xai_search_requires_query_and_commentary_tier():
         )
 ```
 
-- [ ] **Step 2: Run the focused tests and verify RED**
+- [x] **Step 2: Run the focused tests and verify RED**
 
 Run: `uv run pytest tests/test_config.py tests/test_sources.py -q`
 
 Expected: failures because `XAI_SEARCH` and the xAI configuration fields do not exist.
 
-- [ ] **Step 3: Add the minimal schema and environment parsing**
+- [x] **Step 3: Add the minimal schema and environment parsing**
 
 ```python
 class SourceType(StrEnum):
@@ -167,13 +167,13 @@ Add five enabled, optional `xai_search` entries to `sources.yaml`, one per publi
   role: reporting
 ```
 
-- [ ] **Step 4: Run focused tests and verify GREEN**
+- [x] **Step 4: Run focused tests and verify GREEN**
 
 Run: `uv run pytest tests/test_config.py tests/test_sources.py -q`
 
 Expected: all focused tests pass.
 
-- [ ] **Step 5: Commit the configuration boundary**
+- [x] **Step 5: Commit the configuration boundary**
 
 ```bash
 git add pipeline/config.py pipeline/sources.py sources.yaml tests/test_config.py tests/test_sources.py

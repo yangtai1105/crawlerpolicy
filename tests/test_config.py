@@ -41,3 +41,33 @@ def test_config_uses_publication_defaults(monkeypatch, tmp_path):
     assert cfg.gemini_analysis_model == "gemini-3.7-flash"
     assert cfg.publication_cutoff == datetime(2026, 8, 30, tzinfo=UTC)
     assert cfg.feed_dir == tmp_path / "content" / "feed"
+
+
+def test_config_reads_xai_discovery_limits(monkeypatch, tmp_path):
+    monkeypatch.setenv("REPO_ROOT", str(tmp_path))
+    monkeypatch.setenv("XAI_API_KEY", "xai-test")
+    monkeypatch.setenv("XAI_DISCOVERY_MODEL", "grok-4.6")
+    monkeypatch.setenv("XAI_MAX_DAILY_SEARCH_CALLS", "4")
+    monkeypatch.setenv("XAI_MONTHLY_SOFT_BUDGET_USD", "7.5")
+
+    cfg = Config.from_env()
+
+    assert cfg.xai_api_key == "xai-test"
+    assert cfg.xai_discovery_model == "grok-4.6"
+    assert cfg.xai_max_daily_search_calls == 4
+    assert cfg.xai_monthly_soft_budget_usd == 7.5
+
+
+def test_config_uses_xai_discovery_defaults(monkeypatch, tmp_path):
+    monkeypatch.setenv("REPO_ROOT", str(tmp_path))
+    monkeypatch.delenv("XAI_API_KEY", raising=False)
+    monkeypatch.delenv("XAI_DISCOVERY_MODEL", raising=False)
+    monkeypatch.delenv("XAI_MAX_DAILY_SEARCH_CALLS", raising=False)
+    monkeypatch.delenv("XAI_MONTHLY_SOFT_BUDGET_USD", raising=False)
+
+    cfg = Config.from_env()
+
+    assert cfg.xai_api_key == ""
+    assert cfg.xai_discovery_model == "grok-4.6"
+    assert cfg.xai_max_daily_search_calls == 6
+    assert cfg.xai_monthly_soft_budget_usd == 10.0

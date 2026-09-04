@@ -23,6 +23,7 @@ class SourceType(StrEnum):
     GITHUB_REPO = "github_repo"
     IETF_DRAFT = "ietf_draft"
     GEMINI_SEARCH = "gemini_search"
+    XAI_SEARCH = "xai_search"
     CF_BROWSER_RUN = "cf_browser_run"
 
 
@@ -60,6 +61,11 @@ class Source(BaseModel):
     query: str | None = None
     lookback_days: int | None = None
 
+    # xai_search
+    x_handles: list[str] = Field(default_factory=list, max_length=20)
+    lookback_hours: int = Field(default=36, ge=1, le=72)
+    shadow: bool = True
+
     # Optional analysis-model override per source.
     model: str | None = None
 
@@ -86,6 +92,11 @@ class Source(BaseModel):
             raise ValueError(f"source {self.slug}: ietf_draft requires `draft_name`")
         if self.type == SourceType.GEMINI_SEARCH and not self.query:
             raise ValueError(f"source {self.slug}: gemini_search requires `query`")
+        if self.type == SourceType.XAI_SEARCH:
+            if not self.query:
+                raise ValueError(f"source {self.slug}: xai_search requires `query`")
+            if self.tier is not SourceTier.COMMENTARY:
+                raise ValueError(f"source {self.slug}: xai_search must use commentary tier")
         return self
 
 

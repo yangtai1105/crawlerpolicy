@@ -13,6 +13,10 @@ class Config:
     gemini_api_key: str
     gemini_analysis_model: str
     publication_cutoff: datetime
+    xai_api_key: str = ""
+    xai_discovery_model: str = "grok-4.6"
+    xai_max_daily_search_calls: int = 6
+    xai_monthly_soft_budget_usd: float = 10.0
     alert_emails: list[str] = field(default_factory=list)
 
     @property
@@ -73,5 +77,13 @@ class Config:
                 "GEMINI_ANALYSIS_MODEL", "gemini-3.7-flash"
             ),
             publication_cutoff=cutoff.astimezone(UTC),
+            xai_api_key=os.environ.get("XAI_API_KEY", ""),
+            xai_discovery_model=os.environ.get("XAI_DISCOVERY_MODEL", "grok-4.6"),
+            xai_max_daily_search_calls=int(
+                os.environ.get("XAI_MAX_DAILY_SEARCH_CALLS", "6")
+            ),
+            xai_monthly_soft_budget_usd=float(
+                os.environ.get("XAI_MONTHLY_SOFT_BUDGET_USD", "10")
+            ),
             alert_emails=emails,
         )

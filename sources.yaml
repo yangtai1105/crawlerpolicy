@@ -393,3 +393,72 @@
   default_tracks: [agentic-web, standards-protocols]
   tier: commentary
   role: reporting
+
+# ─── Real-time X discovery (shadow mode) ───
+# These sources use the official xAI X Search tool. They are discovery-only:
+# X-only candidates remain signals and never promote into durable developments.
+
+- slug: x-access-discovery
+  type: xai_search
+  query: >-
+    Find consequential changes to AI crawler policies, robots directives,
+    AI search visibility, citations, referrals, or web indexing.
+  x_handles: [Cloudflare, GoogleSearchC, OpenAI, AnthropicAI, perplexity_ai, CommonCrawl, sengineland]
+  lookback_hours: 36
+  shadow: true
+  display_name: X — Access & Discovery
+  default_tracks: [crawler-controls, search-discovery]
+  tier: commentary
+  role: reporting
+
+- slug: x-agents-discovery
+  type: xai_search
+  query: >-
+    Find consequential changes to AI agent traffic, Web Bot Auth,
+    authentication, delegation, MCP, or agent identity standards.
+  x_handles: [Cloudflare, IETF, W3C, OpenAI, AnthropicAI, arstechnica]
+  lookback_hours: 36
+  shadow: true
+  display_name: X — Agents & Identity
+  default_tracks: [agentic-web, standards-protocols]
+  tier: commentary
+  role: reporting
+
+- slug: x-rights-discovery
+  type: xai_search
+  query: >-
+    Find consequential content licensing, training-rights, pay-per-use,
+    publisher compensation, or machine-readable rights developments.
+  x_handles: [Cloudflare, Reddit, TechCrunch, WIRED, NiemanLab, Digiday, pressgazette]
+  lookback_hours: 36
+  shadow: true
+  display_name: X — Rights & Markets
+  default_tracks: [licensing-monetization, asset-rights]
+  tier: commentary
+  role: reporting
+
+- slug: x-governance-discovery
+  type: xai_search
+  query: >-
+    Find consequential regulator action, litigation, competition remedies,
+    copyright decisions, or disclosure rules affecting AI and web content.
+  x_handles: [FTC, EU_Commission, CMAgovUK, TechCrunch, verge, WIRED, 404mediaco]
+  lookback_hours: 36
+  shadow: true
+  display_name: X — Governance & Law
+  default_tracks: [policy-regulation, litigation-legal]
+  tier: commentary
+  role: reporting
+
+- slug: x-measurement-discovery
+  type: xai_search
+  query: >-
+    Find new measurements of AI crawler volume, referral ratios,
+    bot identity, publisher traffic, conversion, or compensation.
+  x_handles: [Cloudflare, CommonCrawl, Digiday, NiemanLab, sengineland, ppcland]
+  lookback_hours: 36
+  shadow: true
+  display_name: X — Measurement & Economics
+  default_tracks: [measurement-economics]
+  tier: commentary
+  role: reporting
