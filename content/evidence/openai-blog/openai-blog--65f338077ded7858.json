@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--65f338077ded7858",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/daybreak-for-frontline-defenders",
+  "supporting_urls": [],
+  "published_at": "2026-09-03T13:15:00Z",
+  "detected_at": "2026-09-04T12:31:51.571817Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--65f338077ded7858.json",
+  "content_hash": "sha256:25920455f27cc292d5c0c51b433967f5eb1d8ea3eee35e561e5a058107cfacca",
+  "external_id": "https://openai.com/index/daybreak-for-frontline-defenders",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Daybreak for Frontline Defenders: $1B to protect essential services",
+  "content": "OpenAI introduces Daybreak for Frontline Defenders. A $1 billion commitment expands access to frontier cyber AI, training, and support for essential services.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

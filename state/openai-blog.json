@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-09-03T12:37:50.015970+00:00",
-  "last_fetch_succeeded_at": "2026-09-03T12:37:50.015970+00:00",
-  "last_evidence_at": "2026-09-02T12:35:00.275423+00:00",
+  "last_checked_at": "2026-09-04T12:31:51.571817+00:00",
+  "last_fetch_succeeded_at": "2026-09-04T12:31:51.571817+00:00",
+  "last_evidence_at": "2026-09-04T12:31:51.571817+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/partnership-with-american-journalism-project-to-support-local-news",
     "https://openai.com/index/viable",
     "https://openai.com/index/frontier-ai-regulation",
     "https://openai.com/index/insights-from-global-conversations",
@@ -503,7 +502,8 @@
     "https://openai.com/index/building-self-improving-tax-agents-with-codex",
     "https://openai.com/index/warp",
     "https://openai.com/index/election-safeguards-2026",
-    "https://openai.com/index/ai-native-company-workflows"
+    "https://openai.com/index/ai-native-company-workflows",
+    "https://openai.com/index/daybreak-for-frontline-defenders"
   ],
   "consecutive_failures": 0,
   "first_seen": false

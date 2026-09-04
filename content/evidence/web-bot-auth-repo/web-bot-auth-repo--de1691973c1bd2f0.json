@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--de1691973c1bd2f0",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/141",
+  "supporting_urls": [],
+  "published_at": "2026-09-04T08:06:46Z",
+  "detected_at": "2026-09-04T12:31:51.571817Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--de1691973c1bd2f0.json",
+  "content_hash": "sha256:3bdb38a08900b0d4d24c7a2bf9fc9615fec3b6325171a2454c05ba31c4a81b87",
+  "external_id": "pr:141",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #141: Minor correction on documentation",
+  "content": "Closes ##88 #89 #102",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

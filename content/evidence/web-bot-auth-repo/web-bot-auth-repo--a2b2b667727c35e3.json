@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--a2b2b667727c35e3",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/142",
+  "supporting_urls": [],
+  "published_at": "2026-09-04T08:07:07Z",
+  "detected_at": "2026-09-04T12:31:51.571817Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--a2b2b667727c35e3.json",
+  "content_hash": "sha256:1096d20e3d212e8e4e4c2016ff99e629249f039ba290c163f79f964f19708e36",
+  "external_id": "pr:142",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #142: JWK guidance",
+  "content": "Align with deployment guidance present in the IETF draft.\r\n\r\nCloses #48",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

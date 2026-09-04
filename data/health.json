@@ -1,36 +1,36 @@
 {
-  "status": "healthy",
-  "last_attempted_at": "2026-09-03T12:37:50.015970Z",
+  "status": "degraded",
+  "last_attempted_at": "2026-09-04T12:31:51.571817Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
-    "configured": 34,
+    "configured": 39,
     "completed": 34,
     "fetched": 34,
     "analyzed": 34,
     "published": 34,
-    "failed": 0,
+    "failed": 5,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
       "ok": 34,
-      "failed": 0,
+      "failed": 5,
       "pending": 0
     },
     "evidence": {
       "ok": 34,
       "failed": 0,
-      "pending": 0
+      "pending": 5
     },
     "analysis": {
       "ok": 34,
       "failed": 0,
-      "pending": 0
+      "pending": 5
     },
     "publish": {
       "ok": 34,
       "failed": 0,
-      "pending": 0
+      "pending": 5
     }
   },
   "per_source": {
@@ -150,7 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--d6d61a45521da00a"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -171,9 +173,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--61408a0330678cfe",
-        "uk-cma--f3a8f0726919d5cd",
-        "uk-cma--6e9772640e29c9c1"
+        "uk-cma--8f76df69a95f47f5",
+        "uk-cma--2c40e7fdb45d0488"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -205,7 +206,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--5e1e806ef6b47747"
+        "eu-commission-digital--4d63963d1945c188",
+        "eu-commission-digital--2750d5b5044b50b4"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -226,9 +228,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--8ade4da1cf708dfa"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -238,7 +238,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "reddit-corporate--51d9401df8b54bee"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -248,7 +250,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--f0464d2e97a7d998",
+        "web-bot-auth-repo--a2b2b667727c35e3",
+        "web-bot-auth-repo--de1691973c1bd2f0"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -278,7 +284,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--65f338077ded7858"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -381,6 +389,56 @@
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
+    },
+    "x-access-discovery": {
+      "fetch": "failed",
+      "evidence": "pending",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "XAI_API_KEY is missing",
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-agents-discovery": {
+      "fetch": "failed",
+      "evidence": "pending",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "XAI_API_KEY is missing",
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-rights-discovery": {
+      "fetch": "failed",
+      "evidence": "pending",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "XAI_API_KEY is missing",
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-governance-discovery": {
+      "fetch": "failed",
+      "evidence": "pending",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "XAI_API_KEY is missing",
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-measurement-discovery": {
+      "fetch": "failed",
+      "evidence": "pending",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "XAI_API_KEY is missing",
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     }
   },
   "events_written": [],
@@ -390,5 +448,25 @@
     "status": "ok",
     "error": null
   },
-  "derived_errors": []
+  "derived_errors": [],
+  "daily_brief": {
+    "status": "quiet",
+    "edition_date": "2026-09-04",
+    "item_count": 0,
+    "path": "data/daily/2026-09-04.json"
+  },
+  "insight_threads": {
+    "thread_count": 30,
+    "path": "data/insight-threads.json"
+  },
+  "discovery": {
+    "status": "unavailable",
+    "candidate_count": 0,
+    "x_search_calls": 0,
+    "estimated_tool_cost_usd": 0.0,
+    "sources_configured": 5,
+    "sources_completed": 0,
+    "sources_failed": 5,
+    "sources_skipped_by_cap": 0
+  }
 }
