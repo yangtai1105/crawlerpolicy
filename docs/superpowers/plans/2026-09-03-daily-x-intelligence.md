@@ -726,7 +726,7 @@ git add README.md site/README.md docs/superpowers/plans/2026-09-03-daily-x-intel
 git commit -m "docs: explain daily x intelligence operations"
 ```
 
-- [ ] **Step 7: Push `main` after final verification**
+- [x] **Step 7: Push `main` after final verification**
 
 ```bash
 git push origin main
