@@ -14,6 +14,20 @@ from pydantic import BaseModel, Field
 from pipeline.feed import PublicationStatus
 
 _KEY_RX = re.compile(r"[^a-z0-9]+")
+_TITLE_ACRONYMS = {
+    "ai",
+    "api",
+    "cdn",
+    "dns",
+    "dsa",
+    "eu",
+    "ip",
+    "mcp",
+    "uk",
+    "us",
+    "vlose",
+    "waf",
+}
 
 
 class ThreadFeedRecord(BaseModel):
@@ -47,7 +61,11 @@ def _normalize_key(value: str) -> str:
 
 
 def _title_for_key(key: str) -> str:
-    return " ".join(part.capitalize() for part in key.split("-") if part)
+    return " ".join(
+        part.upper() if part in _TITLE_ACRONYMS else part.capitalize()
+        for part in key.split("-")
+        if part
+    )
 
 
 def _section(body: str, heading: str) -> str:

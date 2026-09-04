@@ -7,7 +7,12 @@ const REQUIRED_SECTIONS = ["Summary", "Insight", "Implication", "Why it matters"
 export function feedSection(body: string | undefined, heading: string): string {
   const escaped = heading.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
   const match = body?.match(new RegExp(`^## ${escaped}\\s*$\\n+([\\s\\S]*?)(?=^## |$)`, "m"));
-  return match?.[1].trim() ?? "";
+  return (match?.[1] ?? "")
+    .replace(/<a\b[^>]*>(.*?)<\/a>/gis, "$1")
+    .replace(/\[([^\]]+)]\(https?:\/\/[^)]+\)/g, "$1")
+    .replace(/<[^>]+>/g, "")
+    .replace(/\s+/g, " ")
+    .trim();
 }
 
 export function validateFeedBody(item: CollectionEntry<"feed">): void {

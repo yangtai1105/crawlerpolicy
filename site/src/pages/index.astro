@@ -3,6 +3,7 @@ import Base from "../layouts/Base.astro";
 import HealthStrip from "../components/HealthStrip.astro";
 import FrontCard from "../components/FrontCard.astro";
 import FeedCard from "../components/FeedCard.astro";
+import InsightThreadCard from "../components/InsightThreadCard.astro";
 import TrackTag from "../components/TrackTag.astro";
 import { loadHealth } from "../lib/health";
 import { loadLatestIntelligence } from "../lib/intelligence";
@@ -10,31 +11,37 @@ import { FRONTS, frontForTrack, type Front } from "../lib/taxonomy";
 import { findSource } from "../lib/sources";
 import { loadCurrentEvents } from "../lib/events";
 import { feedSection, loadFeedItems } from "../lib/feed";
+import { loadLatestDailyBrief } from "../lib/daily";
+import { loadInsightThreads } from "../lib/insight-threads";
 
 const health = loadHealth();
 const issue = loadLatestIntelligence();
+const brief = loadLatestDailyBrief();
+const insightThreads = loadInsightThreads().slice(0, 6);
 const events = (await loadCurrentEvents()).filter((event) => event.data.change_kind === "material");
 const feedItems = await loadFeedItems();
-const newestPublishedAt = feedItems[0]?.data.published_at.getTime();
-const newestWindow = newestPublishedAt === undefined
-  ? []
-  : feedItems.filter((item) => item.data.published_at.getTime() >= newestPublishedAt - 48 * 60 * 60 * 1000);
-const verifiedByImportance = newestWindow
-  .filter((item) => item.data.status === "verified")
-  .sort((a, b) => b.data.importance - a.data.importance || b.data.published_at.getTime() - a.data.published_at.getTime());
-const lead = verifiedByImportance[0] ?? feedItems[0];
-const latest = feedItems.filter((item) => item.data.slug !== lead?.data.slug).slice(0, 40);
+const feedBySlug = new Map(feedItems.map((item) => [item.data.slug, item]));
+const dailyItems = brief
+  ? brief.items.map((item) => feedBySlug.get(item.slug)).filter((item) => item !== undefined)
+  : feedItems.filter((item) => !item.data.backfilled).slice(0, 5);
+const dailySlugs = new Set(dailyItems.map((item) => item.data.slug));
+const lead = dailyItems[0];
+const dailyRest = dailyItems.slice(1);
+const latest = feedItems.filter((item) => !dailySlugs.has(item.data.slug)).slice(0, 40);
 const activeFronts = new Set([
   ...events.map((event) => frontForTrack(event.data.primary_track)),
   ...feedItems.slice(0, 12).map((item) => frontForTrack(item.data.primary_track)),
 ]);
-const publicationDate = (lead?.data.published_at ?? new Date()).toLocaleDateString("en-US", {
+const editionDate = brief?.edition_date
+  ? new Date(`${brief.edition_date}T00:00:00Z`)
+  : (lead?.data.detected_at ?? new Date());
+const publicationDate = editionDate.toLocaleDateString("en-US", {
   month: "long",
   day: "numeric",
   year: "numeric",
   timeZone: "UTC",
 });
-const statusLabel = lead ? lead.data.status[0].toUpperCase() + lead.data.status.slice(1) : "Awaiting first signal";
+const statusLabel = lead ? lead.data.status[0].toUpperCase() + lead.data.status.slice(1) : "Quiet edition";
 
 const frontCopy: Record<Front, string> = {
   "access-discovery": "Who can discover, crawl, index, and answer from the open web — and under which controls.",
@@ -47,46 +54,79 @@ const frontCopy: Record<Front, string> = {
 
 <Base title="The AI × web ecosystem" description="Readable intelligence on AI crawlers, agent identity, content rights, and the economics of the open web.">
   <div class="container home">
-    <header class="hero">
-      <div class="hero-meta">
-        <p class="utility-label">Field Ledger · Today in the ecosystem</p>
-        <time datetime={(lead?.data.published_at ?? new Date()).toISOString()}>{publicationDate}</time>
+    <header class="edition-header">
+      <div>
+        <p class="utility-label">Field Ledger · Daily ecosystem intelligence</p>
+        <h1>Today’s Brief</h1>
       </div>
-      <h1>The web is negotiating with its new readers.</h1>
-      <p class="hero-deck">A daily intelligence feed about AI access, agent identity, content rights, policy, and the emerging machine-traffic economy.</p>
+      <time datetime={editionDate.toISOString()}>{publicationDate}</time>
+      <p class="edition-deck">The consequential changes in AI access, agent identity, content rights, governance, and the machine-traffic economy — selected for meaning, not volume.</p>
     </header>
 
     {lead ? (
-      <article class="lead-signal" data-status={lead.data.status}>
-        <div class="lead-meta">
-          <span class="lead-status">{statusLabel}</span>
-          <span>{findSource(lead.data.source)?.display_name ?? lead.data.source}</span>
-          <span>{lead.data.backfilled ? "Backfilled · Original publication" : "Lead signal"}</span>
-        </div>
-        <h2><a href={`/events/${lead.data.slug}`}>{lead.data.title}</a></h2>
-        <div class="lead-reading">
-          <div><p class="utility-label">Summary</p><p>{feedSection(lead.body, "Summary")}</p></div>
-          <div class="lead-why"><p class="utility-label">Why it matters</p><p>{feedSection(lead.body, "Why it matters")}</p></div>
-        </div>
-        <footer>
-          <div>{lead.data.tracks.map((track) => <TrackTag track={track} linked />)}</div>
-          <a href={`/events/${lead.data.slug}`}>Read the full analysis →</a>
-        </footer>
-      </article>
+      <section class="daily-brief" aria-label="Today's brief">
+        <article class="lead-signal" data-status={lead.data.status}>
+          <div class="lead-meta">
+            <span class="lead-status">{statusLabel}</span>
+            <span>{findSource(lead.data.source)?.display_name ?? lead.data.source}</span>
+            <span>Lead development</span>
+          </div>
+          <h2><a href={`/events/${lead.data.slug}`}>{lead.data.title}</a></h2>
+          <div class="lead-reading">
+            <div><p class="utility-label">Summary</p><p>{feedSection(lead.body, "Summary")}</p></div>
+            <div class="lead-why"><p class="utility-label">Why it matters</p><p>{feedSection(lead.body, "Why it matters")}</p></div>
+          </div>
+          <footer>
+            <div>{lead.data.tracks.map((track) => <TrackTag track={track} linked />)}</div>
+            <a href={`/events/${lead.data.slug}`}>Read the evidence and analysis →</a>
+          </footer>
+        </article>
+
+        {dailyRest.length > 0 && (
+          <div class="brief-supporting">
+            <p class="brief-rule"><span>Also in today’s edition</span></p>
+            {dailyRest.map((item) => (
+              <FeedCard
+                slug={item.data.slug}
+                title={item.data.title}
+                source={findSource(item.data.source)?.display_name ?? item.data.source}
+                publishedAt={item.data.published_at}
+                status={item.data.status}
+                summary={feedSection(item.body, "Summary")}
+                analyticalLabel="Why it matters"
+                analyticalText={feedSection(item.body, "Why it matters")}
+                tracks={[...item.data.tracks]}
+                backfilled={item.data.backfilled}
+              />
+            ))}
+          </div>
+        )}
+      </section>
     ) : (
-      <section class="lead-empty">
-        <p class="utility-label">Publication opening</p>
-        <h2>No new verified developments today.</h2>
-        <p>The new feed begins with evidence published on or after August 30, 2026. Sources are being checked; historical items will not be republished as current news.</p>
+      <section class="quiet-edition">
+        <div><p class="utility-label">Quiet edition</p><h2>No material development cleared the bar today.</h2></div>
+        <p>{brief?.note ?? "The monitoring window is open. New items will appear after the next successful source check."} Recent signals and developing insights remain available below.</p>
       </section>
     )}
 
     {health.status !== "healthy" && <HealthStrip health={health} compact />}
 
+    <section class="section insight-section">
+      <div class="section-heading">
+        <div><p class="utility-label">What is changing over time</p><h2>Developing insights</h2></div>
+        <p>Persistent interpretations built from repeated signals. Confidence rises only when direct evidence accumulates.</p>
+      </div>
+      {insightThreads.length ? (
+        <div class="insight-grid">{insightThreads.map((thread) => <InsightThreadCard thread={thread} />)}</div>
+      ) : (
+        <p class="empty-read">Insight threads will form as daily signals begin to reinforce one another.</p>
+      )}
+    </section>
+
     <section class="section latest-section">
       <div class="section-heading">
-        <div><p class="utility-label">Daily ecosystem feed</p><h2>Latest signals</h2></div>
-        <p>Summary first. Analysis next. Evidence always available.</p>
+        <div><p class="utility-label">Evidence ledger</p><h2>Latest from the field</h2></div>
+        <p>The broader stream: readable summaries, implications, and direct-source evidence without pretending every item is today’s headline.</p>
       </div>
       <div class="feed-list">
         {latest.length ? latest.map((item) => (
@@ -103,7 +143,7 @@ const frontCopy: Record<Front, string> = {
             backfilled={item.data.backfilled}
           />
         )) : (
-          <p class="empty-read">{lead ? "No additional signals in this publication window." : "The first post-launch ecosystem items will appear here."}</p>
+          <p class="empty-read">No additional signals are available yet.</p>
         )}
       </div>
     </section>
@@ -133,12 +173,12 @@ const frontCopy: Record<Front, string> = {
 
 <style>
   .home { padding-top: var(--space-7); }
-  .hero { position: relative; padding: var(--space-4) 0 var(--space-6); border-bottom: 1px solid var(--quiet-rule); }
-  .hero::before { position: absolute; top: 1.1rem; right: 0; width: min(34vw, 390px); height: 4px; background: var(--clay-marker); content: ""; }
-  .hero-meta { display: flex; justify-content: space-between; gap: var(--space-5); color: var(--ink-muted); font: 500 .67rem var(--font-mono); }
-  .hero h1 { max-width: 18ch; margin-top: var(--space-5); font-size: clamp(2.6rem, 4.8vw, 4.8rem); }
-  .hero-deck { max-width: 720px; margin: var(--space-4) 0 0; color: var(--ink-muted); font-size: clamp(1rem, 1.5vw, 1.15rem); }
-  .lead-signal { position: relative; margin-top: var(--space-6); padding: clamp(28px, 3.5vw, 48px); border: 1px solid var(--forest-block); border-radius: var(--radius-md); background: var(--forest-block); color: var(--paper-high); box-shadow: 10px 10px 0 var(--clay-marker); }
+  .edition-header { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: var(--space-5) var(--space-8); align-items: end; padding: var(--space-4) 0 var(--space-6); border-top: 4px solid var(--clay-marker); border-bottom: 1px solid var(--quiet-rule); }
+  .edition-header h1 { max-width: 12ch; margin-top: var(--space-3); font-size: clamp(3rem, 6vw, 6rem); }
+  .edition-header time { align-self: start; color: var(--forest-block); font: 650 clamp(.8rem, 1.2vw, 1rem)/1.2 var(--font-mono); }
+  .edition-deck { grid-column: 1 / -1; max-width: 780px; margin: 0; color: var(--ink-muted); font-size: clamp(1rem, 1.5vw, 1.16rem); }
+  .daily-brief { padding-top: var(--space-6); }
+  .lead-signal { position: relative; padding: clamp(28px, 3.5vw, 48px); border: 1px solid var(--forest-block); border-radius: var(--radius-md); background: var(--forest-block); color: var(--paper-high); box-shadow: 10px 10px 0 var(--clay-marker); }
   .lead-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: #c3d2c8; font: 600 .63rem var(--font-mono); text-transform: uppercase; }
   .lead-meta span + span::before { margin-right: var(--space-3); color: var(--evidence-mint); content: "·"; }
   .lead-status { color: #b6dcc7; }
@@ -153,15 +193,21 @@ const frontCopy: Record<Front, string> = {
   .lead-signal footer { display: flex; justify-content: space-between; gap: var(--space-5); align-items: end; margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid #486052; }
   .lead-signal footer > div { display: flex; flex-wrap: wrap; gap: var(--space-2); }
   .lead-signal footer > a { color: #b6dcc7; font: 600 .68rem var(--font-mono); white-space: nowrap; }
-  .lead-empty { padding: clamp(32px, 6vw, 72px); border: 1px solid var(--quiet-rule); border-radius: var(--radius-md); background: var(--paper-high); }
-  .lead-empty h2 { max-width: 18ch; margin: var(--space-4) 0; }
-  .lead-empty > p:last-child { max-width: 68ch; color: var(--ink-muted); }
+  .brief-supporting { position: relative; margin-top: var(--space-7); padding-left: var(--space-5); border-left: 2px solid var(--clay-marker); }
+  .brief-rule { margin: 0; color: var(--clay-marker); font: 600 .64rem/1.3 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
+  .brief-rule span { display: inline-block; padding: 0 var(--space-3) var(--space-3) 0; background: var(--field-paper); }
+  .quiet-edition { display: grid; grid-template-columns: 1.2fr .8fr; gap: var(--space-8); margin-top: var(--space-6); padding: clamp(32px, 6vw, 72px); border: 1px solid var(--quiet-rule); border-left: 6px solid var(--evidence-mint); background: var(--paper-high); }
+  .quiet-edition h2 { max-width: 18ch; margin-top: var(--space-3); }
+  .quiet-edition > p { align-self: end; max-width: 56ch; margin: 0; color: var(--ink-muted); }
   :global(.health-strip) { margin-top: var(--space-4); }
   .section { padding-top: var(--space-9); }
   .section-heading { display: flex; justify-content: space-between; gap: var(--space-6); align-items: end; margin-bottom: var(--space-6); }
   .section-heading .utility-label { margin-bottom: var(--space-2); }
-  .section-heading > p { max-width: 43ch; margin: 0; color: var(--ink-muted); font-size: .82rem; }
+  .section-heading > p { max-width: 49ch; margin: 0; color: var(--ink-muted); font-size: .82rem; }
   .section-heading > a { color: var(--forest-block); font: 600 .68rem var(--font-mono); white-space: nowrap; }
+  .insight-section { margin-top: var(--space-7); padding: var(--space-7) var(--space-6); background: #dce5df; }
+  .insight-section.section { padding-top: var(--space-7); }
+  .insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
   .feed-list { border-bottom: 1px solid var(--border-strong); }
   .empty-read { max-width: 68ch; padding: var(--space-5) 0; border-top: 1px solid var(--quiet-rule); color: var(--ink-muted); }
   .front-grid { display: grid; grid-template-columns: repeat(6, 1fr); gap: var(--space-4); }
@@ -172,18 +218,21 @@ const frontCopy: Record<Front, string> = {
   .weekly-entry > div:last-child { align-self: end; }
   .weekly-entry > div:last-child p { color: var(--ink-muted); font-size: .88rem; }
   .weekly-entry a { color: var(--clay-marker); font: 600 .68rem var(--font-mono); }
+  @media (max-width: 900px) { .insight-grid { grid-template-columns: repeat(2, 1fr); } }
   @media (max-width: 800px) {
-    .lead-reading, .weekly-entry { grid-template-columns: 1fr; gap: var(--space-5); }
+    .lead-reading, .weekly-entry, .quiet-edition { grid-template-columns: 1fr; gap: var(--space-5); }
     .lead-signal footer, .section-heading { align-items: start; flex-direction: column; }
     .front-grid { grid-template-columns: 1fr; }
     .front-grid > :global(article), .front-grid > :global(article:nth-child(4)), .front-grid > :global(article:nth-child(5)) { grid-column: auto; }
   }
+  @media (max-width: 620px) { .insight-grid { grid-template-columns: 1fr; } .insight-section { margin-inline: -14px; padding-inline: var(--space-5); } }
   @media (max-width: 480px) {
     .home { padding-top: var(--space-5); }
-    .hero::before { display: none; }
-    .hero-meta { align-items: start; flex-direction: column; gap: var(--space-2); }
+    .edition-header { grid-template-columns: 1fr; gap: var(--space-3); }
+    .edition-header time { grid-row: 1; }
     .lead-signal { padding: var(--space-5); }
     .lead-signal h2 { margin-bottom: var(--space-6); }
     .lead-signal footer > a { white-space: normal; }
+    .brief-supporting { padding-left: var(--space-3); }
   }
 </style>

@@ -1,0 +1,43 @@
+---
+import type { InsightThread } from "../lib/insight-threads";
+
+interface Props {
+  thread: InsightThread;
+}
+
+const { thread } = Astro.props;
+const evidenceCount = thread.related_feed_slugs.length;
+const verifiedCount = thread.verified_development_slugs.length;
+const updatedLabel = new Date(thread.last_updated_at).toLocaleDateString("en-US", {
+  month: "short",
+  day: "numeric",
+  year: "numeric",
+  timeZone: "UTC",
+});
+---
+
+<article class="thread-card" data-confidence={thread.confidence}>
+  <div class="thread-state">
+    <span>{thread.direction}</span>
+    <span>{thread.confidence} confidence</span>
+  </div>
+  <h3>{thread.title}</h3>
+  <p class="thread-thesis">{thread.thesis}</p>
+  <footer>
+    <span>{evidenceCount} {evidenceCount === 1 ? "signal" : "signals"}</span>
+    <span>{verifiedCount} verified {verifiedCount === 1 ? "development" : "developments"}</span>
+    <time datetime={thread.last_updated_at}>Updated {updatedLabel}</time>
+  </footer>
+</article>
+
+<style>
+  .thread-card { --thread-accent: var(--clay-marker); display: grid; grid-template-rows: auto auto 1fr auto; min-height: 300px; padding: var(--space-5); border: 1px solid var(--quiet-rule); border-top: 4px solid var(--thread-accent); background: var(--paper-high); }
+  .thread-card[data-confidence="high"] { --thread-accent: var(--status-healthy); }
+  .thread-card[data-confidence="low"] { --thread-accent: var(--ink-dim); }
+  .thread-state { display: flex; justify-content: space-between; gap: var(--space-3); color: var(--thread-accent); font: 600 .6rem/1.3 var(--font-mono); letter-spacing: .06em; text-transform: uppercase; }
+  h3 { max-width: 18ch; margin: var(--space-5) 0 var(--space-4); font-size: clamp(1.45rem, 2.3vw, 2.05rem); }
+  .thread-thesis { color: var(--ink-muted); font-size: .9rem; line-height: 1.65; }
+  footer { display: grid; grid-template-columns: auto auto 1fr; gap: var(--space-3); align-items: end; margin-top: var(--space-5); padding-top: var(--space-3); border-top: 1px solid var(--border); color: var(--ink-muted); font: 500 .6rem/1.4 var(--font-mono); }
+  footer time { justify-self: end; text-align: right; }
+  @media (max-width: 480px) { footer { grid-template-columns: 1fr 1fr; } footer time { grid-column: 1 / -1; justify-self: start; } }
+</style>

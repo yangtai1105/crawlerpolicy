@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-09-03",
+  "generated_at": "2026-09-03T08:00:00Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "test-source-agent-access-market",
+      "status": "reported",
+      "importance": 0.76,
+      "published_at": "2026-08-30T07:00:00Z"
+    }
+  ]
+}

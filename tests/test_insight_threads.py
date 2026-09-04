@@ -71,6 +71,22 @@ def test_signal_adds_context_without_verified_evidence(tmp_path):
     assert thread.direction == "emerging"
 
 
+def test_thread_titles_preserve_industry_acronyms(tmp_path):
+    feed_dir = tmp_path / "feed"
+    path = tmp_path / "insight-threads.json"
+    _write_feed_record(
+        feed_dir,
+        slug="regulatory-signal",
+        status="signal",
+        detected_at=datetime(2026, 9, 3, 7, tzinfo=UTC),
+        trend_signals=["dsa-ai-vlose-enforcement"],
+    )
+
+    registry = update_insight_threads(feed_dir=feed_dir, events_dir=None, path=path)
+
+    assert registry.threads[0].title == "DSA AI VLOSE Enforcement"
+
+
 def test_verified_item_adds_durable_thread_evidence_and_newest_thesis(tmp_path):
     feed_dir = tmp_path / "feed"
     path = tmp_path / "insight-threads.json"

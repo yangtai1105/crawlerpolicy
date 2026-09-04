@@ -9,7 +9,8 @@ export type SourceType =
   | "github_repo"
   | "ietf_draft"
   | "gemini_search"
-  | "cf_browser_run";
+  | "cf_browser_run"
+  | "xai_search";
 export type SourceTier = "primary" | "measurement" | "specialist" | "commentary";
 export type SourceRole =
   | "platform-docs"
@@ -34,6 +35,10 @@ export interface Source {
   repo?: string;
   draft_name?: string;
   keyword_filter?: string[];
+  query?: string;
+  x_handles?: string[];
+  lookback_hours?: number;
+  shadow?: boolean;
 }
 
 let cached: Source[] | null = null;

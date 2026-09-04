@@ -1,0 +1,16 @@
+{
+  "schema_version": 1,
+  "threads": [
+    {
+      "key": "verifiable-agent-identity",
+      "title": "Verifiable Agent Identity",
+      "thesis": "Agent identity is becoming enforceable infrastructure rather than a declared user-agent convention.",
+      "direction": "developing",
+      "confidence": "high",
+      "first_observed_at": "2026-08-13T08:00:00Z",
+      "last_updated_at": "2026-09-03T07:00:00Z",
+      "related_feed_slugs": ["test-source-agent-access-market"],
+      "verified_development_slugs": ["signed-agents-enforced"]
+    }
+  ]
+}

@@ -63,7 +63,7 @@
     },
     {
       "key": "ai-gateway-observability",
-      "title": "Ai Gateway Observability",
+      "title": "AI Gateway Observability",
       "thesis": "AI proxy and gateway infrastructure is adopting traditional web observability standards to give developers granular visibility into which specific SDKs, background workers, and client applications are driving programmatic AI consumption.",
       "direction": "emerging",
       "confidence": "high",
@@ -187,7 +187,7 @@
     },
     {
       "key": "dsa-enforcement",
-      "title": "Dsa Enforcement",
+      "title": "DSA Enforcement",
       "thesis": "Categorizing an AI conversational system as a search engine under the DSA formally bridges generative AI tools and traditional web search regulations, subjecting AI-driven retrieval to systemic risk assessments, transparency requirements, and algorithmic oversight.",
       "direction": "emerging",
       "confidence": "high",
@@ -232,7 +232,7 @@
     },
     {
       "key": "enterprise-ai-automation",
-      "title": "Enterprise Ai Automation",
+      "title": "Enterprise AI Automation",
       "thesis": "AI agent architectures are shifting from ephemeral, stateless request-response loops toward persistent execution environments capable of sustaining long-running state across multi-step enterprise operations.",
       "direction": "emerging",
       "confidence": "high",
@@ -277,7 +277,7 @@
     },
     {
       "key": "generative-ai-search-classification",
-      "title": "Generative Ai Search Classification",
+      "title": "Generative AI Search Classification",
       "thesis": "Categorizing an AI conversational system as a search engine under the DSA formally bridges generative AI tools and traditional web search regulations, subjecting AI-driven retrieval to systemic risk assessments, transparency requirements, and algorithmic oversight.",
       "direction": "emerging",
       "confidence": "high",
@@ -337,7 +337,7 @@
     },
     {
       "key": "mcp-access-control",
-      "title": "Mcp Access Control",
+      "title": "MCP Access Control",
       "thesis": "By bundling link-depth web crawling with gated Model Context Protocol (`/mcp`) endpoints behind identity tokens, infrastructure providers are standardizing the full pipeline from raw site indexing to secure agent retrieval.",
       "direction": "emerging",
       "confidence": "high",
@@ -397,7 +397,7 @@
     },
     {
       "key": "vlose-regulatory-oversight",
-      "title": "Vlose Regulatory Oversight",
+      "title": "VLOSE Regulatory Oversight",
       "thesis": "Categorizing an AI conversational system as a search engine under the DSA formally bridges generative AI tools and traditional web search regulations, subjecting AI-driven retrieval to systemic risk assessments, transparency requirements, and algorithmic oversight.",
       "direction": "emerging",
       "confidence": "high",
