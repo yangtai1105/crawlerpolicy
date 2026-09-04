@@ -8,6 +8,7 @@ import tempfile
 from datetime import datetime
 from enum import StrEnum
 from pathlib import Path
+from typing import Any
 
 from pydantic import BaseModel, Field
 
@@ -24,6 +25,7 @@ class EvidenceRecord(BaseModel):
     evidence_id: str
     source: str
     source_url: str
+    supporting_urls: list[str] = Field(default_factory=list)
     published_at: datetime | None = None
     detected_at: datetime
     content_path: str
@@ -36,6 +38,7 @@ class EvidenceRecord(BaseModel):
     content: str = ""
     previous_content: str = ""
     unified_diff: str = ""
+    discovery_metadata: dict[str, Any] = Field(default_factory=dict)
 
 
 def make_evidence_id(source_slug: str, external_id: str) -> str:

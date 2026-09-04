@@ -33,6 +33,7 @@ from pipeline.fetchers.github_repo import fetch_github_repo
 from pipeline.fetchers.html_page import fetch_html_page
 from pipeline.fetchers.ietf_draft import fetch_ietf_draft
 from pipeline.fetchers.rss_feed import fetch_rss_feed
+from pipeline.fetchers.xai_search import fetch_xai_search
 from pipeline.health import (
     HealthStatus,
     SourceRunStatus,
@@ -72,7 +73,14 @@ def _maybe_trend_context(cfg: Config, source: Source) -> str:
     return format_trend_context(recent)
 
 
-async def _default_fetch(source: Source, state: SourceState) -> FetchResult:
+async def _default_fetch(
+    source: Source,
+    state: SourceState,
+    *,
+    now: datetime,
+    xai_api_key: str,
+    xai_discovery_model: str,
+) -> FetchResult:
     if source.type is SourceType.HTML_PAGE:
         return await fetch_html_page(source)
     if source.type is SourceType.RSS_FEED:
@@ -95,6 +103,13 @@ async def _default_fetch(source: Source, state: SourceState) -> FetchResult:
             since=state.last_checked_at,
             seen_guids=state.last_seen_guids,
         )
+    if source.type is SourceType.XAI_SEARCH:
+        return await fetch_xai_search(
+            source,
+            api_key=xai_api_key,
+            model=xai_discovery_model,
+            now=now,
+        )
     if source.type is SourceType.CF_BROWSER_RUN:
         return await fetch_cf_browser_run(source)
     raise ValueError(f"unknown source type {source.type}")
@@ -115,6 +130,12 @@ def preflight_dependency_errors(
             blockers[source.slug] = DependencyBlocker(
                 stage="fetch",
                 message="GEMINI_API_KEY is missing",
+            )
+            continue
+        if source.type is SourceType.XAI_SEARCH and not present("XAI_API_KEY"):
+            blockers[source.slug] = DependencyBlocker(
+                stage="fetch",
+                message="XAI_API_KEY is missing",
             )
             continue
         if source.type is SourceType.CF_BROWSER_RUN:
@@ -150,6 +171,9 @@ async def run_check(
     only: str | None = None,
     dry_run: bool = False,
     dependency_blockers: dict[str, DependencyBlocker] | None = None,
+    xai_api_key: str = "",
+    xai_discovery_model: str = "grok-4.6",
+    xai_max_daily_search_calls: int = 6,
 ) -> dict:
     """Run the pipeline and return a JSON-serializable health payload."""
     cfg = Config(
@@ -158,6 +182,9 @@ async def run_check(
         gemini_analysis_model="gemini-3.7-flash",
         publication_cutoff=publication_cutoff
         or datetime(2026, 8, 30, tzinfo=UTC),
+        xai_api_key=xai_api_key,
+        xai_discovery_model=xai_discovery_model,
+        xai_max_daily_search_calls=xai_max_daily_search_calls,
         alert_emails=[],
     )
     sources = [source for source in load_sources(cfg.sources_yaml) if source.enabled]
@@ -166,12 +193,28 @@ async def run_check(
         if not sources:
             raise ValueError(f"--only {only!r} did not match any source")
 
-    fetch_dispatch = fetch_dispatch or _default_fetch
+    if fetch_dispatch is None:
+        async def configured_fetch(source: Source, state: SourceState) -> FetchResult:
+            return await _default_fetch(
+                source,
+                state,
+                now=now,
+                xai_api_key=cfg.xai_api_key,
+                xai_discovery_model=cfg.xai_discovery_model,
+            )
+
+        fetch_dispatch = configured_fetch
     blockers = dependency_blockers or {}
     statuses = {source.slug: SourceRunStatus() for source in sources}
     source_by_slug = {source.slug: source for source in sources}
     events_written: list[Path] = []
     circuit = ProviderCircuit()
+    discovery = {
+        "candidate_count": 0,
+        "x_search_calls": 0,
+        "estimated_tool_cost_usd": 0.0,
+        "sources_skipped_by_cap": 0,
+    }
 
     await _replay_pending(
         cfg=cfg,
@@ -189,6 +232,14 @@ async def run_check(
         state = load_state(cfg.state_dir, source.slug)
         status = statuses[source.slug]
         blocker = blockers.get(source.slug)
+        if (
+            source.type is SourceType.XAI_SEARCH
+            and discovery["x_search_calls"] >= cfg.xai_max_daily_search_calls
+        ):
+            status.fetch = StageStatus.OK
+            _mark_downstream_ok(status)
+            discovery["sources_skipped_by_cap"] += 1
+            continue
         if blocker and blocker.stage == "fetch":
             status.fetch = StageStatus.FAILED
             status.error = blocker.message
@@ -200,6 +251,14 @@ async def run_check(
         try:
             result = await _fetch_source(fetch_dispatch, source, state)
             status.fetch = StageStatus.OK
+            if source.type is SourceType.XAI_SEARCH:
+                discovery["candidate_count"] += len(result.items)
+                discovery["x_search_calls"] += int(
+                    result.metadata.get("x_search_calls", 0)
+                )
+                discovery["estimated_tool_cost_usd"] += float(
+                    result.metadata.get("estimated_tool_cost_usd", 0.0)
+                )
             state.last_checked_at = now
             state.last_fetch_succeeded_at = now
             state.consecutive_failures = 0
@@ -274,6 +333,33 @@ async def run_check(
         "error": provider_error,
     }
     payload["derived_errors"] = derived_errors
+    x_sources = [source for source in sources if source.type is SourceType.XAI_SEARCH]
+    x_completed = sum(statuses[source.slug].completed for source in x_sources)
+    x_failed = sum(
+        statuses[source.slug].fetch is StageStatus.FAILED for source in x_sources
+    )
+    if not x_sources:
+        discovery_status = "disabled"
+    elif x_failed and not x_completed:
+        discovery_status = "unavailable"
+    elif x_failed:
+        discovery_status = "degraded"
+    elif all(source.shadow for source in x_sources):
+        discovery_status = "shadow"
+    else:
+        discovery_status = "live"
+    payload["discovery"] = {
+        "status": discovery_status,
+        "candidate_count": discovery["candidate_count"],
+        "x_search_calls": discovery["x_search_calls"],
+        "estimated_tool_cost_usd": round(
+            discovery["estimated_tool_cost_usd"], 6
+        ),
+        "sources_configured": len(x_sources),
+        "sources_completed": x_completed,
+        "sources_failed": x_failed,
+        "sources_skipped_by_cap": discovery["sources_skipped_by_cap"],
+    }
     if not dry_run:
         cfg.data_dir.mkdir(parents=True, exist_ok=True)
         (cfg.data_dir / "health.json").write_text(
@@ -453,6 +539,16 @@ async def _process_items(
                 save_evidence(cfg.evidence_dir, record)
             _mark_downstream_ok(status)
             continue
+        if source.type is SourceType.XAI_SEARCH and source.shadow:
+            record.stage = EvidenceStage.ANALYZED
+            record.last_error = None
+            if not dry_run:
+                save_evidence(cfg.evidence_dir, record)
+            if status.analysis is not StageStatus.FAILED:
+                status.analysis = StageStatus.OK
+            if status.publish is not StageStatus.FAILED:
+                status.publish = StageStatus.OK
+            continue
         if analysis_blocker:
             _fail_evidence_analysis(cfg, record, analysis_blocker, status, dry_run)
             continue
@@ -486,6 +582,7 @@ def _evidence_for_item(
         evidence_id=evidence_id,
         source=source.slug,
         source_url=item.url or source.url or "",
+        supporting_urls=list(item.metadata.get("linked_urls", [])),
         published_at=item.published_at,
         detected_at=now,
         content_path=relative_path.as_posix(),
@@ -494,6 +591,12 @@ def _evidence_for_item(
         stage=EvidenceStage.FETCHED,
         title=item.title,
         content=content,
+        discovery_metadata={
+            **item.metadata,
+            "shadow": source.shadow,
+        }
+        if source.type is SourceType.XAI_SEARCH
+        else {},
     )
 
 
@@ -669,7 +772,12 @@ def _publish_analysis(
         published_at=record.published_at or event_date,
         detected_at=record.detected_at,
         evidence_ids=[record.evidence_id],
-        source_urls=[record.source_url] if record.source_url else [],
+        source_urls=list(
+            dict.fromkeys(
+                ([record.source_url] if record.source_url else [])
+                + record.supporting_urls
+            )
+        ),
         unified_diff=record.unified_diff,
         development_slug=(
             event_slug(analysis.title) if development_path is not None else None
@@ -870,6 +978,9 @@ def _cli() -> None:
             only=args.only,
             dry_run=args.dry_run,
             dependency_blockers=blockers,
+            xai_api_key=cfg.xai_api_key,
+            xai_discovery_model=cfg.xai_discovery_model,
+            xai_max_daily_search_calls=cfg.xai_max_daily_search_calls,
         )
     )
     print(json.dumps(payload, indent=2))

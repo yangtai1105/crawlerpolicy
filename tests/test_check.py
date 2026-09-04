@@ -313,3 +313,156 @@ async def test_fatal_provider_failure_opens_circuit_and_preserves_pending(repo):
         "status": "blocked",
         "error": "credit exhausted",
     }
+
+
+def _add_x_source(repo, *, shadow: bool = True) -> None:
+    sources = yaml.safe_load((repo / "sources.yaml").read_text())
+    sources.append(
+        {
+            "slug": "x-access-discovery",
+            "type": "xai_search",
+            "query": "Find consequential crawler policy changes.",
+            "x_handles": ["Cloudflare"],
+            "lookback_hours": 36,
+            "shadow": shadow,
+            "display_name": "X — Access & Discovery",
+            "default_tracks": ["crawler-controls"],
+            "tier": "commentary",
+            "role": "reporting",
+        }
+    )
+    (repo / "sources.yaml").write_text(yaml.safe_dump(sources))
+
+
+def _x_item() -> CandidateItem:
+    post_url = "https://x.com/Cloudflare/status/2031535503443374365"
+    return CandidateItem(
+        guid="2031535503443374365",
+        title="Cloudflare changes crawler controls",
+        published_at=datetime(2026, 9, 3, 4, tzinfo=UTC),
+        url=post_url,
+        summary="Cloudflare announced a concrete crawler-control change.",
+        body="A concrete crawler-control change was announced.",
+        metadata={
+            "author_handle": "Cloudflare",
+            "post_url": post_url,
+            "linked_urls": ["https://blog.cloudflare.com/example"],
+            "provider_citations": [post_url],
+        },
+    )
+
+
+def test_preflight_maps_missing_xai_key_only_to_x_sources(repo):
+    _add_x_source(repo)
+    sources = load_sources(repo / "sources.yaml")
+
+    blockers = preflight_dependency_errors(
+        sources,
+        {
+            "GEMINI_API_KEY": "gemini-test",
+            "XAI_API_KEY": "",
+            "CLOUDFLARE_ACCOUNT_ID": "account",
+            "CLOUDFLARE_EMAIL": "email@example.com",
+            "CLOUDFLARE_CRAWLER_API_KEY": "key",
+        },
+    )
+
+    assert blockers["x-access-discovery"].stage == "fetch"
+    assert blockers["x-access-discovery"].message == "XAI_API_KEY is missing"
+    assert "gptbot" not in blockers
+
+
+async def test_shadow_x_candidate_is_saved_without_gemini_or_publication(repo):
+    _add_x_source(repo)
+    analyze = AsyncMock()
+
+    async def fetch(source, _state):
+        if source.slug == "x-access-discovery":
+            return FetchResult(
+                mode=ResultMode.PER_ITEM,
+                items=[_x_item()],
+                metadata={
+                    "x_search_calls": 1,
+                    "estimated_tool_cost_usd": 0.005,
+                    "model": "grok-4.6",
+                },
+            )
+        return FetchResult(mode=ResultMode.DIFFABLE, normalized_content="baseline")
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+        fetch_dispatch=fetch,
+        analyze_change=analyze,
+    )
+
+    records = list((repo / "content/evidence/x-access-discovery").glob("*.json"))
+    assert len(records) == 1
+    assert '"stage": "analyzed"' in records[0].read_text()
+    assert '"shadow": true' in records[0].read_text()
+    assert '"supporting_urls"' in records[0].read_text()
+    assert list((repo / "content/feed").glob("*.md")) == []
+    analyze.assert_not_awaited()
+    assert health["discovery"] == {
+        "status": "shadow",
+        "candidate_count": 1,
+        "x_search_calls": 1,
+        "estimated_tool_cost_usd": 0.005,
+        "sources_configured": 1,
+        "sources_completed": 1,
+        "sources_failed": 0,
+        "sources_skipped_by_cap": 0,
+    }
+
+
+async def test_missing_xai_key_degrades_without_making_core_run_critical(repo):
+    _add_x_source(repo)
+    sources = load_sources(repo / "sources.yaml")
+    blockers = preflight_dependency_errors(
+        sources,
+        {"GEMINI_API_KEY": "gemini-test", "XAI_API_KEY": ""},
+    )
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(
+                mode=ResultMode.DIFFABLE,
+                normalized_content="baseline",
+            )
+        ),
+        analyze_change=AsyncMock(),
+        dependency_blockers=blockers,
+    )
+
+    assert health["status"] == "degraded"
+    assert health["discovery"]["status"] == "unavailable"
+    assert health["coverage"]["required_failed"] == 0
+
+
+async def test_non_shadow_x_candidate_publishes_signal_with_attribution(repo):
+    (repo / "sources.yaml").write_text("[]\n")
+    _add_x_source(repo, shadow=False)
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(
+                mode=ResultMode.PER_ITEM,
+                items=[_x_item()],
+                metadata={"x_search_calls": 1, "estimated_tool_cost_usd": 0.005},
+            )
+        ),
+        analyze_change=AsyncMock(return_value=_material_analysis()),
+    )
+
+    feed_items = list((repo / "content/feed").glob("*.md"))
+    assert len(feed_items) == 1
+    text = feed_items[0].read_text()
+    assert "status: signal" in text
+    assert "https://x.com/Cloudflare/status/2031535503443374365" in text
+    assert "https://blog.cloudflare.com/example" in text
+    assert list((repo / "content/events").glob("*.md")) == []
+    assert health["discovery"]["status"] == "live"

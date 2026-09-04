@@ -37,6 +37,10 @@ jobs:
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           GEMINI_ANALYSIS_MODEL: gemini-3.7-flash
+          XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
+          XAI_DISCOVERY_MODEL: grok-4.6
+          XAI_MAX_DAILY_SEARCH_CALLS: "6"
+          XAI_MONTHLY_SOFT_BUDGET_USD: "10"
           PUBLICATION_CUTOFF: "2026-08-30T00:00:00Z"
           CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           CLOUDFLARE_EMAIL: ${{ secrets.CLOUDFLARE_EMAIL }}

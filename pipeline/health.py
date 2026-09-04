@@ -6,7 +6,7 @@ from enum import StrEnum
 
 from pydantic import BaseModel, Field
 
-from pipeline.sources import Source
+from pipeline.sources import Source, SourceType
 
 
 class HealthStatus(StrEnum):
@@ -85,11 +85,19 @@ def build_run_health(
         for source in sources
     )
     configured = len(sources)
-    completion_ratio = completed / configured if configured else 0.0
+    core_sources = [source for source in sources if source.type is not SourceType.XAI_SEARCH]
+    core_completed = sum(statuses[source.slug].completed for source in core_sources)
+    core_failed = len(core_sources) - core_completed
+    completion_ratio = core_completed / len(core_sources) if core_sources else 1.0
+    discovery_failed = any(
+        not statuses[source.slug].completed
+        for source in sources
+        if source.type is SourceType.XAI_SEARCH
+    )
 
     if required_failed or completion_ratio < 0.70:
         status = HealthStatus.CRITICAL
-    elif failed or completion_ratio < 0.95:
+    elif core_failed or completion_ratio < 0.95 or discovery_failed:
         status = HealthStatus.DEGRADED
     else:
         status = HealthStatus.HEALTHY

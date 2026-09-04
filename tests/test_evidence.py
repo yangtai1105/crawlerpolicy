@@ -86,3 +86,20 @@ def test_failed_analysis_remains_replayable_and_queue_is_chronological(tmp_path)
         fetched.evidence_id,
         failed.evidence_id,
     ]
+
+
+def test_evidence_record_preserves_x_discovery_attribution():
+    record = EvidenceRecord(
+        evidence_id="x-access--abc",
+        source="x-access",
+        source_url="https://x.com/Cloudflare/status/123",
+        supporting_urls=["https://blog.cloudflare.com/example"],
+        published_at=datetime(2026, 9, 3, 4, tzinfo=UTC),
+        detected_at=datetime(2026, 9, 3, 8, tzinfo=UTC),
+        content_path="content/evidence/x-access/x-access--abc.json",
+        external_id="123",
+        discovery_metadata={"author_handle": "Cloudflare", "shadow": True},
+    )
+
+    assert record.supporting_urls == ["https://blog.cloudflare.com/example"]
+    assert record.discovery_metadata["shadow"] is True

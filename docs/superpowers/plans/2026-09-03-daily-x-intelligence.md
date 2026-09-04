@@ -313,7 +313,7 @@ git commit -m "feat: fetch metered x search candidates"
 - Produces: health payload key `discovery` with status, calls, estimated cost, candidate count, and shadow state
 - Preserves: `publication_status(SourceTier.COMMENTARY) == PublicationStatus.SIGNAL`
 
-- [ ] **Step 1: Write failing orchestration tests**
+- [x] **Step 1: Write failing orchestration tests**
 
 ```python
 async def test_missing_xai_key_degrades_only_x_source(repo):
@@ -342,13 +342,13 @@ async def test_shadow_candidate_is_saved_but_not_published(repo):
     assert health["status"] == "healthy"
 ```
 
-- [ ] **Step 2: Run the focused orchestration tests and verify RED**
+- [x] **Step 2: Run the focused orchestration tests and verify RED**
 
 Run: `uv run pytest tests/test_check.py tests/test_evidence.py -q`
 
 Expected: failures because xAI preflight, discovery metadata, and shadow publication behavior do not exist.
 
-- [ ] **Step 3: Add optional-blocker and shadow semantics**
+- [x] **Step 3: Add optional-blocker and shadow semantics**
 
 ```python
 @dataclass(frozen=True)
@@ -370,7 +370,7 @@ Dispatch xAI sources with runtime configuration, aggregate successful calls and 
 
 After `build_run_health`, downgrade an otherwise critical result caused exclusively by optional xAI sources to `degraded`. Preserve critical status for any required direct-source failure.
 
-- [ ] **Step 4: Add the production secret and defaults**
+- [x] **Step 4: Add the production secret and defaults**
 
 ```yaml
 XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
@@ -379,13 +379,13 @@ XAI_MAX_DAILY_SEARCH_CALLS: "6"
 XAI_MONTHLY_SOFT_BUDGET_USD: "10"
 ```
 
-- [ ] **Step 5: Run orchestration tests and verify GREEN**
+- [x] **Step 5: Run orchestration tests and verify GREEN**
 
 Run: `uv run pytest tests/test_check.py tests/test_evidence.py tests/test_health.py -q`
 
 Expected: all focused orchestration tests pass.
 
-- [ ] **Step 6: Commit the optional discovery lane**
+- [x] **Step 6: Commit the optional discovery lane**
 
 ```bash
 git add pipeline/check.py pipeline/evidence.py pipeline/health.py tests/test_check.py tests/test_evidence.py .github/workflows/daily-check.yml

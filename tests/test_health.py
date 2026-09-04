@@ -85,3 +85,30 @@ def test_healthy_run_updates_last_full_success_and_stage_totals():
     assert health.last_fully_successful_at == NOW
     assert health.stages["analysis"].ok == 1
     assert exit_code_for_health(health) == 0
+
+
+def test_failed_x_discovery_degrades_but_does_not_trigger_core_threshold():
+    core = _source("core", required=True)
+    discovery = Source(
+        slug="x-access",
+        type=SourceType.XAI_SEARCH,
+        query="crawler changes",
+        display_name="X access",
+        default_tracks=[Track.CRAWLER_CONTROLS],
+        tier=SourceTier.COMMENTARY,
+        role=SourceRole.REPORTING,
+    )
+
+    health = build_run_health(
+        sources=[core, discovery],
+        per_source={
+            core.slug: _ok(),
+            discovery.slug: SourceRunStatus(fetch="failed", error="missing key"),
+        },
+        now=NOW,
+        last_full_success=None,
+    )
+
+    assert health.status is HealthStatus.DEGRADED
+    assert health.coverage.required_failed == 0
+    assert exit_code_for_health(health) == 0
