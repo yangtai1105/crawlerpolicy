@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-04T12:31:51.571817Z",
+  "last_attempted_at": "2026-09-05T11:40:15.257245Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -50,7 +50,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "claudebot--50dda8bd5c6a00aa"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -80,9 +82,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "applebot-extended--916e5e8faa090c38"
+      ],
+      "events_written": [
+        "content/events/2026-09-05-applebot-extended-apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-09-05-applebot-extended-apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings.md"
+      ]
     },
     "meta-externalagent": {
       "fetch": "ok",
@@ -150,9 +158,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--d6d61a45521da00a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -172,10 +178,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--8f76df69a95f47f5",
-        "uk-cma--2c40e7fdb45d0488"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -205,10 +208,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--4d63963d1945c188",
-        "eu-commission-digital--2750d5b5044b50b4"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -238,9 +238,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "reddit-corporate--51d9401df8b54bee"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -250,11 +248,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--f0464d2e97a7d998",
-        "web-bot-auth-repo--a2b2b667727c35e3",
-        "web-bot-auth-repo--de1691973c1bd2f0"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -284,9 +278,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--65f338077ded7858"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -441,8 +433,12 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-09-05-applebot-extended-apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-09-05-applebot-extended-apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -450,13 +446,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-09-04",
-    "item_count": 0,
-    "path": "data/daily/2026-09-04.json"
+    "status": "published",
+    "edition_date": "2026-09-05",
+    "item_count": 1,
+    "path": "data/daily/2026-09-05.json"
   },
   "insight_threads": {
-    "thread_count": 30,
+    "thread_count": 32,
     "path": "data/insight-threads.json"
   },
   "discovery": {

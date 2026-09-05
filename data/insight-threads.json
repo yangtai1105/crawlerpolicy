@@ -92,6 +92,21 @@
       ]
     },
     {
+      "key": "ai-search-ranking-decoupling",
+      "title": "AI Search Ranking Decoupling",
+      "thesis": "The addition formalizes an explicit policy boundary between AI model training opt-outs and core search indexing algorithms, countering concerns that withholding training data might degrade search discovery.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-05T11:40:15.257245Z",
+      "last_updated_at": "2026-09-05T11:40:15.257245Z",
+      "related_feed_slugs": [
+        "applebot-extended-apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
+      ],
+      "verified_development_slugs": [
+        "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
+      ]
+    },
+    {
       "key": "bot-authentication",
       "title": "Bot Authentication",
       "thesis": "Cryptographic signature validation provides no protection against replay or request substitution if the verifier does not strictly enforce component binding to the target URI and authority.",
@@ -164,6 +179,21 @@
       ],
       "verified_development_slugs": [
         "model-context-protocol-issues-stable-2026-07-28-specification-release"
+      ]
+    },
+    {
+      "key": "crawler-opt-out-safeguards",
+      "title": "Crawler Opt Out Safeguards",
+      "thesis": "The addition formalizes an explicit policy boundary between AI model training opt-outs and core search indexing algorithms, countering concerns that withholding training data might degrade search discovery.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-05T11:40:15.257245Z",
+      "last_updated_at": "2026-09-05T11:40:15.257245Z",
+      "related_feed_slugs": [
+        "applebot-extended-apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
+      ],
+      "verified_development_slugs": [
+        "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
       ]
     },
     {
