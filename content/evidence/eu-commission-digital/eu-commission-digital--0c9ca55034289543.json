@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--0c9ca55034289543",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1803",
+  "supporting_urls": [],
+  "published_at": "2026-09-07T09:46:49Z",
+  "detected_at": "2026-09-07T14:00:29.167241Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--0c9ca55034289543.json",
+  "content_hash": "sha256:df0056b8e43cf7d1cca876d6aa221151c49effb6517ce62d54bee31cdad17bcb",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1803",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by President von der Leyen at the signing of the EU-Greenland Joint Declaration",
+  "content": "European Commission Statement Nuuk, 07 Sep 2026 Premier Nielsen, dear Jens-Frederik,\nPrime Minister Frederiksen, dear Mette,\nI also want to thank you for the excellent cooperation and the outstanding hospital...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

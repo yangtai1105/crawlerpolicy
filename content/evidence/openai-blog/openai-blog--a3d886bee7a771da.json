@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--a3d886bee7a771da",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+  "supporting_urls": [],
+  "published_at": "2026-09-07T00:00:00Z",
+  "detected_at": "2026-09-07T14:00:29.167241Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--a3d886bee7a771da.json",
+  "content_hash": "sha256:1eb5799e1e866ba8be335b55be17af2a83c3d39f1b4179181014d4bcc592f94a",
+  "external_id": "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Supporting independent journalism in Ukraine",
+  "content": "OpenAI, AIRPPU and WAN-IFRA launch an AI program to help Ukrainian news organizations strengthen innovation, resilience, and independent journalism.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
