@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "week": "2026-W36",
+  "generated_at": "2026-09-07T18:06:38.472000Z",
+  "window_start": "2026-08-31",
+  "window_end": "2026-09-06",
+  "health_status": "degraded",
+  "coverage": {
+    "configured": 39,
+    "completed": 34,
+    "fetched": 34,
+    "analyzed": 34,
+    "published": 34,
+    "failed": 5,
+    "required_failed": 0
+  },
+  "thesis": "Web governance and technical crawler controls are formalizing rapidly across standards bodies, infrastructure edge implementations, search platform policies, and European regulatory frameworks.",
+  "executive_shifts": [
+    {
+      "headline": "Cryptographic Bot Authentication Advances in Standards and Edge Performance",
+      "summary": "The IETF Web Bot Auth Working Group formally adopted the draft-ietf-webbotauth-httpsig-protocol-00 specification for signing automated requests, while Cloudflare improved its reference implementation with Ed25519 key caching to lower verification overhead by roughly 10 percent.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft",
+        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+      ]
+    },
+    {
+      "headline": "Apple Partitioned AI Crawler Controls from Organic Search Rankings",
+      "summary": "Apple updated documentation to confirm that disallowing the Applebot-Extended AI training crawler via robots.txt will not impact website rankings in Spotlight, Siri, or Safari search results.",
+      "evidence_event_ids": [
+        "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
+      ]
+    },
+    {
+      "headline": "European Commission Expanded DSA Classifications to ChatGPT, Reddit, and Roblox",
+      "summary": "The European Commission officially designated ChatGPT as a Very Large Online Search Engine (VLOSE) and classified Reddit and Roblox as Very Large Online Platforms (VLOPs) under the Digital Services Act.",
+      "evidence_event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": true,
+      "event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": true,
+      "event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under",
+        "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
+      ],
+      "summary": "2 verified material developments."
+    },
+    {
+      "track": "crawler-controls",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft",
+        "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings",
+        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "agentic-web",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft",
+        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+      ],
+      "summary": "2 verified material developments."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft",
+        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+      ],
+      "summary": "2 verified material developments."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "Efforts to verify and govern automated web traffic reached key milestones with the IETF Web Bot Auth Working Group adopting an official HTTP message signatures draft and Cloudflare optimizing edge verification performance. In parallel, Apple formally decoupled AI crawler opt-outs from search visibility, while the European Commission expanded search engine oversight by designating ChatGPT as a Very Large Online Search Engine under the Digital Services Act.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "European Commission",
+      "direction": "Classifying generative AI chat tools as search engines establishes a major regulatory precedent that extends European search governance directly into the operations of AI query retrieval and indexing systems.",
+      "evidence_event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ]
+    },
+    {
+      "actor": "ChatGPT",
+      "direction": "Classifying generative AI chat tools as search engines establishes a major regulatory precedent that extends European search governance directly into the operations of AI query retrieval and indexing systems.",
+      "evidence_event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ]
+    },
+    {
+      "actor": "Reddit",
+      "direction": "Classifying generative AI chat tools as search engines establishes a major regulatory precedent that extends European search governance directly into the operations of AI query retrieval and indexing systems.",
+      "evidence_event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ]
+    },
+    {
+      "actor": "Roblox",
+      "direction": "Classifying generative AI chat tools as search engines establishes a major regulatory precedent that extends European search governance directly into the operations of AI query retrieval and indexing systems.",
+      "evidence_event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ]
+    },
+    {
+      "actor": "IETF",
+      "direction": "As web publishers struggle with scraping volume and bot spoofing, a standardized cryptographic authentication protocol under active IETF development provides a path toward verifiable, accountable crawler identification at scale.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ]
+    },
+    {
+      "actor": "IETF Web Bot Auth Working Group",
+      "direction": "As web publishers struggle with scraping volume and bot spoofing, a standardized cryptographic authentication protocol under active IETF development provides a path toward verifiable, accountable crawler identification at scale.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ]
+    },
+    {
+      "actor": "Apple",
+      "direction": "As platforms expand generative AI features, web publishers frequently worry that opting out of model training may invisibly penalize their search distribution. Apple's documented commitment ensures crawler governance decisions remain strictly partitioned from search ranking.",
+      "evidence_event_ids": [
+        "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
+      ]
+    },
+    {
+      "actor": "Cloudflare",
+      "direction": "As cryptographic bot verification moves into high-volume edge infrastructure, micro-optimizations in key parsing and signature evaluation are necessary to make cryptographic crawler verification practical at production scale.",
+      "evidence_event_ids": [
+        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make litigation-legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make licensing-monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make asset-rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make measurement-economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "eu-commission-digital",
+      "tier": "primary",
+      "event_ids": [
+        "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ],
+      "latest_event_date": "2026-08-31T07:28:03Z"
+    },
+    {
+      "source": "ietf-webbotauth-wg",
+      "tier": "primary",
+      "event_ids": [
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ],
+      "latest_event_date": "2026-09-02T12:35:00.275423Z"
+    },
+    {
+      "source": "applebot-extended",
+      "tier": "primary",
+      "event_ids": [
+        "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
+      ],
+      "latest_event_date": "2026-09-05T11:40:15.257245Z"
+    },
+    {
+      "source": "web-bot-auth-repo",
+      "tier": "primary",
+      "event_ids": [
+        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+      ],
+      "latest_event_date": "2026-08-31T16:22:52Z"
+    }
+  ],
+  "model_generated": true
+}
