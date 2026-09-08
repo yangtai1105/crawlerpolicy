@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--ca5953dde9f341d3",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1798",
+  "supporting_urls": [],
+  "published_at": "2026-09-07T22:00:00Z",
+  "detected_at": "2026-09-08T12:38:46.623829Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--ca5953dde9f341d3.json",
+  "content_hash": "sha256:a4551c1cc6cec0f8455fd2a7e789c50abd8b65a05447d2deb0cf804ed423dcaa",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1798",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission approves €400 million German State aid to enhance insulin supply resilience",
+  "content": "European Commission Press release Brussels, 08 Sep 2026 The European Commission has approved, under EU State aid rules, a €400 million German measure in favour of Sanofi-Aventis Deutschland GmbH ('Sanofi') to strengthen the resilience of the supply of human insulin and insulin analogues ('insulins'). Under the measure, Germany will pay Sanofi a public service compensation to provide a service of general economic interest ('SGEI').",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

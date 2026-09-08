@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-07T14:00:29.167241Z",
+  "last_attempted_at": "2026-09-08T12:38:46.623829Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -50,9 +50,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "claudebot--50dda8bd5c6a00aa"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -172,7 +170,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--84f1412b691903c5",
+        "uk-cma--9b95f759d8f4e367"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -203,12 +204,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--3b3c808c2b3887e9",
-        "eu-commission-digital--cad000d32e9a8ec3",
-        "eu-commission-digital--0c9ca55034289543",
-        "eu-commission-digital--5526f1a3c50dd192",
-        "eu-commission-digital--ca526cf888ca94a4",
-        "eu-commission-digital--d1f3bb18a859291a"
+        "eu-commission-digital--443ecf79c4ed935d",
+        "eu-commission-digital--5bc8719e68c83f25",
+        "eu-commission-digital--da8f0389ee71b99a",
+        "eu-commission-digital--9a065e4edb1e80d4",
+        "eu-commission-digital--ca5953dde9f341d3",
+        "eu-commission-digital--b0d5ce91bd8a4b57",
+        "eu-commission-digital--70b6c59d3f4a7f22"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -279,9 +281,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--a3d886bee7a771da"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -446,9 +446,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-09-07",
+    "edition_date": "2026-09-08",
     "item_count": 0,
-    "path": "data/daily/2026-09-07.json"
+    "path": "data/daily/2026-09-08.json"
   },
   "insight_threads": {
     "thread_count": 32,
