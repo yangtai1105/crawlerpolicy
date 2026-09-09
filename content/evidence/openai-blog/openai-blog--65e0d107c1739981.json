@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--65e0d107c1739981",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/the-work-now-within-reach",
+  "supporting_urls": [],
+  "published_at": "2026-09-08T13:00:00Z",
+  "detected_at": "2026-09-09T12:45:33.251712Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--65e0d107c1739981.json",
+  "content_hash": "sha256:455cbcb394534fa38d4bea630050a7f1289256404172220b7f8e3d6c8ac9f21a",
+  "external_id": "https://openai.com/index/the-work-now-within-reach",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The Work Now Within Reach",
+  "content": "Explore how more capable, affordable AI can expand the work people and businesses can accomplish—and make growth more economical.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

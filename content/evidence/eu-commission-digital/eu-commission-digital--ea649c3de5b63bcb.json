@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--ea649c3de5b63bcb",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1810",
+  "supporting_urls": [],
+  "published_at": "2026-09-08T22:00:00Z",
+  "detected_at": "2026-09-09T12:45:33.251712Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--ea649c3de5b63bcb.json",
+  "content_hash": "sha256:3c10011d67f34535cee2a9441055b3f16c930a20ead37cf633c1932d7d28d4fc",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1810",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission proposes new European Innovation Act to help innovative European ideas grow and compete globally",
+  "content": "European Commission Press release Brussels, 09 Sep 2026 Today, the Commission proposed a new European Innovation Act to help Europe's most innovative ideas be developed, financed and scaled up in Europe.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

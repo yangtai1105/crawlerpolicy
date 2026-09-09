@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--2c50342c51f0f225",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_1824",
+  "supporting_urls": [],
+  "published_at": "2026-09-09T07:51:57Z",
+  "detected_at": "2026-09-09T12:45:33.251712Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--2c50342c51f0f225.json",
+  "content_hash": "sha256:febe34a4250b7d26b6f6b378b786d3b2662beb5a4b18f7e92d23ef13bf2b8566",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_1824",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "President von der Leyen reaffirms Europe's choice to be present and engaged in the Arctic and in Greenland during visit to Nuuk",
+  "content": "European Commission News Brussels, 09 Sep 2026 \nTwo years after her first visit, President von der Leyen visited Nuuk, reaffirming the EU's commitment to be present in Greenland. The President was hosted by ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

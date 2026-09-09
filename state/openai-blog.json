@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-09-08T12:38:46.623829+00:00",
-  "last_fetch_succeeded_at": "2026-09-08T12:38:46.623829+00:00",
-  "last_evidence_at": "2026-09-07T14:00:29.167241+00:00",
+  "last_checked_at": "2026-09-09T12:45:33.251712+00:00",
+  "last_fetch_succeeded_at": "2026-09-09T12:45:33.251712+00:00",
+  "last_evidence_at": "2026-09-09T12:45:33.251712+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/frontier-ai-regulation",
-    "https://openai.com/index/insights-from-global-conversations",
     "https://openai.com/index/introducing-openai-london",
     "https://openai.com/global-affairs/testimony-of-sam-altman-before-the-us-senate",
     "https://openai.com/global-affairs/sam-altman-senate-questions-for-the-record",
@@ -503,7 +501,9 @@
     "https://openai.com/index/election-safeguards-2026",
     "https://openai.com/index/ai-native-company-workflows",
     "https://openai.com/index/daybreak-for-frontline-defenders",
-    "https://openai.com/index/supporting-independent-journalism-in-ukraine"
+    "https://openai.com/index/supporting-independent-journalism-in-ukraine",
+    "https://openai.com/index/codex-quantum-computing-experiments",
+    "https://openai.com/index/the-work-now-within-reach"
   ],
   "consecutive_failures": 0,
   "first_seen": false

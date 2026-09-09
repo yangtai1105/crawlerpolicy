@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-08T12:38:46.623829Z",
+  "last_attempted_at": "2026-09-09T12:45:33.251712Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,7 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--57bb218fb6b5908b"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -160,9 +162,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--8ca94293088d73bb"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-09-08-datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat.md"
+      ]
     },
     "uk-cma": {
       "fetch": "ok",
@@ -171,8 +177,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--84f1412b691903c5",
-        "uk-cma--9b95f759d8f4e367"
+        "uk-cma--0ab8ebc183e3c6b8"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -204,13 +209,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--443ecf79c4ed935d",
-        "eu-commission-digital--5bc8719e68c83f25",
-        "eu-commission-digital--da8f0389ee71b99a",
-        "eu-commission-digital--9a065e4edb1e80d4",
-        "eu-commission-digital--ca5953dde9f341d3",
-        "eu-commission-digital--b0d5ce91bd8a4b57",
-        "eu-commission-digital--70b6c59d3f4a7f22"
+        "eu-commission-digital--04b18615d27fdfcb",
+        "eu-commission-digital--a72dd1c315ef52be",
+        "eu-commission-digital--2c50342c51f0f225",
+        "eu-commission-digital--3f2dcc7879587e5e",
+        "eu-commission-digital--513aac0c575836ca",
+        "eu-commission-digital--bd712ef48add0f81",
+        "eu-commission-digital--d029d50ada6e7629",
+        "eu-commission-digital--ea649c3de5b63bcb",
+        "eu-commission-digital--c0d6f991c6c7609f",
+        "eu-commission-digital--f027a692ba7d6f0e"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -271,7 +279,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-research--c429d2aebe7431dc"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -281,7 +291,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--7ac24388aa7c581a",
+        "openai-blog--65e0d107c1739981"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -437,7 +450,9 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [],
+  "feed_items_written": [
+    "content/feed/2026-09-08-datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -445,13 +460,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-09-08",
-    "item_count": 0,
-    "path": "data/daily/2026-09-08.json"
+    "status": "published",
+    "edition_date": "2026-09-09",
+    "item_count": 1,
+    "path": "data/daily/2026-09-09.json"
   },
   "insight_threads": {
-    "thread_count": 32,
+    "thread_count": 35,
     "path": "data/insight-threads.json"
   },
   "discovery": {

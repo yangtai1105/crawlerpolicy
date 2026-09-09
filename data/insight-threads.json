@@ -62,6 +62,19 @@
       ]
     },
     {
+      "key": "agentic-commerce-readiness",
+      "title": "Agentic Commerce Readiness",
+      "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-09T12:45:33.251712Z",
+      "last_updated_at": "2026-09-09T12:45:33.251712Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-rag-integrations",
       "title": "Agentic Rag Integrations",
       "thesis": "Edge and infrastructure providers are formalizing retrieval-augmented generation (RAG) and search discovery tools into modular SDK adapters, lowering friction for autonomous agent loops to query proprietary indexed knowledge bases directly without custom REST plumbing.",
@@ -75,6 +88,19 @@
       "verified_development_slugs": [
         "cloudflare-adds-ai-search-integrations-for-vercel-ai-sdk-langchain-and-agents-sd"
       ]
+    },
+    {
+      "key": "ai-agent-governance",
+      "title": "AI Agent Governance",
+      "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-09T12:45:33.251712Z",
+      "last_updated_at": "2026-09-09T12:45:33.251712Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "ai-gateway-observability",
@@ -214,15 +240,16 @@
     {
       "key": "cryptographic-bot-authentication",
       "title": "Cryptographic Bot Authentication",
-      "thesis": "High-throughput cryptographic verification of bot signatures at the network edge creates cumulative latency bottlenecks if keys are parsed dynamically on every request rather than pre-decompressed at ingestion.",
+      "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
       "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-08-30T05:51:00.726967Z",
-      "last_updated_at": "2026-09-01T13:08:58.830967Z",
+      "last_updated_at": "2026-09-09T12:45:33.251712Z",
       "related_feed_slugs": [
         "web-bot-auth-repo-cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks",
         "web-bot-auth-repo-web-bot-auth-rust-verifier-hardened-against-future-dated-signatures",
-        "web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+        "web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo",
+        "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat"
       ],
       "verified_development_slugs": [
         "cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks",
@@ -424,6 +451,19 @@
       "verified_development_slugs": [
         "cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-"
       ]
+    },
+    {
+      "key": "mcp-server-security",
+      "title": "MCP Server Security",
+      "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-09T12:45:33.251712Z",
+      "last_updated_at": "2026-09-09T12:45:33.251712Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "multi-language-reference-implementation-parity",

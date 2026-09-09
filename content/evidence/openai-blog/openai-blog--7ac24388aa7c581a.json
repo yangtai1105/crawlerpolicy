@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--7ac24388aa7c581a",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/codex-quantum-computing-experiments",
+  "supporting_urls": [],
+  "published_at": "2026-09-08T17:00:00Z",
+  "detected_at": "2026-09-09T12:45:33.251712Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--7ac24388aa7c581a.json",
+  "content_hash": "sha256:de14aa574644e862895a7973a2a88dae79c383d09dbae8e1c1070e991ee59f84",
+  "external_id": "https://openai.com/index/codex-quantum-computing-experiments",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How GPT-5.6 Sol helps run quantum computing experiments",
+  "content": "See how an MIT researcher uses GPT-5.6 Sol with Codex to autonomously run quantum computing experiments, analyze results, and calibrate qubits.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
