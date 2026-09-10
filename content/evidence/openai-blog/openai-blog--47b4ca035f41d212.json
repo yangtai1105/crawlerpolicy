@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--47b4ca035f41d212",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+  "supporting_urls": [],
+  "published_at": "2026-09-09T17:00:00Z",
+  "detected_at": "2026-09-10T12:43:41.281330Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--47b4ca035f41d212.json",
+  "content_hash": "sha256:ee9024d18999f55c175decf5feb209a6dcdd6df004f9b3f4c30876b36cebe882",
+  "external_id": "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Paul Christiano joins OpenAI Foundation Board",
+  "content": "Paul Christiano joins the OpenAI Foundation Board and its Safety and Security Committee, bringing experience in AI alignment, safety, and standards.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

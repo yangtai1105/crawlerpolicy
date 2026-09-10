@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--877098a5fadceedf",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1839",
+  "supporting_urls": [],
+  "published_at": "2026-09-10T09:48:02Z",
+  "detected_at": "2026-09-10T12:43:41.281330Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--877098a5fadceedf.json",
+  "content_hash": "sha256:bd464f731a14c4d46fda28db509f282b8c71255b8e712a0fc2fd7174dd7d350c",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1839",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by Commissioner Kubilius at the International Space Summit",
+  "content": "European Commission Speech Paris, 10 Sep 2026 Your Excellencies,\nLadies and Gentlemen,\nFirst, I thank our hosts.\nThank you President Macron, minister Vautrin.\nThank you for putting Space where it belongs: o...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

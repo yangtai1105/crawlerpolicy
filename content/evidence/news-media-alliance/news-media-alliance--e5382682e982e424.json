@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--e5382682e982e424",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/new-canadian-tariffs-announced/",
+  "supporting_urls": [],
+  "published_at": "2026-09-09T18:04:48Z",
+  "detected_at": "2026-09-10T12:43:41.281330Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--e5382682e982e424.json",
+  "content_hash": "sha256:07bf52d3f5d61679715c1fd2fdec113173584baa3c2384709bcd3ae0fdcaef2c",
+  "external_id": "https://www.newsmediaalliance.org/?p=18661",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "New Canadian Tariffs Announced",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"401\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2017/09/Newspaper-mail-slot-WEB.png\" width=\"800\" /></p>Section 338 authorizes the President to exclude articles of a foreign country from importation where that country maintains or increases discrimination against U.S. commerce, and the President deems exclusion consistent with the public interest and the interests of the United States.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

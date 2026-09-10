@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-09T12:45:33.251712Z",
+  "last_attempted_at": "2026-09-10T12:43:41.281330Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -50,7 +50,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "claudebot--66d23fc444f70f3f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -151,7 +153,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--57bb218fb6b5908b"
+        "cloudflare-blog--8cee70580a174b41"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -162,13 +164,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--8ca94293088d73bb"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-08-datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -177,7 +175,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--0ab8ebc183e3c6b8"
+        "uk-cma--9dca518243a89cee",
+        "uk-cma--223ee29b36b71adf",
+        "uk-cma--8c2e29452e7fa27f",
+        "uk-cma--9f77f9f14ecfc4ee",
+        "uk-cma--531d4d84ba39761a",
+        "uk-cma--1e9aac5f2b9fcd45"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -209,16 +212,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--04b18615d27fdfcb",
-        "eu-commission-digital--a72dd1c315ef52be",
-        "eu-commission-digital--2c50342c51f0f225",
-        "eu-commission-digital--3f2dcc7879587e5e",
-        "eu-commission-digital--513aac0c575836ca",
-        "eu-commission-digital--bd712ef48add0f81",
-        "eu-commission-digital--d029d50ada6e7629",
-        "eu-commission-digital--ea649c3de5b63bcb",
-        "eu-commission-digital--c0d6f991c6c7609f",
-        "eu-commission-digital--f027a692ba7d6f0e"
+        "eu-commission-digital--184b9881736d9799",
+        "eu-commission-digital--532cbfe3bd8da9cd",
+        "eu-commission-digital--877098a5fadceedf",
+        "eu-commission-digital--c3d4b315587992cc",
+        "eu-commission-digital--cbfe70d126b1adcd",
+        "eu-commission-digital--da80b1619dced829",
+        "eu-commission-digital--8818d667e61c1832",
+        "eu-commission-digital--86433de0008dd7b6",
+        "eu-commission-digital--200b3ee3211e15cb"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -239,7 +241,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--e5382682e982e424"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -279,9 +283,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-research--c429d2aebe7431dc"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -292,8 +294,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--7ac24388aa7c581a",
-        "openai-blog--65e0d107c1739981"
+        "openai-blog--eaf73c95c2716565",
+        "openai-blog--47b4ca035f41d212"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -450,9 +452,7 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [
-    "content/feed/2026-09-08-datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat.md"
-  ],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -460,10 +460,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-09-09",
-    "item_count": 1,
-    "path": "data/daily/2026-09-09.json"
+    "status": "quiet",
+    "edition_date": "2026-09-10",
+    "item_count": 0,
+    "path": "data/daily/2026-09-10.json"
   },
   "insight_threads": {
     "thread_count": 35,

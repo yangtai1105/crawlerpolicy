@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--eaf73c95c2716565",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/ai-policy-window",
+  "supporting_urls": [],
+  "published_at": "2026-09-09T13:00:00Z",
+  "detected_at": "2026-09-10T12:43:41.281330Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--eaf73c95c2716565.json",
+  "content_hash": "sha256:8a197542e3b2afd70b634594e89b29d89a33d33270b364da89563b4c309e2c17",
+  "external_id": "https://openai.com/index/ai-policy-window",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The AI policy window is open. We need to act.",
+  "content": "Chris Lehane argues that stronger AI capabilities require stronger safety evidence, shared standards, and durable policy action while the policy window remains open.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
