@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--eb9e3875aeb7c24e",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/144",
+  "supporting_urls": [],
+  "published_at": "2026-09-10T20:13:23Z",
+  "detected_at": "2026-09-11T12:38:01.191471Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--eb9e3875aeb7c24e.json",
+  "content_hash": "sha256:c97564796385e41e8308d473ced73a033a015981fcc3ab7f540da2646059184b",
+  "external_id": "pr:144",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #144: Add collision-safe KeyRing rename API",
+  "content": "## 1. Purpose\n\n`KeyRing::rename_key` returns a boolean, so callers cannot distinguish a missing source key from an occupied destination. Its legacy remove-then-insert behavior can also replace the destination before reporting failure.\n\nThis PR adds a fallible rename API that reports each failure explicitly while retaining the existing method for compatibility.\n\n## 2. Implementation\n\n`crates/web-bot-auth/src/keyring.rs` adds:\n\n- `OperationError::KeyNotPresent` when the source identifier is absent.\n- `OperationError::KeyOccupied` when the destination identifier is already present.\n- `try_rename_key`, returning `Result<(), OperationError>`.\n\n`try_rename_key` checks source absence first, then destination occupancy, then identifier equality. Otherwise it removes the existing `KeyEntry` and assigns it to the new identifier.\n\nThe existing `rename_key` implementation remains independent and is deprecated since `0.7.1`, with a warning that it does not safely handle destination conflicts.\n\n## 3. Behavior\n\nThe new API behaves as follows:\n\n- A missing source returns `Err(OperationError::KeyNotPresent)`.\n- An occupied destination returns `Err(OperationError::KeyOccupied)` and preserves both keys.\n- A free destination receives the existing `KeyEntry`, including its prepared verification state.\n\nThe legacy `rename_key` signature and behavior remain available during the deprecation period.\n\n## 4. Tests\n\nThe Rust tests cover:\n\n- Preserving both entries after a `KeyOccupied` result.\n- `KeyNotPresent` taking precedence when the source is absent.\n- Error precedence when both identifiers are the same.\n- Successful rename verification with the prepared key state intact.\n\nInternal test call sites use `try_rename_key`, avoiding deprecation warnings.\n\n## 5. Review Guide\n\nReview `crates/web-bot-auth/src/keyring.rs`:\n\n- Confirm the requested error precedence in `try_rename_key`.\n- Confirm destination collisions return before mutation.\n- Confirm the final move relies on the preceding invariants without assertions.\n- Confirm deprecated `rename_key` retains its legacy implementation and records `0.7.1`.\n\nReview `crates/web-bot-auth/src/message_signatures.rs`:\n\n- Confirm the existing successful-rename verification test uses `try_rename_key`.\n\n## 6. Risk\n\nThe new API is additive. The existing method remains callable with unchanged behavior, but now emits a deprecation warning.\n\nThis PR does not change key import, lookup, JWK handling, prepared-key construction, or signature verification.\n\n## 7. Validation\n\nThe following commands passed:\n\n- `cargo test -p web-bot-auth --all-features` (41 tests plus doc-tests)\n- `cargo clippy -p web-bot-auth --all-features --all-targets -- -D warnings`\n- `cargo fmt --all -- --check`\n- `git diff --check`\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

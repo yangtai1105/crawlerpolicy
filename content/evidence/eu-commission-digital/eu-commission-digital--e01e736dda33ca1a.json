@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--e01e736dda33ca1a",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1829",
+  "supporting_urls": [],
+  "published_at": "2026-09-10T22:00:00Z",
+  "detected_at": "2026-09-11T12:38:01.191471Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--e01e736dda33ca1a.json",
+  "content_hash": "sha256:9e4fb6cbe22315ecb1b112e4174757d100b209264b2bd220429171dfa8a64353",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1829",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission approves €6.1 billion to support Ukraine's air and missile defence and other defence needs",
+  "content": "European Commission Press release Brussels, 11 Sep 2026 Today, the European Commission has approved an additional €6.1 billion for Ukraine to procure different defence products in the field of air and missile defence, ammunition, drones and electronic warfare.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

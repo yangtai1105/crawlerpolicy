@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-09-10T12:43:41.281330+00:00",
-  "last_fetch_succeeded_at": "2026-09-10T12:43:41.281330+00:00",
-  "last_evidence_at": "2026-09-10T12:43:41.281330+00:00",
+  "last_checked_at": "2026-09-11T12:38:01.191471+00:00",
+  "last_fetch_succeeded_at": "2026-09-11T12:38:01.191471+00:00",
+  "last_evidence_at": "2026-09-11T12:38:01.191471+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/global-affairs/sam-altman-senate-questions-for-the-record",
-    "https://openai.com/index/function-calling-and-other-api-updates",
     "https://openai.com/global-affairs/comment-on-ntia-ai-accountability-policy",
     "https://openai.com/index/openai-cybersecurity-grant-program",
     "https://openai.com/index/improving-mathematical-reasoning-with-process-supervision",
@@ -503,7 +501,9 @@
     "https://openai.com/index/codex-quantum-computing-experiments",
     "https://openai.com/index/the-work-now-within-reach",
     "https://openai.com/index/ai-policy-window",
-    "https://openai.com/index/paul-christiano-joins-openai-foundation-board"
+    "https://openai.com/index/paul-christiano-joins-openai-foundation-board",
+    "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+    "https://openai.com/index/put-data-to-work"
   ],
   "consecutive_failures": 0,
   "first_seen": false

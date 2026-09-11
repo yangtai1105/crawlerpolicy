@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--a8c3c4b1c31d5eea",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+  "supporting_urls": [],
+  "published_at": "2026-09-10T16:00:00Z",
+  "detected_at": "2026-09-11T12:38:01.191471Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--a8c3c4b1c31d5eea.json",
+  "content_hash": "sha256:5de646b3ab370caa077a7cdc3e9b4bdea68367c77b722277fb1a8cd8815c67c5",
+  "external_id": "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How a researcher uses Codex and ChatGPT to search for new antimicrobial molecules",
+  "content": "César de la Fuente’s lab uses Codex and ChatGPT to search living and extinct genomes for antimicrobial candidates to fight drug-resistant infections.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

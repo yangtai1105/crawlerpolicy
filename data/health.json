@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-10T12:43:41.281330Z",
+  "last_attempted_at": "2026-09-11T12:38:01.191471Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -51,7 +51,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "claudebot--66d23fc444f70f3f"
+        "claudebot--f766fe2a0e5b34d6"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -153,7 +153,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--8cee70580a174b41"
+        "cloudflare-blog--be77068aac6c5d93"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -164,9 +164,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--9a96b94c624592fd"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-09-10-datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks.md"
+      ]
     },
     "uk-cma": {
       "fetch": "ok",
@@ -175,12 +179,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--9dca518243a89cee",
-        "uk-cma--223ee29b36b71adf",
-        "uk-cma--8c2e29452e7fa27f",
-        "uk-cma--9f77f9f14ecfc4ee",
-        "uk-cma--531d4d84ba39761a",
-        "uk-cma--1e9aac5f2b9fcd45"
+        "uk-cma--1e1c554fd58fc5fa",
+        "uk-cma--b0ccfd3280d0b079",
+        "uk-cma--d4cae6c0f30260a0"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -212,15 +213,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--184b9881736d9799",
-        "eu-commission-digital--532cbfe3bd8da9cd",
-        "eu-commission-digital--877098a5fadceedf",
-        "eu-commission-digital--c3d4b315587992cc",
-        "eu-commission-digital--cbfe70d126b1adcd",
-        "eu-commission-digital--da80b1619dced829",
-        "eu-commission-digital--8818d667e61c1832",
-        "eu-commission-digital--86433de0008dd7b6",
-        "eu-commission-digital--200b3ee3211e15cb"
+        "eu-commission-digital--fbaef69809634be9",
+        "eu-commission-digital--d0a3878964d3425e",
+        "eu-commission-digital--460da4bcb6ea0ce0",
+        "eu-commission-digital--0debade95f0580d7",
+        "eu-commission-digital--e01e736dda33ca1a",
+        "eu-commission-digital--58931f65ba568773",
+        "eu-commission-digital--c1c0dcba2c28590d",
+        "eu-commission-digital--d9fa940076b88d33",
+        "eu-commission-digital--1debd020d30e8688"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -241,9 +242,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--e5382682e982e424"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -263,9 +262,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "web-bot-auth-repo--eb9e3875aeb7c24e"
+      ],
+      "events_written": [
+        "content/events/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
+      ]
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -283,7 +288,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-research--6127e096a07e3299"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -294,8 +301,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--eaf73c95c2716565",
-        "openai-blog--47b4ca035f41d212"
+        "openai-blog--a8c3c4b1c31d5eea",
+        "openai-blog--432e125e1d448c31"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -451,8 +458,13 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-09-10-datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks.md",
+    "content/feed/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -460,13 +472,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-09-10",
-    "item_count": 0,
-    "path": "data/daily/2026-09-10.json"
+    "status": "published",
+    "edition_date": "2026-09-11",
+    "item_count": 2,
+    "path": "data/daily/2026-09-11.json"
   },
   "insight_threads": {
-    "thread_count": 35,
+    "thread_count": 41,
     "path": "data/insight-threads.json"
   },
   "discovery": {

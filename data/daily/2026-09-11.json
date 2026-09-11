@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-09-11",
+  "generated_at": "2026-09-11T12:38:01.191471Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks",
+      "status": "reported",
+      "importance": 0.68,
+      "published_at": "2026-09-10T14:21:23Z"
+    },
+    {
+      "slug": "web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier",
+      "status": "verified",
+      "importance": 0.4,
+      "published_at": "2026-09-10T20:13:23Z"
+    }
+  ]
+}

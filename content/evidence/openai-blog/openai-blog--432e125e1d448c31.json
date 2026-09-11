@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--432e125e1d448c31",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/put-data-to-work",
+  "supporting_urls": [],
+  "published_at": "2026-09-10T15:00:00Z",
+  "detected_at": "2026-09-11T12:38:01.191471Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--432e125e1d448c31.json",
+  "content_hash": "sha256:7e0d43fccd20430eeec388f37f6bde346aa90195b58c9e254ecdcc7a71681bbb",
+  "external_id": "https://openai.com/index/put-data-to-work",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Now everyone can put data to work",
+  "content": "Meet the Data agent in ChatGPT Work. Connect company data, uncover insights, and build interactive dashboards with AI using natural language.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

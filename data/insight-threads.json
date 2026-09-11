@@ -133,6 +133,19 @@
       ]
     },
     {
+      "key": "behavioral-bot-detection",
+      "title": "Behavioral Bot Detection",
+      "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "bot-authentication",
       "title": "Bot Authentication",
       "thesis": "Cryptographic signature validation provides no protection against replay or request substitution if the verifier does not strictly enforce component binding to the target URI and authority.",
@@ -238,23 +251,38 @@
       ]
     },
     {
+      "key": "cryptographic-agent-authentication",
+      "title": "Cryptographic Agent Authentication",
+      "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "cryptographic-bot-authentication",
       "title": "Cryptographic Bot Authentication",
-      "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
+      "thesis": "As cryptographic bot verification libraries mature, internal state management requires defensive error propagation to prevent subtle key corruption or unexpected credential overwrites in long-running verification engines.",
       "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-08-30T05:51:00.726967Z",
-      "last_updated_at": "2026-09-09T12:45:33.251712Z",
+      "last_updated_at": "2026-09-11T12:38:01.191471Z",
       "related_feed_slugs": [
         "web-bot-auth-repo-cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks",
         "web-bot-auth-repo-web-bot-auth-rust-verifier-hardened-against-future-dated-signatures",
         "web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo",
-        "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat"
+        "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat",
+        "web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
       ],
       "verified_development_slugs": [
         "cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks",
         "web-bot-auth-rust-verifier-hardened-against-future-dated-signatures",
-        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
+        "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo",
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
       ]
     },
     {
@@ -270,6 +298,21 @@
       ],
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ]
+    },
+    {
+      "key": "defensive-key-management",
+      "title": "Defensive Key Management",
+      "thesis": "As cryptographic bot verification libraries mature, internal state management requires defensive error propagation to prevent subtle key corruption or unexpected credential overwrites in long-running verification engines.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ],
+      "verified_development_slugs": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
       ]
     },
     {
@@ -378,6 +421,19 @@
       ]
     },
     {
+      "key": "http-message-signatures",
+      "title": "Http Message Signatures",
+      "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "http-signatures",
       "title": "Http Signatures",
       "thesis": "Cryptographic signature validation provides no protection against replay or request substitution if the verifier does not strictly enforce component binding to the target URI and authority.",
@@ -406,6 +462,19 @@
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
       ]
+    },
+    {
+      "key": "know-your-agent-governance",
+      "title": "Know Your Agent Governance",
+      "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "machine-identity-verification",
@@ -493,6 +562,21 @@
       ],
       "verified_development_slugs": [
         "openai-plans-acquisition-of-ona-to-power-persistent-cloud-environments-for-codex"
+      ]
+    },
+    {
+      "key": "sdk-hardening",
+      "title": "Sdk Hardening",
+      "thesis": "As cryptographic bot verification libraries mature, internal state management requires defensive error propagation to prevent subtle key corruption or unexpected credential overwrites in long-running verification engines.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ],
+      "verified_development_slugs": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
       ]
     },
     {
