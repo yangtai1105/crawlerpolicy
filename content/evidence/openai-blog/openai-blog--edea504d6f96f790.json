@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--edea504d6f96f790",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+  "supporting_urls": [],
+  "published_at": "2026-09-14T00:00:00Z",
+  "detected_at": "2026-09-12T11:59:03.111947Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--edea504d6f96f790.json",
+  "content_hash": "sha256:a42228caaad189441381fde895f360b0c95de403d0b41a47a65dec38ef4a855c",
+  "external_id": "https://openai.com/index/perplexity-improving-accuracy-with-astra",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Perplexity trusts GPT-6 Astra with end-to-end systems",
+  "content": "Perplexity uses Astra to write communications, change software, and monitor production systems, and checks in much less frequently than with earlier models.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

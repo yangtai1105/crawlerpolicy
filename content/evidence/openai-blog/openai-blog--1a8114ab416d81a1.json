@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--1a8114ab416d81a1",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/cognition-devin-testing-with-astra",
+  "supporting_urls": [],
+  "published_at": "2026-09-11T16:00:00Z",
+  "detected_at": "2026-09-12T11:59:03.111947Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--1a8114ab416d81a1.json",
+  "content_hash": "sha256:8c241b2bedccb3e08a0ed89ef779eb1186ea96468904cabb7560dbbc3c1ad166",
+  "external_id": "https://openai.com/index/cognition-devin-testing-with-astra",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Cognition helps Devin test its own work with GPT‑6 Astra",
+  "content": "GPT‑6 Astra improves Devin’s ability to test software and show that it works, with the goal of helping engineers review less code and ship more.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

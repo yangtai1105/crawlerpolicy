@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-11T12:38:01.191471Z",
+  "last_attempted_at": "2026-09-12T11:59:03.111947Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -50,9 +50,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "claudebot--f766fe2a0e5b34d6"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -153,7 +151,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--be77068aac6c5d93"
+        "cloudflare-blog--0c8f6d6c15bab947"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -164,13 +162,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--9a96b94c624592fd"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-10-datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -178,11 +172,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--1e1c554fd58fc5fa",
-        "uk-cma--b0ccfd3280d0b079",
-        "uk-cma--d4cae6c0f30260a0"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -213,15 +203,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--fbaef69809634be9",
-        "eu-commission-digital--d0a3878964d3425e",
-        "eu-commission-digital--460da4bcb6ea0ce0",
-        "eu-commission-digital--0debade95f0580d7",
-        "eu-commission-digital--e01e736dda33ca1a",
-        "eu-commission-digital--58931f65ba568773",
-        "eu-commission-digital--c1c0dcba2c28590d",
-        "eu-commission-digital--d9fa940076b88d33",
-        "eu-commission-digital--1debd020d30e8688"
+        "eu-commission-digital--0d3f75dad4e2c1c0"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -262,15 +244,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--eb9e3875aeb7c24e"
-      ],
-      "events_written": [
-        "content/events/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -288,9 +264,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-research--6127e096a07e3299"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -301,8 +275,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--a8c3c4b1c31d5eea",
-        "openai-blog--432e125e1d448c31"
+        "openai-blog--edea504d6f96f790",
+        "openai-blog--1a8114ab416d81a1"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -458,13 +432,8 @@
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
-  ],
-  "feed_items_written": [
-    "content/feed/2026-09-10-datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks.md",
-    "content/feed/2026-09-10-web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier.md"
-  ],
+  "events_written": [],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -472,10 +441,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-09-11",
-    "item_count": 2,
-    "path": "data/daily/2026-09-11.json"
+    "status": "quiet",
+    "edition_date": "2026-09-12",
+    "item_count": 0,
+    "path": "data/daily/2026-09-12.json"
   },
   "insight_threads": {
     "thread_count": 41,

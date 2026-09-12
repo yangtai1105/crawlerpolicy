@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--0d3f75dad4e2c1c0",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1862",
+  "supporting_urls": [],
+  "published_at": "2026-09-11T15:34:00Z",
+  "detected_at": "2026-09-12T11:59:03.111947Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--0d3f75dad4e2c1c0.json",
+  "content_hash": "sha256:854978586e16cd69f6a0100a5490c0d40f028035e2c6b695bea5c41b54a0ba79",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1862",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Press Remarks by Commissioner Lahbib in Moldova",
+  "content": "European Commission Speech Chișinău, 11 Sep 2026 This is my first visit to Moldova as Commissioner, and it comes at a pivotal moment. You are moving forward on your path towards the European Union, and the EU ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
