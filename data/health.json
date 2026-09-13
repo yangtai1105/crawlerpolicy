@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-12T11:59:03.111947Z",
+  "last_attempted_at": "2026-09-13T13:07:46.407700Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,9 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--0c8f6d6c15bab947"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -202,9 +200,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--0d3f75dad4e2c1c0"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -274,10 +270,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--edea504d6f96f790",
-        "openai-blog--1a8114ab416d81a1"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -317,7 +310,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ietf-webbotauth-wg--557747cdb774a478"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -442,9 +437,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-09-12",
+    "edition_date": "2026-09-13",
     "item_count": 0,
-    "path": "data/daily/2026-09-12.json"
+    "path": "data/daily/2026-09-13.json"
   },
   "insight_threads": {
     "thread_count": 41,
