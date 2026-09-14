@@ -1,0 +1,149 @@
+{
+  "schema_version": 1,
+  "week": "2026-W37",
+  "generated_at": "2026-09-14T18:21:07.482638Z",
+  "window_start": "2026-09-07",
+  "window_end": "2026-09-13",
+  "health_status": "degraded",
+  "coverage": {
+    "configured": 39,
+    "completed": 34,
+    "fetched": 34,
+    "analyzed": 34,
+    "published": 34,
+    "failed": 5,
+    "required_failed": 0
+  },
+  "thesis": "Reference implementations for automated agent authentication are tightening cryptographic key safety to prevent silent state overwrites during runtime key rotation.",
+  "executive_shifts": [
+    {
+      "headline": "Cloudflare Web Bot Auth replaces unsafe key renaming API",
+      "summary": "Pull request #144 introduces the fallible `try_rename_key` API to distinguish between missing source keys and occupied destination slots, deprecating `rename_key` to avoid destination collision issues during runtime keyring updates.",
+      "evidence_event_ids": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "crawler-controls",
+      "material_change": true,
+      "event_ids": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "agentic-web",
+      "material_change": true,
+      "event_ids": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "Cloudflare has updated its Web Bot Auth Rust reference verifier to version 0.7.1, introducing a fallible key renaming API that prevents unintended overwrites and improves error handling during keyring state transitions.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "Cloudflare",
+      "direction": "Cryptographic authentication for automated agents depends on robust, crash-free key management; ensuring keyring state transitions fail explicitly protects web hosts from silent key replacement errors during key rotation.",
+      "evidence_event_ids": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make policy-regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make litigation-legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make search-discovery materially change?",
+      "tracks": [
+        "search-discovery"
+      ]
+    },
+    {
+      "question": "What primary evidence would make licensing-monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make asset-rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make measurement-economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "web-bot-auth-repo",
+      "tier": "primary",
+      "event_ids": [
+        "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+      ],
+      "latest_event_date": "2026-09-10T20:13:23Z"
+    }
+  ],
+  "model_generated": true
+}
