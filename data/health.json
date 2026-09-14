@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-13T13:07:46.407700Z",
+  "last_attempted_at": "2026-09-14T14:45:50.676329Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -170,7 +170,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--26845be8af7fad5e"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -200,7 +202,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--4c44f86413120de6",
+        "eu-commission-digital--0ae20dcd6e2cdd02",
+        "eu-commission-digital--92a0b897ea6ec2d8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -310,9 +316,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--557747cdb774a478"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -372,7 +376,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--4ffea144a11d9c79"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -437,9 +443,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-09-13",
+    "edition_date": "2026-09-14",
     "item_count": 0,
-    "path": "data/daily/2026-09-13.json"
+    "path": "data/daily/2026-09-14.json"
   },
   "insight_threads": {
     "thread_count": 41,
