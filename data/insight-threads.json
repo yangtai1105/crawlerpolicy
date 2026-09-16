@@ -221,6 +221,21 @@
       ]
     },
     {
+      "key": "crawler-accountability-frameworks",
+      "title": "Crawler Accountability Frameworks",
+      "thesis": "By introducing an 'Accountable' crawler classification in partnership with major search operators (Apple, Google, Microsoft), Cloudflare is attempting to resolve the long-standing tension between mixed-use search indexers and AI training scrapers through coordinated granular controls rather than binary site blocking.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-16T13:10:48.105175Z",
+      "last_updated_at": "2026-09-16T13:10:48.105175Z",
+      "related_feed_slugs": [
+        "cloudflare-radar-ai-insights-cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    },
+    {
       "key": "crawler-opt-out-safeguards",
       "title": "Crawler Opt Out Safeguards",
       "thesis": "The addition formalizes an explicit policy boundary between AI model training opt-outs and core search indexing algorithms, countering concerns that withholding training data might degrade search discovery.",
@@ -535,6 +550,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "mixed-use-crawler-disentanglement",
+      "title": "Mixed Use Crawler Disentanglement",
+      "thesis": "By introducing an 'Accountable' crawler classification in partnership with major search operators (Apple, Google, Microsoft), Cloudflare is attempting to resolve the long-standing tension between mixed-use search indexers and AI training scrapers through coordinated granular controls rather than binary site blocking.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-16T13:10:48.105175Z",
+      "last_updated_at": "2026-09-16T13:10:48.105175Z",
+      "related_feed_slugs": [
+        "cloudflare-radar-ai-insights-cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    },
+    {
       "key": "multi-language-reference-implementation-parity",
       "title": "Multi Language Reference Implementation Parity",
       "thesis": "Protocol parity across multiple language reference implementations is critical for authentication standards; divergent validation sequences between Rust and TypeScript created an edge-case discrepancy where compromised keys could use forward-skewed creation times.",
@@ -592,6 +622,21 @@
       ],
       "verified_development_slugs": [
         "cloudflare-adds-ai-search-integrations-for-vercel-ai-sdk-langchain-and-agents-sd"
+      ]
+    },
+    {
+      "key": "search-vs-ai-training-opt-out-bifurcation",
+      "title": "Search Vs AI Training Opt Out Bifurcation",
+      "thesis": "By introducing an 'Accountable' crawler classification in partnership with major search operators (Apple, Google, Microsoft), Cloudflare is attempting to resolve the long-standing tension between mixed-use search indexers and AI training scrapers through coordinated granular controls rather than binary site blocking.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-16T13:10:48.105175Z",
+      "last_updated_at": "2026-09-16T13:10:48.105175Z",
+      "related_feed_slugs": [
+        "cloudflare-radar-ai-insights-cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
       ]
     },
     {

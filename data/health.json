@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-15T13:09:56.967116Z",
+  "last_attempted_at": "2026-09-16T13:10:48.105175Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -171,10 +171,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--cd2291dcf3000761",
-        "uk-cma--27456bd68aea9c05",
-        "uk-cma--57bcc6f503b729b6",
-        "uk-cma--f08ef9ef8729aa12"
+        "uk-cma--b9f6f4179c44ca74",
+        "uk-cma--d5ce6f9558c71de3"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -206,8 +204,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--5fbe25c23e9c338e",
-        "eu-commission-digital--beefa74f28595b74"
+        "eu-commission-digital--cb27f5f183b42d3d",
+        "eu-commission-digital--4e20c695a1ff9d97",
+        "eu-commission-digital--fe8f48221a5136c4",
+        "eu-commission-digital--e2464cb91402c423",
+        "eu-commission-digital--87028c1ab46172f8",
+        "eu-commission-digital--297afd49d6b87249",
+        "eu-commission-digital--dd20978cb8b4cfdc"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -318,7 +321,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ietf-webbotauth-wg--e47c465296bf7629"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -378,9 +383,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--bbb1ca653e82c31c"
+      ],
+      "events_written": [
+        "content/events/2026-09-16-cloudflare-radar-ai-insights-cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-09-16-cloudflare-radar-ai-insights-cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco.md"
+      ]
     },
     "x-access-discovery": {
       "fetch": "failed",
@@ -433,8 +444,12 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-09-16-cloudflare-radar-ai-insights-cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-09-16-cloudflare-radar-ai-insights-cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -442,13 +457,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-09-15",
-    "item_count": 0,
-    "path": "data/daily/2026-09-15.json"
+    "status": "published",
+    "edition_date": "2026-09-16",
+    "item_count": 1,
+    "path": "data/daily/2026-09-16.json"
   },
   "insight_threads": {
-    "thread_count": 41,
+    "thread_count": 44,
     "path": "data/insight-threads.json"
   },
   "discovery": {
