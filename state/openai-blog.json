@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-09-16T13:10:48.105175+00:00",
-  "last_fetch_succeeded_at": "2026-09-16T13:10:48.105175+00:00",
-  "last_evidence_at": "2026-09-12T11:59:03.111947+00:00",
+  "last_checked_at": "2026-09-17T13:04:42.079167+00:00",
+  "last_fetch_succeeded_at": "2026-09-17T13:04:42.079167+00:00",
+  "last_evidence_at": "2026-09-17T13:04:42.079167+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/improving-mathematical-reasoning-with-process-supervision",
-    "https://openai.com/index/democratic-inputs-to-ai",
     "https://openai.com/index/governance-of-superintelligence",
     "https://openai.com/index/introducing-the-chatgpt-app-for-ios",
     "https://openai.com/index/language-models-can-explain-neurons-in-language-models",
@@ -503,7 +501,9 @@
     "https://openai.com/index/using-codex-chatgpt-to-search-for-new-antimicrobials",
     "https://openai.com/index/put-data-to-work",
     "https://openai.com/index/perplexity-improving-accuracy-with-astra",
-    "https://openai.com/index/cognition-devin-testing-with-astra"
+    "https://openai.com/index/cognition-devin-testing-with-astra",
+    "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
+    "https://openai.com/index/model-misalignment-reporting-framework"
   ],
   "consecutive_failures": 0,
   "first_seen": false

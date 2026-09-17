@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--36e28d06edb6fcc8",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1890",
+  "supporting_urls": [],
+  "published_at": "2026-09-16T22:00:00Z",
+  "detected_at": "2026-09-17T13:04:42.079167Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--36e28d06edb6fcc8.json",
+  "content_hash": "sha256:91c0b11425508771dfced4d97091875ac8feecf50e515353f64e98b20be2cb13",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1890",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU KIDS Act to restrict social media platforms' access to children in the EU",
+  "content": "European Commission Press release Strasbourg, 17 Sep 2026 Today, the European Commission has adopted the EU KIDS Act to enhance the online safety of children throughout the Union.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

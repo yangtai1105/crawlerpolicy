@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--a87fe644e610f0cf",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/model-misalignment-reporting-framework",
+  "supporting_urls": [],
+  "published_at": "2026-09-16T17:00:00Z",
+  "detected_at": "2026-09-17T13:04:42.079167Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--a87fe644e610f0cf.json",
+  "content_hash": "sha256:22bd57692b02f313139613df5f9cdde452bbfd9ab61ef9c081d39ad1e8ed86ac",
+  "external_id": "https://openai.com/index/model-misalignment-reporting-framework",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Our framework for reporting model misalignment",
+  "content": "OpenAI shares a framework for tracking, investigating, and disclosing model misalignment, alongside six reports of unexpected or concerning model behavior.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

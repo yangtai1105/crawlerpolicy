@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--ea707409bc54a4af",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1895",
+  "supporting_urls": [],
+  "published_at": "2026-09-17T09:05:01Z",
+  "detected_at": "2026-09-17T13:04:42.079167Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--ea707409bc54a4af.json",
+  "content_hash": "sha256:03e682a8bb9f00892963bf3c8c717750ab006768dda665f794cab171fcc29415",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1895",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by Commissioner Kubilius at the signature ceremony of the Administrative Arrangement with the Republic of Korea on IRIS²",
+  "content": "European Commission Speech Brussels, 17 Sep 2026 Dear Minister,\nLadies and Gentlemen,\n \nOur security on Earth increasingly depends on our security in space. That is why we are building IRIS², a multi-orbit con...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
