@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--edb747dc14786c99",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1905",
+  "supporting_urls": [],
+  "published_at": "2026-09-18T10:53:32Z",
+  "detected_at": "2026-09-18T12:44:43.324113Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--edb747dc14786c99.json",
+  "content_hash": "sha256:1668c2e74750eddc109ad717b325d3d8afbc61f32a04e7a07a22582c2343e336",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1905",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Remarks by Commissioner Dombrovskis at Eurogroup press conference",
+  "content": "European Commission Statement Dublin, 18 Sep 2026 Thank you, Kyriakos. Good morning, everyone. It's good to be back in Dublin.\nThis week is well suited to taking stock, looking ahead, and preparing for a busy e...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b6b19a9a39a11062",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1908",
+  "supporting_urls": [],
+  "published_at": "2026-09-18T11:39:53Z",
+  "detected_at": "2026-09-18T12:44:43.324113Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b6b19a9a39a11062.json",
+  "content_hash": "sha256:8e5812e2b5aabf39d76fe2f61e298be37532f0af228574cd4f2961bf24c70c91",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1908",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by Commissioner Jørgensen at the inauguration of the Greensand CCS project",
+  "content": "European Commission Speech Esbjerg, 18 Sep 2026 Your Majesty,\nYour excellency, Sir James,\nMinister Hummelgaard, dear Peter;\nDistinguished guests,\nDear friends,\nIt is a great pleasure to be here today.\nI've ha...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-17T13:04:42.079167Z",
+  "last_attempted_at": "2026-09-18T12:44:43.324113Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,9 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--64502d9b0fbe54a2"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -172,7 +170,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--6e19aa9d397ef922",
+        "uk-cma--27c1711f254d4d43"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -203,13 +204,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--f26d32cea1f9f714",
-        "eu-commission-digital--ea707409bc54a4af",
-        "eu-commission-digital--42b6bd7fbb4b6e28",
-        "eu-commission-digital--304675b70f78501f",
-        "eu-commission-digital--bfc94f886e99df3d",
-        "eu-commission-digital--36e28d06edb6fcc8",
-        "eu-commission-digital--5f8b58b55728e3fa"
+        "eu-commission-digital--b8032c18fae279b2",
+        "eu-commission-digital--b6b19a9a39a11062",
+        "eu-commission-digital--edb747dc14786c99",
+        "eu-commission-digital--3c63abbe2a435f8a",
+        "eu-commission-digital--e8a05d77ccd3bb7f",
+        "eu-commission-digital--d86b7eb6277b22a8",
+        "eu-commission-digital--1b3e8ea1022067f1"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -230,7 +231,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--7ac87a327a105c28"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -280,10 +283,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--3676fddbe6e61766",
-        "openai-blog--a87fe644e610f0cf"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -383,7 +383,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--b1a26dd53f64acb4"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -448,9 +450,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-09-17",
+    "edition_date": "2026-09-18",
     "item_count": 0,
-    "path": "data/daily/2026-09-17.json"
+    "path": "data/daily/2026-09-18.json"
   },
   "insight_threads": {
     "thread_count": 44,

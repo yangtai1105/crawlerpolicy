@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--1b3e8ea1022067f1",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1898",
+  "supporting_urls": [],
+  "published_at": "2026-09-17T14:13:26Z",
+  "detected_at": "2026-09-18T12:44:43.324113Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--1b3e8ea1022067f1.json",
+  "content_hash": "sha256:84dd954e6a428ce29342ac46805a83e9e5679a25b02147645e1414aee808ba12",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1898",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by Executive Vice-President Teresa Ribera at Fordham's 53rd Annual Conference “Building a democratic, competitive and sustainable future for artificial intelligence”",
+  "content": "European Commission Speech Brussels, 17 Sep 2026 Thank you, James for the introduction.\nIt is good to be back in New York and at Fordham for the annual conference, one of the first major antitrust events of th...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
