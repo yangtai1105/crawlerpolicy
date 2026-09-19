@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--975fed864f73338c",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/journalism-industry-unites-in-support-of-ab-2222/",
+  "supporting_urls": [],
+  "published_at": "2026-09-18T20:39:52Z",
+  "detected_at": "2026-09-19T12:17:57.242082Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--975fed864f73338c.json",
+  "content_hash": "sha256:0b9461b89a27106975a0ea23810340973dde87541f33f923f35aa86975d0c09c",
+  "external_id": "https://www.newsmediaalliance.org/?p=18706",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Journalism Industry Unites in Support of First-of-its-Kind California Journalist Tax Credit Bill",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"2560\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2026/09/26-09-AB-2222-Support-Ad-scaled.jpg\" width=\"1249\" /></p>News publications all across California will run a full page ad declaring that the journalism industry is unified in support of AB-2222, the Community NEWS Act, a measure that would create refundable employment tax credits for qualifying local news organizations that hire and retain journalists across the state.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
