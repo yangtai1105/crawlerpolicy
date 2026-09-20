@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-19T12:17:57.242082Z",
+  "last_attempted_at": "2026-09-20T12:52:56.816894Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,9 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--d51e43da54f8f3df"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -222,9 +220,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--975fed864f73338c"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -439,9 +435,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-09-19",
+    "edition_date": "2026-09-20",
     "item_count": 0,
-    "path": "data/daily/2026-09-19.json"
+    "path": "data/daily/2026-09-20.json"
   },
   "insight_threads": {
     "thread_count": 44,
