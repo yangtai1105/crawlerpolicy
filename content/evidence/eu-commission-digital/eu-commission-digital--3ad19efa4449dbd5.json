@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--3ad19efa4449dbd5",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1904",
+  "supporting_urls": [],
+  "published_at": "2026-09-20T22:00:00Z",
+  "detected_at": "2026-09-21T14:52:36.220711Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--3ad19efa4449dbd5.json",
+  "content_hash": "sha256:5d8f093daeff79c025a67031ef8e0ad58dab39adf33d064381c57b5a9329158e",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1904",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU Customs Reform marks a new era for customs in Europe",
+  "content": "European Commission Press release Brussels, 21 Sep 2026 The EU Customs Reform has entered into force, marking the start of a better, smarter and simpler customs system across the EU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

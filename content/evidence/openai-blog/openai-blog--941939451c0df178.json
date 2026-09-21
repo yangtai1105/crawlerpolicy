@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--941939451c0df178",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/v7",
+  "supporting_urls": [],
+  "published_at": "2026-09-21T00:00:00Z",
+  "detected_at": "2026-09-21T14:52:36.220711Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--941939451c0df178.json",
+  "content_hash": "sha256:a3dbe93d4c009e4fd4cecf323a430748eda26451f411473d6074a4877bf26dba",
+  "external_id": "https://openai.com/index/v7",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How V7 gives AI agents institutional memory",
+  "content": "Using GPT-5.6, V7 turns scattered company files into context agents can use to complete complex, source-linked work.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

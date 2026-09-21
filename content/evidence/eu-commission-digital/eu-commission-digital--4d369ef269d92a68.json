@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--4d369ef269d92a68",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1667",
+  "supporting_urls": [],
+  "published_at": "2026-09-20T22:00:00Z",
+  "detected_at": "2026-09-21T14:52:36.220711Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--4d369ef269d92a68.json",
+  "content_hash": "sha256:2faaa2ccacd49dc356979192e9b481b53b977d80aa5344b96b4ba681f59d9522",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1667",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission enhances energy efficiency and sustainability of data centres in the EU",
+  "content": "European Commission Press release Brussels, 21 Sep 2026 The European Commission proposed today a common rating scheme for data centres aimed at increasing transparency on their energy use and supporting their sustainable integration into Europe's energy system.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

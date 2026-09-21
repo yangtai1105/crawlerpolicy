@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--e101aaa617b3d459",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1924",
+  "supporting_urls": [],
+  "published_at": "2026-09-21T14:00:07Z",
+  "detected_at": "2026-09-21T14:52:36.220711Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--e101aaa617b3d459.json",
+  "content_hash": "sha256:40b178a0e56e0c9c5f746d3a2afd8f668929b75c817d9e1cdba3912493a1afd9",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1924",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commissioner Roswall's speech at the Water Resilience Stakeholder Platform",
+  "content": "European Commission Speech Brussels, 21 Sep 2026 Distinguished guests, dear colleagues. \n \nThe Water Resilience Strategy is based on a simple but powerful principle – that we can never truly deliver water resi...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

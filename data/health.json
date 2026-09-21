@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-20T12:52:56.816894Z",
+  "last_attempted_at": "2026-09-21T14:52:36.220711Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,7 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--267020cad3a0d3f8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -170,7 +172,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--8cefc51fa67f1a66",
+        "uk-cma--397ed1363718a1a5",
+        "uk-cma--be662c62e431bace"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -200,7 +206,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--e101aaa617b3d459",
+        "eu-commission-digital--7f964e3d1b2d603b",
+        "eu-commission-digital--a2ca32c027096b3f",
+        "eu-commission-digital--76df5e90bb91f326",
+        "eu-commission-digital--4d369ef269d92a68",
+        "eu-commission-digital--3ad19efa4449dbd5",
+        "eu-commission-digital--a964e61cba68342f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -270,7 +284,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--941939451c0df178"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -310,7 +326,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ietf-webbotauth-wg--8eebbfb1f67a7055"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -370,7 +388,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--ce8624ea5d2bed12"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -435,9 +455,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-09-20",
+    "edition_date": "2026-09-21",
     "item_count": 0,
-    "path": "data/daily/2026-09-20.json"
+    "path": "data/daily/2026-09-21.json"
   },
   "insight_threads": {
     "thread_count": 44,

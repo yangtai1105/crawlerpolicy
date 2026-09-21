@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-09-20T12:52:56.816894+00:00",
-  "last_fetch_succeeded_at": "2026-09-20T12:52:56.816894+00:00",
-  "last_evidence_at": "2026-09-17T13:04:42.079167+00:00",
+  "last_checked_at": "2026-09-21T14:52:36.220711+00:00",
+  "last_fetch_succeeded_at": "2026-09-21T14:52:36.220711+00:00",
+  "last_evidence_at": "2026-09-21T14:52:36.220711+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/governance-of-superintelligence",
     "https://openai.com/index/introducing-the-chatgpt-app-for-ios",
     "https://openai.com/index/language-models-can-explain-neurons-in-language-models",
     "https://openai.com/index/new-ways-to-manage-your-data-in-chatgpt",
@@ -503,7 +502,8 @@
     "https://openai.com/index/perplexity-improving-accuracy-with-astra",
     "https://openai.com/index/cognition-devin-testing-with-astra",
     "https://openai.com/index/helping-older-adults-use-ai-in-everyday-life",
-    "https://openai.com/index/model-misalignment-reporting-framework"
+    "https://openai.com/index/model-misalignment-reporting-framework",
+    "https://openai.com/index/v7"
   ],
   "consecutive_failures": 0,
   "first_seen": false
