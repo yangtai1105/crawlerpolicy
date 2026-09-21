@@ -1,0 +1,170 @@
+{
+  "schema_version": 1,
+  "week": "2026-W38",
+  "generated_at": "2026-09-21T18:28:54.046773Z",
+  "window_start": "2026-09-14",
+  "window_end": "2026-09-20",
+  "health_status": "degraded",
+  "coverage": {
+    "configured": 39,
+    "completed": 34,
+    "fetched": 34,
+    "analyzed": 34,
+    "published": 34,
+    "failed": 5,
+    "required_failed": 0
+  },
+  "thesis": "Cloudflare has aligned with major search and platform providers to decouple search indexing from AI training data collection.",
+  "executive_shifts": [
+    {
+      "headline": "Cloudflare Introduces Accountable Crawl Designation for AI Training Separation",
+      "summary": "In alignment with Apple, Google, and Microsoft, Cloudflare introduced crawl controls allowing site owners to allow search engine indexing while explicitly forbidding AI model training ingestion.",
+      "evidence_event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "crawler-controls",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "agentic-web",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ],
+      "summary": "1 verified material development."
+    }
+  ],
+  "intelligence_read": "Cloudflare launched new crawl controls and an Accountable designation developed alongside Apple, Google, and Microsoft. The framework allows website publishers to preserve search engine discoverability while blocking automated data scraping for AI model training, supported by insights on Cloudflare Radar.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "Cloudflare",
+      "direction": "A persistent problem in machine access has been the bundling of search indexing and AI model training under shared user-agents; standardizing accountable separation provides web operators with enforceable control over their intellectual property without disappearing from search results.",
+      "evidence_event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    },
+    {
+      "actor": "Apple",
+      "direction": "A persistent problem in machine access has been the bundling of search indexing and AI model training under shared user-agents; standardizing accountable separation provides web operators with enforceable control over their intellectual property without disappearing from search results.",
+      "evidence_event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    },
+    {
+      "actor": "Google",
+      "direction": "A persistent problem in machine access has been the bundling of search indexing and AI model training under shared user-agents; standardizing accountable separation provides web operators with enforceable control over their intellectual property without disappearing from search results.",
+      "evidence_event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    },
+    {
+      "actor": "Microsoft",
+      "direction": "A persistent problem in machine access has been the bundling of search indexing and AI model training under shared user-agents; standardizing accountable separation provides web operators with enforceable control over their intellectual property without disappearing from search results.",
+      "evidence_event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make policy-regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make litigation-legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make agentic-web materially change?",
+      "tracks": [
+        "agentic-web"
+      ]
+    },
+    {
+      "question": "What primary evidence would make licensing-monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make standards-protocols materially change?",
+      "tracks": [
+        "standards-protocols"
+      ]
+    },
+    {
+      "question": "What primary evidence would make asset-rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "cloudflare-radar-ai-insights",
+      "tier": "measurement",
+      "event_ids": [
+        "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ],
+      "latest_event_date": "2026-09-16T13:10:48.105175Z"
+    }
+  ],
+  "model_generated": true
+}
