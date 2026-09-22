@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--0bea1ad56b1e6410",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1938",
+  "supporting_urls": [],
+  "published_at": "2026-09-22T09:26:06Z",
+  "detected_at": "2026-09-22T13:08:11.171940Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--0bea1ad56b1e6410.json",
+  "content_hash": "sha256:5da1e77e4a836009649538070093c1e7023372f089c5d3d1e87fd3ef6f409425",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1938",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Eurobarometer survey shows overwhelming public support for European agriculture and EU support for farmers and rural areas",
+  "content": "European Commission Press release Brussels, 22 Sep 2026 According to the latest Eurobarometer survey, 95% of Europeans consider agriculture and rural areas important for Europe's future, while 93% say that securing a stable food supply for the EU is crucial.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

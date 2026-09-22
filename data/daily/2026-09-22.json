@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-09-22",
+  "generated_at": "2026-09-22T13:08:11.171940Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp",
+      "status": "reported",
+      "importance": 0.78,
+      "published_at": "2026-09-22T09:32:14Z"
+    },
+    {
+      "slug": "datadome-blog-datadome-report-finds-ai-agents-and-bad-bots-shifting-deep-into-login-and-transa",
+      "status": "reported",
+      "importance": 0.73,
+      "published_at": "2026-09-22T09:32:18Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-launches-worker-previews-with-isolated-state-and-agent-development-to",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-09-22T13:00:00Z"
+    }
+  ]
+}

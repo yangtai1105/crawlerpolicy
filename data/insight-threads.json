@@ -2,6 +2,19 @@
   "schema_version": 1,
   "threads": [
     {
+      "key": "accelerating-scraping-volume",
+      "title": "Accelerating Scraping Volume",
+      "thesis": "Traditional identity-based controls like user-agent matching (such as claiming to be GPTBot or ClaudeBot) and static allowlists are failing as automated tools increasingly spoof recognized crawler identities and penetrate deep transactional endpoints, including login and checkout flows.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-authentication",
       "title": "Agent Authentication",
       "thesis": "Working group adoption signals formal consensus within the IETF that HTTP Message Signatures will serve as the baseline technical mechanism for verifying bot identity, moving the ecosystem beyond basic User-Agent heuristics and IP allowlists.",
@@ -15,6 +28,19 @@
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
       ]
+    },
+    {
+      "key": "agent-development-lifecycle",
+      "title": "Agent Development Lifecycle",
+      "thesis": "By automatically provisioning isolated Durable Object namespaces and Container applications per branch, Cloudflare shifts serverless edge testing from stateless mock environments to state-isolated sandboxes tailored for autonomous AI agents executing iterative deploy-test-fix loops via MCP.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-worker-previews-with-isolated-state-and-agent-development-to"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "agent-protocol-standardization",
@@ -103,6 +129,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ai-agent-spoofing",
+      "title": "AI Agent Spoofing",
+      "thesis": "Traditional identity-based controls like user-agent matching (such as claiming to be GPTBot or ClaudeBot) and static allowlists are failing as automated tools increasingly spoof recognized crawler identities and penetrate deep transactional endpoints, including login and checkout flows.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-gateway-observability",
       "title": "AI Gateway Observability",
       "thesis": "AI proxy and gateway infrastructure is adopting traditional web observability standards to give developers granular visibility into which specific SDKs, background workers, and client applications are driving programmatic AI consumption.",
@@ -131,6 +170,19 @@
       "verified_development_slugs": [
         "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
       ]
+    },
+    {
+      "key": "automated-scraping-supply-chain-growth",
+      "title": "Automated Scraping Supply Chain Growth",
+      "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-report-finds-ai-agents-and-bad-bots-shifting-deep-into-login-and-transa"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "behavioral-bot-detection",
@@ -316,6 +368,33 @@
       ]
     },
     {
+      "key": "declining-perimeter-bot-protection-efficacy",
+      "title": "Declining Perimeter Bot Protection Efficacy",
+      "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-report-finds-ai-agents-and-bad-bots-shifting-deep-into-login-and-transa"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "deep-endpoint-agent-crawling",
+      "title": "Deep Endpoint Agent Crawling",
+      "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
+      "direction": "developing",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp",
+        "datadome-blog-datadome-report-finds-ai-agents-and-bad-bots-shifting-deep-into-login-and-transa"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "defensive-key-management",
       "title": "Defensive Key Management",
       "thesis": "As cryptographic bot verification libraries mature, internal state management requires defensive error propagation to prevent subtle key corruption or unexpected credential overwrites in long-running verification engines.",
@@ -359,6 +438,19 @@
       "verified_development_slugs": [
         "cloudflare-adds-ai-search-integrations-for-vercel-ai-sdk-langchain-and-agents-sd"
       ]
+    },
+    {
+      "key": "edge-state-isolation",
+      "title": "Edge State Isolation",
+      "thesis": "By automatically provisioning isolated Durable Object namespaces and Container applications per branch, Cloudflare shifts serverless edge testing from stateless mock environments to state-isolated sandboxes tailored for autonomous AI agents executing iterative deploy-test-fix loops via MCP.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-worker-previews-with-isolated-state-and-agent-development-to"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "edge-verification-optimization",
@@ -479,6 +571,19 @@
       ]
     },
     {
+      "key": "intent-based-traffic-filtering",
+      "title": "Intent Based Traffic Filtering",
+      "thesis": "Traditional identity-based controls like user-agent matching (such as claiming to be GPTBot or ClaudeBot) and static allowlists are failing as automated tools increasingly spoof recognized crawler identities and penetrate deep transactional endpoints, including login and checkout flows.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "know-your-agent-governance",
       "title": "Know Your Agent Governance",
       "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
@@ -546,6 +651,19 @@
       "last_updated_at": "2026-09-09T12:45:33.251712Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "mcp-tooling-integration",
+      "title": "MCP Tooling Integration",
+      "thesis": "By automatically provisioning isolated Durable Object namespaces and Container applications per branch, Cloudflare shifts serverless edge testing from stateless mock environments to state-isolated sandboxes tailored for autonomous AI agents executing iterative deploy-test-fix loops via MCP.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-22T13:08:11.171940Z",
+      "last_updated_at": "2026-09-22T13:08:11.171940Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-worker-previews-with-isolated-state-and-agent-development-to"
       ],
       "verified_development_slugs": []
     },

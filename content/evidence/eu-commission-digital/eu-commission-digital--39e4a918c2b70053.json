@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--39e4a918c2b70053",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1929",
+  "supporting_urls": [],
+  "published_at": "2026-09-21T22:00:00Z",
+  "detected_at": "2026-09-22T13:08:11.171940Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--39e4a918c2b70053.json",
+  "content_hash": "sha256:143f46501320c571f9e1cd155942b40f09a6132cb95005161668908853005bbf",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1929",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Substantial agreement on EU-Philippines trade deal",
+  "content": "European Commission Press release Brussels, 22 Sep 2026 Today, the EU and the Philippines reached substantial agreement in their negotiations for a Free Trade Agreement (FTA), envisaged to deepen economic ties between the EU and another strategic, fast-growing partner in Southeast Asia.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

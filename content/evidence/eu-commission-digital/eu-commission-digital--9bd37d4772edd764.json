@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--9bd37d4772edd764",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1937",
+  "supporting_urls": [],
+  "published_at": "2026-09-22T09:15:12Z",
+  "detected_at": "2026-09-22T13:08:11.171940Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--9bd37d4772edd764.json",
+  "content_hash": "sha256:b1fb51f7cc533a40a9cf9140f9516af4ce1c0934ef5b6165b88c81669cf22019",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1937",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Joint press release: Commission and EIB Group launch European Institutional Investors Pact to boost investment in European tech scale-ups",
+  "content": "European Commission Press release Brussels, 22 Sep 2026 The European Commission and the European Investment Bank (EIB) Group launched today the European Institutional Investors Pact (EIIP) at the TechEU Equity Summit.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
