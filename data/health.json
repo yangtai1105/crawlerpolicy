@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-22T13:08:11.171940Z",
+  "last_attempted_at": "2026-09-23T13:23:23.918568Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -90,7 +90,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "meta-externalagent--e87959933a4725ce"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -151,12 +153,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--f61a7d077f9f4364"
+        "cloudflare-blog--ac9c5806f1a634c3"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-22-cloudflare-blog-cloudflare-launches-worker-previews-with-isolated-state-and-agent-development-to.md"
-      ]
+      "feed_items_written": []
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -164,15 +164,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--f7ce6dbe3d5a34bf",
-        "datadome-blog--e5ed15c94d320fe3"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-22-datadome-blog-datadome-report-finds-ai-agents-and-bad-bots-shifting-deep-into-login-and-transa.md",
-        "content/feed/2026-09-22-datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -181,11 +175,14 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--9285a9fdf120a341",
-        "uk-cma--d9a3bb75fa0f8c00",
-        "uk-cma--a58b71419b685bb6",
-        "uk-cma--8325b00ed6c1578d",
-        "uk-cma--8f62013f50f5e53b"
+        "uk-cma--a0ecb4ad2b550c2e",
+        "uk-cma--3cb43089bb310f48",
+        "uk-cma--d52f9a417e0158e6",
+        "uk-cma--47be339dd66f474e",
+        "uk-cma--26931eddfb18f4c0",
+        "uk-cma--3a24e0ba1344d5d7",
+        "uk-cma--9740c910f3610671",
+        "uk-cma--88e74fe1e05f23e7"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -196,9 +193,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "uk-cma-google-search-case--14ad47f9d77b9c6f"
+      ],
+      "events_written": [
+        "content/events/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
+      ]
     },
     "uk-gov-agentic-ai": {
       "fetch": "ok",
@@ -217,16 +220,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--fdd2802cd71f1565",
-        "eu-commission-digital--0bea1ad56b1e6410",
-        "eu-commission-digital--9bd37d4772edd764",
-        "eu-commission-digital--57486df9f2859a56",
-        "eu-commission-digital--798435506d6595c0",
-        "eu-commission-digital--a6f0e7783b70ebe2",
-        "eu-commission-digital--31ea0216da36d374",
-        "eu-commission-digital--ac0afcfd6528b64c",
-        "eu-commission-digital--39e4a918c2b70053",
-        "eu-commission-digital--adc91bb94697996f"
+        "eu-commission-digital--4350a673247035cd",
+        "eu-commission-digital--917983a03020d3a6",
+        "eu-commission-digital--78bcb4dd5c319c50",
+        "eu-commission-digital--b82577ea7d7a7acb",
+        "eu-commission-digital--6d926374f7805c08",
+        "eu-commission-digital--c2dc2c4f81e5bed4",
+        "eu-commission-digital--7ee7d30ffef95cb3"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -247,7 +247,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--e68735144cf77071"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -297,7 +299,12 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--f7a611788191c60a",
+        "openai-blog--1d7fce15c41bd311",
+        "openai-blog--f6c2502bd1f752e5",
+        "openai-blog--8ff9eb022850ab26"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -452,11 +459,11 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
+  "events_written": [
+    "content/events/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
+  ],
   "feed_items_written": [
-    "content/feed/2026-09-22-cloudflare-blog-cloudflare-launches-worker-previews-with-isolated-state-and-agent-development-to.md",
-    "content/feed/2026-09-22-datadome-blog-datadome-report-finds-ai-agents-and-bad-bots-shifting-deep-into-login-and-transa.md",
-    "content/feed/2026-09-22-datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp.md"
+    "content/feed/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
   ],
   "provider": {
     "name": "gemini",
@@ -466,12 +473,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-09-22",
-    "item_count": 3,
-    "path": "data/daily/2026-09-22.json"
+    "edition_date": "2026-09-23",
+    "item_count": 1,
+    "path": "data/daily/2026-09-23.json"
   },
   "insight_threads": {
-    "thread_count": 53,
+    "thread_count": 55,
     "path": "data/insight-threads.json"
   },
   "discovery": {

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--f6c2502bd1f752e5",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+  "supporting_urls": [],
+  "published_at": "2026-09-22T21:00:00Z",
+  "detected_at": "2026-09-23T13:23:23.918568Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--f6c2502bd1f752e5.json",
+  "content_hash": "sha256:4861198fb158097b67e623050039af877657077d2935f9b558c1fea0c036d5e2",
+  "external_id": "https://openai.com/index/better-prompt-caching-for-gpt-6",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Better prompt caching for GPT-6",
+  "content": "Learn how GPT-6 improves prompt caching with higher cache hit rates, new diagnostics, explicit breakpoints, and controls that reduce latency and costs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

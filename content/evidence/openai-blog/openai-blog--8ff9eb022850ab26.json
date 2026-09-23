@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--8ff9eb022850ab26",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+  "supporting_urls": [],
+  "published_at": "2026-09-22T18:00:00Z",
+  "detected_at": "2026-09-23T13:23:23.918568Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--8ff9eb022850ab26.json",
+  "content_hash": "sha256:ce04fd7a964d5d596076b142987bc6215c70c83d85f26d0c2ad37cafcd2ec139",
+  "external_id": "https://openai.com/index/introducing-gpt-6-sol-and-luna",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing GPT-6 Sol and Luna",
+  "content": "Meet GPT-6 Sol and Luna, two models that bring frontier intelligence to everyday work with different balances of capability and cost.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
