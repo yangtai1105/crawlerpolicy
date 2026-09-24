@@ -213,6 +213,21 @@
       ]
     },
     {
+      "key": "bot-authentication-standards",
+      "title": "Bot Authentication Standards",
+      "thesis": "While the working group focuses heavily on cryptographic verification via HTTP Message Signatures, parallel draft maintenance demonstrates continued momentum toward codifying baseline behavioral and operational norms for automated crawlers.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-24T13:16:37.691354Z",
+      "last_updated_at": "2026-09-24T13:16:37.691354Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ]
+    },
+    {
       "key": "bot-identity-standardization",
       "title": "Bot Identity Standardization",
       "thesis": "Emerging bot authentication standards require strict parity across multi-language reference implementations to prevent security loopholes, such as replay attacks on expired cryptographic proofs.",
@@ -725,6 +740,21 @@
       ],
       "verified_development_slugs": [
         "openai-plans-acquisition-of-ona-to-power-persistent-cloud-environments-for-codex"
+      ]
+    },
+    {
+      "key": "responsible-web-scraping",
+      "title": "Responsible Web Scraping",
+      "thesis": "While the working group focuses heavily on cryptographic verification via HTTP Message Signatures, parallel draft maintenance demonstrates continued momentum toward codifying baseline behavioral and operational norms for automated crawlers.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-09-24T13:16:37.691354Z",
+      "last_updated_at": "2026-09-24T13:16:37.691354Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
       ]
     },
     {

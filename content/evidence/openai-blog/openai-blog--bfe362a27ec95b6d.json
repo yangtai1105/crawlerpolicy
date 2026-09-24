@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--bfe362a27ec95b6d",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/two-years-of-openai-academy",
+  "supporting_urls": [],
+  "published_at": "2026-09-23T16:00:00Z",
+  "detected_at": "2026-09-24T13:16:37.691354Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--bfe362a27ec95b6d.json",
+  "content_hash": "sha256:c0dc68eeb296e49c98d35f4c8a069fbd3885cf3e16cf9a090081311a84d1bdad",
+  "external_id": "https://openai.com/index/two-years-of-openai-academy",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Two years of OpenAI Academy",
+  "content": "Marking two years of OpenAI Academy and bringing AI skills to even more communities.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

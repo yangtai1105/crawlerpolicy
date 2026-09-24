@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-23T13:23:23.918568Z",
+  "last_attempted_at": "2026-09-24T13:16:37.691354Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -90,9 +90,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "meta-externalagent--e87959933a4725ce"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -152,9 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--ac9c5806f1a634c3"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -175,14 +171,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--a0ecb4ad2b550c2e",
-        "uk-cma--3cb43089bb310f48",
-        "uk-cma--d52f9a417e0158e6",
-        "uk-cma--47be339dd66f474e",
-        "uk-cma--26931eddfb18f4c0",
-        "uk-cma--3a24e0ba1344d5d7",
-        "uk-cma--9740c910f3610671",
-        "uk-cma--88e74fe1e05f23e7"
+        "uk-cma--2fe86839891dc219",
+        "uk-cma--1cec395e781ad8f0",
+        "uk-cma--fdccedc98341fd62",
+        "uk-cma--5d597986a194682f"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -193,15 +185,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma-google-search-case--14ad47f9d77b9c6f"
-      ],
-      "events_written": [
-        "content/events/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "uk-gov-agentic-ai": {
       "fetch": "ok",
@@ -220,13 +206,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--4350a673247035cd",
-        "eu-commission-digital--917983a03020d3a6",
-        "eu-commission-digital--78bcb4dd5c319c50",
-        "eu-commission-digital--b82577ea7d7a7acb",
-        "eu-commission-digital--6d926374f7805c08",
-        "eu-commission-digital--c2dc2c4f81e5bed4",
-        "eu-commission-digital--7ee7d30ffef95cb3"
+        "eu-commission-digital--36a2902f19ad3963",
+        "eu-commission-digital--5694ef962aba2006",
+        "eu-commission-digital--3ad3d455020e2314",
+        "eu-commission-digital--2e99e54bdef782e4",
+        "eu-commission-digital--a09b4956b938fd0d",
+        "eu-commission-digital--9169aa1fe0afcd8c",
+        "eu-commission-digital--3f9844bdb6c103a9",
+        "eu-commission-digital--7cb91882d8bf9a06",
+        "eu-commission-digital--c96e5dd3ffba3719",
+        "eu-commission-digital--900f2029070f35e8"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -247,9 +236,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--e68735144cf77071"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -300,10 +287,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--f7a611788191c60a",
-        "openai-blog--1d7fce15c41bd311",
-        "openai-blog--f6c2502bd1f752e5",
-        "openai-blog--8ff9eb022850ab26"
+        "openai-blog--bfe362a27ec95b6d"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -344,9 +328,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ietf-webbotauth-wg--baeb199dac65268d"
+      ],
+      "events_written": [
+        "content/events/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -460,10 +450,10 @@
     }
   },
   "events_written": [
-    "content/events/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
+    "content/events/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-09-23-uk-cma-google-search-case-uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-.md"
+    "content/feed/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
   ],
   "provider": {
     "name": "gemini",
@@ -473,12 +463,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-09-23",
+    "edition_date": "2026-09-24",
     "item_count": 1,
-    "path": "data/daily/2026-09-23.json"
+    "path": "data/daily/2026-09-24.json"
   },
   "insight_threads": {
-    "thread_count": 55,
+    "thread_count": 57,
     "path": "data/insight-threads.json"
   },
   "discovery": {
