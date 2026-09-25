@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-24T13:16:37.691354Z",
+  "last_attempted_at": "2026-09-25T13:16:43.869306Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,7 +150,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--1e75fb782ee5653f",
+        "cloudflare-blog--560aa084c65c3cb4"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -160,9 +163,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--44f1e0bc109c5d01"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-09-24-datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and.md"
+      ]
     },
     "uk-cma": {
       "fetch": "ok",
@@ -171,10 +178,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--2fe86839891dc219",
-        "uk-cma--1cec395e781ad8f0",
-        "uk-cma--fdccedc98341fd62",
-        "uk-cma--5d597986a194682f"
+        "uk-cma--ded2e804fb9382e1",
+        "uk-cma--86e140f4e4423a60",
+        "uk-cma--a6bbf0c9ce897e93",
+        "uk-cma--0835ed1923984fe3",
+        "uk-cma--f96871aac34a98a7",
+        "uk-cma--529de301ce20bcd0",
+        "uk-cma--3d132213c549af48",
+        "uk-cma--7c5b192063794abc",
+        "uk-cma--21db25e549d2718a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -206,16 +218,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--36a2902f19ad3963",
-        "eu-commission-digital--5694ef962aba2006",
-        "eu-commission-digital--3ad3d455020e2314",
-        "eu-commission-digital--2e99e54bdef782e4",
-        "eu-commission-digital--a09b4956b938fd0d",
-        "eu-commission-digital--9169aa1fe0afcd8c",
-        "eu-commission-digital--3f9844bdb6c103a9",
-        "eu-commission-digital--7cb91882d8bf9a06",
-        "eu-commission-digital--c96e5dd3ffba3719",
-        "eu-commission-digital--900f2029070f35e8"
+        "eu-commission-digital--2207afeb75312708",
+        "eu-commission-digital--8de9a799cb3c3ae4",
+        "eu-commission-digital--4b274d654a814cc5",
+        "eu-commission-digital--57b82e4032a20e37"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -286,9 +292,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--bfe362a27ec95b6d"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -328,15 +332,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--baeb199dac65268d"
-      ],
-      "events_written": [
-        "content/events/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -449,11 +447,9 @@
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
-  ],
+  "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-09-24-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection.md"
+    "content/feed/2026-09-24-datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and.md"
   ],
   "provider": {
     "name": "gemini",
@@ -463,12 +459,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-09-24",
+    "edition_date": "2026-09-25",
     "item_count": 1,
-    "path": "data/daily/2026-09-24.json"
+    "path": "data/daily/2026-09-25.json"
   },
   "insight_threads": {
-    "thread_count": 57,
+    "thread_count": 59,
     "path": "data/insight-threads.json"
   },
   "discovery": {

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--8de9a799cb3c3ae4",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1981",
+  "supporting_urls": [],
+  "published_at": "2026-09-25T08:21:03Z",
+  "detected_at": "2026-09-25T13:16:43.869306Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--8de9a799cb3c3ae4.json",
+  "content_hash": "sha256:5f1b472a5d3927951c8ef508ee87fb4167110b98ff949ed866cd621051541598",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1981",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission greenlights Luxembourg's third payment request for €92.2 million under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 25 Sep 2026 Today, the European Commission positively assessed Luxembourg's third payment request for €92.2 million under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

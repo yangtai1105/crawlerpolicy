@@ -803,6 +803,32 @@
       ]
     },
     {
+      "key": "shift-from-static-waf-rules-to-dynamic-bot-management",
+      "title": "Shift From Static WAF Rules To Dynamic Bot Management",
+      "thesis": "Enterprise bot defenses are increasingly consolidating fraud mitigation (such as credential stuffing) with general automated traffic governance, allowing security and SEO teams to identify and classify AI data collection agents alongside malicious threats.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-25T13:16:43.869306Z",
+      "last_updated_at": "2026-09-25T13:16:43.869306Z",
+      "related_feed_slugs": [
+        "datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "unified-visibility-across-security-threats-and-ai-training-agents",
+      "title": "Unified Visibility Across Security Threats And AI Training Agents",
+      "thesis": "Enterprise bot defenses are increasingly consolidating fraud mitigation (such as credential stuffing) with general automated traffic governance, allowing security and SEO teams to identify and classify AI data collection agents alongside malicious threats.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-25T13:16:43.869306Z",
+      "last_updated_at": "2026-09-25T13:16:43.869306Z",
+      "related_feed_slugs": [
+        "datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "user-choice-screens-and-search-default-regulation",
       "title": "User Choice Screens And Search Default Regulation",
       "thesis": "The DMCC framework allows the CMA to stagger and refine behavioral remedies iteratively, progressing from content access and ranking rules to structural consumer choice mechanisms that could mandate choice screens or alter default search distribution.",
