@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-25T13:16:43.869306Z",
+  "last_attempted_at": "2026-09-26T12:41:15.411803Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,10 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--1e75fb782ee5653f",
-        "cloudflare-blog--560aa084c65c3cb4"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -163,13 +160,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--44f1e0bc109c5d01"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-24-datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -177,17 +170,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--ded2e804fb9382e1",
-        "uk-cma--86e140f4e4423a60",
-        "uk-cma--a6bbf0c9ce897e93",
-        "uk-cma--0835ed1923984fe3",
-        "uk-cma--f96871aac34a98a7",
-        "uk-cma--529de301ce20bcd0",
-        "uk-cma--3d132213c549af48",
-        "uk-cma--7c5b192063794abc",
-        "uk-cma--21db25e549d2718a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -218,10 +201,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--2207afeb75312708",
-        "eu-commission-digital--8de9a799cb3c3ae4",
-        "eu-commission-digital--4b274d654a814cc5",
-        "eu-commission-digital--57b82e4032a20e37"
+        "eu-commission-digital--7299863fa2ab24c7",
+        "eu-commission-digital--0faeb63cf5c625d0"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -242,7 +223,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--6f2f39b8f12a18bc"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -292,7 +275,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--412ee87de4aa49a7"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -448,9 +433,7 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [
-    "content/feed/2026-09-24-datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and.md"
-  ],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -458,10 +441,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-09-25",
-    "item_count": 1,
-    "path": "data/daily/2026-09-25.json"
+    "status": "quiet",
+    "edition_date": "2026-09-26",
+    "item_count": 0,
+    "path": "data/daily/2026-09-26.json"
   },
   "insight_threads": {
     "thread_count": 59,

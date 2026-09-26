@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-09-25T13:16:43.869306+00:00",
-  "last_fetch_succeeded_at": "2026-09-25T13:16:43.869306+00:00",
-  "last_evidence_at": "2026-09-24T13:16:37.691354+00:00",
+  "last_checked_at": "2026-09-26T12:41:15.411803+00:00",
+  "last_fetch_succeeded_at": "2026-09-26T12:41:15.411803+00:00",
+  "last_evidence_at": "2026-09-26T12:41:15.411803+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/march-20-chatgpt-outage",
     "https://openai.com/index/chatgpt-plugins",
     "https://openai.com/index/gpts-are-gpts",
     "https://openai.com/index/be-my-eyes",
@@ -503,7 +502,8 @@
     "https://openai.com/index/grab-openai-ai-skills-southeast-asia",
     "https://openai.com/index/better-prompt-caching-for-gpt-6",
     "https://openai.com/index/introducing-gpt-6-sol-and-luna",
-    "https://openai.com/index/two-years-of-openai-academy"
+    "https://openai.com/index/two-years-of-openai-academy",
+    "https://openai.com/index/proaction"
   ],
   "consecutive_failures": 0,
   "first_seen": false
