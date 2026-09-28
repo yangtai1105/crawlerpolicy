@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--cb445ad2937f9718",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1983",
+  "supporting_urls": [],
+  "published_at": "2026-09-27T22:00:00Z",
+  "detected_at": "2026-09-28T16:29:28.092567Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--cb445ad2937f9718.json",
+  "content_hash": "sha256:e7dcaf9e06d76058cffd21ac067f65036291adc3ed0476e2276740b3fccaa000",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1983",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU trade agreements continue to benefit European businesses",
+  "content": "European Commission Press release Brussels, 28 Sep 2026 The EU's growing network of trade agreements helps European businesses to access new export markets and creates a more predictable trade and investment environment, according to a report published today.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

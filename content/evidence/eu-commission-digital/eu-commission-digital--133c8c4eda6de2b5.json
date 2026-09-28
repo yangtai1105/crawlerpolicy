@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--133c8c4eda6de2b5",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1991",
+  "supporting_urls": [],
+  "published_at": "2026-09-28T09:26:41Z",
+  "detected_at": "2026-09-28T16:29:28.092567Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--133c8c4eda6de2b5.json",
+  "content_hash": "sha256:51a91775c885150723b8b84bcb7478c6e8f99d6b76c3b66b5fdc7288f7af0309",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1991",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU provides €61 million in humanitarian aid amidst rapidly deteriorating situation in Ethiopia",
+  "content": "European Commission Press release Brussels, 28 Sep 2026 Amid fears of renewed conflict in Northern Ethiopia, the European Union is providing €61 million in humanitarian funding to help the most vulnerable people in Ethiopia affected by conflict, displacement, disease outbreaks and climate-related hazards, including the impact of El Niño.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,16 +1,9 @@
 {
-  "last_checked_at": "2026-09-27T13:33:07.498192+00:00",
-  "last_fetch_succeeded_at": "2026-09-27T13:33:07.498192+00:00",
-  "last_evidence_at": "2026-09-26T12:41:15.411803+00:00",
+  "last_checked_at": "2026-09-28T16:29:28.092567+00:00",
+  "last_fetch_succeeded_at": "2026-09-28T16:29:28.092567+00:00",
+  "last_evidence_at": "2026-09-28T16:29:28.092567+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_893",
-    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_892",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_890",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_912",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_898",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_897",
-    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_895",
     "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_925",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_923",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_919",
@@ -503,7 +496,14 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/inf_26_1834",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1975",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1989",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1986"
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1986",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1997",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1993",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1991",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1990",
+    "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1860",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1859",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1983"
   ],
   "consecutive_failures": 0,
   "first_seen": false

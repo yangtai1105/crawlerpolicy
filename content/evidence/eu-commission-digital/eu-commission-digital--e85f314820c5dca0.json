@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--e85f314820c5dca0",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1860",
+  "supporting_urls": [],
+  "published_at": "2026-09-27T22:00:00Z",
+  "detected_at": "2026-09-28T16:29:28.092567Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--e85f314820c5dca0.json",
+  "content_hash": "sha256:c5bdd83f889a5cce5024f3ed3559a29190f716e76bcaee47574c65af16f7fa64",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1860",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Questions and answers on the proposed Recommendation on cardiovascular health checks",
+  "content": "European Commission Questions and answers Brussels, 28 Sep 2026 Why do we need an EU approach to cardiovascular health checks?\nCardiovascular diseases are the leading cause of death and disability in the EU. They cause 1.7 m...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

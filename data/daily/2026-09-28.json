@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-09-28",
+  "generated_at": "2026-09-28T16:29:28.092567Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "datadome-blog-meta-muse-agentic-browser-operates-without-declared-user-agent-or-dedicated-ip-r",
+      "status": "reported",
+      "importance": 0.82,
+      "published_at": "2026-09-28T16:10:10Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-reports-automated-traffic-surpassed-human-web-traffic-in-may-2026",
+      "status": "reported",
+      "importance": 0.82,
+      "published_at": "2026-09-27T17:00:00Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-launches-cf-cli-designed-for-autonomous-ai-agents",
+      "status": "reported",
+      "importance": 0.78,
+      "published_at": "2026-09-28T14:50:37Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser",
+      "status": "reported",
+      "importance": 0.68,
+      "published_at": "2026-09-28T13:00:00Z"
+    }
+  ]
+}

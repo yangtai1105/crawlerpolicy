@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-09-27T13:33:07.498192+00:00",
-  "last_fetch_succeeded_at": "2026-09-27T13:33:07.498192+00:00",
-  "last_evidence_at": "2026-09-25T13:16:43.869306+00:00",
+  "last_checked_at": "2026-09-28T16:29:28.092567+00:00",
+  "last_fetch_succeeded_at": "2026-09-28T16:29:28.092567+00:00",
+  "last_evidence_at": "2026-09-28T16:29:28.092567+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://datadome.co/?p=134503",
@@ -44,7 +44,8 @@
     "https://datadome.co/?p=137515",
     "https://datadome.co/?p=137734",
     "https://datadome.co/?p=137741",
-    "https://datadome.co/?p=137706"
+    "https://datadome.co/?p=137706",
+    "https://datadome.co/?p=138026"
   ],
   "consecutive_failures": 0,
   "first_seen": false
