@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "week": "2026-W39",
+  "generated_at": "2026-09-28T19:59:48.078943Z",
+  "window_start": "2026-09-21",
+  "window_end": "2026-09-27",
+  "health_status": "degraded",
+  "coverage": {
+    "configured": 39,
+    "completed": 34,
+    "fetched": 34,
+    "analyzed": 34,
+    "published": 34,
+    "failed": 5,
+    "required_failed": 0
+  },
+  "thesis": "Web ecosystem governance is progressing across both technical standards bodies refining bot data collection practices and antitrust regulators structuring user choice in search discovery.",
+  "executive_shifts": [
+    {
+      "headline": "IETF Web Bot Auth WG Updates Draft on Responsible Crawling Standards",
+      "summary": "The IETF Web Bot Auth Working Group received an updated revision of the Internet-Draft 'Best Practices for Responsible Web Data Collection' (draft-farzdusa-webbot-datacollection-01), preventing expiration and continuing discussions on operational standards for automated web data collectors.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ]
+    },
+    {
+      "headline": "UK CMA Launches Consultation on Google Search User Choice Conduct Requirement",
+      "summary": "The UK Competition and Markets Authority initiated a consultation on 23 September 2026 regarding a proposed user choice conduct requirement for Google Search under the Digital Markets, Competition and Consumers Act 2024, building on earlier conduct requirements tied to Google's Strategic Market Status designation.",
+      "evidence_event_ids": [
+        "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": true,
+      "event_ids": [
+        "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": true,
+      "event_ids": [
+        "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": true,
+      "event_ids": [
+        "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "crawler-controls",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "agentic-web",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "Standardization and regulatory initiatives are targeting critical structural layers of the web. Within the IETF Web Bot Auth Working Group, an updated Internet-Draft renews operational standards for responsible data collectors. Concurrently, the UK Competition and Markets Authority is consulting on a user choice conduct requirement for Google's general search services under the DMCC Act 2024 framework.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "UK CMA",
+      "direction": "Search defaults and choice architecture dictate default web entry points and upstream traffic distribution; a formalized user choice requirement could alter how millions of UK consumers select search and discovery engines.",
+      "evidence_event_ids": [
+        "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
+      ]
+    },
+    {
+      "actor": "Google",
+      "direction": "Search defaults and choice architecture dictate default web entry points and upstream traffic distribution; a formalized user choice requirement could alter how millions of UK consumers select search and discovery engines.",
+      "evidence_event_ids": [
+        "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
+      ]
+    },
+    {
+      "actor": "IETF",
+      "direction": "Cryptographic authentication verifies who a bot is, but standardizing data collection best practices establishes what behaviors constitute responsible crawling across the web.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ]
+    },
+    {
+      "actor": "IETF Web Bot Auth Working Group",
+      "direction": "Cryptographic authentication verifies who a bot is, but standardizing data collection best practices establishes what behaviors constitute responsible crawling across the web.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make agentic-web materially change?",
+      "tracks": [
+        "agentic-web"
+      ]
+    },
+    {
+      "question": "What primary evidence would make licensing-monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make asset-rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make measurement-economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "uk-cma-google-search-case",
+      "tier": "primary",
+      "event_ids": [
+        "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
+      ],
+      "latest_event_date": "2026-09-23T13:23:23.918568Z"
+    },
+    {
+      "source": "ietf-webbotauth-wg",
+      "tier": "primary",
+      "event_ids": [
+        "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
+      ],
+      "latest_event_date": "2026-09-24T13:16:37.691354Z"
+    }
+  ],
+  "model_generated": true
+}
