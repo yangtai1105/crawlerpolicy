@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--d3af78bedf07067f",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2000",
+  "supporting_urls": [],
+  "published_at": "2026-09-28T17:28:09Z",
+  "detected_at": "2026-09-29T14:38:47.453910Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--d3af78bedf07067f.json",
+  "content_hash": "sha256:b6370032d1ef86491a5fbd47ce2209ae90ceda0268725cc8fca51e3c0f68f348",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2000",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commissioner Roswall gives an opening address at the 9th Water Festival",
+  "content": "European Commission Speech Rome, 28 Sep 2026 Distinguished guests, colleagues, ladies and gentlemen,\n \nI am delighted to be part of the 9th edition of the Water Festival.\n \nToday is a celebration of water....",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

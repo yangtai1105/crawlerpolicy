@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--1b67fa909cce82a7",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2005",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T10:42:49Z",
+  "detected_at": "2026-09-29T14:38:47.453910Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--1b67fa909cce82a7.json",
+  "content_hash": "sha256:e5f9cf4b0d55dd508342da6131f2444ce861d0bd8d99efb25f56677425f4f70f",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2005",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Opening speech by President von der Leyen at the Connecting Europe Days",
+  "content": "European Commission Speech Brussels, 29 Sep 2026 “Check against delivery”\n \nCommissioner Tzitzikostas, dear Apostolos,\nCommissioner Andrius Kubilius,\nLadies and Gentlemen,\nIt is a pleasure to be at the Connect...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

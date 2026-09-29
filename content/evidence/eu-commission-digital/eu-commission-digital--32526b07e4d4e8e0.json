@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--32526b07e4d4e8e0",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2007",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T12:04:15Z",
+  "detected_at": "2026-09-29T14:38:47.453910Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--32526b07e4d4e8e0.json",
+  "content_hash": "sha256:46e966692e2863943fa0b58a8e38712d3e2e0a305e33b2cd56d824ae9f7c4aa4",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2007",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission greenlights France's final payment request of €6.1 billion under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 29 Sep 2026 Today, the European Commission positively assessed France's fifth and final payment request for €6.1 billion under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

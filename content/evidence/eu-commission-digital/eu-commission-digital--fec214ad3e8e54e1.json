@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--fec214ad3e8e54e1",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2006",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T10:56:10Z",
+  "detected_at": "2026-09-29T14:38:47.453910Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--fec214ad3e8e54e1.json",
+  "content_hash": "sha256:01d39dedb34a672efb426e431a4f2245c664f9042d8bd84f27ce1d066e7ca4ee",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2006",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by President von der Leyen at the inauguration ceremony for the David Maria Sassoli building of the European Parliament",
+  "content": "European Commission Speech Brussels, 29 Sep 2026 President Metsola, dear Roberta,\nExcellencies,\nCara Alessandra, Giulio and Livia, \nDavid Sassoli was a true custodian of the values our Union was built on. The ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

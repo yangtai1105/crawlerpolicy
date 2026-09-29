@@ -168,6 +168,19 @@
       ]
     },
     {
+      "key": "agentic-web-governance",
+      "title": "Agentic Web Governance",
+      "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-29T14:38:47.453910Z",
+      "last_updated_at": "2026-09-29T14:38:47.453910Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-agent-governance",
       "title": "AI Agent Governance",
       "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
@@ -250,15 +263,29 @@
       "verified_development_slugs": []
     },
     {
-      "key": "behavioral-bot-detection",
-      "title": "Behavioral Bot Detection",
-      "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
+      "key": "autonomous-agent-vulnerability-chaining",
+      "title": "Autonomous Agent Vulnerability Chaining",
+      "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
       "direction": "emerging",
       "confidence": "medium",
-      "first_observed_at": "2026-09-11T12:38:01.191471Z",
-      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "first_observed_at": "2026-09-29T14:38:47.453910Z",
+      "last_updated_at": "2026-09-29T14:38:47.453910Z",
       "related_feed_slugs": [
-        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks"
+        "cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "behavioral-bot-detection",
+      "title": "Behavioral Bot Detection",
+      "thesis": "Aggressive signature-based bot filtering creates a hidden revenue penalty by misclassifying real customers with non-standard browser setups, while sophisticated scrapers using residential proxies and fingerprint spoofing continue to bypass static rules.",
+      "direction": "developing",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-09-29T14:38:47.453910Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks",
+        "datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping"
       ],
       "verified_development_slugs": []
     },
@@ -488,6 +515,19 @@
       "verified_development_slugs": [
         "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
       ]
+    },
+    {
+      "key": "device-fingerprint-spoofing",
+      "title": "Device Fingerprint Spoofing",
+      "thesis": "Aggressive signature-based bot filtering creates a hidden revenue penalty by misclassifying real customers with non-standard browser setups, while sophisticated scrapers using residential proxies and fingerprint spoofing continue to bypass static rules.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-29T14:38:47.453910Z",
+      "last_updated_at": "2026-09-29T14:38:47.453910Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "dmcc-conduct-requirements-enforcement",
@@ -828,6 +868,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "mitigation-false-positive-revenue-drag",
+      "title": "Mitigation False Positive Revenue Drag",
+      "thesis": "Aggressive signature-based bot filtering creates a hidden revenue penalty by misclassifying real customers with non-standard browser setups, while sophisticated scrapers using residential proxies and fingerprint spoofing continue to bypass static rules.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-29T14:38:47.453910Z",
+      "last_updated_at": "2026-09-29T14:38:47.453910Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "mixed-use-crawler-disentanglement",
       "title": "Mixed Use Crawler Disentanglement",
       "thesis": "By introducing an 'Accountable' crawler classification in partnership with major search operators (Apple, Google, Microsoft), Cloudflare is attempting to resolve the long-standing tension between mixed-use search indexers and AI training scrapers through coordinated granular controls rather than binary site blocking.",
@@ -884,6 +937,19 @@
       "verified_development_slugs": [
         "openai-plans-acquisition-of-ona-to-power-persistent-cloud-environments-for-codex"
       ]
+    },
+    {
+      "key": "positive-security-models",
+      "title": "Positive Security Models",
+      "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-29T14:38:47.453910Z",
+      "last_updated_at": "2026-09-29T14:38:47.453910Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "programmatic-web-interaction",
@@ -1037,6 +1103,19 @@
       "verified_development_slugs": [
         "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
       ]
+    },
+    {
+      "key": "verified-bot-identity-directories",
+      "title": "Verified Bot Identity Directories",
+      "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-29T14:38:47.453910Z",
+      "last_updated_at": "2026-09-29T14:38:47.453910Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "vlose-regulatory-oversight",

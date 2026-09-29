@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-28T16:29:28.092567Z",
+  "last_attempted_at": "2026-09-29T14:38:47.453910Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -151,22 +151,19 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--037b3822f1673243",
-        "cloudflare-blog--78f3ba07efcf1c4e",
-        "cloudflare-blog--bb39573210a684b7",
-        "cloudflare-blog--46c749157754585a",
-        "cloudflare-blog--b62ab41474f6489d",
-        "cloudflare-blog--6ad0d292aa0d5ac5",
-        "cloudflare-blog--c7e03a53df3cd44a",
-        "cloudflare-blog--4cf1830f15f82e5e",
-        "cloudflare-blog--2b05f51446a74295",
-        "cloudflare-blog--476126c6dfb2c1a2"
+        "cloudflare-blog--d1b8dd12aa822527",
+        "cloudflare-blog--cb9db72eda9d34b6",
+        "cloudflare-blog--e65307c28e870c11",
+        "cloudflare-blog--652f912f7d8f048c",
+        "cloudflare-blog--f27f76f6847a913c",
+        "cloudflare-blog--30e8038dad19859f",
+        "cloudflare-blog--d535fa59b19e0b56",
+        "cloudflare-blog--88f70bfbf2872685",
+        "cloudflare-blog--b6d2c6226942b34d"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-09-28-cloudflare-blog-cloudflare-launches-cf-cli-designed-for-autonomous-ai-agents.md",
-        "content/feed/2026-09-28-cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser.md",
-        "content/feed/2026-09-27-cloudflare-blog-cloudflare-reports-automated-traffic-surpassed-human-web-traffic-in-may-2026.md"
+        "content/feed/2026-09-29-cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools.md"
       ]
     },
     "datadome-blog": {
@@ -176,11 +173,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "datadome-blog--4ca1db7b982ac7ca"
+        "datadome-blog--bc7205200da9f569"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-09-28-datadome-blog-meta-muse-agentic-browser-operates-without-declared-user-agent-or-dedicated-ip-r.md"
+        "content/feed/2026-09-29-datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping.md"
       ]
     },
     "uk-cma": {
@@ -190,15 +187,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--605ca87d85adff3e",
-        "uk-cma--cd7480e793056d18",
-        "uk-cma--79d7389f89c09602",
-        "uk-cma--6741005b5a4d7b2b",
-        "uk-cma--c951480f3f257c4b",
-        "uk-cma--f69c7f7801442ba1",
-        "uk-cma--0d11d79c058e72dd",
-        "uk-cma--d21b217d94271484",
-        "uk-cma--a31bfa90a0dd4e90"
+        "uk-cma--3898b99260e1455b",
+        "uk-cma--a6105ff2ef5e3127",
+        "uk-cma--cf3fc2d37c657944",
+        "uk-cma--c4adecf13312aeb3",
+        "uk-cma--6dfabe9c58c428fd",
+        "uk-cma--cedb5d512fe62561"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -230,13 +224,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--25f2676197bef7cc",
-        "eu-commission-digital--e6f5bc7ee85ab04a",
-        "eu-commission-digital--133c8c4eda6de2b5",
-        "eu-commission-digital--8c5b384354ab0b05",
-        "eu-commission-digital--e85f314820c5dca0",
-        "eu-commission-digital--a44c5f84df8f4e95",
-        "eu-commission-digital--cb445ad2937f9718"
+        "eu-commission-digital--3b020fde538a48da",
+        "eu-commission-digital--953521c6f7fa21aa",
+        "eu-commission-digital--32526b07e4d4e8e0",
+        "eu-commission-digital--fec214ad3e8e54e1",
+        "eu-commission-digital--1b67fa909cce82a7",
+        "eu-commission-digital--03796ca922f33a96",
+        "eu-commission-digital--86f6b04fbb5e5c3d",
+        "eu-commission-digital--19f02a5fcee560ec",
+        "eu-commission-digital--c92beebd2e153dd3",
+        "eu-commission-digital--d3af78bedf07067f"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -307,7 +304,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--d9f43e6c0cb2ba89",
+        "openai-blog--c47795d5b25a70c2"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -464,10 +464,8 @@
   },
   "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-09-28-cloudflare-blog-cloudflare-launches-cf-cli-designed-for-autonomous-ai-agents.md",
-    "content/feed/2026-09-28-cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser.md",
-    "content/feed/2026-09-27-cloudflare-blog-cloudflare-reports-automated-traffic-surpassed-human-web-traffic-in-may-2026.md",
-    "content/feed/2026-09-28-datadome-blog-meta-muse-agentic-browser-operates-without-declared-user-agent-or-dedicated-ip-r.md"
+    "content/feed/2026-09-29-cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools.md",
+    "content/feed/2026-09-29-datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping.md"
   ],
   "provider": {
     "name": "gemini",
@@ -477,12 +475,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-09-28",
-    "item_count": 4,
-    "path": "data/daily/2026-09-28.json"
+    "edition_date": "2026-09-29",
+    "item_count": 2,
+    "path": "data/daily/2026-09-29.json"
   },
   "insight_threads": {
-    "thread_count": 75,
+    "thread_count": 81,
     "path": "data/insight-threads.json"
   },
   "discovery": {

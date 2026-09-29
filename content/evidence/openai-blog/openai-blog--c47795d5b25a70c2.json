@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--c47795d5b25a70c2",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+  "supporting_urls": [],
+  "published_at": "2026-09-28T19:00:00Z",
+  "detected_at": "2026-09-29T14:38:47.453910Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--c47795d5b25a70c2.json",
+  "content_hash": "sha256:f4e8f2cb9187d027e6529329f0206b5ab53c81b7a10ba3d5cc0b90335709ae62",
+  "external_id": "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Towards safety cases for frontier AI training",
+  "content": "Our early guidelines for safety cases in frontier AI training cover technical safeguards, operational practices, and investigating misalignment incidents",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

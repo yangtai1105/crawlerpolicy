@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-09-29",
+  "generated_at": "2026-09-29T14:38:47.453910Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools",
+      "status": "reported",
+      "importance": 0.78,
+      "published_at": "2026-09-29T13:00:00Z"
+    },
+    {
+      "slug": "datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping",
+      "status": "reported",
+      "importance": 0.45,
+      "published_at": "2026-09-29T13:40:02Z"
+    }
+  ]
+}
