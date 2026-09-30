@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--20dcc915f60b324c",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2009",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T22:00:00Z",
+  "detected_at": "2026-09-30T14:39:16.784317Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--20dcc915f60b324c.json",
+  "content_hash": "sha256:add3e48e477f8c325f5463f50961a24893c7830ce124bb28b6ef1706b7590b42",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2009",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Questions and answers on the European Union Critical Communication System",
+  "content": "European Commission Questions and answers Brussels, 30 Sep 2026 What is the European Union Critical Communication System?\nThe European Union Critical Communication System (EUCCS) connects national critical communication syst...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

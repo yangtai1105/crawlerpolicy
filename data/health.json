@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-29T14:38:47.453910Z",
+  "last_attempted_at": "2026-09-30T14:39:16.784317Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -151,19 +151,22 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--d1b8dd12aa822527",
-        "cloudflare-blog--cb9db72eda9d34b6",
-        "cloudflare-blog--e65307c28e870c11",
-        "cloudflare-blog--652f912f7d8f048c",
-        "cloudflare-blog--f27f76f6847a913c",
-        "cloudflare-blog--30e8038dad19859f",
-        "cloudflare-blog--d535fa59b19e0b56",
-        "cloudflare-blog--88f70bfbf2872685",
-        "cloudflare-blog--b6d2c6226942b34d"
+        "cloudflare-blog--ff9f3c049c42ecb6",
+        "cloudflare-blog--ffc427fea06e01c6",
+        "cloudflare-blog--b9622d470145adf1",
+        "cloudflare-blog--e13a64b6ae3e9f8a",
+        "cloudflare-blog--547f86af97eb9f81",
+        "cloudflare-blog--1ce6fa2bd8c87e23",
+        "cloudflare-blog--766e1aba366e24f9",
+        "cloudflare-blog--531a94df0add1ca1",
+        "cloudflare-blog--ed593ebfcb36b680"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-09-29-cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools.md"
+        "content/feed/2026-09-30-cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec.md",
+        "content/feed/2026-09-30-cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin.md",
+        "content/feed/2026-09-30-cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization.md",
+        "content/feed/2026-09-30-cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro.md"
       ]
     },
     "datadome-blog": {
@@ -172,13 +175,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--bc7205200da9f569"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-29-datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -187,12 +186,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--3898b99260e1455b",
-        "uk-cma--a6105ff2ef5e3127",
-        "uk-cma--cf3fc2d37c657944",
-        "uk-cma--c4adecf13312aeb3",
-        "uk-cma--6dfabe9c58c428fd",
-        "uk-cma--cedb5d512fe62561"
+        "uk-cma--5868916998083221",
+        "uk-cma--6b9e401e74184249",
+        "uk-cma--f7a2e9d6ffed83cc",
+        "uk-cma--67877052c987466e",
+        "uk-cma--f594b667d041bf61"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -224,16 +222,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--3b020fde538a48da",
-        "eu-commission-digital--953521c6f7fa21aa",
-        "eu-commission-digital--32526b07e4d4e8e0",
-        "eu-commission-digital--fec214ad3e8e54e1",
-        "eu-commission-digital--1b67fa909cce82a7",
-        "eu-commission-digital--03796ca922f33a96",
-        "eu-commission-digital--86f6b04fbb5e5c3d",
-        "eu-commission-digital--19f02a5fcee560ec",
-        "eu-commission-digital--c92beebd2e153dd3",
-        "eu-commission-digital--d3af78bedf07067f"
+        "eu-commission-digital--876f8b7245c59422",
+        "eu-commission-digital--3a3dbe4b6dedb931",
+        "eu-commission-digital--760a2caa12245f67",
+        "eu-commission-digital--4b46d50680c60d4b",
+        "eu-commission-digital--92aa24810511b761",
+        "eu-commission-digital--2b1a351bf5c2af28",
+        "eu-commission-digital--eb987160f9c1789a",
+        "eu-commission-digital--95f6000719bdd487",
+        "eu-commission-digital--20dcc915f60b324c",
+        "eu-commission-digital--daf26a1bbd7489bd"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -254,9 +252,14 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--f4f8aef55a24d142",
+        "news-media-alliance--caaeac7147520616"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-09-29-news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use.md"
+      ]
     },
     "reddit-corporate": {
       "fetch": "ok",
@@ -304,10 +307,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--d9f43e6c0cb2ba89",
-        "openai-blog--c47795d5b25a70c2"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -464,8 +464,11 @@
   },
   "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-09-29-cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools.md",
-    "content/feed/2026-09-29-datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping.md"
+    "content/feed/2026-09-30-cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec.md",
+    "content/feed/2026-09-30-cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin.md",
+    "content/feed/2026-09-30-cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization.md",
+    "content/feed/2026-09-30-cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro.md",
+    "content/feed/2026-09-29-news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use.md"
   ],
   "provider": {
     "name": "gemini",
@@ -475,12 +478,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-09-29",
-    "item_count": 2,
-    "path": "data/daily/2026-09-29.json"
+    "edition_date": "2026-09-30",
+    "item_count": 5,
+    "path": "data/daily/2026-09-30.json"
   },
   "insight_threads": {
-    "thread_count": 81,
+    "thread_count": 99,
     "path": "data/insight-threads.json"
   },
   "discovery": {

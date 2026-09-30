@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-09-30",
+  "generated_at": "2026-09-30T14:39:16.784317Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro",
+      "status": "reported",
+      "importance": 0.88,
+      "published_at": "2026-09-30T12:58:00Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin",
+      "status": "reported",
+      "importance": 0.85,
+      "published_at": "2026-09-30T13:00:00Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization",
+      "status": "reported",
+      "importance": 0.85,
+      "published_at": "2026-09-30T13:00:00Z"
+    },
+    {
+      "slug": "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use",
+      "status": "reported",
+      "importance": 0.85,
+      "published_at": "2026-09-29T16:20:35Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec",
+      "status": "reported",
+      "importance": 0.35,
+      "published_at": "2026-09-30T13:01:55Z"
+    }
+  ]
+}

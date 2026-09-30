@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--f4f8aef55a24d142",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/news-media-alliance-statement-on-publisher-response-to-doj-filing/",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T16:20:35Z",
+  "detected_at": "2026-09-30T14:39:16.784317Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--f4f8aef55a24d142.json",
+  "content_hash": "sha256:8ab3f40c72859315e22840f90a3cbb50600381385e3cf15b41a7d6573694da25",
+  "external_id": "https://www.newsmediaalliance.org/?p=18743",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "News/Media Alliance Statement on Publisher Response to DOJ Fair Use Claims",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"681\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2020/02/DOJ-building-1000px.png\" width=\"1000\" /></p>Yesterday, the New York Times and other publishers filed their response to the DOJ's Statement of Interest (SOI) in support of Microsoft and OpenAI, in which the administration urged the judge to hold that copying any content to train AI models is “fair use.”",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

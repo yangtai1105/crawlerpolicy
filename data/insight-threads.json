@@ -56,6 +56,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-native-micropayments",
+      "title": "Agent Native Micropayments",
+      "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-protocol-standardization",
       "title": "Agent Protocol Standardization",
       "thesis": "Establishing versioned, stable releases for model context protocols provides a dependable foundation for agent tool-use and structured context retrieval.",
@@ -177,6 +190,19 @@
       "last_updated_at": "2026-09-29T14:38:47.453910Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agentic-web-protocols",
+      "title": "Agentic Web Protocols",
+      "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
       ],
       "verified_development_slugs": []
     },
@@ -335,6 +361,19 @@
       ]
     },
     {
+      "key": "bot-monetization-marketplaces",
+      "title": "Bot Monetization Marketplaces",
+      "thesis": "Pay Per Use separates crawling access from actual downstream utilization, addressing AI buyers' reluctance to pay per scrape when many indexed pages are never served in answers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "client-attribution",
       "title": "Client Attribution",
       "thesis": "AI proxy and gateway infrastructure is adopting traditional web observability standards to give developers granular visibility into which specific SDKs, background workers, and client applications are driving programmatic AI consumption.",
@@ -462,13 +501,14 @@
     {
       "key": "cryptographic-bot-verification",
       "title": "Cryptographic Bot Verification",
-      "thesis": "Working group adoption signals formal consensus within the IETF that HTTP Message Signatures will serve as the baseline technical mechanism for verifying bot identity, moving the ecosystem beyond basic User-Agent heuristics and IP allowlists.",
-      "direction": "emerging",
+      "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
+      "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-09-02T12:35:00.275423Z",
-      "last_updated_at": "2026-09-02T12:35:00.275423Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
-        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft",
+        "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
       ],
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
@@ -545,6 +585,19 @@
       ]
     },
     {
+      "key": "downstream-use-metering",
+      "title": "Downstream Use Metering",
+      "thesis": "Pay Per Use separates crawling access from actual downstream utilization, addressing AI buyers' reluctance to pay per scrape when many indexed pages are never served in answers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "dsa-enforcement",
       "title": "DSA Enforcement",
       "thesis": "Categorizing an AI conversational system as a search engine under the DSA formally bridges generative AI tools and traditional web search regulations, subjecting AI-driven retrieval to systemic risk assessments, transparency requirements, and algorithmic oversight.",
@@ -569,6 +622,32 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "edge-clearinghouse",
+      "title": "Edge Clearinghouse",
+      "thesis": "Pay Per Use separates crawling access from actual downstream utilization, addressing AI buyers' reluctance to pay per scrape when many indexed pages are never served in answers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "edge-level-scraping-defense-for-civil-society",
+      "title": "Edge Level Scraping Defense For Civil Society",
+      "thesis": "Infrastructure providers are bundling AI crawler governance and automated scraping defenses into non-profit and public-interest subsidy packages, establishing edge-level bot controls as standard defense mechanisms alongside conventional DDoS mitigation.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec"
       ],
       "verified_development_slugs": []
     },
@@ -661,6 +740,19 @@
       ]
     },
     {
+      "key": "fair-use-defense-in-ai-training",
+      "title": "Fair Use Defense In AI Training",
+      "thesis": "The intervention of the Department of Justice in support of AI model developers elevates copyright litigation into a broader conflict over federal policy, challenging traditional media monetization models by framing comprehensive web scraping for AI training under broad fair use protections.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "generative-ai-search-classification",
       "title": "Generative AI Search Classification",
       "thesis": "Categorizing an AI conversational system as a search engine under the DSA formally bridges generative AI tools and traditional web search regulations, subjecting AI-driven retrieval to systemic risk assessments, transparency requirements, and algorithmic oversight.",
@@ -674,6 +766,58 @@
       "verified_development_slugs": [
         "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
       ]
+    },
+    {
+      "key": "government-intervention-in-ai-copyright",
+      "title": "Government Intervention In AI Copyright",
+      "thesis": "The intervention of the Department of Justice in support of AI model developers elevates copyright litigation into a broader conflict over federal policy, challenging traditional media monetization models by framing comprehensive web scraping for AI training under broad fair use protections.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "granular-mixed-use-crawling",
+      "title": "Granular Mixed Use Crawling",
+      "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "http-402-implementation",
+      "title": "Http 402 Implementation",
+      "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "http-402-micropayments",
+      "title": "Http 402 Micropayments",
+      "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "http-message-signatures",
@@ -812,6 +956,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "machine-to-machine-commerce",
+      "title": "Machine To Machine Commerce",
+      "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "managed-web-crawling",
       "title": "Managed Web Crawling",
       "thesis": "By bundling link-depth web crawling with gated Model Context Protocol (`/mcp`) endpoints behind identity tokens, infrastructure providers are standardizing the full pipeline from raw site indexing to secure agent retrieval.",
@@ -924,6 +1081,32 @@
       "verified_development_slugs": []
     },
     {
+      "key": "pay-per-use-ai",
+      "title": "Pay Per Use AI",
+      "thesis": "Pay Per Use separates crawling access from actual downstream utilization, addressing AI buyers' reluctance to pay per scrape when many indexed pages are never served in answers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "pay-per-use-ai-licensing",
+      "title": "Pay Per Use AI Licensing",
+      "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "persistent-agent-environments",
       "title": "Persistent Agent Environments",
       "thesis": "AI agent architectures are shifting from ephemeral, stateless request-response loops toward persistent execution environments capable of sustaining long-running state across multi-step enterprise operations.",
@@ -952,6 +1135,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "post-search-newsroom-tooling",
+      "title": "Post Search Newsroom Tooling",
+      "thesis": "Infrastructure providers are bundling AI crawler governance and automated scraping defenses into non-profit and public-interest subsidy packages, establishing edge-level bot controls as standard defense mechanisms alongside conventional DDoS mitigation.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "programmatic-web-interaction",
       "title": "Programmatic Web Interaction",
       "thesis": "By natively integrating WebMCP into a purpose-built edge browser, Cloudflare is shifting machine browsing from fragile visual scraping and DOM synthesis toward explicit, standardized programmatic tool calling.",
@@ -961,6 +1157,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "publisher-litigation-resistance",
+      "title": "Publisher Litigation Resistance",
+      "thesis": "The intervention of the Department of Justice in support of AI model developers elevates copyright litigation into a broader conflict over federal policy, challenging traditional media monetization models by framing comprehensive web scraping for AI training under broad fair use protections.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use"
       ],
       "verified_development_slugs": []
     },
@@ -1047,6 +1256,32 @@
       "last_updated_at": "2026-09-25T13:16:43.869306Z",
       "related_feed_slugs": [
         "datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "stablecoin-edge-settlement",
+      "title": "Stablecoin Edge Settlement",
+      "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "subsidized-ai-crawler-blocking-for-journalism",
+      "title": "Subsidized AI Crawler Blocking For Journalism",
+      "thesis": "Infrastructure providers are bundling AI crawler governance and automated scraping defenses into non-profit and public-interest subsidy packages, establishing edge-level bot controls as standard defense mechanisms alongside conventional DDoS mitigation.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec"
       ],
       "verified_development_slugs": []
     },

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--daf26a1bbd7489bd",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2008",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T22:00:00Z",
+  "detected_at": "2026-09-30T14:39:16.784317Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--daf26a1bbd7489bd.json",
+  "content_hash": "sha256:645e03f9b8f037f9a3877d08bf6939157b5c121f24cebad79a30b108687428a9",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2008",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission proposes a new EU Critical Communication System for first responders",
+  "content": "European Commission Press release Brussels, 30 Sep 2026 Today, the European Commission proposed to establish a new EU Critical Communication System to provide Europe's first responders with secure and resilient communication channels in crisis situations.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

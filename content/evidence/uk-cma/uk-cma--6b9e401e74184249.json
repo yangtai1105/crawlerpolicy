@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--6b9e401e74184249",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/cma-cases/ryanair-consumer-protection-enforcement-case",
+  "supporting_urls": [],
+  "published_at": "2026-09-30T10:30:16Z",
+  "detected_at": "2026-09-30T14:39:16.784317Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--6b9e401e74184249.json",
+  "content_hash": "sha256:0e14d513a86da4564593c62372360ed328224c089b83949cbc69c28a46e3d6d4",
+  "external_id": "https://www.gov.uk/cma-cases/ryanair-consumer-protection-enforcement-case#2026-09-30T10:30:16Z",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Ryanair: consumer protection enforcement case",
+  "content": "The Competition and Markets Authority (CMA) is investigating suspected infringements of consumer law in relation to Ryanair’s use of a potentially unfair mandatory fee, and the presentation of that fee on its UK website.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
