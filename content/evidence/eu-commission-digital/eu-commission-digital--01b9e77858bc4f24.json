@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--01b9e77858bc4f24",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2036",
+  "supporting_urls": [],
+  "published_at": "2026-10-01T08:00:04Z",
+  "detected_at": "2026-10-01T15:08:17.246177Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--01b9e77858bc4f24.json",
+  "content_hash": "sha256:6c8c0cbd658a456c1840dbc5dedb10d24e6c695d1c54d5e984fecf4b203b2e1f",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2036",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Member States submit their final payment requests under the Recovery and Resilience Facility",
+  "content": "European Commission Press release Brussels, 01 Oct 2026 All Member States of the EU have now submitted to the European Commission their final payment requests under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU, by the deadline of 30 September 2026.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

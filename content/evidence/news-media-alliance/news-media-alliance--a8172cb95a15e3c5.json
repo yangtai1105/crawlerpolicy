@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--a8172cb95a15e3c5",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/newsom-signs-sb-690-into-law/",
+  "supporting_urls": [],
+  "published_at": "2026-10-01T00:28:44Z",
+  "detected_at": "2026-10-01T15:08:17.246177Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--a8172cb95a15e3c5.json",
+  "content_hash": "sha256:82cb1a0cf9067b07a509f2b8c62688e8c60098979e6ebb7614b6e109f125afa5",
+  "external_id": "https://www.newsmediaalliance.org/?p=18754",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Governor Newsom Signs CIPA Fix Into Law, Protecting News Publishers from Unreasonable Lawsuits",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"601\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2024/02/CA-state-govt-building-Web.jpg\" width=\"1000\" /></p>California Governor Newsom signed into law SB 690, a bill that would amend the California Invasion of Privacy Act (CIPA) to provide relief for news publishers targeted by unreasonable lawsuits based on the current text of the law.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

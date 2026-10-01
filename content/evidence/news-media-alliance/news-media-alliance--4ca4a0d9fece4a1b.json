@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--4ca4a0d9fece4a1b",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/governor-newsom-signs-ab-2222/",
+  "supporting_urls": [],
+  "published_at": "2026-09-30T18:51:57Z",
+  "detected_at": "2026-10-01T15:08:17.246177Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--4ca4a0d9fece4a1b.json",
+  "content_hash": "sha256:18ccdb80a17b96b46b753b0f741a597c8bb18d6966d916e2fbfc3c8204769a56",
+  "external_id": "https://www.newsmediaalliance.org/?p=18750",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "CA Governor Newsom Signs Nation-Leading, ‘News Neutral’ Journalism Tax Credit Bill Into Law",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"2560\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2026/09/26-09-AB-2222-Support-Ad-scaled.jpg\" width=\"1249\" /></p>California Governor Gavin Newsom signed AB 2222, the Community Newsroom Employment and Workforce Sustainability Act, or “Community NEWS Act,” into law.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

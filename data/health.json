@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-09-30T14:39:16.784317Z",
+  "last_attempted_at": "2026-10-01T15:08:17.246177Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -151,23 +151,17 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--ff9f3c049c42ecb6",
-        "cloudflare-blog--ffc427fea06e01c6",
-        "cloudflare-blog--b9622d470145adf1",
-        "cloudflare-blog--e13a64b6ae3e9f8a",
-        "cloudflare-blog--547f86af97eb9f81",
-        "cloudflare-blog--1ce6fa2bd8c87e23",
-        "cloudflare-blog--766e1aba366e24f9",
-        "cloudflare-blog--531a94df0add1ca1",
-        "cloudflare-blog--ed593ebfcb36b680"
+        "cloudflare-blog--da6b7afc0e0a4c46",
+        "cloudflare-blog--914ff44422a089f1",
+        "cloudflare-blog--f64b1256949bf78e",
+        "cloudflare-blog--5eac673d20286f5e",
+        "cloudflare-blog--de7cd833a2c087d1",
+        "cloudflare-blog--9c0903b3cb909cea",
+        "cloudflare-blog--ff454542a47d8448",
+        "cloudflare-blog--7f1976f607b6110b"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-30-cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec.md",
-        "content/feed/2026-09-30-cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin.md",
-        "content/feed/2026-09-30-cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization.md",
-        "content/feed/2026-09-30-cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro.md"
-      ]
+      "feed_items_written": []
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -186,11 +180,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--5868916998083221",
-        "uk-cma--6b9e401e74184249",
-        "uk-cma--f7a2e9d6ffed83cc",
-        "uk-cma--67877052c987466e",
-        "uk-cma--f594b667d041bf61"
+        "uk-cma--55978ace13176ba9",
+        "uk-cma--349c108c4b43cc7a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -222,16 +213,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--876f8b7245c59422",
-        "eu-commission-digital--3a3dbe4b6dedb931",
-        "eu-commission-digital--760a2caa12245f67",
-        "eu-commission-digital--4b46d50680c60d4b",
-        "eu-commission-digital--92aa24810511b761",
-        "eu-commission-digital--2b1a351bf5c2af28",
-        "eu-commission-digital--eb987160f9c1789a",
-        "eu-commission-digital--95f6000719bdd487",
-        "eu-commission-digital--20dcc915f60b324c",
-        "eu-commission-digital--daf26a1bbd7489bd"
+        "eu-commission-digital--8eaf4d76f1836221",
+        "eu-commission-digital--00cff19e13b33364",
+        "eu-commission-digital--3c31b67571b2ebab",
+        "eu-commission-digital--a2b1a7d5fafe455a",
+        "eu-commission-digital--73ab381896c887d4",
+        "eu-commission-digital--517b014e8161d5f0",
+        "eu-commission-digital--19fbdd2ab745e99d",
+        "eu-commission-digital--a4fab3979f821d88",
+        "eu-commission-digital--01b9e77858bc4f24",
+        "eu-commission-digital--711596ccf75c317f"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -253,13 +244,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "news-media-alliance--f4f8aef55a24d142",
-        "news-media-alliance--caaeac7147520616"
+        "news-media-alliance--a8172cb95a15e3c5",
+        "news-media-alliance--4ca4a0d9fece4a1b",
+        "news-media-alliance--6334c82187af7a30"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-09-29-news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use.md"
-      ]
+      "feed_items_written": []
     },
     "reddit-corporate": {
       "fetch": "ok",
@@ -297,7 +287,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-research--ab2ea80d7dd086ba"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -327,7 +319,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cf-changelog-ai-search--a634665c0136daac"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -463,13 +457,7 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [
-    "content/feed/2026-09-30-cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec.md",
-    "content/feed/2026-09-30-cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin.md",
-    "content/feed/2026-09-30-cloudflare-blog-cloudflare-enters-beta-with-pay-per-use-marketplace-for-ai-content-monetization.md",
-    "content/feed/2026-09-30-cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro.md",
-    "content/feed/2026-09-29-news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use.md"
-  ],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -477,10 +465,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-09-30",
-    "item_count": 5,
-    "path": "data/daily/2026-09-30.json"
+    "status": "quiet",
+    "edition_date": "2026-10-01",
+    "item_count": 0,
+    "path": "data/daily/2026-10-01.json"
   },
   "insight_threads": {
     "thread_count": 99,

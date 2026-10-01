@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--3c31b67571b2ebab",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2042",
+  "supporting_urls": [],
+  "published_at": "2026-10-01T10:13:21Z",
+  "detected_at": "2026-10-01T15:08:17.246177Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--3c31b67571b2ebab.json",
+  "content_hash": "sha256:106c6ba00ee81839b2f133d46c2fcc8345da088ddd413e3d73dc80c7be2fb77c",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2042",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by President von der Leyen at the joint press conference with the Prime Minister of Kosovo, Albin Kurti",
+  "content": "European Commission Statement Pristina, 01 Oct 2026 Prime Minister Kurti, Dear Albin.\nThank you for welcoming me back to Pristina, for the sixth time. Kosovo is going through an important political moment. I want...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
