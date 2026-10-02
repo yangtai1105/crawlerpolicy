@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-10-01T15:08:17.246177+00:00",
-  "last_fetch_succeeded_at": "2026-10-01T15:08:17.246177+00:00",
-  "last_evidence_at": "2026-09-29T14:38:47.453910+00:00",
+  "last_checked_at": "2026-10-02T14:29:07.997977+00:00",
+  "last_fetch_succeeded_at": "2026-10-02T14:29:07.997977+00:00",
+  "last_evidence_at": "2026-10-02T14:29:07.997977+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/be-my-eyes",
-    "https://openai.com/index/gpt-4-research",
     "https://openai.com/index/khan-academy",
     "https://openai.com/index/stripe",
     "https://openai.com/index/government-of-iceland",
@@ -503,7 +501,9 @@
     "https://openai.com/index/two-years-of-openai-academy",
     "https://openai.com/index/proaction",
     "https://openai.com/index/how-we-will-do-better-for-australia",
-    "https://openai.com/index/towards-safety-cases-for-frontier-ai-training"
+    "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
+    "https://openai.com/index/the-eternal-complement",
+    "https://openai.com/index/albertsons-reimagining-retail"
   ],
   "consecutive_failures": 0,
   "first_seen": false

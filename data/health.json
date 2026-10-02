@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-01T15:08:17.246177Z",
+  "last_attempted_at": "2026-10-02T14:29:07.997977Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -151,17 +151,22 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--da6b7afc0e0a4c46",
-        "cloudflare-blog--914ff44422a089f1",
-        "cloudflare-blog--f64b1256949bf78e",
-        "cloudflare-blog--5eac673d20286f5e",
-        "cloudflare-blog--de7cd833a2c087d1",
-        "cloudflare-blog--9c0903b3cb909cea",
-        "cloudflare-blog--ff454542a47d8448",
-        "cloudflare-blog--7f1976f607b6110b"
+        "cloudflare-blog--fc8357a09316960b",
+        "cloudflare-blog--dbb01fe573cd136f",
+        "cloudflare-blog--03d2036b31060393",
+        "cloudflare-blog--a43f70b741039d26",
+        "cloudflare-blog--491d2f2f5bc8f948",
+        "cloudflare-blog--c2506d63acd18a61",
+        "cloudflare-blog--468df37a1711d48b",
+        "cloudflare-blog--606f26f06a500e46",
+        "cloudflare-blog--fbf07c42b4bec93e",
+        "cloudflare-blog--962aa10ad52cf1e3"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-02-cloudflare-blog-cloudflare-launches-web-search-api-for-ai-gateway-with-verified-crawler-complian.md",
+        "content/feed/2026-10-01-cloudflare-blog-cloudflare-releases-open-source-clef-decision-models-for-fast-agentic-routing-an.md"
+      ]
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -180,8 +185,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--55978ace13176ba9",
-        "uk-cma--349c108c4b43cc7a"
+        "uk-cma--d479ff4d23710f82",
+        "uk-cma--daa5b65727f386a6",
+        "uk-cma--10aafc53664cb9f9",
+        "uk-cma--d75d6c177778893e",
+        "uk-cma--32ad56ba9bf879d1",
+        "uk-cma--2bcccca1f9e091ce"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -213,16 +222,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--8eaf4d76f1836221",
-        "eu-commission-digital--00cff19e13b33364",
-        "eu-commission-digital--3c31b67571b2ebab",
-        "eu-commission-digital--a2b1a7d5fafe455a",
-        "eu-commission-digital--73ab381896c887d4",
-        "eu-commission-digital--517b014e8161d5f0",
-        "eu-commission-digital--19fbdd2ab745e99d",
-        "eu-commission-digital--a4fab3979f821d88",
-        "eu-commission-digital--01b9e77858bc4f24",
-        "eu-commission-digital--711596ccf75c317f"
+        "eu-commission-digital--82a4ab4ff4a3dd7a",
+        "eu-commission-digital--d5490fd49275f052",
+        "eu-commission-digital--e7c3be06d1d18f9f",
+        "eu-commission-digital--2d75474e21603c70",
+        "eu-commission-digital--b9714323542e1e68"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -243,11 +247,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--a8172cb95a15e3c5",
-        "news-media-alliance--4ca4a0d9fece4a1b",
-        "news-media-alliance--6334c82187af7a30"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -287,9 +287,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-research--ab2ea80d7dd086ba"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -299,7 +297,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--353451627abf77ed",
+        "openai-blog--d88f0c0620ae859b"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -309,9 +310,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "cf-changelog-ai-gateway--65cd43d47a98d8e1"
+      ],
+      "events_written": [
+        "content/events/2026-10-02-cf-changelog-ai-gateway-cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-02-cf-changelog-ai-gateway-cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard.md"
+      ]
     },
     "cf-changelog-ai-search": {
       "fetch": "ok",
@@ -319,9 +326,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-ai-search--a634665c0136daac"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -371,9 +376,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "rsl-standard--38881d1c86e34d60"
+      ],
+      "events_written": [
+        "content/events/2026-10-02-rsl-standard-rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-02-rsl-standard-rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification.md"
+      ]
     },
     "iab-comp": {
       "fetch": "ok",
@@ -456,8 +467,16 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-10-02-cf-changelog-ai-gateway-cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard.md",
+    "content/events/2026-10-02-rsl-standard-rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-10-02-cloudflare-blog-cloudflare-launches-web-search-api-for-ai-gateway-with-verified-crawler-complian.md",
+    "content/feed/2026-10-01-cloudflare-blog-cloudflare-releases-open-source-clef-decision-models-for-fast-agentic-routing-an.md",
+    "content/feed/2026-10-02-cf-changelog-ai-gateway-cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard.md",
+    "content/feed/2026-10-02-rsl-standard-rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -465,13 +484,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-10-01",
-    "item_count": 0,
-    "path": "data/daily/2026-10-01.json"
+    "status": "published",
+    "edition_date": "2026-10-02",
+    "item_count": 4,
+    "path": "data/daily/2026-10-02.json"
   },
   "insight_threads": {
-    "thread_count": 99,
+    "thread_count": 110,
     "path": "data/insight-threads.json"
   },
   "discovery": {

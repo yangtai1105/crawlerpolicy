@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-02",
+  "generated_at": "2026-10-02T14:29:07.997977Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "cloudflare-blog-cloudflare-launches-web-search-api-for-ai-gateway-with-verified-crawler-complian",
+      "status": "reported",
+      "importance": 0.75,
+      "published_at": "2026-10-02T13:28:10Z"
+    },
+    {
+      "slug": "cf-changelog-ai-gateway-cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard",
+      "status": "verified",
+      "importance": 0.72,
+      "published_at": "2026-10-02T13:00:00Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-releases-open-source-clef-decision-models-for-fast-agentic-routing-an",
+      "status": "reported",
+      "importance": 0.72,
+      "published_at": "2026-10-01T15:34:02Z"
+    },
+    {
+      "slug": "rsl-standard-rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification",
+      "status": "verified",
+      "importance": 0.45,
+      "published_at": "2026-10-02T14:29:07.997977Z"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--353451627abf77ed",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/the-eternal-complement",
+  "supporting_urls": [],
+  "published_at": "2026-10-01T17:00:00Z",
+  "detected_at": "2026-10-02T14:29:07.997977Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--353451627abf77ed.json",
+  "content_hash": "sha256:6435c17b701b1041cc77f5d0353c4bc8d38231335d631af44f00fc678a5c11a0",
+  "external_id": "https://openai.com/index/the-eternal-complement",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The eternal complement",
+  "content": "Advanced AI may matter most for the routine work behind breakthrough ideas. Explore why execution could shape the next economy and the pace of progress.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

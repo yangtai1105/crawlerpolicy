@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--2d75474e21603c70",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2019",
+  "supporting_urls": [],
+  "published_at": "2026-10-01T22:00:00Z",
+  "detected_at": "2026-10-02T14:29:07.997977Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--2d75474e21603c70.json",
+  "content_hash": "sha256:1564dc97b8c256b20a2c6130db8034ef32313fe251238c0144db1fbeaaf700b5",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2019",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission approves €170 million Bulgarian State aid for farmers facing increased fuel and fertiliser prices",
+  "content": "European Commission Press release Brussels, 02 Oct 2026 The European Commission has approved a €170 million Bulgarian State aid scheme for farmers facing increased fuel and fertiliser prices due to the Middle East crisis.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
