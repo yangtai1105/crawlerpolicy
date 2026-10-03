@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--a48b1fa3bf17e4ec",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/practical-guide-building-gpt-6",
+  "supporting_urls": [],
+  "published_at": "2026-10-02T16:15:00Z",
+  "detected_at": "2026-10-03T13:04:55.173291Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--a48b1fa3bf17e4ec.json",
+  "content_hash": "sha256:7b0998feb986630c353ea69fc70f9eae3419419719ce9571158a4083031e1a8a",
+  "external_id": "https://openai.com/index/practical-guide-building-gpt-6",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "A model guide for the GPT-6 family",
+  "content": "Learn how startups can choose GPT-6 models, tune reasoning effort, improve prompts and skills, coordinate tools, and prepare workflows for production.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
