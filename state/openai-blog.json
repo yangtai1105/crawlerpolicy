@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-10-04T13:43:28.432005+00:00",
-  "last_fetch_succeeded_at": "2026-10-04T13:43:28.432005+00:00",
-  "last_evidence_at": "2026-10-03T13:04:55.173291+00:00",
+  "last_checked_at": "2026-10-05T16:50:30.941105+00:00",
+  "last_fetch_succeeded_at": "2026-10-05T16:50:30.941105+00:00",
+  "last_evidence_at": "2026-10-05T16:50:30.941105+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/stripe",
-    "https://openai.com/index/government-of-iceland",
     "https://openai.com/index/duolingo",
     "https://openai.com/index/planning-for-agi-and-beyond",
     "https://openai.com/index/how-should-ai-systems-behave",
@@ -503,7 +501,9 @@
     "https://openai.com/index/towards-safety-cases-for-frontier-ai-training",
     "https://openai.com/index/the-eternal-complement",
     "https://openai.com/index/albertsons-reimagining-retail",
-    "https://openai.com/index/practical-guide-building-gpt-6"
+    "https://openai.com/index/practical-guide-building-gpt-6",
+    "https://openai.com/index/eu-text-provenance",
+    "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
   ],
   "consecutive_failures": 0,
   "first_seen": false

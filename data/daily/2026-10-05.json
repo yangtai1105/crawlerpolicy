@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-05",
+  "generated_at": "2026-10-05T16:50:30.941105Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "cloudflare-blog-cloudflare-summarizes-birthday-week-2026-launches-focused-on-agent-economy-and-i",
+      "status": "reported",
+      "importance": 0.8,
+      "published_at": "2026-10-05T13:00:00Z"
+    },
+    {
+      "slug": "datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-10-05T14:54:24Z"
+    }
+  ]
+}

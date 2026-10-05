@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--1f07da8c46e086fc",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/cma-cases/nexfibre-slash-substantial-merger-inquiry",
+  "supporting_urls": [],
+  "published_at": "2026-10-05T11:00:16Z",
+  "detected_at": "2026-10-05T16:50:30.941105Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--1f07da8c46e086fc.json",
+  "content_hash": "sha256:39d0a059236dc730f29cb490889b3f53ff807346617ea2aab5920bb060e33777",
+  "external_id": "https://www.gov.uk/cma-cases/nexfibre-slash-substantial-merger-inquiry#2026-10-05T11:00:16Z",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "nexfibre / Substantial merger inquiry",
+  "content": "The Competition and Markets Authority (CMA) is investigating the anticipated acquisition by Liberty Global, Telefónica and InfraVia, through their joint venture nexfibre, of Substantial (including Netomnia, Brsk, Brsk ISP and YouFibre). Liberty Global and Telefónica are the joint owners of Virgin Media O2 and, together with InfraVia, joint owners of nexfibre.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

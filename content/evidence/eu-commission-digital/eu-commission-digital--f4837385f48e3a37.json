@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--f4837385f48e3a37",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2068",
+  "supporting_urls": [],
+  "published_at": "2026-10-05T08:31:03Z",
+  "detected_at": "2026-10-05T16:50:30.941105Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--f4837385f48e3a37.json",
+  "content_hash": "sha256:920482793dd52b3e5b2919e96d899b596a12fa58ca37ecd34fc60f12fff8c5ec",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2068",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission greenlights Finland's fifth payment request for €229.2 million under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 05 Oct 2026 Today, the European Commission positively assessed Finland's fifth payment request of €229.2 million under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

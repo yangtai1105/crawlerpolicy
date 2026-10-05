@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--8f6d136bc4b54f12",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2073",
+  "supporting_urls": [],
+  "published_at": "2026-10-05T09:26:54Z",
+  "detected_at": "2026-10-05T16:50:30.941105Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--8f6d136bc4b54f12.json",
+  "content_hash": "sha256:1181ec0fba9e0f5f54c7102d63a559c1346864b2be291c655d29e3c47ca5eea6",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2073",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Daily News 05 / 10 / 2026",
+  "content": "European Commission Daily news Brussels, 05 Oct 2026 Commission greenlights Finland's fifth payment request for €229.2 million under NextGenerationEU \nToday, the European Commission positively assessed Finland's f...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--380e0eedd7a6300c",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2054",
+  "supporting_urls": [],
+  "published_at": "2026-10-04T22:00:00Z",
+  "detected_at": "2026-10-05T16:50:30.941105Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--380e0eedd7a6300c.json",
+  "content_hash": "sha256:b5da2408041cca0720bb88daf0708ed0d21f958673de91468f4699d25604863d",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2054",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission unlocks €157 million to Moldova for reform progress under the Growth Plan",
+  "content": "European Commission Press release Brussels, 05 Oct 2026 Today, at the 10th EU-Moldova Association Council, the European Commission disbursed an additional €157 million to Moldova, reaffirming the EU's support for the country's reform path.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

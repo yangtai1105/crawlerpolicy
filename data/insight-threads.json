@@ -114,6 +114,19 @@
       ]
     },
     {
+      "key": "agentic-browser-sandboxing",
+      "title": "Agentic Browser Sandboxing",
+      "thesis": "Rather than treating machine access purely as abusive traffic to be mitigated, Cloudflare is shifting toward commercializing agent interactions at the edge by deploying standard payment challenge flows (HTTP 402/x402) and metering access for AI buyers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-05T16:50:30.941105Z",
+      "last_updated_at": "2026-10-05T16:50:30.941105Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-summarizes-birthday-week-2026-launches-focused-on-agent-economy-and-i"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-browsers",
       "title": "Agentic Browsers",
       "thesis": "By natively integrating WebMCP into a purpose-built edge browser, Cloudflare is shifting machine browsing from fragile visual scraping and DOM synthesis toward explicit, standardized programmatic tool calling.",
@@ -313,6 +326,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-reports-automated-traffic-surpassed-human-web-traffic-in-may-2026"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "automated-traffic-overtaking-human-traffic",
+      "title": "Automated Traffic Overtaking Human Traffic",
+      "thesis": "Rather than treating machine access purely as abusive traffic to be mitigated, Cloudflare is shifting toward commercializing agent interactions at the edge by deploying standard payment challenge flows (HTTP 402/x402) and metering access for AI buyers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-05T16:50:30.941105Z",
+      "last_updated_at": "2026-10-05T16:50:30.941105Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-summarizes-birthday-week-2026-launches-focused-on-agent-economy-and-i"
       ],
       "verified_development_slugs": []
     },
@@ -917,6 +943,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "http-402-payment-gateway-for-ai-agents",
+      "title": "Http 402 Payment Gateway For AI Agents",
+      "thesis": "Rather than treating machine access purely as abusive traffic to be mitigated, Cloudflare is shifting toward commercializing agent interactions at the edge by deploying standard payment challenge flows (HTTP 402/x402) and metering access for AI buyers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-05T16:50:30.941105Z",
+      "last_updated_at": "2026-10-05T16:50:30.941105Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-summarizes-birthday-week-2026-launches-focused-on-agent-economy-and-i"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "http-message-signatures",
       "title": "Http Message Signatures",
       "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
@@ -1204,6 +1243,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "pay-per-use-ai-crawler-monetization",
+      "title": "Pay Per Use AI Crawler Monetization",
+      "thesis": "Rather than treating machine access purely as abusive traffic to be mitigated, Cloudflare is shifting toward commercializing agent interactions at the edge by deploying standard payment challenge flows (HTTP 402/x402) and metering access for AI buyers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-05T16:50:30.941105Z",
+      "last_updated_at": "2026-10-05T16:50:30.941105Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-summarizes-birthday-week-2026-launches-focused-on-agent-economy-and-i"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "pay-per-use-ai-licensing",
       "title": "Pay Per Use AI Licensing",
       "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
@@ -1372,6 +1424,32 @@
       "verified_development_slugs": []
     },
     {
+      "key": "separation-of-agent-trust-management-from-cdn-edge-mitigation",
+      "title": "Separation Of Agent Trust Management From CDN Edge Mitigation",
+      "thesis": "The market definition for web access management is formalizing a split between blunt edge-layer blocking and continuous agent trust verification. Rather than binary human-versus-bot classification, modern machine access requires distinguishing authorized AI agents and search/discovery crawlers from malicious scrapers and automated credential attacks targeting login and transaction endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-05T16:50:30.941105Z",
+      "last_updated_at": "2026-10-05T16:50:30.941105Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "shift-from-binary-bot-blocking-to-intent-based-authorization",
+      "title": "Shift From Binary Bot Blocking To Intent Based Authorization",
+      "thesis": "The market definition for web access management is formalizing a split between blunt edge-layer blocking and continuous agent trust verification. Rather than binary human-versus-bot classification, modern machine access requires distinguishing authorized AI agents and search/discovery crawlers from malicious scrapers and automated credential attacks targeting login and transaction endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-05T16:50:30.941105Z",
+      "last_updated_at": "2026-10-05T16:50:30.941105Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "shift-from-static-waf-rules-to-dynamic-bot-management",
       "title": "Shift From Static WAF Rules To Dynamic Bot Management",
       "thesis": "Enterprise bot defenses are increasingly consolidating fraud mitigation (such as credential stuffing) with general automated traffic governance, allowing security and SEO teams to identify and classify AI data collection agents alongside malicious threats.",
@@ -1407,6 +1485,19 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "surge-in-ai-agent-traffic-targeting-sensitive-endpoints",
+      "title": "Surge In AI Agent Traffic Targeting Sensitive Endpoints",
+      "thesis": "The market definition for web access management is formalizing a split between blunt edge-layer blocking and continuous agent trust verification. Rather than binary human-versus-bot classification, modern machine access requires distinguishing authorized AI agents and search/discovery crawlers from malicious scrapers and automated credential attacks targeting login and transaction endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-05T16:50:30.941105Z",
+      "last_updated_at": "2026-10-05T16:50:30.941105Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-"
       ],
       "verified_development_slugs": []
     },
