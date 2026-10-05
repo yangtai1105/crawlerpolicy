@@ -1,0 +1,185 @@
+{
+  "schema_version": 1,
+  "week": "2026-W40",
+  "generated_at": "2026-10-05T20:58:43.175589Z",
+  "window_start": "2026-09-28",
+  "window_end": "2026-10-04",
+  "health_status": "degraded",
+  "coverage": {
+    "configured": 39,
+    "completed": 34,
+    "fetched": 34,
+    "analyzed": 34,
+    "published": 34,
+    "failed": 5,
+    "required_failed": 0
+  },
+  "thesis": "Web ecosystem standards and search infrastructure are evolving to improve interoperability for machine-readable licensing and enforce governance standards for real-time AI web access.",
+  "executive_shifts": [
+    {
+      "headline": "RSL 1.0 Shifts Protocol Identification to XML Namespaces",
+      "summary": "The RSL Technical Steering Committee downgraded the HTTP media type serving rule from MUST to SHOULD, requiring conforming implementations to identify documents by XML namespace to boost machine-readable licensing interoperability.",
+      "evidence_event_ids": [
+        "rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification"
+      ]
+    },
+    {
+      "headline": "Cloudflare Introduces Web Search API Beta for AI Agents",
+      "summary": "Cloudflare launched a Web Search API beta via AI Gateway supporting Ceramic.ai, Exa, and Linkup, requiring participating search partners to follow verified bot crawling standards and Zero Data Retention.",
+      "evidence_event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "crawler-controls",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard",
+        "rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification"
+      ],
+      "summary": "2 verified material developments."
+    },
+    {
+      "track": "agentic-web",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": true,
+      "event_ids": [
+        "rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "Recent updates demonstrate simultaneous progress in automated licensing protocols and AI search infrastructure. The RSL Technical Steering Committee relaxed media type requirements for RSL 1.0 in favor of XML namespace verification to prevent failures in production environments. Meanwhile, Cloudflare introduced a Web Search API beta enabling AI agents to access real-time web search results from providers adhering to verified bot standards and Zero Data Retention.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "Cloudflare",
+      "direction": "As AI models transition from static training knowledge to real-time agentic web discovery, the infrastructure mediating web queries will determine how crawling traffic is identified, governed, and billed across the ecosystem.",
+      "evidence_event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ]
+    },
+    {
+      "actor": "Ceramic.ai",
+      "direction": "As AI models transition from static training knowledge to real-time agentic web discovery, the infrastructure mediating web queries will determine how crawling traffic is identified, governed, and billed across the ecosystem.",
+      "evidence_event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ]
+    },
+    {
+      "actor": "Exa",
+      "direction": "As AI models transition from static training knowledge to real-time agentic web discovery, the infrastructure mediating web queries will determine how crawling traffic is identified, governed, and billed across the ecosystem.",
+      "evidence_event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ]
+    },
+    {
+      "actor": "Linkup",
+      "direction": "As AI models transition from static training knowledge to real-time agentic web discovery, the infrastructure mediating web queries will determine how crawling traffic is identified, governed, and billed across the ecosystem.",
+      "evidence_event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ]
+    },
+    {
+      "actor": "RSL Technical Steering Committee",
+      "direction": "Strict MIME-type requirements frequently cause machine-readable licensing declarations to fail in production environments; decoupling RSL discovery from rigid HTTP Content-Type headers improves the real-world interoperability of automated licensing signals.",
+      "evidence_event_ids": [
+        "rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make policy-regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make litigation-legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make asset-rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make measurement-economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "cf-changelog-ai-gateway",
+      "tier": "primary",
+      "event_ids": [
+        "cloudflare-launches-web-search-api-beta-for-ai-agents-with-verified-bot-standard"
+      ],
+      "latest_event_date": "2026-10-02T13:00:00Z"
+    },
+    {
+      "source": "rsl-standard",
+      "tier": "primary",
+      "event_ids": [
+        "rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification"
+      ],
+      "latest_event_date": "2026-10-02T14:29:07.997977Z"
+    }
+  ],
+  "model_generated": true
+}
