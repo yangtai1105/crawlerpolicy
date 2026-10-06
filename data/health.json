@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-05T16:50:30.941105Z",
+  "last_attempted_at": "2026-10-06T14:46:17.656443Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,14 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--507e9ffd1f980e82",
-        "cloudflare-blog--2788c15b2acfb447"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-05-cloudflare-blog-cloudflare-summarizes-birthday-week-2026-launches-focused-on-agent-economy-and-i.md"
-      ]
+      "feed_items_written": []
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -166,11 +161,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "datadome-blog--c2ca32502af8a705"
+        "datadome-blog--c45c2cde0985fafa"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-10-05-datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-.md"
+        "content/feed/2026-10-06-datadome-blog-datadome-highlights-dynamic-intent-scoring-for-ai-agents-following-industry-reco.md"
       ]
     },
     "uk-cma": {
@@ -180,9 +175,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--8286ddd38f6a0091",
-        "uk-cma--1f07da8c46e086fc",
-        "uk-cma--f171febc170dd109"
+        "uk-cma--fe19cd514b877801",
+        "uk-cma--f9f1934056adb6d8",
+        "uk-cma--7e88185f55d54b49"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -214,13 +209,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--08e463ac7dd61665",
-        "eu-commission-digital--8f6d136bc4b54f12",
-        "eu-commission-digital--0c07fe38fcd6d8bc",
-        "eu-commission-digital--f4837385f48e3a37",
-        "eu-commission-digital--99e5abdb7d19492d",
-        "eu-commission-digital--380e0eedd7a6300c",
-        "eu-commission-digital--6f0c1c9ae9a5d3af"
+        "eu-commission-digital--50362a685e38a5c1",
+        "eu-commission-digital--13192b925e4d46a7",
+        "eu-commission-digital--672597c530cc1a1c",
+        "eu-commission-digital--289fe78e6317db1c",
+        "eu-commission-digital--704442f4e3d6d062",
+        "eu-commission-digital--7a6ae20ee91548da",
+        "eu-commission-digital--8a18591ddedc5872",
+        "eu-commission-digital--537d07088d9fa6a7",
+        "eu-commission-digital--04c41ca84a048a4f",
+        "eu-commission-digital--510d36854c7347fa"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -251,7 +249,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "reddit-corporate--c37dc2c5ce2c42e0"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -291,10 +291,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--bf9f75a3b923d210",
-        "openai-blog--874223e76ac438e8"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -364,7 +361,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "rsl-standard--b0f6286db78225bc"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -451,8 +450,7 @@
   },
   "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-10-05-cloudflare-blog-cloudflare-summarizes-birthday-week-2026-launches-focused-on-agent-economy-and-i.md",
-    "content/feed/2026-10-05-datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-.md"
+    "content/feed/2026-10-06-datadome-blog-datadome-highlights-dynamic-intent-scoring-for-ai-agents-following-industry-reco.md"
   ],
   "provider": {
     "name": "gemini",
@@ -462,12 +460,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-05",
-    "item_count": 2,
-    "path": "data/daily/2026-10-05.json"
+    "edition_date": "2026-10-06",
+    "item_count": 1,
+    "path": "data/daily/2026-10-06.json"
   },
   "insight_threads": {
-    "thread_count": 117,
+    "thread_count": 120,
     "path": "data/insight-threads.json"
   },
   "discovery": {

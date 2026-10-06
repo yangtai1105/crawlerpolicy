@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--7a6ae20ee91548da",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2071",
+  "supporting_urls": [],
+  "published_at": "2026-10-05T22:00:00Z",
+  "detected_at": "2026-10-06T14:46:17.656443Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--7a6ae20ee91548da.json",
+  "content_hash": "sha256:d8d7fab0165dd80c0a797625e64d604938c55393c807645179f24f5fd03baf98",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_2071",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Questions and answers on the new Standardisation Regulation",
+  "content": "European Commission Questions and answers Brussels, 06 Oct 2026 What is a standard and how are standards developed in Europe?\nA standard is a technical document that sets specifications for a product, service, or process. It...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--04c41ca84a048a4f",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2070",
+  "supporting_urls": [],
+  "published_at": "2026-10-05T22:00:00Z",
+  "detected_at": "2026-10-06T14:46:17.656443Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--04c41ca84a048a4f.json",
+  "content_hash": "sha256:a45b473626166c5ca7c56efea31353f973eaa89a13e8e73d4ad08ad4e644e031",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2070",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission adopts proposal to accelerate standards development and improve EU competitiveness",
+  "content": "European Commission Press release Brussels, 06 Oct 2026 The European Commission has today proposed to modernise the European standardisation system to make it faster, increase the representation of small- and medium-sized enterprises, and to be better equipped to support the European Union's strategic interests.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
