@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-06T14:46:17.656443Z",
+  "last_attempted_at": "2026-10-08T15:14:55.717190Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -150,7 +150,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--efcc2726be039b71",
+        "cloudflare-blog--c7640c9a66515214",
+        "cloudflare-blog--e2ecb081de5a8ebe"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -161,11 +165,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "datadome-blog--c45c2cde0985fafa"
+        "datadome-blog--7fa24f12e66d78da"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-10-06-datadome-blog-datadome-highlights-dynamic-intent-scoring-for-ai-agents-following-industry-reco.md"
+        "content/feed/2026-10-07-datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo.md"
       ]
     },
     "uk-cma": {
@@ -175,9 +179,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--fe19cd514b877801",
-        "uk-cma--f9f1934056adb6d8",
-        "uk-cma--7e88185f55d54b49"
+        "uk-cma--017ce0e809869745",
+        "uk-cma--61b2ee2e12e9c683",
+        "uk-cma--6bac0e17a6c60e1d",
+        "uk-cma--5afb9ed53018aedd",
+        "uk-cma--952d7d6dc58babf2",
+        "uk-cma--158f135b9a19d258",
+        "uk-cma--0c6b44795100e26e",
+        "uk-cma--e033b80971d80b51",
+        "uk-cma--bb204873f53ae68f",
+        "uk-cma--2d4017d78a597cca"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -209,16 +220,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--50362a685e38a5c1",
-        "eu-commission-digital--13192b925e4d46a7",
-        "eu-commission-digital--672597c530cc1a1c",
-        "eu-commission-digital--289fe78e6317db1c",
-        "eu-commission-digital--704442f4e3d6d062",
-        "eu-commission-digital--7a6ae20ee91548da",
-        "eu-commission-digital--8a18591ddedc5872",
-        "eu-commission-digital--537d07088d9fa6a7",
-        "eu-commission-digital--04c41ca84a048a4f",
-        "eu-commission-digital--510d36854c7347fa"
+        "eu-commission-digital--d4081b1ad8b11a20",
+        "eu-commission-digital--497612c9198649a8",
+        "eu-commission-digital--8f53dd7602a32eb9",
+        "eu-commission-digital--c58c598704c3d4a5",
+        "eu-commission-digital--aba2faaf7ef95f6b",
+        "eu-commission-digital--2a4ee305b03c5229",
+        "eu-commission-digital--3b6c5049c2058d8c",
+        "eu-commission-digital--653c1bc055eb10d7",
+        "eu-commission-digital--db0019664a16029c",
+        "eu-commission-digital--89c694eeb4dfa7cb"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -239,7 +250,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--d26fcb52ad2ec792"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -250,7 +263,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "reddit-corporate--c37dc2c5ce2c42e0"
+        "reddit-corporate--9697f62aeae7358b"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -291,7 +304,12 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--4adbd17e078fa25a",
+        "openai-blog--9ca0a798b340569f",
+        "openai-blog--303b8265bee46fc5",
+        "openai-blog--3644b677eb91b3bb"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -331,7 +349,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ietf-webbotauth-wg--f5d9aca053704e9f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -361,9 +381,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "rsl-standard--b0f6286db78225bc"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -393,7 +411,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--3e1ffe00ad69d0c3"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -450,7 +470,7 @@
   },
   "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-10-06-datadome-blog-datadome-highlights-dynamic-intent-scoring-for-ai-agents-following-industry-reco.md"
+    "content/feed/2026-10-07-datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo.md"
   ],
   "provider": {
     "name": "gemini",
@@ -460,12 +480,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-06",
+    "edition_date": "2026-10-08",
     "item_count": 1,
-    "path": "data/daily/2026-10-06.json"
+    "path": "data/daily/2026-10-08.json"
   },
   "insight_threads": {
-    "thread_count": 120,
+    "thread_count": 124,
     "path": "data/insight-threads.json"
   },
   "discovery": {

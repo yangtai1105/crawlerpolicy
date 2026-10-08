@@ -317,6 +317,19 @@
       ]
     },
     {
+      "key": "ai-traffic-polarization",
+      "title": "AI Traffic Polarization",
+      "thesis": "Relying on user-agent strings for crawler governance has broken down: 80% of AI agents do not declare a reliable identity, and popular identifiers like Meta-ExternalAgent, GPTBot, and ClaudeBot are heavily spoofed to bypass static filters. At the same time, AI agents are shifting from passive crawling of public pages to deep transactional interactions across authentication and checkout flows, blurring the distinction between automated shopping assistants and credential-stuffing bots.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-08T15:14:55.717190Z",
+      "last_updated_at": "2026-10-08T15:14:55.717190Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "automated-scraping-supply-chain-growth",
       "title": "Automated Scraping Supply Chain Growth",
       "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
@@ -512,6 +525,19 @@
       "verified_development_slugs": [
         "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
       ]
+    },
+    {
+      "key": "crawler-identity-spoofing",
+      "title": "Crawler Identity Spoofing",
+      "thesis": "Relying on user-agent strings for crawler governance has broken down: 80% of AI agents do not declare a reliable identity, and popular identifiers like Meta-ExternalAgent, GPTBot, and ClaudeBot are heavily spoofed to bypass static filters. At the same time, AI agents are shifting from passive crawling of public pages to deep transactional interactions across authentication and checkout flows, blurring the distinction between automated shopping assistants and credential-stuffing bots.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-08T15:14:55.717190Z",
+      "last_updated_at": "2026-10-08T15:14:55.717190Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "crawler-opt-out-safeguards",
@@ -1051,6 +1077,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ineffectiveness-of-static-allowlists",
+      "title": "Ineffectiveness Of Static Allowlists",
+      "thesis": "Relying on user-agent strings for crawler governance has broken down: 80% of AI agents do not declare a reliable identity, and popular identifiers like Meta-ExternalAgent, GPTBot, and ClaudeBot are heavily spoofed to bypass static filters. At the same time, AI agents are shifting from passive crawling of public pages to deep transactional interactions across authentication and checkout flows, blurring the distinction between automated shopping assistants and credential-stuffing bots.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-08T15:14:55.717190Z",
+      "last_updated_at": "2026-10-08T15:14:55.717190Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "intent-based-traffic-filtering",
       "title": "Intent Based Traffic Filtering",
       "thesis": "Traditional identity-based controls like user-agent matching (such as claiming to be GPTBot or ClaudeBot) and static allowlists are failing as automated tools increasingly spoof recognized crawler identities and penetrate deep transactional endpoints, including login and checkout flows.",
@@ -1537,6 +1576,19 @@
       "last_updated_at": "2026-10-05T16:50:30.941105Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "transactional-agent-penetration",
+      "title": "Transactional Agent Penetration",
+      "thesis": "Relying on user-agent strings for crawler governance has broken down: 80% of AI agents do not declare a reliable identity, and popular identifiers like Meta-ExternalAgent, GPTBot, and ClaudeBot are heavily spoofed to bypass static filters. At the same time, AI agents are shifting from passive crawling of public pages to deep transactional interactions across authentication and checkout flows, blurring the distinction between automated shopping assistants and credential-stuffing bots.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-08T15:14:55.717190Z",
+      "last_updated_at": "2026-10-08T15:14:55.717190Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo"
       ],
       "verified_development_slugs": []
     },

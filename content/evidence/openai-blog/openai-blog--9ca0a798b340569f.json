@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--9ca0a798b340569f",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/radisson",
+  "supporting_urls": [],
+  "published_at": "2026-10-07T07:00:00Z",
+  "detected_at": "2026-10-08T15:14:55.717190Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--9ca0a798b340569f.json",
+  "content_hash": "sha256:dee80c49e93f809b6ef57db8e6ae7cfe22b5d61967ee02cc27372ff573a16112",
+  "external_id": "https://openai.com/index/radisson",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Radisson Hotel Group brings hotel discovery into ChatGPT",
+  "content": "Radisson partnered with Accenture to build a ChatGPT plugin using OpenAI technology, helping travelers find, compare, and book hotels while planning their trips.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

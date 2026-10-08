@@ -1,13 +1,9 @@
 {
-  "last_checked_at": "2026-10-06T14:46:17.656443+00:00",
-  "last_fetch_succeeded_at": "2026-10-06T14:46:17.656443+00:00",
-  "last_evidence_at": "2026-10-05T16:50:30.941105+00:00",
+  "last_checked_at": "2026-10-08T15:14:55.717190+00:00",
+  "last_fetch_succeeded_at": "2026-10-08T15:14:55.717190+00:00",
+  "last_evidence_at": "2026-10-08T15:14:55.717190+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/duolingo",
-    "https://openai.com/index/planning-for-agi-and-beyond",
-    "https://openai.com/index/how-should-ai-systems-behave",
-    "https://openai.com/index/chatgpt-plus",
     "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text",
     "https://openai.com/index/openai-and-microsoft-extend-partnership",
     "https://openai.com/index/forecasting-misuse",
@@ -503,7 +499,11 @@
     "https://openai.com/index/albertsons-reimagining-retail",
     "https://openai.com/index/practical-guide-building-gpt-6",
     "https://openai.com/index/eu-text-provenance",
-    "https://openai.com/index/new-chatgpt-ads-format-and-measurement"
+    "https://openai.com/index/new-chatgpt-ads-format-and-measurement",
+    "https://openai.com/index/teens-learn-and-plan",
+    "https://openai.com/index/radisson",
+    "https://openai.com/index/gpt-6-for-everyone",
+    "https://openai.com/index/atlassian-partnership"
   ],
   "consecutive_failures": 0,
   "first_seen": false

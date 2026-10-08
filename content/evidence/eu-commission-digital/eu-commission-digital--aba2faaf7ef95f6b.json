@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--aba2faaf7ef95f6b",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2084",
+  "supporting_urls": [],
+  "published_at": "2026-10-07T22:00:00Z",
+  "detected_at": "2026-10-08T15:14:55.717190Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--aba2faaf7ef95f6b.json",
+  "content_hash": "sha256:22406286f46dfdc1606f132856f27b0ba22e18d0992c545af0ba1246212e48ad",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2084",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission fines Kingspan €40 million for providing incorrect and misleading information during merger investigation",
+  "content": "European Commission Press release Brussels, 08 Oct 2026 The European Commission has fined Kingspan €40 million for providing incorrect and misleading information during the 2021 Commission review of Kingspan's planned acquisition of Trimo, under the EU Merger Regulation (‘EUMR').",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

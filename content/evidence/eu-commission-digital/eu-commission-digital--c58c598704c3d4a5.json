@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--c58c598704c3d4a5",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2091",
+  "supporting_urls": [],
+  "published_at": "2026-10-07T22:00:00Z",
+  "detected_at": "2026-10-08T15:14:55.717190Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--c58c598704c3d4a5.json",
+  "content_hash": "sha256:c38f539b99ab828f772ea07cc9747e7ad3f4fe8da1003e9930be92b0d2405c05",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2091",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Eurobarometer shows consumers' growing trust in EU Ecolabel",
+  "content": "European Commission Press release Brussels, 08 Oct 2026 Released on the occasion of the World Ecolabel Day, the latest Eurobarometer survey shows an increased trust and recognition for the EU Ecolabel among European consumers who are increasingly looking for sustainable products.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

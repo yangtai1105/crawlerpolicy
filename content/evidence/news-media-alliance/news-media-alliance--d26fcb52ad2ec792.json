@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--d26fcb52ad2ec792",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/news-media-alliance-calls-on-doj-and-ftc-to-investigate-googles-spam-policies/",
+  "supporting_urls": [],
+  "published_at": "2026-10-08T02:54:08Z",
+  "detected_at": "2026-10-08T15:14:55.717190Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--d26fcb52ad2ec792.json",
+  "content_hash": "sha256:f0ee7285890363db8620467496a5dfb40dbf5cbec211e4f558385d83356bd677",
+  "external_id": "https://www.newsmediaalliance.org/?p=18763",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "News/Media Alliance Calls on DOJ and FTC to Investigate Google’s Spam Policies",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"668\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2022/07/reading-news-phone-laptop-1000px.jpg\" width=\"1000\" /></p>On October 7, the News/Media Alliance sent a letter to the Federal Trade Commission and the Department of Justice to request the agencies open an investigation into Google’s anticompetitive conduct regarding its site reputation abuse policy.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

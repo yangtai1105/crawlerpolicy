@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--4adbd17e078fa25a",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/teens-learn-and-plan",
+  "supporting_urls": [],
+  "published_at": "2026-10-07T12:00:00Z",
+  "detected_at": "2026-10-08T15:14:55.717190Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--4adbd17e078fa25a.json",
+  "content_hash": "sha256:d4e053651431703f8108110f9eb4a3b41411c1c7c37d95da0ba56441c133c1f9",
+  "external_id": "https://openai.com/index/teens-learn-and-plan",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Helping teens learn, plan, and shape the future of AI",
+  "content": "College Planner is coming to ChatGPT for Teens to help students manage college applications, alongside new flashcards, quizzes, and a teen AI council.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
