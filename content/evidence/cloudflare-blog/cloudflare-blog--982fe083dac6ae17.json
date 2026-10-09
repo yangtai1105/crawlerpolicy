@@ -1,0 +1,19 @@
+{
+  "evidence_id": "cloudflare-blog--982fe083dac6ae17",
+  "source": "cloudflare-blog",
+  "source_url": "https://blog.cloudflare.com/deno-joins-cloudflare/",
+  "supporting_urls": [],
+  "published_at": "2026-10-09T12:50:00Z",
+  "detected_at": "2026-10-09T14:59:58.585222Z",
+  "content_path": "content/evidence/cloudflare-blog/cloudflare-blog--982fe083dac6ae17.json",
+  "content_hash": "sha256:a253bc9997214f2a57c66541ba77e1cfc5d9197c776fba4c8e9172f4546153c9",
+  "external_id": "01M4EHZFCN5RWBFJJ8WEERWAYZ",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Deno is joining Cloudflare",
+  "content": "<p>The Deno team is joining Cloudflare to radically simplify self-hosting Workers and Durable Objects so developers can use the same primitives in more places.</p><p>For what this means and how it came about, here’s the story from Ryan Dahl, Senior Principal Engineer, and Kenton Varda, Distinguished Engineer.</p><!-- unsupported block: htmlBlock --><p></p><!-- unsupported block: htmlBlock --><!-- unsupported block: image -->",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

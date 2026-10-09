@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--a1b8a181ea229047",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2127",
+  "supporting_urls": [],
+  "published_at": "2026-10-09T12:14:20Z",
+  "detected_at": "2026-10-09T14:59:58.585222Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--a1b8a181ea229047.json",
+  "content_hash": "sha256:2acbb16e2c26ed2a02f952796d2d99ebf1533a791764f00b204fd31088c2875a",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2127",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement on the International Criminal Court following announcement of US sanctions",
+  "content": "European Commission Statement Brussels, 09 Oct 2026 The European Union has been a constant supporter of the International Criminal Court (ICC). It is deeply regrettable that the United States has announced intent...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

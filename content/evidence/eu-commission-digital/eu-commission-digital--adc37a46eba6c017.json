@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--adc37a46eba6c017",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2100",
+  "supporting_urls": [],
+  "published_at": "2026-10-08T22:00:00Z",
+  "detected_at": "2026-10-09T14:59:58.585222Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--adc37a46eba6c017.json",
+  "content_hash": "sha256:76c4ab0c8c42ab5a795f51cd90ad30d46078dd737815a0b9ee7207a782ba5641",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2100",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by Commissioner Várhelyi ahead of World Mental Health Day",
+  "content": "European Commission Statement Brussels, 09 Oct 2026 Ahead of the World Mental Health Day, Commissioner for Health and Animal Safety, Olivér Várhelyi, issued the following statement:\n\"More than 84 million people i...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

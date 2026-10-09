@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--2707c2e185447e32",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/oracle",
+  "supporting_urls": [],
+  "published_at": "2026-10-08T16:00:00Z",
+  "detected_at": "2026-10-09T14:59:58.585222Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--2707c2e185447e32.json",
+  "content_hash": "sha256:fc2fed5c6a1e07a24f916ab4fa8d1f4d60fb73d96e3dad3fa3012f743c058b3e",
+  "external_id": "https://openai.com/index/oracle",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How Oracle turns days of work into minutes with ChatGPT and Codex",
+  "content": "Across recruiting, engineering, and operations, Oracle turns specialist knowledge into fast, repeatable workflows with ChatGPT Work and Codex.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

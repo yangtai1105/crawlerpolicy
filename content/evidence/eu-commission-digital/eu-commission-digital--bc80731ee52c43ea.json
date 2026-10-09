@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--bc80731ee52c43ea",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2116",
+  "supporting_urls": [],
+  "published_at": "2026-10-08T22:00:00Z",
+  "detected_at": "2026-10-09T14:59:58.585222Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--bc80731ee52c43ea.json",
+  "content_hash": "sha256:15d59159e8144cd9eeecd0a7f8e5618f58b84967f66c3e415d48c80eb406c249",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2116",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Remarks by Commissioner Dombrovskis at the ECOFIN press conference",
+  "content": "European Commission Statement Luxembourg, 09 Oct 2026 Thank you, Simon. Good afternoon, everyone.\nFirst of all, we take note of the political agreement on the Market Integration and Supervision Package reached at t...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

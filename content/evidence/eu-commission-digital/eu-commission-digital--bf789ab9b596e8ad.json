@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--bf789ab9b596e8ad",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2113",
+  "supporting_urls": [],
+  "published_at": "2026-10-08T22:00:00Z",
+  "detected_at": "2026-10-09T14:59:58.585222Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--bf789ab9b596e8ad.json",
+  "content_hash": "sha256:7a4bce7cb820b097d45a4688926bad134a79c3ea8943d704d4485a3d2f36c028",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2113",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission selects 46 new Strategic Projects to bolster the EU's supply of critical raw materials",
+  "content": "European Commission Press release Brussels, 09 Oct 2026 To strengthen EU supply chains and diversify sources of critical raw materials, the European Commission today announced that it has selected 46 new Strategic Projects across 16 Member States.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

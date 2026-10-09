@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-10-08T15:14:55.717190+00:00",
-  "last_fetch_succeeded_at": "2026-10-08T15:14:55.717190+00:00",
-  "last_evidence_at": "2026-10-08T15:14:55.717190+00:00",
+  "last_checked_at": "2026-10-09T14:59:58.585222+00:00",
+  "last_fetch_succeeded_at": "2026-10-09T14:59:58.585222+00:00",
+  "last_evidence_at": "2026-10-09T14:59:58.585222+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/new-ai-classifier-for-indicating-ai-written-text",
-    "https://openai.com/index/openai-and-microsoft-extend-partnership",
     "https://openai.com/index/forecasting-misuse",
     "https://openai.com/index/yabble",
     "https://openai.com/index/waymark",
@@ -503,7 +501,9 @@
     "https://openai.com/index/teens-learn-and-plan",
     "https://openai.com/index/radisson",
     "https://openai.com/index/gpt-6-for-everyone",
-    "https://openai.com/index/atlassian-partnership"
+    "https://openai.com/index/atlassian-partnership",
+    "https://openai.com/index/sophos",
+    "https://openai.com/index/oracle"
   ],
   "consecutive_failures": 0,
   "first_seen": false
