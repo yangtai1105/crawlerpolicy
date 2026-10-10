@@ -74,3 +74,21 @@ def test_blank_names_are_ignored(tmp_path):
     )
 
     assert load_candidates(path) == {}
+
+
+def test_evidence_ids_are_deduplicated_across_distinct_feed_slugs(tmp_path):
+    path = tmp_path / "entity-candidates.json"
+
+    record_candidates(
+        path, "player", ["Scalepost"],
+        evidence_ids=["ev-9", "ev-1"], feed_slug="first", now=NOW,
+    )
+    record_candidates(
+        path, "player", ["Scalepost"],
+        evidence_ids=["ev-9", "ev-2"], feed_slug="second", now=LATER,
+    )
+
+    entry = load_candidates(path)["player:scalepost"]
+    assert entry.evidence_ids == ["ev-9", "ev-1", "ev-2"]
+    # Ensure ev-9 appears exactly once, not duplicated
+    assert entry.evidence_ids.count("ev-9") == 1
