@@ -47,7 +47,9 @@ async def test_analyzer_returns_four_layer_editorial_result(fake_model, crawler_
         why_it_matters="One robots.txt decision no longer covers every OpenAI product.",
         primary_track="search-discovery",
         tracks=["search-discovery", "access-controls"],
-        actors=["OpenAI", "publishers"],
+        actors=["Cloudflare", "Totally Unknown Inc"],
+        subject="agent",
+        protocols=["Web Bot Auth", "Imaginary Protocol"],
         trend_signals=["training-search-separation"],
         confidence="high",
     )
@@ -63,6 +65,16 @@ async def test_analyzer_returns_four_layer_editorial_result(fake_model, crawler_
     assert isinstance(result, AnalysisResult)
     assert result.summary.startswith("GPTBot documentation")
     assert result.insight == "Search and training clients are becoming distinct."
+    # End-to-end wiring of the five new AnalysisResult fields through analyze_change.
+    # Both actors and protocols carry one known registry name and one name that is
+    # definitely absent from the registries, so swapping unknown_players with
+    # unknown_protocols (or players with protocols) in the AnalysisResult
+    # construction would make one of these four assertions fail.
+    assert result.subject is Subject.AGENT
+    assert result.players == ["cloudflare"]
+    assert result.protocols == ["web-bot-auth"]
+    assert result.unknown_players == ["Totally Unknown Inc"]
+    assert result.unknown_protocols == ["Imaginary Protocol"]
     assert result.implication == "Publishers can apply separate access policies."
     assert result.why_it_matters.startswith("One robots.txt")
     assert result.primary_track is Track.SEARCH_DISCOVERY
