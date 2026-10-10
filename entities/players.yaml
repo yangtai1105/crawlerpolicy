@@ -1,0 +1,178 @@
+# Player registry — the rows of the map.
+# The pipeline never writes this file; entries arrive by human edit after
+# review of data/entity-candidates.json.
+players:
+  # --- defense-infra ---
+  - slug: cloudflare
+    display_name: Cloudflare
+    category: defense-infra
+    short_descriptor: CDN · bot management
+    home_url: https://www.cloudflare.com
+  - slug: akamai
+    display_name: Akamai
+    category: defense-infra
+    short_descriptor: CDN · bot management
+    home_url: https://www.akamai.com
+  - slug: fastly
+    display_name: Fastly
+    category: defense-infra
+    short_descriptor: CDN
+    home_url: https://www.fastly.com
+  - slug: datadome
+    display_name: DataDome
+    category: defense-infra
+    short_descriptor: bot defense
+    home_url: https://datadome.co
+  - slug: human-security
+    display_name: HUMAN Security
+    category: defense-infra
+    short_descriptor: bot defense
+    home_url: https://www.humansecurity.com
+    aliases: ["HUMAN", "White Ops"]
+  - slug: imperva
+    display_name: Imperva
+    category: defense-infra
+    short_descriptor: WAF · bot management
+    home_url: https://www.imperva.com
+    aliases: ["Thales Imperva"]
+  - slug: f5
+    display_name: F5
+    category: defense-infra
+    short_descriptor: WAF · bot defense
+    home_url: https://www.f5.com
+  - slug: vercel
+    display_name: Vercel
+    category: defense-infra
+    short_descriptor: hosting · BotID
+    home_url: https://vercel.com
+
+  # --- agent-operator ---
+  - slug: openai
+    display_name: OpenAI
+    category: agent-operator
+    short_descriptor: GPTBot · ChatGPT agent
+    home_url: https://openai.com
+    bots: ["GPTBot", "OAI-SearchBot", "ChatGPT-User"]
+  - slug: anthropic
+    display_name: Anthropic
+    category: agent-operator
+    short_descriptor: ClaudeBot
+    home_url: https://www.anthropic.com
+    bots: ["ClaudeBot", "Claude-User"]
+  - slug: google
+    display_name: Google
+    category: agent-operator
+    short_descriptor: Google-Extended
+    home_url: https://www.google.com
+    bots: ["Google-Extended", "Googlebot"]
+  - slug: microsoft
+    display_name: Microsoft
+    category: agent-operator
+    short_descriptor: Bingbot · Copilot
+    home_url: https://www.microsoft.com
+    bots: ["bingbot", "msnbot"]
+  - slug: perplexity
+    display_name: Perplexity
+    category: agent-operator
+    short_descriptor: PerplexityBot
+    home_url: https://www.perplexity.ai
+    bots: ["PerplexityBot", "Perplexity-User"]
+  - slug: amazon
+    display_name: Amazon
+    category: agent-operator
+    short_descriptor: Amazonbot · AgentCore
+    home_url: https://www.amazon.com
+    bots: ["Amazonbot"]
+    aliases: ["AWS", "Amazon Web Services"]
+  - slug: meta
+    display_name: Meta
+    category: agent-operator
+    short_descriptor: Meta-ExternalAgent
+    home_url: https://www.meta.com
+    bots: ["Meta-ExternalAgent", "meta-externalagent"]
+
+  # --- identity-payments ---
+  - slug: visa
+    display_name: Visa
+    category: identity-payments
+    short_descriptor: agent payments
+    home_url: https://www.visa.com
+  - slug: mastercard
+    display_name: Mastercard
+    category: identity-payments
+    short_descriptor: agent payments
+    home_url: https://www.mastercard.com
+  - slug: stripe
+    display_name: Stripe
+    category: identity-payments
+    short_descriptor: payments · ACP
+    home_url: https://stripe.com
+  - slug: okta
+    display_name: Okta
+    category: identity-payments
+    short_descriptor: agent identity
+    home_url: https://www.okta.com
+    aliases: ["Auth0"]
+  - slug: stytch
+    display_name: Stytch
+    category: identity-payments
+    short_descriptor: agent identity
+    home_url: https://stytch.com
+  - slug: skyfire
+    display_name: Skyfire
+    category: identity-payments
+    short_descriptor: KYA · agent wallet
+    home_url: https://skyfire.xyz
+
+  # --- monetization ---
+  - slug: tollbit
+    display_name: TollBit
+    category: monetization
+    short_descriptor: pay-per-crawl
+    home_url: https://tollbit.com
+  - slug: prorata
+    display_name: ProRata
+    category: monetization
+    short_descriptor: attribution payouts
+    home_url: https://prorata.ai
+    aliases: ["ProRata.ai", "Gist"]
+  - slug: rsl-collective
+    display_name: RSL Collective
+    category: monetization
+    short_descriptor: rights collective
+    home_url: https://rslcollective.org
+
+  # --- standards-body ---
+  - slug: ietf
+    display_name: IETF
+    category: standards-body
+    short_descriptor: standards body
+    home_url: https://www.ietf.org
+  - slug: w3c
+    display_name: W3C
+    category: standards-body
+    short_descriptor: standards body
+    home_url: https://www.w3.org
+  - slug: linux-foundation
+    display_name: Linux Foundation
+    category: standards-body
+    short_descriptor: A2A · AP2 steward
+    home_url: https://www.linuxfoundation.org
+    aliases: ["Agentic AI Foundation"]
+  - slug: nist
+    display_name: NIST
+    category: standards-body
+    short_descriptor: agent standards
+    home_url: https://www.nist.gov
+
+  # --- publisher ---
+  - slug: reddit
+    display_name: Reddit
+    category: publisher
+    short_descriptor: platform · publisher
+    home_url: https://www.reddit.com
+  - slug: news-media-alliance
+    display_name: News/Media Alliance
+    category: publisher
+    short_descriptor: publisher trade body
+    home_url: https://www.newsmediaalliance.org
