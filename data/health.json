@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-09T14:59:58.585222Z",
+  "last_attempted_at": "2026-10-10T14:16:06.384793Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -151,8 +151,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--a4ae11cbcef2a01e",
-        "cloudflare-blog--982fe083dac6ae17"
+        "cloudflare-blog--ca05ed284a13e9a9"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -173,12 +172,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--6aade9c36c50cc09",
-        "uk-cma--e2d201ebe6bc92a5",
-        "uk-cma--deb68650afd0a8f4",
-        "uk-cma--93808cd866b7925a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -209,16 +203,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--a1b8a181ea229047",
-        "eu-commission-digital--551f4f611449c475",
-        "eu-commission-digital--69ceba666a8ca3b2",
-        "eu-commission-digital--b87e0d4a9b58fd8d",
-        "eu-commission-digital--cd7e3c709f1375bf",
-        "eu-commission-digital--03608bdccd247075",
-        "eu-commission-digital--a4df9dc648ffa18e",
-        "eu-commission-digital--adc37a46eba6c017",
-        "eu-commission-digital--bf789ab9b596e8ad",
-        "eu-commission-digital--bc80731ee52c43ea"
+        "eu-commission-digital--e2cbc06f624eeac8"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -289,10 +274,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--8bb24455f710a733",
-        "openai-blog--2707c2e185447e32"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -457,9 +439,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-10-09",
+    "edition_date": "2026-10-10",
     "item_count": 0,
-    "path": "data/daily/2026-10-09.json"
+    "path": "data/daily/2026-10-10.json"
   },
   "insight_threads": {
     "thread_count": 124,
