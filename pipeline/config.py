@@ -40,6 +40,10 @@ class Config:
         return self.repo_root / "data"
 
     @property
+    def entity_candidates_path(self) -> Path:
+        return self.data_dir / "entity-candidates.json"
+
+    @property
     def intelligence_dir(self) -> Path:
         return self.data_dir / "intelligence"
 

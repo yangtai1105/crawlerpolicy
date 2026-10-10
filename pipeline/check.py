@@ -17,6 +17,7 @@ from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
 from pipeline.daily_brief import build_daily_brief, save_daily_brief
 from pipeline.differ import compute_diff
+from pipeline.entity_candidates import record_candidates
 from pipeline.event_writer import event_slug, write_event
 from pipeline.evidence import (
     EvidenceRecord,
@@ -826,6 +827,23 @@ def _publish_analysis(
             event_slug(analysis.title) if development_path is not None else None
         ),
     )
+    if analysis.unknown_players or analysis.unknown_protocols:
+        record_candidates(
+            cfg.entity_candidates_path,
+            "player",
+            analysis.unknown_players,
+            evidence_ids=[record.evidence_id],
+            feed_slug=feed_path.stem,
+            now=record.detected_at,
+        )
+        record_candidates(
+            cfg.entity_candidates_path,
+            "protocol",
+            analysis.unknown_protocols,
+            evidence_ids=[record.evidence_id],
+            feed_slug=feed_path.stem,
+            now=record.detected_at,
+        )
     record.stage = EvidenceStage.PUBLISHED
     record.last_error = None
     save_evidence(cfg.evidence_dir, record)
