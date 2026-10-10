@@ -8,12 +8,37 @@ class Track(StrEnum):
     POLICY_REGULATION = "policy-regulation"
     LITIGATION_LEGAL = "litigation-legal"
     SEARCH_DISCOVERY = "search-discovery"
-    CRAWLER_CONTROLS = "crawler-controls"
-    AGENTIC_WEB = "agentic-web"
+    ACCESS_CONTROLS = "access-controls"
+    PLATFORM_ECOSYSTEM = "platform-ecosystem"
+    IDENTITY_AUTHORIZATION = "identity-authorization"
     LICENSING_MONETIZATION = "licensing-monetization"
     STANDARDS_PROTOCOLS = "standards-protocols"
     ASSET_RIGHTS = "asset-rights"
     MEASUREMENT_ECONOMICS = "measurement-economics"
+
+
+class Subject(StrEnum):
+    """What a development is about, orthogonal to its domain Track."""
+
+    CRAWLER = "crawler"
+    AGENT = "agent"
+    BOTH = "both"
+    UNKNOWN = "unknown"
+
+
+# Slugs used before 2026-10. Content on disk keeps them; readers resolve.
+TRACK_ALIASES: dict[str, Track] = {
+    "crawler-controls": Track.ACCESS_CONTROLS,
+    "agentic-web": Track.PLATFORM_ECOSYSTEM,
+}
+
+
+def resolve_track(value: str) -> Track:
+    """Resolve a track slug, including pre-2026-10 slugs, to a canonical Track."""
+    alias = TRACK_ALIASES.get(value)
+    if alias is not None:
+        return alias
+    return Track(value)
 
 
 class Front(StrEnum):
@@ -44,12 +69,13 @@ class SourceRole(StrEnum):
 
 FRONT_TRACKS: dict[Front, tuple[Track, ...]] = {
     Front.ACCESS_DISCOVERY: (
-        Track.CRAWLER_CONTROLS,
+        Track.ACCESS_CONTROLS,
         Track.SEARCH_DISCOVERY,
     ),
     Front.AGENTS_IDENTITY: (
-        Track.AGENTIC_WEB,
+        Track.PLATFORM_ECOSYSTEM,
         Track.STANDARDS_PROTOCOLS,
+        Track.IDENTITY_AUTHORIZATION,
     ),
     Front.RIGHTS_MARKETS: (
         Track.LICENSING_MONETIZATION,

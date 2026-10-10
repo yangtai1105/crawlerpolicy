@@ -69,7 +69,7 @@ class DependencyBlocker:
 
 
 def _maybe_trend_context(cfg: Config, source: Source) -> str:
-    if Track.CRAWLER_CONTROLS in source.default_tracks:
+    if Track.ACCESS_CONTROLS in source.default_tracks:
         return ""
     recent = load_recent_events_for_source(cfg.events_dir, source.slug, limit=10)
     return format_trend_context(recent)

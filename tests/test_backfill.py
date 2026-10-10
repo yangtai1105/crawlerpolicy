@@ -39,7 +39,7 @@ def test_selection_uses_only_unpublished_direct_evidence(tmp_path):
   type: rss_feed
   url: https://example.test/feed.xml
   display_name: Direct Publisher
-  default_tracks: [crawler-controls]
+  default_tracks: [access-controls]
   tier: primary
   role: infrastructure
 - slug: search

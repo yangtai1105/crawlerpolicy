@@ -24,8 +24,8 @@ def material_analysis(title="Direct evidence changes crawler access"):
         insight="Machine access is becoming an explicit policy surface.",
         implication="Publishers may adopt more granular controls.",
         why_it_matters="The change affects how automated clients access the web.",
-        primary_track=Track.CRAWLER_CONTROLS,
-        tracks=[Track.CRAWLER_CONTROLS],
+        primary_track=Track.ACCESS_CONTROLS,
+        tracks=[Track.ACCESS_CONTROLS],
         actors=["Direct Publisher"],
         trend_signals=["granular-access"],
         confidence="high",
@@ -43,7 +43,7 @@ def make_repo(tmp_path, *, tier="primary", records=1, keyword_filter=None):
             "  type: rss_feed\n"
             "  url: https://example.test/feed.xml\n"
             "  display_name: Direct Publisher\n"
-            "  default_tracks: [crawler-controls]\n"
+            "  default_tracks: [access-controls]\n"
             f"  tier: {tier}\n"
             "  role: infrastructure\n"
             f"{keyword_line}"

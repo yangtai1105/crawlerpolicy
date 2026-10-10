@@ -15,7 +15,7 @@ def ietf_source():
         type=SourceType.IETF_DRAFT,
         draft_name="draft-cloudflare-httpbis-web-bot-auth",
         display_name="Web Bot Auth",
-        default_tracks=[Track.STANDARDS_PROTOCOLS, Track.AGENTIC_WEB],
+        default_tracks=[Track.STANDARDS_PROTOCOLS, Track.PLATFORM_ECOSYSTEM],
         tier=SourceTier.PRIMARY,
         role=SourceRole.STANDARDS,
     )

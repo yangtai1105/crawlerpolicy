@@ -11,11 +11,11 @@ from pathlib import Path
 from typing import Literal
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from pipeline.config import Config
 from pipeline.model_provider import GeminiStructuredModel, StructuredModel
-from pipeline.taxonomy import SourceTier, Track
+from pipeline.taxonomy import SourceTier, Track, resolve_track
 from pipeline.trends import Trend, TrendDelta, TrendStatus, load_trends, save_trends
 
 
@@ -37,6 +37,20 @@ class MaterialEvent(BaseModel):
     evidence_ids: list[str] = Field(default_factory=list)
     development: str = ""
     implication: str = ""
+
+    # content/events/*.md is never rewritten; pre-2026-10 records still carry
+    # legacy track slugs. Resolve them at read time rather than at rest.
+    @field_validator("primary_track", mode="before")
+    @classmethod
+    def _resolve_primary_track_alias(cls, value: object) -> object:
+        return resolve_track(value) if isinstance(value, str) else value
+
+    @field_validator("tracks", mode="before")
+    @classmethod
+    def _resolve_tracks_aliases(cls, value: object) -> object:
+        if isinstance(value, list):
+            return [resolve_track(item) if isinstance(item, str) else item for item in value]
+        return value
 
 
 class ExecutiveShift(BaseModel):

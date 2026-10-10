@@ -21,7 +21,7 @@ def crawler_source():
         type=SourceType.HTML_PAGE,
         url="https://x",
         display_name="OpenAI GPTBot",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.PRIMARY,
         role=SourceRole.PLATFORM_DOCS,
     )
@@ -37,7 +37,7 @@ async def test_analyzer_returns_four_layer_editorial_result(fake_model, crawler_
         implication="Publishers can apply separate access policies.",
         why_it_matters="One robots.txt decision no longer covers every OpenAI product.",
         primary_track="search-discovery",
-        tracks=["search-discovery", "crawler-controls"],
+        tracks=["search-discovery", "access-controls"],
         actors=["OpenAI", "publishers"],
         trend_signals=["training-search-separation"],
         confidence="high",
@@ -57,7 +57,7 @@ async def test_analyzer_returns_four_layer_editorial_result(fake_model, crawler_
     assert result.implication == "Publishers can apply separate access policies."
     assert result.why_it_matters.startswith("One robots.txt")
     assert result.primary_track is Track.SEARCH_DISCOVERY
-    assert result.tracks == [Track.SEARCH_DISCOVERY, Track.CRAWLER_CONTROLS]
+    assert result.tracks == [Track.SEARCH_DISCOVERY, Track.ACCESS_CONTROLS]
     assert result.confidence == "high"
 
 
@@ -87,8 +87,8 @@ async def test_analyzer_falls_back_to_source_track_for_invalid_classification(
         unified_diff="-old\n+new",
     )
 
-    assert result.primary_track is Track.CRAWLER_CONTROLS
-    assert result.tracks == [Track.CRAWLER_CONTROLS]
+    assert result.primary_track is Track.ACCESS_CONTROLS
+    assert result.tracks == [Track.ACCESS_CONTROLS]
     assert result.confidence == "low"
 
 
@@ -99,8 +99,8 @@ def test_analysis_result_accepts_legacy_what_changed_input():
         title="Compatible result",
         what_changed="Legacy summary.",
         implication="Legacy implication.",
-        primary_track=Track.CRAWLER_CONTROLS,
-        tracks=[Track.CRAWLER_CONTROLS],
+        primary_track=Track.ACCESS_CONTROLS,
+        tracks=[Track.ACCESS_CONTROLS],
         actors=[],
         trend_signals=[],
         confidence="medium",

@@ -17,7 +17,7 @@ def gh_source():
         type=SourceType.GITHUB_REPO,
         repo="modelcontextprotocol/specification",
         display_name="MCP",
-        default_tracks=[Track.STANDARDS_PROTOCOLS, Track.AGENTIC_WEB],
+        default_tracks=[Track.STANDARDS_PROTOCOLS, Track.PLATFORM_ECOSYSTEM],
         tier=SourceTier.PRIMARY,
         role=SourceRole.STANDARDS,
     )

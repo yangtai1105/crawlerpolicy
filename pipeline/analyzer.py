@@ -102,7 +102,7 @@ async def analyze_change(
     item_url: str | None = None,
     published_at: datetime | None = None,
 ) -> AnalysisResult:
-    crawler_control_source = Track.CRAWLER_CONTROLS in source.default_tracks
+    crawler_control_source = Track.ACCESS_CONTROLS in source.default_tracks
     system = _SYSTEM_BASE + (_CRAWLER_ADDON if crawler_control_source else _NEWS_ADDON)
     primary_url = item_url or source.url or ""
     prompt_parts = [

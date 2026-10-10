@@ -19,7 +19,7 @@ def _source() -> Source:
         lookback_hours=36,
         shadow=True,
         display_name="X — Access & Discovery",
-        default_tracks=[Track.CRAWLER_CONTROLS, Track.SEARCH_DISCOVERY],
+        default_tracks=[Track.ACCESS_CONTROLS, Track.SEARCH_DISCOVERY],
         tier=SourceTier.COMMENTARY,
         role=SourceRole.REPORTING,
     )

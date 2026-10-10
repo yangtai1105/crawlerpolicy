@@ -32,7 +32,7 @@ def select_crawler_control_sources(sources: list[Source]) -> list[Source]:
     return [
         source
         for source in sources
-        if Track.CRAWLER_CONTROLS in source.default_tracks
+        if Track.ACCESS_CONTROLS in source.default_tracks
     ]
 
 

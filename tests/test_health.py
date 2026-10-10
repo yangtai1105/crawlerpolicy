@@ -18,7 +18,7 @@ def _source(slug: str, *, required: bool) -> Source:
         type=SourceType.HTML_PAGE,
         url=f"https://{slug}.example",
         display_name=slug,
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.PRIMARY,
         role=SourceRole.PLATFORM_DOCS,
         required_for_coverage=required,
@@ -94,7 +94,7 @@ def test_failed_x_discovery_degrades_but_does_not_trigger_core_threshold():
         type=SourceType.XAI_SEARCH,
         query="crawler changes",
         display_name="X access",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.COMMENTARY,
         role=SourceRole.REPORTING,
     )

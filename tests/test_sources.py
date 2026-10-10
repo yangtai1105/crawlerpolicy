@@ -13,13 +13,13 @@ def test_html_page_source_minimum_fields():
         type=SourceType.HTML_PAGE,
         url="https://platform.openai.com/docs/gptbot",
         display_name="OpenAI GPTBot",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.PRIMARY,
         role=SourceRole.PLATFORM_DOCS,
         required_for_coverage=True,
     )
     assert s.slug == "gptbot"
-    assert s.default_tracks == [Track.CRAWLER_CONTROLS]
+    assert s.default_tracks == [Track.ACCESS_CONTROLS]
     assert s.required_for_coverage is True
     assert s.enabled is True
 
@@ -32,7 +32,7 @@ def test_rss_feed_accepts_no_keyword_filter():
         type=SourceType.RSS_FEED,
         url="https://developers.cloudflare.com/changelog/rss/ai-crawl-control.xml",
         display_name="Cloudflare AI Crawl Control",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.PRIMARY,
         role=SourceRole.INFRASTRUCTURE,
     )
@@ -78,7 +78,7 @@ def test_source_rejects_empty_or_duplicate_default_tracks():
 
     with pytest.raises(ValidationError):
         Source(
-            default_tracks=[Track.CRAWLER_CONTROLS, Track.CRAWLER_CONTROLS],
+            default_tracks=[Track.ACCESS_CONTROLS, Track.ACCESS_CONTROLS],
             **common,
         )
 
@@ -89,7 +89,7 @@ def test_load_sources_from_yaml(tmp_path):
   type: html_page
   url: https://platform.openai.com/docs/gptbot
   display_name: OpenAI GPTBot
-  default_tracks: [crawler-controls]
+  default_tracks: [access-controls]
   tier: primary
   role: platform-docs
   required_for_coverage: true
@@ -98,7 +98,7 @@ def test_load_sources_from_yaml(tmp_path):
   url: https://blog.cloudflare.com/rss/
   keyword_filter: ["AI bot", "crawler"]
   display_name: Cloudflare Blog
-  default_tracks: [crawler-controls, measurement-economics]
+  default_tracks: [access-controls, measurement-economics]
   tier: specialist
   role: reporting
 """
@@ -117,14 +117,14 @@ def test_load_sources_rejects_duplicate_slugs(tmp_path):
   type: html_page
   url: https://a.example
   display_name: A
-  default_tracks: [crawler-controls]
+  default_tracks: [access-controls]
   tier: primary
   role: platform-docs
 - slug: dup
   type: html_page
   url: https://b.example
   display_name: B
-  default_tracks: [crawler-controls]
+  default_tracks: [access-controls]
   tier: primary
   role: platform-docs
 """
@@ -140,7 +140,7 @@ def test_source_can_be_disabled_without_removing_its_registry_entry():
         type=SourceType.GEMINI_SEARCH,
         query="crawler policy changes",
         display_name="Discovery lead",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.COMMENTARY,
         role=SourceRole.REPORTING,
         enabled=False,
@@ -158,7 +158,7 @@ def test_xai_search_source_accepts_bounded_handle_allowlist():
         lookback_hours=36,
         shadow=True,
         display_name="X access signals",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.COMMENTARY,
         role=SourceRole.REPORTING,
     )
@@ -174,7 +174,7 @@ def test_xai_search_requires_query_and_commentary_tier():
             slug="x-access",
             type=SourceType.XAI_SEARCH,
             display_name="X access signals",
-            default_tracks=[Track.CRAWLER_CONTROLS],
+            default_tracks=[Track.ACCESS_CONTROLS],
             tier=SourceTier.COMMENTARY,
             role=SourceRole.REPORTING,
         )
@@ -184,7 +184,7 @@ def test_xai_search_requires_query_and_commentary_tier():
             slug="x-access",
             type=SourceType.XAI_SEARCH,
             display_name="X access signals",
-            default_tracks=[Track.CRAWLER_CONTROLS],
+            default_tracks=[Track.ACCESS_CONTROLS],
             tier=SourceTier.PRIMARY,
             role=SourceRole.REPORTING,
             query="crawler policy",
@@ -197,7 +197,7 @@ def test_xai_search_rejects_more_than_twenty_handles():
             slug="x-access",
             type=SourceType.XAI_SEARCH,
             display_name="X access signals",
-            default_tracks=[Track.CRAWLER_CONTROLS],
+            default_tracks=[Track.ACCESS_CONTROLS],
             tier=SourceTier.COMMENTARY,
             role=SourceRole.REPORTING,
             query="crawler policy",
