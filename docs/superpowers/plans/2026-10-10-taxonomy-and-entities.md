@@ -1090,7 +1090,10 @@ a no-op, so replaying a day never inflates occurrence counts."
 
 **Files:**
 - Modify: `pipeline/analyzer.py`
+- Modify: `pipeline/config.py` (add the `entity_candidates_path` property)
+- Modify: `pipeline/check.py` (queue the unknowns at the feed-writing call site)
 - Test: `tests/test_analyzer.py`
+- Test: `tests/test_check.py` (the queueing wiring)
 
 **Interfaces:**
 - Consumes: `EntityRegistry`, `load_registry` from `pipeline.entities` (Task 2); `record_candidates` from `pipeline.entity_candidates` (Task 3); `Subject`, `resolve_track` from `pipeline.taxonomy` (Task 1)
@@ -1299,10 +1302,20 @@ The signature and return type stay as they are, so the `Analyze` seam in `pipeli
 
 The analyzer must not import the queue — it would turn analysis into a file-writing step and force every analyzer test to touch disk. The caller that already knows the feed slug and evidence ids does the queueing.
 
-In `pipeline/check.py`, add the imports:
+**The queue path must come from `Config`, not from the module constant.** `run_check` takes `repo_root` and never chdirs (`pipeline/check.py:164`), and `tests/test_check.py:21`'s `repo` fixture is a `tmp_path` — so passing the relative `DEFAULT_CANDIDATES_PATH` here would make tests write into the real repository's `data/` directory and make production depend on process cwd.
+
+First add the property to `pipeline/config.py`, beside the existing `data_dir` (`:38`):
 
 ```python
-from pipeline.entity_candidates import DEFAULT_CANDIDATES_PATH, record_candidates
+    @property
+    def entity_candidates_path(self) -> Path:
+        return self.data_dir / "entity-candidates.json"
+```
+
+Then in `pipeline/check.py`, add the import:
+
+```python
+from pipeline.entity_candidates import record_candidates
 ```
 
 Immediately after the `write_feed_item(...)` call that publishes a feed item, add:
@@ -1310,7 +1323,7 @@ Immediately after the `write_feed_item(...)` call that publishes a feed item, ad
 ```python
         if analysis.unknown_players or analysis.unknown_protocols:
             record_candidates(
-                DEFAULT_CANDIDATES_PATH,
+                cfg.entity_candidates_path,
                 "player",
                 analysis.unknown_players,
                 evidence_ids=evidence_ids,
@@ -1318,7 +1331,7 @@ Immediately after the `write_feed_item(...)` call that publishes a feed item, ad
                 now=detected_at,
             )
             record_candidates(
-                DEFAULT_CANDIDATES_PATH,
+                cfg.entity_candidates_path,
                 "protocol",
                 analysis.unknown_protocols,
                 evidence_ids=evidence_ids,
@@ -1327,7 +1340,34 @@ Immediately after the `write_feed_item(...)` call that publishes a feed item, ad
             )
 ```
 
-Bind `feed_path` to the return value of `write_feed_item` if the current code discards it. Use the same `evidence_ids` and `detected_at` values already passed to `write_feed_item` at that site, so the queue entry and the feed record agree.
+Bind `feed_path` to the return value of `write_feed_item` if the current code discards it. Use the same `evidence_ids` and `detected_at` values already passed to `write_feed_item` at that site, so the queue entry and the feed record agree. If `cfg` is not in scope at that point, thread the path in from where `Config` is built rather than reintroducing a relative path.
+
+- [ ] **Step 5b: Test the queueing wiring**
+
+Add to `tests/test_check.py`, modelled on the existing `test_reported_item_writes_feed_without_development` (`:271`) — reuse that test's exact fixture setup and the `_material_analysis()` helper (`:234`), changing only the analysis object and the assertions:
+
+```python
+async def test_unknown_entities_are_queued_for_review(repo):
+    analysis = _material_analysis()
+    analysis.unknown_players = ["Scalepost"]
+    analysis.unknown_protocols = ["Imaginary Protocol"]
+
+    # ... same run_check(...) invocation as test_reported_item_writes_feed_without_development,
+    # with analyze_change=AsyncMock(return_value=analysis)
+
+    queue = json.loads((repo / "data" / "entity-candidates.json").read_text())
+    assert "player:scalepost" in queue["candidates"]
+    assert "protocol:imaginary protocol" in queue["candidates"]
+    assert queue["candidates"]["player:scalepost"]["observed_name"] == "Scalepost"
+
+
+async def test_no_queue_file_is_written_when_every_entity_resolves(repo):
+    # ... same invocation, with _material_analysis() left untouched
+
+    assert not (repo / "data" / "entity-candidates.json").exists()
+```
+
+Add `import json` to the test file if it is not already imported. The second test is the one that catches FINDING 3: if the implementation uses a relative path, the file lands in the real repository instead of `repo`, and this assertion passes for the wrong reason — so also confirm by running `git status --short data/` after the suite and seeing no untracked `data/entity-candidates.json`.
 
 - [ ] **Step 6: Run the full suite**
 
@@ -1337,7 +1377,7 @@ Expected: all pass. Existing analyzer tests keep working unchanged, because `ana
 - [ ] **Step 7: Commit**
 
 ```bash
-git add pipeline/analyzer.py pipeline/check.py tests/test_analyzer.py
+git add pipeline/analyzer.py pipeline/config.py pipeline/check.py tests/test_analyzer.py tests/test_check.py
 git commit -m "feat: extract subject and controlled entities in analysis
 
 Analysis now classifies the subject axis and emits player and protocol
