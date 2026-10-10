@@ -56,5 +56,5 @@ export function findSource(slug: string): Source | undefined {
 }
 
 export function crawlerSources(): Source[] {
-  return loadSources().filter((s) => s.default_tracks.includes("crawler-controls"));
+  return loadSources().filter((s) => s.default_tracks.includes("access-controls"));
 }

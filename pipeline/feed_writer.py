@@ -87,6 +87,7 @@ def _compose(
         f"primary_track: {analysis.primary_track.value}\n"
         f"tracks:\n{_yaml_list(track.value for track in analysis.tracks)}"
         f"actors:\n{_yaml_list(analysis.actors, quoted=True)}"
+        f"subject: {analysis.subject.value}\n"
         f"event_date: {event_date.isoformat()}\n"
         f"published_at: {published_at.isoformat()}\n"
         f"detected_at: {detected_at.isoformat()}\n"
@@ -99,6 +100,10 @@ def _compose(
     )
     if development_slug:
         frontmatter += f"development_slug: {development_slug}\n"
+    if analysis.players:
+        frontmatter += f"players:\n{_yaml_list(analysis.players, quoted=True)}"
+    if analysis.protocols:
+        frontmatter += f"protocols:\n{_yaml_list(analysis.protocols, quoted=True)}"
     frontmatter += f"backfilled: {str(backfilled).lower()}\n"
     if backfilled:
         frontmatter += f"processed_at: {processed_at.isoformat()}\n"

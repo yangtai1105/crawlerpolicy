@@ -2,8 +2,9 @@ export const TRACKS = [
   "policy-regulation",
   "litigation-legal",
   "search-discovery",
-  "crawler-controls",
-  "agentic-web",
+  "access-controls",
+  "platform-ecosystem",
+  "identity-authorization",
   "licensing-monetization",
   "standards-protocols",
   "asset-rights",
@@ -11,6 +12,29 @@ export const TRACKS = [
 ] as const;
 
 export type Track = (typeof TRACKS)[number];
+
+/** Slugs used before 2026-10. Content on disk keeps them; readers resolve. */
+export const LEGACY_TRACK_ALIASES: Record<string, Track> = {
+  "crawler-controls": "access-controls",
+  "agentic-web": "platform-ecosystem",
+};
+
+export function normalizeTrack(value: string): Track {
+  const alias = LEGACY_TRACK_ALIASES[value];
+  if (alias) return alias;
+  if ((TRACKS as readonly string[]).includes(value)) return value as Track;
+  throw new Error(`Unknown track: ${value}`);
+}
+
+export const SUBJECTS = ["crawler", "agent", "both", "unknown"] as const;
+export type Subject = (typeof SUBJECTS)[number];
+
+export const SUBJECT_LABELS: Record<Subject, string> = {
+  crawler: "Crawlers",
+  agent: "Agents",
+  both: "Crawlers & Agents",
+  unknown: "Unspecified",
+};
 
 export const FRONTS = [
   "access-discovery",
@@ -23,8 +47,8 @@ export const FRONTS = [
 export type Front = (typeof FRONTS)[number];
 
 export const FRONT_TRACKS: Record<Front, readonly Track[]> = {
-  "access-discovery": ["crawler-controls", "search-discovery"],
-  "agents-identity": ["agentic-web", "standards-protocols"],
+  "access-discovery": ["access-controls", "search-discovery"],
+  "agents-identity": ["platform-ecosystem", "standards-protocols", "identity-authorization"],
   "rights-markets": ["licensing-monetization", "asset-rights"],
   "governance-law": ["policy-regulation", "litigation-legal"],
   "measurement-economics": ["measurement-economics"],
@@ -34,8 +58,9 @@ export const TRACK_LABELS: Record<Track, string> = {
   "policy-regulation": "Policy & Regulation",
   "litigation-legal": "Litigation & Legal",
   "search-discovery": "Search & AI Discovery",
-  "crawler-controls": "Crawlers & Content Controls",
-  "agentic-web": "Agentic Web",
+  "access-controls": "Access Controls",
+  "platform-ecosystem": "Platform & Ecosystem",
+  "identity-authorization": "Identity & Authorization",
   "licensing-monetization": "Licensing & Monetization",
   "standards-protocols": "Standards & Protocols",
   "asset-rights": "Asset Rights",

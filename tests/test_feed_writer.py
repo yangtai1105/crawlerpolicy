@@ -7,7 +7,7 @@ from pipeline.analyzer import AnalysisResult
 from pipeline.feed import PublicationStatus
 from pipeline.feed_writer import write_feed_item
 from pipeline.sources import Source, SourceType
-from pipeline.taxonomy import SourceRole, SourceTier, Track
+from pipeline.taxonomy import SourceRole, SourceTier, Subject, Track
 
 
 @pytest.fixture
@@ -110,3 +110,50 @@ def test_backfilled_feed_item_requires_batch_metadata(tmp_path, source, analysis
             unified_diff="",
             backfilled=True,
         )
+
+
+def _written(tmp_path, source, analysis):
+    observed = datetime(2026, 10, 10, 8, tzinfo=UTC)
+    path = write_feed_item(
+        feed_dir=tmp_path,
+        source=source,
+        analysis=analysis,
+        status=PublicationStatus.VERIFIED,
+        event_date=observed,
+        published_at=observed,
+        detected_at=observed,
+        evidence_ids=["cloudflare--abc123"],
+        source_urls=["https://example.test/policy"],
+        unified_diff="+signed agents",
+    )
+    return yaml.safe_load(path.read_text().split("---", 2)[1])
+
+
+def test_frontmatter_carries_subject_players_and_protocols(tmp_path, source, analysis):
+    analysis.subject = Subject.AGENT
+    analysis.players = ["cloudflare", "openai"]
+    analysis.protocols = ["web-bot-auth"]
+
+    frontmatter = _written(tmp_path, source, analysis)
+
+    assert frontmatter["subject"] == "agent"
+    assert frontmatter["players"] == ["cloudflare", "openai"]
+    assert frontmatter["protocols"] == ["web-bot-auth"]
+
+
+def test_frontmatter_omits_empty_entity_lists(tmp_path, source, analysis):
+    frontmatter = _written(tmp_path, source, analysis)
+
+    assert frontmatter["subject"] == "unknown"
+    assert "players" not in frontmatter
+    assert "protocols" not in frontmatter
+
+
+def test_frontmatter_never_leaks_the_review_queue_fields(tmp_path, source, analysis):
+    analysis.unknown_players = ["Totally Unknown Inc"]
+    analysis.unknown_protocols = ["Imaginary Protocol"]
+
+    frontmatter = _written(tmp_path, source, analysis)
+
+    assert "unknown_players" not in frontmatter
+    assert "unknown_protocols" not in frontmatter

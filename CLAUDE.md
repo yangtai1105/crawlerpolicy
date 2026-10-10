@@ -22,9 +22,25 @@ Every current development keeps three distinct dates when available:
 - `published_at`: when the source says it was published
 - `detected_at`: when the pipeline observed it
 
-The nine canonical tracks are `policy-regulation`, `litigation-legal`, `search-discovery`, `crawler-controls`, `agentic-web`, `licensing-monetization`, `standards-protocols`, `asset-rights`, and `measurement-economics`.
+The taxonomy has two orthogonal axes.
 
-They roll up to five fronts: `access-discovery`, `agents-identity`, `rights-markets`, `governance-law`, and `measurement-economics`.
+The ten canonical **domain tracks** are `policy-regulation`, `litigation-legal`,
+`search-discovery`, `access-controls`, `platform-ecosystem`,
+`identity-authorization`, `licensing-monetization`, `standards-protocols`,
+`asset-rights`, and `measurement-economics`. Track names carry no subject word.
+
+The **subject** axis is `crawler`, `agent`, `both`, or `unknown`. Composition
+replaces proliferation: agent regulation is `policy-regulation` × `agent`, and a
+future agent lawsuit is `litigation-legal` × `agent` with no new track.
+
+Tracks roll up to five fronts: `access-discovery`, `agents-identity`,
+`rights-markets`, `governance-law`, and `measurement-economics`.
+`identity-authorization` rolls up to `agents-identity`.
+
+The pre-2026-10 slugs `crawler-controls` and `agentic-web` remain in existing
+content and resolve to `access-controls` and `platform-ecosystem` at read time,
+in `pipeline/taxonomy.py`'s `TRACK_ALIASES` and `site/src/lib/taxonomy.ts`'s
+`normalizeTrack`. Content is never rewritten.
 
 ## Current architecture
 
@@ -48,6 +64,10 @@ data/
 ├── health.json                # healthy/degraded/critical/unknown
 ├── trends.json                # persistent trend state
 └── intelligence/YYYY-Www.json
+
+entities/
+├── protocols.yaml             # controlled protocol registry; pipeline reads, never writes
+└── players.yaml               # controlled player registry; pipeline reads, never writes
 
 sources.yaml                   # source tier, role, track, and fetch configuration
 site/                          # Astro static publication
