@@ -1632,12 +1632,46 @@ grep -c "development-card\|feed-card" dist/fronts/agents-identity/index.html
 
 Expected: both counts are greater than zero. A zero means the transform is not applied and the legacy records were dropped. Adjust the class names in the grep to whatever `DevelopmentCard.astro` and `FeedCard.astro` actually render as their root element.
 
-- [ ] **Step 9: Commit**
+- [ ] **Step 9: Update `CLAUDE.md` to describe the two axes**
+
+`CLAUDE.md` documents the taxonomy for every future session and currently says:
+
+> The nine canonical tracks are `policy-regulation`, `litigation-legal`, `search-discovery`, `crawler-controls`, `agentic-web`, `licensing-monetization`, `standards-protocols`, `asset-rights`, and `measurement-economics`.
+>
+> They roll up to five fronts: `access-discovery`, `agents-identity`, `rights-markets`, `governance-law`, and `measurement-economics`.
+
+Replace both paragraphs with:
+
+```markdown
+The taxonomy has two orthogonal axes.
+
+The ten canonical **domain tracks** are `policy-regulation`, `litigation-legal`,
+`search-discovery`, `access-controls`, `platform-ecosystem`,
+`identity-authorization`, `licensing-monetization`, `standards-protocols`,
+`asset-rights`, and `measurement-economics`. Track names carry no subject word.
+
+The **subject** axis is `crawler`, `agent`, `both`, or `unknown`. Composition
+replaces proliferation: agent regulation is `policy-regulation` × `agent`, and a
+future agent lawsuit is `litigation-legal` × `agent` with no new track.
+
+Tracks roll up to five fronts: `access-discovery`, `agents-identity`,
+`rights-markets`, `governance-law`, and `measurement-economics`.
+`identity-authorization` rolls up to `agents-identity`.
+
+The pre-2026-10 slugs `crawler-controls` and `agentic-web` remain in existing
+content and resolve to `access-controls` and `platform-ecosystem` at read time,
+in `pipeline/taxonomy.py`'s `TRACK_ALIASES` and `site/src/lib/taxonomy.ts`'s
+`normalizeTrack`. Content is never rewritten.
+```
+
+Also add `entities/` to the repository-layout block in that file, described as the controlled protocol and player registries that the pipeline reads but never writes.
+
+- [ ] **Step 10: Commit**
 
 ```bash
 cd ~/Documents/Claude/Skills/ai-ecosystem-tracker
 git add pipeline/feed_writer.py tests/test_feed_writer.py site/src/lib/taxonomy.ts \
-        site/src/content.config.ts site/src/lib/sources.ts
+        site/src/content.config.ts site/src/lib/sources.ts CLAUDE.md
 git commit -m "feat: publish subject and entity links to the site
 
 Feed frontmatter now carries subject plus controlled player and protocol
