@@ -312,3 +312,61 @@ Order matters: the site renders content that must exist first. Source expansion 
 | Reading attachment points | Protocol columns and fronts; per-player readings deferred |
 | Reading cadence | Weekly |
 | Taxonomy | Two axes: domain track (10) plus subject (`crawler`/`agent`/`both`/`unknown`) |
+
+---
+
+## Known gaps carried forward from sub-project 1
+
+Sub-project 1 (taxonomy and entities) landed on 2026-10-10. Its final whole-branch
+review surfaced these gaps, which were deliberately deferred rather than discovered
+later. Read this before starting sub-project 2 or 3.
+
+### For sub-project 2 (positions and proposals)
+
+- **Development records carry no entity links.** `pipeline/event_writer.py` emits
+  `actors` only — no `subject`, `players`, or `protocols` — and the `events`
+  collection schema declares none of them. §7 step 1 assumes `map_proposals.py`
+  reads "the day's verified developments with their entity links". Either add the
+  three fields to `event_writer` and the `events` schema, or join back through
+  `content/feed` on `development_slug`. Decide which **before** building
+  `map_proposals.py`; the join direction shapes that module.
+- **The candidate queue has no dismissal state.** A candidate a human reviews and
+  rejects re-queues forever and keeps incrementing `occurrences`. This spec does not
+  define one. Add a dismissed/ignored state when the queue gets a review workflow.
+
+### For sub-project 3 (site)
+
+- **`Player.category` is single-valued and cannot express the roster this spec
+  describes.** §9.2 lists Amazon under both `defense-infra` and `agent-operator`, and
+  the matrix bands by category (§8.1), so a dual-role player lands in one band only.
+  Decide the representation — a second category, or `roles: list[PlayerCategory]` —
+  **before** building the banding.
+- **The shipped registry is a subset.** `entities/players.yaml` holds 30 of the ~54
+  players §9.2 enumerates. Missing: Amex, PayPal, Coinbase, WorkOS, Auth0, Microsoft
+  Entra, CyberArk, Permit.io, Clerk, Scalepost, Human Native, C2PA as a standards
+  body, and 11 of the 13 publishers. Omitted players resolve to `None` and flow into
+  the candidate queue indefinitely instead of into `players[]`.
+- **Stytch is categorised against this spec.** §9.2 lists it under `defense-infra`
+  (verifier role); it ships as `identity-payments`.
+- **`SUBJECT_LABELS` in `site/src/lib/taxonomy.ts` is currently dead code**, and no
+  page reads the `subject` field the feed schema validates. Rendering the axis is
+  sub-project 3's work.
+
+### For the deferred source-expansion plan (§9.3)
+
+- **Both new axes ship unexercised in production.** No source declares
+  `default_subject`, so `subject` resolves to `unknown` on every record; and no source
+  monitors 24 of the 30 registry players, so most registry rows can never be
+  populated. The per-source subject fallback is correct but currently unobservable.
+  Landing a first batch of `default_subject` declarations is the cheapest way to make
+  the axis real.
+
+### Archived content that intentionally still shows old slugs
+
+- Three weekly issues (`2026-W35`, `W38`, `W39`) contain a raw track slug inside
+  generated watchlist prose — "What primary evidence would make `crawler-controls`
+  materially change?" — because the generator interpolated `track.value` before
+  2026-10-10. The generator now uses a human-readable label; the frozen issues were
+  deliberately left alone under the never-rewrite rule. Rendered track *attributes*
+  and *link paths* across the built site contain zero legacy slugs; this prose is the
+  one remaining visible occurrence.
