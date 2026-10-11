@@ -309,15 +309,29 @@ Thirteen hex values sit outside `:root` and would stay Field-Ledger green agains
 
 - [ ] **Step 1: Restyle the nav and footer**
 
-In `global.css`, the nav currently uses a condensed-sans brand lockup and the footer hardcodes `background: #dce5df`. Replace the `.site-nav*`, `.brand*`, and `.site-footer*` rules (currently lines 103-129) with:
+**Preserve layout mechanics; change only appearance.** The current nav carries behaviour a restyle must not touch: `.site-nav` is `position: sticky; z-index: 50; top: 0`, and `.site-nav-inner` is `display: grid` with a three-column template and `min-height: 76px`. The `@media (max-width: 900px)` block at the end of the file positions the nav with `grid-template-columns`, `grid-column` and `grid-row`, so switching to flex would silently turn all three into no-ops and stop the links wrapping to a second row below 900px — while dropping `position: sticky` would stop the masthead sticking. Neither shows up on a desktop build or in `astro check`.
+
+So keep every structural and behavioural property and restyle only border colour and weight, background, type, and the link treatment. Replace the `.site-nav*`, `.brand*`, and `.site-footer*` rules (currently lines 103-129) with:
 
 ```css
-.site-nav { border-bottom: 1px solid var(--ink); background: var(--bg); }
-.site-nav-inner { display: flex; align-items: baseline; gap: var(--space-6); padding: var(--space-4) 0 var(--space-3); }
+.site-nav {
+  position: sticky;
+  z-index: 50;
+  top: 0;
+  border-bottom: 1px solid var(--ink);
+  background: var(--bg);
+}
+.site-nav-inner {
+  min-height: 76px;
+  display: grid;
+  grid-template-columns: minmax(230px, 0.9fr) minmax(0, 2fr) auto;
+  gap: var(--space-5);
+  align-items: center;
+}
 .brand-lockup { display: flex; flex-direction: column; gap: 2px; }
-.site-nav .brand { font: 400 1.45rem/1 var(--font-display); letter-spacing: -0.014em; color: var(--ink); }
+.site-nav .brand { font: 400 1.45rem/1.1 var(--font-display); letter-spacing: -0.014em; color: var(--ink); }
 .brand-descriptor { color: var(--ink-faint); font: 400 0.62rem/1.4 var(--font-body); letter-spacing: 0.04em; text-transform: uppercase; }
-.site-nav .links { display: flex; gap: clamp(14px, 2vw, 28px); align-items: center; margin-left: auto; color: var(--ink-muted); font: 400 0.84rem var(--font-body); letter-spacing: 0.01em; }
+.site-nav .links { display: flex; gap: clamp(14px, 2vw, 30px); align-items: center; color: var(--ink-muted); font: 400 0.84rem var(--font-body); letter-spacing: 0.01em; }
 .site-nav .links a { padding-block: 6px; border-bottom: 1.5px solid transparent; }
 .site-nav .links a:hover { color: var(--ink); border-bottom-color: var(--accent); }
 .site-nav .links a[aria-current="page"] { color: var(--ink); border-bottom-color: var(--accent); }
@@ -330,7 +344,18 @@ In `global.css`, the nav currently uses a condensed-sans brand lockup and the fo
 .footer-links { display: flex; gap: var(--space-4); justify-content: flex-end; }
 ```
 
-The nav's bottom rule becomes a single hairline in full ink — that rule under the masthead is the strongest Editorial signal on the page, and it costs nothing.
+Two changes carry the Editorial signal: the masthead's 4px forest-green top border is gone and its bottom border becomes a single hairline in full ink, and the condensed-sans wordmark becomes the serif. Both cost nothing structurally.
+
+**Verify the behaviour survived** — a green build will not tell you:
+
+```bash
+cd site && npm run build
+grep -o 'position:sticky\|position: sticky' dist/index.html | head -1
+grep -o 'display:grid\|display: grid' dist/index.html | head -1
+grep -o '@media (max-width: *900px)' dist/index.html | head -1
+```
+
+Expected: all three present. Then resize a browser below 900px on `npm run dev` and confirm the nav links still occupy their own row.
 
 - [ ] **Step 2: Rework the homepage lead block for a light ground**
 
