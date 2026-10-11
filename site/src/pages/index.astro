@@ -180,14 +180,14 @@ const frontCopy: Record<Front, string> = {
   .daily-brief { padding-top: var(--space-6); }
   .lead-signal { position: relative; padding: var(--space-6) 0 var(--space-7); border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); background: transparent; color: var(--ink-body); }
   .lead-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--ink-faint); font: 400 0.72rem var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; }
-  .lead-meta span + span::before { margin-right: var(--space-3); color: var(--evidence-mint); content: "·"; }
+  .lead-meta span + span::before { margin-right: var(--space-3); color: var(--rule-strong); content: "·"; }
   .lead-status { color: var(--status-shipped); font-weight: 600; }
   .lead-signal[data-status="reported"] .lead-status { color: var(--ink-muted); }
   .lead-signal[data-status="signal"] .lead-status { color: var(--status-degraded); }
   .lead-signal h2 { max-width: 30ch; margin: var(--space-4) 0 var(--space-5); font-size: clamp(1.9rem, 3.2vw, 3.1rem); }
   .lead-reading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 80px); max-width: 1000px; }
   .lead-reading > div > p:last-child { max-width: 62ch; color: var(--ink-body); font-size: 1.05rem; }
-  .lead-reading .utility-label { color: var(--evidence-mint); }
+  .lead-reading .utility-label { color: var(--accent); }
   .lead-why { padding-left: var(--space-5); border-left: 3px solid var(--clay-marker); }
   .lead-why .utility-label { color: var(--accent); }
   .lead-signal footer { display: flex; justify-content: space-between; gap: var(--space-5); align-items: end; margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--rule); }

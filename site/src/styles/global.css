@@ -29,7 +29,7 @@
   --status-declined: #a87260;
   --status-none: #e7e3d7;
   --status-healthy: #2f6b4e;
-  --status-degraded: #a9762c;
+  --status-degraded: #8f6526;
   --status-critical: #9c3a1e;
   --status-unknown: var(--ink-faint);
   --signal-hot: var(--accent);
@@ -121,7 +121,7 @@ h4 { font-size: 1.05rem; }
 
 p { margin: 0 0 var(--space-4); max-width: 68ch; }
 code, pre { font-family: var(--font-mono); font-size: 0.88em; }
-pre { overflow-x: auto; padding: var(--space-4); border: 1px solid var(--forest-block); border-radius: var(--radius-sm); background: var(--forest-block); color: var(--paper-tint); }
+pre { overflow-x: auto; padding: var(--space-4); border: 1px solid var(--rule-strong); border-radius: var(--radius-sm); background: var(--forest-block); color: var(--paper-tint); }
 hr { border: 0; border-top: 1px solid var(--quiet-rule); margin: var(--space-6) 0; }
 .container { width: min(calc(100% - 48px), var(--content-w)); margin-inline: auto; }
 .observation-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-5); }

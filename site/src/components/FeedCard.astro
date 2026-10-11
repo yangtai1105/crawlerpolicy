@@ -59,10 +59,10 @@ const dateLabel = publishedAt.toLocaleDateString("en-US", {
 </article>
 
 <style>
-  .feed-card { --rail: var(--clay-marker); display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); padding: var(--space-7) 0; border-top: 1px solid var(--quiet-rule); }
+  .feed-card { --rail: var(--clay-marker); display: grid; grid-template-columns: 170px minmax(0, 1fr); gap: clamp(24px, 5vw, 72px); padding: var(--space-7) 0; border-top: 1px solid var(--rule); }
   .feed-card[data-status="verified"] { --rail: var(--status-shipped); }
   .feed-card[data-status="signal"] { --rail: var(--status-degraded); }
-  .feed-card-meta { display: flex; align-items: flex-start; flex-direction: column; gap: var(--space-1); color: var(--ink-muted); font: 500 .65rem/1.45 var(--font-mono); text-transform: uppercase; }
+  .feed-card-meta { display: flex; align-items: flex-start; flex-direction: column; gap: var(--space-1); color: var(--ink-faint); font: 400 .72rem/1.45 var(--font-body); letter-spacing: .08em; text-transform: uppercase; }
   .feed-card-meta, .feed-card-reading { min-width: 0; }
   .feed-status { margin-bottom: var(--space-3); padding-top: var(--space-1); border-top: 3px solid var(--rail); color: var(--rail); font-weight: 600; }
   .backfill-label { color: var(--clay-marker); font-weight: 600; }
@@ -72,7 +72,7 @@ const dateLabel = publishedAt.toLocaleDateString("en-US", {
   h3 { max-width: 27ch; margin: 0 0 var(--space-3); overflow-wrap: anywhere; font-size: clamp(1.5rem, 2.5vw, 2.2rem); }
   .feed-summary { max-width: 72ch; overflow-wrap: anywhere; color: var(--ledger-ink); font-size: .96rem; line-height: 1.72; }
   .feed-analysis { max-width: 72ch; margin-top: var(--space-5); padding: var(--space-4); border-left: 3px solid var(--rail); background: var(--paper-high); }
-  .feed-analysis > span { color: var(--rail); font: 600 .61rem var(--font-mono); text-transform: uppercase; }
+  .feed-analysis > span { color: var(--ink-faint); font: 400 .72rem/1.3 var(--font-body); letter-spacing: .08em; text-transform: uppercase; }
   .feed-analysis p { margin: var(--space-1) 0 0; overflow-wrap: anywhere; color: var(--ink-muted); font-size: .88rem; }
   .feed-footer { display: flex; justify-content: space-between; gap: var(--space-4); align-items: end; margin-top: var(--space-5); }
   .feed-footer > div { display: flex; flex-wrap: wrap; gap: var(--space-2); }

@@ -102,28 +102,28 @@ function evidence(ids: string[]) {
 </article>
 
 <style>
-  .issue-header { padding: var(--space-8) 0; border-bottom: 1px solid var(--border-strong); }
+  .issue-header { padding: var(--space-8) 0; border-bottom: 1px solid var(--ink); }
   .issue-index { grid-column: 1 / 4; color: var(--ink-muted); font: 0.75rem/1.6 var(--font-mono); }
   .issue-thesis { grid-column: 4 / 12; }
   .issue-thesis h1 { max-width: 12ch; margin: var(--space-3) 0 var(--space-5); }
   .issue-thesis > p { max-width: 66ch; color: var(--ink-muted); }
   dl { display: flex; flex-wrap: wrap; gap: var(--space-6); margin: var(--space-6) 0 0; }
   dl div { min-width: 110px; }
-  dt { font: 650 0.62rem var(--font-mono); text-transform: uppercase; color: var(--ink-muted); }
+  dt { font: 400 0.72rem var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-faint); }
   dd { margin: var(--space-1) 0 0; font: 650 0.72rem var(--font-mono); }
   section { padding-top: var(--space-9); }
   .section-heading { margin-bottom: var(--space-6); }
   .section-heading p { margin-bottom: var(--space-2); }
-  .shift { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: var(--space-8); padding: var(--space-6) 0; border-top: 1px solid var(--border-strong); }
+  .shift { display: grid; grid-template-columns: 1.3fr 0.7fr; gap: var(--space-8); padding: var(--space-6) 0; border-top: 1px solid var(--rule); }
   .shift > p { color: var(--ink-muted); font-size: 0.86rem; }
-  .track-ledger { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--border-strong); border-left: 1px solid var(--border); }
+  .track-ledger { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--border); }
   .track-ledger article { min-height: 190px; padding: var(--space-4); border-right: 1px solid var(--border); border-bottom: 1px solid var(--border); background: color-mix(in srgb, var(--bg-elev) 65%, transparent); }
   .track-ledger article.changed { box-shadow: inset 3px 0 var(--protocol-blue); }
   .track-ledger strong { display: block; margin: var(--space-5) 0 var(--space-2); font-family: var(--font-display); }
   .track-ledger p { color: var(--ink-muted); font-size: 0.78rem; }
   .track-ledger a { display: block; margin-top: var(--space-2); font: 650 0.68rem/1.4 var(--font-mono); }
   .delta-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
-  .delta-list article { padding: var(--space-5); border-top: 3px solid var(--trace-violet); background: var(--bg-elev); }
+  .delta-list article { padding: var(--space-5); border-top: 1px solid var(--rule); background: var(--bg-elev); }
   .delta-list p { color: var(--ink-muted); font-size: 0.8rem; }
   .delta-status { font-family: var(--font-mono); }
   .closing-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--space-8); }
