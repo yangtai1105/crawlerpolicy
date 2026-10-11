@@ -535,7 +535,7 @@ Spec §8.2 locks two details that already shipped. Verify both still hold after 
 ```bash
 cd site && npm run build
 grep -o 'border-radius:9px\|border-radius: 9px' dist/intelligence/2026-W35/index.html | head -2
-grep -c 'class="track-tag"' dist/intelligence/2026-W35/index.html
+grep -o 'class="track-tag"' dist/intelligence/2026-W35/index.html | wc -l
 ```
 
 Expected: capsule radius present on status chips, and the track-tag count on that page is still **9** — the count sub-project 1 restored. A drop to 7 means a style change broke the render condition.
@@ -544,9 +544,9 @@ Expected: capsule radius present on status chips, and the track-tag count on tha
 
 ```bash
 cd site
-for f in dist/intelligence/*/index.html; do printf "%s %s\n" "$(basename $(dirname $f))" "$(grep -c 'class="track-tag"' $f)"; done
-printf "access-discovery %s\n" "$(grep -c 'class="development-card"' dist/fronts/access-discovery/index.html)"
-printf "agents-identity  %s\n" "$(grep -c 'class="development-card"' dist/fronts/agents-identity/index.html)"
+for f in dist/intelligence/*/index.html; do printf "%s %s\n" "$(basename $(dirname $f))" "$(grep -o 'class="track-tag"' $f | wc -l)"; done
+printf "access-discovery %s\n" "$(grep -o 'class="development-card"' dist/fronts/access-discovery/index.html | wc -l)"
+printf "agents-identity  %s\n" "$(grep -o 'class="development-card"' dist/fronts/agents-identity/index.html | wc -l)"
 ```
 
 Expected: six issues at 9 each; 16 and 14 cards. These are the numbers the branch established — a change here means a restyle broke a filter or a guard.
@@ -730,7 +730,7 @@ Keep the existing `quiet-edition` section as the final fallback for when `displa
 ```bash
 cd site && npm run build
 grep -o "No new material development today[^<]*" dist/index.html | head -1
-grep -c 'class="development-card"\|class="feed-card"' dist/index.html
+grep -o 'class="development-card"\|class="feed-card"' dist/index.html | wc -l
 ```
 
 Expected: the one-line note appears (today is a quiet day, so this is the branch under test), and the homepage card count is at least as high as before — 40 feed cards was the pre-change figure.
