@@ -178,21 +178,21 @@ const frontCopy: Record<Front, string> = {
   .edition-header time { align-self: start; color: var(--forest-block); font: 650 clamp(.8rem, 1.2vw, 1rem)/1.2 var(--font-mono); }
   .edition-deck { grid-column: 1 / -1; max-width: 780px; margin: 0; color: var(--ink-muted); font-size: clamp(1rem, 1.5vw, 1.16rem); }
   .daily-brief { padding-top: var(--space-6); }
-  .lead-signal { position: relative; padding: clamp(28px, 3.5vw, 48px); border: 1px solid var(--forest-block); border-radius: var(--radius-md); background: var(--forest-block); color: var(--paper-high); box-shadow: 10px 10px 0 var(--clay-marker); }
-  .lead-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: #c3d2c8; font: 600 .63rem var(--font-mono); text-transform: uppercase; }
+  .lead-signal { position: relative; padding: var(--space-6) 0 var(--space-7); border-top: 3px solid var(--ink); border-bottom: 1px solid var(--rule); background: transparent; color: var(--ink-body); }
+  .lead-meta { display: flex; flex-wrap: wrap; gap: var(--space-3); color: var(--ink-faint); font: 400 0.72rem var(--font-body); letter-spacing: 0.08em; text-transform: uppercase; }
   .lead-meta span + span::before { margin-right: var(--space-3); color: var(--evidence-mint); content: "·"; }
-  .lead-status { color: #b6dcc7; }
-  .lead-signal[data-status="reported"] .lead-status { color: #efb7a7; }
-  .lead-signal[data-status="signal"] .lead-status { color: #e7c28d; }
-  .lead-signal h2 { max-width: 27ch; margin: var(--space-4) 0 var(--space-5); font-size: clamp(2rem, 3.5vw, 3.8rem); }
+  .lead-status { color: var(--status-shipped); font-weight: 600; }
+  .lead-signal[data-status="reported"] .lead-status { color: var(--ink-muted); }
+  .lead-signal[data-status="signal"] .lead-status { color: var(--status-degraded); }
+  .lead-signal h2 { max-width: 30ch; margin: var(--space-4) 0 var(--space-5); font-size: clamp(1.9rem, 3.2vw, 3.1rem); }
   .lead-reading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 80px); max-width: 1000px; }
-  .lead-reading > div > p:last-child { max-width: 62ch; color: #e4ece7; font-size: 1rem; }
+  .lead-reading > div > p:last-child { max-width: 62ch; color: var(--ink-body); font-size: 1.05rem; }
   .lead-reading .utility-label { color: var(--evidence-mint); }
   .lead-why { padding-left: var(--space-5); border-left: 3px solid var(--clay-marker); }
-  .lead-why .utility-label { color: #efaa97; }
-  .lead-signal footer { display: flex; justify-content: space-between; gap: var(--space-5); align-items: end; margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid #486052; }
+  .lead-why .utility-label { color: var(--accent); }
+  .lead-signal footer { display: flex; justify-content: space-between; gap: var(--space-5); align-items: end; margin-top: var(--space-7); padding-top: var(--space-4); border-top: 1px solid var(--rule); }
   .lead-signal footer > div { display: flex; flex-wrap: wrap; gap: var(--space-2); }
-  .lead-signal footer > a { color: #b6dcc7; font: 600 .68rem var(--font-mono); white-space: nowrap; }
+  .lead-signal footer > a { color: var(--accent); font: 400 0.84rem var(--font-body); border-bottom: 1px solid var(--accent-soft); white-space: nowrap; }
   .brief-supporting { position: relative; margin-top: var(--space-7); padding-left: var(--space-5); border-left: 2px solid var(--clay-marker); }
   .brief-rule { margin: 0; color: var(--clay-marker); font: 600 .64rem/1.3 var(--font-mono); letter-spacing: .08em; text-transform: uppercase; }
   .brief-rule span { display: inline-block; padding: 0 var(--space-3) var(--space-3) 0; background: var(--field-paper); }
@@ -205,7 +205,7 @@ const frontCopy: Record<Front, string> = {
   .section-heading .utility-label { margin-bottom: var(--space-2); }
   .section-heading > p { max-width: 49ch; margin: 0; color: var(--ink-muted); font-size: .82rem; }
   .section-heading > a { color: var(--forest-block); font: 600 .68rem var(--font-mono); white-space: nowrap; }
-  .insight-section { margin-top: var(--space-7); padding: var(--space-7) var(--space-6); background: #dce5df; }
+  .insight-section { margin-top: var(--space-7); padding: var(--space-7) var(--space-6); background: var(--paper-tint); }
   .insight-section.section { padding-top: var(--space-7); }
   .insight-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
   .feed-list { border-bottom: 1px solid var(--border-strong); }
