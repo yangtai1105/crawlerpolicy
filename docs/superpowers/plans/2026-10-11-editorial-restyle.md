@@ -402,19 +402,38 @@ If `.lead-signal` sets a dark `background` or `color` anywhere else in that file
   .feed-card[data-status="signal"] { --rail: var(--status-degraded); }
 ```
 
-- [ ] **Step 5: Verify no hardcoded colour remains, then build**
+- [ ] **Step 5: Fix the hardcoded border on `pre`**
+
+`site/src/styles/global.css:124` is a hardcoded hex inside the stylesheet itself:
+
+```css
+pre { overflow-x: auto; padding: var(--space-4); border: 1px solid #486052; border-radius: var(--radius-sm); background: var(--forest-block); color: var(--paper-high); }
+```
+
+Keep the dark treatment — a code block reads well dark, and this plan already decided the event page's evidence block stays dark — but take the border from a token so the palette lives in one place:
+
+```css
+pre { overflow-x: auto; padding: var(--space-4); border: 1px solid var(--forest-block); border-radius: var(--radius-sm); background: var(--forest-block); color: var(--paper-tint); }
+```
+
+- [ ] **Step 6: Verify no hardcoded colour remains, then build**
+
+The plan's Global Constraints forbid hardcoded hex outside `:root`. Checking only `src/components`, `src/layouts` and `src/pages` cannot see `global.css`, where the `pre` rule above lives — so check the stylesheet too, excluding its `:root` block, where hex values are the whole point:
 
 ```bash
 cd site
-grep -rn "#[0-9a-fA-F]\{3,6\}\b" src/components src/layouts src/pages | grep -v "^src/styles"
+echo "— components, layouts, pages —"
+grep -rn "#[0-9a-fA-F]\{3,6\}\b" src/components src/layouts src/pages
+echo "— global.css outside :root —"
+awk '/^:root \{/{inroot=1} inroot&&/^\}/{inroot=0; next} !inroot' src/styles/global.css | grep -n "#[0-9a-fA-F]\{3,6\}\b"
 ```
 
-Expected: no output. Any hit is a colour that will not follow the palette.
+Expected: no output from either. Any hit is a colour that will not follow the palette.
 
 Then run: `npm run check:tokens && npm run check && npm run build`
 Expected: all clean, 215 pages.
 
-- [ ] **Step 6: Commit**
+- [ ] **Step 7: Commit**
 
 ```bash
 cd ~/Documents/Claude/Skills/ai-ecosystem-tracker
