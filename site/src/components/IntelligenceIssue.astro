@@ -3,7 +3,7 @@ import type { WeeklyIntelligence } from "../lib/intelligence";
 import EvidenceRail from "./EvidenceRail.astro";
 import TrackTag from "./TrackTag.astro";
 import { findSource } from "../lib/sources";
-import { TRACKS, type Track } from "../lib/taxonomy";
+import { tryNormalizeTrack } from "../lib/taxonomy";
 
 interface EventRecord {
   data: {
@@ -29,7 +29,6 @@ function evidence(ids: string[]) {
     }] : [];
   });
 }
-function isTrack(value: string): value is Track { return TRACKS.includes(value as Track); }
 ---
 
 <article class="issue">
@@ -59,16 +58,19 @@ function isTrack(value: string): value is Track { return TRACKS.includes(value a
   </section>
 
   <section>
-    <div class="section-heading"><p class="utility-label">Nine-track ledger</p><h2>Material developments</h2></div>
+    <div class="section-heading"><p class="utility-label">Track ledger</p><h2>Material developments</h2></div>
     <div class="track-ledger">
-      {issue.material_developments.map((development) => (
+      {issue.material_developments.map((development) => {
+        const track = tryNormalizeTrack(development.track);
+        return (
         <article class:list={{ changed: development.material_change }}>
-          {isTrack(development.track) && <TrackTag track={development.track} />}
+          {track && <TrackTag track={track} />}
           <strong>{development.material_change ? "Material change" : "No verified change"}</strong>
           <p>{development.summary}</p>
           {development.event_ids.map((id) => byId.has(id) && <a href={`/events/${id}`}>{byId.get(id)!.data.title} →</a>)}
         </article>
-      ))}
+        );
+      })}
     </div>
   </section>
 

@@ -19,11 +19,23 @@ export const LEGACY_TRACK_ALIASES: Record<string, Track> = {
   "agentic-web": "platform-ecosystem",
 };
 
-export function normalizeTrack(value: string): Track {
+/** Shared resolution: legacy alias or canonical slug, else undefined. */
+function resolveTrack(value: string): Track | undefined {
   const alias = LEGACY_TRACK_ALIASES[value];
   if (alias) return alias;
   if ((TRACKS as readonly string[]).includes(value)) return value as Track;
-  throw new Error(`Unknown track: ${value}`);
+  return undefined;
+}
+
+export function normalizeTrack(value: string): Track {
+  const resolved = resolveTrack(value);
+  if (resolved === undefined) throw new Error(`Unknown track: ${value}`);
+  return resolved;
+}
+
+/** Non-throwing variant for hand-parsed data that zod never validated. */
+export function tryNormalizeTrack(value: string): Track | null {
+  return resolveTrack(value) ?? null;
 }
 
 export const SUBJECTS = ["crawler", "agent", "both", "unknown"] as const;

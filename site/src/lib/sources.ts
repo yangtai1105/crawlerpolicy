@@ -55,6 +55,10 @@ export function findSource(slug: string): Source | undefined {
   return loadSources().find((s) => s.slug === slug);
 }
 
+// sources.yaml is assumed to hold canonical track slugs only (verified true as of
+// 2026-10); loadSources() does no runtime validation of default_tracks, so a
+// legacy slug (e.g. "crawler-controls") regressing into that file would make
+// this filter silently miss it instead of erroring.
 export function crawlerSources(): Source[] {
   return loadSources().filter((s) => s.default_tracks.includes("access-controls"));
 }
