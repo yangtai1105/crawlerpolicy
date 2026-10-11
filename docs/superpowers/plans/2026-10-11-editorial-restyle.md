@@ -464,6 +464,10 @@ Nine components carry scoped style blocks written for Field Ledger's dense, mono
 - Modify: `site/src/components/TrendTable.astro`
 - Modify: `site/src/components/EvidenceRail.astro`
 - Modify: `site/src/components/IntelligenceIssue.astro`
+- Modify: `site/src/pages/index.astro` (Step 6 only — two legacy-alias text colours)
+- Modify: `site/src/pages/subscribe.astro` (Step 6 only — one legacy-alias text colour)
+- Modify: `site/src/pages/reading/index.astro` (Step 6 only — one legacy-alias text colour)
+- Modify: `site/src/pages/reading/[week].astro` (Step 6 only — one legacy-alias text colour)
 
 **Interfaces:**
 - Consumes: the Editorial tokens from Task 1; the hardcoded-colour removals from Task 2
@@ -545,11 +549,75 @@ printf "agents-identity  %s\n" "$(grep -c 'class="development-card"' dist/fronts
 
 Expected: six issues at 9 each; 16 and 14 cards. These are the numbers the branch established — a change here means a restyle broke a filter or a guard.
 
-- [ ] **Step 5: Commit**
+- [ ] **Step 5: Fix five legacy-alias text colours that fail contrast on the new ground**
+
+Task 1 retained the Field Ledger token names as aliases pointing at Editorial values. Where those aliases feed a *border*, the new values are fine — a hairline rule needs no text contrast. Where they feed `color` on a light ground, five sites now fail WCAG. These were measured against `--bg` (`#fbfaf6`), and the two offending tokens resolve to `--evidence-mint` → `#7aa88b` (2.58:1) and `--pillar-agent` → `#dbb987` (1.78:1):
+
+| File and line | Rule | Current ratio |
+|---|---|---|
+| `site/src/pages/subscribe.astro:105` | `.form-status[data-state="ok"] { color: var(--pillar-agent); }` | **1.78:1** |
+| `site/src/pages/index.astro:190` | `.lead-reading .utility-label { color: var(--evidence-mint); }` | 2.58:1 |
+| `site/src/pages/index.astro:183` | `.lead-meta span + span::before { … color: var(--evidence-mint); content: "·"; }` | 2.58:1 |
+| `site/src/pages/reading/[week].astro:84` | `.item-tag { color: var(--pillar-agent); … }` | 1.78:1 |
+| `site/src/pages/reading/index.astro:147` | `color: var(--pillar-agent);` | 1.78:1 |
+
+Repoint each `color` to a token that clears 4.5:1 on `--bg`, choosing by what the element means rather than by what looks closest:
+
+- `subscribe.astro:105` is a success message a reader must read → `var(--status-shipped)` (#2f6b4e, 6.03:1).
+- `index.astro:190` is a label → `var(--accent)` (#9c3a1e, 6.62:1), which is the Editorial accent and already used for labels elsewhere in that block.
+- `index.astro:183` is a decorative `·` separator, not meaningful text, so WCAG does not require 4.5:1 — but an invisible separator makes the meta line run together. Use `var(--rule-strong)`, which is the token for visible-but-quiet marks.
+- Both `reading/*` sites are tags → `var(--status-shipped)` (6.03:1).
+
+**On touching `reading/*`:** this plan treats those pages as frozen archive and does not restyle their layouts. Changing one `color` property is not a layout change, and leaving 1.78:1 text on a route that is still served would be the worse outcome. Change only the `color` value on the two lines named above; touch nothing else in those files.
+
+**Fix exactly the five lines in the table above and nothing else.** Do not run a repository-wide contrast sweep to find more: a blanket "every `color:` token must clear 4.5:1 against `--bg`" check is background-blind and wrong here. Several elements deliberately sit on dark panels — the event page's evidence block (`events/[slug].astro:168-171`) and part of `subscribe.astro` are light-on-dark by design, and Task 2 kept them that way — so such a sweep inverts their verdict and reports them as failures. Acting on it would turn readable light-on-dark text into dark-on-dark. The five sites in the table were identified by hand, each classified by the CSS property it feeds and by its element's actual background.
+
+Verify your five changes by resolving each new token and computing its ratio against `#fbfaf6`, and paste the result into your report:
+
+```bash
+cd ~/Documents/Claude/Skills/ai-ecosystem-tracker/site
+python3 - <<'PY'
+import re
+def lin(c):
+    c/=255
+    return c/12.92 if c<=0.04045 else ((c+0.055)/1.055)**2.4
+def lum(h):
+    r,g,b=(int(h[i:i+2],16) for i in (1,3,5))
+    return 0.2126*lin(r)+0.7152*lin(g)+0.0722*lin(b)
+def ratio(a,b):
+    x,y=lum(a),lum(b); hi,lo=max(x,y),min(x,y)
+    return (hi+0.05)/(lo+0.05)
+css=open('src/styles/global.css').read()
+def resolve(n,d=0):
+    m=re.search(rf'^\s*--{re.escape(n)}:\s*([^;]+);',css,re.M)
+    if not m or d>6: return None
+    v=m.group(1).strip()
+    if v.startswith('#'): return v
+    a=re.match(r'var\(\s*--([\w-]+)\s*\)',v)
+    return resolve(a.group(1),d+1) if a else None
+for t in ('status-shipped','accent','rule-strong'):
+    v=resolve(t)
+    print(f"  --{t:14} {v}  {ratio(v,'#fbfaf6'):5.2f}:1  on --bg")
+PY
+```
+
+Expected: `--status-shipped` and `--accent` both clear 4.5:1; `--rule-strong` does not, which is correct for the decorative `·` separator and must be stated as such in your report rather than silently accepted.
+
+Then confirm the two tokens you removed no longer appear as a `color` anywhere:
+
+```bash
+cd ~/Documents/Claude/Skills/ai-ecosystem-tracker/site
+grep -rn "color:[[:space:]]*var(--evidence-mint)\|color:[[:space:]]*var(--pillar-agent)" src/
+```
+
+Expected: no output. Both tokens stay defined in `:root` — they are still used for borders, which need no text contrast.
+
+- [ ] **Step 6: Commit**
 
 ```bash
 cd ~/Documents/Claude/Skills/ai-ecosystem-tracker
-git add site/src/components/
+git add site/src/components/ site/src/pages/index.astro site/src/pages/subscribe.astro \
+        site/src/pages/reading/index.astro site/src/pages/reading/\[week\].astro
 git commit -m "feat: move component styles into the Editorial register
 
 Headings to the serif, small labels from mono to sans except where the
