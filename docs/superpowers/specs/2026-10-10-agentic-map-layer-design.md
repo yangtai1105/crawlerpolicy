@@ -74,7 +74,7 @@ The five fronts are unchanged: `access-discovery`, `agents-identity`, `rights-ma
 
 ### 3.4 Compatibility
 
-- An alias map holds `crawler-controls` → `access-controls` and `agentic-web` → `platform-ecosystem`. Loaders resolve aliases; existing records, legacy archive material, and existing URLs keep working. Old track URLs redirect to the new slug.
+- An alias map holds `crawler-controls` → `access-controls` and `agentic-web` → `platform-ecosystem`. Loaders resolve aliases; existing records, legacy archive material, and existing URLs keep working. No redirect was needed: the site has no `/tracks/{track}` route — it routes by front — so there were no old track URLs to redirect. Resolution happens in `pipeline/taxonomy.py`'s `resolve_track` / `resolve_track_list` / `resolve_track_scalar` and, on the Astro side, in a zod `.transform(normalizeTrack)` on the shared `track` type plus `tryNormalizeTrack` for JSON read outside any content collection.
 - `subject` is additive. Records written before this change carry `unknown` and are not backfilled, consistent with the existing rule against backfilling history for newly added coverage.
 - The feed's existing `primary_track` semantics are unchanged.
 
@@ -103,9 +103,15 @@ Categories: `defense-infra`, `agent-operator`, `identity-payments`, `monetizatio
 
 The feed schema already extracts `actors` as free text. That becomes the anchor:
 
-- `actors` is promoted to **controlled extraction**: the analysis step may only emit player slugs present in `players.yaml`.
-- A new `protocols` field is extracted the same way, constrained to `protocols.yaml`.
-- The free-text `actors` values are preserved in a new `actors_raw` field so nothing observed is lost.
+- **Implemented differently, deliberately (2026-10-10).** `actors` was left exactly as
+  it is — free-text display names, already consistent across 62 records and already
+  rendered by the site — and two new controlled fields were added instead:
+  `players` and `protocols`, both carrying registry slugs. This satisfies the same
+  requirement (a controlled join key for the map, with nothing observed lost) without
+  a field whose meaning changes between old and new records, and it made no existing
+  site code change necessary. `actors_raw` was therefore never added: `actors` already
+  is the raw field. Sub-projects 2 and 3 should join on `players` / `protocols`.
+- The analysis step may only emit player and protocol slugs present in the registries.
 - When analysis believes it has seen an entity outside the registry, it appends a candidate to `data/entity-candidates.json` with the evidence that suggested it. **This queue is the only path by which the registries grow.** The pipeline never writes to the registries.
 
 ## 5. Position state — the matrix
