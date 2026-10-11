@@ -1,46 +1,71 @@
-/* Crawler Policy — Field Ledger */
+/* Crawler Policy — Editorial */
 :root {
-  --field-paper: #e8eeea;
-  --ledger-ink: #192820;
-  --forest-block: #203a30;
-  --clay-marker: #d16b50;
-  --evidence-mint: #7bb497;
-  --quiet-rule: #aebdb4;
-  --paper-high: #f7faf7;
-  --ink-muted: #52675b;
-  --bg: var(--field-paper);
+  /* Editorial — warm off-white ground, serif display, one restrained accent */
+  --paper-warm: #fbfaf6;
+  --paper-tint: #f3f1ea;
+  --paper-high: #ffffff;
+  --ink: #1a1a18;
+  --ink-body: #3a3a34;
+  --ink-muted: #5a5a54;
+  --ink-faint: #8a7f6d;
+  --rule: #e3dfd3;
+  --rule-strong: #c9c3b2;
+  --accent: #9c3a1e;
+  --accent-soft: #e0c4b8;
+
+  /* Surfaces */
+  --bg: var(--paper-warm);
   --bg-elev: var(--paper-high);
-  --bg-hover: #dfe7e1;
-  --ink: var(--ledger-ink);
-  --ink-dim: #718178;
-  --border: rgba(25, 40, 32, 0.16);
-  --border-strong: var(--quiet-rule);
-  --focus: var(--clay-marker);
-  --protocol-blue: #356d58;
-  --trace-violet: #6b6257;
-  --alert-red: #ad4f3b;
-  --status-healthy: #327257;
-  --status-degraded: #9a632f;
-  --status-critical: #ad4f3b;
-  --status-unknown: var(--ink-muted);
-  --signal-hot: var(--clay-marker);
-  --signal-cool: var(--ink-muted);
-  --pillar-crawler: #356d58;
-  --pillar-ecosystem: #8d543f;
-  --pillar-agent: #3f765f;
-  --paper: var(--ledger-ink);
+  --bg-hover: var(--paper-tint);
+  --ink-dim: var(--ink-muted);
+  --border: var(--rule);
+  --border-strong: var(--rule-strong);
+  --focus: var(--accent);
+
+  /* Status — differ in lightness as well as hue (spec §8.2) */
+  --status-shipped: #2f6b4e;
+  --status-preview: #9dbfa9;
+  --status-stated: #d8b47e;
+  --status-declined: #c9a79c;
+  --status-none: #e7e3d7;
+  --status-healthy: #2f6b4e;
+  --status-degraded: #a9762c;
+  --status-critical: #9c3a1e;
+  --status-unknown: var(--ink-faint);
+  --signal-hot: var(--accent);
+  --signal-cool: var(--ink-faint);
+
+  /* Field Ledger names kept as aliases — referenced by the frozen
+     reading/* archive pages and subscribe.astro. Do not delete. */
+  --field-paper: var(--paper-warm);
+  --ledger-ink: var(--ink);
+  --forest-block: #2f4a3c;
+  --clay-marker: var(--accent);
+  --evidence-mint: var(--status-preview);
+  --quiet-rule: var(--rule-strong);
+  --protocol-blue: var(--status-shipped);
+  --trace-violet: var(--ink-faint);
+  --alert-red: var(--accent);
+  --pillar-crawler: var(--status-shipped);
+  --pillar-ecosystem: var(--ink-faint);
+  --pillar-agent: var(--status-stated);
+  --paper: var(--ink);
   --muted: var(--ink-muted);
-  --dim: var(--ink-dim);
-  --cyan: var(--protocol-blue);
+  --dim: var(--ink-faint);
+  --cyan: var(--status-shipped);
   --violet: var(--forest-block);
-  --pink: var(--clay-marker);
-  --amber: #9a632f;
+  --pink: var(--accent);
+  --amber: var(--status-stated);
   --night: var(--forest-block);
   --surface: var(--paper-high);
-  --surface-high: var(--bg-hover);
-  --font-display: "IBM Plex Sans Condensed", "Arial Narrow", sans-serif;
+  --surface-high: var(--paper-tint);
+
+  /* Type */
+  --font-display: "Source Serif 4 Variable", "Iowan Old Style", Palatino, Georgia, serif;
   --font-body: "IBM Plex Sans Variable", "Helvetica Neue", sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", monospace;
+
+  /* Space and measure — unchanged */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -59,36 +84,42 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html, body { margin: 0; padding: 0; }
-html {
-  background: var(--field-paper);
-  color: var(--ledger-ink);
-  font: 17px/1.7 var(--font-body);
-  -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
-}
+
 body {
+  margin: 0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   overflow-x: hidden;
-  background: var(--field-paper);
+  background: var(--bg);
+  color: var(--ink-body);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 main { flex: 1; }
-a { color: inherit; text-decoration: none; text-underline-offset: 3px; }
-a:hover { color: var(--clay-marker); }
+a { color: inherit; text-decoration: none; }
+a:hover { color: var(--accent); }
 :focus-visible { outline: 3px solid var(--focus); outline-offset: 4px; border-radius: var(--radius-sm); }
+
 h1, h2, h3, h4 {
   margin: 0;
+  color: var(--ink);
   font-family: var(--font-display);
-  font-weight: 650;
-  letter-spacing: -0.025em;
-  line-height: 1.05;
+  font-weight: 400;
+  line-height: 1.15;
+  letter-spacing: -0.014em;
   text-wrap: balance;
 }
-h1 { font-size: clamp(2.65rem, 6vw, 5.75rem); }
-h2 { font-size: clamp(1.75rem, 3.2vw, 3.1rem); }
-h3 { font-size: 1.2rem; }
-p { margin: 0 0 var(--space-4); }
+
+h1 { font-size: clamp(2.1rem, 4.2vw, 3.6rem); }
+h2 { font-size: clamp(1.5rem, 2.4vw, 2.1rem); }
+h3 { font-size: clamp(1.2rem, 1.6vw, 1.5rem); }
+h4 { font-size: 1.05rem; }
+
+p { margin: 0 0 var(--space-4); max-width: 68ch; }
 code, pre { font-family: var(--font-mono); font-size: 0.88em; }
 pre { overflow-x: auto; padding: var(--space-4); border: 1px solid #486052; border-radius: var(--radius-sm); background: var(--forest-block); color: var(--paper-high); }
 hr { border: 0; border-top: 1px solid var(--quiet-rule); margin: var(--space-6) 0; }
