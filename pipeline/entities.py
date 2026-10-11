@@ -10,8 +10,9 @@ from pydantic import BaseModel, Field
 
 from pipeline.taxonomy import Front
 
-DEFAULT_PROTOCOLS_PATH = Path("entities/protocols.yaml")
-DEFAULT_PLAYERS_PATH = Path("entities/players.yaml")
+_REPO_ROOT = Path(__file__).resolve().parents[1]
+DEFAULT_PROTOCOLS_PATH = _REPO_ROOT / "entities" / "protocols.yaml"
+DEFAULT_PLAYERS_PATH = _REPO_ROOT / "entities" / "players.yaml"
 
 
 class ProtocolKind(StrEnum):

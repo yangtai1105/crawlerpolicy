@@ -41,6 +41,35 @@ def resolve_track(value: str) -> Track:
     return Track(value)
 
 
+def resolve_track_scalar(value: object) -> object:
+    """Resolve a single track slug, aliases included. Non-strings pass through
+    for pydantic to reject with its own error."""
+    return resolve_track(value) if isinstance(value, str) else value
+
+
+def resolve_track_list(value: object) -> object:
+    """Resolve a list of track slugs, aliases included. Non-lists pass through
+    for pydantic to reject with its own error."""
+    if isinstance(value, list):
+        return [resolve_track(item) if isinstance(item, str) else item for item in value]
+    return value
+
+
+# site/src/lib/taxonomy.ts TRACK_LABELS must match these strings exactly.
+TRACK_LABELS: dict[Track, str] = {
+    Track.POLICY_REGULATION: "Policy & Regulation",
+    Track.LITIGATION_LEGAL: "Litigation & Legal",
+    Track.SEARCH_DISCOVERY: "Search & AI Discovery",
+    Track.ACCESS_CONTROLS: "Access Controls",
+    Track.PLATFORM_ECOSYSTEM: "Platform & Ecosystem",
+    Track.IDENTITY_AUTHORIZATION: "Identity & Authorization",
+    Track.LICENSING_MONETIZATION: "Licensing & Monetization",
+    Track.STANDARDS_PROTOCOLS: "Standards & Protocols",
+    Track.ASSET_RIGHTS: "Asset Rights",
+    Track.MEASUREMENT_ECONOMICS: "Measurement & Economics",
+}
+
+
 class Front(StrEnum):
     ACCESS_DISCOVERY = "access-discovery"
     AGENTS_IDENTITY = "agents-identity"

@@ -827,26 +827,43 @@ def _publish_analysis(
             event_slug(analysis.title) if development_path is not None else None
         ),
     )
-    if analysis.unknown_players or analysis.unknown_protocols:
-        record_candidates(
-            cfg.entity_candidates_path,
-            "player",
-            analysis.unknown_players,
-            evidence_ids=[record.evidence_id],
-            feed_slug=feed_path.stem,
-            now=record.detected_at,
-        )
-        record_candidates(
-            cfg.entity_candidates_path,
-            "protocol",
-            analysis.unknown_protocols,
-            evidence_ids=[record.evidence_id],
-            feed_slug=feed_path.stem,
-            now=record.detected_at,
-        )
     record.stage = EvidenceStage.PUBLISHED
     record.last_error = None
     save_evidence(cfg.evidence_dir, record)
+    # The candidate queue is a non-required stage (spec §7.1, §10): a write
+    # failure here must never undo a successful publish.
+    if analysis.unknown_players:
+        try:
+            record_candidates(
+                cfg.entity_candidates_path,
+                "player",
+                analysis.unknown_players,
+                evidence_ids=[record.evidence_id],
+                feed_slug=feed_path.stem,
+                now=record.detected_at,
+            )
+        except Exception:
+            log.exception(
+                "failed to record player candidates for %s evidence %s",
+                source.slug,
+                record.evidence_id,
+            )
+    if analysis.unknown_protocols:
+        try:
+            record_candidates(
+                cfg.entity_candidates_path,
+                "protocol",
+                analysis.unknown_protocols,
+                evidence_ids=[record.evidence_id],
+                feed_slug=feed_path.stem,
+                now=record.detected_at,
+            )
+        except Exception:
+            log.exception(
+                "failed to record protocol candidates for %s evidence %s",
+                source.slug,
+                record.evidence_id,
+            )
     return development_path, feed_path
 
 

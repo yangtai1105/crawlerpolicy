@@ -95,6 +95,7 @@ function evidence(ids: string[]) {
     </div>
     <div>
       <div class="section-heading"><p class="utility-label">Next evidence</p><h2>Watchlist</h2></div>
+      {/* item.tracks may carry legacy track slugs and is not rendered today — run it through tryNormalizeTrack if that changes; item.question embeds a raw track slug in archived issues. */}
       <ol>{issue.watchlist.map((item) => <li>{item.question}</li>)}</ol>
     </div>
   </section>

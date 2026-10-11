@@ -8,7 +8,7 @@ from typing import Self
 import yaml
 from pydantic import BaseModel, Field, field_validator, model_validator
 
-from pipeline.taxonomy import SourceRole, SourceTier, Subject, Track, resolve_track
+from pipeline.taxonomy import SourceRole, SourceTier, Subject, Track, resolve_track_list
 
 
 class SourceType(StrEnum):
@@ -67,9 +67,7 @@ class Source(BaseModel):
     @field_validator("default_tracks", mode="before")
     @classmethod
     def _resolve_track_aliases(cls, value: object) -> object:
-        if isinstance(value, list):
-            return [resolve_track(item) if isinstance(item, str) else item for item in value]
-        return value
+        return resolve_track_list(value)
 
     @model_validator(mode="after")
     def _validate_type_requirements(self) -> Self:

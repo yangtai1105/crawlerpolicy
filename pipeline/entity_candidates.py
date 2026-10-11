@@ -7,6 +7,7 @@ writes those files.
 from __future__ import annotations
 
 import json
+import os
 from datetime import datetime
 from pathlib import Path
 from typing import Literal
@@ -96,4 +97,6 @@ def record_candidates(
             key: json.loads(value.model_dump_json()) for key, value in sorted(candidates.items())
         },
     }
-    path.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    temporary = path.with_suffix(path.suffix + ".tmp")
+    temporary.write_text(json.dumps(payload, indent=2, ensure_ascii=False) + "\n")
+    os.replace(temporary, path)

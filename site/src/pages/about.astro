@@ -24,8 +24,8 @@ const sources = loadSources();
     </section>
 
     <section class="taxonomy-section">
-      <div class="section-index"><span class="utility-label">Coverage</span><strong>{sources.length} configured sources · nine tracks</strong></div>
-      <div><h2>Stable questions, explicit taxonomy</h2><p>Sources may cover multiple tracks. Nine internal tracks roll up into five public fronts so the site stays navigable without erasing technical distinctions.</p><div class="tracks">{TRACKS.map((track) => <TrackTag track={track} linked />)}</div></div>
+      <div class="section-index"><span class="utility-label">Coverage</span><strong>{sources.length} configured sources · {TRACKS.length} tracks</strong></div>
+      <div><h2>Stable questions, explicit taxonomy</h2><p>Sources may cover multiple tracks. Internal tracks roll up into five public fronts so the site stays navigable without erasing technical distinctions.</p><div class="tracks">{TRACKS.map((track) => <TrackTag track={track} linked />)}</div></div>
     </section>
 
     <section class="rules">

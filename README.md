@@ -2,7 +2,7 @@
 
 [crawlerpolicy.com](https://crawlerpolicy.com) is an English-language intelligence publication about the relationship between AI systems and the open web. It turns source changes into a readable daily feed while preserving the evidence needed to distinguish verified developments, reported stories, and early signals.
 
-The public taxonomy has five themes — Access & Discovery, Agents & Identity, Rights & Markets, Governance & Law, and Measurement & Economics — backed by nine internal tracks.
+The public taxonomy has five themes — Access & Discovery, Agents & Identity, Rights & Markets, Governance & Law, and Measurement & Economics — backed by internal tracks (see `pipeline/taxonomy.py` for the current list).
 
 ## What the pipeline publishes
 

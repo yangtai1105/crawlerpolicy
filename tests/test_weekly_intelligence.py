@@ -11,6 +11,7 @@ from pipeline.weekly_intelligence import (
     MaterialEvent,
     WeeklyIssue,
     WeeklySynthesis,
+    _load_previous_issue,
     build_weekly_issue,
     completed_iso_window,
     generate_weekly_intelligence,
@@ -259,6 +260,42 @@ Search and training controls are diverging.
     assert len(events) == 1
     assert events[0].primary_track is Track.ACCESS_CONTROLS
     assert events[0].tracks == [Track.ACCESS_CONTROLS, Track.PLATFORM_ECOSYSTEM]
+
+
+def test_load_previous_issue_resolves_legacy_track_slugs(tmp_path):
+    (tmp_path / "2026-W34.json").write_text(
+        json.dumps(
+            {
+                "schema_version": 1,
+                "week": "2026-W34",
+                "generated_at": "2026-08-24T08:00:00+00:00",
+                "window_start": "2026-08-17",
+                "window_end": "2026-08-23",
+                "material_developments": [
+                    {
+                        "track": "crawler-controls",
+                        "material_change": True,
+                        "event_ids": ["google-ai-control"],
+                        "summary": "Publisher controls diverged.",
+                    }
+                ],
+                "watchlist": [
+                    {
+                        "question": (
+                            "What primary evidence would make agentic-web materially change?"
+                        ),
+                        "tracks": ["agentic-web"],
+                    }
+                ],
+            }
+        )
+    )
+
+    previous = _load_previous_issue(tmp_path, "2026-W35")
+
+    assert previous is not None
+    assert previous.material_developments[0].track is Track.ACCESS_CONTROLS
+    assert previous.watchlist[0].tracks == [Track.PLATFORM_ECOSYSTEM]
 
 
 async def test_generate_weekly_intelligence_writes_verified_issue(tmp_path):
