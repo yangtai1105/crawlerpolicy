@@ -464,10 +464,12 @@ Nine components carry scoped style blocks written for Field Ledger's dense, mono
 - Modify: `site/src/components/TrendTable.astro`
 - Modify: `site/src/components/EvidenceRail.astro`
 - Modify: `site/src/components/IntelligenceIssue.astro`
-- Modify: `site/src/pages/index.astro` (Step 6 only — two legacy-alias text colours)
-- Modify: `site/src/pages/subscribe.astro` (Step 6 only — one legacy-alias text colour)
-- Modify: `site/src/pages/reading/index.astro` (Step 6 only — one legacy-alias text colour)
-- Modify: `site/src/pages/reading/[week].astro` (Step 6 only — one legacy-alias text colour)
+- Modify: `site/src/pages/index.astro` (Step 5 only — two legacy-alias colours plus one `--status-degraded` site)
+- Modify: `site/src/pages/subscribe.astro` (Step 5 only — one legacy-alias text colour)
+- Modify: `site/src/pages/reading/index.astro` (Step 5 only — one legacy-alias text colour)
+- Modify: `site/src/pages/reading/[week].astro` (Step 5 only — one legacy-alias text colour)
+- Modify: `site/src/pages/events/[slug].astro` (Step 5 only — one dark-panel link colour and one `--status-degraded` site)
+- Modify: `site/src/styles/global.css` (Step 5 only — darken `--status-degraded`, restore the `pre` border)
 
 **Interfaces:**
 - Consumes: the Editorial tokens from Task 1; the hardcoded-colour removals from Task 2
@@ -549,7 +551,7 @@ printf "agents-identity  %s\n" "$(grep -c 'class="development-card"' dist/fronts
 
 Expected: six issues at 9 each; 16 and 14 cards. These are the numbers the branch established — a change here means a restyle broke a filter or a guard.
 
-- [ ] **Step 5: Fix five legacy-alias text colours that fail contrast on the new ground**
+- [ ] **Step 5: Fix nine text colours that fail contrast, and the invisible `pre` border**
 
 Task 1 retained the Field Ledger token names as aliases pointing at Editorial values. Where those aliases feed a *border*, the new values are fine — a hairline rule needs no text contrast. Where they feed `color` on a light ground, five sites now fail WCAG. These were measured against `--bg` (`#fbfaf6`), and the two offending tokens resolve to `--evidence-mint` → `#7aa88b` (2.58:1) and `--pillar-agent` → `#dbb987` (1.78:1):
 
@@ -569,6 +571,25 @@ Repoint each `color` to a token that clears 4.5:1 on `--bg`, choosing by what th
 - Both `reading/*` sites are tags → `var(--status-shipped)` (6.03:1).
 
 **On touching `reading/*`:** this plan treats those pages as frozen archive and does not restyle their layouts. Changing one `color` property is not a layout change, and leaving 1.78:1 text on a route that is still served would be the worse outcome. Change only the `color` value on the two lines named above; touch nothing else in those files.
+
+**Four more, found by Task 2's review.** My original audit only covered the *legacy aliases* and only measured against the light ground, so it missed a primary token and missed the dark panel entirely. Fix these in the same pass:
+
+| File and line | Rule | Problem | Fix |
+|---|---|---|---|
+| `site/src/components/HealthStrip.astro:52`, `site/src/pages/index.astro:186`, `site/src/pages/events/[slug].astro:156` | foreground text set to `var(--status-degraded)` (#a9762c) | **3.78:1** on `--bg` at 0.65-0.72rem — not large text, so AA's 4.5:1 applies | darken the `--status-degraded` token itself in `:root` |
+| `site/src/pages/events/[slug].astro:171` | `.event-page-body :global(… a) { color: var(--status-preview); text-decoration: underline; }` | **3.60:1** against the panel's `--forest-block` (#2f4a3c) background | repoint to `var(--paper-tint)` |
+
+For `--status-degraded`, pick a darker bronze that clears **4.5:1 against `#fbfaf6`**. `#8f6526` measures 4.96:1 and `#8a6020` measures 5.33:1 — either works; take one and report the measured ratio. **Do not touch the five `--status-*` matrix colours** (`shipped`, `preview`, `stated`, `declined`, `none`): Task 1 separated those by at least 11.8 L* to satisfy spec §8.2, and `--status-degraded` is a *health* status, not one of them.
+
+One honest caveat to record in your report rather than hide: at `#8f6526` the darkened `--status-degraded` sits about 5 L* from `--status-healthy` (#2f6b4e). They remain strongly separated in hue (bronze against green) and the health strip also renders a text label, so colour is not the sole cue — but the lightness separation there is tighter than the matrix statuses'.
+
+For the dark-panel link, `--paper-tint` gives 8.58:1 and the rule already carries `text-decoration: underline`, so the underline remains the non-colour affordance and the link stays distinguishable without relying on hue.
+
+**Also fix the invisible `pre` border** that Task 2 introduced. `site/src/styles/global.css:124` now sets `border: 1px solid var(--forest-block)` on a `background: var(--forest-block)`, so no edge renders at all — previously the border was a distinct lighter shade. Restore a visible inner edge:
+
+```css
+pre { overflow-x: auto; padding: var(--space-4); border: 1px solid var(--rule-strong); border-radius: var(--radius-sm); background: var(--forest-block); color: var(--paper-tint); }
+```
 
 **Fix exactly the five lines in the table above and nothing else.** Do not run a repository-wide contrast sweep to find more: a blanket "every `color:` token must clear 4.5:1 against `--bg`" check is background-blind and wrong here. Several elements deliberately sit on dark panels — the event page's evidence block (`events/[slug].astro:168-171`) and part of `subscribe.astro` are light-on-dark by design, and Task 2 kept them that way — so such a sweep inverts their verdict and reports them as failures. Acting on it would turn readable light-on-dark text into dark-on-dark. The five sites in the table were identified by hand, each classified by the CSS property it feeds and by its element's actual background.
 
