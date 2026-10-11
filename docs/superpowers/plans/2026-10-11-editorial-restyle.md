@@ -834,9 +834,9 @@ Plus the output checks that guard against silent regressions:
 ```bash
 cd site
 grep -rn "#[0-9a-fA-F]\{3,6\}\b" src/components src/layouts src/pages | grep -v "^src/styles"   # expect nothing
-for f in dist/intelligence/*/index.html; do grep -c 'class="track-tag"' $f; done                 # expect 9 six times
-grep -c 'class="development-card"' dist/fronts/access-discovery/index.html                       # expect 16
-grep -c 'class="development-card"' dist/fronts/agents-identity/index.html                        # expect 14
+for f in dist/intelligence/*/index.html; do grep -o 'class="track-tag"' $f | wc -l; done        # expect 9 six times
+grep -o 'class="development-card"' dist/fronts/access-discovery/index.html | wc -l               # expect 16
+grep -o 'class="development-card"' dist/fronts/agents-identity/index.html | wc -l                # expect 14
 ```
 
 And one judgement that no script can make: open the built site and look at it. `npm run dev` serves at `http://localhost:4321`. A restyle is not done because the build is green; it is done when the pages read as one publication.
