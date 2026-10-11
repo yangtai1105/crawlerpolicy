@@ -11,7 +11,7 @@
   # use it to seed a ~6-month historical baseline for comparison.
   baseline_url: https://platform.openai.com/docs/gptbot
   display_name: OpenAI
-  default_tracks: [crawler-controls, search-discovery, agentic-web]
+  default_tracks: [access-controls, search-discovery, platform-ecosystem]
   tier: primary
   role: platform-docs
   required_for_coverage: true
@@ -20,7 +20,7 @@
   type: html_page
   url: https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler
   display_name: Anthropic
-  default_tracks: [crawler-controls, search-discovery, agentic-web]
+  default_tracks: [access-controls, search-discovery, platform-ecosystem]
   tier: primary
   role: platform-docs
   required_for_coverage: true
@@ -29,7 +29,7 @@
   type: html_page
   url: https://developers.google.com/search/docs/crawling-indexing/google-common-crawlers
   display_name: Google
-  default_tracks: [crawler-controls, search-discovery]
+  default_tracks: [access-controls, search-discovery]
   tier: primary
   role: platform-docs
   required_for_coverage: true
@@ -38,7 +38,7 @@
   type: html_page
   url: https://docs.perplexity.ai/guides/bots
   display_name: Perplexity
-  default_tracks: [crawler-controls, search-discovery, agentic-web]
+  default_tracks: [access-controls, search-discovery, platform-ecosystem]
   tier: primary
   role: platform-docs
 
@@ -46,7 +46,7 @@
   type: html_page
   url: https://support.apple.com/en-us/119829
   display_name: Apple
-  default_tracks: [crawler-controls, search-discovery]
+  default_tracks: [access-controls, search-discovery]
   tier: primary
   role: platform-docs
 
@@ -54,7 +54,7 @@
   type: cf_browser_run
   url: https://developers.facebook.com/docs/sharing/webmasters/web-crawlers
   display_name: Meta
-  default_tracks: [crawler-controls, agentic-web]
+  default_tracks: [access-controls, platform-ecosystem]
   tier: primary
   role: platform-docs
 
@@ -62,7 +62,7 @@
   type: html_page
   url: https://www.bing.com/webmasters/help/which-crawlers-does-bing-use-8c184ec0
   display_name: Microsoft
-  default_tracks: [crawler-controls, search-discovery]
+  default_tracks: [access-controls, search-discovery]
   tier: primary
   role: platform-docs
 
@@ -70,7 +70,7 @@
   type: html_page
   url: https://developer.amazon.com/amazonbot
   display_name: Amazon
-  default_tracks: [crawler-controls]
+  default_tracks: [access-controls]
   tier: primary
   role: platform-docs
 
@@ -78,7 +78,7 @@
   type: html_page
   url: https://commoncrawl.org/faq
   display_name: Common Crawl
-  default_tracks: [crawler-controls, asset-rights]
+  default_tracks: [access-controls, asset-rights]
   tier: primary
   role: platform-docs
 
@@ -91,7 +91,7 @@
   type: rss_feed
   url: https://developers.cloudflare.com/changelog/rss/ai-crawl-control.xml
   display_name: Cloudflare AI Crawl Control changelog
-  default_tracks: [crawler-controls, licensing-monetization]
+  default_tracks: [access-controls, licensing-monetization]
   tier: primary
   role: infrastructure
 
@@ -100,7 +100,7 @@
   url: https://developers.cloudflare.com/changelog/rss/radar.xml
   keyword_filter: ["AI", "crawler", "bot", "agent", "training"]
   display_name: Cloudflare Radar changelog
-  default_tracks: [measurement-economics, crawler-controls, agentic-web]
+  default_tracks: [measurement-economics, access-controls, platform-ecosystem]
   tier: measurement
   role: measurement
   required_for_coverage: true
@@ -120,7 +120,7 @@
     and any vendor announcements about new crawler UAs or scope changes.
   lookback_days: 30
   display_name: Crawler insights (search)
-  default_tracks: [crawler-controls, agentic-web, measurement-economics]
+  default_tracks: [access-controls, platform-ecosystem, measurement-economics]
   tier: commentary
   role: reporting
 
@@ -131,7 +131,7 @@
   url: https://blog.cloudflare.com/rss/
   keyword_filter: ["AI bot", "crawler", "scraper", "content", "robots.txt", "training", "AI training"]
   display_name: Cloudflare Blog
-  default_tracks: [crawler-controls, licensing-monetization, measurement-economics]
+  default_tracks: [access-controls, licensing-monetization, measurement-economics]
   tier: specialist
   role: infrastructure
 
@@ -140,7 +140,7 @@
   url: https://datadome.co/feed/
   keyword_filter: ["AI", "crawler", "scraper", "bot", "LLM"]
   display_name: DataDome Blog
-  default_tracks: [crawler-controls, agentic-web, measurement-economics]
+  default_tracks: [access-controls, platform-ecosystem, measurement-economics]
   tier: specialist
   role: infrastructure
 
@@ -166,7 +166,7 @@
   type: html_page
   url: https://www.gov.uk/government/publications/agentic-ai-and-consumers/agentic-ai-and-consumers
   display_name: UK Gov — Agentic AI and Consumers
-  default_tracks: [policy-regulation, agentic-web]
+  default_tracks: [policy-regulation, platform-ecosystem]
   tier: primary
   role: regulator
 
@@ -213,7 +213,7 @@
   type: github_repo
   repo: cloudflareresearch/web-bot-auth
   display_name: Web Bot Auth (spec repo)
-  default_tracks: [standards-protocols, agentic-web]
+  default_tracks: [standards-protocols, platform-ecosystem]
   tier: primary
   role: standards
   required_for_coverage: true
@@ -223,7 +223,7 @@
   repo: modelcontextprotocol/specification
   pr_labels: ["spec", "rfc"]
   display_name: Model Context Protocol (spec)
-  default_tracks: [standards-protocols, agentic-web]
+  default_tracks: [standards-protocols, platform-ecosystem]
   tier: primary
   role: standards
 
@@ -232,7 +232,7 @@
   url: https://blog.cloudflare.com/tag/research/rss/
   keyword_filter: ["bot", "agent", "auth", "identity", "scraper"]
   display_name: Cloudflare Research Blog
-  default_tracks: [agentic-web, standards-protocols, measurement-economics]
+  default_tracks: [platform-ecosystem, standards-protocols, measurement-economics]
   tier: specialist
   role: reporting
 
@@ -241,7 +241,7 @@
   url: https://openai.com/news/rss.xml
   keyword_filter: ["agent", "operator", "bot", "crawler", "Assistants", "ChatGPT agents"]
   display_name: OpenAI News
-  default_tracks: [agentic-web, search-discovery]
+  default_tracks: [platform-ecosystem, search-discovery]
   tier: primary
   role: platform-docs
 
@@ -249,7 +249,7 @@
   type: rss_feed
   url: https://developers.cloudflare.com/changelog/rss/ai-gateway.xml
   display_name: Cloudflare AI Gateway changelog
-  default_tracks: [agentic-web, standards-protocols]
+  default_tracks: [platform-ecosystem, standards-protocols]
   tier: primary
   role: infrastructure
 
@@ -257,7 +257,7 @@
   type: rss_feed
   url: https://developers.cloudflare.com/changelog/rss/ai-search.xml
   display_name: Cloudflare AI Search changelog
-  default_tracks: [search-discovery, agentic-web]
+  default_tracks: [search-discovery, platform-ecosystem]
   tier: primary
   role: infrastructure
 
@@ -270,7 +270,7 @@
   type: html_page
   url: https://developers.google.com/search/blog
   display_name: Google Search Central Blog
-  default_tracks: [search-discovery, crawler-controls]
+  default_tracks: [search-discovery, access-controls]
   tier: primary
   role: platform-docs
   required_for_coverage: true
@@ -279,7 +279,7 @@
   type: html_page
   url: https://datatracker.ietf.org/group/webbotauth/
   display_name: IETF Web Bot Auth Working Group
-  default_tracks: [standards-protocols, agentic-web]
+  default_tracks: [standards-protocols, platform-ecosystem, identity-authorization]
   tier: primary
   role: standards
   required_for_coverage: true
@@ -306,7 +306,7 @@
   type: html_page
   url: https://rslstandard.org/rsl
   display_name: Really Simple Licensing
-  default_tracks: [licensing-monetization, asset-rights, crawler-controls]
+  default_tracks: [licensing-monetization, asset-rights, access-controls]
   tier: primary
   role: standards
   required_for_coverage: false
@@ -334,7 +334,7 @@
   type: cf_browser_run
   url: https://radar.cloudflare.com/ai-insights
   display_name: Cloudflare Radar AI Insights
-  default_tracks: [measurement-economics, crawler-controls, agentic-web]
+  default_tracks: [measurement-economics, access-controls, platform-ecosystem]
   tier: measurement
   role: measurement
   required_for_coverage: true
@@ -360,7 +360,7 @@
   query: "New tools, policies, or announcements for publishers to block, charge, or control AI crawlers (e.g. robots.txt changes, paywalls for AI training, pay-per-crawl, content authenticity / provenance)"
   lookback_days: 14
   display_name: Content-blocking & pay-for-content (search)
-  default_tracks: [crawler-controls, licensing-monetization, asset-rights]
+  default_tracks: [access-controls, licensing-monetization, asset-rights]
   tier: commentary
   role: reporting
 
@@ -380,7 +380,7 @@
   query: "New or updated IETF drafts, W3C proposals, or standards-body activity on AI agent authentication, web bot auth, agents.txt, llms.txt, or agent identity"
   lookback_days: 30
   display_name: Agent & bot-auth standards (search)
-  default_tracks: [standards-protocols, agentic-web]
+  default_tracks: [standards-protocols, platform-ecosystem]
   tier: commentary
   role: reporting
 
@@ -390,7 +390,7 @@
   query: "New features, integrations, or announcements from AI agent infrastructure vendors (Browserbase, Stagehand, LangChain agents, CrewAI, AutoGen, Anthropic Computer Use, OpenAI Operator, Google Agent Development Kit) — focus on protocol and bot-identity features"
   lookback_days: 14
   display_name: Agent infrastructure movement (search)
-  default_tracks: [agentic-web, standards-protocols]
+  default_tracks: [platform-ecosystem, standards-protocols]
   tier: commentary
   role: reporting
 
@@ -407,7 +407,7 @@
   lookback_hours: 36
   shadow: true
   display_name: X — Access & Discovery
-  default_tracks: [crawler-controls, search-discovery]
+  default_tracks: [access-controls, search-discovery]
   tier: commentary
   role: reporting
 
@@ -420,7 +420,7 @@
   lookback_hours: 36
   shadow: true
   display_name: X — Agents & Identity
-  default_tracks: [agentic-web, standards-protocols]
+  default_tracks: [platform-ecosystem, standards-protocols]
   tier: commentary
   role: reporting
 

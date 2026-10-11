@@ -13,7 +13,7 @@ def test_write_event_creates_file_with_frontmatter(tmp_path: Path):
         type=SourceType.HTML_PAGE,
         url="https://x",
         display_name="OpenAI GPTBot",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.PRIMARY,
         role=SourceRole.PLATFORM_DOCS,
     )
@@ -24,7 +24,7 @@ def test_write_event_creates_file_with_frontmatter(tmp_path: Path):
         what_changed="New UA string.",
         implication="Search and training controls now differ.",
         primary_track=Track.SEARCH_DISCOVERY,
-        tracks=[Track.SEARCH_DISCOVERY, Track.CRAWLER_CONTROLS],
+        tracks=[Track.SEARCH_DISCOVERY, Track.ACCESS_CONTROLS],
         actors=["OpenAI", "publishers"],
         trend_signals=["training-search-separation"],
         confidence="high",
@@ -52,7 +52,7 @@ def test_write_event_creates_file_with_frontmatter(tmp_path: Path):
     assert "source: gptbot" in text
     assert "source_tier: primary" in text
     assert "primary_track: search-discovery" in text
-    assert "tracks:\n  - search-discovery\n  - crawler-controls" in text
+    assert "tracks:\n  - search-discovery\n  - access-controls" in text
     assert "event_date: 2026-04-17T00:00:00+00:00" in text
     assert "published_at: 2026-04-17T06:00:00+00:00" in text
     assert "detected_at: 2026-04-18T08:00:00+00:00" in text

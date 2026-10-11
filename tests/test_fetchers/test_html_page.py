@@ -15,7 +15,7 @@ def html_source():
         type=SourceType.HTML_PAGE,
         url="https://platform.openai.com/docs/gptbot",
         display_name="OpenAI GPTBot",
-        default_tracks=[Track.CRAWLER_CONTROLS],
+        default_tracks=[Track.ACCESS_CONTROLS],
         tier=SourceTier.PRIMARY,
         role=SourceRole.PLATFORM_DOCS,
     )

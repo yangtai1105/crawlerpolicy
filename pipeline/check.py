@@ -17,6 +17,7 @@ from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
 from pipeline.daily_brief import build_daily_brief, save_daily_brief
 from pipeline.differ import compute_diff
+from pipeline.entity_candidates import record_candidates
 from pipeline.event_writer import event_slug, write_event
 from pipeline.evidence import (
     EvidenceRecord,
@@ -69,7 +70,7 @@ class DependencyBlocker:
 
 
 def _maybe_trend_context(cfg: Config, source: Source) -> str:
-    if Track.CRAWLER_CONTROLS in source.default_tracks:
+    if Track.ACCESS_CONTROLS in source.default_tracks:
         return ""
     recent = load_recent_events_for_source(cfg.events_dir, source.slug, limit=10)
     return format_trend_context(recent)
@@ -829,6 +830,40 @@ def _publish_analysis(
     record.stage = EvidenceStage.PUBLISHED
     record.last_error = None
     save_evidence(cfg.evidence_dir, record)
+    # The candidate queue is a non-required stage (spec §7.1, §10): a write
+    # failure here must never undo a successful publish.
+    if analysis.unknown_players:
+        try:
+            record_candidates(
+                cfg.entity_candidates_path,
+                "player",
+                analysis.unknown_players,
+                evidence_ids=[record.evidence_id],
+                feed_slug=feed_path.stem,
+                now=record.detected_at,
+            )
+        except Exception:
+            log.exception(
+                "failed to record player candidates for %s evidence %s",
+                source.slug,
+                record.evidence_id,
+            )
+    if analysis.unknown_protocols:
+        try:
+            record_candidates(
+                cfg.entity_candidates_path,
+                "protocol",
+                analysis.unknown_protocols,
+                evidence_ids=[record.evidence_id],
+                feed_slug=feed_path.stem,
+                now=record.detected_at,
+            )
+        except Exception:
+            log.exception(
+                "failed to record protocol candidates for %s evidence %s",
+                source.slug,
+                record.evidence_id,
+            )
     return development_path, feed_path
 
 

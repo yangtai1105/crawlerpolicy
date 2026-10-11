@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import argparse
 import asyncio
+import logging
 import os
 from collections.abc import Awaitable, Callable
 from datetime import UTC, datetime
@@ -21,6 +22,7 @@ from pipeline.backfill import (
     save_manifest,
     select_candidates,
 )
+from pipeline.entity_candidates import record_candidates
 from pipeline.event_writer import event_slug, write_event
 from pipeline.feed import publication_status, should_promote
 from pipeline.feed_writer import write_feed_item
@@ -32,6 +34,8 @@ from pipeline.model_provider import (
 )
 from pipeline.relevance import RelevanceVerdict, keyword_match, model_relevance
 from pipeline.sources import Source, load_sources
+
+log = logging.getLogger("backfill_feed")
 
 Analyze = Callable[..., Awaitable[AnalysisResult]]
 Relevance = Callable[[StructuredModel, str, str], Awaitable[RelevanceVerdict]]
@@ -321,6 +325,41 @@ def _publish_candidate(
         processed_at=processed_at,
         backfill_batch=current_batch_id,
     )
+    # The candidate queue is a non-required stage (spec §7.1, §10): a write
+    # failure here must never undo a successful publish.
+    entity_candidates_path = repo_root / "data" / "entity-candidates.json"
+    if analysis.unknown_players:
+        try:
+            record_candidates(
+                entity_candidates_path,
+                "player",
+                analysis.unknown_players,
+                evidence_ids=[evidence_id],
+                feed_slug=feed_path.stem,
+                now=detected_at,
+            )
+        except Exception:
+            log.exception(
+                "failed to record player candidates for %s evidence %s",
+                source.slug,
+                evidence_id,
+            )
+    if analysis.unknown_protocols:
+        try:
+            record_candidates(
+                entity_candidates_path,
+                "protocol",
+                analysis.unknown_protocols,
+                evidence_ids=[evidence_id],
+                feed_slug=feed_path.stem,
+                now=detected_at,
+            )
+        except Exception:
+            log.exception(
+                "failed to record protocol candidates for %s evidence %s",
+                source.slug,
+                evidence_id,
+            )
     return feed_path, development_path
 
 

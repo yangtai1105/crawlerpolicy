@@ -1,18 +1,28 @@
 import { defineCollection } from "astro:content";
 import { z } from "astro/zod";
 import { glob } from "astro/loaders";
+import { normalizeTrack } from "./lib/taxonomy";
 
-const track = z.enum([
-  "policy-regulation",
-  "litigation-legal",
-  "search-discovery",
-  "crawler-controls",
-  "agentic-web",
-  "licensing-monetization",
-  "standards-protocols",
-  "asset-rights",
-  "measurement-economics",
-]);
+// Accepts canonical and pre-2026-10 slugs; always yields a canonical Track,
+// so no page sees a legacy value and no content file needs rewriting.
+const track = z
+  .enum([
+    "policy-regulation",
+    "litigation-legal",
+    "search-discovery",
+    "access-controls",
+    "platform-ecosystem",
+    "identity-authorization",
+    "licensing-monetization",
+    "standards-protocols",
+    "asset-rights",
+    "measurement-economics",
+    "crawler-controls",
+    "agentic-web",
+  ])
+  .transform(normalizeTrack);
+
+const subject = z.enum(["crawler", "agent", "both", "unknown"]);
 
 const events = defineCollection({
   loader: glob({
@@ -54,6 +64,9 @@ const feed = defineCollection({
     primary_track: track,
     tracks: z.array(track).min(1),
     actors: z.array(z.string()).default([]),
+    subject: subject.default("unknown"),
+    players: z.array(z.string()).default([]),
+    protocols: z.array(z.string()).default([]),
     event_date: z.coerce.date(),
     published_at: z.coerce.date(),
     detected_at: z.coerce.date(),

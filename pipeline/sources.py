@@ -6,15 +6,9 @@ from pathlib import Path
 from typing import Self
 
 import yaml
-from pydantic import BaseModel, Field, model_validator
+from pydantic import BaseModel, Field, field_validator, model_validator
 
-from pipeline.taxonomy import SourceRole, SourceTier, Track
-
-
-class Pillar(StrEnum):
-    CRAWLER = "crawler"
-    ECOSYSTEM = "ecosystem"
-    AGENT = "agent"
+from pipeline.taxonomy import SourceRole, SourceTier, Subject, Track, resolve_track_list
 
 
 class SourceType(StrEnum):
@@ -32,6 +26,7 @@ class Source(BaseModel):
     type: SourceType
     display_name: str
     default_tracks: list[Track]
+    default_subject: Subject = Subject.UNKNOWN
     tier: SourceTier
     role: SourceRole
     enabled: bool = True
@@ -68,6 +63,11 @@ class Source(BaseModel):
 
     # Optional analysis-model override per source.
     model: str | None = None
+
+    @field_validator("default_tracks", mode="before")
+    @classmethod
+    def _resolve_track_aliases(cls, value: object) -> object:
+        return resolve_track_list(value)
 
     @model_validator(mode="after")
     def _validate_type_requirements(self) -> Self:

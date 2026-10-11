@@ -8,12 +8,66 @@ class Track(StrEnum):
     POLICY_REGULATION = "policy-regulation"
     LITIGATION_LEGAL = "litigation-legal"
     SEARCH_DISCOVERY = "search-discovery"
-    CRAWLER_CONTROLS = "crawler-controls"
-    AGENTIC_WEB = "agentic-web"
+    ACCESS_CONTROLS = "access-controls"
+    PLATFORM_ECOSYSTEM = "platform-ecosystem"
+    IDENTITY_AUTHORIZATION = "identity-authorization"
     LICENSING_MONETIZATION = "licensing-monetization"
     STANDARDS_PROTOCOLS = "standards-protocols"
     ASSET_RIGHTS = "asset-rights"
     MEASUREMENT_ECONOMICS = "measurement-economics"
+
+
+class Subject(StrEnum):
+    """What a development is about, orthogonal to its domain Track."""
+
+    CRAWLER = "crawler"
+    AGENT = "agent"
+    BOTH = "both"
+    UNKNOWN = "unknown"
+
+
+# Slugs used before 2026-10. Content on disk keeps them; readers resolve.
+TRACK_ALIASES: dict[str, Track] = {
+    "crawler-controls": Track.ACCESS_CONTROLS,
+    "agentic-web": Track.PLATFORM_ECOSYSTEM,
+}
+
+
+def resolve_track(value: str) -> Track:
+    """Resolve a track slug, including pre-2026-10 slugs, to a canonical Track."""
+    alias = TRACK_ALIASES.get(value)
+    if alias is not None:
+        return alias
+    return Track(value)
+
+
+def resolve_track_scalar(value: object) -> object:
+    """Resolve a single track slug, aliases included. Non-strings pass through
+    for pydantic to reject with its own error."""
+    return resolve_track(value) if isinstance(value, str) else value
+
+
+def resolve_track_list(value: object) -> object:
+    """Resolve a list of track slugs, aliases included. Non-lists pass through
+    for pydantic to reject with its own error."""
+    if isinstance(value, list):
+        return [resolve_track(item) if isinstance(item, str) else item for item in value]
+    return value
+
+
+# site/src/lib/taxonomy.ts TRACK_LABELS must match these strings exactly.
+TRACK_LABELS: dict[Track, str] = {
+    Track.POLICY_REGULATION: "Policy & Regulation",
+    Track.LITIGATION_LEGAL: "Litigation & Legal",
+    Track.SEARCH_DISCOVERY: "Search & AI Discovery",
+    Track.ACCESS_CONTROLS: "Access Controls",
+    Track.PLATFORM_ECOSYSTEM: "Platform & Ecosystem",
+    Track.IDENTITY_AUTHORIZATION: "Identity & Authorization",
+    Track.LICENSING_MONETIZATION: "Licensing & Monetization",
+    Track.STANDARDS_PROTOCOLS: "Standards & Protocols",
+    Track.ASSET_RIGHTS: "Asset Rights",
+    Track.MEASUREMENT_ECONOMICS: "Measurement & Economics",
+}
 
 
 class Front(StrEnum):
@@ -44,12 +98,13 @@ class SourceRole(StrEnum):
 
 FRONT_TRACKS: dict[Front, tuple[Track, ...]] = {
     Front.ACCESS_DISCOVERY: (
-        Track.CRAWLER_CONTROLS,
+        Track.ACCESS_CONTROLS,
         Track.SEARCH_DISCOVERY,
     ),
     Front.AGENTS_IDENTITY: (
-        Track.AGENTIC_WEB,
+        Track.PLATFORM_ECOSYSTEM,
         Track.STANDARDS_PROTOCOLS,
+        Track.IDENTITY_AUTHORIZATION,
     ),
     Front.RIGHTS_MARKETS: (
         Track.LICENSING_MONETIZATION,

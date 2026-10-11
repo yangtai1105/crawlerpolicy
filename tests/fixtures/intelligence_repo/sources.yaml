@@ -2,7 +2,7 @@
   type: html_page
   url: https://primary.example.test/control
   display_name: Primary Control
-  default_tracks: [crawler-controls, standards-protocols]
+  default_tracks: [access-controls, standards-protocols]
   tier: primary
   role: platform-docs
   required_for_coverage: true

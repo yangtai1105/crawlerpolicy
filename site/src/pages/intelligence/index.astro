@@ -20,7 +20,7 @@ const events = await loadCurrentEvents();
           <div><h1>New intelligence cycle starting.</h1><p>The first issue will publish after a completed weekly window has current health coverage and resolvable schema-v2 evidence. Historical events are not used to manufacture a launch issue.</p></div>
         </header>
         <HealthStrip health={loadHealth()} />
-        <section class="method-note"><h2>What will appear here</h2><p>A weekly thesis, executive shifts, nine-track change ledger, trend deltas, actor moves, a watchlist, and direct evidence links.</p><a href="/archive">Open Legacy Archive →</a></section>
+        <section class="method-note"><h2>What will appear here</h2><p>A weekly thesis, executive shifts, a cross-track change ledger, trend deltas, actor moves, a watchlist, and direct evidence links.</p><a href="/archive">Open Legacy Archive →</a></section>
       </>
     )}
     {archive.length > 1 && <nav class="issue-archive" aria-label="Weekly intelligence archive"><p class="utility-label">Previous issues</p>{archive.slice(1).map((issue) => <a href={`/intelligence/${issue.week}`}>{issue.week}</a>)}</nav>}

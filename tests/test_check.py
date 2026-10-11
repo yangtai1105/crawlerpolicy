@@ -31,7 +31,7 @@ def repo(tmp_path):
                     "type": "html_page",
                     "url": "https://platform.openai.com/docs/gptbot",
                     "display_name": "OpenAI GPTBot",
-                    "default_tracks": ["crawler-controls"],
+                    "default_tracks": ["access-controls"],
                     "tier": "primary",
                     "role": "platform-docs",
                     "required_for_coverage": True,
@@ -89,8 +89,8 @@ async def test_subsequent_change_emits_event(repo):
                 title="GPTBot adds section",
                 what_changed="Added.",
                 implication="Important.",
-                primary_track=Track.CRAWLER_CONTROLS,
-                tracks=[Track.CRAWLER_CONTROLS],
+                primary_track=Track.ACCESS_CONTROLS,
+                tracks=[Track.ACCESS_CONTROLS],
                 actors=["OpenAI"],
                 trend_signals=[],
                 confidence="high",
@@ -159,8 +159,8 @@ async def test_analysis_failure_saves_evidence_and_replays_without_refetching_hi
             title="GPTBot adds section",
             what_changed="Added.",
             implication="Important.",
-            primary_track=Track.CRAWLER_CONTROLS,
-            tracks=[Track.CRAWLER_CONTROLS],
+            primary_track=Track.ACCESS_CONTROLS,
+            tracks=[Track.ACCESS_CONTROLS],
             actors=["OpenAI"],
             trend_signals=[],
             confidence="high",
@@ -210,7 +210,7 @@ def _write_item_source(repo, *, tier="specialist"):
                     "type": "rss_feed",
                     "url": "https://example.test/feed.xml",
                     "display_name": "Ecosystem Report",
-                    "default_tracks": ["agentic-web"],
+                    "default_tracks": ["platform-ecosystem"],
                     "tier": tier,
                     "role": "reporting",
                 }
@@ -239,8 +239,8 @@ def _material_analysis() -> AnalysisResult:
         insight="Agent identity is moving into infrastructure.",
         implication="Sites can distinguish accountable agents.",
         why_it_matters="Machine access can become specific and auditable.",
-        primary_track=Track.AGENTIC_WEB,
-        tracks=[Track.AGENTIC_WEB],
+        primary_track=Track.PLATFORM_ECOSYSTEM,
+        tracks=[Track.PLATFORM_ECOSYSTEM],
         actors=["Example"],
         trend_signals=[],
         confidence="high",
@@ -288,6 +288,44 @@ async def test_reported_item_writes_feed_without_development(repo):
     assert health["feed_items_written"] == [
         str(feed_items[0].relative_to(repo))
     ]
+
+
+async def test_unknown_entities_are_queued_for_review(repo):
+    _write_item_source(repo, tier="specialist")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+    analysis = _material_analysis()
+    analysis.unknown_players = ["Scalepost"]
+    analysis.unknown_protocols = ["Imaginary Protocol"]
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=analysis),
+    )
+
+    queue = json.loads((repo / "data" / "entity-candidates.json").read_text())
+    assert "player:scalepost" in queue["candidates"]
+    assert "protocol:imaginary protocol" in queue["candidates"]
+    assert queue["candidates"]["player:scalepost"]["observed_name"] == "Scalepost"
+
+
+async def test_no_queue_file_is_written_when_every_entity_resolves(repo):
+    _write_item_source(repo, tier="specialist")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=_material_analysis()),
+    )
+
+    assert not (repo / "data" / "entity-candidates.json").exists()
 
 
 async def test_full_check_writes_daily_brief_for_detection_date(repo):
@@ -363,7 +401,7 @@ def _add_x_source(repo, *, shadow: bool = True) -> None:
             "lookback_hours": 36,
             "shadow": shadow,
             "display_name": "X — Access & Discovery",
-            "default_tracks": ["crawler-controls"],
+            "default_tracks": ["access-controls"],
             "tier": "commentary",
             "role": "reporting",
         }

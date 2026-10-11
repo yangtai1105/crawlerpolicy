@@ -1,0 +1,126 @@
+# Protocol registry — the columns of the map.
+# `spec_status` describes the protocol itself, never any player's position on it.
+# The pipeline never writes this file; entries arrive by human edit after review.
+protocols:
+  - slug: web-bot-auth
+    display_name: Web Bot Auth
+    kind: identity
+    steward: IETF webbotauth WG
+    spec_url: https://datatracker.ietf.org/wg/webbotauth/about/
+    spec_status: standards-track
+    front: agents-identity
+    first_observed: 2026-10-10
+    aliases: ["WBA", "web-bot-auth", "HTTP Message Signatures for bots"]
+
+  - slug: a2a
+    display_name: A2A
+    kind: transport
+    steward: Linux Foundation (Agentic AI Foundation)
+    spec_url: https://a2a-protocol.org
+    spec_status: stable
+    front: agents-identity
+    first_observed: 2026-10-10
+    aliases: ["Agent2Agent", "agent-to-agent"]
+    related: ["ap2"]
+
+  - slug: mcp
+    display_name: MCP
+    kind: transport
+    steward: Anthropic (open specification)
+    spec_url: https://modelcontextprotocol.io
+    spec_status: stable
+    front: agents-identity
+    first_observed: 2026-10-10
+    aliases: ["Model Context Protocol"]
+
+  - slug: ap2
+    display_name: AP2
+    kind: payments
+    steward: Google and partners
+    spec_url: https://ap2-protocol.org
+    spec_status: draft
+    front: agents-identity
+    first_observed: 2026-10-10
+    aliases: ["Agent Payments Protocol"]
+    related: ["a2a", "acp"]
+
+  - slug: acp
+    display_name: ACP
+    kind: payments
+    steward: OpenAI and Stripe
+    spec_url: https://agenticcommerce.dev
+    spec_status: draft
+    front: agents-identity
+    first_observed: 2026-10-10
+    aliases: ["Agentic Commerce Protocol"]
+    related: ["ap2"]
+
+  - slug: x402
+    display_name: x402
+    kind: payments
+    steward: open
+    spec_url: https://x402.org
+    spec_status: draft
+    front: agents-identity
+    first_observed: 2026-10-10
+
+  - slug: aipref-vocab
+    display_name: AIPREF Vocabulary
+    kind: access
+    steward: IETF aipref WG
+    spec_url: https://datatracker.ietf.org/doc/draft-ietf-aipref-vocab/
+    spec_status: wg-draft
+    front: access-discovery
+    first_observed: 2026-10-10
+    aliases: ["AIPREF", "aipref"]
+    related: ["aipref-attach"]
+
+  - slug: aipref-attach
+    display_name: AIPREF Attachment
+    kind: access
+    steward: IETF aipref WG
+    spec_url: https://datatracker.ietf.org/doc/html/draft-ietf-aipref-attach-04
+    spec_status: wg-draft
+    front: access-discovery
+    first_observed: 2026-10-10
+    related: ["aipref-vocab", "robots-txt"]
+
+  - slug: rsl
+    display_name: RSL
+    kind: licensing
+    steward: RSL Collective
+    spec_url: https://rslstandard.org
+    spec_status: stable
+    front: rights-markets
+    first_observed: 2026-10-10
+    aliases: ["Really Simple Licensing"]
+
+  - slug: tdmrep
+    display_name: TDMRep
+    kind: licensing
+    steward: W3C
+    spec_url: https://www.w3.org/community/tdmrep/
+    spec_status: stable
+    front: rights-markets
+    first_observed: 2026-10-10
+    aliases: ["TDM Reservation Protocol"]
+
+  - slug: c2pa
+    display_name: C2PA
+    kind: provenance
+    steward: C2PA
+    spec_url: https://c2pa.org/specifications/
+    spec_status: stable
+    front: rights-markets
+    first_observed: 2026-10-10
+    aliases: ["Content Credentials"]
+
+  - slug: robots-txt
+    display_name: robots.txt
+    kind: access
+    steward: IETF
+    spec_url: https://www.rfc-editor.org/rfc/rfc9309.html
+    spec_status: rfc
+    front: access-discovery
+    first_observed: 2026-10-10
+    aliases: ["RFC 9309", "Robots Exclusion Protocol"]

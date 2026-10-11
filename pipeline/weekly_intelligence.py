@@ -11,11 +11,17 @@ from pathlib import Path
 from typing import Literal
 
 import yaml
-from pydantic import BaseModel, Field
+from pydantic import BaseModel, Field, field_validator
 
 from pipeline.config import Config
 from pipeline.model_provider import GeminiStructuredModel, StructuredModel
-from pipeline.taxonomy import SourceTier, Track
+from pipeline.taxonomy import (
+    TRACK_LABELS,
+    SourceTier,
+    Track,
+    resolve_track_list,
+    resolve_track_scalar,
+)
 from pipeline.trends import Trend, TrendDelta, TrendStatus, load_trends, save_trends
 
 
@@ -38,6 +44,18 @@ class MaterialEvent(BaseModel):
     development: str = ""
     implication: str = ""
 
+    # content/events/*.md is never rewritten; pre-2026-10 records still carry
+    # legacy track slugs. Resolve them at read time rather than at rest.
+    @field_validator("primary_track", mode="before")
+    @classmethod
+    def _resolve_primary_track_alias(cls, value: object) -> object:
+        return resolve_track_scalar(value)
+
+    @field_validator("tracks", mode="before")
+    @classmethod
+    def _resolve_tracks_aliases(cls, value: object) -> object:
+        return resolve_track_list(value)
+
 
 class ExecutiveShift(BaseModel):
     headline: str
@@ -51,6 +69,14 @@ class TrackDevelopment(BaseModel):
     event_ids: list[str] = Field(default_factory=list)
     summary: str
 
+    # data/intelligence/*.json is never rewritten; pre-2026-10 frozen issues
+    # still carry legacy track slugs. Resolve them at read time rather than
+    # at rest.
+    @field_validator("track", mode="before")
+    @classmethod
+    def _resolve_track_alias(cls, value: object) -> object:
+        return resolve_track_scalar(value)
+
 
 class ActorMove(BaseModel):
     actor: str
@@ -61,6 +87,14 @@ class ActorMove(BaseModel):
 class WatchItem(BaseModel):
     question: str
     tracks: list[Track] = Field(default_factory=list)
+
+    # data/intelligence/*.json is never rewritten; pre-2026-10 frozen issues
+    # still carry legacy track slugs. Resolve them at read time rather than
+    # at rest.
+    @field_validator("tracks", mode="before")
+    @classmethod
+    def _resolve_tracks_aliases(cls, value: object) -> object:
+        return resolve_track_list(value)
 
 
 class SourceLedgerEntry(BaseModel):
@@ -177,7 +211,9 @@ def build_weekly_issue(
     ]
     watchlist = [
         WatchItem(
-            question=f"What primary evidence would make {track.value} materially change?",
+            question=(
+                f"What primary evidence would make {TRACK_LABELS[track]} materially change?"
+            ),
             tracks=[track],
         )
         for track in quiet_tracks

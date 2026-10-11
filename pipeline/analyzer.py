@@ -6,9 +6,10 @@ from typing import Literal
 
 from pydantic import AliasChoices, BaseModel, Field, model_validator
 
+from pipeline.entities import EntityRegistry
 from pipeline.model_provider import StructuredModel
 from pipeline.sources import Source
-from pipeline.taxonomy import Track, validate_tracks
+from pipeline.taxonomy import Subject, Track, validate_tracks
 
 Confidence = Literal["low", "medium", "high"]
 ChangeKind = Literal["material", "cosmetic", "noise"]
@@ -27,6 +28,8 @@ class AnalyzerResponse(BaseModel):
     primary_track: str
     tracks: list[str]
     actors: list[str]
+    subject: str = "unknown"
+    protocols: list[str] = Field(default_factory=list)
     trend_signals: list[str]
     confidence: str
 
@@ -42,6 +45,12 @@ class AnalysisResult(BaseModel):
     primary_track: Track
     tracks: list[Track]
     actors: list[str]
+    subject: Subject = Subject.UNKNOWN
+    players: list[str] = Field(default_factory=list)
+    protocols: list[str] = Field(default_factory=list)
+    # Carried to the caller for the review queue; never written to frontmatter.
+    unknown_players: list[str] = Field(default_factory=list)
+    unknown_protocols: list[str] = Field(default_factory=list)
     trend_signals: list[str]
     confidence: Confidence
 
@@ -76,6 +85,11 @@ Write four distinct reader layers:
 
 Use inline Markdown links only when the supplied content contains the exact URL. Keep claims
 proportional to the evidence. Reserve importance above 0.9 for ecosystem-shaping developments.
+
+Name only entities you are confident appear in the evidence. Set `subject` to `crawler` when
+the development concerns automated crawling, `agent` when it concerns delegated agents acting
+for a user, `both` when it genuinely concerns both, and `unknown` when the evidence does not
+say. List protocol names in `protocols`.
 """
 
 _CRAWLER_ADDON = """
@@ -90,6 +104,66 @@ rather than describing a page diff. Use recent-item context only when it directl
 pattern.
 """
 
+_REGISTRY: EntityRegistry | None = None
+
+
+def _registry() -> EntityRegistry:
+    global _REGISTRY
+    if _REGISTRY is None:
+        from pipeline.entities import load_registry
+
+        _REGISTRY = load_registry()
+    return _REGISTRY
+
+
+def resolve_entities(
+    registry: EntityRegistry,
+    *,
+    actors: list[str],
+    protocols: list[str],
+) -> tuple[list[str], list[str], list[str], list[str]]:
+    """Split observed names into registry slugs and out-of-vocabulary names.
+
+    Slugs are deduplicated, so two aliases of one entity collapse to one slug.
+    """
+    player_slugs: list[str] = []
+    protocol_slugs: list[str] = []
+    unknown_players: list[str] = []
+    unknown_protocols: list[str] = []
+
+    for name in actors:
+        slug = registry.resolve_player(name)
+        if slug is None:
+            unknown_players.append(name)
+        elif slug not in player_slugs:
+            player_slugs.append(slug)
+
+    for name in protocols:
+        slug = registry.resolve_protocol(name)
+        if slug is None:
+            unknown_protocols.append(name)
+        elif slug not in protocol_slugs:
+            protocol_slugs.append(slug)
+
+    return player_slugs, protocol_slugs, unknown_players, unknown_protocols
+
+
+def _validated_subject(raw: AnalyzerResponse, source: Source) -> Subject:
+    """Fall back to the source's declared subject, mirroring track fallback.
+
+    `AnalyzerResponse.subject` defaults to the string "unknown", which is also a
+    valid `Subject` member, so an unresolved or absent model answer is indistinguishable
+    from the parsed value `Subject.UNKNOWN`. Treat both as "the model didn't say" and
+    defer to the source's own default rather than publishing an uninformative subject.
+    """
+    try:
+        value = Subject(raw.subject)
+    except ValueError:
+        return source.default_subject
+    if value is Subject.UNKNOWN:
+        return source.default_subject
+    return value
+
 
 async def analyze_change(
     *,
@@ -102,7 +176,7 @@ async def analyze_change(
     item_url: str | None = None,
     published_at: datetime | None = None,
 ) -> AnalysisResult:
-    crawler_control_source = Track.CRAWLER_CONTROLS in source.default_tracks
+    crawler_control_source = Track.ACCESS_CONTROLS in source.default_tracks
     system = _SYSTEM_BASE + (_CRAWLER_ADDON if crawler_control_source else _NEWS_ADDON)
     primary_url = item_url or source.url or ""
     prompt_parts = [
@@ -132,6 +206,12 @@ async def analyze_change(
         prompt="\n".join(prompt_parts),
     )
     primary_track, tracks, confidence = _validated_classification(raw, source)
+    actors = _clean_string_list(raw.actors)
+    players, protocols, unknown_players, unknown_protocols = resolve_entities(
+        _registry(),
+        actors=actors,
+        protocols=_clean_string_list(raw.protocols),
+    )
     return AnalysisResult(
         change_kind=raw.change_kind,
         importance=raw.importance,
@@ -142,7 +222,12 @@ async def analyze_change(
         why_it_matters=raw.why_it_matters.strip(),
         primary_track=primary_track,
         tracks=tracks,
-        actors=_clean_string_list(raw.actors),
+        actors=actors,
+        subject=_validated_subject(raw, source),
+        players=players,
+        protocols=protocols,
+        unknown_players=unknown_players,
+        unknown_protocols=unknown_protocols,
         trend_signals=_clean_string_list(raw.trend_signals),
         confidence=confidence,
     )
