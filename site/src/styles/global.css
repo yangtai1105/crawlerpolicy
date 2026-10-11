@@ -7,7 +7,7 @@
   --ink: #1a1a18;
   --ink-body: #3a3a34;
   --ink-muted: #5a5a54;
-  --ink-faint: #8a7f6d;
+  --ink-faint: #7b7161;
   --rule: #e3dfd3;
   --rule-strong: #c9c3b2;
   --accent: #9c3a1e;
@@ -22,11 +22,11 @@
   --border-strong: var(--rule-strong);
   --focus: var(--accent);
 
-  /* Status — differ in lightness as well as hue (spec §8.2) */
+  /* Status — differ in lightness as well as hue (spec §8.2) (min adjacent gap: 11.8 L*) */
   --status-shipped: #2f6b4e;
-  --status-preview: #9dbfa9;
-  --status-stated: #d8b47e;
-  --status-declined: #c9a79c;
+  --status-preview: #7aa88b;
+  --status-stated: #dbb987;
+  --status-declined: #a87260;
   --status-none: #e7e3d7;
   --status-healthy: #2f6b4e;
   --status-degraded: #a9762c;
