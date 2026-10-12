@@ -47,6 +47,6 @@ const sorted = sortTrendsByDelta(trends);
   tr.changed { box-shadow: inset 3px 0 var(--trace-violet); }
   .trend-status { display: inline-flex; padding: 3px 9px; border: 1px solid var(--rule); border-radius: 9px; background: var(--status-none); color: var(--ink-muted); font: 500 0.72rem/1.3 var(--font-body); letter-spacing: 0.02em; text-transform: uppercase; }
   .status-accelerating, .status-emerging { background: var(--status-stated); color: var(--ink); border-color: var(--status-stated); font-weight: 700; }
-  .status-reversing { background: var(--status-declined); color: var(--ink); border-color: var(--status-declined); font-weight: 700; }
+  .status-reversing { background: color-mix(in srgb, var(--status-declined) 30%, var(--paper-high)); color: var(--ink); border-color: var(--status-declined); font-weight: 700; }
   .empty { margin: 0; padding: var(--space-5); color: var(--ink-muted); }
 </style>
