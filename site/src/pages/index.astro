@@ -30,11 +30,16 @@ const lead = dailyItems[0];
 // Quiet-day fallback: when today's edition is empty, lead with the most
 // recent published record instead of a notice. The page otherwise opens on
 // "nothing happened" while 40 live records sit below it.
+// Selected by published_at (loadFeedItems()'s sort order, see
+// site/src/lib/feed.ts:32-34), but displayed below using event_date — those
+// are deliberately different fields (when the source published it vs. when
+// the development actually occurred) and are not interchangeable.
 const fallbackLead = lead
   ? undefined
   : (feedItems.find((item) => !item.data.backfilled) ?? feedItems[0]);
 const displayLead = lead ?? fallbackLead;
 const isQuietDay = !lead && Boolean(displayLead);
+if (fallbackLead) dailySlugs.add(fallbackLead.data.slug);
 const dailyRest = dailyItems.slice(1);
 const latest = feedItems.filter((item) => !dailySlugs.has(item.data.slug)).slice(0, 40);
 const activeFronts = new Set([
