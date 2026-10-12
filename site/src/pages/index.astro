@@ -5,6 +5,7 @@ import FrontCard from "../components/FrontCard.astro";
 import FeedCard from "../components/FeedCard.astro";
 import InsightThreadCard from "../components/InsightThreadCard.astro";
 import TrackTag from "../components/TrackTag.astro";
+import TimeAgo from "../components/TimeAgo.astro";
 import { loadHealth } from "../lib/health";
 import { loadLatestIntelligence } from "../lib/intelligence";
 import { FRONTS, frontForTrack, type Front } from "../lib/taxonomy";
@@ -26,6 +27,14 @@ const dailyItems = brief
   : feedItems.filter((item) => !item.data.backfilled).slice(0, 5);
 const dailySlugs = new Set(dailyItems.map((item) => item.data.slug));
 const lead = dailyItems[0];
+// Quiet-day fallback: when today's edition is empty, lead with the most
+// recent published record instead of a notice. The page otherwise opens on
+// "nothing happened" while 40 live records sit below it.
+const fallbackLead = lead
+  ? undefined
+  : (feedItems.find((item) => !item.data.backfilled) ?? feedItems[0]);
+const displayLead = lead ?? fallbackLead;
+const isQuietDay = !lead && Boolean(displayLead);
 const dailyRest = dailyItems.slice(1);
 const latest = feedItems.filter((item) => !dailySlugs.has(item.data.slug)).slice(0, 40);
 const activeFronts = new Set([
@@ -41,7 +50,7 @@ const publicationDate = editionDate.toLocaleDateString("en-US", {
   year: "numeric",
   timeZone: "UTC",
 });
-const statusLabel = lead ? lead.data.status[0].toUpperCase() + lead.data.status.slice(1) : "Quiet edition";
+const statusLabel = displayLead ? displayLead.data.status[0].toUpperCase() + displayLead.data.status.slice(1) : "Quiet edition";
 
 const frontCopy: Record<Front, string> = {
   "access-discovery": "Who can discover, crawl, index, and answer from the open web — and under which controls.",
@@ -63,22 +72,27 @@ const frontCopy: Record<Front, string> = {
       <p class="edition-deck">The consequential changes in AI access, agent identity, content rights, governance, and the machine-traffic economy — selected for meaning, not volume.</p>
     </header>
 
-    {lead ? (
+    {displayLead ? (
       <section class="daily-brief" aria-label="Today's brief">
-        <article class="lead-signal" data-status={lead.data.status}>
+        <article class="lead-signal" data-status={displayLead.data.status}>
           <div class="lead-meta">
             <span class="lead-status">{statusLabel}</span>
-            <span>{findSource(lead.data.source)?.display_name ?? lead.data.source}</span>
+            <span>{findSource(displayLead.data.source)?.display_name ?? displayLead.data.source}</span>
             <span>Lead development</span>
           </div>
-          <h2><a href={`/events/${lead.data.slug}`}>{lead.data.title}</a></h2>
+          {isQuietDay && (
+            <p class="quiet-note">
+              No new material development today · leading with the most recent, from <TimeAgo date={displayLead.data.event_date} />
+            </p>
+          )}
+          <h2><a href={`/events/${displayLead.data.slug}`}>{displayLead.data.title}</a></h2>
           <div class="lead-reading">
-            <div><p class="utility-label">Summary</p><p>{feedSection(lead.body, "Summary")}</p></div>
-            <div class="lead-why"><p class="utility-label">Why it matters</p><p>{feedSection(lead.body, "Why it matters")}</p></div>
+            <div><p class="utility-label">Summary</p><p>{feedSection(displayLead.body, "Summary")}</p></div>
+            <div class="lead-why"><p class="utility-label">Why it matters</p><p>{feedSection(displayLead.body, "Why it matters")}</p></div>
           </div>
           <footer>
-            <div>{lead.data.tracks.map((track) => <TrackTag track={track} linked />)}</div>
-            <a href={`/events/${lead.data.slug}`}>Read the evidence and analysis →</a>
+            <div>{displayLead.data.tracks.map((track) => <TrackTag track={track} linked />)}</div>
+            <a href={`/events/${displayLead.data.slug}`}>Read the evidence and analysis →</a>
           </footer>
         </article>
 
@@ -184,6 +198,7 @@ const frontCopy: Record<Front, string> = {
   .lead-status { color: var(--status-shipped); font-weight: 600; }
   .lead-signal[data-status="reported"] .lead-status { color: var(--ink-muted); }
   .lead-signal[data-status="signal"] .lead-status { color: var(--status-degraded); }
+  .quiet-note { margin: 0 0 var(--space-3); color: var(--ink-faint); font: 400 0.78rem var(--font-body); letter-spacing: 0.02em; }
   .lead-signal h2 { max-width: 30ch; margin: var(--space-4) 0 var(--space-5); font-size: clamp(1.9rem, 3.2vw, 3.1rem); }
   .lead-reading { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(28px, 6vw, 80px); max-width: 1000px; }
   .lead-reading > div > p:last-child { max-width: 62ch; color: var(--ink-body); font-size: 1.05rem; }
