@@ -7,7 +7,7 @@ import { loadSources } from "../../lib/sources";
 import { listSnapshots } from "../../lib/snapshots";
 import { loadCurrentEvents } from "../../lib/events";
 
-export function getStaticPaths() { return loadSources().map((source) => ({ params: { slug: source.slug }, props: { source } })); }
+export function getStaticPaths() { return loadSources().filter((source) => source.enabled !== false).map((source) => ({ params: { slug: source.slug }, props: { source } })); }
 const { source } = Astro.props;
 const health = loadHealth();
 const stage = health.per_source[source.slug];

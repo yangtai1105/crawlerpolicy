@@ -16,8 +16,7 @@
   /* Surfaces */
   --bg: var(--paper-warm);
   --bg-elev: var(--paper-high);
-  --bg-hover: var(--paper-tint);
-  --ink-dim: var(--ink-muted);
+  --ink-dim: var(--ink-faint);
   --border: var(--rule);
   --border-strong: var(--rule-strong);
   --focus: var(--accent);
@@ -35,8 +34,14 @@
   --signal-hot: var(--accent);
   --signal-cool: var(--ink-faint);
 
-  /* Field Ledger names kept as aliases — referenced by the frozen
-     reading/* archive pages and subscribe.astro. Do not delete. */
+  /* Field Ledger names kept as aliases — these are not legacy leftovers,
+     they are live tokens that current components and pages still
+     reference directly (e.g. --forest-block and --clay-marker in
+     FeedCard.astro and events/[slug].astro, --trace-violet and
+     --quiet-rule in TrendTable.astro and about.astro, --pillar-ecosystem
+     across index.astro and several components). Do not delete one of
+     these without first confirming with
+     `grep -rn "var(--NAME)" site/src` that nothing still resolves it. */
   --field-paper: var(--paper-warm);
   --ledger-ink: var(--ink);
   --forest-block: #2f4a3c;
@@ -46,19 +51,9 @@
   --protocol-blue: var(--status-shipped);
   --trace-violet: var(--ink-faint);
   --alert-red: var(--accent);
-  --pillar-crawler: var(--status-shipped);
   --pillar-ecosystem: var(--ink-faint);
   --pillar-agent: var(--status-stated);
-  --paper: var(--ink);
   --muted: var(--ink-muted);
-  --dim: var(--ink-faint);
-  --cyan: var(--status-shipped);
-  --violet: var(--forest-block);
-  --pink: var(--accent);
-  --amber: var(--status-stated);
-  --night: var(--forest-block);
-  --surface: var(--paper-high);
-  --surface-high: var(--paper-tint);
 
   /* Type */
   --font-display: "Source Serif 4 Variable", "Iowan Old Style", Palatino, Georgia, serif;
@@ -78,7 +73,6 @@
   --content-w: 1240px;
   --sidebar-w: 300px;
   --radius-sm: 2px;
-  --radius-md: 3px;
   color-scheme: light;
 }
 
@@ -126,9 +120,9 @@ hr { border: 0; border-top: 1px solid var(--quiet-rule); margin: var(--space-6) 
 .container { width: min(calc(100% - 48px), var(--content-w)); margin-inline: auto; }
 .observation-grid { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: var(--space-5); }
 .label, .utility-label {
-  color: var(--ink-muted);
-  font: 600 0.66rem/1.35 var(--font-mono);
-  letter-spacing: 0.1em;
+  font: 400 0.72rem/1.35 var(--font-body);
+  letter-spacing: 0.08em;
+  color: var(--ink-faint);
   text-transform: uppercase;
 }
 .site-nav {
