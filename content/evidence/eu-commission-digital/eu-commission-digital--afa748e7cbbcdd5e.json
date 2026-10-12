@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--afa748e7cbbcdd5e",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2132",
+  "supporting_urls": [],
+  "published_at": "2026-10-12T07:44:05Z",
+  "detected_at": "2026-10-12T17:25:55.048752Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--afa748e7cbbcdd5e.json",
+  "content_hash": "sha256:70e1970ee80eed9cff6027fc8f01d4b8315a8bdeae3ead983fee7cfc0c05080c",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2132",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission welcomes adoption of €115 million ‘AGILE' programme for rapid defence innovation",
+  "content": "European Commission Press release Brussels, 12 Oct 2026 The European Commission welcomes the adoption of the Regulation establishing Programme for agile and rapid defence innovation (AGILE) which will bring disruptive defence technology from the lab to the field at record speed. The new €115 million funding tool will provide dedicated support to small and medium sized enterprises (SMEs), including start-ups and scale ups to develop innovative defence solutions and support their uptake.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
