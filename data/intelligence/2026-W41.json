@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "week": "2026-W41",
+  "generated_at": "2026-10-12T21:33:43.481552Z",
+  "window_start": "2026-10-05",
+  "window_end": "2026-10-11",
+  "health_status": "degraded",
+  "coverage": {
+    "configured": 39,
+    "completed": 33,
+    "fetched": 33,
+    "analyzed": 33,
+    "published": 33,
+    "failed": 6,
+    "required_failed": 0
+  },
+  "thesis": "No verified material developments in the completed window.",
+  "executive_shifts": [],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "access-controls",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "platform-ecosystem",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "identity-authorization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "0 material developments across 0 tracks.",
+  "trend_deltas": [],
+  "actor_moves": [],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make Policy & Regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Litigation & Legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Search & AI Discovery materially change?",
+      "tracks": [
+        "search-discovery"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Access Controls materially change?",
+      "tracks": [
+        "access-controls"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Platform & Ecosystem materially change?",
+      "tracks": [
+        "platform-ecosystem"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Identity & Authorization materially change?",
+      "tracks": [
+        "identity-authorization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Licensing & Monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Standards & Protocols materially change?",
+      "tracks": [
+        "standards-protocols"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Asset Rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Measurement & Economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [],
+  "model_generated": false
+}
