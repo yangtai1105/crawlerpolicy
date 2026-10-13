@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "candidates": {
+    "player:claudebot": {
+      "kind": "player",
+      "observed_name": "ClaudeBot",
+      "first_seen_at": "2026-10-13T15:36:53.900599Z",
+      "last_seen_at": "2026-10-13T15:36:53.900599Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "datadome-blog--42fa450a86dba89a"
+      ],
+      "feed_slugs": [
+        "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ]
+    },
+    "player:gptbot": {
+      "kind": "player",
+      "observed_name": "GPTBot",
+      "first_seen_at": "2026-10-13T15:36:53.900599Z",
+      "last_seen_at": "2026-10-13T15:36:53.900599Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "datadome-blog--42fa450a86dba89a"
+      ],
+      "feed_slugs": [
+        "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ]
+    },
+    "protocol:http": {
+      "kind": "protocol",
+      "observed_name": "HTTP",
+      "first_seen_at": "2026-10-13T15:36:53.900599Z",
+      "last_seen_at": "2026-10-13T15:36:53.900599Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "datadome-blog--42fa450a86dba89a"
+      ],
+      "feed_slugs": [
+        "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ]
+    }
+  }
+}

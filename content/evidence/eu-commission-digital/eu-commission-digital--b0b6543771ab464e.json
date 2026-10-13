@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b0b6543771ab464e",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2151",
+  "supporting_urls": [],
+  "published_at": "2026-10-13T10:52:36Z",
+  "detected_at": "2026-10-13T15:36:53.900599Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b0b6543771ab464e.json",
+  "content_hash": "sha256:da43fb97b5c44457d1d3c52f662143bdb301043207070c724a54f9faf5ef8685",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2151",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by Commissioner Hoekstra at the Annual meeting of the Heads of the Contact Committee of the Supreme Audit Institutions of the European Union",
+  "content": "European Commission Speech Paris, 13 Oct 2026 Ladies and Gentlemen,\nThank you for welcoming me during a complicated time.\nLet me also thank you for your efforts, Amélie, and the efforts of many in the room ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--65263ca5bd535ece",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2137",
+  "supporting_urls": [],
+  "published_at": "2026-10-12T22:00:00Z",
+  "detected_at": "2026-10-13T15:36:53.900599Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--65263ca5bd535ece.json",
+  "content_hash": "sha256:062168f24dd2ce37c46a668db5f4718c04b634de32a73490693250bd9567e961",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2137",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission approves Kimberly-Clark's acquisition of Kenvue, subject to conditions",
+  "content": "European Commission Press release Brussels, 13 Oct 2026 The European Commission has approved, under the EU Merger Regulation, the proposed acquisition by Kimberly-Clark Corporation ('Kimberly-Clark') of Kenvue Inc ('Kenvue'). The approval is conditional upon full compliance with the commitments offered by Kimberly-Clark.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

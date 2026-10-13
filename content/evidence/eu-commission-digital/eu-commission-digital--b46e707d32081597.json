@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b46e707d32081597",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2157",
+  "supporting_urls": [],
+  "published_at": "2026-10-13T15:25:37Z",
+  "detected_at": "2026-10-13T15:36:53.900599Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b46e707d32081597.json",
+  "content_hash": "sha256:473af4a5b3f6093b088a44d6f12883abcc428f5a748a6320ba4ebfda9a57cd51",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2157",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Opening remarks by Commissioner Serafin at the General Affairs Council in Luxembourg",
+  "content": "European Commission Speech Luxembourg, 13 Oct 2026 Dear Ministers, dear Presidency,\nI want to start by thanking Thomas and his team for their hard work in preparing a revised nego-box.\nI have heard a lot of crit...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -56,6 +56,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-identity-spoofing",
+      "title": "Agent Identity Spoofing",
+      "thesis": "Relying on declarative user-agent matching creates a dual vulnerability: honest bots face crude blocklists while malicious scrapers and spoofed agents trivially bypass controls simply by asserting trusted identity tokens.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-13T15:36:53.900599Z",
+      "last_updated_at": "2026-10-13T15:36:53.900599Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-native-micropayments",
       "title": "Agent Native Micropayments",
       "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
@@ -651,6 +664,19 @@
       ]
     },
     {
+      "key": "decline-of-user-agent-trust",
+      "title": "Decline Of User Agent Trust",
+      "thesis": "Relying on declarative user-agent matching creates a dual vulnerability: honest bots face crude blocklists while malicious scrapers and spoofed agents trivially bypass controls simply by asserting trusted identity tokens.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-13T15:36:53.900599Z",
+      "last_updated_at": "2026-10-13T15:36:53.900599Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "declining-perimeter-bot-protection-efficacy",
       "title": "Declining Perimeter Bot Protection Efficacy",
       "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
@@ -1086,6 +1112,19 @@
       "last_updated_at": "2026-10-08T15:14:55.717190Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "intent-based-filtering",
+      "title": "Intent Based Filtering",
+      "thesis": "Relying on declarative user-agent matching creates a dual vulnerability: honest bots face crude blocklists while malicious scrapers and spoofed agents trivially bypass controls simply by asserting trusted identity tokens.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-13T15:36:53.900599Z",
+      "last_updated_at": "2026-10-13T15:36:53.900599Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
       ],
       "verified_development_slugs": []
     },
