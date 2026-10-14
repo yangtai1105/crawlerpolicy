@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--2e56be047b38549a",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2160",
+  "supporting_urls": [],
+  "published_at": "2026-10-14T08:42:46Z",
+  "detected_at": "2026-10-14T13:20:02.135839Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--2e56be047b38549a.json",
+  "content_hash": "sha256:9570496a64ddedf4f59de80978ae98be29269c99f99d7d47d2b8f5e30f87a057",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2160",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Eurobarometer survey highlights growing use of AI in European companies",
+  "content": "European Commission Press release Brussels, 14 Oct 2026 European businesses rely increasingly on artificial intelligence (AI). That is what the results of the latest Eurobarometer survey showed, published today.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

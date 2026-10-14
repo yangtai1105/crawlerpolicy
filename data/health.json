@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-13T15:36:53.900599Z",
+  "last_attempted_at": "2026-10-14T13:20:02.135839Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -50,9 +50,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "claudebot--5a1b1c48a78a4e12"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -152,7 +150,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--cceb5cbe98b38e50",
+        "cloudflare-blog--57c135bf04640fcd",
+        "cloudflare-blog--009d422303410cfd"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -162,13 +164,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--42fa450a86dba89a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -177,10 +175,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--61822001437fe603",
-        "uk-cma--659753750b128ac8",
-        "uk-cma--6e61f97cbc3195ff",
-        "uk-cma--854f263bff7f8d01"
+        "uk-cma--5896ea8a63a5ed0f",
+        "uk-cma--864ce06671cd7bb8",
+        "uk-cma--0199a0038a14ede2",
+        "uk-cma--c3519c670599fade",
+        "uk-cma--8d53d19e0616f459",
+        "uk-cma--4017236815294770"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -212,15 +212,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--b46e707d32081597",
-        "eu-commission-digital--1dd8ba7d9e77ddce",
-        "eu-commission-digital--87fad5c09aa25722",
-        "eu-commission-digital--b0b6543771ab464e",
-        "eu-commission-digital--76cdb5a78d509bfc",
-        "eu-commission-digital--2e9de04c249b0ec0",
-        "eu-commission-digital--af3247a432fabdd4",
-        "eu-commission-digital--65263ca5bd535ece",
-        "eu-commission-digital--277d48cdc6dc5045"
+        "eu-commission-digital--e8e46a8d90e74ed3",
+        "eu-commission-digital--f8c9838ea01cbe29",
+        "eu-commission-digital--c21a673b586df8ef",
+        "eu-commission-digital--2e56be047b38549a",
+        "eu-commission-digital--123776bdaac729e2",
+        "eu-commission-digital--a3fc10b419c5f1ed",
+        "eu-commission-digital--3cef6dab79bcf5c6",
+        "eu-commission-digital--959596e054b6075c",
+        "eu-commission-digital--74f69db3a1f24232",
+        "eu-commission-digital--b1f8e7c926cd06ab"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -241,7 +242,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--42d1258d1fdd8dd4"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -251,7 +254,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "reddit-corporate--2f451129905c196d"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -261,11 +266,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--c925510abc2886cf",
-        "web-bot-auth-repo--77eb5f4b73e934b3",
-        "web-bot-auth-repo--3cc015a046d119b2"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -295,7 +296,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--2a3a43d445beabf0"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -395,7 +398,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--0343b07c43545f08"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -451,9 +456,7 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [
-    "content/feed/2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots.md"
-  ],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -461,10 +464,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-10-13",
-    "item_count": 1,
-    "path": "data/daily/2026-10-13.json"
+    "status": "quiet",
+    "edition_date": "2026-10-14",
+    "item_count": 0,
+    "path": "data/daily/2026-10-14.json"
   },
   "insight_threads": {
     "thread_count": 127,
