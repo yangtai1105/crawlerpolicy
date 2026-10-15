@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-15",
+  "generated_at": "2026-10-15T13:05:42.271060Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling",
+      "status": "reported",
+      "importance": 0.82,
+      "published_at": "2026-10-15T13:00:00Z"
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-10-14T20:24:19Z"
+    },
+    {
+      "slug": "datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-10-14T13:54:54Z"
+    }
+  ]
+}

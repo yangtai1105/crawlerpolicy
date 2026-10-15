@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-14T13:20:02.135839Z",
+  "last_attempted_at": "2026-10-15T13:05:42.271060Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -151,12 +151,14 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--cceb5cbe98b38e50",
-        "cloudflare-blog--57c135bf04640fcd",
-        "cloudflare-blog--009d422303410cfd"
+        "cloudflare-blog--2ca497303a2e5740",
+        "cloudflare-blog--5a2555e77804fad4"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-15-cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling.md",
+        "content/feed/2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut.md"
+      ]
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -164,9 +166,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--e21de398c002c2ff"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-14-datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo.md"
+      ]
     },
     "uk-cma": {
       "fetch": "ok",
@@ -175,12 +181,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--5896ea8a63a5ed0f",
-        "uk-cma--864ce06671cd7bb8",
-        "uk-cma--0199a0038a14ede2",
-        "uk-cma--c3519c670599fade",
-        "uk-cma--8d53d19e0616f459",
-        "uk-cma--4017236815294770"
+        "uk-cma--c8c63cb4b365afbb",
+        "uk-cma--ccbd43dd3b9c9adb",
+        "uk-cma--1dc2529f2d958d09",
+        "uk-cma--a217dcf114433b73",
+        "uk-cma--8f6fad1d58e94449",
+        "uk-cma--200cca836412dccd"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -212,16 +218,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--e8e46a8d90e74ed3",
-        "eu-commission-digital--f8c9838ea01cbe29",
-        "eu-commission-digital--c21a673b586df8ef",
-        "eu-commission-digital--2e56be047b38549a",
-        "eu-commission-digital--123776bdaac729e2",
-        "eu-commission-digital--a3fc10b419c5f1ed",
-        "eu-commission-digital--3cef6dab79bcf5c6",
-        "eu-commission-digital--959596e054b6075c",
-        "eu-commission-digital--74f69db3a1f24232",
-        "eu-commission-digital--b1f8e7c926cd06ab"
+        "eu-commission-digital--ab4bb3d4e7728d00",
+        "eu-commission-digital--39495336dff2da68",
+        "eu-commission-digital--846168844ec0de9f",
+        "eu-commission-digital--97b23943b6694795",
+        "eu-commission-digital--c15dbc7ffb88fabc",
+        "eu-commission-digital--9633c25ad2122f09",
+        "eu-commission-digital--ee4a44a6aa37b908",
+        "eu-commission-digital--0aa2fa442d8f2aab",
+        "eu-commission-digital--29546ec3abf3489f"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -242,9 +247,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--42d1258d1fdd8dd4"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -254,9 +257,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "reddit-corporate--2f451129905c196d"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -296,9 +297,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--2a3a43d445beabf0"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -398,9 +397,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-radar-ai-insights--0343b07c43545f08"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -456,7 +453,11 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [],
+  "feed_items_written": [
+    "content/feed/2026-10-15-cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling.md",
+    "content/feed/2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut.md",
+    "content/feed/2026-10-14-datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -464,13 +465,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-10-14",
-    "item_count": 0,
-    "path": "data/daily/2026-10-14.json"
+    "status": "published",
+    "edition_date": "2026-10-15",
+    "item_count": 3,
+    "path": "data/daily/2026-10-15.json"
   },
   "insight_threads": {
-    "thread_count": 127,
+    "thread_count": 136,
     "path": "data/insight-threads.json"
   },
   "discovery": {

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--ab4bb3d4e7728d00",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2175",
+  "supporting_urls": [],
+  "published_at": "2026-10-15T12:03:07Z",
+  "detected_at": "2026-10-15T13:05:42.271060Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--ab4bb3d4e7728d00.json",
+  "content_hash": "sha256:78225130dce6d7ca9e6c9a2a9e3056b3e4ee4709a108fc60b51420542987a6b5",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2175",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission launches RAISE pledging initiative to boost AI support for researchers across Europe",
+  "content": "European Commission Press release Brussels, 15 Oct 2026 Today, at the European AI in Science Summit in Dublin, the European Commission launched the RAISE (Resource for AI Science in Europe) pledging initiative for AI in Science Enablers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -300,6 +300,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ai-agent-trust-management-in-queue-infrastructure",
+      "title": "AI Agent Trust Management In Queue Infrastructure",
+      "thesis": "Traditional waiting rooms inspect traffic only at entry points, creating a vulnerability where direct-joining bots and unauthorized scrapers inflate wait times for humans and legitimate consumer shopping agents. Integrating intent classification within the queue shifts queue management from simple rate limiting to continuous identity and behavior validation.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-gateway-observability",
       "title": "AI Gateway Observability",
       "thesis": "AI proxy and gateway infrastructure is adopting traditional web observability standards to give developers granular visibility into which specific SDKs, background workers, and client applications are driving programmatic AI consumption.",
@@ -480,6 +493,32 @@
       "verified_development_slugs": []
     },
     {
+      "key": "bot-workload-portability",
+      "title": "Bot Workload Portability",
+      "thesis": "Aggregate traffic and ASN-level drops conflate distinct classes of automated actors: infrastructure outages quickly disable centralized, verified search engine crawlers, whereas evasive and unverified bot operations maintain operational resilience by rapidly migrating workloads across hosting providers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "cdn-search-indexing",
+      "title": "CDN Search Indexing",
+      "thesis": "Content delivery networks are evolving from defensive gatekeepers that restrict AI scrapers into selective discovery facilitators that feed network-level traffic and change metadata directly to search engines to optimize crawl efficiency.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "client-attribution",
       "title": "Client Attribution",
       "thesis": "AI proxy and gateway infrastructure is adopting traditional web observability standards to give developers granular visibility into which specific SDKs, background workers, and client applications are driving programmatic AI consumption.",
@@ -525,6 +564,19 @@
       ]
     },
     {
+      "key": "crawl-budget-optimization",
+      "title": "Crawl Budget Optimization",
+      "thesis": "Content delivery networks are evolving from defensive gatekeepers that restrict AI scrapers into selective discovery facilitators that feed network-level traffic and change metadata directly to search engines to optimize crawl efficiency.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "crawler-accountability-frameworks",
       "title": "Crawler Accountability Frameworks",
       "thesis": "By introducing an 'Accountable' crawler classification in partnership with major search operators (Apple, Google, Microsoft), Cloudflare is attempting to resolve the long-standing tension between mixed-use search indexers and AI training scrapers through coordinated granular controls rather than binary site blocking.",
@@ -549,6 +601,19 @@
       "last_updated_at": "2026-10-08T15:14:55.717190Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "crawler-infrastructure-resilience",
+      "title": "Crawler Infrastructure Resilience",
+      "thesis": "Aggregate traffic and ASN-level drops conflate distinct classes of automated actors: infrastructure outages quickly disable centralized, verified search engine crawlers, whereas evasive and unverified bot operations maintain operational resilience by rapidly migrating workloads across hosting providers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
       ],
       "verified_development_slugs": []
     },
@@ -797,6 +862,19 @@
       "last_updated_at": "2026-10-06T14:46:17.656443Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-highlights-dynamic-intent-scoring-for-ai-agents-following-industry-reco"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "edge-assisted-crawling",
+      "title": "Edge Assisted Crawling",
+      "thesis": "Content delivery networks are evolving from defensive gatekeepers that restrict AI scrapers into selective discovery facilitators that feed network-level traffic and change metadata directly to search engines to optimize crawl efficiency.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling"
       ],
       "verified_development_slugs": []
     },
@@ -1116,6 +1194,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "intent-based-detection-replacing-blanket-bot-blocks",
+      "title": "Intent Based Detection Replacing Blanket Bot Blocks",
+      "thesis": "Traditional waiting rooms inspect traffic only at entry points, creating a vulnerability where direct-joining bots and unauthorized scrapers inflate wait times for humans and legitimate consumer shopping agents. Integrating intent classification within the queue shifts queue management from simple rate limiting to continuous identity and behavior validation.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "intent-based-filtering",
       "title": "Intent Based Filtering",
       "thesis": "Relying on declarative user-agent matching creates a dual vulnerability: honest bots face crude blocklists while malicious scrapers and spoofed agents trivially bypass controls simply by asserting trusted identity tokens.",
@@ -1138,6 +1229,19 @@
       "last_updated_at": "2026-09-22T13:08:11.171940Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "ja4-fingerprinting",
+      "title": "Ja4 Fingerprinting",
+      "thesis": "Aggregate traffic and ASN-level drops conflate distinct classes of automated actors: infrastructure outages quickly disable centralized, verified search engine crawlers, whereas evasive and unverified bot operations maintain operational resilience by rapidly migrating workloads across hosting providers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
       ],
       "verified_development_slugs": []
     },
@@ -1287,6 +1391,19 @@
       "last_updated_at": "2026-09-29T14:38:47.453910Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "mitigation-of-waiting-room-queue-inflation",
+      "title": "Mitigation Of Waiting Room Queue Inflation",
+      "thesis": "Traditional waiting rooms inspect traffic only at entry points, creating a vulnerability where direct-joining bots and unauthorized scrapers inflate wait times for humans and legitimate consumer shopping agents. Integrating intent classification within the queue shifts queue management from simple rate limiting to continuous identity and behavior validation.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-15T13:05:42.271060Z",
+      "last_updated_at": "2026-10-15T13:05:42.271060Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo"
       ],
       "verified_development_slugs": []
     },
