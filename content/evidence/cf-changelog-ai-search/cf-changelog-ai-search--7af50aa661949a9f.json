@@ -1,0 +1,19 @@
+{
+  "evidence_id": "cf-changelog-ai-search--7af50aa661949a9f",
+  "source": "cf-changelog-ai-search",
+  "source_url": "https://developers.cloudflare.com/changelog/post/2026-10-16-cjk-keyword-search/",
+  "supporting_urls": [],
+  "published_at": "2026-10-16T00:00:00Z",
+  "detected_at": "2026-10-16T13:02:04.849772Z",
+  "content_path": "content/evidence/cf-changelog-ai-search/cf-changelog-ai-search--7af50aa661949a9f.json",
+  "content_hash": "sha256:9b1ef434b85d1bcfb85150a0a0666ed9b4a29445d66ba51c7ff3363efed8bc59",
+  "external_id": "https://developers.cloudflare.com/changelog/post/2026-10-16-cjk-keyword-search/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "AI Search - AI Search keyword search supports Japanese, Chinese, and Korean queries",
+  "content": "<p><a href=\"https://developers.cloudflare.com/ai-search/\">AI Search</a> keyword search with the <code>trigram</code> tokenizer now matches Japanese, Chinese, and Korean queries, including full natural-language questions such as <code>経費精算の締め日はいつですか？</code>. Previously, a query without spaces was treated as a single exact phrase and usually returned no keyword results.</p>\n<p>The <code>porter</code> tokenizer does not work well for these languages. If your content is in Japanese, Chinese, or Korean, set <code>keyword_tokenizer</code> to <code>trigram</code>. Changing the tokenizer triggers a full reindex.</p>\n<p>Refer to <a href=\"https://developers.cloudflare.com/ai-search/configuration/indexing/keyword-search/#keyword-tokenizer\">Keyword search</a> for tokenizer details.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

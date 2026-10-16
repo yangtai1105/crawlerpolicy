@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-15T13:05:42.271060Z",
+  "last_attempted_at": "2026-10-16T13:02:04.849772Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -60,7 +60,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "google-extended--4f0e6851701db349"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -151,13 +153,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--2ca497303a2e5740",
-        "cloudflare-blog--5a2555e77804fad4"
+        "cloudflare-blog--cc3fb6ecbefdd443",
+        "cloudflare-blog--455f957b0311f12b",
+        "cloudflare-blog--9676a90131a4f9e1"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-10-15-cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling.md",
-        "content/feed/2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut.md"
+        "content/feed/2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots.md"
       ]
     },
     "datadome-blog": {
@@ -166,13 +168,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--e21de398c002c2ff"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-14-datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -181,12 +179,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--c8c63cb4b365afbb",
-        "uk-cma--ccbd43dd3b9c9adb",
-        "uk-cma--1dc2529f2d958d09",
-        "uk-cma--a217dcf114433b73",
-        "uk-cma--8f6fad1d58e94449",
-        "uk-cma--200cca836412dccd"
+        "uk-cma--9fe09c04ac4c85a0",
+        "uk-cma--287ced5e22f4c5f1",
+        "uk-cma--a0e6e0147c76a788",
+        "uk-cma--7f57cab0ce137410",
+        "uk-cma--80bf2901925d5a0e",
+        "uk-cma--d97053544f446807",
+        "uk-cma--5e40051733f43af7",
+        "uk-cma--a93f73e9afc5e605",
+        "uk-cma--30a2e93cd33f4d9a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -218,15 +219,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--ab4bb3d4e7728d00",
-        "eu-commission-digital--39495336dff2da68",
-        "eu-commission-digital--846168844ec0de9f",
-        "eu-commission-digital--97b23943b6694795",
-        "eu-commission-digital--c15dbc7ffb88fabc",
-        "eu-commission-digital--9633c25ad2122f09",
-        "eu-commission-digital--ee4a44a6aa37b908",
-        "eu-commission-digital--0aa2fa442d8f2aab",
-        "eu-commission-digital--29546ec3abf3489f"
+        "eu-commission-digital--10f9e00abe6dba6f",
+        "eu-commission-digital--a36933614106f59c",
+        "eu-commission-digital--68fab77cfa10e28d",
+        "eu-commission-digital--568cbd71b15b7983",
+        "eu-commission-digital--f05473422fd8654a",
+        "eu-commission-digital--0a3b2c1878561c54",
+        "eu-commission-digital--a771c225f11262da"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -297,7 +296,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--c190307ea8ec186b"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -317,7 +318,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cf-changelog-ai-search--7af50aa661949a9f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -454,9 +457,7 @@
   },
   "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-10-15-cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling.md",
-    "content/feed/2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut.md",
-    "content/feed/2026-10-14-datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo.md"
+    "content/feed/2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots.md"
   ],
   "provider": {
     "name": "gemini",
@@ -466,12 +467,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-15",
-    "item_count": 3,
-    "path": "data/daily/2026-10-15.json"
+    "edition_date": "2026-10-16",
+    "item_count": 1,
+    "path": "data/daily/2026-10-16.json"
   },
   "insight_threads": {
-    "thread_count": 136,
+    "thread_count": 139,
     "path": "data/insight-threads.json"
   },
   "discovery": {

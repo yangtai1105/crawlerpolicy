@@ -1,16 +1,9 @@
 {
-  "last_checked_at": "2026-10-15T13:05:42.271060+00:00",
-  "last_fetch_succeeded_at": "2026-10-15T13:05:42.271060+00:00",
-  "last_evidence_at": "2026-10-15T13:05:42.271060+00:00",
+  "last_checked_at": "2026-10-16T13:02:04.849772+00:00",
+  "last_fetch_succeeded_at": "2026-10-16T13:02:04.849772+00:00",
+  "last_evidence_at": "2026-10-16T13:02:04.849772+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1134",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1129",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1137",
-    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1151",
-    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1150",
-    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1149",
-    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1148",
     "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1147",
     "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1182",
     "https://ec.europa.eu/commission/presscorner/detail/en/read_26_1201",
@@ -503,7 +496,14 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/jp_26_2169",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2165",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2168",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2167"
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2167",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2191",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2189",
+    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2188",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2186",
+    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2181",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2179",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2177"
   ],
   "consecutive_failures": 0,
   "first_seen": false

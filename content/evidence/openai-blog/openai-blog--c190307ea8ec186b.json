@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--c190307ea8ec186b",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+  "supporting_urls": [],
+  "published_at": "2026-10-15T19:00:00Z",
+  "detected_at": "2026-10-16T13:02:04.849772Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--c190307ea8ec186b.json",
+  "content_hash": "sha256:6d4b5435963ed5834446c905ecffdc9f523c8b8630467cbe5d445531e4d54bcb",
+  "external_id": "https://openai.com/index/introducing-the-rosalind-academic-plan",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Bringing GPT-Rosalind to academic research labs",
+  "content": "Introducing the Rosalind Academic Plan, offering eligible academic labs sponsored access to GPT-Rosalind and tools to advance life sciences research.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

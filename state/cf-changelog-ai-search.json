@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-10-15T13:05:42.271060+00:00",
-  "last_fetch_succeeded_at": "2026-10-15T13:05:42.271060+00:00",
-  "last_evidence_at": "2026-10-01T15:08:17.246177+00:00",
+  "last_checked_at": "2026-10-16T13:02:04.849772+00:00",
+  "last_fetch_succeeded_at": "2026-10-16T13:02:04.849772+00:00",
+  "last_evidence_at": "2026-10-16T13:02:04.849772+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://developers.cloudflare.com/changelog/post/2026-02-09-indexing-improvements/",
@@ -29,7 +29,8 @@
     "https://developers.cloudflare.com/changelog/post/2026-08-25-larger-custom-metadata-values/",
     "https://developers.cloudflare.com/changelog/post/2026-08-06-public-endpoint-custom-domains-and-namespaces/",
     "https://developers.cloudflare.com/changelog/post/2026-07-30-ai-search-agent-sdks/",
-    "https://developers.cloudflare.com/changelog/post/2026-10-01-ai-search-generally-available/"
+    "https://developers.cloudflare.com/changelog/post/2026-10-01-ai-search-generally-available/",
+    "https://developers.cloudflare.com/changelog/post/2026-10-16-cjk-keyword-search/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

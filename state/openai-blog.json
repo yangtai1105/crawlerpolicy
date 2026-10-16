@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-10-15T13:05:42.271060+00:00",
-  "last_fetch_succeeded_at": "2026-10-15T13:05:42.271060+00:00",
-  "last_evidence_at": "2026-10-14T13:20:02.135839+00:00",
+  "last_checked_at": "2026-10-16T13:02:04.849772+00:00",
+  "last_fetch_succeeded_at": "2026-10-16T13:02:04.849772+00:00",
+  "last_evidence_at": "2026-10-16T13:02:04.849772+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/yabble",
     "https://openai.com/index/waymark",
     "https://openai.com/index/inworld-ai-DO-NOT-PUBLISH",
     "https://openai.com/index/the-power-of-continuous-learning",
@@ -503,7 +502,8 @@
     "https://openai.com/index/atlassian-partnership",
     "https://openai.com/index/sophos",
     "https://openai.com/index/oracle",
-    "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic"
+    "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
+    "https://openai.com/index/introducing-the-rosalind-academic-plan"
   ],
   "consecutive_failures": 0,
   "first_seen": false

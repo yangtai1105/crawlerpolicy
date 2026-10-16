@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--f05473422fd8654a",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2181",
+  "supporting_urls": [],
+  "published_at": "2026-10-16T06:59:56Z",
+  "detected_at": "2026-10-16T13:02:04.849772Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--f05473422fd8654a.json",
+  "content_hash": "sha256:31dce4f87a8f32df99d120f84d768308a6ad816373aafa4f8dce6abb3195f898",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2181",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by President von der Leyen with Presidents Zelenskyy and Costa ahead of the European Council meeting of 16 October",
+  "content": "European Commission Statement Brussels, 16 Oct 2026 Good morning. It is a very important moment again to have you here in the European Council. You have participated in countless European Councils, and this shows...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

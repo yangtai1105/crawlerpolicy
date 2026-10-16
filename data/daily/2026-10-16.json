@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-16",
+  "generated_at": "2026-10-16T13:02:04.849772Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots",
+      "status": "reported",
+      "importance": 0.82,
+      "published_at": "2026-10-16T13:00:00Z"
+    }
+  ]
+}
