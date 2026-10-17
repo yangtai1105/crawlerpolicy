@@ -99,3 +99,32 @@ def test_alias_colliding_with_another_entry_is_rejected(tmp_path):
 
     with pytest.raises(ValueError, match="ambiguous player name: cloudflare"):
         load_registry(p, q)
+
+
+def test_bot_name_resolves_to_its_operator_in_the_shipped_registry():
+    registry = load_registry(PROTOCOLS, PLAYERS)
+
+    assert registry.resolve_player("ClaudeBot") == "anthropic"
+    assert registry.resolve_player("GPTBot") == "openai"
+
+
+def test_bot_name_resolves_case_insensitively(tmp_path):
+    p, q = _write(tmp_path, MINIMAL_PROTOCOLS, MINIMAL_PLAYERS)
+    registry = load_registry(p, q)
+
+    assert registry.resolve_player("cloudflarebot") == "cloudflare"
+
+
+def test_bot_name_colliding_with_another_entry_is_rejected(tmp_path):
+    colliding = MINIMAL_PLAYERS + """
+  - slug: akamai
+    display_name: Akamai
+    category: defense-infra
+    short_descriptor: CDN and bot management
+    home_url: https://www.akamai.com
+    bots: ["CloudflareBot"]
+"""
+    p, q = _write(tmp_path, MINIMAL_PROTOCOLS, colliding)
+
+    with pytest.raises(ValueError, match="ambiguous player name: cloudflarebot"):
+        load_registry(p, q)

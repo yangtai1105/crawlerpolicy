@@ -380,7 +380,7 @@ later. Read this before starting sub-project 2 or 3.
 ### For sub-project 3a (editorial-restyle fix wave, landed 2026-10-11)
 
 - **The "Updates delayed" notice is not cleared by this branch.** `core_sources`
-  in `pipeline/health.py:89` is every source whose type is not `xai_search`, and
+  in `pipeline/health.py:88` is every source whose type is not `xai_search`, and
   health degrades to `degraded` on *any* single core failure regardless of the
   overall success ratio (`pipeline/health.py:100`). A sixth source, `us-ftc`
   (`sources.yaml:182`), fails: its RSS URL returns 404 behind the site's bot

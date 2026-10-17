@@ -82,7 +82,7 @@ class EntityRegistry(BaseModel):
 def _build_index(entries: dict[str, BaseModel], label: str) -> dict[str, str]:
     index: dict[str, str] = {}
     for slug, entry in entries.items():
-        names = [slug, entry.display_name, *entry.aliases]
+        names = [slug, entry.display_name, *entry.aliases, *getattr(entry, "bots", [])]
         for name in names:
             key = name.strip().casefold()
             existing = index.get(key)

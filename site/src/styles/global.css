@@ -37,9 +37,10 @@
   /* Field Ledger names kept as aliases — these are not legacy leftovers,
      they are live tokens that current components and pages still
      reference directly (e.g. --forest-block and --clay-marker in
-     FeedCard.astro and events/[slug].astro, --trace-violet and
-     --quiet-rule in TrendTable.astro and about.astro, --pillar-ecosystem
-     across index.astro and several components). Do not delete one of
+     FeedCard.astro and events/[slug].astro, --trace-violet in
+     TrendTable.astro and about.astro, --quiet-rule in index.astro and
+     this file's own `hr` rule, --pillar-ecosystem in reading/index.astro,
+     reading/[week].astro, and others). Do not delete one of
      these without first confirming with
      `grep -rn "var(--NAME)" site/src` that nothing still resolves it. */
   --field-paper: var(--paper-warm);

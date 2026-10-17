@@ -3,7 +3,7 @@ import Base from "../layouts/Base.astro";
 import TrackTag from "../components/TrackTag.astro";
 import { TRACKS } from "../lib/taxonomy";
 import { loadSources } from "../lib/sources";
-const sources = loadSources();
+const sources = loadSources().filter((source) => source.enabled !== false);
 ---
 
 <Base title="About">

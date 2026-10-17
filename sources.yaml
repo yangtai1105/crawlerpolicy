@@ -181,7 +181,7 @@
 
 - slug: us-ftc
   type: rss_feed
-  url: https://www.ftc.gov/news-events/news/press-releases/rss
+  url: https://www.ftc.gov/feeds/press-release.xml
   keyword_filter: ["AI", "artificial intelligence", "generative", "chatbot", "training data", "large language"]
   display_name: US FTC
   default_tracks: [policy-regulation, litigation-legal]
