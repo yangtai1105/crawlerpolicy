@@ -4,7 +4,7 @@ import TrackTag from "../../components/TrackTag.astro";
 import { loadHealth } from "../../lib/health";
 import { loadSources, type SourceRole } from "../../lib/sources";
 
-const sources = loadSources();
+const sources = loadSources().filter((source) => source.enabled !== false);
 const health = loadHealth();
 const roles: SourceRole[] = ["platform-docs", "standards", "regulator", "legal-primary", "publisher", "infrastructure", "measurement", "reporting"];
 const roleLabels: Record<SourceRole, string> = {

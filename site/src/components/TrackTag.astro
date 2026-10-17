@@ -15,14 +15,15 @@ const label = TRACK_LABELS[track];
   .track-tag {
     display: inline-flex;
     align-items: center;
-    min-height: 25px;
-    padding: 3px 8px;
-    border: 1px solid var(--border-strong);
-    border-radius: 2px;
-    background: transparent;
+    min-height: 24px;
+    padding: 3px 10px;
+    border: 1px solid var(--rule);
+    border-radius: 9px;
+    background: var(--paper-high);
     color: var(--ink-muted);
-    font: 500 0.61rem/1.2 var(--font-mono);
-    letter-spacing: 0.015em;
+    font: 400 0.74rem/1.2 var(--font-body);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
   }
-  a.track-tag:hover { color: var(--clay-marker); border-color: var(--clay-marker); }
+  a.track-tag:hover { color: var(--accent); border-color: var(--accent-soft); }
 </style>

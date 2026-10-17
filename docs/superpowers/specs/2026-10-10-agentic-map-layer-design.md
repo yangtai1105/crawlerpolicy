@@ -376,3 +376,33 @@ later. Read this before starting sub-project 2 or 3.
   deliberately left alone under the never-rewrite rule. Rendered track *attributes*
   and *link paths* across the built site contain zero legacy slugs; this prose is the
   one remaining visible occurrence.
+
+### For sub-project 3a (editorial-restyle fix wave, landed 2026-10-11)
+
+- **The "Updates delayed" notice is not cleared by this branch.** `core_sources`
+  in `pipeline/health.py:89` is every source whose type is not `xai_search`, and
+  health degrades to `degraded` on *any* single core failure regardless of the
+  overall success ratio (`pipeline/health.py:100`). A sixth source, `us-ftc`
+  (`sources.yaml:182`), fails: its RSS URL returns 404 behind the site's bot
+  wall, and five plausible replacement paths were probed and all 404. Disabling
+  the five X sources in this branch removes one of the two causes of the
+  notice; it persists until `us-ftc` is repaired or retired. `us-ftc` was
+  deliberately **not** disabled — it is a primary regulator source for a
+  publication about AI policy, and switching off real coverage to turn a
+  health indicator green is the same dishonesty as editing the status file by
+  hand.
+- **Deferred to 3b, as design decisions that interact and that the matrix work
+  has to settle anyway:** nine page-level style blocks never got the Editorial
+  register pass (`about`, `archive`, `developments`, `fronts/[front]`,
+  `intelligence/index`, `sources/index`, `sources/[slug]`, and two more);
+  three colours act as the accent where the spec asks for one (`--accent`,
+  `--forest-block`, `--status-shipped`); panel elevation is 1.04:1 between
+  ground and card fill and 1.28:1 on the hairline, so the card system barely
+  separates from the page; the serif now renders at six distinct weights
+  because the variable face exposed a drift the old two-weight condensed face
+  hid; and the publication ships six border weights, three capsule radii, five
+  status idioms, and both a 3px and a 4px status-rail convention.
+- **For the matrix specifically:** `--status-healthy` and `--status-critical`
+  are only 2.51 ΔL* apart, green against red — the classic deuteranopia
+  confusion. Harmless today because every status also carries a text label,
+  but it must not become a hue-only cue in the matrix.
