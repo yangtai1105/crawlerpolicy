@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--e0e81cbaf680b0a7",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/140",
+  "supporting_urls": [],
+  "published_at": "2026-10-16T21:18:29Z",
+  "detected_at": "2026-10-17T11:59:21.590428Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--e0e81cbaf680b0a7.json",
+  "content_hash": "sha256:daa24c28a7f5016651122cc2de28565d96ffc5ee1fe6c71770b29fdeb29687c1",
+  "external_id": "pr:140",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #140: Add benchmarks and trim signature overhead",
+  "content": "Add repeatable timing and V8 trace tools for the TypeScript packages. Use their results to remove avoidable field scans, buffer copies, and per-call WebCrypto setup.\r\n\r\nTo be fair, we improve performance but very much on the side. The bulk of the work is, as expected, WebCyrypto operations.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--6f487868c637fad2",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/145",
+  "supporting_urls": [],
+  "published_at": "2026-10-16T21:24:14Z",
+  "detected_at": "2026-10-17T11:59:21.590428Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--6f487868c637fad2.json",
+  "content_hash": "sha256:c7b09f97c9c067028c880853103ec979b1caffcf49c7f0fa0e5e7949e62ff738",
+  "external_id": "pr:145",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #145: Closes #89: Example of Cloudflare Workers signing a request",
+  "content": "Closes #89: Example of Cloudflare Workers signing a request",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

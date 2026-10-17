@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-16T13:02:04.849772Z",
+  "last_attempted_at": "2026-10-17T11:59:21.590428Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
     "configured": 39,
@@ -60,9 +60,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "google-extended--4f0e6851701db349"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -152,15 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--cc3fb6ecbefdd443",
-        "cloudflare-blog--455f957b0311f12b",
-        "cloudflare-blog--9676a90131a4f9e1"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots.md"
-      ]
+      "feed_items_written": []
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -178,17 +170,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--9fe09c04ac4c85a0",
-        "uk-cma--287ced5e22f4c5f1",
-        "uk-cma--a0e6e0147c76a788",
-        "uk-cma--7f57cab0ce137410",
-        "uk-cma--80bf2901925d5a0e",
-        "uk-cma--d97053544f446807",
-        "uk-cma--5e40051733f43af7",
-        "uk-cma--a93f73e9afc5e605",
-        "uk-cma--30a2e93cd33f4d9a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -218,15 +200,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--10f9e00abe6dba6f",
-        "eu-commission-digital--a36933614106f59c",
-        "eu-commission-digital--68fab77cfa10e28d",
-        "eu-commission-digital--568cbd71b15b7983",
-        "eu-commission-digital--f05473422fd8654a",
-        "eu-commission-digital--0a3b2c1878561c54",
-        "eu-commission-digital--a771c225f11262da"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -246,7 +220,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--f9189c59db30df4d",
+        "news-media-alliance--17a20a1733e85363"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -266,7 +243,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--6f487868c637fad2",
+        "web-bot-auth-repo--e0e81cbaf680b0a7"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -297,7 +277,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--c190307ea8ec186b"
+        "openai-blog--7dd0c3a09eea0ea8"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -318,9 +298,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-ai-search--7af50aa661949a9f"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -456,9 +434,7 @@
     }
   },
   "events_written": [],
-  "feed_items_written": [
-    "content/feed/2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots.md"
-  ],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -466,10 +442,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-10-16",
-    "item_count": 1,
-    "path": "data/daily/2026-10-16.json"
+    "status": "quiet",
+    "edition_date": "2026-10-17",
+    "item_count": 0,
+    "path": "data/daily/2026-10-17.json"
   },
   "insight_threads": {
     "thread_count": 139,

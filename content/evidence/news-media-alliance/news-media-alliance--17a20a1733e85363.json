@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--17a20a1733e85363",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/changes-to-meta-commercial-terms-of-use/",
+  "supporting_urls": [],
+  "published_at": "2026-10-16T15:55:02Z",
+  "detected_at": "2026-10-17T11:59:21.590428Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--17a20a1733e85363.json",
+  "content_hash": "sha256:88127a73879bf872d35666fe462c838a20b68d46f159b0984a7a405b3590d01d",
+  "external_id": "https://www.newsmediaalliance.org/?p=18794",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "News/Media Alliance Statement on Changes to Meta Commercial Terms of Use",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"667\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2018/12/social-icons-1000-px.png\" width=\"1000\" /></p>\"Meta's new commercial terms of use are outrageous and probably illegal.\"",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

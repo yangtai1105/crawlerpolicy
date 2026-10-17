@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-10-16T13:02:04.849772+00:00",
-  "last_fetch_succeeded_at": "2026-10-16T13:02:04.849772+00:00",
-  "last_evidence_at": "2026-10-14T13:20:02.135839+00:00",
+  "last_checked_at": "2026-10-17T11:59:21.590428+00:00",
+  "last_fetch_succeeded_at": "2026-10-17T11:59:21.590428+00:00",
+  "last_evidence_at": "2026-10-17T11:59:21.590428+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://www.newsmediaalliance.org/?p=18316",
@@ -57,7 +57,9 @@
     "https://www.newsmediaalliance.org/?p=18750",
     "https://www.newsmediaalliance.org/?p=18746",
     "https://www.newsmediaalliance.org/?p=18763",
-    "https://www.newsmediaalliance.org/?p=18770"
+    "https://www.newsmediaalliance.org/?p=18770",
+    "https://www.newsmediaalliance.org/?p=18804",
+    "https://www.newsmediaalliance.org/?p=18794"
   ],
   "consecutive_failures": 0,
   "first_seen": false

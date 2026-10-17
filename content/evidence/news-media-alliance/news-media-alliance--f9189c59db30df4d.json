@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--f9189c59db30df4d",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/md-eo-directing-ad-procurement-to-local-news-orgs/",
+  "supporting_urls": [],
+  "published_at": "2026-10-17T00:40:57Z",
+  "detected_at": "2026-10-17T11:59:21.590428Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--f9189c59db30df4d.json",
+  "content_hash": "sha256:6c52e48ffe6d9aebd422f30b0bc8d5b6c23ef4e0292c4cfe06a5578ec4959b11",
+  "external_id": "https://www.newsmediaalliance.org/?p=18804",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Maryland Governor Issues EO Directing Ad Procurement to Local News Organizations",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"938\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2016/08/ThinkstockPhotos-498130819.jpg\" width=\"1400\" /></p>Maryland Governor Wes Moore just issued an Executive Order \"Directing State Media and Advertising Procurement Spending to Maryland News Organizations,\" which requires Maryland state agencies to prioritize local news organizations when structuring advertising procurements.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
