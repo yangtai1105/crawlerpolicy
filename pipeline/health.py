@@ -70,6 +70,7 @@ def build_run_health(
     per_source: dict[str, SourceRunStatus],
     now: datetime,
     last_full_success: datetime | None,
+    map_proposals_failed: bool = False,
 ) -> RunHealth:
     statuses = {
         source.slug: per_source.get(
@@ -97,7 +98,7 @@ def build_run_health(
 
     if required_failed or completion_ratio < 0.70:
         status = HealthStatus.CRITICAL
-    elif core_failed or completion_ratio < 0.95 or discovery_failed:
+    elif core_failed or completion_ratio < 0.95 or discovery_failed or map_proposals_failed:
         status = HealthStatus.DEGRADED
     else:
         status = HealthStatus.HEALTHY

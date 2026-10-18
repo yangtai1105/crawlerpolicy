@@ -5,11 +5,14 @@ import pytest
 from pipeline.analyzer import (
     AnalysisResult,
     AnalyzerResponse,
+    PositionClaim,
     _validated_subject,
     analyze_change,
     resolve_entities,
+    resolve_position_claims,
 )
 from pipeline.entities import load_registry
+from pipeline.positions import PositionStatus
 from pipeline.sources import Source, SourceType
 from pipeline.taxonomy import SourceRole, SourceTier, Subject, Track
 
@@ -183,3 +186,47 @@ def test_validated_subject_falls_back_to_the_source_default(crawler_source):
 
     assert _validated_subject(_response(subject="nonsense"), crawler_source) is Subject.CRAWLER
     assert _validated_subject(_response(), crawler_source) is Subject.CRAWLER
+
+
+def test_resolve_position_claims_keeps_registry_members():
+    resolved, unknown_players, unknown_protocols = resolve_position_claims(
+        REGISTRY,
+        [
+            PositionClaim(player="Cloudflare", protocol="Web Bot Auth", status="shipped"),
+            PositionClaim(player="Akamai", protocol="AIPREF", status="stated"),
+        ],
+    )
+
+    assert [(c.player_slug, c.protocol_slug, c.status) for c in resolved] == [
+        ("cloudflare", "web-bot-auth", PositionStatus.SHIPPED),
+        ("akamai", "aipref-vocab", PositionStatus.STATED),
+    ]
+    assert unknown_players == []
+    assert unknown_protocols == []
+
+
+def test_resolve_position_claims_resolves_a_bot_name_to_its_operator():
+    resolved, _, _ = resolve_position_claims(
+        REGISTRY, [PositionClaim(player="ClaudeBot", protocol="MCP", status="shipped")]
+    )
+
+    assert resolved[0].player_slug == "anthropic"
+
+
+def test_resolve_position_claims_reports_out_of_vocabulary_names():
+    resolved, unknown_players, unknown_protocols = resolve_position_claims(
+        REGISTRY,
+        [PositionClaim(player="Totally Unknown Inc", protocol="Imaginary", status="shipped")],
+    )
+
+    assert resolved == []
+    assert unknown_players == ["Totally Unknown Inc"]
+    assert unknown_protocols == ["Imaginary"]
+
+
+def test_resolve_position_claims_drops_an_unknown_status():
+    resolved, _, _ = resolve_position_claims(
+        REGISTRY, [PositionClaim(player="Cloudflare", protocol="RSL", status="enthusiastic")]
+    )
+
+    assert resolved == []

@@ -14,8 +14,24 @@ class PublicationStatus(StrEnum):
     SIGNAL = "signal"
 
 
+# Tiers treated as first-party factual evidence everywhere in the pipeline.
+# `verified` publication status and primary-evidence proposals both rest on
+# this exact set, so it is defined once here and shared rather than restated.
+_PRIMARY_TIERS = {SourceTier.PRIMARY, SourceTier.MEASUREMENT}
+
+
+def is_primary_tier(tier: SourceTier | str) -> bool:
+    """True when `tier` is one of the tiers treated as first-party evidence.
+
+    Accepts either a `SourceTier` member (as on a configured `Source`) or a
+    raw string tier name (as read back from feed frontmatter), case- and
+    whitespace-insensitively.
+    """
+    return str(tier).strip().lower() in _PRIMARY_TIERS
+
+
 def publication_status(source: Source) -> PublicationStatus:
-    if source.tier in {SourceTier.PRIMARY, SourceTier.MEASUREMENT}:
+    if is_primary_tier(source.tier):
         return PublicationStatus.VERIFIED
     if source.tier is SourceTier.SPECIALIST:
         return PublicationStatus.REPORTED

@@ -60,6 +60,18 @@ class Config:
         return self.data_dir / "insight-threads.json"
 
     @property
+    def positions_path(self) -> Path:
+        return self.data_dir / "positions.json"
+
+    @property
+    def readings_dir(self) -> Path:
+        return self.data_dir / "readings"
+
+    @property
+    def proposals_dir(self) -> Path:
+        return self.repo_root / "proposals"
+
+    @property
     def state_dir(self) -> Path:
         return self.repo_root / "state"
 

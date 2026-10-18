@@ -1,0 +1,15 @@
+# Human-authored seed for data/positions.json.
+#
+# Every row needs a PRIMARY source URL and the date the status took effect in
+# the world. `scripts/validate_seed.py` refuses a row without them, and refuses
+# a player or protocol that is not in entities/*.yaml — the registries are the
+# controlled vocabulary and the seed cannot grow them.
+#
+# `declined` requires an explicit public refusal in the source. Never record
+# `declined` because a player is silent; absence is `none`, which is simply not
+# written here.
+#
+# This file is applied by hand, reviewed like any other change. It is empty of
+# rows on purpose: populating it is a research pass with one source per cell,
+# not an implementation step.
+rows: []

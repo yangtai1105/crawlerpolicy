@@ -9,7 +9,8 @@ import pytest
 import yaml
 
 from pipeline.analyzer import AnalysisResult
-from pipeline.check import preflight_dependency_errors, run_check
+from pipeline.check import _run_map_proposals_stage, preflight_dependency_errors, run_check
+from pipeline.config import Config
 from pipeline.evidence import EvidenceStage, pending_analysis
 from pipeline.fetchers.base import CandidateItem, FetchResult, ResultMode
 from pipeline.model_provider import ProviderFailure
@@ -541,3 +542,166 @@ async def test_non_shadow_x_candidate_publishes_signal_with_attribution(repo):
     assert "https://blog.cloudflare.com/example" in text
     assert list((repo / "content/events").glob("*.md")) == []
     assert health["discovery"]["status"] == "live"
+
+
+async def test_proposal_stage_writes_proposals_without_touching_positions(repo):
+    _write_item_source(repo, tier="primary")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+    analysis = _material_analysis()
+    from pipeline.analyzer import ResolvedPositionClaim
+    from pipeline.positions import PositionStatus
+
+    analysis.position_claims = [
+        ResolvedPositionClaim(
+            player_slug="cloudflare",
+            protocol_slug="web-bot-auth",
+            status=PositionStatus.SHIPPED,
+        )
+    ]
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=analysis),
+    )
+
+    written = sorted((repo / "proposals").glob("*.json"))
+    assert len(written) == 1
+    assert not (repo / "data" / "positions.json").exists()
+    assert health["map_proposals"] == {"status": "ok", "proposed": 1, "error": ""}
+    # A successful proposal stage must leave the run's overall health status
+    # exactly as it would have been without this stage.
+    assert health["status"] == "healthy"
+
+
+async def test_a_failing_proposal_stage_degrades_health_without_failing_the_publish(
+    repo, monkeypatch
+):
+    _write_item_source(repo, tier="primary")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+
+    def boom(*args, **kwargs):
+        raise RuntimeError("proposal stage exploded")
+
+    monkeypatch.setattr("pipeline.check.collect_proposals", boom)
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=_material_analysis()),
+    )
+
+    assert health["map_proposals"]["status"] == "failed"
+    # publication still happened despite the proposal stage exploding
+    assert list((repo / "content" / "feed").glob("*.md"))
+    # A broken proposal stage must be visible in overall health as degraded —
+    # never critical, since this non-required stage must never block the feed.
+    assert health["status"] == "degraded"
+    assert health["status"] != "critical"
+
+
+async def test_one_malformed_feed_record_costs_one_record_not_the_whole_stage(repo):
+    """One feed file missing a required field (`source_tier` here) must be
+    skipped individually — the stage must still report `ok` and still
+    propose the change the other, well-formed, record carries.
+    """
+    feed_dir = repo / "content" / "feed"
+    feed_dir.mkdir(parents=True, exist_ok=True)
+    good_path = feed_dir / "2026-07-11-cloudflare-signs-bots.md"
+    good_path.write_text(
+        "---\n"
+        "slug: cloudflare-signs-bots\n"
+        "status: verified\n"
+        "source_tier: primary\n"
+        "source_urls:\n"
+        "  - https://blog.cloudflare.com/web-bot-auth\n"
+        "event_date: 2026-07-11T00:00:00+00:00\n"
+        "development_slug: cloudflare-signs-bots\n"
+        "position_claims:\n"
+        "  - player: cloudflare\n"
+        "    protocol: web-bot-auth\n"
+        "    status: shipped\n"
+        "---\n\nbody\n"
+    )
+    bad_path = feed_dir / "2026-07-12-akamai-missing-tier.md"
+    bad_path.write_text(
+        "---\n"
+        "slug: akamai-missing-tier\n"
+        "status: verified\n"
+        "source_urls:\n"
+        "  - https://example.test\n"
+        "event_date: 2026-07-12T00:00:00+00:00\n"
+        "development_slug: akamai-missing-tier\n"
+        "position_claims:\n"
+        "  - player: akamai\n"
+        "    protocol: aipref-vocab\n"
+        "    status: stated\n"
+        "---\n\nbody\n"
+    )
+    cfg = Config(
+        repo_root=repo,
+        gemini_api_key="",
+        gemini_analysis_model="gemini-3.7-flash",
+        publication_cutoff=datetime(2026, 8, 30, tzinfo=UTC),
+    )
+
+    result = _run_map_proposals_stage(
+        cfg=cfg,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        feed_items_written=[
+            "content/feed/2026-07-11-cloudflare-signs-bots.md",
+            "content/feed/2026-07-12-akamai-missing-tier.md",
+        ],
+        skip=False,
+    )
+
+    assert result["status"] == "ok"
+    assert result["proposed"] == 1
+
+
+async def test_dry_run_skips_the_proposal_stage_and_writes_nothing(repo):
+    _write_item_source(repo, tier="primary")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+    analysis = _material_analysis()
+    from pipeline.analyzer import ResolvedPositionClaim
+    from pipeline.positions import PositionStatus
+
+    analysis.position_claims = [
+        ResolvedPositionClaim(
+            player_slug="cloudflare",
+            protocol_slug="web-bot-auth",
+            status=PositionStatus.SHIPPED,
+        )
+    ]
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=analysis),
+        dry_run=True,
+    )
+
+    assert list((repo / "proposals").glob("*.json")) == []
+    assert health["map_proposals"] == {"status": "skipped", "proposed": 0, "error": ""}
+
+
+def test_check_module_never_imports_or_calls_the_merge_only_writers():
+    """`data/positions.json` and `data/readings/` change only through a
+    human-merged pull request. `save_positions` (pipeline/apply_proposals.py)
+    and `save_reading` (pipeline/weekly_readings.py) are the only functions
+    that write them, and the daily pipeline must call neither — this is the
+    structural guard for that invariant, read straight from the source so it
+    cannot be satisfied by renaming an import around the check.
+    """
+    source = Path("pipeline/check.py").read_text()
+    assert "save_positions" not in source
+    assert "save_reading" not in source

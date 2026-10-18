@@ -8,11 +8,28 @@ from pydantic import AliasChoices, BaseModel, Field, model_validator
 
 from pipeline.entities import EntityRegistry
 from pipeline.model_provider import StructuredModel
+from pipeline.positions import PositionStatus
 from pipeline.sources import Source
 from pipeline.taxonomy import Subject, Track, validate_tracks
 
 Confidence = Literal["low", "medium", "high"]
 ChangeKind = Literal["material", "cosmetic", "noise"]
+
+
+class PositionClaim(BaseModel):
+    """What the model says a development implies, before resolution."""
+
+    player: str
+    protocol: str
+    status: str
+
+
+class ResolvedPositionClaim(BaseModel):
+    """A claim whose names resolved to registry slugs and whose status is valid."""
+
+    player_slug: str
+    protocol_slug: str
+    status: PositionStatus
 
 
 class AnalyzerResponse(BaseModel):
@@ -30,6 +47,7 @@ class AnalyzerResponse(BaseModel):
     actors: list[str]
     subject: str = "unknown"
     protocols: list[str] = Field(default_factory=list)
+    position_claims: list[PositionClaim] = Field(default_factory=list)
     trend_signals: list[str]
     confidence: str
 
@@ -48,6 +66,7 @@ class AnalysisResult(BaseModel):
     subject: Subject = Subject.UNKNOWN
     players: list[str] = Field(default_factory=list)
     protocols: list[str] = Field(default_factory=list)
+    position_claims: list[ResolvedPositionClaim] = Field(default_factory=list)
     # Carried to the caller for the review queue; never written to frontmatter.
     unknown_players: list[str] = Field(default_factory=list)
     unknown_protocols: list[str] = Field(default_factory=list)
@@ -90,6 +109,12 @@ Name only entities you are confident appear in the evidence. Set `subject` to `c
 the development concerns automated crawling, `agent` when it concerns delegated agents acting
 for a user, `both` when it genuinely concerns both, and `unknown` when the evidence does not
 say. List protocol names in `protocols`.
+
+When the evidence states a named company's position on a named protocol, add it to
+`position_claims` with `status` one of: shipped (in production), preview (limited or
+beta), stated (publicly committed but not shipped), declined (publicly refused or
+rejected). Omit the claim entirely when the evidence does not say. Never infer `declined`
+from silence — it requires an explicit public refusal.
 """
 
 _CRAWLER_ADDON = """
@@ -146,6 +171,42 @@ def resolve_entities(
             protocol_slugs.append(slug)
 
     return player_slugs, protocol_slugs, unknown_players, unknown_protocols
+
+
+def resolve_position_claims(
+    registry: EntityRegistry,
+    claims: list[PositionClaim],
+) -> tuple[list[ResolvedPositionClaim], list[str], list[str]]:
+    """Resolve claim names to registry slugs and validate the status.
+
+    A claim survives only when both names resolve and the status is one of the
+    five published values. Everything else is reported for review rather than
+    guessed at — a wrong cell is a factual error on a published matrix.
+    """
+    resolved: list[ResolvedPositionClaim] = []
+    unknown_players: list[str] = []
+    unknown_protocols: list[str] = []
+
+    for claim in claims:
+        player_slug = registry.resolve_player(claim.player)
+        protocol_slug = registry.resolve_protocol(claim.protocol)
+        if player_slug is None:
+            unknown_players.append(claim.player)
+        if protocol_slug is None:
+            unknown_protocols.append(claim.protocol)
+        if player_slug is None or protocol_slug is None:
+            continue
+        try:
+            status = PositionStatus(claim.status.strip().lower())
+        except ValueError:
+            continue
+        resolved.append(
+            ResolvedPositionClaim(
+                player_slug=player_slug, protocol_slug=protocol_slug, status=status
+            )
+        )
+
+    return resolved, unknown_players, unknown_protocols
 
 
 def _validated_subject(raw: AnalyzerResponse, source: Source) -> Subject:
@@ -212,6 +273,9 @@ async def analyze_change(
         actors=actors,
         protocols=_clean_string_list(raw.protocols),
     )
+    claims, claim_unknown_players, claim_unknown_protocols = resolve_position_claims(
+        _registry(), raw.position_claims
+    )
     return AnalysisResult(
         change_kind=raw.change_kind,
         importance=raw.importance,
@@ -226,8 +290,9 @@ async def analyze_change(
         subject=_validated_subject(raw, source),
         players=players,
         protocols=protocols,
-        unknown_players=unknown_players,
-        unknown_protocols=unknown_protocols,
+        position_claims=claims,
+        unknown_players=list(dict.fromkeys([*unknown_players, *claim_unknown_players])),
+        unknown_protocols=list(dict.fromkeys([*unknown_protocols, *claim_unknown_protocols])),
         trend_signals=_clean_string_list(raw.trend_signals),
         confidence=confidence,
     )
