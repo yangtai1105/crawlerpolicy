@@ -44,15 +44,13 @@ def _feed_file(
     title: str = "Cloudflare signs bots",
     protocols: list[str] | None = None,
     tracks: list[str] | None = None,
-    development_body: str | None = "Bots now sign every request.",
+    summary_body: str | None = "Bots now sign every request.",
 ) -> None:
     protocols = protocols if protocols is not None else ["web-bot-auth"]
     tracks = tracks if tracks is not None else ["identity-authorization"]
     protocol_lines = "\n".join(f'  - "{p}"' for p in protocols)
     track_lines = "\n".join(f"  - {t}" for t in tracks)
-    development_section = (
-        f"## Development\n\n{development_body}\n\n" if development_body else ""
-    )
+    summary_section = f"## Summary\n\n{summary_body}\n\n" if summary_body else ""
     text = (
         "---\n"
         f"slug: {slug}\n"
@@ -62,8 +60,8 @@ def _feed_file(
         f"tracks:\n{track_lines}\n"
         f"protocols:\n{protocol_lines}\n"
         "---\n\n"
-        f"{development_section}"
-        "## Summary\n\nSome summary text.\n"
+        f"{summary_section}"
+        "## Insight\n\nAn editorial judgement that must never reach the prompt.\n"
     )
     (feed_dir / name).write_text(text)
 
@@ -145,25 +143,54 @@ def test_render_body_names_each_subject_and_its_development_count():
     assert "1 development" in body
 
 
-def test_load_window_records_reads_the_summary_from_the_development_section(tmp_path):
+def test_load_window_records_reads_the_summary_from_the_summary_section(tmp_path):
     feed_dir = tmp_path / "feed"
     feed_dir.mkdir()
-    _feed_file(feed_dir, "a.md", development_body="Bots now sign every request.")
+    _feed_file(feed_dir, "a.md", summary_body="Bots now sign every request.")
 
     [record] = load_window_records(feed_dir, "2026-10-08", "2026-10-08")
 
     assert record.title == "Cloudflare signs bots"
     assert record.summary == "Bots now sign every request."
+    # The Insight section is an editorial judgement, not evidence — it must
+    # never leak into the summary a reading is grounded in.
+    assert "editorial judgement" not in record.summary
 
 
-def test_load_window_records_tolerates_a_record_with_no_development_section(tmp_path):
+def test_load_window_records_tolerates_a_record_with_no_summary_section(tmp_path):
     feed_dir = tmp_path / "feed"
     feed_dir.mkdir()
-    _feed_file(feed_dir, "a.md", development_body=None)
+    _feed_file(feed_dir, "a.md", summary_body=None)
 
     [record] = load_window_records(feed_dir, "2026-10-08", "2026-10-08")
 
     assert record.summary == ""
+
+
+def test_load_window_records_reads_the_summary_from_a_realistically_shaped_file(tmp_path):
+    (tmp_path / "2026-10-13-example.md").write_text(
+        "---\n"
+        "slug: cloudflare-signs-bots\n"
+        "status: verified\n"
+        "event_date: 2026-10-13T00:00:00+00:00\n"
+        'title: "Cloudflare signs its bot traffic"\n'
+        "protocols:\n"
+        '  - "web-bot-auth"\n'
+        "tracks:\n"
+        "  - identity-authorization\n"
+        "---\n\n"
+        "## Summary\n\n"
+        "Cloudflare began signing outbound bot requests with Web Bot Auth keys.\n\n"
+        "## Insight\n\n"
+        "Verification is consolidating among defenders.\n"
+    )
+
+    records = load_window_records(tmp_path, "2026-10-12", "2026-10-18")
+
+    assert len(records) == 1
+    assert records[0].title == "Cloudflare signs its bot traffic"
+    assert records[0].summary.startswith("Cloudflare began signing outbound bot requests")
+    assert "Verification is consolidating" not in records[0].summary
 
 
 def test_load_window_records_excludes_records_outside_the_window(tmp_path):

@@ -86,8 +86,12 @@ def load_window_records(
     """Read feed records whose event_date falls inside the window.
 
     Frontmatter carries `title`, a full descriptive sentence, but no summary;
-    the summary lives in the body under a `## Development` heading, read with
-    the same `_section` helper `weekly_intelligence` uses for the same purpose.
+    the summary lives in the body under a `## Summary` heading — the factual
+    account of what happened, read with the same `_section` helper
+    `weekly_intelligence` uses for the same purpose. `## Insight` and
+    `## Implication` are an earlier model pass's editorial judgement, not
+    evidence, so they are deliberately left out: a reading must be grounded in
+    what happened, not in a prior judgement about what happened.
     """
     records: list[WindowRecord] = []
     for path in sorted(feed_dir.glob("*.md")):
@@ -110,7 +114,7 @@ def load_window_records(
                 status=str(data.get("status", "")),
                 event_date=event_date,
                 title=str(data.get("title", "")),
-                summary=_section(body, "Development"),
+                summary=_section(body, "Summary"),
                 protocols=[str(p) for p in (data.get("protocols") or [])],
                 tracks=[str(t) for t in (data.get("tracks") or [])],
             )
