@@ -16,6 +16,7 @@ from pipeline.weekly_intelligence import (
     completed_iso_window,
     generate_weekly_intelligence,
     load_material_events,
+    load_reported_developments,
     validate_issue_evidence,
 )
 
@@ -385,3 +386,105 @@ async def test_weekly_synthesis_uses_structured_model_and_preserves_evidence(tmp
     assert issue.model_generated is True
     assert issue.executive_shifts[0].evidence_event_ids == ["google-ai-control"]
     assert issue.thesis == "Access controls are becoming more specific."
+
+
+def _write_feed_item(
+    path: Path,
+    *,
+    event_date: str,
+    status: str = "reported",
+    change_kind: str = "material",
+    importance: float = 0.8,
+):
+    path.write_text(
+        f"""---
+schema_version: 1
+slug: {path.stem}
+title: "Cloudflare scores verified bots on behavior"
+source: cloudflare-blog
+source_tier: specialist
+status: {status}
+primary_track: crawler-controls
+tracks:
+  - crawler-controls
+change_kind: {change_kind}
+importance: {importance}
+event_date: {event_date}
+---
+
+## Summary
+
+Cloudflare now scores [Verified bots](https://blog.cloudflare.com/x) on behavior.
+
+## Insight
+
+Identity is no longer a one-time check.
+"""
+    )
+
+
+def test_reported_loader_keeps_only_material_specialist_items_in_window(tmp_path):
+    _write_feed_item(tmp_path / "kept.md", event_date="2026-08-27T00:00:00+00:00")
+    _write_feed_item(
+        tmp_path / "verified.md",
+        event_date="2026-08-27T00:00:00+00:00",
+        status="verified",
+    )
+    _write_feed_item(
+        tmp_path / "signal.md",
+        event_date="2026-08-27T00:00:00+00:00",
+        status="signal",
+    )
+    _write_feed_item(
+        tmp_path / "noise.md",
+        event_date="2026-08-27T00:00:00+00:00",
+        change_kind="noise",
+    )
+    _write_feed_item(tmp_path / "outside.md", event_date="2026-08-23T00:00:00+00:00")
+
+    reported = load_reported_developments(
+        tmp_path,
+        window_start=date(2026, 8, 24),
+        window_end=date(2026, 8, 30),
+    )
+
+    assert [item.slug for item in reported] == ["kept"]
+    assert reported[0].primary_track is Track.ACCESS_CONTROLS
+    assert reported[0].summary == "Cloudflare now scores Verified bots on behavior."
+
+
+async def test_reported_items_are_listed_but_never_move_the_verified_ledger(tmp_path):
+    feed_dir = tmp_path / "content" / "feed"
+    feed_dir.mkdir(parents=True)
+    _write_feed_item(feed_dir / "low.md", event_date="2026-08-26T00:00:00+00:00", importance=0.5)
+    _write_feed_item(feed_dir / "high.md", event_date="2026-08-27T00:00:00+00:00", importance=0.9)
+    data_dir = tmp_path / "data"
+    data_dir.mkdir()
+    (data_dir / "health.json").write_text(json.dumps(_health()))
+    (data_dir / "trends.json").write_text('{"schema_version": 1, "trends": []}')
+    synthesizer = AsyncMock()
+
+    issue = await generate_weekly_intelligence(
+        repo_root=tmp_path,
+        now=NOW,
+        model=synthesizer,
+    )
+
+    assert [item.slug for item in issue.reported_developments] == ["high", "low"]
+    assert issue.thesis == "No verified material developments in the completed window."
+    assert issue.executive_shifts == []
+    assert issue.source_ledger == []
+    assert not any(item.material_change for item in issue.material_developments)
+    assert "2 reported developments from specialist sources" in issue.intelligence_read
+    synthesizer.generate.assert_not_awaited()
+
+
+def test_issues_written_before_reported_developments_still_load():
+    legacy = {
+        "week": "2026-W30",
+        "generated_at": "2026-07-27T13:00:00Z",
+        "window_start": "2026-07-20",
+        "window_end": "2026-07-26",
+    }
+
+    assert WeeklyIssue.model_validate(legacy).reported_developments == []

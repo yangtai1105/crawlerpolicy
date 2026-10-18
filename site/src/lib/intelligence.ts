@@ -43,6 +43,17 @@ export interface WeeklyIntelligence {
     event_ids: string[];
     latest_event_date: string;
   }>;
+  // Absent from issues generated before 2026-10-18.
+  reported_developments?: Array<{
+    slug: string;
+    title: string;
+    source: string;
+    source_tier: string;
+    primary_track: string;
+    event_date: string;
+    importance: number;
+    summary: string;
+  }>;
   model_generated: boolean;
 }
 

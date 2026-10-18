@@ -104,6 +104,28 @@ class SourceLedgerEntry(BaseModel):
     latest_event_date: datetime
 
 
+class ReportedDevelopment(BaseModel):
+    """A material feed item from a specialist source: reported, not verified.
+
+    Listed beside the verified ledger so a week of specialist-only news is not
+    an empty issue, but never counted in tracks, trends, shifts or synthesis.
+    """
+
+    slug: str
+    title: str
+    source: str
+    source_tier: SourceTier
+    primary_track: Track
+    event_date: datetime
+    importance: float
+    summary: str = ""
+
+    @field_validator("primary_track", mode="before")
+    @classmethod
+    def _resolve_primary_track_alias(cls, value: object) -> object:
+        return resolve_track_scalar(value)
+
+
 class CoverageSnapshot(BaseModel):
     configured: int = 0
     completed: int = 0
@@ -130,6 +152,7 @@ class WeeklyIssue(BaseModel):
     actor_moves: list[ActorMove] = Field(default_factory=list)
     watchlist: list[WatchItem] = Field(default_factory=list)
     source_ledger: list[SourceLedgerEntry] = Field(default_factory=list)
+    reported_developments: list[ReportedDevelopment] = Field(default_factory=list)
     model_generated: bool = False
 
 
@@ -149,8 +172,10 @@ def build_weekly_issue(
     generated_at: datetime,
     window_start: date,
     window_end: date,
+    reported: list[ReportedDevelopment] | None = None,
 ) -> WeeklyIssue:
     """Build the complete deterministic issue before optional prose synthesis."""
+    reported = reported or []
     ordered_events = sorted(
         events,
         key=lambda event: (event.importance, event.event_date),
@@ -236,11 +261,19 @@ def build_weekly_issue(
         intelligence_read=(
             f"{len(ordered_events)} material developments across "
             f"{sum(item.material_change for item in material_developments)} tracks."
+            + (
+                f" {len(reported)} reported development"
+                f"{'s' if len(reported) != 1 else ''} from specialist sources "
+                "listed separately; they do not move trends."
+                if reported
+                else ""
+            )
         ),
         trend_deltas=trend_deltas,
         actor_moves=actor_moves,
         watchlist=watchlist,
         source_ledger=_source_ledger(ordered_events),
+        reported_developments=reported,
     )
     validate_issue_evidence(issue, allowed_event_ids)
     return issue
@@ -332,7 +365,43 @@ def load_material_events(
     return sorted(events, key=lambda event: event.event_date, reverse=True)
 
 
-def _parse_event(path: Path) -> MaterialEvent | None:
+_MAX_REPORTED = 8
+_MARKDOWN_LINK = re.compile(r"\[([^\]]+)\]\([^)]+\)")
+
+
+def load_reported_developments(
+    feed_dir: Path,
+    *,
+    window_start: date,
+    window_end: date,
+) -> list[ReportedDevelopment]:
+    """Material specialist-source feed items in the window, most important first."""
+    if not feed_dir.exists():
+        return []
+    reported: list[ReportedDevelopment] = []
+    for path in feed_dir.glob("*.md"):
+        parsed = _parse_frontmatter(path)
+        if parsed is None:
+            continue
+        frontmatter, body = parsed
+        if (
+            frontmatter.get("status") != "reported"
+            or frontmatter.get("change_kind") != "material"
+        ):
+            continue
+        try:
+            item = ReportedDevelopment.model_validate(
+                {**frontmatter, "summary": _MARKDOWN_LINK.sub(r"\1", _section(body, "Summary"))}
+            )
+        except (TypeError, ValueError):
+            continue
+        if window_start <= item.event_date.date() <= window_end:
+            reported.append(item)
+    reported.sort(key=lambda item: (item.importance, item.event_date), reverse=True)
+    return reported[:_MAX_REPORTED]
+
+
+def _parse_frontmatter(path: Path) -> tuple[dict, str] | None:
     text = path.read_text()
     if not text.startswith("---\n"):
         return None
@@ -343,6 +412,14 @@ def _parse_event(path: Path) -> MaterialEvent | None:
         return None
     if not isinstance(frontmatter, dict):
         return None
+    return frontmatter, body
+
+
+def _parse_event(path: Path) -> MaterialEvent | None:
+    parsed = _parse_frontmatter(path)
+    if parsed is None:
+        return None
+    frontmatter, body = parsed
     if frontmatter.get("schema_version") != 2:
         return None
     if frontmatter.get("change_kind") != "material":
@@ -406,10 +483,16 @@ async def generate_weekly_intelligence(
         window_start=window_start,
         window_end=window_end,
     )
+    reported = load_reported_developments(
+        cfg.feed_dir,
+        window_start=window_start,
+        window_end=window_end,
+    )
     trends = load_trends(cfg.trends_file)
     previous_issue = _load_previous_issue(cfg.intelligence_dir, week)
     issue = build_weekly_issue(
         events=events,
+        reported=reported,
         trends=trends,
         previous_issue=previous_issue,
         health=health,

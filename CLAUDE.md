@@ -98,6 +98,8 @@ Health is stage-aware:
 - `critical`: required coverage is insufficient or a blocking stage failed
 - `unknown`: health is absent, stale, or uses an unsupported schema
 
+Weekly issues also list up to eight material developments from specialist-tier feed items (`status: reported`) in the window under `reported_developments`. They are shown as "Reported · not verified" and never enter the track ledger, trends, executive shifts, source ledger, or model synthesis.
+
 The site footer's timestamp means the last fully successful run. It must never imply that a failed attempt was successful. Weekly Intelligence refuses to publish from critical or stale health; a completed issue is stored under `data/intelligence/` and trend state persists in `data/trends.json`.
 
 ## Commands

@@ -16,6 +16,7 @@ interface EventRecord {
 interface Props { issue: WeeklyIntelligence; events: EventRecord[]; }
 const { issue, events } = Astro.props;
 const byId = new Map(events.map((event) => [event.data.slug, event]));
+const reported = issue.reported_developments ?? [];
 
 function evidence(ids: string[]) {
   return ids.flatMap((id) => {
@@ -74,6 +75,27 @@ function evidence(ids: string[]) {
     </div>
   </section>
 
+  {reported.length > 0 && <section>
+    <div class="section-heading">
+      <p class="utility-label">Reported · not verified</p>
+      <h2>From specialist sources</h2>
+      <p class="reported-note">Material developments reported by specialist sources in this window. They are not primary evidence, so they do not change the track ledger or trends above.</p>
+    </div>
+    <div class="reported-list">
+      {reported.map((item) => {
+        const track = tryNormalizeTrack(item.primary_track);
+        return (
+          <article>
+            <p class="reported-meta">{item.event_date.slice(0, 10)} · {findSource(item.source)?.display_name ?? item.source}</p>
+            {track && <TrackTag track={track} />}
+            <h3><a href={`/events/${item.slug}`}>{item.title}</a></h3>
+            {item.summary && <p>{item.summary}</p>}
+          </article>
+        );
+      })}
+    </div>
+  </section>}
+
   {issue.trend_deltas.length > 0 && <section>
     <div class="section-heading"><p class="utility-label">Compared with prior issue</p><h2>Trend deltas</h2></div>
     <div class="delta-list">
@@ -122,6 +144,12 @@ function evidence(ids: string[]) {
   .track-ledger strong { display: block; margin: var(--space-5) 0 var(--space-2); font-family: var(--font-display); }
   .track-ledger p { color: var(--ink-muted); font-size: 0.78rem; }
   .track-ledger a { display: block; margin-top: var(--space-2); font: 650 0.68rem/1.4 var(--font-mono); }
+  .reported-note { max-width: 66ch; margin-top: var(--space-2); color: var(--ink-muted); font-size: 0.82rem; }
+  .reported-list { display: grid; grid-template-columns: repeat(2, 1fr); gap: var(--space-4); }
+  .reported-list article { padding: var(--space-5); border-top: 1px dashed var(--rule); background: var(--bg-elev); }
+  .reported-list h3 { margin: var(--space-3) 0 var(--space-2); font-size: 1rem; }
+  .reported-list p { color: var(--ink-muted); font-size: 0.8rem; }
+  .reported-meta { margin: 0 0 var(--space-2); font: 650 0.68rem/1.4 var(--font-mono); color: var(--ink-faint); }
   .delta-list { display: grid; grid-template-columns: repeat(3, 1fr); gap: var(--space-4); }
   .delta-list article { padding: var(--space-5); border-top: 1px solid var(--rule); background: var(--bg-elev); }
   .delta-list p { color: var(--ink-muted); font-size: 0.8rem; }
@@ -135,7 +163,7 @@ function evidence(ids: string[]) {
     .issue-header, .shift, .closing-grid { display: block; }
     .issue-index { margin-bottom: var(--space-6); }
     .shift > p { margin-top: var(--space-5); }
-    .track-ledger, .delta-list { grid-template-columns: 1fr; }
+    .track-ledger, .delta-list, .reported-list { grid-template-columns: 1fr; }
     .closing-grid > div + div { margin-top: var(--space-8); }
   }
 </style>
