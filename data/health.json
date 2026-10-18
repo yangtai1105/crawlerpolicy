@@ -1,36 +1,36 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-17T11:59:21.590428Z",
+  "last_attempted_at": "2026-10-18T05:17:07.862455Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
-    "configured": 39,
+    "configured": 34,
     "completed": 33,
     "fetched": 33,
     "analyzed": 33,
     "published": 33,
-    "failed": 6,
+    "failed": 1,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
       "ok": 33,
-      "failed": 6,
+      "failed": 1,
       "pending": 0
     },
     "evidence": {
       "ok": 33,
       "failed": 1,
-      "pending": 5
+      "pending": 0
     },
     "analysis": {
       "ok": 33,
       "failed": 0,
-      "pending": 6
+      "pending": 1
     },
     "publish": {
       "ok": 33,
       "failed": 0,
-      "pending": 6
+      "pending": 1
     }
   },
   "per_source": {
@@ -209,7 +209,7 @@
       "evidence": "failed",
       "analysis": "pending",
       "publish": "pending",
-      "error": "Client error '404 Not Found' for url 'https://www.ftc.gov/news-events/news/press-releases/rss'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
+      "error": "Client error '404 Not Found' for url 'https://www.ftc.gov/feeds/press-release.xml'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
@@ -220,10 +220,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--f9189c59db30df4d",
-        "news-media-alliance--17a20a1733e85363"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -243,10 +240,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--6f487868c637fad2",
-        "web-bot-auth-repo--e0e81cbaf680b0a7"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -276,9 +270,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--7dd0c3a09eea0ea8"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -381,56 +373,6 @@
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
-    },
-    "x-access-discovery": {
-      "fetch": "failed",
-      "evidence": "pending",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "XAI_API_KEY is missing",
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-agents-discovery": {
-      "fetch": "failed",
-      "evidence": "pending",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "XAI_API_KEY is missing",
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-rights-discovery": {
-      "fetch": "failed",
-      "evidence": "pending",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "XAI_API_KEY is missing",
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-governance-discovery": {
-      "fetch": "failed",
-      "evidence": "pending",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "XAI_API_KEY is missing",
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-measurement-discovery": {
-      "fetch": "failed",
-      "evidence": "pending",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "XAI_API_KEY is missing",
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
     }
   },
   "events_written": [],
@@ -443,22 +385,27 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-10-17",
+    "edition_date": "2026-10-18",
     "item_count": 0,
-    "path": "data/daily/2026-10-17.json"
+    "path": "data/daily/2026-10-18.json"
   },
   "insight_threads": {
     "thread_count": 139,
     "path": "data/insight-threads.json"
   },
+  "map_proposals": {
+    "status": "ok",
+    "proposed": 0,
+    "error": ""
+  },
   "discovery": {
-    "status": "unavailable",
+    "status": "disabled",
     "candidate_count": 0,
     "x_search_calls": 0,
     "estimated_tool_cost_usd": 0.0,
-    "sources_configured": 5,
+    "sources_configured": 0,
     "sources_completed": 0,
-    "sources_failed": 5,
+    "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }
 }
