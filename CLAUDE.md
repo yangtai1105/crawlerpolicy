@@ -51,7 +51,7 @@ pipeline/
 ├── event_writer.py            # schema-v2 development records
 ├── trends.py                  # durable trend transitions
 ├── weekly_intelligence.py     # completed weekly issue generation
-└── fetchers/                  # HTML, RSS, GitHub, IETF, Gemini, CF Browser
+└── fetchers/                  # HTML, RSS, GitHub, IETF, Gemini, xAI X Search, CF Browser
 
 content/
 ├── evidence/                  # replayable evidence records
@@ -82,6 +82,7 @@ The site architecture is `/`, `/intelligence`, `/intelligence/{week}`, `/fronts/
 
 - Primary and official sources are the basis for factual claims and trend movement.
 - `gemini_search` sources are commentary/discovery leads. They cannot independently advance a trend.
+- X discovery is one combined `xai_search` source, `x-discovery`, that covers all five fronts in a single daily call and tags each candidate with a front (`x_fronts`). It runs in shadow mode: candidates are stored as evidence and never analyzed or published. xAI bills mainly per post fetched, so the prompt caps searches and candidates; keep it to one combined call instead of one call per front. The five per-front `x-*-discovery` sources stay disabled so their stored evidence still resolves.
 - Evidence is written before analysis and remains available if analysis fails. A later run replays pending evidence instead of refetching or losing it.
 - HTML and IETF sources establish a silent baseline on first observation. Do not backfill history for newly added canonical sources.
 - RSS and GitHub sources retain their bounded catch-up behavior.
@@ -129,6 +130,7 @@ GitHub Actions supplies secrets at runtime:
 
 - `ANTHROPIC_API_KEY` — event analysis and weekly synthesis
 - `GEMINI_API_KEY` — grounded discovery sources
+- `XAI_API_KEY` — X discovery (`x-discovery`); the model comes from the workflow's `XAI_DISCOVERY_MODEL`
 - `GITHUB_TOKEN` — higher-rate authenticated GitHub source fetching
 - `CLOUDFLARE_ACCOUNT_ID`, `CLOUDFLARE_EMAIL`, `CLOUDFLARE_CRAWLER_API_KEY` — Browser Rendering sources
 - `ALERT_EMAILS`, `RESEND_API_KEY` — reserved workflow placeholders; no current alerter consumes them
