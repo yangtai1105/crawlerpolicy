@@ -1,0 +1,77 @@
+name: Map Readings
+
+on:
+  schedule:
+    - cron: "0 14 * * 1"   # Mondays at 14:00 UTC, after Weekly Intelligence
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: map-readings
+  cancel-in-progress: false
+
+jobs:
+  readings:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: astral-sh/setup-uv@v3
+        with:
+          version: "latest"
+
+      - name: Install Python
+        run: uv python install 3.12
+
+      - name: Sync deps
+        run: uv sync --frozen
+
+      - name: Generate readings onto the map/readings branch
+        id: generate
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git fetch origin main
+          git checkout -B map/readings origin/main
+          uv run python -m pipeline.weekly_readings
+          # Render the body AFTER generating: readings are written to
+          # data/readings/ rather than drained from a queue, so a body
+          # rendered beforehand would describe nothing — the opposite of the
+          # proposal workflow, where applying drains the queue.
+          uv run python -m pipeline.weekly_readings --body > /tmp/readings-body.md
+          git add -A data/readings
+          # data/readings also holds every already-merged reading, so its mere
+          # presence proves nothing; only a staged diff proves this run added
+          # something new. Without this check, a quiet week would still reach
+          # the PR step below with a non-empty (boilerplate-only) body and try
+          # to open a PR against a branch that was never pushed.
+          if git diff --cached --quiet; then
+            echo "No new readings this week; nothing to push."
+            echo "pushed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git commit -m "map: weekly readings"
+          git push -f origin map/readings
+          echo "pushed=true" >> "$GITHUB_OUTPUT"
+
+      - name: Open or update the pull request
+        if: steps.generate.outputs.pushed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          if gh pr view map/readings --json number >/dev/null 2>&1; then
+            gh pr edit map/readings --body-file /tmp/readings-body.md
+          else
+            gh pr create --base main --head map/readings \
+              --title "Map readings: weekly qualitative reads awaiting review" \
+              --body-file /tmp/readings-body.md
+          fi
