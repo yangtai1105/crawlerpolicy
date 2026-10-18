@@ -596,3 +596,32 @@ async def test_a_failing_proposal_stage_degrades_health_without_failing_the_publ
     assert health["map_proposals"]["status"] == "failed"
     # publication still happened despite the proposal stage exploding
     assert list((repo / "content" / "feed").glob("*.md"))
+
+
+async def test_dry_run_skips_the_proposal_stage_and_writes_nothing(repo):
+    _write_item_source(repo, tier="primary")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+    analysis = _material_analysis()
+    from pipeline.analyzer import ResolvedPositionClaim
+    from pipeline.positions import PositionStatus
+
+    analysis.position_claims = [
+        ResolvedPositionClaim(
+            player_slug="cloudflare",
+            protocol_slug="web-bot-auth",
+            status=PositionStatus.SHIPPED,
+        )
+    ]
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=analysis),
+        dry_run=True,
+    )
+
+    assert list((repo / "proposals").glob("*.json")) == []
+    assert health["map_proposals"] == {"status": "skipped", "proposed": 0, "error": ""}
