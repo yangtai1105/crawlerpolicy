@@ -157,3 +157,28 @@ def test_frontmatter_never_leaks_the_review_queue_fields(tmp_path, source, analy
 
     assert "unknown_players" not in frontmatter
     assert "unknown_protocols" not in frontmatter
+
+
+def test_frontmatter_carries_position_claims(tmp_path, source, analysis):
+    from pipeline.analyzer import ResolvedPositionClaim
+    from pipeline.positions import PositionStatus
+
+    analysis.position_claims = [
+        ResolvedPositionClaim(
+            player_slug="cloudflare",
+            protocol_slug="web-bot-auth",
+            status=PositionStatus.SHIPPED,
+        )
+    ]
+
+    frontmatter = _written(tmp_path, source, analysis)
+
+    assert frontmatter["position_claims"] == [
+        {"player": "cloudflare", "protocol": "web-bot-auth", "status": "shipped"}
+    ]
+
+
+def test_frontmatter_omits_position_claims_when_empty(tmp_path, source, analysis):
+    frontmatter = _written(tmp_path, source, analysis)
+
+    assert "position_claims" not in frontmatter

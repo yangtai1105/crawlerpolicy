@@ -104,6 +104,8 @@ def _compose(
         frontmatter += f"players:\n{_yaml_list(analysis.players, quoted=True)}"
     if analysis.protocols:
         frontmatter += f"protocols:\n{_yaml_list(analysis.protocols, quoted=True)}"
+    if analysis.position_claims:
+        frontmatter += f"position_claims:\n{_yaml_claims(analysis.position_claims)}"
     frontmatter += f"backfilled: {str(backfilled).lower()}\n"
     if backfilled:
         frontmatter += f"processed_at: {processed_at.isoformat()}\n"
@@ -140,3 +142,12 @@ def _yaml_list(values, *, quoted: bool = False) -> str:
     if quoted:
         return "".join(f'  - "{_yaml_escape(value)}"\n' for value in items)
     return "".join(f"  - {value}\n" for value in items)
+
+
+def _yaml_claims(claims) -> str:
+    return "".join(
+        f'  - player: "{claim.player_slug}"\n'
+        f'    protocol: "{claim.protocol_slug}"\n'
+        f"    status: {claim.status.value}\n"
+        for claim in claims
+    )
