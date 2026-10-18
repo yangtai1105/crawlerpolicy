@@ -1,0 +1,19 @@
+{
+  "evidence_id": "us-ftc-federal-register--ea533952717f1164",
+  "source": "us-ftc-federal-register",
+  "source_url": "https://www.federalregister.gov/documents/2026/09/24/2026-19598/rules-of-practice",
+  "supporting_urls": [],
+  "published_at": "2026-09-24T04:00:00Z",
+  "detected_at": "2026-10-18T05:56:13.858615Z",
+  "content_path": "content/evidence/us-ftc-federal-register/us-ftc-federal-register--ea533952717f1164.json",
+  "content_hash": "sha256:15e4e6bda55f4a9d5668df9f2fc7e90cdcaa29173c281ab46b63c4b8d0d457ef",
+  "external_id": "https://www.federalregister.gov/documents/2026/09/24/2026-19598/rules-of-practice",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Rules of Practice",
+  "content": "The Federal Trade Commission (&quot;Commission&quot; or &quot;FTC&quot;) is amending its rules of practice in order to eliminate the agency's post- employment clearance rule.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

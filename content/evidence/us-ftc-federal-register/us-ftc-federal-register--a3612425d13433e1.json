@@ -1,0 +1,19 @@
+{
+  "evidence_id": "us-ftc-federal-register--a3612425d13433e1",
+  "source": "us-ftc-federal-register",
+  "source_url": "https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses",
+  "supporting_urls": [],
+  "published_at": "2026-10-01T04:00:00Z",
+  "detected_at": "2026-10-18T05:56:13.858615Z",
+  "content_path": "content/evidence/us-ftc-federal-register/us-ftc-federal-register--a3612425d13433e1.json",
+  "content_hash": "sha256:24ba91008e12fb9d1af257592ec9239ae1e2b4b9c5af5269046c09c6ef05650f",
+  "external_id": "https://www.federalregister.gov/documents/2026/10/01/2026-20143/rule-on-impersonation-of-government-and-businesses",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Rule on Impersonation of Government and Businesses",
+  "content": "The Federal Trade Commission (&quot;FTC&quot; or &quot;Commission&quot;) proposes to commence a rulemaking proceeding to prevent certain unfair or deceptive acts or practices by search engine, social media, and other digital marketplace platforms that further government and business impersonation scams to defraud consumers. The Commission is soliciting written comment, data, and arguments concerning the need for such rulemaking.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

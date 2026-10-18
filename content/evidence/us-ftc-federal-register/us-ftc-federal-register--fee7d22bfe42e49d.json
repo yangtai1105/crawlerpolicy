@@ -1,0 +1,19 @@
+{
+  "evidence_id": "us-ftc-federal-register--fee7d22bfe42e49d",
+  "source": "us-ftc-federal-register",
+  "source_url": "https://www.federalregister.gov/documents/2026/10/14/2026-20970/agency-information-collection-activities-proposed-collection-comment-request-extension",
+  "supporting_urls": [],
+  "published_at": "2026-10-14T04:00:00Z",
+  "detected_at": "2026-10-18T05:56:13.858615Z",
+  "content_path": "content/evidence/us-ftc-federal-register/us-ftc-federal-register--fee7d22bfe42e49d.json",
+  "content_hash": "sha256:b4a534668af1a2731b1c4f03b346571eee9ac8d714872913c4b06e3b74ce798f",
+  "external_id": "https://www.federalregister.gov/documents/2026/10/14/2026-20970/agency-information-collection-activities-proposed-collection-comment-request-extension",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Extension",
+  "content": "In accordance with the Paperwork Reduction Act of 1995 (&quot;PRA&quot;), the Federal Trade Commission (&quot;FTC&quot; or &quot;Commission&quot;) is seeking public comment on its proposal to extend for an additional three years the Office of Management and Budget clearance for information collection requirements in its Contact Lens Rule (or Rule). That clearance expires on January 31, 2027.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

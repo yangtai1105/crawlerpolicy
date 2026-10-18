@@ -1,36 +1,36 @@
 {
-  "status": "degraded",
-  "last_attempted_at": "2026-10-18T05:30:01.304613Z",
-  "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
+  "status": "healthy",
+  "last_attempted_at": "2026-10-18T05:56:13.858615Z",
+  "last_fully_successful_at": "2026-10-18T05:56:13.858615Z",
   "coverage": {
-    "configured": 39,
-    "completed": 38,
-    "fetched": 38,
-    "analyzed": 38,
-    "published": 38,
-    "failed": 1,
+    "configured": 35,
+    "completed": 35,
+    "fetched": 35,
+    "analyzed": 35,
+    "published": 35,
+    "failed": 0,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 38,
-      "failed": 1,
+      "ok": 35,
+      "failed": 0,
       "pending": 0
     },
     "evidence": {
-      "ok": 38,
-      "failed": 1,
+      "ok": 35,
+      "failed": 0,
       "pending": 0
     },
     "analysis": {
-      "ok": 38,
+      "ok": 35,
       "failed": 0,
-      "pending": 1
+      "pending": 0
     },
     "publish": {
-      "ok": 38,
+      "ok": 35,
       "failed": 0,
-      "pending": 1
+      "pending": 0
     }
   },
   "per_source": {
@@ -204,13 +204,22 @@
       "events_written": [],
       "feed_items_written": []
     },
-    "us-ftc": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "Client error '404 Not Found' for url 'https://www.ftc.gov/feeds/press-release.xml'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404",
-      "evidence_ids": [],
+    "us-ftc-federal-register": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "us-ftc-federal-register--477219f685120ccb",
+        "us-ftc-federal-register--fee7d22bfe42e49d",
+        "us-ftc-federal-register--a3612425d13433e1",
+        "us-ftc-federal-register--7730325d72ae2a1c",
+        "us-ftc-federal-register--ea533952717f1164",
+        "us-ftc-federal-register--9647b1683f15df78",
+        "us-ftc-federal-register--62dfee5b6f52d3b4",
+        "us-ftc-federal-register--b3f6d926e12bbf73"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -374,60 +383,14 @@
       "events_written": [],
       "feed_items_written": []
     },
-    "x-access-discovery": {
+    "x-discovery": {
       "fetch": "ok",
       "evidence": "ok",
       "analysis": "ok",
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-access-discovery--ec65d6a7c38bf451"
-      ],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-agents-discovery": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-rights-discovery": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [
-        "x-rights-discovery--51d84ac6e4443093"
-      ],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-governance-discovery": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [
-        "x-governance-discovery--111a7b958bc26a9f"
-      ],
-      "events_written": [],
-      "feed_items_written": []
-    },
-    "x-measurement-discovery": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [
-        "x-measurement-discovery--b5c679e9941c1216"
+        "x-discovery--bd0949a2464132e2"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -458,11 +421,11 @@
   },
   "discovery": {
     "status": "shadow",
-    "candidate_count": 4,
-    "x_search_calls": 0,
-    "estimated_tool_cost_usd": 0.0,
-    "sources_configured": 5,
-    "sources_completed": 5,
+    "candidate_count": 1,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.126012,
+    "sources_configured": 1,
+    "sources_completed": 1,
     "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }

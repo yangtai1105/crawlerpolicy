@@ -1,0 +1,26 @@
+{
+  "evidence_id": "x-discovery--bd0949a2464132e2",
+  "source": "x-discovery",
+  "source_url": "https://x.com/NiemanLab/status/2111532148633092427",
+  "supporting_urls": [],
+  "published_at": "2026-10-17T18:57:49Z",
+  "detected_at": "2026-10-18T05:56:13.858615Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--bd0949a2464132e2.json",
+  "content_hash": "sha256:93e292aad1e66a5f5e97fe747dd9960934b69fa363f50bf3d959b2c6b68f2796",
+  "external_id": "2111532148633092427",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Meta revises terms of service to remove \"train\" from allowed uses",
+  "content": "X author: @NiemanLab\n\nMeta updated its terms by removing the word “train” from allowed use cases, limiting them to advertising and business products while still permitting broad website scraping that may override robots.txt.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "NiemanLab",
+    "post_url": "https://x.com/NiemanLab/status/2111532148633092427",
+    "linked_urls": [],
+    "provider_citations": [],
+    "front": "rights-markets",
+    "shadow": true
+  }
+}
