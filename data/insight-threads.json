@@ -1350,6 +1350,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "local-news-ai-adoption",
+      "title": "Local News AI Adoption",
+      "thesis": "Platform AI partnerships are shifting from bespoke arrangements with top-tier international publishers to broader institutional rollouts targeting local and regional newsrooms.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-google-expands-news-ai-pilot-to-over-400-outlets"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "machine-identity-verification",
       "title": "Machine Identity Verification",
       "thesis": "High-throughput cryptographic verification of bot signatures at the network edge creates cumulative latency bottlenecks if keys are parsed dynamically on every request rather than pre-decompressed at ingestion.",
@@ -1594,6 +1607,19 @@
       "verified_development_slugs": [
         "openai-plans-acquisition-of-ona-to-power-persistent-cloud-environments-for-codex"
       ]
+    },
+    {
+      "key": "platform-publisher-partnerships",
+      "title": "Platform Publisher Partnerships",
+      "thesis": "Platform AI partnerships are shifting from bespoke arrangements with top-tier international publishers to broader institutional rollouts targeting local and regional newsrooms.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-google-expands-news-ai-pilot-to-over-400-outlets"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "positive-security-models",

@@ -10,8 +10,8 @@
   "content_path": "content/evidence/x-discovery/x-discovery--2b648ecaac3158c1.json",
   "content_hash": "sha256:b9784a8e10b54c8637fb4e775ee57d794fe253b4fc711bc91479522a008b1530",
   "external_id": "2111533965202845908",
-  "stage": "fetched",
-  "analysis_attempts": 0,
+  "stage": "published",
+  "analysis_attempts": 1,
   "last_error": null,
   "title": "Google’s News AI pilot expands to over 400 publications",
   "content": "X author: @NiemanLab\n\nNieman Lab reported that Google expanded its News AI pilot program to more than 400 publications, including many U.S. local news outlets.\n\nLinked sources:\n- https://www.niemanlab.org/2026/10/googles-news-ai-pilot-expands-to-over-400-publications-including-u-s-local-news-outlets/",
@@ -25,6 +25,11 @@
     ],
     "provider_citations": [],
     "front": "access-discovery",
-    "shadow": true
+    "shadow": true,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover Google's expansion of its News AI pilot program to over 400 publications."
+    }
   }
 }

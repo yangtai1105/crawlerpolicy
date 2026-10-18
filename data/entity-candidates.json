@@ -27,6 +27,19 @@
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
       ]
     },
+    "player:nieman lab": {
+      "kind": "player",
+      "observed_name": "Nieman Lab",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-to-over-400-outlets"
+      ]
+    },
     "player:radist": {
       "kind": "player",
       "observed_name": "Radist",

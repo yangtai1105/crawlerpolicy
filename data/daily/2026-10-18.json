@@ -1,10 +1,16 @@
 {
   "schema_version": 1,
   "edition_date": "2026-10-18",
-  "generated_at": "2026-10-18T15:15:21.473886Z",
+  "generated_at": "2026-10-18T15:19:57.333157Z",
   "status": "published",
   "note": "Highest-consequence developments detected in this daily window.",
   "items": [
+    {
+      "slug": "x-discovery-google-expands-news-ai-pilot-to-over-400-outlets",
+      "status": "signal",
+      "importance": 0.65,
+      "published_at": "2026-10-17T18:48:00Z"
+    },
     {
       "slug": "x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new",
       "status": "signal",
