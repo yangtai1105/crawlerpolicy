@@ -78,3 +78,23 @@ def test_the_shipped_seed_file_is_valid():
     rows = [SeedRow(**row) for row in (raw.get("rows") or [])]
 
     assert validate_seed(rows, REGISTRY) == []
+
+
+def test_a_duplicate_cell_is_refused():
+    rows = [SeedRow(**_row()), SeedRow(**_row(since="2026-08-01"))]
+
+    errors = validate_seed(rows, REGISTRY)
+
+    assert any("duplicate" in e for e in errors)
+
+
+def test_a_source_url_that_is_not_a_url_is_refused():
+    errors = validate_seed([SeedRow(**_row(source_url="not-a-url"))], REGISTRY)
+
+    assert any("not a URL" in e for e in errors)
+
+
+def test_a_malformed_since_date_is_refused():
+    errors = validate_seed([SeedRow(**_row(since="July 11"))], REGISTRY)
+
+    assert any("not an ISO date" in e for e in errors)
