@@ -1,0 +1,29 @@
+{
+  "evidence_id": "x-governance-discovery--111a7b958bc26a9f",
+  "source": "x-governance-discovery",
+  "source_url": "https://x.com/verge/status/2111475606076760365",
+  "supporting_urls": [
+    "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites"
+  ],
+  "published_at": "2026-10-17T15:13:08Z",
+  "detected_at": "2026-10-18T05:30:01.304613Z",
+  "content_path": "content/evidence/x-governance-discovery/x-governance-discovery--111a7b958bc26a9f.json",
+  "content_hash": "sha256:580aa6e0b74b17d80e7cd95831cf0ee287b3423540c70e056a51494ed51b6f34",
+  "external_id": "2111475606076760365",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Meta removes language that may have allowed it to scrape news sites",
+  "content": "X author: @verge\n\nLanguage that experts say allowed the scraping of news sites to train its AI has been removed from Meta’s terms.\n\nLinked sources:\n- https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "verge",
+    "post_url": "https://x.com/verge/status/2111475606076760365",
+    "linked_urls": [
+      "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites"
+    ],
+    "provider_citations": [],
+    "shadow": true
+  }
+}

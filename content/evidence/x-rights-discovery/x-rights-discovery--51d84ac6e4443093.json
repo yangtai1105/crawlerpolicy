@@ -1,0 +1,25 @@
+{
+  "evidence_id": "x-rights-discovery--51d84ac6e4443093",
+  "source": "x-rights-discovery",
+  "source_url": "https://x.com/NiemanLab/status/2111532148633092427",
+  "supporting_urls": [],
+  "published_at": "2026-10-17T18:57:49Z",
+  "detected_at": "2026-10-18T05:30:01.304613Z",
+  "content_path": "content/evidence/x-rights-discovery/x-rights-discovery--51d84ac6e4443093.json",
+  "content_hash": "sha256:6f7784c0128aa43dfc2512b37762fd003e022ae76488ad04f98ad461c3203883",
+  "external_id": "2111532148633092427",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Meta removes “train” from allowed use cases while still permitting broad website scraping that may supersede robots.txt",
+  "content": "X author: @NiemanLab\n\nMeta revised its terms on Friday by removing the word “train” from a list of allowed use cases and limiting remaining uses to advertising and business products. Legal experts say the changes still permit broad scraping of websites and could override robots.txt files.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "NiemanLab",
+    "post_url": "https://x.com/NiemanLab/status/2111532148633092427",
+    "linked_urls": [],
+    "provider_citations": [],
+    "shadow": true
+  }
+}

@@ -1,34 +1,34 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-10-18T05:17:07.862455Z",
+  "last_attempted_at": "2026-10-18T05:30:01.304613Z",
   "last_fully_successful_at": "2026-09-03T12:37:50.015970Z",
   "coverage": {
-    "configured": 34,
-    "completed": 33,
-    "fetched": 33,
-    "analyzed": 33,
-    "published": 33,
+    "configured": 39,
+    "completed": 38,
+    "fetched": 38,
+    "analyzed": 38,
+    "published": 38,
     "failed": 1,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 33,
+      "ok": 38,
       "failed": 1,
       "pending": 0
     },
     "evidence": {
-      "ok": 33,
+      "ok": 38,
       "failed": 1,
       "pending": 0
     },
     "analysis": {
-      "ok": 33,
+      "ok": 38,
       "failed": 0,
       "pending": 1
     },
     "publish": {
-      "ok": 33,
+      "ok": 38,
       "failed": 0,
       "pending": 1
     }
@@ -373,6 +373,64 @@
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
+    },
+    "x-access-discovery": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "x-access-discovery--ec65d6a7c38bf451"
+      ],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-agents-discovery": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-rights-discovery": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "x-rights-discovery--51d84ac6e4443093"
+      ],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-governance-discovery": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "x-governance-discovery--111a7b958bc26a9f"
+      ],
+      "events_written": [],
+      "feed_items_written": []
+    },
+    "x-measurement-discovery": {
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "x-measurement-discovery--b5c679e9941c1216"
+      ],
+      "events_written": [],
+      "feed_items_written": []
     }
   },
   "events_written": [],
@@ -399,12 +457,12 @@
     "error": ""
   },
   "discovery": {
-    "status": "disabled",
-    "candidate_count": 0,
+    "status": "shadow",
+    "candidate_count": 4,
     "x_search_calls": 0,
     "estimated_tool_cost_usd": 0.0,
-    "sources_configured": 0,
-    "sources_completed": 0,
+    "sources_configured": 5,
+    "sources_completed": 5,
     "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }

@@ -1,0 +1,29 @@
+{
+  "evidence_id": "x-access-discovery--ec65d6a7c38bf451",
+  "source": "x-access-discovery",
+  "source_url": "https://x.com/sengineland/status/2111185635578978428",
+  "supporting_urls": [
+    "https://searchengineland.com/chatgpt-appears-to-drop-utm-tracking-making-ai-referral-traffic-harder-to-measure-496552?utm_source=searchengineland.com&utm_medium=social&utm_campaign=sel-social-x&utm_content=20261016+x"
+  ],
+  "published_at": "2026-10-16T20:00:54Z",
+  "detected_at": "2026-10-18T05:30:01.304613Z",
+  "content_path": "content/evidence/x-access-discovery/x-access-discovery--ec65d6a7c38bf451.json",
+  "content_hash": "sha256:79aac5408d22345f03176e544fe480a1052f8b470a3b6c3728d3603faef01e93",
+  "external_id": "2111185635578978428",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "ChatGPT appears to drop UTM tracking on referral links",
+  "content": "X author: @sengineland\n\nAnalysis of 500 pages shows ChatGPT links have lost UTM tags, causing AI referral visits to be classified as direct traffic in analytics rather than as ChatGPT referrals.\n\nLinked sources:\n- https://searchengineland.com/chatgpt-appears-to-drop-utm-tracking-making-ai-referral-traffic-harder-to-measure-496552?utm_source=searchengineland.com&utm_medium=social&utm_campaign=sel-social-x&utm_content=20261016+x",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "sengineland",
+    "post_url": "https://x.com/sengineland/status/2111185635578978428",
+    "linked_urls": [
+      "https://searchengineland.com/chatgpt-appears-to-drop-utm-tracking-making-ai-referral-traffic-harder-to-measure-496552?utm_source=searchengineland.com&utm_medium=social&utm_campaign=sel-social-x&utm_content=20261016+x"
+    ],
+    "provider_citations": [],
+    "shadow": true
+  }
+}
