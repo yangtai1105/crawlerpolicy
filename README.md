@@ -24,7 +24,7 @@ Only a `verified` and `material` item can enter `content/events/`, move a durabl
 ## How it works
 
 ```text
-configured direct sources          xAI X Search (optional, shadow first)
+configured direct sources          xAI X Search (optional, gated live)
   -> fetch and normalize             -> five narrow 36-hour searches
   -> direct evidence                 -> validated X candidate evidence
                   -> combined evidence queue
@@ -90,9 +90,9 @@ uv run pytest -q
 # Validates a source path without writing publication files.
 GEMINI_API_KEY=... uv run python -m pipeline.check --dry-run --only gptbot
 
-# Exercises one X discovery query. It saves no public item while shadow is true.
+# Exercises the X discovery query. --dry-run writes no evidence or public items.
 XAI_API_KEY=... GEMINI_API_KEY=... \
-  uv run python -m pipeline.check --only x-discovery
+  uv run python -m pipeline.check --dry-run --only x-discovery
 
 # Runs all enabled sources and writes replayable content.
 XAI_API_KEY=... GEMINI_API_KEY=... uv run python -m pipeline.check
@@ -121,7 +121,7 @@ npm run dev
 
 The scheduled workflows are `.github/workflows/daily-check.yml` and `.github/workflows/weekly-reading.yml`. Daily Check runs at 08:00 UTC, commits newly fetched evidence, the dated edition, insight threads, and publication records, then lets Vercel deploy the static site from `main`. Weekly Intelligence runs on Mondays at 13:00 UTC and refuses critical or stale evidence windows.
 
-Add `GEMINI_API_KEY` and `XAI_API_KEY` in **GitHub repository → Settings → Secrets and variables → Actions**. The five `xai_search` sources begin with `shadow: true`: candidates are retained as evidence but cannot publish. After seven daily windows, inspect `data/health.json` under `discovery` for candidate yield, completed searches, failures, and estimated cost. Change individual source entries to `shadow: false` only when their results are consistently unique, in scope, and trustworthy; a live X-only item still publishes only as `signal` and cannot update verified developments or weekly conclusions.
+Add `GEMINI_API_KEY` and `XAI_API_KEY` in **GitHub repository → Settings → Secrets and variables → Actions**. The single `x-discovery` source is live: each candidate passes a freshness and exclusivity gate (`pipeline/x_novelty.py`) before analysis, and duplicates or stories already carried are kept only as evidence. Inspect `data/health.json` under `discovery` for candidate yield, completed searches, failures, and estimated cost. A live X-only item publishes only as `signal` and cannot update verified developments or weekly conclusions. Set `shadow: true` to stop publishing while keeping evidence.
 
 ## Failure behavior
 

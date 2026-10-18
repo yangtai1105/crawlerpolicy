@@ -446,7 +446,9 @@
       identification, publisher traffic or revenue effects of AI
   x_priority_handles: [Cloudflare, GoogleSearchC, OpenAI, AnthropicAI, perplexity_ai, CommonCrawl, IETF, W3C, Reddit, FTC, EU_Commission, CMAgovUK, sengineland, ppcland, TechCrunch, verge, WIRED, arstechnica, 404mediaco, NiemanLab, Digiday, pressgazette]
   lookback_hours: 26
-  shadow: true
+  # Live: candidates that pass the freshness/exclusivity gate
+  # (pipeline/x_novelty.py) publish as `signal` feed items.
+  shadow: false
   display_name: X — Discovery
   default_tracks: [access-controls, platform-ecosystem, licensing-monetization, policy-regulation, measurement-economics]
   tier: commentary

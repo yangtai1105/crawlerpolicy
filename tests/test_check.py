@@ -1,6 +1,7 @@
 """Smoke-level orchestration test: one html_page source, one change → one event."""
 import hashlib
 import json
+from dataclasses import replace
 from datetime import UTC, datetime
 from pathlib import Path
 from unittest.mock import AsyncMock
@@ -542,6 +543,49 @@ async def test_non_shadow_x_candidate_publishes_signal_with_attribution(repo):
     assert "https://blog.cloudflare.com/example" in text
     assert list((repo / "content/events").glob("*.md")) == []
     assert health["discovery"]["status"] == "live"
+
+
+async def test_live_x_surfaces_one_post_per_development_and_skips_stale(repo):
+    (repo / "sources.yaml").write_text("[]\n")
+    _add_x_source(repo, shadow=False)
+    first = _x_item()
+    repost = replace(
+        first,
+        **{
+            "guid": "2031535503443374366",
+            "url": "https://x.com/verge/status/2031535503443374366",
+            "title": "The Verge: Cloudflare changes crawler controls",
+        },
+    )
+    stale = replace(
+        first,
+        **{
+            "guid": "2031535503443374367",
+            "published_at": datetime(2026, 8, 30, 4, tzinfo=UTC),
+            "metadata": {**first.metadata, "linked_urls": ["https://example.com/other"]},
+        },
+    )
+    analyze = AsyncMock(return_value=_material_analysis())
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(
+                mode=ResultMode.PER_ITEM, items=[first, repost, stale]
+            )
+        ),
+        analyze_change=analyze,
+    )
+
+    assert len(list((repo / "content/feed").glob("*.md"))) == 1
+    assert analyze.await_count == 1
+    outcomes = sorted(
+        json.loads(path.read_text())["discovery_metadata"]["novelty"]["outcome"]
+        for path in (repo / "content/evidence/x-access-discovery").glob("*.json")
+    )
+    # The repost links the article the first post already published.
+    assert outcomes == ["covered", "new", "stale"]
 
 
 async def test_proposal_stage_writes_proposals_without_touching_positions(repo):

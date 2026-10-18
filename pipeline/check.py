@@ -61,6 +61,7 @@ from pipeline.state import SourceState, load_state, save_state
 from pipeline.state_of_play import build_opt_out_matrix, select_crawler_control_sources
 from pipeline.taxonomy import Track
 from pipeline.trend_context import format_trend_context, load_recent_events_for_source
+from pipeline.x_novelty import load_seen, screen_x_candidate
 
 log = logging.getLogger("check")
 
@@ -232,6 +233,7 @@ async def run_check(
         circuit=circuit,
         analyze_change=analyze_change,
         events_written=events_written,
+        now=now,
         dry_run=dry_run,
     )
 
@@ -555,6 +557,7 @@ async def _process_diffable(
         circuit=circuit,
         analyze_change=analyze_change,
         status=status,
+        now=now,
         dry_run=dry_run,
     )
     return ([event] if event is not None else []), state
@@ -617,6 +620,7 @@ async def _process_items(
             circuit=circuit,
             analyze_change=analyze_change,
             status=status,
+            now=now,
             dry_run=dry_run,
         )
         if event is not None:
@@ -680,6 +684,7 @@ async def _analyze_and_publish(
     circuit: ProviderCircuit,
     analyze_change: Callable,
     status: SourceRunStatus,
+    now: datetime,
     dry_run: bool,
 ) -> Path | None:
     if circuit.is_open:
@@ -696,6 +701,7 @@ async def _analyze_and_publish(
             record=record,
             model=model,
             analyze_change=analyze_change,
+            now=now,
             dry_run=dry_run,
         )
         if status.analysis is not StageStatus.FAILED:
@@ -737,6 +743,7 @@ async def _analyze_evidence(
     record: EvidenceRecord,
     model: StructuredModel | None,
     analyze_change: Callable,
+    now: datetime,
     dry_run: bool,
 ) -> AnalysisResult | None:
     if record.title is not None:
@@ -765,6 +772,26 @@ async def _analyze_evidence(
                     relevance_pass=False,
                 )
             return None
+        if source.type is SourceType.XAI_SEARCH:
+            decision = await screen_x_candidate(
+                record,
+                seen=load_seen(
+                    feed_dir=cfg.feed_dir,
+                    evidence_dir=cfg.evidence_dir,
+                    x_source=source.slug,
+                    exclude_evidence_id=record.evidence_id,
+                    now=now,
+                ),
+                model=model,
+                now=now,
+            )
+            record.discovery_metadata["novelty"] = decision.as_metadata()
+            if not decision.surfaces:
+                record.stage = EvidenceStage.ANALYZED
+                record.last_error = None
+                if not dry_run:
+                    save_evidence(cfg.evidence_dir, record)
+                return None
 
     analysis = await analyze_change(
         model=model,
@@ -890,6 +917,7 @@ async def _replay_pending(
     circuit: ProviderCircuit,
     analyze_change: Callable,
     events_written: list[Path],
+    now: datetime,
     dry_run: bool,
 ) -> None:
     for _path, record in pending_analysis(cfg.evidence_dir):
@@ -919,6 +947,7 @@ async def _replay_pending(
             circuit=circuit,
             analyze_change=analyze_change,
             status=status,
+            now=now,
             dry_run=dry_run,
         )
         if event is not None:
