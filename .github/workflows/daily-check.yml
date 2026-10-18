@@ -58,10 +58,26 @@ jobs:
           git add -A
           if git diff --cached --quiet; then
             echo "No changes to commit."
-          else
-            git commit -m "daily-check $(date -u +%F): auto-run"
-            git push origin HEAD:${{ github.ref_name }}
+            exit 0
           fi
+          git commit -m "daily-check $(date -u +%F): auto-run"
+          # main has a second writer now: a merge of map/proposals or
+          # map/readings between this job's checkout and this push rejects a
+          # bare push with nothing to retry it, silently losing this run's
+          # feed items, snapshots and proposals. Rebase onto the latest main
+          # and retry a bounded number of times instead of force-pushing.
+          attempt=1
+          max_attempts=5
+          until git push origin HEAD:${{ github.ref_name }}; do
+            if [ "$attempt" -ge "$max_attempts" ]; then
+              echo "::error::push to ${{ github.ref_name }} failed after $attempt attempts"
+              exit 1
+            fi
+            attempt=$((attempt + 1))
+            echo "push rejected; fetching and rebasing (attempt $attempt/$max_attempts)"
+            git fetch origin ${{ github.ref_name }}
+            git rebase origin/${{ github.ref_name }}
+          done
 
       - name: Preserve critical pipeline outcome
         if: always() && steps.daily_check.outcome == 'failure'

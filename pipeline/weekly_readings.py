@@ -122,6 +122,22 @@ def load_window_records(
     return records
 
 
+def select_this_runs_readings(readings: list[Reading]) -> list[Reading]:
+    """Narrow to only the readings this run generated.
+
+    `data/readings/` also holds every already-merged reading from prior weeks,
+    so its mere presence proves nothing about this run. All readings one
+    `generate()` call writes share the exact same `generated_at` (computed
+    once, at the top of that call), and that timestamp is always later than
+    any previously-merged reading's — so the readings whose `generated_at`
+    equals the maximum present are exactly this run's output.
+    """
+    if not readings:
+        return []
+    latest = max(reading.generated_at for reading in readings)
+    return [reading for reading in readings if reading.generated_at == latest]
+
+
 def render_body(readings: list[Reading]) -> str:
     lines = [
         "Weekly readings generated from this week's verified developments.",
@@ -199,7 +215,7 @@ def main() -> int:
             Reading.model_validate_json(path.read_text())
             for path in sorted(cfg.readings_dir.glob("*.json"))
         ]
-        print(render_body(readings), end="")
+        print(render_body(select_this_runs_readings(readings)), end="")
         return 0
 
     if not cfg.gemini_api_key:

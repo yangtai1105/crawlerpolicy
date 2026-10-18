@@ -290,6 +290,51 @@ def test_main_body_flag_renders_the_readings_already_on_disk(tmp_path, monkeypat
     assert "protocol · web-bot-auth" in captured.out
 
 
+def test_body_excludes_an_already_merged_reading_with_an_older_generated_at(
+    tmp_path, monkeypatch, capsys
+):
+    """`data/readings/` holds every previously-merged reading, not just this
+    run's output. The PR body must describe only what this run generated, so
+    a pre-existing reading with an older `generated_at` must not appear,
+    while the one this run just wrote must.
+    """
+    monkeypatch.setenv("REPO_ROOT", str(tmp_path))
+    readings_dir = tmp_path / "data" / "readings"
+    older = Reading(
+        subject_kind="protocol",
+        subject_slug="aipref-vocab",
+        stance="Already merged last week.",
+        adoption_shape="a",
+        new_entrants="n",
+        watch_for="w",
+        built_from=["akamai-aipref"],
+        development_count=1,
+        generated_at=datetime(2026, 10, 10, 8, tzinfo=UTC),
+    )
+    this_run = Reading(
+        subject_kind="protocol",
+        subject_slug="web-bot-auth",
+        stance="Verification is consolidating among defenders.",
+        adoption_shape="a",
+        new_entrants="n",
+        watch_for="w",
+        built_from=["cloudflare-signs-bots"],
+        development_count=1,
+        generated_at=NOW,
+    )
+    save_reading(readings_dir, older)
+    save_reading(readings_dir, this_run)
+    monkeypatch.setattr(sys, "argv", ["weekly_readings", "--body"])
+
+    exit_code = main()
+
+    assert exit_code == 0
+    captured = capsys.readouterr()
+    assert "protocol · web-bot-auth" in captured.out
+    assert "aipref-vocab" not in captured.out
+    assert "Already merged last week." not in captured.out
+
+
 def test_main_without_gemini_api_key_refuses_to_generate(tmp_path, monkeypatch, capsys):
     monkeypatch.setenv("REPO_ROOT", str(tmp_path))
     monkeypatch.delenv("GEMINI_API_KEY", raising=False)

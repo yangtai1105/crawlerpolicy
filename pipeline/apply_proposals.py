@@ -12,7 +12,13 @@ from datetime import UTC, datetime
 from pathlib import Path
 
 from pipeline.map_proposals import Proposal
-from pipeline.positions import Position, load_positions, position_key, save_positions
+from pipeline.positions import (
+    Position,
+    PositionStatus,
+    load_positions,
+    position_key,
+    save_positions,
+)
 
 PROPOSALS_DIR = Path("proposals")
 POSITIONS_PATH = Path("data/positions.json")
@@ -36,12 +42,24 @@ def apply(
     Deleting the applied files is what makes the queue drain: a proposal left
     in `proposals/` after the merge would be re-proposed every day forever,
     because the comparison would still see merged state it had already moved.
+
+    `previous_status` comes from the running registry — the status the cell
+    holds at this point in the batch — never from `proposal.from_status`,
+    which was computed against `main` before the batch started and goes stale
+    the moment an earlier proposal in the same batch touches the same cell.
+    A proposal whose `to_status` already matches the running registry's
+    current status for that cell is a no-op: skipping it means a stale
+    re-proposal of an already-applied change cannot overwrite a position that
+    has since moved further.
     """
     registry = load_positions(positions_path)
     now = datetime.now(UTC)
     applied = 0
     for proposal in proposals:
         existing = registry.get(proposal.player_slug, proposal.protocol_slug)
+        current_status = existing.status if existing is not None else PositionStatus.NONE
+        if current_status is proposal.to_status:
+            continue
         if existing is not None:
             registry.positions.remove(existing)
         registry.positions.append(
@@ -50,7 +68,7 @@ def apply(
                 protocol_slug=proposal.protocol_slug,
                 status=proposal.to_status,
                 since=proposal.since,
-                previous_status=proposal.from_status,
+                previous_status=current_status,
                 last_changed_at=now,
                 evidence_level=proposal.evidence_level,
                 source_urls=proposal.source_urls,

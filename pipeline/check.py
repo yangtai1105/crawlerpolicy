@@ -347,22 +347,30 @@ async def run_check(
             "path": None,
         }
 
+    feed_items_written_list = [
+        path
+        for source_status in statuses.values()
+        for path in source_status.feed_items_written
+    ]
+    map_proposals_result = _run_map_proposals_stage(
+        cfg=cfg,
+        now=now,
+        feed_items_written=feed_items_written_list,
+        skip=dry_run or only is not None,
+    )
     previous_success = _load_last_full_success(cfg.data_dir / "health.json")
     health = build_run_health(
         sources=sources,
         per_source=statuses,
         now=now,
         last_full_success=previous_success,
+        map_proposals_failed=map_proposals_result["status"] == "failed",
     )
     payload = health.model_dump(mode="json")
     payload["events_written"] = [
         str(path.relative_to(repo_root)) for path in events_written
     ]
-    payload["feed_items_written"] = [
-        path
-        for source_status in statuses.values()
-        for path in source_status.feed_items_written
-    ]
+    payload["feed_items_written"] = feed_items_written_list
     provider_error = str(circuit.failure) if circuit.failure else None
     provider_unavailable = any(
         blocker.stage == "analysis" for blocker in blockers.values()
@@ -381,12 +389,7 @@ async def run_check(
     payload["derived_errors"] = derived_errors
     payload["daily_brief"] = daily_brief_payload
     payload["insight_threads"] = insight_threads_payload
-    payload["map_proposals"] = _run_map_proposals_stage(
-        cfg=cfg,
-        now=now,
-        feed_items_written=payload["feed_items_written"],
-        skip=dry_run or only is not None,
-    )
+    payload["map_proposals"] = map_proposals_result
     x_sources = [source for source in sources if source.type is SourceType.XAI_SEARCH]
     x_completed = sum(statuses[source.slug].completed for source in x_sources)
     x_failed = sum(
@@ -1014,14 +1017,24 @@ def _run_map_proposals_stage(
     here is caught and reported into the health payload, never raised, so it
     can never mark a successful publish as failed. Reads `positions.json` and
     writes only to `proposals/` — never `data/positions.json`.
+
+    Each feed record is parsed individually: one record missing a field
+    `FeedRecord` requires (e.g. `source_tier`, `event_date`) must cost that one
+    record, not the whole day's proposals. The outer `try` stays, for failures
+    that are genuinely about the stage itself (e.g. the registry or the
+    proposals directory).
     """
     if skip:
         return {"status": "skipped", "proposed": 0, "error": ""}
     try:
         registry = load_positions(cfg.positions_path)
-        records = [
-            _load_feed_record(cfg.repo_root / rel) for rel in feed_items_written
-        ]
+        records: list[FeedRecord] = []
+        for rel in feed_items_written:
+            path = cfg.repo_root / rel
+            try:
+                records.append(_load_feed_record(path))
+            except Exception as error:
+                log.warning("skipping malformed feed record %s: %s", path, error)
         proposals = collect_proposals(records, registry, run_id=now.isoformat())
         written = save_proposals(
             cfg.proposals_dir, proposals, date_str=now.date().isoformat()

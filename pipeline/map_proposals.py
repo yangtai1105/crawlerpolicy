@@ -13,17 +13,13 @@ from pathlib import Path
 
 from pydantic import BaseModel, Field
 
+from pipeline.feed import is_primary_tier
 from pipeline.positions import (
     EvidenceLevel,
     PositionRegistry,
     PositionStatus,
     may_change,
 )
-
-# Tiers the project treats as first-party factual evidence. `verified` status is
-# already gated on these upstream; requiring the tier here too makes the
-# invariant local and testable rather than inherited.
-_PRIMARY_TIERS = {"primary", "measurement"}
 
 
 class FeedRecord(BaseModel):
@@ -53,7 +49,7 @@ class Proposal(BaseModel):
 
 def evidence_level_for(source_tier: str) -> EvidenceLevel:
     """Map a source tier onto the two evidence levels the matrix recognises."""
-    if source_tier.strip().lower() in _PRIMARY_TIERS:
+    if is_primary_tier(source_tier):
         return EvidenceLevel.PRIMARY
     return EvidenceLevel.SECONDARY
 
@@ -110,7 +106,15 @@ def collect_proposals(
 def save_proposals(
     proposals_dir: Path, proposals: list[Proposal], *, date_str: str
 ) -> list[Path]:
-    """Write one file per proposal. Writes nothing when there is nothing to say."""
+    """Write one file per proposal. Writes nothing when there is nothing to say.
+
+    Clears this date's existing files first: a same-day re-run that proposes
+    fewer cells than an earlier run that day must not leave stale
+    higher-index files behind.
+    """
+    if proposals_dir.exists():
+        for stale in proposals_dir.glob(f"{date_str}-*.json"):
+            stale.unlink()
     if not proposals:
         return []
     proposals_dir.mkdir(parents=True, exist_ok=True)

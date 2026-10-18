@@ -68,8 +68,14 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if gh pr view map/readings --json number >/dev/null 2>&1; then
-            gh pr edit map/readings --body-file /tmp/readings-body.md
+          # `gh pr view <branch>` resolves to that head branch's most recent
+          # pull request EVEN IF IT WAS ALREADY MERGED. After the first merge,
+          # that would make this match the merged PR, rewrite its body, and
+          # never open a new one — silently removing the review gate on every
+          # run from then on. Only an OPEN pull request may be reused.
+          PR=$(gh pr list --state open --head map/readings --json number -q '.[0].number')
+          if [ -n "$PR" ]; then
+            gh pr edit "$PR" --body-file /tmp/readings-body.md
           else
             gh pr create --base main --head map/readings \
               --title "Map readings: weekly qualitative reads awaiting review" \

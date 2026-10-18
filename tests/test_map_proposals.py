@@ -142,3 +142,21 @@ def test_save_proposals_writes_one_file_per_proposal_and_nothing_else(tmp_path):
 def test_save_proposals_writes_nothing_when_there_is_nothing_to_propose(tmp_path):
     assert save_proposals(tmp_path, [], date_str="2026-10-17") == []
     assert list(tmp_path.glob("*")) == []
+
+
+def test_save_proposals_clears_stale_files_from_an_earlier_same_day_run(tmp_path):
+    """A same-day re-run that proposes fewer cells than an earlier run that
+    day must not leave the earlier run's higher-index files behind: if the
+    earlier run wrote -1, -2 and -3 and this run only has one proposal to
+    make, only -1 should exist afterward.
+    """
+    tmp_path.mkdir(exist_ok=True)
+    (tmp_path / "2026-10-17-1.json").write_text("{}")
+    (tmp_path / "2026-10-17-2.json").write_text("{}")
+    (tmp_path / "2026-10-17-3.json").write_text("{}")
+
+    proposals = collect_proposals([_record()], PositionRegistry(), run_id="run-2")
+    written = save_proposals(tmp_path, proposals, date_str="2026-10-17")
+
+    assert [p.name for p in written] == ["2026-10-17-1.json"]
+    assert sorted(p.name for p in tmp_path.glob("2026-10-17-*.json")) == ["2026-10-17-1.json"]
