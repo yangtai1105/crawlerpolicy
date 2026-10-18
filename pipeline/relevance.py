@@ -39,7 +39,9 @@ class RelevanceVerdict(BaseModel):
 _RELEVANCE_PROMPT = """Classify whether the supplied item is relevant to Crawler Policy.
 Relevant subjects are AI crawler policy, AI training data, bot access and robots.txt, AI-related
 content regulation, agent infrastructure, crawler identity and authentication, content rights,
-licensing, and the economics or measurement of machine traffic. Return a concise reason grounded
+licensing, AI search and discovery (AI answers, citations, referrals), AI platforms' programs,
+products, or deals with publishers and other content owners, and the economics or measurement of
+machine traffic. Return a concise reason grounded
 only in the supplied title and summary.
 """
 
