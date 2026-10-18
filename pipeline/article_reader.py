@@ -6,8 +6,9 @@ JSON-LD `articleBody`. One plain GET of that HTML, before any script runs,
 is enough; nothing here sends cookies, spoofs a crawler, or retries around a
 block. robots.txt is honoured.
 
-Article text is used only as model input. It is never persisted: the
-repository is public, so evidence keeps only metadata about what was read.
+Article text is model input and is never written to this public repository;
+evidence keeps only metadata about what was read. The private archive
+(`pipeline/article_archive.py`) is the one place a full copy is kept.
 """
 from __future__ import annotations
 
@@ -75,7 +76,13 @@ def _json_ld_article(soup: BeautifulSoup) -> tuple[str, str]:
             if isinstance(body, str) and len(body) > len(best_body):
                 best_body = body
                 best_title = str(node.get("headline") or "")
-    return best_title, " ".join(best_body.split())
+    return best_title, _paragraphs(best_body)
+
+
+def _paragraphs(text: str) -> str:
+    """Collapse whitespace inside lines but keep paragraph breaks for reading."""
+    lines = (" ".join(line.split()) for line in text.splitlines())
+    return "\n\n".join(line for line in lines if line)
 
 
 def extract_article(html: str) -> tuple[str, str, str]:
@@ -83,8 +90,8 @@ def extract_article(html: str) -> tuple[str, str, str]:
     soup = BeautifulSoup(html, "lxml")
     ld_title, ld_body = _json_ld_article(soup)
     document = Document(html)
-    readable = " ".join(
-        BeautifulSoup(document.summary(), "lxml").get_text(" ", strip=True).split()
+    readable = _paragraphs(
+        BeautifulSoup(document.summary(), "lxml").get_text("\n", strip=True)
     )
     title = ld_title or document.short_title() or ""
     if len(ld_body) >= len(readable):

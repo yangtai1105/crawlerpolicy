@@ -80,6 +80,10 @@ const feed = defineCollection({
     backfilled: z.boolean().default(false),
     processed_at: z.coerce.date().optional(),
     backfill_batch: z.string().optional(),
+    // Wayback snapshots of the linked articles, open to every reader.
+    archived_copies: z.array(z.url()).default([]),
+    // Full-text copies in the owner's private archive repository.
+    saved_copies: z.array(z.url()).default([]),
   }).superRefine((item, ctx) => {
     if (item.backfilled && (!item.processed_at || !item.backfill_batch)) {
       ctx.addIssue({

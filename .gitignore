@@ -23,3 +23,6 @@ dist/
 
 # Brainstorm artifacts (keep out of prod commits)
 .superpowers/
+
+# Private article archive checkout (separate private repo; never commit here)
+.private-archive/

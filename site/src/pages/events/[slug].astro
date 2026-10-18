@@ -42,6 +42,8 @@ const feedData = isFeed ? event.data as CollectionEntry<"feed">["data"] : null;
 const displayDate = legacyData?.detected_at ?? currentData?.event_date ?? feedData!.event_date;
 const legacyOrCurrentUrl = legacyData?.source_url ?? currentData?.source_url ?? "";
 const sourceUrls = feedData?.source_urls ?? (legacyOrCurrentUrl ? [legacyOrCurrentUrl] : []);
+const archivedCopies = feedData?.archived_copies ?? [];
+const savedCopies = feedData?.saved_copies ?? [];
 const publicationLabel = feedData ? feedData.status[0].toUpperCase() + feedData.status.slice(1) : "";
 const originalPublicationDate = feedData?.published_at.toLocaleDateString("en-US", {
   month: "long",
@@ -76,6 +78,8 @@ const originalPublicationDate = feedData?.published_at.toLocaleDateString("en-US
       {sourceUrls.length > 0 && (
         <p class="event-page-url">
           {sourceUrls.map((url) => <a href={url} target="_blank" rel="noopener noreferrer">Open source ↗</a>)}
+          {archivedCopies.map((url) => <a href={url} target="_blank" rel="noopener noreferrer">Archived copy ↗</a>)}
+          {savedCopies.map((url) => <a class="saved-copy" href={url} target="_blank" rel="noopener noreferrer" title="Full text in the editor's private archive">Saved copy · private ↗</a>)}
         </p>
       )}
     </header>
@@ -141,7 +145,9 @@ const originalPublicationDate = feedData?.published_at.toLocaleDateString("en-US
     color: var(--ink-muted);
     word-break: break-all;
   }
+  .event-page-url { display: flex; flex-wrap: wrap; gap: var(--space-2) var(--space-4); }
   .event-page-url a { color: var(--accent); text-decoration: underline; text-underline-offset: 3px; }
+  .event-page-url a.saved-copy { color: var(--ink-muted); }
   .legacy-label {
     border: 1px solid var(--border-strong);
     border-radius: 999px;

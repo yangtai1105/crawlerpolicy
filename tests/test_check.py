@@ -608,6 +608,9 @@ async def test_live_x_analysis_reads_linked_article_without_persisting_it(
 
     monkeypatch.setattr(article_reader, "read_linked_articles", fake_read)
     analyze = AsyncMock(return_value=_material_analysis())
+    private = repo.parent / "private-archive"
+    monkeypatch.setenv("PRIVATE_ARCHIVE_DIR", str(private))
+    monkeypatch.setenv("PRIVATE_ARCHIVE_REPO", "owner/archive")
 
     await run_check(
         repo_root=repo,
@@ -625,6 +628,10 @@ async def test_live_x_analysis_reads_linked_article_without_persisting_it(
         if path.is_file() and path.suffix in {".json", ".md", ".jsonl"}
     )
     assert "FULL-ARTICLE-BODY" not in written
+    saved = list(private.rglob("*.md"))
+    assert len(saved) == 1 and "FULL-ARTICLE-BODY" in saved[0].read_text()
+    feed_text = next((repo / "content/feed").glob("*.md")).read_text()
+    assert "https://github.com/owner/archive/blob/main/articles/" in feed_text
     evidence = next((repo / "content/evidence/x-access-discovery").glob("*.json"))
     assert json.loads(evidence.read_text())["discovery_metadata"]["linked_articles"][0][
         "method"

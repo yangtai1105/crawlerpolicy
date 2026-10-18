@@ -13,7 +13,7 @@ from pathlib import Path
 
 import yaml
 
-from pipeline import article_reader, raw_log
+from pipeline import article_archive, article_reader, raw_log
 from pipeline.analyzer import AnalysisResult
 from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
@@ -820,6 +820,8 @@ async def _analyze_evidence(
         record.discovery_metadata["fact_coverage"] = article_reader.figure_coverage(
             articles, " ".join([analysis.summary, *analysis.key_facts])
         )
+        if analysis.change_kind == "material" and not dry_run:
+            await article_archive.preserve(articles, record=record, read_at=now)
     record.analysis_attempts += 1
     record.stage = EvidenceStage.ANALYZED
     record.last_error = None
@@ -883,6 +885,8 @@ def _publish_analysis(
         development_slug=(
             event_slug(analysis.title) if development_path is not None else None
         ),
+        saved_copies=_read_log_links(record, "saved_copy"),
+        archived_copies=_read_log_links(record, "archived_copy"),
     )
     record.stage = EvidenceStage.PUBLISHED
     record.last_error = None
@@ -922,6 +926,11 @@ def _publish_analysis(
                 record.evidence_id,
             )
     return development_path, feed_path
+
+
+def _read_log_links(record: EvidenceRecord, key: str) -> list[str]:
+    entries = record.discovery_metadata.get("linked_articles", [])
+    return [entry[key] for entry in entries if isinstance(entry, dict) and entry.get(key)]
 
 
 async def _replay_pending(

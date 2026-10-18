@@ -11,3 +11,5 @@ def _no_linked_article_network(monkeypatch):
         return [], []
 
     monkeypatch.setattr(article_reader, "read_linked_articles", _no_articles)
+    for name in ("PRIVATE_ARCHIVE_DIR", "PRIVATE_ARCHIVE_REPO", "WAYBACK_SAVE"):
+        monkeypatch.delenv(name, raising=False)

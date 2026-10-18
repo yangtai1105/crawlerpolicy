@@ -28,6 +28,8 @@ def write_feed_item(
     backfilled: bool = False,
     processed_at: datetime | None = None,
     backfill_batch: str | None = None,
+    saved_copies: list[str] | None = None,
+    archived_copies: list[str] | None = None,
 ) -> Path:
     if backfilled and (processed_at is None or not backfill_batch):
         raise ValueError("backfilled feed items require processed_at and backfill_batch")
@@ -50,6 +52,8 @@ def write_feed_item(
             backfilled=backfilled,
             processed_at=processed_at,
             backfill_batch=backfill_batch,
+            saved_copies=saved_copies or [],
+            archived_copies=archived_copies or [],
         )
     )
     return path
@@ -75,6 +79,8 @@ def _compose(
     backfilled: bool,
     processed_at: datetime | None,
     backfill_batch: str | None,
+    saved_copies: list[str],
+    archived_copies: list[str],
 ) -> str:
     frontmatter = (
         "---\n"
@@ -106,6 +112,10 @@ def _compose(
         frontmatter += f"protocols:\n{_yaml_list(analysis.protocols, quoted=True)}"
     if analysis.position_claims:
         frontmatter += f"position_claims:\n{_yaml_claims(analysis.position_claims)}"
+    if saved_copies:
+        frontmatter += f"saved_copies:\n{_yaml_list(saved_copies, quoted=True)}"
+    if archived_copies:
+        frontmatter += f"archived_copies:\n{_yaml_list(archived_copies, quoted=True)}"
     frontmatter += f"backfilled: {str(backfilled).lower()}\n"
     if backfilled:
         frontmatter += f"processed_at: {processed_at.isoformat()}\n"

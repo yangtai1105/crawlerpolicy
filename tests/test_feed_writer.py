@@ -221,3 +221,24 @@ def test_no_key_facts_section_when_empty(tmp_path, source, analysis):
         unified_diff="",
     ).read_text()
     assert "## Key facts" not in text
+
+
+def test_copies_are_written_to_frontmatter(tmp_path, source, analysis):
+    observed = datetime(2026, 8, 30, 8, tzinfo=UTC)
+    text = write_feed_item(
+        feed_dir=tmp_path,
+        source=source,
+        analysis=analysis,
+        status=PublicationStatus.SIGNAL,
+        event_date=observed,
+        published_at=observed,
+        detected_at=observed,
+        evidence_ids=["x--1"],
+        source_urls=["https://example.test/a"],
+        unified_diff="",
+        saved_copies=["https://github.com/o/a/blob/main/articles/x.md"],
+        archived_copies=["https://web.archive.org/web/20261018000000/https://example.test/a"],
+    ).read_text()
+    frontmatter = yaml.safe_load(text.split("---", 2)[1])
+    assert frontmatter["saved_copies"] == ["https://github.com/o/a/blob/main/articles/x.md"]
+    assert frontmatter["archived_copies"][0].startswith("https://web.archive.org/web/")
