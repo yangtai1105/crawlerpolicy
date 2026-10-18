@@ -78,14 +78,26 @@ def test_a_claim_matching_merged_state_proposes_nothing():
     assert collect_proposals([_record()], merged, run_id="r") == []
 
 
-def test_a_none_claim_never_proposes_a_change():
+def test_a_none_claim_never_deletes_an_existing_position():
+    merged = PositionRegistry(
+        positions=[
+            Position(
+                player_slug="cloudflare",
+                protocol_slug="web-bot-auth",
+                status=PositionStatus.SHIPPED,
+                since="2026-07-11",
+                last_changed_at=NOW,
+                evidence_level=EvidenceLevel.PRIMARY,
+            )
+        ]
+    )
     record = _record(
         position_claims=[
             {"player": "cloudflare", "protocol": "web-bot-auth", "status": "none"}
         ]
     )
 
-    assert collect_proposals([record], PositionRegistry(), run_id="r") == []
+    assert collect_proposals([record], merged, run_id="r") == []
 
 
 def test_a_claim_that_moves_an_existing_position_carries_the_previous_status():
