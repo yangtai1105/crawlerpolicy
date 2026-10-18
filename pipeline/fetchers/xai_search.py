@@ -12,6 +12,7 @@ from pipeline.sources import Source
 
 _RESPONSES_URL = "https://api.x.ai/v1/responses"
 _TOOL_COST_USD = 0.005
+_USD_TICKS = 10_000_000_000
 
 
 class XSearchCandidate(BaseModel):
@@ -190,15 +191,22 @@ async def fetch_xai_search(
         window_end=window_end,
         citations=citations,
     )
-    usage = raw.get("server_side_tool_usage", {})
-    calls = int(usage.get("SERVER_SIDE_TOOL_X_SEARCH", 0))
+    usage = raw.get("usage") or {}
+    details = usage.get("server_side_tool_usage_details") or {}
+    legacy = raw.get("server_side_tool_usage") or {}
+    calls = int(
+        details.get("x_search_calls", legacy.get("SERVER_SIDE_TOOL_X_SEARCH", 0))
+    )
+    # xAI bills in ticks of 1e-10 USD covering tokens and tools together.
+    ticks = usage.get("cost_in_usd_ticks")
+    cost = ticks / _USD_TICKS if ticks is not None else calls * _TOOL_COST_USD
     return FetchResult(
         mode=ResultMode.PER_ITEM,
         items=items,
         metadata={
             "x_search_calls": calls,
-            "estimated_tool_cost_usd": round(calls * _TOOL_COST_USD, 6),
+            "estimated_tool_cost_usd": round(cost, 6),
             "model": model,
-            "usage": raw.get("usage", {}),
+            "usage": usage,
         },
     )

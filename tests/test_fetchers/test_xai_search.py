@@ -161,3 +161,28 @@ async def test_xai_search_rejects_non_json_model_output():
         assert "valid candidate JSON" in str(error)
     else:
         raise AssertionError("non-JSON xAI output must fail validation")
+
+
+@respx.mock
+async def test_xai_search_reads_current_usage_details_and_billed_cost():
+    body = _response([])
+    del body["server_side_tool_usage"]
+    body["usage"] = {
+        "input_tokens": 19513,
+        "output_tokens": 6215,
+        "cost_in_usd_ticks": 1515240000,
+        "server_side_tool_usage_details": {"x_search_calls": 4},
+    }
+    respx.post("https://api.x.ai/v1/responses").mock(
+        return_value=Response(200, json=body)
+    )
+
+    result = await fetch_xai_search(
+        _source(),
+        api_key="xai-test",
+        model="grok-4.6",
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+    )
+
+    assert result.metadata["x_search_calls"] == 4
+    assert result.metadata["estimated_tool_cost_usd"] == 0.151524
