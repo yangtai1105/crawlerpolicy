@@ -588,6 +588,49 @@ async def test_live_x_surfaces_one_post_per_development_and_skips_stale(repo):
     assert outcomes == ["covered", "new", "stale"]
 
 
+async def test_live_x_analysis_reads_linked_article_without_persisting_it(
+    repo, monkeypatch
+):
+    from pipeline import article_reader
+
+    (repo / "sources.yaml").write_text("[]\n")
+    _add_x_source(repo, shadow=False)
+    article = article_reader.Article(
+        url="https://blog.cloudflare.com/example",
+        final_url="https://blog.cloudflare.com/example",
+        method="json-ld",
+        title="Example",
+        text="FULL-ARTICLE-BODY " * 30,
+    )
+
+    async def fake_read(urls, *, client=None):
+        return [article], [article.as_metadata()]
+
+    monkeypatch.setattr(article_reader, "read_linked_articles", fake_read)
+    analyze = AsyncMock(return_value=_material_analysis())
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[_x_item()])
+        ),
+        analyze_change=analyze,
+    )
+
+    assert "FULL-ARTICLE-BODY" in analyze.await_args.kwargs["curr_content"]
+    written = "".join(
+        path.read_text()
+        for path in repo.rglob("*")
+        if path.is_file() and path.suffix in {".json", ".md", ".jsonl"}
+    )
+    assert "FULL-ARTICLE-BODY" not in written
+    evidence = next((repo / "content/evidence/x-access-discovery").glob("*.json"))
+    assert json.loads(evidence.read_text())["discovery_metadata"]["linked_articles"][0][
+        "method"
+    ] == "json-ld"
+
+
 async def test_proposal_stage_writes_proposals_without_touching_positions(repo):
     _write_item_source(repo, tier="primary")
     current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))

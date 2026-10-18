@@ -13,7 +13,7 @@ from pathlib import Path
 
 import yaml
 
-from pipeline import raw_log
+from pipeline import article_reader, raw_log
 from pipeline.analyzer import AnalysisResult
 from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
@@ -793,11 +793,23 @@ async def _analyze_evidence(
                     save_evidence(cfg.evidence_dir, record)
                 return None
 
+    curr_content = record.content
+    if source.type is SourceType.XAI_SEARCH:
+        # Linked article text deepens the analysis but is never persisted.
+        articles, read_log = await article_reader.read_linked_articles(
+            record.supporting_urls
+        )
+        record.discovery_metadata["linked_articles"] = read_log
+        if articles:
+            curr_content = (
+                f"{record.content}\n\n{article_reader.article_context(articles)}"
+            )
+
     analysis = await analyze_change(
         model=model,
         source=source,
         prev_content=record.previous_content,
-        curr_content=record.content,
+        curr_content=curr_content,
         unified_diff=record.unified_diff,
         trend_context=_maybe_trend_context(cfg, source),
         item_url=record.source_url or None,
