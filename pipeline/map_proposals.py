@@ -80,6 +80,11 @@ def collect_proposals(
                 protocol_slug = str(claim["protocol"])
             except (KeyError, ValueError):
                 continue
+            if to_status is PositionStatus.NONE:
+                # `none` means "no public position". The spec forbids inferring
+                # absence, so a none-claim can never propose a change — it would
+                # silently delete a published cell.
+                continue
             current = registry.get(player_slug, protocol_slug)
             from_status = current.status if current else PositionStatus.NONE
             if from_status is to_status:
