@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-18T05:56:13.858615Z",
-  "last_fully_successful_at": "2026-10-18T05:56:13.858615Z",
+  "last_attempted_at": "2026-10-18T12:27:30.284320Z",
+  "last_fully_successful_at": "2026-10-18T12:27:30.284320Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -210,16 +210,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "us-ftc-federal-register--477219f685120ccb",
-        "us-ftc-federal-register--fee7d22bfe42e49d",
-        "us-ftc-federal-register--a3612425d13433e1",
-        "us-ftc-federal-register--7730325d72ae2a1c",
-        "us-ftc-federal-register--ea533952717f1164",
-        "us-ftc-federal-register--9647b1683f15df78",
-        "us-ftc-federal-register--62dfee5b6f52d3b4",
-        "us-ftc-federal-register--b3f6d926e12bbf73"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -390,7 +381,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--bd0949a2464132e2"
+        "x-discovery--2db9e4763d48be27",
+        "x-discovery--575795a51d9ff9e6",
+        "x-discovery--2b648ecaac3158c1"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -421,9 +414,9 @@
   },
   "discovery": {
     "status": "shadow",
-    "candidate_count": 1,
+    "candidate_count": 3,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.126012,
+    "estimated_tool_cost_usd": 0.125351,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

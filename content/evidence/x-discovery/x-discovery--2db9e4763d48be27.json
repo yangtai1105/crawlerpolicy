@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--2db9e4763d48be27",
+  "source": "x-discovery",
+  "source_url": "https://x.com/verge/status/2111529679387578732",
+  "supporting_urls": [
+    "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites"
+  ],
+  "published_at": "2026-10-17T15:13:08Z",
+  "detected_at": "2026-10-18T12:27:30.284320Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--2db9e4763d48be27.json",
+  "content_hash": "sha256:cc6a4f18af4829a9da51c19fa7e05ffc92df86b05e315592a36c12fa5f22cb8c",
+  "external_id": "2111529679387578732",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Meta removes language from terms that allowed scraping news sites for AI training",
+  "content": "X author: @verge\n\nThe Verge reported that Meta removed language from its terms of service that experts said permitted scraping of news sites to train its AI models.\n\nLinked sources:\n- https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "verge",
+    "post_url": "https://x.com/verge/status/2111529679387578732",
+    "linked_urls": [
+      "https://www.theverge.com/tech/1013409/meta-removes-language-that-may-have-allowed-it-to-scrape-news-sites"
+    ],
+    "provider_citations": [],
+    "front": "rights-markets",
+    "shadow": true
+  }
+}
