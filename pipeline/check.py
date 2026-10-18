@@ -11,6 +11,8 @@ from dataclasses import dataclass
 from datetime import UTC, datetime
 from pathlib import Path
 
+import yaml
+
 from pipeline import raw_log
 from pipeline.analyzer import AnalysisResult
 from pipeline.analyzer import analyze_change as _default_analyze_change
@@ -44,12 +46,14 @@ from pipeline.health import (
     exit_code_for_health,
 )
 from pipeline.insight_threads import build_insight_threads, save_insight_threads
+from pipeline.map_proposals import FeedRecord, collect_proposals, save_proposals
 from pipeline.model_provider import (
     GeminiStructuredModel,
     ProviderCircuit,
     ProviderFailure,
     StructuredModel,
 )
+from pipeline.positions import load_positions
 from pipeline.relevance import keyword_match, model_relevance
 from pipeline.snapshots import hash_content, load_latest, save_snapshot
 from pipeline.sources import Source, SourceType, load_sources
@@ -377,6 +381,12 @@ async def run_check(
     payload["derived_errors"] = derived_errors
     payload["daily_brief"] = daily_brief_payload
     payload["insight_threads"] = insight_threads_payload
+    payload["map_proposals"] = _run_map_proposals_stage(
+        cfg=cfg,
+        now=now,
+        feed_items_written=payload["feed_items_written"],
+        skip=dry_run or only is not None,
+    )
     x_sources = [source for source in sources if source.type is SourceType.XAI_SEARCH]
     x_completed = sum(statuses[source.slug].completed for source in x_sources)
     x_failed = sum(
@@ -969,6 +979,57 @@ def _relative_path(path: Path, repo_root: Path) -> str:
         return path.relative_to(repo_root).as_posix()
     except ValueError:
         return path.as_posix()
+
+
+def _load_feed_record(path: Path) -> FeedRecord:
+    """Parse a published feed item's frontmatter back into a `FeedRecord`.
+
+    Frontmatter already carries `position_claims` as `{player, protocol,
+    status}` dicts (see `pipeline/feed_writer.py`), matching `FeedRecord`
+    exactly, so no conversion is needed here.
+    """
+    parts = path.read_text().split("---", 2)
+    if len(parts) != 3:
+        raise ValueError(f"{path} is missing YAML frontmatter")
+    frontmatter = yaml.safe_load(parts[1]) or {}
+    # YAML auto-parses an unquoted ISO timestamp into a date/datetime object;
+    # FeedRecord.event_date is `str` (collect_proposals slices it as text), so
+    # round-trip it back to the string the frontmatter actually displays.
+    event_date = frontmatter.get("event_date")
+    if event_date is not None and not isinstance(event_date, str):
+        frontmatter["event_date"] = event_date.isoformat()
+    return FeedRecord.model_validate(frontmatter)
+
+
+def _run_map_proposals_stage(
+    *,
+    cfg: Config,
+    now: datetime,
+    feed_items_written: list[str],
+    skip: bool,
+) -> dict[str, object]:
+    """Propose position changes from what this run actually published.
+
+    Non-required stage (like the entity-candidate queue above): any failure
+    here is caught and reported into the health payload, never raised, so it
+    can never mark a successful publish as failed. Reads `positions.json` and
+    writes only to `proposals/` — never `data/positions.json`.
+    """
+    if skip:
+        return {"status": "skipped", "proposed": 0, "error": ""}
+    try:
+        registry = load_positions(cfg.positions_path)
+        records = [
+            _load_feed_record(cfg.repo_root / rel) for rel in feed_items_written
+        ]
+        proposals = collect_proposals(records, registry, run_id=now.isoformat())
+        written = save_proposals(
+            cfg.proposals_dir, proposals, date_str=now.date().isoformat()
+        )
+        return {"status": "ok", "proposed": len(written), "error": ""}
+    except Exception as error:
+        log.exception("map proposal stage failed")
+        return {"status": "failed", "proposed": 0, "error": str(error)}
 
 
 def _is_after_publication_cutoff(

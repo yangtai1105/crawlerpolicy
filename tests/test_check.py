@@ -541,3 +541,58 @@ async def test_non_shadow_x_candidate_publishes_signal_with_attribution(repo):
     assert "https://blog.cloudflare.com/example" in text
     assert list((repo / "content/events").glob("*.md")) == []
     assert health["discovery"]["status"] == "live"
+
+
+async def test_proposal_stage_writes_proposals_without_touching_positions(repo):
+    _write_item_source(repo, tier="primary")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+    analysis = _material_analysis()
+    from pipeline.analyzer import ResolvedPositionClaim
+    from pipeline.positions import PositionStatus
+
+    analysis.position_claims = [
+        ResolvedPositionClaim(
+            player_slug="cloudflare",
+            protocol_slug="web-bot-auth",
+            status=PositionStatus.SHIPPED,
+        )
+    ]
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=analysis),
+    )
+
+    written = sorted((repo / "proposals").glob("*.json"))
+    assert len(written) == 1
+    assert not (repo / "data" / "positions.json").exists()
+    assert health["map_proposals"] == {"status": "ok", "proposed": 1, "error": ""}
+
+
+async def test_a_failing_proposal_stage_degrades_health_without_failing_the_publish(
+    repo, monkeypatch
+):
+    _write_item_source(repo, tier="primary")
+    current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
+
+    def boom(*args, **kwargs):
+        raise RuntimeError("proposal stage exploded")
+
+    monkeypatch.setattr("pipeline.check.collect_proposals", boom)
+
+    health = await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[current])
+        ),
+        analyze_change=AsyncMock(return_value=_material_analysis()),
+    )
+
+    assert health["map_proposals"]["status"] == "failed"
+    # publication still happened despite the proposal stage exploding
+    assert list((repo / "content" / "feed").glob("*.md"))
