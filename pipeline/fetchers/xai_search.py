@@ -164,7 +164,8 @@ async def fetch_xai_search(
     payload = build_x_search_payload(source, model, window_start, window_end)
 
     owns_client = client is None
-    active_client = client or httpx.AsyncClient(timeout=httpx.Timeout(45.0))
+    # A grok-4.6 x_search turn routinely takes ~100s; 45s timed out every call.
+    active_client = client or httpx.AsyncClient(timeout=httpx.Timeout(180.0, connect=10.0))
     try:
         response = await active_client.post(
             _RESPONSES_URL,
