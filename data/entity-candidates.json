@@ -53,6 +53,21 @@
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
       ]
     },
+    "player:the verge": {
+      "kind": "player",
+      "observed_name": "The Verge",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 2,
+      "evidence_ids": [
+        "x-discovery--2db9e4763d48be27",
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new",
+        "2026-10-17-x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
+      ]
+    },
     "player:yandex": {
       "kind": "player",
       "observed_name": "Yandex",

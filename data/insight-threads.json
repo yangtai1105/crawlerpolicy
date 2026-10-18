@@ -30,6 +30,19 @@
       ]
     },
     {
+      "key": "agent-blocking",
+      "title": "Agent Blocking",
+      "thesis": "Machine interaction is shifting from background crawling to task execution by user-delegated agents, prompting web services to apply access controls and blocking mechanisms directly against agentic automation.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-development-lifecycle",
       "title": "Agent Development Lifecycle",
       "thesis": "By automatically provisioning isolated Durable Object namespaces and Container applications per branch, Cloudflare shifts serverless edge testing from stateless mock environments to state-isolated sandboxes tailored for autonomous AI agents executing iterative deploy-test-fix loops via MCP.",
@@ -478,6 +491,19 @@
       ]
     },
     {
+      "key": "bot-defense-expansion",
+      "title": "Bot Defense Expansion",
+      "thesis": "Machine interaction is shifting from background crawling to task execution by user-delegated agents, prompting web services to apply access controls and blocking mechanisms directly against agentic automation.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "bot-identity-standardization",
       "title": "Bot Identity Standardization",
       "thesis": "Emerging bot authentication standards require strict parity across multi-language reference implementations to prevent security loopholes, such as replay attacks on expired cryptographic proofs.",
@@ -588,6 +614,19 @@
       "verified_development_slugs": [
         "model-context-protocol-issues-stable-2026-07-28-specification-release"
       ]
+    },
+    {
+      "key": "contraction-of-implicit-scraping-permissions-in-platform-terms-of-service",
+      "title": "Contraction Of Implicit Scraping Permissions In Platform Terms Of Service",
+      "thesis": "Platform terms of service are increasingly treated as contested legal ground for AI training boundaries, where contractual ambiguity can trigger pushback from publishers and regulatory observers before any crawler directive is even evaluated.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "crawl-budget-optimization",
@@ -1624,6 +1663,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "publisher-resistance-to-broad-ai-training-terms",
+      "title": "Publisher Resistance To Broad AI Training Terms",
+      "thesis": "Platform terms of service are increasingly treated as contested legal ground for AI training boundaries, where contractual ambiguity can trigger pushback from publishers and regulatory observers before any crawler directive is even evaluated.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "responsible-web-scraping",
       "title": "Responsible Web Scraping",
       "thesis": "While the working group focuses heavily on cryptographic verification via HTTP Message Signatures, parallel draft maintenance demonstrates continued momentum toward codifying baseline behavioral and operational norms for automated crawlers.",
@@ -1771,6 +1823,19 @@
       "last_updated_at": "2026-10-05T16:50:30.941105Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "task-execution-restrictions",
+      "title": "Task Execution Restrictions",
+      "thesis": "Machine interaction is shifting from background crawling to task execution by user-delegated agents, prompting web services to apply access controls and blocking mechanisms directly against agentic automation.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
       ],
       "verified_development_slugs": []
     },

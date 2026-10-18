@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-18T12:27:30.284320Z",
-  "last_fully_successful_at": "2026-10-18T12:27:30.284320Z",
+  "last_attempted_at": "2026-10-18T15:15:21.473886Z",
+  "last_fully_successful_at": "2026-10-18T15:15:21.473886Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -381,16 +381,22 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1",
         "x-discovery--2db9e4763d48be27",
-        "x-discovery--575795a51d9ff9e6",
-        "x-discovery--2b648ecaac3158c1"
+        "x-discovery--575795a51d9ff9e6"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-17-x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new.md",
+        "content/feed/2026-10-17-x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google.md"
+      ]
     }
   },
   "events_written": [],
-  "feed_items_written": [],
+  "feed_items_written": [
+    "content/feed/2026-10-17-x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new.md",
+    "content/feed/2026-10-17-x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -398,13 +404,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
+    "status": "published",
     "edition_date": "2026-10-18",
-    "item_count": 0,
+    "item_count": 2,
     "path": "data/daily/2026-10-18.json"
   },
   "insight_threads": {
-    "thread_count": 139,
+    "thread_count": 144,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -413,10 +419,10 @@
     "error": ""
   },
   "discovery": {
-    "status": "shadow",
-    "candidate_count": 3,
-    "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.125351,
+    "status": "live",
+    "candidate_count": 0,
+    "x_search_calls": 4,
+    "estimated_tool_cost_usd": 0.1472,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
