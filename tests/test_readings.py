@@ -4,7 +4,13 @@ from unittest.mock import AsyncMock, MagicMock
 
 import pytest
 
-from pipeline.readings import Reading, ReadingResponse, build_reading, save_reading
+from pipeline.readings import (
+    DevelopmentNote,
+    Reading,
+    ReadingResponse,
+    build_reading,
+    save_reading,
+)
 
 NOW = datetime(2026, 10, 17, 8, 0, tzinfo=UTC)
 
@@ -28,7 +34,10 @@ async def test_build_reading_carries_provenance(fake_model):
         fake_model,
         subject_kind="protocol",
         subject_slug="a2a",
-        developments=["visa-ap2-credentials", "google-a2a-registry"],
+        developments=[
+            DevelopmentNote(slug="visa-ap2-credentials", title="Visa AP2 Credentials"),
+            DevelopmentNote(slug="google-a2a-registry", title="Google A2A Registry"),
+        ],
         now=NOW,
     )
 
@@ -68,3 +77,23 @@ def test_save_reading_names_the_file_by_kind_and_slug(tmp_path):
     assert path.name == "front-agents-identity.json"
     assert json.loads(path.read_text())["subject_slug"] == "agents-identity"
     assert list(tmp_path.glob("*.tmp")) == []
+
+
+async def test_the_prompt_carries_the_development_text_not_just_slugs(fake_model):
+    await build_reading(
+        fake_model,
+        subject_kind="protocol",
+        subject_slug="a2a",
+        developments=[
+            DevelopmentNote(
+                slug="google-a2a-registry",
+                title="Google opens the A2A agent registry",
+                summary="Registration now requires a verifiable organisation identity.",
+            )
+        ],
+        now=NOW,
+    )
+
+    prompt = fake_model.generate.call_args.kwargs["prompt"]
+    assert "Google opens the A2A agent registry" in prompt
+    assert "verifiable organisation identity" in prompt

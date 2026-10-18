@@ -26,13 +26,23 @@ SubjectKind = Literal["protocol", "front"]
 _SYSTEM = (
     "You write one short editorial reading of a protocol or front in an "
     "intelligence publication about AI crawlers and agents. Answer exactly three "
-    "angles and one stance sentence. `adoption_shape`: what the pattern of "
+    "angles and one stance sentence. `stance`: one sentence naming what this "
+    "subject's situation now is — the single judgement a reader should take away, "
+    "not a summary of the developments. `adoption_shape`: what the pattern of "
     "positions means — who moved, who did not, and why that grouping matters. "
     "`new_entrants`: who arrived recently and what they are trying to control. "
     "`watch_for`: the one thing whose presence or absence in the next months "
     "would change the read. Ground every sentence in the developments supplied; "
     "never speculate beyond them."
 )
+
+
+class DevelopmentNote(BaseModel):
+    """One development's evidentiary text, as the reading's input."""
+
+    slug: str
+    title: str
+    summary: str = ""
 
 
 class ReadingResponse(BaseModel):
@@ -61,7 +71,7 @@ async def build_reading(
     *,
     subject_kind: SubjectKind,
     subject_slug: str,
-    developments: list[str],
+    developments: list[DevelopmentNote],
     now: datetime,
 ) -> Reading | None:
     """Generate one reading, or None when there is nothing to read from.
@@ -71,11 +81,15 @@ async def build_reading(
     """
     if not developments:
         return None
+    lines = [f"{subject_kind}: {subject_slug}", "", "developments:"]
+    for note in developments:
+        lines.append(f"- {note.title}")
+        if note.summary:
+            lines.append(f"  {note.summary}")
     raw = await model.generate(
         response_model=ReadingResponse,
         system_instruction=_SYSTEM,
-        prompt=f"{subject_kind}: {subject_slug}\ndevelopments:\n"
-        + "\n".join(f"- {slug}" for slug in developments),
+        prompt="\n".join(lines),
     )
     return Reading(
         subject_kind=subject_kind,
@@ -84,7 +98,7 @@ async def build_reading(
         adoption_shape=raw.adoption_shape.strip(),
         new_entrants=raw.new_entrants.strip(),
         watch_for=raw.watch_for.strip(),
-        built_from=list(developments),
+        built_from=[note.slug for note in developments],
         development_count=len(developments),
         generated_at=now,
     )
