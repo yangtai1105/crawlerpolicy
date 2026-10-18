@@ -114,6 +114,7 @@ def _compose(
 
     body = (
         f"## Summary\n\n{analysis.summary}\n\n"
+        f"{key_facts_section(analysis.key_facts)}"
         f"## Insight\n\n{analysis.insight}\n\n"
         f"## Implication\n\n{analysis.implication}\n\n"
         f"## Why it matters\n\n{analysis.why_it_matters}\n\n"
@@ -151,3 +152,9 @@ def _yaml_claims(claims) -> str:
         f"    status: {claim.status.value}\n"
         for claim in claims
     )
+
+
+def key_facts_section(facts: list[str]) -> str:
+    if not facts:
+        return ""
+    return "## Key facts\n\n" + "".join(f"- {fact}\n" for fact in facts) + "\n"

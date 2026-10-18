@@ -794,6 +794,7 @@ async def _analyze_evidence(
                 return None
 
     curr_content = record.content
+    articles: list[article_reader.Article] = []
     if source.type is SourceType.XAI_SEARCH:
         # Linked article text deepens the analysis but is never persisted.
         articles, read_log = await article_reader.read_linked_articles(
@@ -815,6 +816,10 @@ async def _analyze_evidence(
         item_url=record.source_url or None,
         published_at=record.published_at,
     )
+    if source.type is SourceType.XAI_SEARCH and articles:
+        record.discovery_metadata["fact_coverage"] = article_reader.figure_coverage(
+            articles, " ".join([analysis.summary, *analysis.key_facts])
+        )
     record.analysis_attempts += 1
     record.stage = EvidenceStage.ANALYZED
     record.last_error = None

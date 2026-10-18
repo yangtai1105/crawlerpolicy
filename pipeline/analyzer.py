@@ -42,6 +42,7 @@ class AnalyzerResponse(BaseModel):
     insight: str
     implication: str
     why_it_matters: str
+    key_facts: list[str] = Field(default_factory=list)
     primary_track: str
     tracks: list[str]
     actors: list[str]
@@ -60,6 +61,7 @@ class AnalysisResult(BaseModel):
     insight: str = ""
     implication: str = ""
     why_it_matters: str = ""
+    key_facts: list[str] = Field(default_factory=list)
     primary_track: Track
     tracks: list[Track]
     actors: list[str]
@@ -101,6 +103,13 @@ Write four distinct reader layers:
 - insight: the new pattern, distinction, or mechanism exposed by the evidence;
 - implication: who or what may be affected next;
 - why_it_matters: the clearest reason a reader should care now.
+
+The summary is short by design, so detail must not be lost there. Also return `key_facts`:
+3-8 standalone factual statements extracted from the evidence, staying close to the source's
+own words. Cover who acted, exactly what changed, scope and exceptions, every figure that
+matters (numbers, percentages, money, counts, dates), named mechanisms or clauses, and the
+responses of affected parties, with short quotes attributed to their speaker when the source
+quotes someone. No interpretation in key_facts. Return an empty list for cosmetic or noise.
 
 Use inline Markdown links only when the supplied content contains the exact URL. Keep claims
 proportional to the evidence. Reserve importance above 0.9 for ecosystem-shaping developments.
@@ -255,7 +264,7 @@ async def analyze_change(
         [
             f"=== PREVIOUS ===\n{prev_content[:20000]}",
             "",
-            f"=== CURRENT ===\n{curr_content[:20000]}",
+            f"=== CURRENT ===\n{curr_content[:40000]}",
             "",
             f"=== DIFF ===\n{unified_diff[:20000]}",
         ]
@@ -284,6 +293,7 @@ async def analyze_change(
         insight=raw.insight.strip(),
         implication=raw.implication.strip(),
         why_it_matters=raw.why_it_matters.strip(),
+        key_facts=[" ".join(fact.split()) for fact in _clean_string_list(raw.key_facts)][:8],
         primary_track=primary_track,
         tracks=tracks,
         actors=actors,

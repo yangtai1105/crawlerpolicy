@@ -91,3 +91,19 @@ async def test_robots_disallow_and_thin_pages_are_logged_not_raised(real_reader)
     assert articles == []
     assert "robots.txt" in log[0]["error"]
     assert "no article body" in log[1]["error"]
+
+
+def test_figure_coverage_counts_kept_figures_and_ignores_years():
+    from pipeline.article_reader import Article, figure_coverage
+
+    article = Article(
+        url="u",
+        final_url="u",
+        method="json-ld",
+        title="t",
+        text="In 2026, 65.3% of 21,491 sites failed; $40 million was spent over 3 days.",
+    )
+    coverage = figure_coverage([article], "65.3% of 21491 sites failed.")
+    assert coverage["figures_in_source"] == 3
+    assert coverage["figures_kept"] == 2
+    assert coverage["missing"] == ["$40 million"]

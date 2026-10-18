@@ -182,3 +182,42 @@ def test_frontmatter_omits_position_claims_when_empty(tmp_path, source, analysis
     frontmatter = _written(tmp_path, source, analysis)
 
     assert "position_claims" not in frontmatter
+
+
+def test_key_facts_render_between_summary_and_insight(tmp_path, source, analysis):
+    observed = datetime(2026, 8, 30, 8, tzinfo=UTC)
+    analysis.key_facts = ["Meta removed the clause on Oct 17.", "65.3% of sites failed."]
+
+    text = write_feed_item(
+        feed_dir=tmp_path,
+        source=source,
+        analysis=analysis,
+        status=PublicationStatus.SIGNAL,
+        event_date=observed,
+        published_at=observed,
+        detected_at=observed,
+        evidence_ids=["x--1"],
+        source_urls=["https://example.test/a"],
+        unified_diff="",
+    ).read_text()
+
+    facts = "- Meta removed the clause on Oct 17.\n- 65.3% of sites failed.\n"
+    assert f"## Key facts\n\n{facts}" in text
+    assert text.index("## Summary") < text.index("## Key facts") < text.index("## Insight")
+
+
+def test_no_key_facts_section_when_empty(tmp_path, source, analysis):
+    observed = datetime(2026, 8, 30, 8, tzinfo=UTC)
+    text = write_feed_item(
+        feed_dir=tmp_path,
+        source=source,
+        analysis=analysis,
+        status=PublicationStatus.SIGNAL,
+        event_date=observed,
+        published_at=observed,
+        detected_at=observed,
+        evidence_ids=["x--1"],
+        source_urls=["https://example.test/a"],
+        unified_diff="",
+    ).read_text()
+    assert "## Key facts" not in text

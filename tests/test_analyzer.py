@@ -48,6 +48,7 @@ async def test_analyzer_returns_four_layer_editorial_result(fake_model, crawler_
         insight="Search and training clients are becoming distinct.",
         implication="Publishers can apply separate access policies.",
         why_it_matters="One robots.txt decision no longer covers every OpenAI product.",
+        key_facts=["  OpenAI listed  a new\nuser agent. ", "", "It applies to Operator."],
         primary_track="search-discovery",
         tracks=["search-discovery", "access-controls"],
         actors=["Cloudflare", "Totally Unknown Inc"],
@@ -68,6 +69,7 @@ async def test_analyzer_returns_four_layer_editorial_result(fake_model, crawler_
     assert isinstance(result, AnalysisResult)
     assert result.summary.startswith("GPTBot documentation")
     assert result.insight == "Search and training clients are becoming distinct."
+    assert result.key_facts == ["OpenAI listed a new user agent.", "It applies to Operator."]
     # End-to-end wiring of the five new AnalysisResult fields through analyze_change.
     # Both actors and protocols carry one known registry name and one name that is
     # definitely absent from the registries, so swapping unknown_players with

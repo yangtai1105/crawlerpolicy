@@ -13,6 +13,7 @@ from __future__ import annotations
 
 import hashlib
 import json
+import re
 from dataclasses import dataclass
 from urllib.parse import urlsplit
 from urllib.robotparser import RobotFileParser
@@ -25,7 +26,7 @@ from pipeline.fetchers.html_page import _HEADERS
 
 ROBOTS_AGENT = "CrawlerPolicy"
 MAX_ARTICLES = 3
-MAX_CHARS = 12_000
+MAX_CHARS = 15_000
 _MIN_CHARS = 400
 _TIMEOUT = httpx.Timeout(20.0, connect=10.0)
 _SKIP_HOSTS = {"x.com", "twitter.com", "t.co"}
@@ -163,3 +164,41 @@ def article_context(articles: list[Article]) -> str:
         f"Title: {article.title}\n{article.text}"
         for article in articles
     )
+
+
+_FIGURE = re.compile(
+    r"\$?\d[\d,]*(?:\.\d+)?(?:\s?(?:%|percent|million|billion|trillion))?",
+    re.IGNORECASE,
+)
+
+
+def _figures(text: str) -> list[str]:
+    found: list[str] = []
+    for match in _FIGURE.finditer(text):
+        figure = match.group(0).strip().rstrip(",.")
+        digits = figure.lstrip("$").split()[0].rstrip("%").replace(",", "")
+        has_unit = figure.startswith("$") or not figure.replace(",", "").replace(".", "").isdigit()
+        try:
+            value = float(digits)
+        except ValueError:
+            continue
+        if not has_unit and (value < 10 or (1900 <= value <= 2100 and "." not in digits)):
+            continue  # small counts and bare years are mostly noise
+        found.append(figure.lower())
+    return list(dict.fromkeys(found))
+
+
+def figure_coverage(articles: list[Article], kept_text: str) -> dict[str, object]:
+    """How many of the source's figures survived into the published analysis."""
+    source = _figures(" ".join(article.text for article in articles))
+    kept_digits = kept_text.replace(",", "").lower()
+    missing = [
+        figure
+        for figure in source
+        if figure.lstrip("$").split()[0].rstrip("%").replace(",", "") not in kept_digits
+    ]
+    return {
+        "figures_in_source": len(source),
+        "figures_kept": len(source) - len(missing),
+        "missing": missing[:15],
+    }
