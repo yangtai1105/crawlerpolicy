@@ -9,15 +9,23 @@ from pipeline.model_provider import StructuredModel
 
 
 def keyword_match(text: str, keywords: list[str]) -> bool:
-    """Stage 1: cheap word-boundary regex match against any keyword."""
+    """Stage 1: cheap word-boundary regex match against any keyword.
+
+    Keywords match at the start of a word, so "bot" still catches "bots" and
+    "auth" catches "authentication". A keyword written in capitals ("AI",
+    "API", "DSA") is an acronym and must end the word, allowing a plural "s":
+    otherwise "AI" matches the "aid" in every "State aid" press release.
+    """
     if not keywords:
         return True
     haystack = text.lower()
     for keyword in keywords:
-        needle = keyword.lower().strip()
-        if not needle:
+        stripped = keyword.strip()
+        if not stripped:
             continue
-        pattern = re.compile(r"(?<![a-z0-9])" + re.escape(needle))
+        acronym = not any(c.islower() for c in stripped) and stripped[-1].isalnum()
+        tail = r"s?(?![a-z0-9])" if acronym else ""
+        pattern = re.compile(r"(?<![a-z0-9])" + re.escape(stripped.lower()) + tail)
         if pattern.search(haystack):
             return True
     return False

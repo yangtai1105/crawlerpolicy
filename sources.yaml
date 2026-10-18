@@ -194,13 +194,11 @@
   role: regulator
 
 # FTC rules, proposed rules and consent-order notices via the Federal
-# Register API, which is reachable from CI. keyword_filter omits a bare "AI":
-# keyword_match only anchors the start of a word, so "AI" would match the
-# "To Aid Public Comment" in nearly every FTC consent-order title.
+# Register API, which is reachable from CI.
 - slug: us-ftc-federal-register
   type: rss_feed
   url: https://www.federalregister.gov/api/v1/documents.rss?conditions%5Bagencies%5D%5B%5D=federal-trade-commission&order=newest
-  keyword_filter: ["artificial intelligence", "AI-", "AI system", "AI model", "generative", "chatbot", "machine learning", "algorithm", "training data", "large language", "data scraping", "web scraping"]
+  keyword_filter: ["AI", "artificial intelligence", "generative", "chatbot", "machine learning", "algorithm", "training data", "large language", "data scraping", "web scraping"]
   display_name: US FTC (Federal Register)
   default_tracks: [policy-regulation, litigation-legal]
   tier: primary

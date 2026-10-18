@@ -55,3 +55,18 @@ async def test_model_relevance_preserves_negative_verdict(fake_model):
     )
 
     assert verdict == RelevanceVerdict(is_relevant=False, reason="Unrelated product")
+
+
+def test_keyword_match_acronym_must_end_the_word():
+    assert keyword_match("Commission approves State aid scheme", ["AI"]) is False
+    assert keyword_match("To Aid Public Comment", ["AI"]) is False
+    assert keyword_match("rules for air transport", ["AI"]) is False
+    assert keyword_match("new AI rules", ["AI"]) is True
+    assert keyword_match("AI-generated content", ["AI"]) is True
+    assert keyword_match("regulating AIs", ["AI"]) is True
+    assert keyword_match("new APIs for agents", ["API"]) is True
+
+
+def test_keyword_match_lowercase_keyword_keeps_prefix_matching():
+    assert keyword_match("blocking scrapers", ["scraper"]) is True
+    assert keyword_match("agent authentication", ["auth"]) is True
