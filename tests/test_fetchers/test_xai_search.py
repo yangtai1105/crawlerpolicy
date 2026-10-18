@@ -7,7 +7,7 @@ from httpx import Response
 from pipeline.fetchers.base import ResultMode
 from pipeline.fetchers.xai_search import fetch_xai_search
 from pipeline.sources import Source, SourceType
-from pipeline.taxonomy import SourceRole, SourceTier, Track
+from pipeline.taxonomy import Front, SourceRole, SourceTier, Track
 
 
 def _source() -> Source:
@@ -186,3 +186,72 @@ async def test_xai_search_reads_current_usage_details_and_billed_cost():
 
     assert result.metadata["x_search_calls"] == 4
     assert result.metadata["estimated_tool_cost_usd"] == 0.151524
+
+
+def _combined_source() -> Source:
+    return _source().model_copy(
+        update={
+            "slug": "x-discovery",
+            "x_handles": [],
+            "x_priority_handles": ["Cloudflare", "FTC"],
+            "x_fronts": {
+                Front.ACCESS_DISCOVERY: "crawler policy changes",
+                Front.GOVERNANCE_LAW: "regulator actions and rulings",
+            },
+        }
+    )
+
+
+@respx.mock
+async def test_combined_source_names_fronts_and_tags_each_candidate():
+    candidate = _candidate(post_id="1", published_at="2026-09-03T04:00:00Z")
+    candidate["front"] = "governance-law"
+    route = respx.post("https://api.x.ai/v1/responses").mock(
+        return_value=Response(200, json=_response([candidate]))
+    )
+
+    result = await fetch_xai_search(
+        _combined_source(),
+        api_key="xai-test",
+        model="grok-4.20-0309-non-reasoning",
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+    )
+
+    assert result.items[0].metadata["front"] == "governance-law"
+    payload = json.loads(route.calls.last.request.content)
+    # Priority handles steer the prompt without restricting the search tool.
+    assert "allowed_x_handles" not in payload["tools"][0]
+    prompt = payload["input"][0]["content"]
+    assert "- governance-law: regulator actions and rulings" in prompt
+    assert "@Cloudflare, @FTC" in prompt
+    assert "at most 3 x_search calls" in prompt
+    item_schema = payload["text"]["format"]["schema"]["properties"]["candidates"]["items"]
+    assert item_schema["properties"]["front"]["enum"] == [
+        "access-discovery",
+        "governance-law",
+    ]
+    assert "front" in item_schema["required"]
+
+
+@respx.mock
+async def test_single_scope_source_omits_front_from_schema_and_metadata():
+    route = respx.post("https://api.x.ai/v1/responses").mock(
+        return_value=Response(
+            200,
+            json=_response(
+                [_candidate(post_id="1", published_at="2026-09-03T04:00:00Z")]
+            ),
+        )
+    )
+
+    result = await fetch_xai_search(
+        _source(),
+        api_key="xai-test",
+        model="grok-4.6",
+        now=datetime(2026, 9, 3, 8, tzinfo=UTC),
+    )
+
+    assert "front" not in result.items[0].metadata
+    payload = json.loads(route.calls.last.request.content)
+    item_schema = payload["text"]["format"]["schema"]["properties"]["candidates"]["items"]
+    assert "front" not in item_schema["properties"]

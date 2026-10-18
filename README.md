@@ -71,7 +71,7 @@ The workflow uses two model providers with separate jobs:
 - `GEMINI_API_KEY` — required for daily relevance, four-layer analysis, state of play, and weekly synthesis.
 - `GEMINI_ANALYSIS_MODEL` — optional; defaults to `gemini-3.7-flash`.
 - `XAI_API_KEY` — optional; enables the X discovery lane. Without it, direct-source publication continues and discovery health is marked unavailable.
-- `XAI_DISCOVERY_MODEL` — optional; defaults to `grok-4.6`.
+- `XAI_DISCOVERY_MODEL` — optional; defaults to `grok-4.20-0309-non-reasoning`. A non-reasoning model found more leads at lower cost than `grok-4.6` in the 2026-10-18 comparison.
 - `XAI_MAX_DAILY_SEARCH_CALLS` — optional hard per-run cap; defaults to `6`.
 - `XAI_MONTHLY_SOFT_BUDGET_USD` — optional operating target; defaults to `10`. Run health records successful search calls and estimated tool cost for review.
 - `GITHUB_TOKEN` — supplied automatically in GitHub Actions and used for GitHub source fetching and commits.
@@ -92,7 +92,7 @@ GEMINI_API_KEY=... uv run python -m pipeline.check --dry-run --only gptbot
 
 # Exercises one X discovery query. It saves no public item while shadow is true.
 XAI_API_KEY=... GEMINI_API_KEY=... \
-  uv run python -m pipeline.check --only x-access-discovery
+  uv run python -m pipeline.check --only x-discovery
 
 # Runs all enabled sources and writes replayable content.
 XAI_API_KEY=... GEMINI_API_KEY=... uv run python -m pipeline.check

@@ -8,7 +8,14 @@ from typing import Self
 import yaml
 from pydantic import BaseModel, Field, field_validator, model_validator
 
-from pipeline.taxonomy import SourceRole, SourceTier, Subject, Track, resolve_track_list
+from pipeline.taxonomy import (
+    Front,
+    SourceRole,
+    SourceTier,
+    Subject,
+    Track,
+    resolve_track_list,
+)
 
 
 class SourceType(StrEnum):
@@ -57,7 +64,12 @@ class Source(BaseModel):
     lookback_days: int | None = None
 
     # xai_search
+    # x_handles is a hard allowlist passed to the search tool; the priority
+    # handles are only named in the prompt, so other primary posters still count.
     x_handles: list[str] = Field(default_factory=list, max_length=20)
+    x_priority_handles: list[str] = Field(default_factory=list, max_length=40)
+    # One call covering several fronts; each candidate is tagged with one.
+    x_fronts: dict[Front, str] = Field(default_factory=dict)
     lookback_hours: int = Field(default=36, ge=1, le=72)
     shadow: bool = True
 

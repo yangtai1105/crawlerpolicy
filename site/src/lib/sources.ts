@@ -37,6 +37,8 @@ export interface Source {
   keyword_filter?: string[];
   query?: string;
   x_handles?: string[];
+  x_priority_handles?: string[];
+  x_fronts?: Record<string, string>;
   lookback_hours?: number;
   shadow?: boolean;
 }

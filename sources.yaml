@@ -416,8 +416,49 @@
 # These sources use the official xAI X Search tool. They are discovery-only:
 # X-only candidates remain signals and never promote into durable developments.
 
+# One combined call covers all five fronts and tags each candidate with one.
+# Measured 2026-10-18 on one window: five per-front grok-4.6 calls cost
+# ~$0.08-0.10 each and returned nothing; one non-reasoning combined call cost
+# ~$0.18 and returned three on-topic leads. Cost tracks posts fetched, so the
+# prompt caps searches and the window only slightly overlaps the daily run.
+- slug: x-discovery
+  type: xai_search
+  query: >-
+    You are a news desk scanning X for a publication that tracks how AI
+    systems access and use the open web: crawling, agents, content rights,
+    governance, and the economics of AI traffic.
+  x_fronts:
+    access-discovery: >-
+      AI crawler policies, robots.txt and AI directives, crawler blocking,
+      AI search visibility, citations and referrals from AI search, web
+      indexing changes
+    agents-identity: >-
+      AI agent web traffic, Web Bot Auth and signed agents, agent
+      authentication or delegation, MCP and agent protocols, agent identity
+      standards
+    rights-markets: >-
+      content licensing deals with AI companies, training-data rights,
+      pay-per-crawl or pay-per-use, publisher compensation, machine-readable
+      rights signals
+    governance-law: >-
+      regulator actions, lawsuits and rulings, competition remedies,
+      copyright decisions, disclosure rules affecting AI use of web content
+    measurement-economics: >-
+      new data on AI crawler volume, crawl-to-referral ratios, bot
+      identification, publisher traffic or revenue effects of AI
+  x_priority_handles: [Cloudflare, GoogleSearchC, OpenAI, AnthropicAI, perplexity_ai, CommonCrawl, IETF, W3C, Reddit, FTC, EU_Commission, CMAgovUK, sengineland, ppcland, TechCrunch, verge, WIRED, arstechnica, 404mediaco, NiemanLab, Digiday, pressgazette]
+  lookback_hours: 26
+  shadow: true
+  display_name: X — Discovery
+  default_tracks: [access-controls, platform-ecosystem, licensing-monetization, policy-regulation, measurement-economics]
+  tier: commentary
+  role: reporting
+
+# Superseded 2026-10-18 by x-discovery above. Kept disabled so their stored
+# evidence keeps resolving to a source.
 - slug: x-access-discovery
   type: xai_search
+  enabled: false
   query: >-
     Find consequential changes to AI crawler policies, robots directives,
     AI search visibility, citations, referrals, or web indexing.
@@ -431,6 +472,7 @@
 
 - slug: x-agents-discovery
   type: xai_search
+  enabled: false
   query: >-
     Find consequential changes to AI agent traffic, Web Bot Auth,
     authentication, delegation, MCP, or agent identity standards.
@@ -444,6 +486,7 @@
 
 - slug: x-rights-discovery
   type: xai_search
+  enabled: false
   query: >-
     Find consequential content licensing, training-rights, pay-per-use,
     publisher compensation, or machine-readable rights developments.
@@ -457,6 +500,7 @@
 
 - slug: x-governance-discovery
   type: xai_search
+  enabled: false
   query: >-
     Find consequential regulator action, litigation, competition remedies,
     copyright decisions, or disclosure rules affecting AI and web content.
@@ -470,6 +514,7 @@
 
 - slug: x-measurement-discovery
   type: xai_search
+  enabled: false
   query: >-
     Find new measurements of AI crawler volume, referral ratios,
     bot identity, publisher traffic, conversion, or compensation.

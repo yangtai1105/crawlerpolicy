@@ -68,6 +68,6 @@ def test_config_uses_xai_discovery_defaults(monkeypatch, tmp_path):
     cfg = Config.from_env()
 
     assert cfg.xai_api_key == ""
-    assert cfg.xai_discovery_model == "grok-4.6"
+    assert cfg.xai_discovery_model == "grok-4.20-0309-non-reasoning"
     assert cfg.xai_max_daily_search_calls == 6
     assert cfg.xai_monthly_soft_budget_usd == 10.0

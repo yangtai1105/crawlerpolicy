@@ -9,10 +9,16 @@ from pydantic import AnyHttpUrl, BaseModel, Field, ValidationError, field_valida
 
 from pipeline.fetchers.base import CandidateItem, FetchResult, ResultMode
 from pipeline.sources import Source
+from pipeline.taxonomy import Front
 
 _RESPONSES_URL = "https://api.x.ai/v1/responses"
 _TOOL_COST_USD = 0.005
 _USD_TICKS = 10_000_000_000
+# Billing is dominated by posts fetched (~$0.005 each), so the prompt caps
+# searches and candidates instead of relying on max_tool_calls, which the
+# API did not enforce when measured on 2026-10-18.
+_MAX_SEARCHES = 3
+_MAX_CANDIDATES = 8
 
 
 class XSearchCandidate(BaseModel):
@@ -25,6 +31,7 @@ class XSearchCandidate(BaseModel):
     title: str = Field(min_length=1)
     synopsis: str = Field(min_length=1)
     linked_urls: list[AnyHttpUrl] = Field(default_factory=list)
+    front: Front | None = None
 
     @field_validator("post_url")
     @classmethod
@@ -65,20 +72,92 @@ def build_x_search_payload(
     }
     if source.x_handles:
         tool["allowed_x_handles"] = source.x_handles
-    prompt = (
-        f"{source.query}\n\n"
-        f"Use only posts published from {window_start.isoformat()} through "
-        f"{window_end.isoformat()}. Return only consequential, factual items within "
-        "the requested web-ecosystem scope. Exclude reposts, reactions, generic AI news, "
-        "unsupported predictions, and duplicate claims. Return one JSON object with a "
-        "candidates array. Every candidate must contain post_id, post_url, author_handle, "
-        "published_at, title, synopsis, and linked_urls. Use [] when there are no candidates."
-    )
     return {
         "model": model,
-        "input": [{"role": "user", "content": prompt}],
+        "input": [
+            {"role": "user", "content": _prompt(source, window_start, window_end)}
+        ],
         "tools": [tool],
         "max_turns": 2,
+        "text": {
+            "format": {
+                "type": "json_schema",
+                "name": "x_search_candidates",
+                "schema": _candidate_schema(source),
+            }
+        },
+    }
+
+
+def _prompt(source: Source, window_start: datetime, window_end: datetime) -> str:
+    parts = [
+        source.query.strip(),
+        f"Window: {window_start.isoformat()} through {window_end.isoformat()}. "
+        "Ignore posts outside it.",
+    ]
+    if source.x_fronts:
+        fronts = "\n".join(
+            f"- {front.value}: {scope}" for front, scope in source.x_fronts.items()
+        )
+        parts.append(
+            f"Fronts:\n{fronts}\n\nTag every candidate with the single best front."
+        )
+    if source.x_priority_handles:
+        handles = ", ".join(f"@{handle}" for handle in source.x_priority_handles)
+        parts.append(
+            "Accounts most likely to post primary news (search these first, but "
+            f"keep other primary sources you find): {handles}"
+        )
+    parts.append(
+        f"Search budget: at most {_MAX_SEARCHES} x_search calls in total. Plan them "
+        "to cover the whole scope at once with OR-combined keywords; never run one "
+        "search per front."
+    )
+    parts.append(
+        "Keep a post only if it reports a concrete, new, verifiable development: a "
+        "policy or product change shipped, a deal signed, a filing or ruling, a "
+        "standard published, or new measurement data. Prefer the original announcer "
+        "over reporters re-posting it. Drop reposts, opinions, predictions, generic "
+        "AI news, event promotion, and duplicates of one development (keep the most "
+        "primary post)."
+    )
+    parts.append(
+        f"Return at most {_MAX_CANDIDATES} candidates; an empty list is a good answer "
+        "on a quiet day. synopsis: one or two factual sentences naming who did what. "
+        "linked_urls: only https URLs that appear in the post and point to a specific "
+        "article, filing or page, never a bare homepage."
+    )
+    return "\n\n".join(parts)
+
+
+def _candidate_schema(source: Source) -> dict[str, Any]:
+    properties: dict[str, Any] = {
+        "post_id": {"type": "string"},
+        "post_url": {"type": "string"},
+        "author_handle": {"type": "string"},
+        "published_at": {"type": "string"},
+        "title": {"type": "string"},
+        "synopsis": {"type": "string"},
+        "linked_urls": {"type": "array", "items": {"type": "string"}},
+    }
+    if source.x_fronts:
+        properties["front"] = {
+            "type": "string",
+            "enum": [front.value for front in source.x_fronts],
+        }
+    return {
+        "type": "object",
+        "properties": {
+            "candidates": {
+                "type": "array",
+                "items": {
+                    "type": "object",
+                    "properties": properties,
+                    "required": list(properties),
+                },
+            }
+        },
+        "required": ["candidates"],
     }
 
 
@@ -143,6 +222,7 @@ def _candidates_to_items(
                     "post_url": post_url,
                     "linked_urls": linked_urls,
                     "provider_citations": list(dict.fromkeys(citations)),
+                    **({"front": candidate.front.value} if candidate.front else {}),
                 },
             )
         )

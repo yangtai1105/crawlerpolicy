@@ -14,7 +14,7 @@ class Config:
     gemini_analysis_model: str
     publication_cutoff: datetime
     xai_api_key: str = ""
-    xai_discovery_model: str = "grok-4.6"
+    xai_discovery_model: str = "grok-4.20-0309-non-reasoning"
     xai_max_daily_search_calls: int = 6
     xai_monthly_soft_budget_usd: float = 10.0
     alert_emails: list[str] = field(default_factory=list)
@@ -102,7 +102,9 @@ class Config:
             ),
             publication_cutoff=cutoff.astimezone(UTC),
             xai_api_key=os.environ.get("XAI_API_KEY", ""),
-            xai_discovery_model=os.environ.get("XAI_DISCOVERY_MODEL", "grok-4.6"),
+            xai_discovery_model=os.environ.get(
+                "XAI_DISCOVERY_MODEL", "grok-4.20-0309-non-reasoning"
+            ),
             xai_max_daily_search_calls=int(
                 os.environ.get("XAI_MAX_DAILY_SEARCH_CALLS", "6")
             ),
