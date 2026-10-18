@@ -112,7 +112,12 @@ def load_seen(
             record = load_evidence(path)
             if record.evidence_id == exclude_evidence_id:
                 continue
-            if record.stage not in {EvidenceStage.ANALYZED, EvidenceStage.PUBLISHED}:
+            # Only posts that went through this gate count as seen. Shadow-era
+            # evidence was never surfaced, so it must not block a later post.
+            if not (
+                record.stage is EvidenceStage.PUBLISHED
+                or "novelty" in record.discovery_metadata
+            ):
                 continue
             if now - record.detected_at > _X_LOOKBACK:
                 continue

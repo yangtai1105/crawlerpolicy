@@ -10,7 +10,7 @@
   "content_path": "content/evidence/x-discovery/x-discovery--2db9e4763d48be27.json",
   "content_hash": "sha256:cc6a4f18af4829a9da51c19fa7e05ffc92df86b05e315592a36c12fa5f22cb8c",
   "external_id": "2111529679387578732",
-  "stage": "analyzed",
+  "stage": "fetched",
   "analysis_attempts": 0,
   "last_error": null,
   "title": "Meta removes language from terms that allowed scraping news sites for AI training",

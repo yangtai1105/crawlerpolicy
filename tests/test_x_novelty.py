@@ -109,7 +109,11 @@ def test_load_seen_reads_recent_feed_and_x_evidence_but_not_self(tmp_path):
     evidence = tmp_path / "evidence"
     earlier = _record("x-discovery--b")
     earlier.stage = EvidenceStage.ANALYZED
+    earlier.discovery_metadata["novelty"] = {"outcome": "covered"}
     save_evidence(evidence, earlier)
+    shadow_era = _record("x-discovery--c")
+    shadow_era.stage = EvidenceStage.ANALYZED
+    save_evidence(evidence, shadow_era)
     save_evidence(evidence, _record("x-discovery--a"))
 
     seen = load_seen(
