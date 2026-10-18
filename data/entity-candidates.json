@@ -1,6 +1,45 @@
 {
   "schema_version": 1,
   "candidates": {
+    "player:andy stone": {
+      "kind": "player",
+      "observed_name": "Andy Stone",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2db9e4763d48be27"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:axios": {
+      "kind": "player",
+      "observed_name": "Axios",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:charles schwab": {
+      "kind": "player",
+      "observed_name": "Charles Schwab",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
     "player:claudebot": {
       "kind": "player",
       "observed_name": "ClaudeBot",
@@ -12,6 +51,71 @@
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ]
+    },
+    "player:cnn": {
+      "kind": "player",
+      "observed_name": "CNN",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:daniel roberts": {
+      "kind": "player",
+      "observed_name": "Daniel Roberts",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2db9e4763d48be27"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:delta air lines": {
+      "kind": "player",
+      "observed_name": "Delta Air Lines",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:el país": {
+      "kind": "player",
+      "observed_name": "El País",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:forbes": {
+      "kind": "player",
+      "observed_name": "Forbes",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
     "player:gptbot": {
@@ -27,9 +131,63 @@
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
       ]
     },
+    "player:instinct": {
+      "kind": "player",
+      "observed_name": "Instinct",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:james grimmelmann": {
+      "kind": "player",
+      "observed_name": "James Grimmelmann",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2db9e4763d48be27"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:jpmorgan chase": {
+      "kind": "player",
+      "observed_name": "JPMorgan Chase",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
     "player:nieman lab": {
       "kind": "player",
       "observed_name": "Nieman Lab",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 2,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1",
+        "x-discovery--2db9e4763d48be27"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-to-over-400-outlets",
+        "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:oil city news": {
+      "kind": "player",
+      "observed_name": "Oil City News",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
       "last_seen_at": "2026-10-18T12:27:30.284320Z",
       "occurrences": 1,
@@ -37,7 +195,7 @@
         "x-discovery--2b648ecaac3158c1"
       ],
       "feed_slugs": [
-        "2026-10-17-x-discovery-google-expands-news-ai-pilot-to-over-400-outlets"
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
     "player:radist": {
@@ -66,19 +224,150 @@
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
       ]
     },
+    "player:shaw media": {
+      "kind": "player",
+      "observed_name": "Shaw Media",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:shopify": {
+      "kind": "player",
+      "observed_name": "Shopify",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:the financial times": {
+      "kind": "player",
+      "observed_name": "The Financial Times",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:the guardian": {
+      "kind": "player",
+      "observed_name": "The Guardian",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:the post and courier": {
+      "kind": "player",
+      "observed_name": "The Post and Courier",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:the texas tribune": {
+      "kind": "player",
+      "observed_name": "The Texas Tribune",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:the times of india": {
+      "kind": "player",
+      "observed_name": "The Times of India",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
     "player:the verge": {
       "kind": "player",
       "observed_name": "The Verge",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
       "last_seen_at": "2026-10-18T12:27:30.284320Z",
-      "occurrences": 2,
+      "occurrences": 3,
       "evidence_ids": [
         "x-discovery--2db9e4763d48be27",
         "x-discovery--575795a51d9ff9e6"
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new",
-        "2026-10-17-x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
+        "2026-10-17-x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google",
+        "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:the washington post": {
+      "kind": "player",
+      "observed_name": "The Washington Post",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2b648ecaac3158c1"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:walmart": {
+      "kind": "player",
+      "observed_name": "Walmart",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:xai": {
+      "kind": "player",
+      "observed_name": "xAI",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
     "player:yandex": {
@@ -92,6 +381,19 @@
       ],
       "feed_slugs": [
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
+      ]
+    },
+    "player:yelp": {
+      "kind": "player",
+      "observed_name": "Yelp",
+      "first_seen_at": "2026-10-18T12:27:30.284320Z",
+      "last_seen_at": "2026-10-18T12:27:30.284320Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--575795a51d9ff9e6"
+      ],
+      "feed_slugs": [
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
     "protocol:http": {

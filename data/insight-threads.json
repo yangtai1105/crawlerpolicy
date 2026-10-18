@@ -15,6 +15,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-access-blocking",
+      "title": "Agent Access Blocking",
+      "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-authentication",
       "title": "Agent Authentication",
       "thesis": "Working group adoption signals formal consensus within the IETF that HTTP Message Signatures will serve as the baseline technical mechanism for verifying bot identity, moving the ecosystem beyond basic User-Agent heuristics and IP allowlists.",
@@ -28,19 +41,6 @@
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
       ]
-    },
-    {
-      "key": "agent-blocking",
-      "title": "Agent Blocking",
-      "thesis": "Machine interaction is shifting from background crawling to task execution by user-delegated agents, prompting web services to apply access controls and blocking mechanisms directly against agentic automation.",
-      "direction": "emerging",
-      "confidence": "low",
-      "first_observed_at": "2026-10-18T12:27:30.284320Z",
-      "last_updated_at": "2026-10-18T12:27:30.284320Z",
-      "related_feed_slugs": [
-        "x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
-      ],
-      "verified_development_slugs": []
     },
     {
       "key": "agent-development-lifecycle",
@@ -78,6 +78,19 @@
       "last_updated_at": "2026-10-13T15:36:53.900599Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agent-licensing-paywalls",
+      "title": "Agent Licensing Paywalls",
+      "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ],
       "verified_development_slugs": []
     },
@@ -369,6 +382,32 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ai-training-rights-disputes",
+      "title": "AI Training Rights Disputes",
+      "thesis": "Platform attempts to broaden commercial data-use clauses often collide with publisher sensitivities around AI training rights, forcing companies to explicitly decouple standard ad-tech crawling language from AI development permissions and re-pledge allegiance to robots.txt.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "anti-bot-agent-clashes",
+      "title": "Anti Bot Agent Clashes",
+      "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "automated-scraping-supply-chain-growth",
       "title": "Automated Scraping Supply Chain Growth",
       "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
@@ -461,6 +500,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "bifurcation-of-generative-search-monetization-into-flat-pilot-licensing-versus-variable-usage-based-attribution-pools",
+      "title": "Bifurcation Of Generative Search Monetization Into Flat Pilot Licensing Versus Variable Usage Based Attribution Pools",
+      "thesis": "By separating product-specific AI licensing pilots from its broader pay-per-value generative search initiatives, Google is establishing distinct commercial tiers that pay flat participation rates for experimental features rather than usage-based attribution royalties.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "bot-authentication",
       "title": "Bot Authentication",
       "thesis": "Cryptographic signature validation provides no protection against replay or request substitution if the verifier does not strictly enforce component binding to the target URI and authority.",
@@ -489,19 +541,6 @@
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-sees-updated-draft-on-responsible-web-data-collection"
       ]
-    },
-    {
-      "key": "bot-defense-expansion",
-      "title": "Bot Defense Expansion",
-      "thesis": "Machine interaction is shifting from background crawling to task execution by user-delegated agents, prompting web services to apply access controls and blocking mechanisms directly against agentic automation.",
-      "direction": "emerging",
-      "confidence": "low",
-      "first_observed_at": "2026-10-18T12:27:30.284320Z",
-      "last_updated_at": "2026-10-18T12:27:30.284320Z",
-      "related_feed_slugs": [
-        "x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
-      ],
-      "verified_development_slugs": []
     },
     {
       "key": "bot-identity-standardization",
@@ -601,6 +640,19 @@
       ]
     },
     {
+      "key": "commercial-agent-partnerships",
+      "title": "Commercial Agent Partnerships",
+      "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "context-interface-versioning",
       "title": "Context Interface Versioning",
       "thesis": "Establishing versioned, stable releases for model context protocols provides a dependable foundation for agent tool-use and structured context retrieval.",
@@ -614,19 +666,6 @@
       "verified_development_slugs": [
         "model-context-protocol-issues-stable-2026-07-28-specification-release"
       ]
-    },
-    {
-      "key": "contraction-of-implicit-scraping-permissions-in-platform-terms-of-service",
-      "title": "Contraction Of Implicit Scraping Permissions In Platform Terms Of Service",
-      "thesis": "Platform terms of service are increasingly treated as contested legal ground for AI training boundaries, where contractual ambiguity can trigger pushback from publishers and regulatory observers before any crawler directive is even evaluated.",
-      "direction": "emerging",
-      "confidence": "low",
-      "first_observed_at": "2026-10-18T12:27:30.284320Z",
-      "last_updated_at": "2026-10-18T12:27:30.284320Z",
-      "related_feed_slugs": [
-        "x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new"
-      ],
-      "verified_development_slugs": []
     },
     {
       "key": "crawl-budget-optimization",
@@ -679,6 +718,19 @@
       "last_updated_at": "2026-10-15T13:05:42.271060Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "crawler-opt-out-protection",
+      "title": "Crawler Opt Out Protection",
+      "thesis": "Platform attempts to broaden commercial data-use clauses often collide with publisher sensitivities around AI training rights, forcing companies to explicitly decouple standard ad-tech crawling language from AI development permissions and re-pledge allegiance to robots.txt.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
       ],
       "verified_development_slugs": []
     },
@@ -1067,6 +1119,19 @@
       ]
     },
     {
+      "key": "extension-of-platform-ai-licensing-agreements-downstream-to-regional-and-local-newsrooms",
+      "title": "Extension Of Platform AI Licensing Agreements Downstream To Regional And Local Newsrooms",
+      "thesis": "By separating product-specific AI licensing pilots from its broader pay-per-value generative search initiatives, Google is establishing distinct commercial tiers that pay flat participation rates for experimental features rather than usage-based attribution royalties.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-18T12:27:30.284320Z",
+      "last_updated_at": "2026-10-18T12:27:30.284320Z",
+      "related_feed_slugs": [
+        "x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "fail-closed-timestamp-validation",
       "title": "Fail Closed Timestamp Validation",
       "thesis": "Protocol parity across multiple language reference implementations is critical for authentication standards; divergent validation sequences between Rust and TypeScript created an edge-case discrepancy where compromised keys could use forward-skewed creation times.",
@@ -1350,19 +1415,6 @@
       "verified_development_slugs": []
     },
     {
-      "key": "local-news-ai-adoption",
-      "title": "Local News AI Adoption",
-      "thesis": "Platform AI partnerships are shifting from bespoke arrangements with top-tier international publishers to broader institutional rollouts targeting local and regional newsrooms.",
-      "direction": "emerging",
-      "confidence": "low",
-      "first_observed_at": "2026-10-18T12:27:30.284320Z",
-      "last_updated_at": "2026-10-18T12:27:30.284320Z",
-      "related_feed_slugs": [
-        "x-discovery-google-expands-news-ai-pilot-to-over-400-outlets"
-      ],
-      "verified_development_slugs": []
-    },
-    {
       "key": "machine-identity-verification",
       "title": "Machine Identity Verification",
       "thesis": "High-throughput cryptographic verification of bot signatures at the network edge creates cumulative latency bottlenecks if keys are parsed dynamically on every request rather than pre-decompressed at ingestion.",
@@ -1609,19 +1661,6 @@
       ]
     },
     {
-      "key": "platform-publisher-partnerships",
-      "title": "Platform Publisher Partnerships",
-      "thesis": "Platform AI partnerships are shifting from bespoke arrangements with top-tier international publishers to broader institutional rollouts targeting local and regional newsrooms.",
-      "direction": "emerging",
-      "confidence": "low",
-      "first_observed_at": "2026-10-18T12:27:30.284320Z",
-      "last_updated_at": "2026-10-18T12:27:30.284320Z",
-      "related_feed_slugs": [
-        "x-discovery-google-expands-news-ai-pilot-to-over-400-outlets"
-      ],
-      "verified_development_slugs": []
-    },
-    {
       "key": "positive-security-models",
       "title": "Positive Security Models",
       "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
@@ -1685,19 +1724,6 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use"
-      ],
-      "verified_development_slugs": []
-    },
-    {
-      "key": "publisher-resistance-to-broad-ai-training-terms",
-      "title": "Publisher Resistance To Broad AI Training Terms",
-      "thesis": "Platform terms of service are increasingly treated as contested legal ground for AI training boundaries, where contractual ambiguity can trigger pushback from publishers and regulatory observers before any crawler directive is even evaluated.",
-      "direction": "emerging",
-      "confidence": "low",
-      "first_observed_at": "2026-10-18T12:27:30.284320Z",
-      "last_updated_at": "2026-10-18T12:27:30.284320Z",
-      "related_feed_slugs": [
-        "x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new"
       ],
       "verified_development_slugs": []
     },
@@ -1853,15 +1879,15 @@
       "verified_development_slugs": []
     },
     {
-      "key": "task-execution-restrictions",
-      "title": "Task Execution Restrictions",
-      "thesis": "Machine interaction is shifting from background crawling to task execution by user-delegated agents, prompting web services to apply access controls and blocking mechanisms directly against agentic automation.",
+      "key": "terms-of-service-pushback",
+      "title": "Terms Of Service Pushback",
+      "thesis": "Platform attempts to broaden commercial data-use clauses often collide with publisher sensitivities around AI training rights, forcing companies to explicitly decouple standard ad-tech crawling language from AI development permissions and re-pledge allegiance to robots.txt.",
       "direction": "emerging",
       "confidence": "low",
       "first_observed_at": "2026-10-18T12:27:30.284320Z",
       "last_updated_at": "2026-10-18T12:27:30.284320Z",
       "related_feed_slugs": [
-        "x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google"
+        "x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
       ],
       "verified_development_slugs": []
     },

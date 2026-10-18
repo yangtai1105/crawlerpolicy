@@ -10,8 +10,8 @@
   "content_path": "content/evidence/x-discovery/x-discovery--2b648ecaac3158c1.json",
   "content_hash": "sha256:b9784a8e10b54c8637fb4e775ee57d794fe253b4fc711bc91479522a008b1530",
   "external_id": "2111533965202845908",
-  "stage": "fetched",
-  "analysis_attempts": 1,
+  "stage": "published",
+  "analysis_attempts": 2,
   "last_error": null,
   "title": "Google’s News AI pilot expands to over 400 publications",
   "content": "X author: @NiemanLab\n\nNieman Lab reported that Google expanded its News AI pilot program to more than 400 publications, including many U.S. local news outlets.\n\nLinked sources:\n- https://www.niemanlab.org/2026/10/googles-news-ai-pilot-expands-to-over-400-publications-including-u-s-local-news-outlets/",
@@ -25,6 +25,27 @@
     ],
     "provider_citations": [],
     "front": "access-discovery",
-    "shadow": true
+    "shadow": true,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover Google's News AI pilot program or its expansion to news publications."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.niemanlab.org/2026/10/googles-news-ai-pilot-expands-to-over-400-publications-including-u-s-local-news-outlets/",
+        "final_url": "https://www.niemanlab.org/2026/10/googles-news-ai-pilot-expands-to-over-400-publications-including-u-s-local-news-outlets/",
+        "method": "readability",
+        "chars": 2347,
+        "sha256": "39e7333a2feb130e893d8255304a8b0116ff0b525c58dbc76465c63fac280a5d",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-10-17/x-discovery--2b648ecaac3158c1-1.md",
+        "archived_copy": "https://web.archive.org/web/20261018201659/https://www.niemanlab.org/2026/10/googles-news-ai-pilot-expands-to-over-400-publications-including-u-s-local-news-outlets/"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 1,
+      "figures_kept": 1,
+      "missing": []
+    }
   }
 }

@@ -10,8 +10,8 @@
   "content_path": "content/evidence/x-discovery/x-discovery--575795a51d9ff9e6.json",
   "content_hash": "sha256:50f4d9b7ae5b161db09353b637639bfc535ddd22bbd6f4244b943cfad2556d9b",
   "external_id": "2111459970114064809",
-  "stage": "fetched",
-  "analysis_attempts": 1,
+  "stage": "published",
+  "analysis_attempts": 2,
   "last_error": null,
   "title": "Popular web services are blocking AI agents from acting on behalf of users",
   "content": "X author: @verge\n\nThe Verge reported that OpenAI, Meta, and Google are building AI agents for web tasks, but many popular services are blocking them from operating.\n\nLinked sources:\n- https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
@@ -25,6 +25,27 @@
     ],
     "provider_citations": [],
     "front": "agents-identity",
-    "shadow": true
+    "shadow": true,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the listed items cover The Verge's report detailing how popular web services are actively blocking AI agents built by OpenAI, Meta, and Google from performing user tasks."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+        "final_url": "https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web",
+        "method": "readability",
+        "chars": 5764,
+        "sha256": "2e7f9b92815627a098f7d88c9eed0f3a97523334f7f1e9f917399951264f716b",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-10-17/x-discovery--575795a51d9ff9e6-1.md",
+        "archived_copy": "https://web.archive.org/web/20261018211113/https://www.theverge.com/ai-artificial-intelligence/1013195/ai-agents-blocked-web"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 0,
+      "figures_kept": 0,
+      "missing": []
+    }
   }
 }

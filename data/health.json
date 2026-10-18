@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-18T15:19:57.333157Z",
-  "last_fully_successful_at": "2026-10-18T15:19:57.333157Z",
+  "last_attempted_at": "2026-10-18T21:09:17.514914Z",
+  "last_fully_successful_at": "2026-10-18T21:09:17.514914Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -200,7 +200,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--71caef6f3653dbce"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -381,17 +383,23 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--2b648ecaac3158c1"
+        "x-discovery--2b648ecaac3158c1",
+        "x-discovery--2db9e4763d48be27",
+        "x-discovery--575795a51d9ff9e6"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-10-17-x-discovery-google-expands-news-ai-pilot-to-over-400-outlets.md"
+        "content/feed/2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers.md",
+        "content/feed/2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi.md",
+        "content/feed/2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents.md"
       ]
     }
   },
   "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-10-17-x-discovery-google-expands-news-ai-pilot-to-over-400-outlets.md"
+    "content/feed/2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers.md",
+    "content/feed/2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi.md",
+    "content/feed/2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents.md"
   ],
   "provider": {
     "name": "gemini",
@@ -406,7 +414,7 @@
     "path": "data/daily/2026-10-18.json"
   },
   "insight_threads": {
-    "thread_count": 146,
+    "thread_count": 148,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -416,9 +424,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 1,
-    "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.082431,
+    "candidate_count": 0,
+    "x_search_calls": 6,
+    "estimated_tool_cost_usd": 0.157246,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--71caef6f3653dbce",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+  "supporting_urls": [],
+  "published_at": "2026-10-18T15:31:57Z",
+  "detected_at": "2026-10-18T21:09:17.514914Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--71caef6f3653dbce.json",
+  "content_hash": "sha256:16d30433b2323613adac6e7e99bea927f4b6597e594636b2760c37d24e98f25f",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2194",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission statement on the protests in Albania",
+  "content": "European Commission Statement Brussels, 18 Oct 2026 We condemn the use of violence in Tirana and other cities in Albania, including arson, attacks on State institutions and the destruction of public and private p...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

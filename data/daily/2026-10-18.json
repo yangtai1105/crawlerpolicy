@@ -1,27 +1,27 @@
 {
   "schema_version": 1,
   "edition_date": "2026-10-18",
-  "generated_at": "2026-10-18T15:19:57.333157Z",
+  "generated_at": "2026-10-18T21:09:17.514914Z",
   "status": "published",
   "note": "Highest-consequence developments detected in this daily window.",
   "items": [
     {
-      "slug": "x-discovery-google-expands-news-ai-pilot-to-over-400-outlets",
+      "slug": "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
       "status": "signal",
-      "importance": 0.65,
-      "published_at": "2026-10-17T18:48:00Z"
+      "importance": 0.82,
+      "published_at": "2026-10-17T14:11:00Z"
     },
     {
-      "slug": "x-discovery-meta-revises-terms-to-remove-clause-interpreted-as-permitting-ai-scraping-of-new",
+      "slug": "x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi",
       "status": "signal",
-      "importance": 0.65,
+      "importance": 0.72,
       "published_at": "2026-10-17T15:13:08Z"
     },
     {
-      "slug": "x-discovery-web-services-block-autonomous-ai-agents-from-openai-meta-and-google",
+      "slug": "x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers",
       "status": "signal",
-      "importance": 0.65,
-      "published_at": "2026-10-17T14:11:00Z"
+      "importance": 0.68,
+      "published_at": "2026-10-17T18:48:00Z"
     }
   ]
 }
