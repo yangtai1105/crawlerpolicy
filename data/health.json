@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-18T21:09:17.514914Z",
-  "last_fully_successful_at": "2026-10-18T21:09:17.514914Z",
+  "last_attempted_at": "2026-10-19T15:18:21.082314Z",
+  "last_fully_successful_at": "2026-10-19T15:18:21.082314Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -90,7 +90,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "meta-externalagent--1cf2c33c45ddc9aa"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -150,7 +152,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--a643acf3ad24c085"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -170,7 +174,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--f039e20c862f8b4d",
+        "uk-cma--cb44d0ef03061cf1"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -201,7 +208,14 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--71caef6f3653dbce"
+        "eu-commission-digital--d5f83371e73c9ba7",
+        "eu-commission-digital--fe4455a119995568",
+        "eu-commission-digital--4c8ecc495646ebd8",
+        "eu-commission-digital--a6a2eae9e73dd26c",
+        "eu-commission-digital--bdb6164f6e2e3b17",
+        "eu-commission-digital--9c80f5badd9bbf01",
+        "eu-commission-digital--87f74526a4beabca",
+        "eu-commission-digital--3501e7028ab0c491"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -382,25 +396,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "x-discovery--2b648ecaac3158c1",
-        "x-discovery--2db9e4763d48be27",
-        "x-discovery--575795a51d9ff9e6"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers.md",
-        "content/feed/2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi.md",
-        "content/feed/2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents.md"
-      ]
+      "feed_items_written": []
     }
   },
   "events_written": [],
-  "feed_items_written": [
-    "content/feed/2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers.md",
-    "content/feed/2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi.md",
-    "content/feed/2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents.md"
-  ],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -408,10 +410,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-10-18",
-    "item_count": 3,
-    "path": "data/daily/2026-10-18.json"
+    "status": "quiet",
+    "edition_date": "2026-10-19",
+    "item_count": 0,
+    "path": "data/daily/2026-10-19.json"
   },
   "insight_threads": {
     "thread_count": 148,
@@ -425,8 +427,8 @@
   "discovery": {
     "status": "live",
     "candidate_count": 0,
-    "x_search_calls": 6,
-    "estimated_tool_cost_usd": 0.157246,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.165852,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

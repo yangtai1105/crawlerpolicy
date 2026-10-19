@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--fe4455a119995568",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2197",
+  "supporting_urls": [],
+  "published_at": "2026-10-19T12:07:03Z",
+  "detected_at": "2026-10-19T15:18:21.082314Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--fe4455a119995568.json",
+  "content_hash": "sha256:39138da877afd6d1f57115d4b664e97edc3d055b55357af7f37db7ccf3e653e0",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2197",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU Leaders discuss energy prices, budget, Ukraine during two-day summit in Brussels",
+  "content": "European Commission News Brussels, 19 Oct 2026 \nEuropean Commission President Ursula von der Leyen participated in the meeting of the European Council of 16-17 October, a dense summit that touched on current...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

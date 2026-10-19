@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--9c80f5badd9bbf01",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2184",
+  "supporting_urls": [],
+  "published_at": "2026-10-18T22:00:00Z",
+  "detected_at": "2026-10-19T15:18:21.082314Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--9c80f5badd9bbf01.json",
+  "content_hash": "sha256:44b24a2bde106a6411b88140f96f2abe1388c5dcd3d1d89c58fecbf9cc085dc5",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2184",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU invests over €390 million in 135 new climate and environment projects",
+  "content": "European Commission Press release Brussels, 19 Oct 2026 The European Commission has today granted more than €390 million to 135 new projects across Europe under the LIFE programme for environment and climate action.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

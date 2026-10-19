@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--4c8ecc495646ebd8",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2195",
+  "supporting_urls": [],
+  "published_at": "2026-10-19T09:24:42Z",
+  "detected_at": "2026-10-19T15:18:21.082314Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--4c8ecc495646ebd8.json",
+  "content_hash": "sha256:8387ae9411e61477d36862f1277eece8d1bef244192ed9f8a976204edffbbf06",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2195",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Daily News 19 / 10 / 2026",
+  "content": "European Commission Daily news Brussels, 19 Oct 2026 Commission invests €3.4 billion in net-zero technology projects \nToday, the European Commission has selected 77 European net-zero technology projects to receive...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
