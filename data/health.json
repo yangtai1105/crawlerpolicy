@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-19T15:18:21.082314Z",
-  "last_fully_successful_at": "2026-10-19T15:18:21.082314Z",
+  "last_attempted_at": "2026-10-20T13:22:00.882558Z",
+  "last_fully_successful_at": "2026-10-20T13:22:00.882558Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -90,9 +90,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "meta-externalagent--1cf2c33c45ddc9aa"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -153,7 +151,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--a643acf3ad24c085"
+        "cloudflare-blog--3d3d43cbbcd71740",
+        "cloudflare-blog--221d5d49b3735af0",
+        "cloudflare-blog--bd9839365133c8dc"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -175,8 +175,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--f039e20c862f8b4d",
-        "uk-cma--cb44d0ef03061cf1"
+        "uk-cma--5e7e37d5222bc5dc",
+        "uk-cma--8b7eaa865e88ddf9",
+        "uk-cma--8521747fa11ccb91",
+        "uk-cma--548ea4ef6ffc882f",
+        "uk-cma--ccf6a470e777616a",
+        "uk-cma--0c1795e6ee8e6cf9"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -208,14 +212,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--d5f83371e73c9ba7",
-        "eu-commission-digital--fe4455a119995568",
-        "eu-commission-digital--4c8ecc495646ebd8",
-        "eu-commission-digital--a6a2eae9e73dd26c",
-        "eu-commission-digital--bdb6164f6e2e3b17",
-        "eu-commission-digital--9c80f5badd9bbf01",
-        "eu-commission-digital--87f74526a4beabca",
-        "eu-commission-digital--3501e7028ab0c491"
+        "eu-commission-digital--99235d43d2e9149b",
+        "eu-commission-digital--c34c0c7fdae1766e",
+        "eu-commission-digital--09997105d8ce204a",
+        "eu-commission-digital--3dcb224ab5718144",
+        "eu-commission-digital--b843b17f70b80ef7",
+        "eu-commission-digital--e7cb78e7e53dbf68"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -256,9 +258,21 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "web-bot-auth-repo--f60849145322fff0",
+        "web-bot-auth-repo--83a3b9227a65bc82",
+        "web-bot-auth-repo--f2800be0b3b43903",
+        "web-bot-auth-repo--0e93f9767d33e5bd",
+        "web-bot-auth-repo--fa1e1273defbbd40"
+      ],
+      "events_written": [
+        "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
+        "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
+        "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
+      ]
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -276,7 +290,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-research--96b4f91ec0200bce"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -401,8 +417,14 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
+    "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
+    "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -410,13 +432,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-10-19",
-    "item_count": 0,
-    "path": "data/daily/2026-10-19.json"
+    "status": "published",
+    "edition_date": "2026-10-20",
+    "item_count": 2,
+    "path": "data/daily/2026-10-20.json"
   },
   "insight_threads": {
-    "thread_count": 148,
+    "thread_count": 152,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -428,7 +450,7 @@
     "status": "live",
     "candidate_count": 0,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.165852,
+    "estimated_tool_cost_usd": 0.119847,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

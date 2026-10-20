@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-20",
+  "generated_at": "2026-10-20T13:22:00.882558Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
+      "status": "verified",
+      "importance": 0.52,
+      "published_at": "2026-10-19T20:08:23Z"
+    },
+    {
+      "slug": "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules",
+      "status": "verified",
+      "importance": 0.51,
+      "published_at": "2026-10-19T15:59:51Z"
+    }
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--3dcb224ab5718144",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2204",
+  "supporting_urls": [],
+  "published_at": "2026-10-19T22:00:00Z",
+  "detected_at": "2026-10-20T13:22:00.882558Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--3dcb224ab5718144.json",
+  "content_hash": "sha256:7e547ff3d7d44184c91a2f6de2f5c0ab4289782c77539f8a6b8729300065d835",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2204",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by President von der Leyen on Europe's Northern Neighbourhood: A New Strategy for the Arctic",
+  "content": "European Commission Statement Strasbourg, 20 Oct 2026 Good afternoon,\nWe have just adopted our new European Arctic Strategy. It was time to do so. The Arctic is one place where the tectonic plates of geopolitics ar...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

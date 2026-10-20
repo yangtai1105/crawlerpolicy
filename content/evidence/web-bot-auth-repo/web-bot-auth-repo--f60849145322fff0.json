@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--f60849145322fff0",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/158",
+  "supporting_urls": [],
+  "published_at": "2026-10-19T20:08:23Z",
+  "detected_at": "2026-10-20T13:22:00.882558Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--f60849145322fff0.json",
+  "content_hash": "sha256:1f708f60db6b5018a70f415faa17299786711f1f17654df6e04224cb95391020",
+  "external_id": "pr:158",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #158: fix(web-bot-auth): reject duplicate covered components",
+  "content": "RFC 9421 Section 2.5, step 2.1: each component identifier occurs only once. Parsing collected components into an IndexMap, silently dropping repeats, so a Signature-Input with a duplicated identifier verified against the signature over the de-duplicated base.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

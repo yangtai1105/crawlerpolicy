@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--f2800be0b3b43903",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/157",
+  "supporting_urls": [],
+  "published_at": "2026-10-19T15:59:51Z",
+  "detected_at": "2026-10-20T13:22:00.882558Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--f2800be0b3b43903.json",
+  "content_hash": "sha256:d93c8ba0c556d7e9cb166ddf7befeab803fd843642bc89ef0c2efc80aef1fe1c",
+  "external_id": "pr:157",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #157: fix(web-bot-auth): reject alg parameter mismatching the resolved key",
+  "content": "RFC 9421 Section 3.2, step 6: when `alg` is present it must name a registered algorithm and agree with the algorithm of the resolved key. Fixes #153.\n\nSuperseeds #154",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

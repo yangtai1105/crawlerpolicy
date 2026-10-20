@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--99235d43d2e9149b",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2210",
+  "supporting_urls": [],
+  "published_at": "2026-10-20T10:42:39Z",
+  "detected_at": "2026-10-20T13:22:00.882558Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--99235d43d2e9149b.json",
+  "content_hash": "sha256:2d90c23515da566ff4af2667f43e5b6847c8dc04e1e91f1c8ef9b4ce0e1b4c73",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2210",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission welcomes political agreement on the future organic rulebook",
+  "content": "European Commission Press release Brussels, 20 Oct 2026 The European Commission welcomes today's agreement between the European Parliament and the Council to amend certain production, labelling and certification rules, as well as rules on trade with non-EU countries, in the organic sector.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

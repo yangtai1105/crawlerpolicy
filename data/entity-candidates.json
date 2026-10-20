@@ -413,6 +413,34 @@
         "2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots"
       ]
     },
+    "protocol:http message signatures": {
+      "kind": "protocol",
+      "observed_name": "HTTP Message Signatures",
+      "first_seen_at": "2026-10-20T13:22:00.882558Z",
+      "last_seen_at": "2026-10-20T13:22:00.882558Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--f60849145322fff0"
+      ],
+      "feed_slugs": [
+        "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks"
+      ]
+    },
+    "protocol:rfc 9421": {
+      "kind": "protocol",
+      "observed_name": "RFC 9421",
+      "first_seen_at": "2026-10-20T13:22:00.882558Z",
+      "last_seen_at": "2026-10-20T13:22:00.882558Z",
+      "occurrences": 2,
+      "evidence_ids": [
+        "web-bot-auth-repo--f60849145322fff0",
+        "web-bot-auth-repo--f2800be0b3b43903"
+      ],
+      "feed_slugs": [
+        "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
+        "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules"
+      ]
+    },
     "protocol:tls": {
       "kind": "protocol",
       "observed_name": "TLS",

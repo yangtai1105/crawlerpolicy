@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--c34c0c7fdae1766e",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2208",
+  "supporting_urls": [],
+  "published_at": "2026-10-20T09:45:23Z",
+  "detected_at": "2026-10-20T13:22:00.882558Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--c34c0c7fdae1766e.json",
+  "content_hash": "sha256:e0b92bf8826c2c33218ff09446fd5b16e43141b04e70e5fccefafe05c420df7d",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2208",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Daily News 20 / 10 / 2026",
+  "content": "European Commission Daily news Brussels, 20 Oct 2026 Commission data shows continued growth in sustainable investments across the EU\nOver €1.2 trillion has been invested in sustainable activities in the EU since 2...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
