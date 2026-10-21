@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-21",
+  "generated_at": "2026-10-21T13:28:44.196458Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments",
+      "status": "signal",
+      "importance": 0.68,
+      "published_at": "2026-10-20T20:48:28Z"
+    },
+    {
+      "slug": "cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function",
+      "status": "verified",
+      "importance": 0.45,
+      "published_at": "2026-10-21T00:00:00Z"
+    }
+  ]
+}

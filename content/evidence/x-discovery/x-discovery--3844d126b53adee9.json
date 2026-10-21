@@ -1,0 +1,32 @@
+{
+  "evidence_id": "x-discovery--3844d126b53adee9",
+  "source": "x-discovery",
+  "source_url": "https://x.com/Cloudflare/status/2112647161221444035",
+  "supporting_urls": [],
+  "published_at": "2026-10-20T20:48:28Z",
+  "detected_at": "2026-10-21T13:28:44.196458Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--3844d126b53adee9.json",
+  "content_hash": "sha256:583bece2d1cf429dae9ad1eff8c4af560356d935b9b9d7aea2eab66506156177",
+  "external_id": "2112647161221444035",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Cloudflare partners on Mastercard Agent Pay for Machines for AI agent payments",
+  "content": "X author: @Cloudflare\n\nCloudflare is working with Mastercard and partners to enable trusted agent-to-agent payments for AI agents within defined budgets and permissions via Mastercard Agent Pay for Machines.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "Cloudflare",
+    "post_url": "https://x.com/Cloudflare/status/2112647161221444035",
+    "linked_urls": [],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Cloudflare's partnership with Mastercard for AI agent payments via Mastercard Agent Pay for Machines is not covered in any previously seen items."
+    },
+    "linked_articles": []
+  }
+}

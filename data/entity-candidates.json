@@ -426,6 +426,19 @@
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks"
       ]
     },
+    "protocol:mastercard agent pay for machines": {
+      "kind": "protocol",
+      "observed_name": "Mastercard Agent Pay for Machines",
+      "first_seen_at": "2026-10-21T13:28:44.196458Z",
+      "last_seen_at": "2026-10-21T13:28:44.196458Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--3844d126b53adee9"
+      ],
+      "feed_slugs": [
+        "2026-10-20-x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments"
+      ]
+    },
     "protocol:rfc 9421": {
       "kind": "protocol",
       "observed_name": "RFC 9421",

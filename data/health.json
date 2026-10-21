@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-20T13:22:00.882558Z",
-  "last_fully_successful_at": "2026-10-20T13:22:00.882558Z",
+  "last_attempted_at": "2026-10-21T13:28:44.196458Z",
+  "last_fully_successful_at": "2026-10-21T13:28:44.196458Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -151,9 +151,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--3d3d43cbbcd71740",
-        "cloudflare-blog--221d5d49b3735af0",
-        "cloudflare-blog--bd9839365133c8dc"
+        "cloudflare-blog--8fea595e516bfc42",
+        "cloudflare-blog--7746480bcb742cff"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -175,12 +174,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--5e7e37d5222bc5dc",
-        "uk-cma--8b7eaa865e88ddf9",
-        "uk-cma--8521747fa11ccb91",
-        "uk-cma--548ea4ef6ffc882f",
-        "uk-cma--ccf6a470e777616a",
-        "uk-cma--0c1795e6ee8e6cf9"
+        "uk-cma--8152af3f5bd82b2c",
+        "uk-cma--9117cbc345545c21",
+        "uk-cma--b57d5dfe15746047"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -212,12 +208,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--99235d43d2e9149b",
-        "eu-commission-digital--c34c0c7fdae1766e",
-        "eu-commission-digital--09997105d8ce204a",
-        "eu-commission-digital--3dcb224ab5718144",
-        "eu-commission-digital--b843b17f70b80ef7",
-        "eu-commission-digital--e7cb78e7e53dbf68"
+        "eu-commission-digital--d12fa1e157c5e7ab",
+        "eu-commission-digital--20563de57833937b",
+        "eu-commission-digital--8e34909a79bcf2f1",
+        "eu-commission-digital--233ac3365313ad2c",
+        "eu-commission-digital--1b86a48dc3b97703",
+        "eu-commission-digital--a4cbe5ff943909a9",
+        "eu-commission-digital--300e8897e2402451"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -228,7 +225,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "us-ftc-federal-register--c9ca681f003ce7b8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -238,7 +237,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--c0373dbc3b15fa34"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -258,21 +259,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--f60849145322fff0",
-        "web-bot-auth-repo--83a3b9227a65bc82",
-        "web-bot-auth-repo--f2800be0b3b43903",
-        "web-bot-auth-repo--0e93f9767d33e5bd",
-        "web-bot-auth-repo--fa1e1273defbbd40"
-      ],
-      "events_written": [
-        "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
-        "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
-        "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -290,9 +279,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-research--96b4f91ec0200bce"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -302,7 +289,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--5a02b56277d8c597"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -312,9 +301,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "cf-changelog-ai-gateway--8f0caccb1b2dbb46"
+      ],
+      "events_written": [
+        "content/events/2026-10-21-cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-21-cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function.md"
+      ]
     },
     "cf-changelog-ai-search": {
       "fetch": "ok",
@@ -402,7 +397,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--2ec04c1ec718a566"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -412,18 +409,22 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "x-discovery--42f8f66a0942a1f1",
+        "x-discovery--3844d126b53adee9"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-20-x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments.md"
+      ]
     }
   },
   "events_written": [
-    "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
-    "content/events/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
+    "content/events/2026-10-21-cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks.md",
-    "content/feed/2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules.md"
+    "content/feed/2026-10-21-cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function.md",
+    "content/feed/2026-10-20-x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments.md"
   ],
   "provider": {
     "name": "gemini",
@@ -433,12 +434,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-20",
+    "edition_date": "2026-10-21",
     "item_count": 2,
-    "path": "data/daily/2026-10-20.json"
+    "path": "data/daily/2026-10-21.json"
   },
   "insight_threads": {
-    "thread_count": 152,
+    "thread_count": 157,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -448,9 +449,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 0,
-    "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.119847,
+    "candidate_count": 2,
+    "x_search_calls": 6,
+    "estimated_tool_cost_usd": 0.189219,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

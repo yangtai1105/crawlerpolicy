@@ -95,6 +95,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-middleware-consolidation",
+      "title": "Agent Middleware Consolidation",
+      "thesis": "By merging direct model invocation and proxy mediation into a single SDK function, Cloudflare embeds gateway-level governance—such as dynamic fallbacks, observability logging, and stream recovery—directly into the default agent development stack.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-21T13:28:44.196458Z",
+      "last_updated_at": "2026-10-21T13:28:44.196458Z",
+      "related_feed_slugs": [
+        "cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-unifies-agents-sdk-model-routing-with-createai-function"
+      ]
+    },
+    {
       "key": "agent-native-micropayments",
       "title": "Agent Native Micropayments",
       "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
@@ -175,6 +190,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agentic-commerce",
+      "title": "Agentic Commerce",
+      "thesis": "Edge delivery networks are expanding beyond bot blocking and traffic routing into financial rails for automated actors, establishing governance rules like programmatic budgets for autonomous commerce.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-21T13:28:44.196458Z",
+      "last_updated_at": "2026-10-21T13:28:44.196458Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments"
       ],
       "verified_development_slugs": []
     },
@@ -351,6 +379,21 @@
       ],
       "verified_development_slugs": [
         "cloudflare-adds-user-agent-logging-and-filtering-to-ai-gateway"
+      ]
+    },
+    {
+      "key": "ai-gateway-routing",
+      "title": "AI Gateway Routing",
+      "thesis": "By merging direct model invocation and proxy mediation into a single SDK function, Cloudflare embeds gateway-level governance—such as dynamic fallbacks, observability logging, and stream recovery—directly into the default agent development stack.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-21T13:28:44.196458Z",
+      "last_updated_at": "2026-10-21T13:28:44.196458Z",
+      "related_feed_slugs": [
+        "cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-unifies-agents-sdk-model-routing-with-createai-function"
       ]
     },
     {
@@ -1076,6 +1119,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "edge-payment-infrastructure",
+      "title": "Edge Payment Infrastructure",
+      "thesis": "Edge delivery networks are expanding beyond bot blocking and traffic routing into financial rails for automated actors, establishing governance rules like programmatic budgets for autonomous commerce.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-21T13:28:44.196458Z",
+      "last_updated_at": "2026-10-21T13:28:44.196458Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "edge-search-retrieval",
       "title": "Edge Search Retrieval",
       "thesis": "Edge and infrastructure providers are formalizing retrieval-augmented generation (RAG) and search discovery tools into modular SDK adapters, lowering friction for autonomous agent loops to query proprietary indexed knowledge bases directly without custom REST plumbing.",
@@ -1495,6 +1551,19 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "machine-to-machine-micropayments",
+      "title": "Machine To Machine Micropayments",
+      "thesis": "Edge delivery networks are expanding beyond bot blocking and traffic routing into financial rails for automated actors, establishing governance rules like programmatic budgets for autonomous commerce.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-21T13:28:44.196458Z",
+      "last_updated_at": "2026-10-21T13:28:44.196458Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments"
       ],
       "verified_development_slugs": []
     },

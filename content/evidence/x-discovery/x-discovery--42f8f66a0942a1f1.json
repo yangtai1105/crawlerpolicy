@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--42f8f66a0942a1f1",
+  "source": "x-discovery",
+  "source_url": "https://x.com/verge/status/2112681679227867592",
+  "supporting_urls": [
+    "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed"
+  ],
+  "published_at": "2026-10-20T23:05:38Z",
+  "detected_at": "2026-10-21T13:28:44.196458Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--42f8f66a0942a1f1.json",
+  "content_hash": "sha256:1d3d34016ab27d4dcba30f1d1e4195a353c7d243d634dae0134ea3b917afd605",
+  "external_id": "2112681679227867592",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Court dismisses Ann Altman lawsuit against Sam Altman with prejudice",
+  "content": "X author: @verge\n\nA court dismissed Ann Altman’s lawsuit against her brother Sam Altman with prejudice, meaning it cannot be refiled.\n\nLinked sources:\n- https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "verge",
+    "post_url": "https://x.com/verge/status/2112681679227867592",
+    "linked_urls": [
+      "https://www.theverge.com/ai-artificial-intelligence/1014976/sam-altman-ann-altman-lawsuit-dismissed"
+    ],
+    "provider_citations": [],
+    "front": "governance-law",
+    "shadow": false
+  }
+}

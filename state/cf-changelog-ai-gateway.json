@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-10-20T13:22:00.882558+00:00",
-  "last_fetch_succeeded_at": "2026-10-20T13:22:00.882558+00:00",
-  "last_evidence_at": "2026-10-02T14:29:07.997977+00:00",
+  "last_checked_at": "2026-10-21T13:28:44.196458+00:00",
+  "last_fetch_succeeded_at": "2026-10-21T13:28:44.196458+00:00",
+  "last_evidence_at": "2026-10-21T13:28:44.196458+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://developers.cloudflare.com/changelog/post/2026-03-17-collect-log-payload-header/",
@@ -22,7 +22,8 @@
     "https://developers.cloudflare.com/changelog/post/2026-08-05-access-user-id-metadata/",
     "https://developers.cloudflare.com/changelog/post/2026-06-12-user-agent-logging/",
     "https://developers.cloudflare.com/changelog/post/2026-06-05-spend-limits/",
-    "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/"
+    "https://developers.cloudflare.com/changelog/post/2026-10-02-introducing-web-search-api/",
+    "https://developers.cloudflare.com/changelog/post/2026-10-21-createai/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

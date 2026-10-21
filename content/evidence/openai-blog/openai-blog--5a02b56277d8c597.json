@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--5a02b56277d8c597",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/openai-models-google-cloud",
+  "supporting_urls": [],
+  "published_at": "2026-10-21T12:00:00Z",
+  "detected_at": "2026-10-21T13:28:44.196458Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--5a02b56277d8c597.json",
+  "content_hash": "sha256:9b12f5bcdc9230c49a50baae037dbb81e606ae036219b6db7cfeeb6c6c4dff82",
+  "external_id": "https://openai.com/index/openai-models-google-cloud",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "OpenAI models are coming to Google Cloud",
+  "content": "OpenAI and Google Cloud are bringing frontier models and Codex workflows to Gemini’s Model Garden, available through Google Cloud Marketplace.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

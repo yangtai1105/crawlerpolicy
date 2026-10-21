@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-10-20T13:22:00.882558+00:00",
-  "last_fetch_succeeded_at": "2026-10-20T13:22:00.882558+00:00",
-  "last_evidence_at": "2026-10-17T11:59:21.590428+00:00",
+  "last_checked_at": "2026-10-21T13:28:44.196458+00:00",
+  "last_fetch_succeeded_at": "2026-10-21T13:28:44.196458+00:00",
+  "last_evidence_at": "2026-10-21T13:28:44.196458+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/inworld-ai-DO-NOT-PUBLISH",
     "https://openai.com/index/the-power-of-continuous-learning",
     "https://openai.com/index/point-e",
     "https://openai.com/index/new-and-improved-embedding-model",
@@ -503,7 +502,8 @@
     "https://openai.com/index/oracle",
     "https://openai.com/index/the-eus-next-chapter-in-ai-is-agentic",
     "https://openai.com/index/introducing-the-rosalind-academic-plan",
-    "https://openai.com/index/itau-generative-ai"
+    "https://openai.com/index/itau-generative-ai",
+    "https://openai.com/index/openai-models-google-cloud"
   ],
   "consecutive_failures": 0,
   "first_seen": false
