@@ -1,14 +1,9 @@
 {
-  "last_checked_at": "2026-10-21T13:28:44.196458+00:00",
-  "last_fetch_succeeded_at": "2026-10-21T13:28:44.196458+00:00",
-  "last_evidence_at": "2026-10-21T13:28:44.196458+00:00",
+  "last_checked_at": "2026-10-22T13:30:16.624196+00:00",
+  "last_fetch_succeeded_at": "2026-10-22T13:30:16.624196+00:00",
+  "last_evidence_at": "2026-10-22T13:30:16.624196+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1223",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1247",
-    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1246",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1245",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1244",
     "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1267",
     "https://ec.europa.eu/commission/presscorner/detail/en/read_26_1266",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1263",
@@ -503,7 +498,12 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2223",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2222",
     "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2221",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2219"
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2219",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2239",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2238",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2237",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2236",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2233"
   ],
   "consecutive_failures": 0,
   "first_seen": false

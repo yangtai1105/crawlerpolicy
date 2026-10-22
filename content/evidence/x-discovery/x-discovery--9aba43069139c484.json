@@ -1,0 +1,35 @@
+{
+  "evidence_id": "x-discovery--9aba43069139c484",
+  "source": "x-discovery",
+  "source_url": "https://x.com/AnnaGreer3/status/2113021539377619333",
+  "supporting_urls": [
+    "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/"
+  ],
+  "published_at": "2026-10-21T21:36:07Z",
+  "detected_at": "2026-10-22T13:30:16.624196Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--9aba43069139c484.json",
+  "content_hash": "sha256:7889113dd1c1c770db5ab3e6ffba6f37f279974f4e6d8bcbfd86b1791806402f",
+  "external_id": "2113021539377619333",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "MIT Technology Review on designing the internet for AI agents",
+  "content": "X author: @AnnaGreer3\n\nMIT Technology Review examines how the growing use of AI agents could change websites from e-commerce and customer service to security and advertising.\n\nLinked sources:\n- https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "AnnaGreer3",
+    "post_url": "https://x.com/AnnaGreer3/status/2113021539377619333",
+    "linked_urls": [
+      "https://www.technologyreview.com/2026/10/19/1147186/making-the-internet-better-for-ai-agents-might-make-it-worse-for-everyone-else/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "duplicate",
+      "matched": "x:x-discovery--2f234417f2162e97",
+      "reason": "This candidate covers the same MIT Technology Review reporting on AI agents interacting with websites as an existing listed post."
+    }
+  }
+}

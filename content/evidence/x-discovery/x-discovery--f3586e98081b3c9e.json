@@ -1,0 +1,32 @@
+{
+  "evidence_id": "x-discovery--f3586e98081b3c9e",
+  "source": "x-discovery",
+  "source_url": "https://x.com/Paigedays911/status/2112920466855993406",
+  "supporting_urls": [],
+  "published_at": "2026-10-21T14:54:30Z",
+  "detected_at": "2026-10-22T13:30:16.624196Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--f3586e98081b3c9e.json",
+  "content_hash": "sha256:d15b398734274223ad7a0816d7baf9b376ead377fce570489dfced0d86585931",
+  "external_id": "2112920466855993406",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "NYT copyright lawsuit against OpenAI and Microsoft proceeds",
+  "content": "X author: @Paigedays911\n\nA federal court ruled that the New York Times copyright lawsuit against OpenAI and Microsoft must proceed, citing evidence of LLMs outputting full copyrighted articles and rejecting dismissal motions.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "Paigedays911",
+    "post_url": "https://x.com/Paigedays911/status/2112920466855993406",
+    "linked_urls": [],
+    "provider_citations": [],
+    "front": "governance-law",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover the court ruling permitting the New York Times copyright lawsuit against OpenAI and Microsoft to proceed."
+    },
+    "linked_articles": []
+  }
+}

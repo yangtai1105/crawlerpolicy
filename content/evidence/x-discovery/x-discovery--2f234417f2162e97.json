@@ -1,0 +1,49 @@
+{
+  "evidence_id": "x-discovery--2f234417f2162e97",
+  "source": "x-discovery",
+  "source_url": "https://x.com/version6media/status/2112885380198375581",
+  "supporting_urls": [
+    "https://www.technologyreview.com/2026/10/20/1147355/the-download-claim-shaking-up-ai-internet-agent-problem/"
+  ],
+  "published_at": "2026-10-21T12:35:04Z",
+  "detected_at": "2026-10-22T13:30:16.624196Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--2f234417f2162e97.json",
+  "content_hash": "sha256:7fb1568477cc9215d348beef5cbc8221ce8ebd37e9aab47927bae4cec5b6eb65",
+  "external_id": "2112885380198375581",
+  "stage": "analyzed",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "MIT Technology Review on AI agents performing real tasks on websites",
+  "content": "X author: @version6media\n\nMIT Technology Review reports that AI agents are now booking, buying, and scraping on real websites, prompting sites to prepare for non-human traffic and agent APIs.\n\nLinked sources:\n- https://www.technologyreview.com/2026/10/20/1147355/the-download-claim-shaking-up-ai-internet-agent-problem/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "version6media",
+    "post_url": "https://x.com/version6media/status/2112885380198375581",
+    "linked_urls": [
+      "https://www.technologyreview.com/2026/10/20/1147355/the-download-claim-shaking-up-ai-internet-agent-problem/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover MIT Technology Review's report on websites adapting to AI agents executing transactions and tasks."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.technologyreview.com/2026/10/20/1147355/the-download-claim-shaking-up-ai-internet-agent-problem/",
+        "final_url": "https://www.technologyreview.com/2026/10/20/1147355/the-download-claim-shaking-up-ai-internet-agent-problem/",
+        "method": "readability",
+        "chars": 1965,
+        "sha256": "b06e4290985d70beadaa91a566a398398ff1d29e6ab023c02c10fc2e659d3268"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 0,
+      "figures_kept": 0,
+      "missing": []
+    }
+  }
+}

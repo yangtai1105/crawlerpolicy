@@ -711,6 +711,32 @@
       ]
     },
     {
+      "key": "contractual-normalization-of-web-scraping",
+      "title": "Contractual Normalization Of Web Scraping",
+      "thesis": "Platform terms of service are increasingly adapting legal language to provide explicit contractual authorization for automated data ingestion, bridging the gap between platform operations and web scraping for model training and indexing.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-22T13:30:16.624196Z",
+      "last_updated_at": "2026-10-22T13:30:16.624196Z",
+      "related_feed_slugs": [
+        "x-discovery-meta-updates-terms-to-explicitly-permit-automated-crawling-and-scraping-across-a"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "court-validation-of-verbatim-llm-memorization-claims",
+      "title": "Court Validation Of Verbatim Llm Memorization Claims",
+      "thesis": "Judicial scrutiny is focusing directly on verbatim output generation as sufficient ground to sustain copyright infringement claims against AI developers past the motion-to-dismiss threshold.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-22T13:30:16.624196Z",
+      "last_updated_at": "2026-10-22T13:30:16.624196Z",
+      "related_feed_slugs": [
+        "x-discovery-federal-court-rejects-motions-to-dismiss-nyt-copyright-lawsuit-against-openai-an"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "crawl-budget-optimization",
       "title": "Crawl Budget Optimization",
       "thesis": "Content delivery networks are evolving from defensive gatekeepers that restrict AI scrapers into selective discovery facilitators that feed network-level traffic and change metadata directly to search engines to optimize crawl efficiency.",
@@ -1190,6 +1216,19 @@
       ]
     },
     {
+      "key": "expansion-of-platform-level-automated-data-retrieval",
+      "title": "Expansion Of Platform Level Automated Data Retrieval",
+      "thesis": "Platform terms of service are increasingly adapting legal language to provide explicit contractual authorization for automated data ingestion, bridging the gap between platform operations and web scraping for model training and indexing.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-22T13:30:16.624196Z",
+      "last_updated_at": "2026-10-22T13:30:16.624196Z",
+      "related_feed_slugs": [
+        "x-discovery-meta-updates-terms-to-explicitly-permit-automated-crawling-and-scraping-across-a"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "extension-of-platform-ai-licensing-agreements-downstream-to-regional-and-local-newsrooms",
       "title": "Extension Of Platform AI Licensing Agreements Downstream To Regional And Local Newsrooms",
       "thesis": "By separating product-specific AI licensing pilots from its broader pay-per-value generative search initiatives, Google is establishing distinct commercial tiers that pay flat participation rates for experimental features rather than usage-based attribution royalties.",
@@ -1244,6 +1283,21 @@
         "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "formalization-of-crawler-behavioral-best-practices",
+      "title": "Formalization Of Crawler Behavioral Best Practices",
+      "thesis": "Alongside cryptographic verification methods like HTTP Message Signatures, IETF contributors are keeping complementary operational tracks alive—specifically standardized JSON formats for IP disclosure and behavioral best practices—ensuring identity and network verification can evolve in parallel.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-22T13:30:16.624196Z",
+      "last_updated_at": "2026-10-22T13:30:16.624196Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ]
     },
     {
       "key": "gateway-level-bot-policy-enforcement",
@@ -1395,6 +1449,19 @@
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
       ]
+    },
+    {
+      "key": "increasing-legal-pressure-on-ai-model-training-practices",
+      "title": "Increasing Legal Pressure On AI Model Training Practices",
+      "thesis": "Judicial scrutiny is focusing directly on verbatim output generation as sufficient ground to sustain copyright infringement claims against AI developers past the motion-to-dismiss threshold.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-22T13:30:16.624196Z",
+      "last_updated_at": "2026-10-22T13:30:16.624196Z",
+      "related_feed_slugs": [
+        "x-discovery-federal-court-rejects-motions-to-dismiss-nyt-copyright-lawsuit-against-openai-an"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "incremental-crawling",
@@ -1965,6 +2032,21 @@
         "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "standardization-of-crawler-ip-disclosure-formats",
+      "title": "Standardization Of Crawler IP Disclosure Formats",
+      "thesis": "Alongside cryptographic verification methods like HTTP Message Signatures, IETF contributors are keeping complementary operational tracks alive—specifically standardized JSON formats for IP disclosure and behavioral best practices—ensuring identity and network verification can evolve in parallel.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-22T13:30:16.624196Z",
+      "last_updated_at": "2026-10-22T13:30:16.624196Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ]
     },
     {
       "key": "strict-edge-enforcement-of-rfc-9421-http-message-signatures",

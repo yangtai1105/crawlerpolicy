@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--2b580e72b3cf9323",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2239",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T11:45:29Z",
+  "detected_at": "2026-10-22T13:30:16.624196Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--2b580e72b3cf9323.json",
+  "content_hash": "sha256:8a57b44ba6cd0eaebef51e62e0f0e8f04ba2de1deb979428cbeceb5c5a3f02d1",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2239",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by Commissioner Lahbib at the Resilient Europe Conference",
+  "content": "European Commission Speech Prague, 22 Oct 2026 When you arrived today, I hope you looked up at the roof of this palace. Four stone statues stand along the top. They represent the four elements: fire, water, ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

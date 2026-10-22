@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--3928c532de42d5cd",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2236",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T09:00:52Z",
+  "detected_at": "2026-10-22T13:30:16.624196Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--3928c532de42d5cd.json",
+  "content_hash": "sha256:0c6c17c399ca931e3057f06a399a21812128751aa8dc94207fd1c4214cde0082",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2236",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Daily News 22 / 10 / 2026",
+  "content": "European Commission Daily news Brussels, 20 Oct 2026 Presidents von der Leyen and Costa receive letters of credence of Heads of Mission\nThis morning, the President of the European Commission, Ursula von der Leyen,...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
