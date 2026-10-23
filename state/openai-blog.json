@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-10-22T13:30:16.624196+00:00",
-  "last_fetch_succeeded_at": "2026-10-22T13:30:16.624196+00:00",
-  "last_evidence_at": "2026-10-22T13:30:16.624196+00:00",
+  "last_checked_at": "2026-10-23T13:06:31.696700+00:00",
+  "last_fetch_succeeded_at": "2026-10-23T13:06:31.696700+00:00",
+  "last_evidence_at": "2026-10-23T13:06:31.696700+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/new-and-improved-embedding-model",
-    "https://openai.com/index/discovering-the-minutiae-of-backend-systems",
     "https://openai.com/index/chatgpt",
     "https://openai.com/index/dall-e-api-now-available-in-public-beta",
     "https://openai.com/index/scaling-laws-for-reward-model-overoptimization",
@@ -503,7 +501,9 @@
     "https://openai.com/index/itau-generative-ai",
     "https://openai.com/index/openai-models-google-cloud",
     "https://openai.com/index/att-legal",
-    "https://openai.com/index/broad-access-through-consistent-standards"
+    "https://openai.com/index/broad-access-through-consistent-standards",
+    "https://openai.com/index/openai-nask-ai-safety-security-partnership",
+    "https://openai.com/index/decisions-api"
   ],
   "consecutive_failures": 0,
   "first_seen": false

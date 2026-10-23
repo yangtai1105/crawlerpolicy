@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--3827f9350ff249ab",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2242",
+  "supporting_urls": [],
+  "published_at": "2026-10-23T07:40:27Z",
+  "detected_at": "2026-10-23T13:06:31.696700Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--3827f9350ff249ab.json",
+  "content_hash": "sha256:a69c2a083ec1375f2f9896b177f00cff6082a163f45698a6ff2319b63d38b02d",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2242",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Opening remarks by Commissioner Kubilius at the Launch Event of the 3rd Hybrid Threats Report",
+  "content": "European Commission Speech Brussels, 23 Oct 2026 Good morning,\nFirst, welcome to the Berlaymont. And thank you for this very important report.\nI have it on my desk in my office. I have read very thoroughly and...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

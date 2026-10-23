@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--5e36f0644c2e31c9",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2250",
+  "supporting_urls": [],
+  "published_at": "2026-10-23T09:39:39Z",
+  "detected_at": "2026-10-23T13:06:31.696700Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--5e36f0644c2e31c9.json",
+  "content_hash": "sha256:6c298454cd7ff8c17ff672ee7474e71ab89249de9288dbad8eb870225ea201a7",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2250",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission proposes stronger recognition of European heritage sites*",
+  "content": "European Commission Press release Brussels, 23 Oct 2026 The European Commission has proposed to renew and reinforce the legal framework of the European Heritage Label. The scheme was adopted in 2011 aiming to offer a recognition awarded by the European Union to sites - buildings, monuments, documents - of exceptional symbolic value that have played a key role in shaping Europe's history, culture, and integration.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

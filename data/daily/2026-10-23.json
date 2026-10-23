@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-23",
+  "generated_at": "2026-10-23T13:06:31.696700Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account",
+      "status": "signal",
+      "importance": 0.78,
+      "published_at": "2026-10-22T16:29:28Z"
+    },
+    {
+      "slug": "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit",
+      "status": "verified",
+      "importance": 0.5,
+      "published_at": "2026-10-23T13:06:31.696700Z"
+    }
+  ]
+}

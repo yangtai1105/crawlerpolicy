@@ -791,6 +791,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "crawler-ip-identity-standardization",
+      "title": "Crawler IP Identity Standardization",
+      "thesis": "The introduction of SAIL alongside draft-illyes-webbotauth-jafar indicates growing interest in standardizing network-level source address publication for bots, offering alternative or complementary mechanisms to cryptographic HTTP message signatures.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-23T13:06:31.696700Z",
+      "last_updated_at": "2026-10-23T13:06:31.696700Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
+      ]
+    },
+    {
       "key": "crawler-opt-out-protection",
       "title": "Crawler Opt Out Protection",
       "thesis": "Platform attempts to broaden commercial data-use clauses often collide with publisher sensitivities around AI training rights, forcing companies to explicitly decouple standard ad-tech crawling language from AI development permissions and re-pledge allegiance to robots.txt.",
@@ -1747,6 +1762,21 @@
       ]
     },
     {
+      "key": "multi-proposal-bot-verification",
+      "title": "Multi Proposal Bot Verification",
+      "thesis": "The introduction of SAIL alongside draft-illyes-webbotauth-jafar indicates growing interest in standardizing network-level source address publication for bots, offering alternative or complementary mechanisms to cryptographic HTTP message signatures.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-23T13:06:31.696700Z",
+      "last_updated_at": "2026-10-23T13:06:31.696700Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
+      ]
+    },
+    {
       "key": "open-source-lightweight-agent-decision-primitives",
       "title": "Open Source Lightweight Agent Decision Primitives",
       "thesis": "By replacing token-by-token autoregressive generation with parallel schema scoring over base model representations, decision models dramatically compress inference latency and eliminate non-deterministic parsing issues in automated routing and security triage pipelines.",
@@ -1827,6 +1857,19 @@
       ]
     },
     {
+      "key": "platform-bundling-crawling-rights",
+      "title": "Platform Bundling Crawling Rights",
+      "thesis": "Platform operators are attempting to leverage social distribution contracts to bypass standard web crawler opt-outs, effectively conditioning social platform presence on granting broad scraping rights for AI training.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-23T13:06:31.696700Z",
+      "last_updated_at": "2026-10-23T13:06:31.696700Z",
+      "related_feed_slugs": [
+        "x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "positive-security-models",
       "title": "Positive Security Models",
       "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
@@ -1879,6 +1922,19 @@
       "verified_development_slugs": [
         "rsl-1-0-relaxes-mime-type-requirement-in-favor-of-xml-namespace-identification"
       ]
+    },
+    {
+      "key": "publisher-ai-licensing-resistance",
+      "title": "Publisher AI Licensing Resistance",
+      "thesis": "Platform operators are attempting to leverage social distribution contracts to bypass standard web crawler opt-outs, effectively conditioning social platform presence on granting broad scraping rights for AI training.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-23T13:06:31.696700Z",
+      "last_updated_at": "2026-10-23T13:06:31.696700Z",
+      "related_feed_slugs": [
+        "x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "publisher-litigation-resistance",

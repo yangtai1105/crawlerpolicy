@@ -1,16 +1,9 @@
 {
-  "last_checked_at": "2026-10-22T13:30:16.624196+00:00",
-  "last_fetch_succeeded_at": "2026-10-22T13:30:16.624196+00:00",
-  "last_evidence_at": "2026-10-22T13:30:16.624196+00:00",
+  "last_checked_at": "2026-10-23T13:06:31.696700+00:00",
+  "last_fetch_succeeded_at": "2026-10-23T13:06:31.696700+00:00",
+  "last_evidence_at": "2026-10-23T13:06:31.696700+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1267",
-    "https://ec.europa.eu/commission/presscorner/detail/en/read_26_1266",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1263",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1261",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1181",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1258",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1179",
     "https://ec.europa.eu/commission/presscorner/detail/en/inf_26_1084",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1173",
     "https://ec.europa.eu/commission/presscorner/detail/en/qanda_26_1259",
@@ -503,7 +496,14 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2238",
     "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2237",
     "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2236",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2233"
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2233",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2251",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2250",
+    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2249",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2248",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2247",
+    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2242",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2232"
   ],
   "consecutive_failures": 0,
   "first_seen": false

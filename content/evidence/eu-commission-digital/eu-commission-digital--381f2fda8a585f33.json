@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--381f2fda8a585f33",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2232",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T22:00:00Z",
+  "detected_at": "2026-10-23T13:06:31.696700Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--381f2fda8a585f33.json",
+  "content_hash": "sha256:aeba676ecdd6fe763924cf29b6c2636fc715043a1b8d44238868ea5ebc003408",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2232",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission opens investigation into possible anticompetitive conduct by Omya in the supply of calcium carbonates to the paper industry",
+  "content": "European Commission Press release Brussels, 23 Oct 2026 The European Commission has opened a formal antitrust investigation to assess whether Omya has breached EU competition rules by requiring customers in the paper industry to purchase all or most of their calcium carbonates from Omya.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

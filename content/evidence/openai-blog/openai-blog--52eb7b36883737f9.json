@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--52eb7b36883737f9",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/decisions-api",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T19:00:00Z",
+  "detected_at": "2026-10-23T13:06:31.696700Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--52eb7b36883737f9.json",
+  "content_hash": "sha256:259a2243152e8a5ec288be2ba0d58a0a22fca199f80b39aff6cdc83039edb4a5",
+  "external_id": "https://openai.com/index/decisions-api",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Build more responsive apps with the Decisions API",
+  "content": "Fast, focused, low-cost decisions for any application.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

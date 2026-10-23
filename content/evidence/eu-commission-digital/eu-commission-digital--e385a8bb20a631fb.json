@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--e385a8bb20a631fb",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2248",
+  "supporting_urls": [],
+  "published_at": "2026-10-23T09:09:38Z",
+  "detected_at": "2026-10-23T13:06:31.696700Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--e385a8bb20a631fb.json",
+  "content_hash": "sha256:aeaff631efbf7257cf6f4bb5792615a65fd2d17333fa22363487f859fe2fa693",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2248",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU Civil Protection Mechanism turns 25",
+  "content": "European Commission Press release Brussels, 23 Oct 2026 For 25 years, European countries have been joining forces to save lives when disasters strike under the EU Civil Protection Mechanism. This is one of the best examples of European solidarity in action.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

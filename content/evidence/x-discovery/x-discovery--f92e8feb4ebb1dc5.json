@@ -1,0 +1,51 @@
+{
+  "evidence_id": "x-discovery--f92e8feb4ebb1dc5",
+  "source": "x-discovery",
+  "source_url": "https://x.com/newsalliance/status/2113306753865552295",
+  "supporting_urls": [
+    "https://www.newsmediaalliance.org/letter-to-meta-demanding-withdrawal-of-new-terms-of-use/"
+  ],
+  "published_at": "2026-10-22T16:29:28Z",
+  "detected_at": "2026-10-23T13:06:31.696700Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--f92e8feb4ebb1dc5.json",
+  "content_hash": "sha256:970d95a78e6cc72717629fca59f07cf815a9b812211cff2345644e1f5fc85778",
+  "external_id": "2113306753865552295",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "News/Media Alliance urges Meta to withdraw updated terms of use crawling provision",
+  "content": "X author: @newsalliance\n\nThe News/Media Alliance sent a letter to Meta demanding it withdraw the new crawling provision in its updated terms of use before the October 30 effective date.\n\nLinked sources:\n- https://www.newsmediaalliance.org/letter-to-meta-demanding-withdrawal-of-new-terms-of-use/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "newsalliance",
+    "post_url": "https://x.com/newsalliance/status/2113306753865552295",
+    "linked_urls": [
+      "https://www.newsmediaalliance.org/letter-to-meta-demanding-withdrawal-of-new-terms-of-use/"
+    ],
+    "provider_citations": [],
+    "front": "rights-markets",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "While Meta's updated terms permitting automated crawling were previously reported, the News/Media Alliance's formal demand letter urging their withdrawal is a materially new development."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.newsmediaalliance.org/letter-to-meta-demanding-withdrawal-of-new-terms-of-use/",
+        "final_url": "https://www.newsmediaalliance.org/letter-to-meta-demanding-withdrawal-of-new-terms-of-use/",
+        "method": "readability",
+        "chars": 2962,
+        "sha256": "fc4969aa7dbaced9585503ac850ec078f166d58082f3eba2a3da5d0cbb9d9bb6",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-10-22/x-discovery--f92e8feb4ebb1dc5-1.md",
+        "archived_copy": "https://web.archive.org/web/20261023130944/https://www.newsmediaalliance.org/letter-to-meta-demanding-withdrawal-of-new-terms-of-use/"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 2,
+      "figures_kept": 2,
+      "missing": []
+    }
+  }
+}

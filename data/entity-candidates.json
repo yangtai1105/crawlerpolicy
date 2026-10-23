@@ -135,13 +135,15 @@
       "kind": "player",
       "observed_name": "IETF Web Bot Auth Working Group",
       "first_seen_at": "2026-10-22T13:30:16.624196Z",
-      "last_seen_at": "2026-10-22T13:30:16.624196Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-10-23T13:06:31.696700Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "ietf-webbotauth-wg--c6dc433a924a1ecc"
+        "ietf-webbotauth-wg--c6dc433a924a1ecc",
+        "ietf-webbotauth-wg--590751b5f4db81f6"
       ],
       "feed_slugs": [
-        "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+        "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
+        "2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
       ]
     },
     "player:instinct": {
@@ -181,6 +183,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:mark zuckerberg": {
+      "kind": "player",
+      "observed_name": "Mark Zuckerberg",
+      "first_seen_at": "2026-10-23T13:06:31.696700Z",
+      "last_seen_at": "2026-10-23T13:06:31.696700Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--f92e8feb4ebb1dc5"
+      ],
+      "feed_slugs": [
+        "2026-10-22-x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account"
       ]
     },
     "player:nieman lab": {
@@ -456,13 +471,15 @@
       "kind": "protocol",
       "observed_name": "HTTP Message Signatures",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-10-20T13:22:00.882558Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-10-23T13:06:31.696700Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "web-bot-auth-repo--f60849145322fff0"
+        "web-bot-auth-repo--f60849145322fff0",
+        "ietf-webbotauth-wg--590751b5f4db81f6"
       ],
       "feed_slugs": [
-        "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks"
+        "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
+        "2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
       ]
     },
     "protocol:jafar": {
@@ -504,6 +521,19 @@
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules"
+      ]
+    },
+    "protocol:sail": {
+      "kind": "protocol",
+      "observed_name": "SAIL",
+      "first_seen_at": "2026-10-23T13:06:31.696700Z",
+      "last_seen_at": "2026-10-23T13:06:31.696700Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "ietf-webbotauth-wg--590751b5f4db81f6"
+      ],
+      "feed_slugs": [
+        "2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
       ]
     },
     "protocol:tls": {
