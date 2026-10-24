@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-10-24",
+  "generated_at": "2026-10-24T12:27:35.735465Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests",
+      "status": "signal",
+      "importance": 0.68,
+      "published_at": "2026-10-23T20:00:02Z"
+    },
+    {
+      "slug": "x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships",
+      "status": "signal",
+      "importance": 0.45,
+      "published_at": "2026-10-23T22:00:32Z"
+    }
+  ]
+}

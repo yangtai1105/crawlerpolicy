@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--5177e7e21ef2c779",
+  "source": "x-discovery",
+  "source_url": "https://x.com/sengineland/status/2113752458883133628",
+  "supporting_urls": [
+    "https://searchengineland.com/guide/ai-company-publisher-partnerships"
+  ],
+  "published_at": "2026-10-23T22:00:32Z",
+  "detected_at": "2026-10-24T12:27:35.735465Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--5177e7e21ef2c779.json",
+  "content_hash": "sha256:1a96db924a800c3aea18a3efce39c8d988544d394cb4f42e73c24516885a459c",
+  "external_id": "2113752458883133628",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Search Engine Land maps all known AI licensing deals with publishers",
+  "content": "X author: @sengineland\n\nSearch Engine Land published a comprehensive map of every known licensing deal between AI companies (including those powering ChatGPT, Gemini, Copilot, and Meta AI) and publishers, analyzing implications for SEO and AI search visibility.\n\nLinked sources:\n- https://searchengineland.com/guide/ai-company-publisher-partnerships",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "sengineland",
+    "post_url": "https://x.com/sengineland/status/2113752458883133628",
+    "linked_urls": [
+      "https://searchengineland.com/guide/ai-company-publisher-partnerships"
+    ],
+    "provider_citations": [],
+    "front": "rights-markets",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Search Engine Land's comprehensive mapping of all known AI-publisher licensing deals is not covered by any previously seen items."
+    },
+    "linked_articles": [
+      {
+        "url": "https://searchengineland.com/guide/ai-company-publisher-partnerships",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://searchengineland.com/guide/ai-company-publisher-partnerships'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HT"
+      }
+    ]
+  }
+}

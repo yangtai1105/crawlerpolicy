@@ -367,6 +367,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ai-crawler-traffic-growth",
+      "title": "AI Crawler Traffic Growth",
+      "thesis": "Machine traffic has crossed the threshold into becoming the primary consumer of rendered web content, with automated requests now outpacing human visits nearly two-to-one for HTML assets.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-24T12:27:35.735465Z",
+      "last_updated_at": "2026-10-24T12:27:35.735465Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-gateway-observability",
       "title": "AI Gateway Observability",
       "thesis": "AI proxy and gateway infrastructure is adopting traditional web observability standards to give developers granular visibility into which specific SDKs, background workers, and client applications are driving programmatic AI consumption.",
@@ -410,6 +423,19 @@
       "verified_development_slugs": [
         "apple-clarifies-applebot-extended-opt-outs-do-not-affect-search-rankings"
       ]
+    },
+    {
+      "key": "ai-search-visibility-correlation",
+      "title": "AI Search Visibility Correlation",
+      "thesis": "Licensing deals are increasingly analyzed not just as data acquisition agreements, but as structural factors influencing publisher visibility and retrieval priority within emerging AI search engines.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-24T12:27:35.735465Z",
+      "last_updated_at": "2026-10-24T12:27:35.735465Z",
+      "related_feed_slugs": [
+        "x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "ai-traffic-polarization",
@@ -1035,6 +1061,19 @@
       "last_updated_at": "2026-09-29T14:38:47.453910Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "diminishing-referral-value",
+      "title": "Diminishing Referral Value",
+      "thesis": "Machine traffic has crossed the threshold into becoming the primary consumer of rendered web content, with automated requests now outpacing human visits nearly two-to-one for HTML assets.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-24T12:27:35.735465Z",
+      "last_updated_at": "2026-10-24T12:27:35.735465Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
       ],
       "verified_development_slugs": []
     },
@@ -1933,6 +1972,32 @@
       "last_updated_at": "2026-10-23T13:06:31.696700Z",
       "related_feed_slugs": [
         "x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "publisher-infrastructure-costs",
+      "title": "Publisher Infrastructure Costs",
+      "thesis": "Machine traffic has crossed the threshold into becoming the primary consumer of rendered web content, with automated requests now outpacing human visits nearly two-to-one for HTML assets.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-24T12:27:35.735465Z",
+      "last_updated_at": "2026-10-24T12:27:35.735465Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "publisher-licensing-aggregation",
+      "title": "Publisher Licensing Aggregation",
+      "thesis": "Licensing deals are increasingly analyzed not just as data acquisition agreements, but as structural factors influencing publisher visibility and retrieval priority within emerging AI search engines.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-24T12:27:35.735465Z",
+      "last_updated_at": "2026-10-24T12:27:35.735465Z",
+      "related_feed_slugs": [
+        "x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
       ],
       "verified_development_slugs": []
     },

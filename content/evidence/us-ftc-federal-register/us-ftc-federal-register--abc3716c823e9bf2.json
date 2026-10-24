@@ -1,0 +1,19 @@
+{
+  "evidence_id": "us-ftc-federal-register--abc3716c823e9bf2",
+  "source": "us-ftc-federal-register",
+  "source_url": "https://www.federalregister.gov/documents/2026/10/26/2026-21798/agency-information-collection-activities-proposed-collection-comment-request-extension",
+  "supporting_urls": [],
+  "published_at": "2026-10-26T04:00:00Z",
+  "detected_at": "2026-10-24T12:27:35.735465Z",
+  "content_path": "content/evidence/us-ftc-federal-register/us-ftc-federal-register--abc3716c823e9bf2.json",
+  "content_hash": "sha256:e238d7643c87df5ce2b0dac98b816b2b2b501c48a0dc88d5250f4777e74c13b5",
+  "external_id": "https://www.federalregister.gov/documents/2026/10/26/2026-21798/agency-information-collection-activities-proposed-collection-comment-request-extension",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Agency Information Collection Activities; Proposed Collection; Comment Request; Extension",
+  "content": "In accordance with the Paperwork Reduction Act of 1995 (PRA), the Federal Trade Commission (FTC or Commission) is seeking public comment on its proposal to extend for an additional three years the Office of Management and Budget clearance for its Fuel Rating Rule (the Rule). The current clearance expires on October 31, 2026.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -40,6 +40,19 @@
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
+    "player:chatgpt": {
+      "kind": "player",
+      "observed_name": "ChatGPT",
+      "first_seen_at": "2026-10-24T12:27:35.735465Z",
+      "last_seen_at": "2026-10-24T12:27:35.735465Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--5177e7e21ef2c779"
+      ],
+      "feed_slugs": [
+        "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
+      ]
+    },
     "player:claudebot": {
       "kind": "player",
       "observed_name": "ClaudeBot",
@@ -64,6 +77,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:copilot": {
+      "kind": "player",
+      "observed_name": "Copilot",
+      "first_seen_at": "2026-10-24T12:27:35.735465Z",
+      "last_seen_at": "2026-10-24T12:27:35.735465Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--5177e7e21ef2c779"
+      ],
+      "feed_slugs": [
+        "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
       ]
     },
     "player:daniel roberts": {
@@ -116,6 +142,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:gemini": {
+      "kind": "player",
+      "observed_name": "Gemini",
+      "first_seen_at": "2026-10-24T12:27:35.735465Z",
+      "last_seen_at": "2026-10-24T12:27:35.735465Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--5177e7e21ef2c779"
+      ],
+      "feed_slugs": [
+        "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
       ]
     },
     "player:gptbot": {
@@ -198,6 +237,19 @@
         "2026-10-22-x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account"
       ]
     },
+    "player:meta ai": {
+      "kind": "player",
+      "observed_name": "Meta AI",
+      "first_seen_at": "2026-10-24T12:27:35.735465Z",
+      "last_seen_at": "2026-10-24T12:27:35.735465Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--5177e7e21ef2c779"
+      ],
+      "feed_slugs": [
+        "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
+      ]
+    },
     "player:nieman lab": {
       "kind": "player",
       "observed_name": "Nieman Lab",
@@ -237,6 +289,19 @@
       ],
       "feed_slugs": [
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
+      ]
+    },
+    "player:search engine land": {
+      "kind": "player",
+      "observed_name": "Search Engine Land",
+      "first_seen_at": "2026-10-24T12:27:35.735465Z",
+      "last_seen_at": "2026-10-24T12:27:35.735465Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--5177e7e21ef2c779"
+      ],
+      "feed_slugs": [
+        "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
       ]
     },
     "player:selectel": {
@@ -454,17 +519,19 @@
       "kind": "protocol",
       "observed_name": "HTTP",
       "first_seen_at": "2026-10-13T15:36:53.900599Z",
-      "last_seen_at": "2026-10-16T13:02:04.849772Z",
-      "occurrences": 3,
+      "last_seen_at": "2026-10-24T12:27:35.735465Z",
+      "occurrences": 4,
       "evidence_ids": [
         "datadome-blog--42fa450a86dba89a",
         "cloudflare-blog--5a2555e77804fad4",
-        "cloudflare-blog--cc3fb6ecbefdd443"
+        "cloudflare-blog--cc3fb6ecbefdd443",
+        "x-discovery--fe5003d0c481d2df"
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots",
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut",
-        "2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots"
+        "2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots",
+        "2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
       ]
     },
     "protocol:http message signatures": {

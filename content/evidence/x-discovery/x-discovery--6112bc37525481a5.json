@@ -1,0 +1,31 @@
+{
+  "evidence_id": "x-discovery--6112bc37525481a5",
+  "source": "x-discovery",
+  "source_url": "https://x.com/bombomelon/status/2113606859215224948",
+  "supporting_urls": [],
+  "published_at": "2026-10-23T12:21:58Z",
+  "detected_at": "2026-10-24T12:27:35.735465Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--6112bc37525481a5.json",
+  "content_hash": "sha256:78aac7d02374f2c8529962c6e732f79b9d096d74432d18babeb44e955888ff15",
+  "external_id": "2113606859215224948",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Meta updates its crawling terms effective October 30",
+  "content": "X author: @bombomelon\n\nMeta rewrote its crawling and scraping terms, effective October 30, applying to sites linked to business accounts; its documentation states that robots.txt can still block its AI crawler.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "bombomelon",
+    "post_url": "https://x.com/bombomelon/status/2113606859215224948",
+    "linked_urls": [],
+    "provider_citations": [],
+    "front": "access-discovery",
+    "shadow": false,
+    "novelty": {
+      "outcome": "covered",
+      "matched": "feed:x-discovery-meta-updates-terms-to-explicitly-permit-automated-crawling-and-scraping-across-a",
+      "reason": "This reports on the same update to Meta's commercial and business terms permitting crawling and scraping across associated domains that was previously reported."
+    }
+  }
+}

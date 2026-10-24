@@ -1,0 +1,32 @@
+{
+  "evidence_id": "x-discovery--fe5003d0c481d2df",
+  "source": "x-discovery",
+  "source_url": "https://x.com/TheCoolestCool/status/2113722134631755853",
+  "supporting_urls": [],
+  "published_at": "2026-10-23T20:00:02Z",
+  "detected_at": "2026-10-24T12:27:35.735465Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--fe5003d0c481d2df.json",
+  "content_hash": "sha256:67e8706a347608efbe68e470503ef27f395d56b75c771017879f4d610a59d8fe",
+  "external_id": "2113722134631755853",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Cloudflare Radar shows bots now majority of HTML page requests",
+  "content": "X author: @TheCoolestCool\n\nCloudflare Radar's latest 7-day data shows 65% of HTML page requests from bots (35% humans) and bots over 50% of all HTTP requests overall, highlighting rising AI crawler and agent traffic impacts on publisher economics, infrastructure costs, and referral value.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "TheCoolestCool",
+    "post_url": "https://x.com/TheCoolestCool/status/2113722134631755853",
+    "linked_urls": [],
+    "provider_citations": [],
+    "front": "measurement-economics",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "No previously seen items report Cloudflare Radar's latest data showing bots now account for the majority (65%) of HTML page requests."
+    },
+    "linked_articles": []
+  }
+}

@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-23T13:06:31.696700Z",
-  "last_fully_successful_at": "2026-10-23T13:06:31.696700Z",
+  "last_attempted_at": "2026-10-24T12:27:35.735465Z",
+  "last_fully_successful_at": "2026-10-24T12:27:35.735465Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -150,7 +150,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--1a0493cd7738cf86",
+        "cloudflare-blog--58ed067d57ec6f25"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -201,13 +204,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--dff2b74ca263a2dd",
-        "eu-commission-digital--5e36f0644c2e31c9",
-        "eu-commission-digital--ba38b1df2e2400d9",
-        "eu-commission-digital--e385a8bb20a631fb",
-        "eu-commission-digital--8487fd5099c628c3",
-        "eu-commission-digital--3827f9350ff249ab",
-        "eu-commission-digital--381f2fda8a585f33"
+        "eu-commission-digital--6f1e4da4013a9c14"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -219,7 +216,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "us-ftc-federal-register--6590d2c50a8c8e18"
+        "us-ftc-federal-register--abc3716c823e9bf2"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -230,10 +227,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--d24c982cfe93356b",
-        "news-media-alliance--1699a2ac4146a00c"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -284,8 +278,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--87f7661a6c332151",
-        "openai-blog--52eb7b36883737f9"
+        "openai-blog--9d3734c1b98d986a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -326,15 +319,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--590751b5f4db81f6"
-      ],
-      "events_written": [
-        "content/events/2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -403,20 +390,21 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--f92e8feb4ebb1dc5"
+        "x-discovery--5177e7e21ef2c779",
+        "x-discovery--fe5003d0c481d2df",
+        "x-discovery--6112bc37525481a5"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-10-22-x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account.md"
+        "content/feed/2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships.md",
+        "content/feed/2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests.md"
       ]
     }
   },
-  "events_written": [
-    "content/events/2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit.md"
-  ],
+  "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit.md",
-    "content/feed/2026-10-22-x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account.md"
+    "content/feed/2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships.md",
+    "content/feed/2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests.md"
   ],
   "provider": {
     "name": "gemini",
@@ -426,12 +414,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-23",
+    "edition_date": "2026-10-24",
     "item_count": 2,
-    "path": "data/daily/2026-10-23.json"
+    "path": "data/daily/2026-10-24.json"
   },
   "insight_threads": {
-    "thread_count": 167,
+    "thread_count": 172,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -441,9 +429,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 1,
-    "x_search_calls": 4,
-    "estimated_tool_cost_usd": 0.153811,
+    "candidate_count": 3,
+    "x_search_calls": 6,
+    "estimated_tool_cost_usd": 0.179225,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
