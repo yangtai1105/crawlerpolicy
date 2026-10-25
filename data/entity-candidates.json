@@ -79,6 +79,19 @@
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
+    "player:coalition for content provenance and authenticity": {
+      "kind": "player",
+      "observed_name": "Coalition for Content Provenance and Authenticity",
+      "first_seen_at": "2026-10-25T12:58:48.818827Z",
+      "last_seen_at": "2026-10-25T12:58:48.818827Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "c2pa-specifications--df274e50e9d77939"
+      ],
+      "feed_slugs": [
+        "2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+      ]
+    },
     "player:copilot": {
       "kind": "player",
       "observed_name": "Copilot",
@@ -209,6 +222,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:joint development foundation": {
+      "kind": "player",
+      "observed_name": "Joint Development Foundation",
+      "first_seen_at": "2026-10-25T12:58:48.818827Z",
+      "last_seen_at": "2026-10-25T12:58:48.818827Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "c2pa-specifications--df274e50e9d77939"
+      ],
+      "feed_slugs": [
+        "2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
       ]
     },
     "player:jpmorgan chase": {

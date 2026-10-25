@@ -722,6 +722,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "content-provenance-standardization",
+      "title": "Content Provenance Standardization",
+      "thesis": "C2PA maintains an iterative cadence for its provenance architecture, moving from version 2.4 to 2.5 to refine technical standards spanning Content Credentials, crJSON, attestations, and AI/ML guidance.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-25T12:58:48.818827Z",
+      "last_updated_at": "2026-10-25T12:58:48.818827Z",
+      "related_feed_slugs": [
+        "c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+      ],
+      "verified_development_slugs": [
+        "c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+      ]
+    },
+    {
       "key": "context-interface-versioning",
       "title": "Context Interface Versioning",
       "thesis": "Establishing versioned, stable releases for model context protocols provides a dependable foundation for agent tool-use and structured context retrieval.",
@@ -1063,6 +1078,21 @@
         "datadome-blog-datadome-case-study-highlights-revenue-costs-of-false-positives-in-anti-scraping"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "digital-credentials-evolution",
+      "title": "Digital Credentials Evolution",
+      "thesis": "C2PA maintains an iterative cadence for its provenance architecture, moving from version 2.4 to 2.5 to refine technical standards spanning Content Credentials, crJSON, attestations, and AI/ML guidance.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-25T12:58:48.818827Z",
+      "last_updated_at": "2026-10-25T12:58:48.818827Z",
+      "related_feed_slugs": [
+        "c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+      ],
+      "verified_development_slugs": [
+        "c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+      ]
     },
     {
       "key": "diminishing-referral-value",

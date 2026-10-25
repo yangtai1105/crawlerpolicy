@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-24T12:27:35.735465Z",
-  "last_fully_successful_at": "2026-10-24T12:27:35.735465Z",
+  "last_attempted_at": "2026-10-25T12:58:48.818827Z",
+  "last_fully_successful_at": "2026-10-25T12:58:48.818827Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -50,7 +50,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "claudebot--8118e663eccfd253"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -150,10 +152,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--1a0493cd7738cf86",
-        "cloudflare-blog--58ed067d57ec6f25"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -203,9 +202,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--6f1e4da4013a9c14"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -215,9 +212,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "us-ftc-federal-register--abc3716c823e9bf2"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -277,9 +272,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--9d3734c1b98d986a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -329,9 +322,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "c2pa-specifications--df274e50e9d77939"
+      ],
+      "events_written": [
+        "content/events/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
+      ]
     },
     "w3c-tdmrep": {
       "fetch": "ok",
@@ -389,22 +388,16 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "x-discovery--5177e7e21ef2c779",
-        "x-discovery--fe5003d0c481d2df",
-        "x-discovery--6112bc37525481a5"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships.md",
-        "content/feed/2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests.md"
-      ]
+      "feed_items_written": []
     }
   },
-  "events_written": [],
+  "events_written": [
+    "content/events/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
+  ],
   "feed_items_written": [
-    "content/feed/2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships.md",
-    "content/feed/2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests.md"
+    "content/feed/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
   ],
   "provider": {
     "name": "gemini",
@@ -414,12 +407,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-24",
-    "item_count": 2,
-    "path": "data/daily/2026-10-24.json"
+    "edition_date": "2026-10-25",
+    "item_count": 1,
+    "path": "data/daily/2026-10-25.json"
   },
   "insight_threads": {
-    "thread_count": 172,
+    "thread_count": 174,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -429,9 +422,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 3,
+    "candidate_count": 0,
     "x_search_calls": 6,
-    "estimated_tool_cost_usd": 0.179225,
+    "estimated_tool_cost_usd": 0.164078,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
