@@ -1,0 +1,15 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "web-bot-auth",
+  "stance": "Web Bot Auth is undergoing strict compliance hardening to align its reference verification logic directly with RFC 9421 standards.",
+  "adoption_shape": "Activity is currently isolated to Cloudflare's own repository maintenance, meaning validation rigor is being resolved internally before multi-party adoption patterns can emerge.",
+  "new_entrants": "Recent work comes exclusively from repository contributors resolving issues like #153 to gain tighter control over algorithm-key agreement and duplicate component handling.",
+  "watch_for": "Whether future developments expand beyond RFC 9421 compliance patches within Cloudflare's codebase to involve external implementers.",
+  "built_from": [
+    "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
+    "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules"
+  ],
+  "development_count": 2,
+  "generated_at": "2026-10-26T19:47:00.695053Z",
+  "merged_at": null
+}

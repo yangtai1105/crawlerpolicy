@@ -1,0 +1,17 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "access-discovery",
+  "stance": "The Web Bot Auth ecosystem is tightening its low-level cryptographic verification against RFC 9421 while simultaneously expanding competing draft standards for crawler network identity.",
+  "adoption_shape": "Cloudflare has moved to enforce strict RFC 9421 cryptographic conformance in its reference repository, while standards progress in the broader IETF working group remains split across individual proposals kept alive through periodic draft renewals.",
+  "new_entrants": "Author Kelley recently submitted the 25-page 'SAIL: Source Address Identity List' draft to compete for control over how automated client IP addresses and source identities are verified.",
+  "watch_for": "Watch for whether the working group consolidates around Kelley's SAIL proposal or Illyes's refreshed JAFAR format for standardized IP range publishing.",
+  "built_from": [
+    "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
+    "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit"
+  ],
+  "development_count": 4,
+  "generated_at": "2026-10-26T19:47:00.695053Z",
+  "merged_at": null
+}

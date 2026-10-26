@@ -1,0 +1,19 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "agents-identity",
+  "stance": "Agent identity is rapidly formalizing around strict cryptographic verification and network-layer identity lists as foundational standards shift from loose conventions to rigid compliance.",
+  "adoption_shape": "Cloudflare is aggressively locking down its production implementations by enforcing RFC 9421 signature verification and deprecating legacy SDK providers, while individual contributors within the IETF Web Bot Auth Working Group are actively preserving and expanding the standards surface for crawler behavior and IP attribution.",
+  "new_entrants": "The SAIL (Source Address Identity List) draft by author Kelley has entered the IETF Web Bot Auth Working Group to define and control source address verification for automated clients alongside existing IP publishing formats.",
+  "watch_for": "Watch for whether the IETF Web Bot Auth Working Group formally progresses either the new SAIL proposal or the refreshed JAFAR draft into an adopted working group baseline for machine-readable client verification.",
+  "built_from": [
+    "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
+    "web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules",
+    "cf-changelog-ai-gateway-cloudflare-unifies-agents-sdk-model-routing-with-createai-function",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit",
+    "c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+  ],
+  "development_count": 6,
+  "generated_at": "2026-10-26T19:47:00.695053Z",
+  "merged_at": null
+}
