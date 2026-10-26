@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-10-25T12:58:48.818827+00:00",
-  "last_fetch_succeeded_at": "2026-10-25T12:58:48.818827+00:00",
-  "last_evidence_at": "2026-10-24T12:27:35.735465+00:00",
+  "last_checked_at": "2026-10-26T14:52:48.033928+00:00",
+  "last_fetch_succeeded_at": "2026-10-26T14:52:48.033928+00:00",
+  "last_evidence_at": "2026-10-26T14:52:48.033928+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/dall-e-api-now-available-in-public-beta",
     "https://openai.com/index/scaling-laws-for-reward-model-overoptimization",
     "https://openai.com/index/dall-e-now-available-without-waitlist",
     "https://openai.com/index/whisper",
@@ -503,7 +502,8 @@
     "https://openai.com/index/broad-access-through-consistent-standards",
     "https://openai.com/index/openai-nask-ai-safety-security-partnership",
     "https://openai.com/index/decisions-api",
-    "https://openai.com/index/scaling-storage-one-billion-users-part-two"
+    "https://openai.com/index/scaling-storage-one-billion-users-part-two",
+    "https://openai.com/index/fanatics-streamline-fan-experience"
   ],
   "consecutive_failures": 0,
   "first_seen": false

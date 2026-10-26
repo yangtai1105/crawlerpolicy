@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--f9c8d3810c519e9e",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2256",
+  "supporting_urls": [],
+  "published_at": "2026-10-26T10:41:12Z",
+  "detected_at": "2026-10-26T14:52:48.033928Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--f9c8d3810c519e9e.json",
+  "content_hash": "sha256:cae7c5063bf10f6e2f1d9c96f5d92c1339ed88ac7ea650a5c293ff65ceeceae1",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2256",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission launches T-MED Investment Platform with up to €4.5 billion in EU guarantees",
+  "content": "European Commission Press release Brussels, 26 Oct 2026 Today, the European Commission launched the T-MED Investment Platform, to mobilise large-scale investment in renewable energy and clean technologies across the Mediterranean. The platform is a key component of the Trans-Mediterranean Renewable Energy and Clean Tech Cooperation Initiative (T-MED), a flagship initiative of the Pact for the Mediterranean.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

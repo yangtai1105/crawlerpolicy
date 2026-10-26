@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-25T12:58:48.818827Z",
-  "last_fully_successful_at": "2026-10-25T12:58:48.818827Z",
+  "last_attempted_at": "2026-10-26T14:52:48.033928Z",
+  "last_fully_successful_at": "2026-10-26T14:52:48.033928Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -51,7 +51,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "claudebot--8118e663eccfd253"
+        "claudebot--5a1b1c48a78a4e12"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -172,7 +172,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--8ad2dda830965fc5",
+        "uk-cma--d354d8cc6b821f69"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -202,7 +205,14 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--9159c09687451ece",
+        "eu-commission-digital--943d24e81fc36e78",
+        "eu-commission-digital--dd773abcb49833fe",
+        "eu-commission-digital--f9c8d3810c519e9e",
+        "eu-commission-digital--3e071f4e1ce696c1",
+        "eu-commission-digital--f8c030b9db52ed2c"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -242,7 +252,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--5381a9b0d4a3792a"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -272,7 +284,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--c924ca1ef49c2ff7"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -322,15 +336,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "c2pa-specifications--df274e50e9d77939"
-      ],
-      "events_written": [
-        "content/events/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "w3c-tdmrep": {
       "fetch": "ok",
@@ -388,17 +396,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "x-discovery--0a8514c8bf0da373"
+      ],
       "events_written": [],
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
-  ],
-  "feed_items_written": [
-    "content/feed/2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications.md"
-  ],
+  "events_written": [],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -406,10 +412,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-10-25",
-    "item_count": 1,
-    "path": "data/daily/2026-10-25.json"
+    "status": "quiet",
+    "edition_date": "2026-10-26",
+    "item_count": 0,
+    "path": "data/daily/2026-10-26.json"
   },
   "insight_threads": {
     "thread_count": 174,
@@ -422,9 +428,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 0,
-    "x_search_calls": 6,
-    "estimated_tool_cost_usd": 0.164078,
+    "candidate_count": 1,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.134259,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

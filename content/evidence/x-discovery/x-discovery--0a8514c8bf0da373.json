@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--0a8514c8bf0da373",
+  "source": "x-discovery",
+  "source_url": "https://x.com/pressgazette/status/2114725105796604362",
+  "supporting_urls": [
+    "https://pressgazette.co.uk/"
+  ],
+  "published_at": "2026-10-26T14:25:29Z",
+  "detected_at": "2026-10-26T14:52:48.033928Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--0a8514c8bf0da373.json",
+  "content_hash": "sha256:e40e716c0f1d9f50d0a697669026e7db8672e0edcba1d7f1c3aa3177ceea7ed2",
+  "external_id": "2114725105796604362",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Reuters replaces Getty as Sky News video archive licensing partner",
+  "content": "X author: @pressgazette\n\nReuters has replaced Getty Images as the exclusive licensing partner for the Sky News video archive, following a similar change for the ITN archive.\n\nLinked sources:\n- https://pressgazette.co.uk/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "pressgazette",
+    "post_url": "https://x.com/pressgazette/status/2114725105796604362",
+    "linked_urls": [
+      "https://pressgazette.co.uk/"
+    ],
+    "provider_citations": [],
+    "front": "rights-markets",
+    "shadow": false
+  }
+}
