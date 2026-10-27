@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-26T14:52:48.033928Z",
-  "last_fully_successful_at": "2026-10-26T14:52:48.033928Z",
+  "last_attempted_at": "2026-10-27T14:01:01.414035Z",
+  "last_fully_successful_at": "2026-10-27T14:01:01.414035Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -50,9 +50,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "claudebot--5a1b1c48a78a4e12"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -112,7 +110,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "amazonbot--85656a3ab0947673"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -122,7 +122,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ccbot--abdf04d8c4f3c4db"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -152,7 +154,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--e455812adc090464",
+        "cloudflare-blog--4ca14af7d7e64723",
+        "cloudflare-blog--4ab31a915fd04d82"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -173,8 +179,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--8ad2dda830965fc5",
-        "uk-cma--d354d8cc6b821f69"
+        "uk-cma--cc067f12bddba323",
+        "uk-cma--ca886e272e1d3ad0",
+        "uk-cma--650bb6314efe3c73"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -206,12 +213,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--9159c09687451ece",
-        "eu-commission-digital--943d24e81fc36e78",
-        "eu-commission-digital--dd773abcb49833fe",
-        "eu-commission-digital--f9c8d3810c519e9e",
-        "eu-commission-digital--3e071f4e1ce696c1",
-        "eu-commission-digital--f8c030b9db52ed2c"
+        "eu-commission-digital--4abcecf7ff2dc69d",
+        "eu-commission-digital--ac1991af525a00d6",
+        "eu-commission-digital--d7b180a21e179a99",
+        "eu-commission-digital--ff38dabd80fd5081",
+        "eu-commission-digital--68fb50df6f51ed22",
+        "eu-commission-digital--46ce46f34170d0e1",
+        "eu-commission-digital--9a58c1b75b74c895",
+        "eu-commission-digital--b3837ec51145b17b",
+        "eu-commission-digital--7384913346c011e2",
+        "eu-commission-digital--894db398cd9e1dcc"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -252,9 +263,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--5381a9b0d4a3792a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -285,7 +294,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--c924ca1ef49c2ff7"
+        "openai-blog--af9bd35408b43cfc"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -326,9 +335,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ietf-webbotauth-wg--585a35def49ea164"
+      ],
+      "events_written": [
+        "content/events/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -396,15 +411,17 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "x-discovery--0a8514c8bf0da373"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -412,13 +429,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-10-26",
-    "item_count": 0,
-    "path": "data/daily/2026-10-26.json"
+    "status": "published",
+    "edition_date": "2026-10-27",
+    "item_count": 1,
+    "path": "data/daily/2026-10-27.json"
   },
   "insight_threads": {
-    "thread_count": 174,
+    "thread_count": 176,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -428,9 +445,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 1,
+    "candidate_count": 0,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.134259,
+    "estimated_tool_cost_usd": 0.137953,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--d7b180a21e179a99",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2270",
+  "supporting_urls": [],
+  "published_at": "2026-10-27T11:14:37Z",
+  "detected_at": "2026-10-27T14:01:01.414035Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--d7b180a21e179a99.json",
+  "content_hash": "sha256:686452d6502af65845f498a6cc66f3773fc24ca2e589d69a7765303a55d09f02",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2270",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Daily News 27 / 10 / 2026",
+  "content": "European Commission Daily news Brussels, 27 Oct 2026 Road safety statistics for 2025 confirm drop in EU road deaths \nToday, the European Commission released the final figures on road fatalities for 2025, reporting...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

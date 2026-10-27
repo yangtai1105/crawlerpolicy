@@ -43,6 +43,21 @@
       ]
     },
     {
+      "key": "agent-card-specification-development",
+      "title": "Agent Card Specification Development",
+      "thesis": "Alongside the core HTTP Message Signatures protocol and IP verification proposals, the working group continues refining metadata and registry discovery mechanisms (the \"Signature Agent card\") required to map cryptographic signatures back to verified bot and agent operators.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-27T14:01:01.414035Z",
+      "last_updated_at": "2026-10-27T14:01:01.414035Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ]
+    },
+    {
       "key": "agent-development-lifecycle",
       "title": "Agent Development Lifecycle",
       "thesis": "By automatically provisioning isolated Durable Object namespaces and Container applications per branch, Cloudflare shifts serverless edge testing from stateless mock environments to state-isolated sandboxes tailored for autonomous AI agents executing iterative deploy-test-fix loops via MCP.",
@@ -594,6 +609,21 @@
       ],
       "verified_development_slugs": [
         "web-bot-auth-fixes-signature-verification-bypass-allowing-request-replay"
+      ]
+    },
+    {
+      "key": "bot-authentication-registry-standardization",
+      "title": "Bot Authentication Registry Standardization",
+      "thesis": "Alongside the core HTTP Message Signatures protocol and IP verification proposals, the working group continues refining metadata and registry discovery mechanisms (the \"Signature Agent card\") required to map cryptographic signatures back to verified bot and agent operators.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-27T14:01:01.414035Z",
+      "last_updated_at": "2026-10-27T14:01:01.414035Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
       ]
     },
     {

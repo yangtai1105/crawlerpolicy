@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b3837ec51145b17b",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2244",
+  "supporting_urls": [],
+  "published_at": "2026-10-26T23:00:00Z",
+  "detected_at": "2026-10-27T14:01:01.414035Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b3837ec51145b17b.json",
+  "content_hash": "sha256:83507b89541f4eafb952fc33c1b91d03a1e3de6d883137e63ab0cf73789cc0c0",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2244",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission presents Climate Resilience Framework for a better prepared and protected Europe",
+  "content": "European Commission Press release Brussels, 27 Oct 2026 The European Commission today presented an EU Framework for Climate Resilience to strengthen Europe's ability to anticipate, prepare for, and manage climate risks.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
