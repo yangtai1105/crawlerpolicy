@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--296c5b7386498d36",
+  "source": "x-discovery",
+  "source_url": "https://x.com/sengineland/status/2114777797507895346",
+  "supporting_urls": [
+    "https://searchengineland.com/cloudflare-upend-ai-visibility-space-498710"
+  ],
+  "published_at": "2026-10-27T17:54:52Z",
+  "detected_at": "2026-10-28T14:52:45.308044Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--296c5b7386498d36.json",
+  "content_hash": "sha256:3ef443a2da36b3c9a3f85421551c70861e0b6d29b578eb6aff676dcbc8713953",
+  "external_id": "2114777797507895346",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Cloudflare launches AEO dashboard for AI bot visibility",
+  "content": "X author: @sengineland\n\nCloudflare shipped a new AEO dashboard that tracks AI bot access, citation rates, and mention rates by LLM, providing publishers with data on AI traffic and visibility for $20/month.\n\nLinked sources:\n- https://searchengineland.com/cloudflare-upend-ai-visibility-space-498710",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "sengineland",
+    "post_url": "https://x.com/sengineland/status/2114777797507895346",
+    "linked_urls": [
+      "https://searchengineland.com/cloudflare-upend-ai-visibility-space-498710"
+    ],
+    "provider_citations": [],
+    "front": "measurement-economics",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the listed items cover Cloudflare launching an AEO dashboard to track AI bot access, citations, and LLM mention rates."
+    },
+    "linked_articles": [
+      {
+        "url": "https://searchengineland.com/cloudflare-upend-ai-visibility-space-498710",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://searchengineland.com/cloudflare-upend-ai-visibility-space-498710'\nFor more information check: https://developer.mozilla.org/en-US/docs/We"
+      }
+    ]
+  }
+}

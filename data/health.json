@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-27T14:01:01.414035Z",
-  "last_fully_successful_at": "2026-10-27T14:01:01.414035Z",
+  "last_attempted_at": "2026-10-28T14:52:45.308044Z",
+  "last_fully_successful_at": "2026-10-28T14:52:45.308044Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -50,7 +50,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "claudebot--8118e663eccfd253"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -110,9 +112,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "amazonbot--85656a3ab0947673"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -122,9 +122,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ccbot--abdf04d8c4f3c4db"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -154,11 +152,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--e455812adc090464",
-        "cloudflare-blog--4ca14af7d7e64723",
-        "cloudflare-blog--4ab31a915fd04d82"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -168,9 +162,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--9f49770024268e27"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-27-datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst.md"
+      ]
     },
     "uk-cma": {
       "fetch": "ok",
@@ -178,11 +176,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--cc067f12bddba323",
-        "uk-cma--ca886e272e1d3ad0",
-        "uk-cma--650bb6314efe3c73"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -213,16 +207,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--4abcecf7ff2dc69d",
-        "eu-commission-digital--ac1991af525a00d6",
-        "eu-commission-digital--d7b180a21e179a99",
-        "eu-commission-digital--ff38dabd80fd5081",
-        "eu-commission-digital--68fb50df6f51ed22",
-        "eu-commission-digital--46ce46f34170d0e1",
-        "eu-commission-digital--9a58c1b75b74c895",
-        "eu-commission-digital--b3837ec51145b17b",
-        "eu-commission-digital--7384913346c011e2",
-        "eu-commission-digital--894db398cd9e1dcc"
+        "eu-commission-digital--a9a01ab5ffd546ad",
+        "eu-commission-digital--a57c49f0431033e8",
+        "eu-commission-digital--1f5d60239bac1708",
+        "eu-commission-digital--a52d62e58c2a2fda",
+        "eu-commission-digital--223c75907adb699d",
+        "eu-commission-digital--9981fd5795a12215"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -263,9 +253,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "web-bot-auth-repo--cb346e9d26f1be1d"
+      ],
+      "events_written": [
+        "content/events/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md"
+      ]
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -294,7 +290,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--af9bd35408b43cfc"
+        "openai-blog--a175c273d313fbdb",
+        "openai-blog--5088256655f3e30a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -335,15 +332,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--585a35def49ea164"
-      ],
-      "events_written": [
-        "content/events/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -411,16 +402,22 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "x-discovery--296c5b7386498d36"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations.md"
+      ]
     }
   },
   "events_written": [
-    "content/events/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
+    "content/events/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft.md"
+    "content/feed/2026-10-27-datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst.md",
+    "content/feed/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md",
+    "content/feed/2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations.md"
   ],
   "provider": {
     "name": "gemini",
@@ -430,12 +427,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-27",
-    "item_count": 1,
-    "path": "data/daily/2026-10-27.json"
+    "edition_date": "2026-10-28",
+    "item_count": 3,
+    "path": "data/daily/2026-10-28.json"
   },
   "insight_threads": {
-    "thread_count": 176,
+    "thread_count": 184,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -445,9 +442,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 0,
+    "candidate_count": 1,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.137953,
+    "estimated_tool_cost_usd": 0.112991,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

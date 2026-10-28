@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--a9a01ab5ffd546ad",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2278",
+  "supporting_urls": [],
+  "published_at": "2026-10-28T11:39:10Z",
+  "detected_at": "2026-10-28T14:52:45.308044Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--a9a01ab5ffd546ad.json",
+  "content_hash": "sha256:e0b9b833c27a104a21df5885e787588029392dc218b454281bf988c90fc704f6",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2278",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Press remarks by Commissioner Jørgensen following the Dialogue with European refineries",
+  "content": "European Commission Statement Brussels, 28 Oct 2026 Once again, due to geopolitical turbulence, Europe faces another energy crisis.\nAs in 2022, after the Russia's illegal invasion of Ukraine, prices of crude oil ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

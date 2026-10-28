@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--cb346e9d26f1be1d",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/169",
+  "supporting_urls": [],
+  "published_at": "2026-10-27T18:45:43Z",
+  "detected_at": "2026-10-28T14:52:45.308044Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--cb346e9d26f1be1d.json",
+  "content_hash": "sha256:5b6efd2852561275f501897b59ca54724f781eaaa4c813d5cbb25e9c98668907",
+  "external_id": "pr:169",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #169: fix(web-bot-auth): reject duplicate signature labels",
+  "content": "RFC 9421 §4.1 and §4.2 say signature labels \"MUST be unique across all field values\", for `Signature-Input` and for `Signature`. `MessageVerifier::parse` reads each field into an `sfv::Dictionary`, which keeps only the last of duplicated keys (RFC 9651), and merges multiple field values with `extend`, so a message that repeats `sig1` in either field verifies. The TypeScript verifier already rejects both with `DuplicateLabel`.\n\nBoth fields now go through one helper, `parse_signature_dictionary`, which counts keys while parsing and returns `ParsingError` when labels were dropped, following the shape of #158. This also removes the duplicated parsing block; error messages are unchanged. One test on `StandardTestVector` covers each field with the label repeated in one value and across two values.\n\n### Validation\n\n- `cargo test --workspace --all-features --all-targets`, `cargo clippy --all-features --all-targets -- -D warnings`, `cargo fmt --all -- --check`, `cargo doc`, and the wasm32 build, on Rust 1.95 at `c9e5a23`.\n- With the check disabled, all four test cases parse successfully.\n\nHappy for you to push changes directly to this branch if you would rather adjust anything.\n\nCo-authored with Claude Code\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

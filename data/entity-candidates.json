@@ -204,13 +204,15 @@
       "kind": "player",
       "observed_name": "Instinct",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
-      "last_seen_at": "2026-10-18T12:27:30.284320Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-10-28T14:52:45.308044Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "x-discovery--575795a51d9ff9e6"
+        "x-discovery--575795a51d9ff9e6",
+        "datadome-blog--9f49770024268e27"
       ],
       "feed_slugs": [
-        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
+        "2026-10-27-datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
       ]
     },
     "player:james grimmelmann": {
@@ -323,13 +325,15 @@
       "kind": "player",
       "observed_name": "Search Engine Land",
       "first_seen_at": "2026-10-24T12:27:35.735465Z",
-      "last_seen_at": "2026-10-24T12:27:35.735465Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-10-28T14:52:45.308044Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "x-discovery--5177e7e21ef2c779"
+        "x-discovery--5177e7e21ef2c779",
+        "x-discovery--296c5b7386498d36"
       ],
       "feed_slugs": [
-        "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
+        "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships",
+        "2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations"
       ]
     },
     "player:selectel": {
@@ -609,15 +613,30 @@
       "kind": "protocol",
       "observed_name": "RFC 9421",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-10-20T13:22:00.882558Z",
-      "occurrences": 2,
+      "last_seen_at": "2026-10-28T14:52:45.308044Z",
+      "occurrences": 3,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
-        "web-bot-auth-repo--f2800be0b3b43903"
+        "web-bot-auth-repo--f2800be0b3b43903",
+        "web-bot-auth-repo--cb346e9d26f1be1d"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
-        "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules"
+        "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules",
+        "2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+      ]
+    },
+    "protocol:rfc 9651": {
+      "kind": "protocol",
+      "observed_name": "RFC 9651",
+      "first_seen_at": "2026-10-28T14:52:45.308044Z",
+      "last_seen_at": "2026-10-28T14:52:45.308044Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--cb346e9d26f1be1d"
+      ],
+      "feed_slugs": [
+        "2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
       ]
     },
     "protocol:sail": {

@@ -15,6 +15,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "aeo-dashboard-commoditization",
+      "title": "Aeo Dashboard Commoditization",
+      "thesis": "By uniting edge-level crawler log telemetry with LLM citation and mention tracking into a low-cost subscription, infrastructure providers are expanding directly into search and discovery analytics.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-access-blocking",
       "title": "Agent Access Blocking",
       "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
@@ -211,13 +224,14 @@
     {
       "key": "agentic-commerce",
       "title": "Agentic Commerce",
-      "thesis": "Edge delivery networks are expanding beyond bot blocking and traffic routing into financial rails for automated actors, establishing governance rules like programmatic budgets for autonomous commerce.",
-      "direction": "emerging",
-      "confidence": "low",
+      "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
+      "direction": "developing",
+      "confidence": "medium",
       "first_observed_at": "2026-10-21T13:28:44.196458Z",
-      "last_updated_at": "2026-10-21T13:28:44.196458Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
       "related_feed_slugs": [
-        "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments"
+        "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments",
+        "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
       ],
       "verified_development_slugs": []
     },
@@ -378,6 +392,19 @@
       "last_updated_at": "2026-10-15T13:05:42.271060Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-integrates-bot-and-ai-agent-filtering-directly-into-virtual-waiting-roo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "ai-citation-tracking",
+      "title": "AI Citation Tracking",
+      "thesis": "By uniting edge-level crawler log telemetry with LLM citation and mention tracking into a low-cost subscription, infrastructure providers are expanding directly into search and discovery analytics.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations"
       ],
       "verified_development_slugs": []
     },
@@ -722,6 +749,19 @@
       "verified_development_slugs": [
         "cloudflare-adds-user-agent-logging-and-filtering-to-ai-gateway"
       ]
+    },
+    {
+      "key": "client-side-agent-fingerprinting",
+      "title": "Client Side Agent Fingerprinting",
+      "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "cloud-runtime-infrastructure",
@@ -1246,6 +1286,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "edge-level-ai-bot-analytics",
+      "title": "Edge Level AI Bot Analytics",
+      "thesis": "By uniting edge-level crawler log telemetry with LLM citation and mention tracking into a low-cost subscription, infrastructure providers are expanding directly into search and discovery analytics.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "edge-level-scraping-defense-for-civil-society",
       "title": "Edge Level Scraping Defense For Civil Society",
       "thesis": "Infrastructure providers are bundling AI crawler governance and automated scraping defenses into non-profit and public-interest subsidy packages, establishing edge-level bot controls as standard defense mechanisms alongside conventional DDoS mitigation.",
@@ -1468,6 +1521,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "hardening-and-cross-runtime-parity-between-rust-and-typescript-bot-authentication-libraries",
+      "title": "Hardening And Cross Runtime Parity Between Rust And Typescript Bot Authentication Libraries",
+      "thesis": "Default dictionary parsing rules in HTTP Structured Fields (RFC 9651) silently overwrite duplicate keys, inadvertently masking RFC 9421 signature validation violations unless implementations explicitly count and verify unique labels during parsing.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+      ]
+    },
+    {
       "key": "hardening-cryptographic-bot-verification-against-specification-divergence",
       "title": "Hardening Cryptographic Bot Verification Against Specification Divergence",
       "thesis": "Subtle discrepancies between HTTP signature parsers and spec constraints can create validation mismatches, where non-compliant or manipulated input headers still pass verification if implementations silently normalize data structures prior to signing base reconstruction.",
@@ -1600,6 +1668,19 @@
       "last_updated_at": "2026-10-08T15:14:55.717190Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-report-shows-ai-bot-requests-surging-toward-sensitive-endpoints-as-spoo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "intent-based-access-control",
+      "title": "Intent Based Access Control",
+      "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
       ],
       "verified_development_slugs": []
     },
@@ -2075,6 +2156,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "residential-proxy-agent-routing",
+      "title": "Residential Proxy Agent Routing",
+      "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "responsible-web-scraping",
       "title": "Responsible Web Scraping",
       "thesis": "While the working group focuses heavily on cryptographic verification via HTTP Message Signatures, parallel draft maintenance demonstrates continued momentum toward codifying baseline behavioral and operational norms for automated crawlers.",
@@ -2102,6 +2196,21 @@
       ],
       "verified_development_slugs": [
         "web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules"
+      ]
+    },
+    {
+      "key": "rigorous-adherence-to-rfc-9421-http-message-signatures-for-crawler-verification",
+      "title": "Rigorous Adherence To Rfc 9421 Http Message Signatures For Crawler Verification",
+      "thesis": "Default dictionary parsing rules in HTTP Structured Fields (RFC 9651) silently overwrite duplicate keys, inadvertently masking RFC 9421 signature validation violations unless implementations explicitly count and verify unique labels during parsing.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
       ]
     },
     {
