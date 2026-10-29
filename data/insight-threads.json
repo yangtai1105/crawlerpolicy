@@ -1150,6 +1150,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "differentiation-between-background-indexing-bots-and-user-agent-bots",
+      "title": "Differentiation Between Background Indexing Bots And User Agent Bots",
+      "thesis": "AI crawlers increasingly require granular network-level configurations because blended user-agent checks fail when automated and user-directed bots operate from separate IP infrastructure and encounter distinct mitigation tiers like Bot Fight Mode.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-29T14:58:01.749807Z",
+      "last_updated_at": "2026-10-29T14:58:01.749807Z",
+      "related_feed_slugs": [
+        "perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ],
+      "verified_development_slugs": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ]
+    },
+    {
       "key": "digital-credentials-evolution",
       "title": "Digital Credentials Evolution",
       "thesis": "C2PA maintains an iterative cadence for its provenance architecture, moving from version 2.4 to 2.5 to refine technical standards spanning Content Credentials, crJSON, attestations, and AI/ML guidance.",
@@ -1452,6 +1467,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "formalization-of-automated-traffic-verification-protocols",
+      "title": "Formalization Of Automated Traffic Verification Protocols",
+      "thesis": "Active maintenance of the primary protocol draft indicates the working group is iterating on its cryptographic core while surrounding individual contributions explore supporting mechanisms like registries, IP discovery, and agent identity cards.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-29T14:58:01.749807Z",
+      "last_updated_at": "2026-10-29T14:58:01.749807Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
+      ]
+    },
+    {
       "key": "formalization-of-crawler-behavioral-best-practices",
       "title": "Formalization Of Crawler Behavioral Best Practices",
       "thesis": "Alongside cryptographic verification methods like HTTP Message Signatures, IETF contributors are keeping complementary operational tracks alive—specifically standardized JSON formats for IP disclosure and behavioral best practices—ensuring identity and network verification can evolve in parallel.",
@@ -1630,6 +1660,21 @@
       ],
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+      ]
+    },
+    {
+      "key": "ietf-standardization-of-cryptographic-bot-authentication",
+      "title": "Ietf Standardization Of Cryptographic Bot Authentication",
+      "thesis": "Active maintenance of the primary protocol draft indicates the working group is iterating on its cryptographic core while surrounding individual contributions explore supporting mechanisms like registries, IP discovery, and agent identity cards.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-29T14:58:01.749807Z",
+      "last_updated_at": "2026-10-29T14:58:01.749807Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
       ]
     },
     {
@@ -2498,6 +2543,21 @@
       ],
       "verified_development_slugs": [
         "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
+      ]
+    },
+    {
+      "key": "waf-level-ai-crawler-bypass-complexity",
+      "title": "WAF Level AI Crawler Bypass Complexity",
+      "thesis": "AI crawlers increasingly require granular network-level configurations because blended user-agent checks fail when automated and user-directed bots operate from separate IP infrastructure and encounter distinct mitigation tiers like Bot Fight Mode.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-29T14:58:01.749807Z",
+      "last_updated_at": "2026-10-29T14:58:01.749807Z",
+      "related_feed_slugs": [
+        "perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ],
+      "verified_development_slugs": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
       ]
     },
     {

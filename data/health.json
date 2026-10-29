@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-28T14:52:45.308044Z",
-  "last_fully_successful_at": "2026-10-28T14:52:45.308044Z",
+  "last_attempted_at": "2026-10-29T14:58:01.749807Z",
+  "last_fully_successful_at": "2026-10-29T14:58:01.749807Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -51,7 +51,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "claudebot--8118e663eccfd253"
+        "claudebot--5a1b1c48a78a4e12"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -72,9 +72,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "perplexitybot--50f120be2e951f1c"
+      ],
+      "events_written": [
+        "content/events/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md"
+      ]
     },
     "applebot-extended": {
       "fetch": "ok",
@@ -152,7 +158,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--fce3e496a8ad8b25"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -162,13 +170,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--9f49770024268e27"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-27-datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -176,7 +180,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--7394d09d34753cf2",
+        "uk-cma--49addbfdb4dc3649",
+        "uk-cma--72c4fa67b15c5c37"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -207,12 +215,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--a9a01ab5ffd546ad",
-        "eu-commission-digital--a57c49f0431033e8",
-        "eu-commission-digital--1f5d60239bac1708",
-        "eu-commission-digital--a52d62e58c2a2fda",
-        "eu-commission-digital--223c75907adb699d",
-        "eu-commission-digital--9981fd5795a12215"
+        "eu-commission-digital--7d8876cb9cd47d20",
+        "eu-commission-digital--3399c113a51c152d",
+        "eu-commission-digital--ecd0651b4b8d7e8a",
+        "eu-commission-digital--27bc8e3052d6b05c",
+        "eu-commission-digital--66cec69c83900d94"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -243,7 +250,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "reddit-corporate--4efd4b53423cfbd7"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -253,15 +262,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--cb346e9d26f1be1d"
-      ],
-      "events_written": [
-        "content/events/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -289,10 +292,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--a175c273d313fbdb",
-        "openai-blog--5088256655f3e30a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -332,9 +332,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ietf-webbotauth-wg--79c2f8436380dea1"
+      ],
+      "events_written": [
+        "content/events/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -402,22 +408,18 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "x-discovery--296c5b7386498d36"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations.md"
-      ]
+      "feed_items_written": []
     }
   },
   "events_written": [
-    "content/events/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md"
+    "content/events/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md",
+    "content/events/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-10-27-datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst.md",
-    "content/feed/2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421.md",
-    "content/feed/2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations.md"
+    "content/feed/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md",
+    "content/feed/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
   ],
   "provider": {
     "name": "gemini",
@@ -427,12 +429,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-10-28",
-    "item_count": 3,
-    "path": "data/daily/2026-10-28.json"
+    "edition_date": "2026-10-29",
+    "item_count": 2,
+    "path": "data/daily/2026-10-29.json"
   },
   "insight_threads": {
-    "thread_count": 184,
+    "thread_count": 188,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -442,9 +444,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 1,
+    "candidate_count": 0,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.112991,
+    "estimated_tool_cost_usd": 0.140764,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
