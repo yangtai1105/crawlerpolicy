@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--7a5d89b95c07f81e",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2310",
+  "supporting_urls": [],
+  "published_at": "2026-10-30T11:45:01Z",
+  "detected_at": "2026-10-30T14:51:31.332675Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--7a5d89b95c07f81e.json",
+  "content_hash": "sha256:e4ae6963d551bc34fa5a177b8384346d4bc0e10d2fa57b91fc048ab0d65bea97",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2310",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Opening statement by President von der Leyen at the EU-Canada summit",
+  "content": "European Commission Statement Montreal, 30 Oct 2026 Cher Mark,\nC'est un plaisir d'être ici à Montréal. Je suis ravie de connaître cette ville qui est ouverte sur l'Atlantique, cet océan qui nous lie. Merci pour l...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

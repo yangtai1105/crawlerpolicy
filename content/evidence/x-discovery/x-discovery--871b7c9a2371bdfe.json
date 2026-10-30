@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--871b7c9a2371bdfe",
+  "source": "x-discovery",
+  "source_url": "https://x.com/verge/status/2115886773712891998",
+  "supporting_urls": [
+    "https://www.theverge.com/transportation/1022555/gm-data-privacy-attorneys-general-lawsuit"
+  ],
+  "published_at": "2026-10-29T19:21:32Z",
+  "detected_at": "2026-10-30T14:51:31.332675Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--871b7c9a2371bdfe.json",
+  "content_hash": "sha256:04489b74c0d5de70ca0eab683706d123ae616e08e2e622a4a89fcf1a11b4a515",
+  "external_id": "2115886773712891998",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "GM settlement requires limits on driving data collection",
+  "content": "X author: @verge\n\nThe Verge reported on a settlement with GM that requires the company to limit the driving data it collects.\n\nLinked sources:\n- https://www.theverge.com/transportation/1022555/gm-data-privacy-attorneys-general-lawsuit",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "verge",
+    "post_url": "https://x.com/verge/status/2115886773712891998",
+    "linked_urls": [
+      "https://www.theverge.com/transportation/1022555/gm-data-privacy-attorneys-general-lawsuit"
+    ],
+    "provider_citations": [],
+    "front": "governance-law",
+    "shadow": false
+  }
+}

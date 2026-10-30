@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-29T14:58:01.749807Z",
-  "last_fully_successful_at": "2026-10-29T14:58:01.749807Z",
+  "last_attempted_at": "2026-10-30T14:51:31.332675Z",
+  "last_fully_successful_at": "2026-10-30T14:51:31.332675Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -50,9 +50,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "claudebot--5a1b1c48a78a4e12"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -72,15 +70,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "perplexitybot--50f120be2e951f1c"
-      ],
-      "events_written": [
-        "content/events/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "applebot-extended": {
       "fetch": "ok",
@@ -159,7 +151,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--fce3e496a8ad8b25"
+        "cloudflare-blog--3191778a6413a6ba"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -181,9 +173,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--7394d09d34753cf2",
-        "uk-cma--49addbfdb4dc3649",
-        "uk-cma--72c4fa67b15c5c37"
+        "uk-cma--d648a9376fc6d657",
+        "uk-cma--0817938fb3acc998",
+        "uk-cma--b5dcba6fd0198a51",
+        "uk-cma--7b9879d005934549",
+        "uk-cma--b6d06a7ca6f74850",
+        "uk-cma--f7fd242fb40392d4",
+        "uk-cma--e16110f13d82adc2",
+        "uk-cma--8a48656621560567",
+        "uk-cma--fadbe98a0a84a258"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -215,11 +213,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--7d8876cb9cd47d20",
-        "eu-commission-digital--3399c113a51c152d",
-        "eu-commission-digital--ecd0651b4b8d7e8a",
-        "eu-commission-digital--27bc8e3052d6b05c",
-        "eu-commission-digital--66cec69c83900d94"
+        "eu-commission-digital--7a5d89b95c07f81e",
+        "eu-commission-digital--d0a675e884a3abc7",
+        "eu-commission-digital--25a21ccaf3ba0555",
+        "eu-commission-digital--c60dd0c76322fb93",
+        "eu-commission-digital--86e6ee15a79335fa",
+        "eu-commission-digital--87775ff746cd39e2",
+        "eu-commission-digital--5b523ec6aa7b8e93"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -250,9 +250,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "reddit-corporate--4efd4b53423cfbd7"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -292,7 +290,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--2d1f8500636ac07f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -332,15 +332,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--79c2f8436380dea1"
-      ],
-      "events_written": [
-        "content/events/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -368,7 +362,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "rsl-standard--c948a09d6d5f5d83"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -408,19 +404,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "x-discovery--871b7c9a2371bdfe"
+      ],
       "events_written": [],
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md",
-    "content/events/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
-  ],
-  "feed_items_written": [
-    "content/feed/2026-10-29-perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski.md",
-    "content/feed/2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro.md"
-  ],
+  "events_written": [],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -428,10 +420,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-10-29",
-    "item_count": 2,
-    "path": "data/daily/2026-10-29.json"
+    "status": "quiet",
+    "edition_date": "2026-10-30",
+    "item_count": 0,
+    "path": "data/daily/2026-10-30.json"
   },
   "insight_threads": {
     "thread_count": 188,
@@ -444,9 +436,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 0,
+    "candidate_count": 1,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.140764,
+    "estimated_tool_cost_usd": 0.017312,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

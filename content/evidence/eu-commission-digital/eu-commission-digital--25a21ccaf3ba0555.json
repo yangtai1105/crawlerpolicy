@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--25a21ccaf3ba0555",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2303",
+  "supporting_urls": [],
+  "published_at": "2026-10-30T08:17:48Z",
+  "detected_at": "2026-10-30T14:51:31.332675Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--25a21ccaf3ba0555.json",
+  "content_hash": "sha256:67a3ea3ec1abc1ab989b30a48addfe8645f7bc98ec75331e0e98705b732a2eee",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2303",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission disburses almost €6.5 billion to France, Austria and Luxembourg under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 30 Oct 2026 Today, the European Commission disbursed €6.1 billion to France, €306 million to Austria, and €92.2 million to Luxembourg.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
