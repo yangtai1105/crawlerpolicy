@@ -84,7 +84,7 @@ def is_article_url(url: str, domain: str) -> bool:
 
 
 def default_model() -> str:
-    return os.environ.get("GEMINI_ANALYSIS_MODEL", "gemini-3.7-flash")
+    return os.environ.get("GEMINI_ANALYSIS_MODEL", "gemini-3.8-flash")
 
 
 def _client(client: genai.Client | None) -> genai.Client:
