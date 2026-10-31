@@ -799,3 +799,120 @@ def test_check_module_never_imports_or_calls_the_merge_only_writers():
     source = Path("pipeline/check.py").read_text()
     assert "save_positions" not in source
     assert "save_reading" not in source
+
+
+def _write_grounded_source(repo):
+    (repo / "sources.yaml").write_text(
+        yaml.safe_dump(
+            [
+                {
+                    "slug": "vendor-blog",
+                    "type": "rss_feed",
+                    "url": "https://feeds.example.test/vendor",
+                    "keyword_filter": ["agents"],
+                    "keyword_filter_scope": "title",
+                    "enrich_via": "gemini_grounded",
+                    "archive_primary": True,
+                    "display_name": "Vendor Blog",
+                    "default_tracks": ["access-controls"],
+                    "tier": "specialist",
+                    "role": "infrastructure",
+                }
+            ]
+        )
+    )
+
+
+def _vendor_item() -> CandidateItem:
+    return CandidateItem(
+        guid="https://vendor.example/blog/2026/oct/silent-agents",
+        title="Silent Agents Are Already on Your Site",
+        published_at=datetime(2026, 10, 26, 9, tzinfo=UTC),
+        url="https://vendor.example/blog/2026/oct/silent-agents",
+        summary="",
+        body="",
+    )
+
+
+async def test_grounded_vendor_item_is_analysed_from_index_notes_without_persisting_them(
+    repo, monkeypatch
+):
+    from pipeline import article_archive, grounded_reader
+
+    _write_grounded_source(repo)
+    read = grounded_reader.GroundedRead(
+        url="https://vendor.example/blog/silent-agents",
+        title="Silent Agents Are Already on Your Site",
+        published_on=datetime(2026, 10, 26, tzinfo=UTC),
+        text="INDEX-NOTES " * 60,
+        cited_urls=["https://vendor.example/blog/silent-agents"],
+        model="gemini-test",
+    )
+    monkeypatch.setattr(grounded_reader, "read_article", AsyncMock(return_value=read))
+    snapshot = "https://web.archive.org/web/20261027000000/https://vendor.example/x"
+    saved = AsyncMock(
+        return_value={"https://vendor.example/blog/2026/oct/silent-agents": snapshot}
+    )
+    monkeypatch.setattr(article_archive, "save_wayback_snapshots", saved)
+    analyze = AsyncMock(return_value=_material_analysis())
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 10, 27, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[_vendor_item()])
+        ),
+        analyze_change=analyze,
+    )
+
+    assert "INDEX-NOTES" in analyze.await_args.kwargs["curr_content"]
+    written = "".join(
+        path.read_text()
+        for path in repo.rglob("*")
+        if path.is_file() and path.suffix in {".json", ".md", ".jsonl"}
+    )
+    assert "INDEX-NOTES" not in written
+    feed_text = next((repo / "content/feed").glob("*.md")).read_text()
+    assert "[Primary source](https://vendor.example/blog/2026/oct/silent-agents)" in feed_text
+    assert f'archived_copies:\n  - "{snapshot}"' in feed_text
+    evidence = json.loads(next((repo / "content/evidence/vendor-blog").glob("*.json")).read_text())
+    assert evidence["stage"] == EvidenceStage.PUBLISHED.value
+    assert evidence["discovery_metadata"]["grounded_read"]["method"] == "gemini-grounded"
+
+
+async def test_unindexed_vendor_item_waits_for_the_index_then_expires(repo, monkeypatch):
+    from pipeline import grounded_reader
+
+    _write_grounded_source(repo)
+    monkeypatch.setattr(
+        grounded_reader,
+        "read_article",
+        AsyncMock(side_effect=grounded_reader.NotIndexed("not found")),
+    )
+    analyze = AsyncMock(return_value=_material_analysis())
+    fetch = AsyncMock(return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[_vendor_item()]))
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 10, 26, 10, tzinfo=UTC),
+        fetch_dispatch=fetch,
+        analyze_change=analyze,
+    )
+    queued = pending_analysis(repo / "content" / "evidence")
+    assert len(queued) == 1
+    assert queued[0][1].stage is EvidenceStage.FETCHED
+    assert queued[0][1].last_error.startswith("awaiting search index")
+
+    fetch.return_value = FetchResult(mode=ResultMode.PER_ITEM, items=[])
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 11, 3, 10, tzinfo=UTC),
+        fetch_dispatch=fetch,
+        analyze_change=analyze,
+    )
+
+    analyze.assert_not_awaited()
+    assert pending_analysis(repo / "content" / "evidence") == []
+    evidence = json.loads(next((repo / "content/evidence/vendor-blog").glob("*.json")).read_text())
+    assert evidence["stage"] == EvidenceStage.ANALYZED.value
+    assert evidence["last_error"].startswith("never indexed")

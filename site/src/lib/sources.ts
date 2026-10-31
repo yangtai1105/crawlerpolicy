@@ -9,6 +9,7 @@ export type SourceType =
   | "github_repo"
   | "ietf_draft"
   | "gemini_search"
+  | "gemini_listing"
   | "cf_browser_run"
   | "xai_search";
 export type SourceTier = "primary" | "measurement" | "specialist" | "commentary";

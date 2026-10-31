@@ -8,12 +8,12 @@ import logging
 import os
 from collections.abc import Awaitable, Callable, Mapping
 from dataclasses import dataclass
-from datetime import UTC, datetime
+from datetime import UTC, datetime, timedelta
 from pathlib import Path
 
 import yaml
 
-from pipeline import article_archive, article_reader, raw_log
+from pipeline import article_archive, article_reader, grounded_reader, raw_log
 from pipeline.analyzer import AnalysisResult
 from pipeline.analyzer import analyze_change as _default_analyze_change
 from pipeline.config import Config
@@ -32,6 +32,7 @@ from pipeline.feed import publication_status, should_promote
 from pipeline.feed_writer import write_feed_item
 from pipeline.fetchers.base import CandidateItem, FetchResult, ResultMode
 from pipeline.fetchers.cf_browser_run import fetch_cf_browser_run
+from pipeline.fetchers.gemini_listing import fetch_gemini_listing
 from pipeline.fetchers.gemini_search import fetch_gemini_search
 from pipeline.fetchers.github_repo import fetch_github_repo
 from pipeline.fetchers.html_page import fetch_html_page
@@ -88,6 +89,7 @@ async def _default_fetch(
     now: datetime,
     xai_api_key: str,
     xai_discovery_model: str,
+    gemini_model: str | None = None,
 ) -> FetchResult:
     if source.type is SourceType.HTML_PAGE:
         return await fetch_html_page(source)
@@ -110,6 +112,13 @@ async def _default_fetch(
             source,
             since=state.last_checked_at,
             seen_guids=state.last_seen_guids,
+        )
+    if source.type is SourceType.GEMINI_LISTING:
+        return await fetch_gemini_listing(
+            source,
+            seen_guids=state.last_seen_guids,
+            now=now,
+            model=gemini_model,
         )
     if source.type is SourceType.XAI_SEARCH:
         return await fetch_xai_search(
@@ -134,7 +143,8 @@ def preflight_dependency_errors(
     for source in sources:
         if not source.enabled:
             continue
-        if source.type is SourceType.GEMINI_SEARCH and not present("GEMINI_API_KEY"):
+        gemini_fetch = {SourceType.GEMINI_SEARCH, SourceType.GEMINI_LISTING}
+        if source.type in gemini_fetch and not present("GEMINI_API_KEY"):
             blockers[source.slug] = DependencyBlocker(
                 stage="fetch",
                 message="GEMINI_API_KEY is missing",
@@ -209,6 +219,7 @@ async def run_check(
                 now=now,
                 xai_api_key=cfg.xai_api_key,
                 xai_discovery_model=cfg.xai_discovery_model,
+                gemini_model=cfg.gemini_analysis_model,
             )
 
         fetch_dispatch = configured_fetch
@@ -626,6 +637,11 @@ async def _process_items(
         if event is not None:
             events.append(event)
 
+    state.last_seen_guids.extend(
+        guid
+        for guid in result.metadata.get("settled_guids", [])
+        if guid not in state.last_seen_guids
+    )
     state.first_seen = False
     state.last_seen_guids = state.last_seen_guids[-500:]
     return events, state
@@ -746,6 +762,7 @@ async def _analyze_evidence(
     now: datetime,
     dry_run: bool,
 ) -> AnalysisResult | None:
+    grounded: grounded_reader.GroundedRead | None = None
     if record.title is not None:
         blob = source.keyword_haystack(record.title, record.content)
         if not keyword_match(blob, source.keyword_filter or []):
@@ -754,8 +771,15 @@ async def _analyze_evidence(
             if not dry_run:
                 save_evidence(cfg.evidence_dir, record)
             return None
+        if source.reads_grounded:
+            grounded = await _read_grounded(cfg, record, now=now, dry_run=dry_run)
+            if grounded is None:
+                return None
+        relevance_text = (
+            f"{record.content}\n\n{grounded.text}" if grounded is not None else record.content
+        )
         verdict = (
-            await model_relevance(model, record.title, record.content)
+            await model_relevance(model, record.title, relevance_text)
             if model is not None
             else None
         )
@@ -794,6 +818,8 @@ async def _analyze_evidence(
                 return None
 
     curr_content = record.content
+    if grounded is not None:
+        curr_content = f"{record.content}\n\n{grounded_reader.article_context(grounded)}"
     articles: list[article_reader.Article] = []
     if source.type is SourceType.XAI_SEARCH:
         # Linked article text deepens the analysis but is never persisted.
@@ -822,6 +848,15 @@ async def _analyze_evidence(
         )
         if analysis.change_kind == "material" and not dry_run:
             await article_archive.preserve(articles, record=record, read_at=now)
+    if (
+        source.archive_primary
+        and analysis.change_kind == "material"
+        and record.source_url
+        and not dry_run
+    ):
+        snapshots = await article_archive.save_wayback_snapshots([record.source_url])
+        if record.source_url in snapshots:
+            record.discovery_metadata["primary_archived_copy"] = snapshots[record.source_url]
     record.analysis_attempts += 1
     record.stage = EvidenceStage.ANALYZED
     record.last_error = None
@@ -886,7 +921,7 @@ def _publish_analysis(
             event_slug(analysis.title) if development_path is not None else None
         ),
         saved_copies=_read_log_links(record, "saved_copy"),
-        archived_copies=_read_log_links(record, "archived_copy"),
+        archived_copies=_archived_copies(record),
     )
     record.stage = EvidenceStage.PUBLISHED
     record.last_error = None
@@ -926,6 +961,47 @@ def _publish_analysis(
                 record.evidence_id,
             )
     return development_path, feed_path
+
+
+def _archived_copies(record: EvidenceRecord) -> list[str]:
+    primary = record.discovery_metadata.get("primary_archived_copy")
+    return ([primary] if primary else []) + _read_log_links(record, "archived_copy")
+
+
+# How long an article that is not yet in the search index stays queued.
+_GROUNDED_READ_DAYS = 7
+
+
+async def _read_grounded(
+    cfg: Config,
+    record: EvidenceRecord,
+    *,
+    now: datetime,
+    dry_run: bool,
+) -> grounded_reader.GroundedRead | None:
+    """Read the item through the search index, or leave it queued for replay.
+
+    A fresh post is often not indexed until the next day. The evidence stays
+    FETCHED so the replay queue tries again; after a week it is closed out
+    instead of being analysed as an empty update.
+    """
+    try:
+        read = await grounded_reader.read_article(
+            record.source_url,
+            title=record.title or "",
+            model=cfg.gemini_analysis_model,
+        )
+    except grounded_reader.NotIndexed as error:
+        expired = now - record.detected_at >= timedelta(days=_GROUNDED_READ_DAYS)
+        record.stage = EvidenceStage.ANALYZED if expired else EvidenceStage.FETCHED
+        record.last_error = (
+            f"never indexed: {error}" if expired else f"awaiting search index: {error}"
+        )
+        if not dry_run:
+            save_evidence(cfg.evidence_dir, record)
+        return None
+    record.discovery_metadata["grounded_read"] = read.as_metadata()
+    return read
 
 
 def _read_log_links(record: EvidenceRecord, key: str) -> list[str]:

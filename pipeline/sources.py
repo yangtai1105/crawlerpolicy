@@ -24,6 +24,7 @@ class SourceType(StrEnum):
     GITHUB_REPO = "github_repo"
     IETF_DRAFT = "ietf_draft"
     GEMINI_SEARCH = "gemini_search"
+    GEMINI_LISTING = "gemini_listing"
     XAI_SEARCH = "xai_search"
     CF_BROWSER_RUN = "cf_browser_run"
 
@@ -55,6 +56,13 @@ class Source(BaseModel):
     # model relevance check.
     keyword_filter_scope: Literal["content", "title"] = "content"
 
+    # rss_feed + gemini_listing: read each item through Google Search grounding
+    # before analysis, for sites that block crawlers but let search engines
+    # index them. gemini_listing sources always read this way.
+    enrich_via: Literal["gemini_grounded"] | None = None
+    # Ask the Wayback Machine to snapshot each material item's article URL.
+    archive_primary: bool = False
+
     # github_repo
     repo: str | None = None
     pr_labels: list[str] = Field(default_factory=list)
@@ -63,9 +71,12 @@ class Source(BaseModel):
     # ietf_draft
     draft_name: str | None = None
 
-    # gemini_search
+    # gemini_search + gemini_listing
     query: str | None = None
     lookback_days: int | None = None
+
+    # gemini_listing: the only host whose cited articles become items
+    listing_domain: str | None = None
 
     # xai_search
     # x_handles is a hard allowlist passed to the search tool; the priority
@@ -79,6 +90,10 @@ class Source(BaseModel):
 
     # Optional analysis-model override per source.
     model: str | None = None
+
+    @property
+    def reads_grounded(self) -> bool:
+        return self.type is SourceType.GEMINI_LISTING or self.enrich_via == "gemini_grounded"
 
     def keyword_haystack(self, title: str, content: str) -> str:
         """Return the text the keyword filter matches against."""
@@ -114,6 +129,14 @@ class Source(BaseModel):
             raise ValueError(f"source {self.slug}: ietf_draft requires `draft_name`")
         if self.type == SourceType.GEMINI_SEARCH and not self.query:
             raise ValueError(f"source {self.slug}: gemini_search requires `query`")
+        if self.type == SourceType.GEMINI_LISTING and not (self.query and self.listing_domain):
+            raise ValueError(
+                f"source {self.slug}: gemini_listing requires `query` and `listing_domain`"
+            )
+        if self.enrich_via and self.type not in {SourceType.RSS_FEED, SourceType.GEMINI_LISTING}:
+            raise ValueError(
+                f"source {self.slug}: `enrich_via` applies to rss_feed and gemini_listing only"
+            )
         if self.type == SourceType.XAI_SEARCH:
             if not self.query:
                 raise ValueError(f"source {self.slug}: xai_search requires `query`")
