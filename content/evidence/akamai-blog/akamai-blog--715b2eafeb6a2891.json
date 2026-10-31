@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--715b2eafeb6a2891",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/apr/scaling-a-smarter-safer-browser-future",
+  "supporting_urls": [],
+  "published_at": "2025-04-28T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--715b2eafeb6a2891.json",
+  "content_hash": "sha256:fbe5cbb74ccc86b1e1901aeec24144a023f450af9ebc0c2b39fc00c9daac07ec",
+  "external_id": "https://www.akamai.com/blog/security/2025/apr/scaling-a-smarter-safer-browser-future",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Scaling a Smarter, Safer Browser Future",
+  "content": "The enterprise browser is no longer just a portal to the web, it’s the nerve center of modern work. Recognizing this shift, LayerX set out to rethink how enterprises secure the place where work actually happens.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--c59dcb4e58ff8e72",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/render-pages-faster-optimized-browsing-part-5-of-5",
+  "supporting_urls": [],
+  "published_at": "2023-04-28T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--c59dcb4e58ff8e72.json",
+  "content_hash": "sha256:e09150ffb08333af490e12468eba17ddcb36096e6cae97cd64b403b7743e9255",
+  "external_id": "https://www.akamai.com/blog/developers/render-pages-faster-optimized-browsing-part-5-of-5",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Render Pages Faster for Optimized Browsing, Part 5 of 5",
+  "content": "Find out what happens once the browser has downloaded usable assets and it's time to display something on-screen.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

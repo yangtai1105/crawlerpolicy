@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--961d4e52217af37c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/2026/jun/keep-your-tech-flame-alive-trailblazer-katrina-cole",
+  "supporting_urls": [],
+  "published_at": "2026-06-17T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--961d4e52217af37c.json",
+  "content_hash": "sha256:9480cdab59ff822955c0c52bbe2a9d658fc9d6bf5fdfc5ce581e16336d0597a6",
+  "external_id": "https://www.akamai.com/blog/culture/2026/jun/keep-your-tech-flame-alive-trailblazer-katrina-cole",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Keep Your Tech FLAME Alive: Trailblazer Katrina Cole",
+  "content": "Meet Katrina Cole, an Information Security Consultant who entered tech at age 40. Read her advice for women in tech and her proactive approach to security.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

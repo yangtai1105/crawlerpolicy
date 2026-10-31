@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6daf4158bbd82f18",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/why-fido2-is-the-answer-to-better-security-",
+  "supporting_urls": [],
+  "published_at": "2021-05-21T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6daf4158bbd82f18.json",
+  "content_hash": "sha256:be651bd9110856188aaecac2c71a1ba46c29545c111272b3ea62bb7c8d5f7271",
+  "external_id": "https://www.akamai.com/blog/security/why-fido2-is-the-answer-to-better-security-",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Why FIDO2 is the Answer to Better Security",
+  "content": "A groundbreaking increase in security incidents is affecting governments around the world. In light of this, the United States issued a formal order to implement a robust set of security measures designed to improve the security of federal systems. In his most recent executive order, President Biden acknowledged that the United States and many other governments around the world are facing increasing malicious cyberattacks. In order to prevent,  and recover from security incidents, the President is pushing to significantly improve the government's security stack, including the implementation of multi-factor authentication (MFA). In this post, I'll discuss how the government's plan to leverage MFA could be even better.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

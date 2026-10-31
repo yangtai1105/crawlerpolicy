@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6cc60804dbe3f5a0",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2026/oct/beyond-day-zero-akamai-rapid-response-ai-threat-intelligence",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T08:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6cc60804dbe3f5a0.json",
+  "content_hash": "sha256:9b2fce3c226ad68750153d22cdee7bc6b69c7598c6b85e773d6462ff10228e09",
+  "external_id": "https://www.akamai.com/blog/security-research/2026/oct/beyond-day-zero-akamai-rapid-response-ai-threat-intelligence",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Beyond Day Zero: Akamai's Rapid Response and AI Threat Intelligence",
+  "content": "Discover how Akamai responded to critical PHP vulnerabilities using agentic AI, real-time telemetry, and rapid action switching to deliver adaptive WAF defense.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

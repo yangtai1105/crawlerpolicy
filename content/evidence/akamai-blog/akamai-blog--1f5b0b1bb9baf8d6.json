@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1f5b0b1bb9baf8d6",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2024/nov/getting-started-with-akamai-app-platform",
+  "supporting_urls": [],
+  "published_at": "2024-11-13T11:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1f5b0b1bb9baf8d6.json",
+  "content_hash": "sha256:04f0eaadcd8301efa0706945ae5445ba7f736908c2470334deafdf6c93321359",
+  "external_id": "https://www.akamai.com/blog/developers/2024/nov/getting-started-with-akamai-app-platform",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Getting Started with Akamai App Platform",
+  "content": "Step-by-step instructions to provision a Kubernetes cluster with Akamai App Platform enabled and then build, deploy and publicly expose an application.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

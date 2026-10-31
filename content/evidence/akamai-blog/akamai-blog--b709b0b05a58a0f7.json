@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b709b0b05a58a0f7",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/2024/jun/women-in-tech-remain-open-unexpected-opportunities",
+  "supporting_urls": [],
+  "published_at": "2024-06-24T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b709b0b05a58a0f7.json",
+  "content_hash": "sha256:4007cbf5ba9f93489ce9087994e3ce2217e8c04a613093f1eb9d190af9ca5f63",
+  "external_id": "https://www.akamai.com/blog/culture/2024/jun/women-in-tech-remain-open-unexpected-opportunities",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Women in Tech: Remain Open to Unexpected Opportunities",
+  "content": "Akamai CIO Kate Prouty explores the benefits of remaining open to new opportunities and salutes the bond among women in tech.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--f82ec9bd6e5da9a3",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/preventing-automated-security-decisions-impacting-critical-events/",
+  "supporting_urls": [],
+  "published_at": "2026-09-17T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--f82ec9bd6e5da9a3.json",
+  "content_hash": "sha256:7a9dce34c971722a91aa1f76ede19299710db460bf2299995a65c6b994ed8cb9",
+  "external_id": "https://www.fastly.com/blog/preventing-automated-security-decisions-impacting-critical-events/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Preventing Automated Security Decisions from Impacting Critical Events",
+  "content": "Learn how Fastly DDoS Protection's new Challenge action prevents false positives and keeps legitimate traffic flowing during critical events.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

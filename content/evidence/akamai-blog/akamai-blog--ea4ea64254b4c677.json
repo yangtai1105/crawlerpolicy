@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ea4ea64254b4c677",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/jan/dns-silently-powers-the-internet",
+  "supporting_urls": [],
+  "published_at": "2025-01-17T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ea4ea64254b4c677.json",
+  "content_hash": "sha256:1c7df7795337cef138b2d5a6673ac6ebabd9cc6e779b7c14f2263370b92b9421",
+  "external_id": "https://www.akamai.com/blog/security/2025/jan/dns-silently-powers-the-internet",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "DNS Silently Powers the Internet",
+  "content": "As a part of almost every internet transaction, the Domain Name System is powerful, lightweight, and ubiquitous — and delivers value for a modest investment.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--8a26db4e8cdb0eb9",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/cmcdv2-leveling-up-your-video-streaming-telemetry/",
+  "supporting_urls": [],
+  "published_at": "2026-09-09T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--8a26db4e8cdb0eb9.json",
+  "content_hash": "sha256:23f5a45185be16dcbf326f734b6a41a1772ef2605d5fe6a1544546357b535d00",
+  "external_id": "https://www.fastly.com/blog/cmcdv2-leveling-up-your-video-streaming-telemetry/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "CMCDv2: Leveling Up Your Video Streaming Telemetry",
+  "content": "Elevate your video streaming telemetry with CMCDv2. Discover how Request, Response, and Event modes offer deeper, full-stack insights into viewer performance.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

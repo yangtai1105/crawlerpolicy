@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--0fbb1d299d2746d0",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/akamai-turns-up-linode-past-11",
+  "supporting_urls": [],
+  "published_at": "2022-09-27T01:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--0fbb1d299d2746d0.json",
+  "content_hash": "sha256:e7c7216acb9e0d6e9dee23760da024e7004ced38e962e5fab3b9a48346fd9118",
+  "external_id": "https://www.akamai.com/blog/cloud/akamai-turns-up-linode-past-11",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Turns Up Linode Past 11",
+  "content": "Akamai plans to add more than a dozen data centers, equipped with Linode’s full product suite – across North America, APAC, LATAM and Europe by the end of 2023.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--f88a4a188b0ad266",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/akamai-wins-brandon-hall-award",
+  "supporting_urls": [],
+  "published_at": "2022-02-24T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--f88a4a188b0ad266.json",
+  "content_hash": "sha256:adf546fc5ce9ee2e699628ac88daf7e5335985622ef4051a64ddaa6810b6905d",
+  "external_id": "https://www.akamai.com/blog/news/akamai-wins-brandon-hall-award",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Wins Brandon Hall Award for Best Learning Technology",
+  "content": "The Technical Enablement and Education team, part of Akamai’s Global Services organization, has won a coveted Brandon Hall Group silver medal for “Excellence in Technology,” for their automatic hands-on Lab Validation System (LVS). The automatic LVS is used throughout Global Service training courses, as well as in Channel Partner product certification, to provide real-time evaluations quickly and accurately for hands-on lab training associated with learning how to implement Akamai products.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

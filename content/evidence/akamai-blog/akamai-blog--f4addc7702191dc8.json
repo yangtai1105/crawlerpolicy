@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--f4addc7702191dc8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2023/dec/apache-struts-cve-exploitation-attempts",
+  "supporting_urls": [],
+  "published_at": "2023-12-14T10:00:40Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--f4addc7702191dc8.json",
+  "content_hash": "sha256:fd23d72e78ec87fe1c5c3161cd4593e4514b83cf081adecb1809a7bf6d8cc7c4",
+  "external_id": "https://www.akamai.com/blog/security-research/2023/dec/apache-struts-cve-exploitation-attempts",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Observed Exploitation Attempts of Struts 2 S2-066 Vulnerability (CVE-2023-50164)",
+  "content": "The Akamai Security Intelligence Group has seen numerous exploitation attempts on Apache Struts 2 since December 7, 2023, when a critical CVE was released.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

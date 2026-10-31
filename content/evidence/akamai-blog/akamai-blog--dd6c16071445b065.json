@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--dd6c16071445b065",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/akamai-is-now-a-cybersecurity-powerhouse",
+  "supporting_urls": [],
+  "published_at": "2021-11-09T16:00:59Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--dd6c16071445b065.json",
+  "content_hash": "sha256:3c11fd265520be6c6f51c54f8a8b9206ef1b4ee91b06dc114381072b1fd4858b",
+  "external_id": "https://www.akamai.com/blog/news/akamai-is-now-a-cybersecurity-powerhouse",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Is Now a Cybersecurity Powerhouse",
+  "content": "Over the past five years, we’ve grown Akamai’s security portfolio from point solutions into a comprehensive platform that provides defense in depth to address our customers’ biggest threats. The unique breadth of our defenses is important to our customers who want the most effective security capabilities, and more of them from fewer vendors.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

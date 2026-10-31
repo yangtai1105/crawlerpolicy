@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a128be3ae82b6c37",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/akamai-differentiated-cloud-strategy",
+  "supporting_urls": [],
+  "published_at": "2023-02-21T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a128be3ae82b6c37.json",
+  "content_hash": "sha256:3903bcb32aca0c4172f03ede9272afcc1b2e0b231375a957aa20e651c5bfa395",
+  "external_id": "https://www.akamai.com/blog/cloud/akamai-differentiated-cloud-strategy",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai’s Differentiated Cloud Strategy",
+  "content": "Akamai is taking a different approach to cloud computing than providers who base their platforms solely on core data centers. Read more about our strategy.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

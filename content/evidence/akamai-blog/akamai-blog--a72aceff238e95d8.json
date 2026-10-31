@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a72aceff238e95d8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/4-techniques-for-early-ransomware-detection",
+  "supporting_urls": [],
+  "published_at": "2021-03-21T18:40:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a72aceff238e95d8.json",
+  "content_hash": "sha256:6b820d7ea93ba0ee813377be94f5531a31cf2b1eba9aab6226ab4f41d187f6e3",
+  "external_id": "https://www.akamai.com/blog/security/4-techniques-for-early-ransomware-detection",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "4 Techniques for Early Ransomware Detection",
+  "content": "If you receive a ransom note, it’s already too late. Detect and stop ransomware attacks early in the kill chain with these 4 techniques.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

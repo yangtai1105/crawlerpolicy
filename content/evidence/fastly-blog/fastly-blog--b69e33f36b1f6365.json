@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--b69e33f36b1f6365",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/how-fastly-detected-and-built-a-coordinated-response-to-php2shell/",
+  "supporting_urls": [],
+  "published_at": "2026-10-21T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--b69e33f36b1f6365.json",
+  "content_hash": "sha256:a8ae9035d4465e070704bb05a90c50edac37b33458f966685d0d6c4fad842cfc",
+  "external_id": "https://www.fastly.com/blog/how-fastly-detected-and-built-a-coordinated-response-to-php2shell/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PHP2Shell: Finding the Needles in a Haystack",
+  "content": "PHP2Shell Deep Dive",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

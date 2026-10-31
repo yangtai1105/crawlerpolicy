@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--28cceafc64d28251",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/sustainability/2024/nov/resilient-by-design-akamais-data-driven-path-to-climate-adaptation",
+  "supporting_urls": [],
+  "published_at": "2024-12-04T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--28cceafc64d28251.json",
+  "content_hash": "sha256:bd71b3ac1f3dfe738866d1e5e0a220bfb36044d032d68de108319bbc426e47de",
+  "external_id": "https://www.akamai.com/blog/sustainability/2024/nov/resilient-by-design-akamais-data-driven-path-to-climate-adaptation",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Resilient by Design: Akamai’s Data-Driven Path to Climate Adaptation",
+  "content": "Learn how Akamai is using the challenges of climate change as opportunities for innovation and progress to weave climate resilience into our long-term strategy.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--70bade14280f9993",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+  "supporting_urls": [],
+  "published_at": "2026-10-23T19:40:54Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--70bade14280f9993.json",
+  "content_hash": "sha256:6bafe0bf78e251d5c11b464b389e29544ad93926f9b9bb8d27c39510f6d0f32a",
+  "external_id": "https://simonwillison.net/2026/Oct/23/kimi-k31-pro/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing Kimi K3.1 Pro",
+  "content": "<p><strong><a href=\"https://www.kimi.ai/blog/kimi-k3-1-pro\">Introducing Kimi K3.1 Pro</a></strong></p>\nKimi K3.1 Pro landed on the Kimi API today - it's not yet open weights, but Moonshot  promise \"Full model weights will be released by Nov 4, 2026\".</p>\n<p>They're also offering a \"Highspeed\" version that's 2-3x faster, at twice the price (except for input token cache hits, which are priced the same).</p>\n<p>The <a href=\"https://platform.kimi.ai/docs/pricing/chat\">US dollar pricing</a> is $2.00/million tokens for input and $10/million for output - the same as GPT-6.1 Sol and half the price of Claude Opus 5.5.</p>\n<p>Moonshot's own benchmarks show Kimi as approximately level with Opus 5.5 and GPT-6 Astra - beating them on a few benchmarks, coming close on others.</p>\n<p>Artificial Analysis <a href=\"https://artificialanalysis.ai/models/kimi-k3-1-pro\">scored Kimi at 55</a> - ahead of Claude Fable 5.1, GPT-6 Astra, and Gemini 4 Argon (all at 53) and behind only Claude Opus 5.5 (58).</p>\n<p>This is the first time a (soon-to-be) open weight model has scored this highly against the frontier.</p>\n<p>I tried it out via the <a href=\"https://platform.kimi.ai/docs/get-your-api-key\">Moonshot API</a> using the <a href=\"https://llm.datasette.io/en/stable/other-models.html#openai-endpoint\">llm openai endpoint</a> command I added to <a href=\"https://llm.datasette.io/en/stable/changelog.html#v0-32\">LLM 0.32</a> back in August:</p>\n<pre><code>llm openai endpoint \\\n  https://api.moonshot.ai/v1 \\",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

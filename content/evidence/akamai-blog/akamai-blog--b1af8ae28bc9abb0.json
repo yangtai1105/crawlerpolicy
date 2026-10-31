@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b1af8ae28bc9abb0",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/introducing-guardicore-cyber-threat-intelligence",
+  "supporting_urls": [],
+  "published_at": "2019-03-26T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b1af8ae28bc9abb0.json",
+  "content_hash": "sha256:16f9387a74ee9437be535167369f48b8c9fc043ee59f46434075a9a39458a6bb",
+  "external_id": "https://www.akamai.com/blog/security/introducing-guardicore-cyber-threat-intelligence",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Introducing Guardicore Cyber Threat Intelligence",
+  "content": "Introducing Cyber Threat Intelligence (CTI), a freely available resource to assist in identifying and investigating malicious IP addresses and domains.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

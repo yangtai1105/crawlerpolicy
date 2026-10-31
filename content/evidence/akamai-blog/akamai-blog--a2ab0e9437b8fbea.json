@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a2ab0e9437b8fbea",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/apr/cursorjacking-every-cursor-user-is-vulnerable-to-api-key-theft-by-rogue-extensions",
+  "supporting_urls": [],
+  "published_at": "2026-04-29T00:48:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a2ab0e9437b8fbea.json",
+  "content_hash": "sha256:c540986952f77deaeb0ecbec70063fe99f776d077289d8896b16c6f3fa365de5",
+  "external_id": "https://www.akamai.com/blog/security/2026/apr/cursorjacking-every-cursor-user-is-vulnerable-to-api-key-theft-by-rogue-extensions",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "CursorJacking: Every Cursor User Is Vulnerable to API Key Theft by Rogue Extensions",
+  "content": "Cursor doesn’t store API keys in protected storage, meaning any extension can access them. Cursor knew about this vulnerability but didn’t fix it. Executive Summary LayerX security researchers have found that any extension of the popular AI development tool Cursor can access the developer’s API keys and session tokens.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

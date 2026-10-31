@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--3fed0481f0d47f9c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2026/oct/tlp-is-not-a-suggestion",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T07:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--3fed0481f0d47f9c.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security-research/2026/oct/tlp-is-not-a-suggestion",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "TLP Is Not a Suggestion",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

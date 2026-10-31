@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--56cf39888dec12cd",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2025/jul/serverless-a2a-with-spin",
+  "supporting_urls": [],
+  "published_at": "2025-07-07T10:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--56cf39888dec12cd.json",
+  "content_hash": "sha256:5db560db973706db6ddb656aed25a17fcae1dd3163ec96ce1d98166620c95260",
+  "external_id": "https://www.akamai.com/blog/developers/2025/jul/serverless-a2a-with-spin",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Serverless A2A with Spin",
+  "content": "Learn how to build serverless agent-to-agent (A2A) apps with Spin.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

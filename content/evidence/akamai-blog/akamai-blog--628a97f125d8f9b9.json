@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--628a97f125d8f9b9",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/demystifying-api-rate-limiting",
+  "supporting_urls": [],
+  "published_at": "2018-05-30T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--628a97f125d8f9b9.json",
+  "content_hash": "sha256:8d3d6b9257660bf6c7bdf0def4ebc741cc6a1fdcda7df9c2798c147b5bf4af3c",
+  "external_id": "https://www.akamai.com/blog/developers/demystifying-api-rate-limiting",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Demystifying API Rate Limiting",
+  "content": "APIs are the “digital glue” that integrates and connects infrastructure, services, devices, and users. With the proliferation of APIs in almost every organization, it‘s essential to have a mechanism in place to manage and govern them. That’s why we introduced Akamai API Gateway, which makes it easier for you to add governance to your APIs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

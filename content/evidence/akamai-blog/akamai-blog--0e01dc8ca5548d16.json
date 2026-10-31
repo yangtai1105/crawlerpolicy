@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--0e01dc8ca5548d16",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/jun/mitre-atlas",
+  "supporting_urls": [],
+  "published_at": "2026-06-04T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--0e01dc8ca5548d16.json",
+  "content_hash": "sha256:1374ea4180ea2cbcc37f80b06ea52d81887b3b5055bb260ad1789dde45b04e20",
+  "external_id": "https://www.akamai.com/blog/ai/2026/jun/mitre-atlas",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "What Is MITRE ATLAS and How Do Security Teams Use It?",
+  "content": "MITRE ATLAS catalogs adversary tactics against AI systems. Learn what it covers, how it differs from ATT&amp;CK, and how to enforce its controls where AI actually runs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

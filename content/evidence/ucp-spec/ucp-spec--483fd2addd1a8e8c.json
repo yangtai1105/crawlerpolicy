@@ -1,0 +1,19 @@
+{
+  "evidence_id": "ucp-spec--483fd2addd1a8e8c",
+  "source": "ucp-spec",
+  "source_url": "https://github.com/Universal-Commerce-Protocol/ucp/releases/tag/v2026-01-23",
+  "supporting_urls": [],
+  "published_at": "2026-01-23T22:48:51Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/ucp-spec/ucp-spec--483fd2addd1a8e8c.json",
+  "content_hash": "sha256:8f878ac1dd3161254430704d03514a9db5dbbb82129f87be5d10453a6c62633a",
+  "external_id": "release:279526887",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Release Release v2026-01-23",
+  "content": "## What's Changed\n* refactor!: updates for 2026-01-23 release by @wry-ry in https://github.com/Universal-Commerce-Protocol/ucp/pull/115\n* fix: Regenerate package-lock with public registry urls by @kcthota in https://github.com/Universal-Commerce-Protocol/ucp/pull/108\n\n## New Contributors\n* @kcthota made their first contribution in https://github.com/Universal-Commerce-Protocol/ucp/pull/108\n\n**Full Changelog**: https://github.com/Universal-Commerce-Protocol/ucp/compare/v2026-01-11...v2026-01-23",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

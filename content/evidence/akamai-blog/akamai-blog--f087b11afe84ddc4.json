@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--f087b11afe84ddc4",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/oct/secure-sensitive-data-cyera-akamai-guardicore-segmentation",
+  "supporting_urls": [],
+  "published_at": "2026-10-19T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--f087b11afe84ddc4.json",
+  "content_hash": "sha256:d03fdffbb9966a00eb183cd8feac5295345603265039bcdb5b4ad95b92c39d26",
+  "external_id": "https://www.akamai.com/blog/security/2026/oct/secure-sensitive-data-cyera-akamai-guardicore-segmentation",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Secure Sensitive Data with Cyera and Akamai Guardicore Segmentation",
+  "content": "Protect sensitive data by pairing Cyera's data discovery with Akamai Guardicore Segmentation to enforce dynamic, data-aware microsegmentation rules.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

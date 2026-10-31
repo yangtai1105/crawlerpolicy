@@ -1,0 +1,19 @@
+{
+  "evidence_id": "acp-spec--f8d8918006d1bc6d",
+  "source": "acp-spec",
+  "source_url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/pull/143",
+  "supporting_urls": [],
+  "published_at": "2026-04-24T15:27:36Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/acp-spec/acp-spec--f8d8918006d1bc6d.json",
+  "content_hash": "sha256:dab1323e6b20628a0af9cc7fb9ba6a62cd19dad948136752f8912257f7995445",
+  "external_id": "pr:143",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "PR #143: docs: add intervention_required to RFC error code documentation",
+  "content": "# docs: add `intervention_required` to RFC error code documentation\n\n## 🔧 Type of Change\n\n- [x] Documentation fix/improvement\n- [ ] Bug fix (non-breaking)\n- [ ] Tooling improvement\n- [ ] Example update\n- [ ] Minor data/enum addition\n- [ ] Other: [describe]\n\n---\n\n## 📝 Description\n\nPR #118 added `intervention_required` to the `MessageErrorCode` enum in both OpenAPI and JSON Schema, but the RFC (`rfc.agentic_checkout.md`) was never updated. The RFC's error code list in §5 still only listed the original 6 codes.\n\nThis adds:\n- `intervention_required` to the inline error code list on the Message (error) type\n- A new \"Intervention-related error codes\" paragraph documenting when `intervention_required` is used (capability mismatch between agent and merchant) and how it differs from `requires_3ds` (missing `authentication_result` on complete)\n- A note that the full error code enum lives in the OpenAPI/JSON Schema (the RFC was listing a subset)\n\n---\n\n## 🎯 Motivation and Context\n\nlins-stripe confirmed on #98 that `intervention_required` was missing from the spec and would be taken on as a bugfix/doc improvement. The schema half landed in PR #118. This is the RFC half.\n\nThe distinction matters for implementers: `requires_3ds` is about a missing field on a specific request, while `intervention_required` is about a capability mismatch that the agent can't resolve programmatically.\n\nAddresses: #98\n\n---\n\n## 🧪 Testing\n\n- `pnpm run validate:examples` — all pass\n- `pnpm run compile:schema` — all valid\n- No schema changes in this PR (RFC-only)\n\n---\n\n## 📸 Screenshots / Examples\n\nN/A — RFC text change only.\n\n---\n\n## ✅ Checklist\n\n- [x] I have signed the [Contributor License Agreement (CLA)](../legal/cla/INDIVIDUAL.md)\n- [x] My change follows the project's code style and conventions\n- [x] I have updated relevant documentation (if applicable)\n- [ ] I have added/updated examples (if applicable)\n- [x] I have added a changelog entry file to `changelog/unreleased/your-change-description.md`\n- [x] I have tested my changes locally\n- [x] This change does NOT require a SEP (it's minor/non-breaking)\n- [x] All CI checks pass\n\n---\n\n## 🔍 Scope Verification\n\n- [ ] ❌ This adds/removes/modifies protocol features\n- [ ] ❌ This introduces breaking changes\n- [ ] ❌ This changes governance or processes\n- [ ] ❌ This is complex or controversial\n- [x] ✅ **This is a minor, straightforward change** (confirm by checking this)\n\n---\n\n## 📚 Additional Notes\n\nThe RFC's inline error code list was listing 6 codes while the schema has 21. Rather than enumerate all 21, I added `intervention_required` (the one called out in #98) and pointed to the schema for the full enum.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

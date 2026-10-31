@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--5b3f82363b755cc4",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/nov/managing-ai-bots-part-overall-bot-management-strategy",
+  "supporting_urls": [],
+  "published_at": "2024-11-20T20:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--5b3f82363b755cc4.json",
+  "content_hash": "sha256:9fd6422a22e4cda67133951f97df89571837f2e2e2f0485caeead7f996a5e773",
+  "external_id": "https://www.akamai.com/blog/security/2024/nov/managing-ai-bots-part-overall-bot-management-strategy",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Managing AI Bots as Part of Your Overall Bot Management Strategy",
+  "content": "Learn about the potential impacts of AI bots and the importance of having a holistic bot management strategy.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

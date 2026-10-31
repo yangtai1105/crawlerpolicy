@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--45ce099941fa71c2",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/defeating-the-pirates",
+  "supporting_urls": [],
+  "published_at": "2021-05-06T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--45ce099941fa71c2.json",
+  "content_hash": "sha256:7076839a4802b820d9c27ec38583357c26822aca57810d5758d0ab0e03a4df42",
+  "external_id": "https://www.akamai.com/blog/security/defeating-the-pirates",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Defeating the Pirates",
+  "content": "In Akamai's paper, \"Inside the World of Video Pirates,\" we discovered why digital intellectual property theft (aka \"piracy\") is possibly the most misunderstood form of cybercrime facing the TV, sports, and film industries.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

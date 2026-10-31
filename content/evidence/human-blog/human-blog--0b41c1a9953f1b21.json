@@ -1,0 +1,30 @@
+{
+  "evidence_id": "human-blog--0b41c1a9953f1b21",
+  "source": "human-blog",
+  "source_url": "https://www.humansecurity.com/learn/blog/human-sightline-detects-claude-duet/",
+  "supporting_urls": [],
+  "published_at": "2026-10-30T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/human-blog/human-blog--0b41c1a9953f1b21.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "humansecurity.com/human-sightline-detects-claude-duet",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "See Duet Coming: AgenticTrust Now Identifies Anthropic's Personal Agent",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.humansecurity.com/learn/blog/human-sightline-detects-claude-duet/",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 3069,
+      "sha256": "ef06e81f247ea557cccdffa2379f2d220fff715a3a2bf5ae8f721b41f0d5787a",
+      "cited_urls": [
+        "https://www.humansecurity.com/learn/blog/human-sightline-detects-claude-duet/"
+      ]
+    }
+  }
+}

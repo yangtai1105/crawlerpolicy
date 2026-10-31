@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ec433830c0f770b9",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/2025/aug/accelerate-adoption-enterprise-kubernetes-environments",
+  "supporting_urls": [],
+  "published_at": "2025-08-18T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ec433830c0f770b9.json",
+  "content_hash": "sha256:0ea730ff0d8c3750ceebee6e6a9e3519241689d62eaea02490fed6cd98887986",
+  "external_id": "https://www.akamai.com/blog/cloud/2025/aug/accelerate-adoption-enterprise-kubernetes-environments",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Accelerating Secure Enterprise Kubernetes Adoption",
+  "content": "Learn how LKE-E solves critical problems while providing streamlined adoption, operational simplicity, and cost efficiency at scale.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

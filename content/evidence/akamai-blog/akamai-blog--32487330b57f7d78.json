@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--32487330b57f7d78",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/upnproxy-eternal-silence",
+  "supporting_urls": [],
+  "published_at": "2022-01-27T19:30:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--32487330b57f7d78.json",
+  "content_hash": "sha256:9e0643544d45283d3436eb961cbf9a32860252b5d393077e2d12690fc3ad446f",
+  "external_id": "https://www.akamai.com/blog/security/upnproxy-eternal-silence",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "UPnProxy: Eternal Silence",
+  "content": "UPnProxy is alive and well. There are 277,000 devices, out of a pool of 3.5 million, running vulnerable implementations of UPnP. Of those, Akamai can confirm that more than 45,000 have been compromised in a widely distributed UPnP NAT injection campaign.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

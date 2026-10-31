@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7300687bbd37247f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/jun/generative-ai-risks",
+  "supporting_urls": [],
+  "published_at": "2024-06-28T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7300687bbd37247f.json",
+  "content_hash": "sha256:367a402ec5a2e01b2df39d30f59ed1710e512e6f9215e289b3d85873469e94f5",
+  "external_id": "https://www.akamai.com/blog/ai/2026/jun/generative-ai-risks",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "10 Types of Generative AI Risks and Strategies for Mitigation",
+  "content": "Top 10 generative AI risks you can protect against. Enjoy productivity, security, and a good user experience. Learn practices and tools to make you better.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--c6682a64a42893e5",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/oct/beyond-edge-complementing-waap-always-on-api-security",
+  "supporting_urls": [],
+  "published_at": "2024-10-10T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--c6682a64a42893e5.json",
+  "content_hash": "sha256:13842cb399438e36b9c3648be6a8fa701ecb4c1d9606ccac86fea6b0a0b06a31",
+  "external_id": "https://www.akamai.com/blog/security/2024/oct/beyond-edge-complementing-waap-always-on-api-security",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Beyond the Edge: Complementing WAAP with Always-On API Security",
+  "content": "Learn best practices for API security — and explore why WAAP on its own isn’t enough",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

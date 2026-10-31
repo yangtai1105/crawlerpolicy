@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--01c987bc4f1e30ae",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2024/dec/scaling-spin-apps-with-keda",
+  "supporting_urls": [],
+  "published_at": "2025-07-09T10:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--01c987bc4f1e30ae.json",
+  "content_hash": "sha256:fb0fff0850f3f8d6744ab882679a9d0c51d55c25e544eba15da8c78fd75ebd7e",
+  "external_id": "https://www.akamai.com/blog/developers/2024/dec/scaling-spin-apps-with-keda",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Scaling Spin Apps With KEDA",
+  "content": "Scale Spin apps on Kubernetes using SpinKube and KEDA for event-driven autoscaling based on Amazon SQS queue metrics.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

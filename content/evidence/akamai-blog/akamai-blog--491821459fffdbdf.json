@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--491821459fffdbdf",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/jun/ai-cost-model-stops-token-price-bill-doesnt",
+  "supporting_urls": [],
+  "published_at": "2026-06-25T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--491821459fffdbdf.json",
+  "content_hash": "sha256:e3114f04e65c5ac52d5d904d1ac3b2f8f560497bc6ab6414b798edbff23e0a35",
+  "external_id": "https://www.akamai.com/blog/ai/2026/jun/ai-cost-model-stops-token-price-bill-doesnt",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Your AI Cost Model Stops at the Token Price. The Bill Doesn't.",
+  "content": "Your AI cost model stops at the token price, but the bill doesn't. Discover why almost 80% of production AI spend sits in inference and how to optimize your setup.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

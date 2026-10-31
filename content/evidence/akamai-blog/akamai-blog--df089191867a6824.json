@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--df089191867a6824",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/pci-dss-network-segmentation",
+  "supporting_urls": [],
+  "published_at": "2021-06-03T17:57:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--df089191867a6824.json",
+  "content_hash": "sha256:8bf662a091727af49f18e88a30fe24fa8678b25f4ef7611621cacf3a14097b8a",
+  "external_id": "https://www.akamai.com/blog/security/pci-dss-network-segmentation",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "How Network Segmentation Simplifies PCI DSS Compliance",
+  "content": "Read more about how proper network segmentation can simplify PCI DSS compliance by effectively reducing the number of assets in scope.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

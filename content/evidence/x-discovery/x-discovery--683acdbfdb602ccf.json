@@ -1,0 +1,35 @@
+{
+  "evidence_id": "x-discovery--683acdbfdb602ccf",
+  "source": "x-discovery",
+  "source_url": "https://x.com/Xpress_24_7/status/2116277987813327267",
+  "supporting_urls": [
+    "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out"
+  ],
+  "published_at": "2026-10-30T21:16:05Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--683acdbfdb602ccf.json",
+  "content_hash": "sha256:5bb861c1510541a1353581eacc2c9ba87ac8d9afff4bb6d2490cdeef4970cb7a",
+  "external_id": "2116277987813327267",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "OpenAI, Google, Microsoft and Anthropic adopt shared robots.txt policy token",
+  "content": "X author: @Xpress_24_7\n\nOpenAI, Google, Microsoft, and Anthropic will adopt a shared policy token in robots.txt proposed at the IETF by Anthropic standards lead Kevin Kelley, enabling publishers to opt out of AI training scraping once for all participating crawlers.\n\nLinked sources:\n- https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "Xpress_24_7",
+    "post_url": "https://x.com/Xpress_24_7/status/2116277987813327267",
+    "linked_urls": [
+      "https://www.theverge.com/tech/1023763/openai-google-microsoft-ai-scraping-standard-opt-out"
+    ],
+    "provider_citations": [],
+    "front": "access-discovery",
+    "shadow": false,
+    "novelty": {
+      "outcome": "covered",
+      "matched": "feed:x-discovery-google-microsoft-anthropic-and-openai-back-shared-robots-txt-ai-training-opt-out",
+      "reason": "The announcement that OpenAI, Google, Microsoft, and Anthropic are supporting a unified robots.txt standard for AI training opt-outs was already recorded."
+    }
+  }
+}

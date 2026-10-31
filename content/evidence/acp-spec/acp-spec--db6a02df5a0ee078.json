@@ -1,0 +1,19 @@
+{
+  "evidence_id": "acp-spec--db6a02df5a0ee078",
+  "source": "acp-spec",
+  "source_url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/pull/249",
+  "supporting_urls": [],
+  "published_at": "2026-05-14T00:54:54Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/acp-spec/acp-spec--db6a02df5a0ee078.json",
+  "content_hash": "sha256:67c930d9219970e739d3242591603589d8c384f1ae00cc2b760bbef05dabaa72",
+  "external_id": "pr:249",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "PR #249: fix(spec/2026-01-30): refund amount example type matches schema",
+  "content": "## Summary\n\nThe `order_updated` example in `spec/2026-01-30/openapi/openapi.agentic_checkout_webhook.yaml` showed `amount: \"1.00\"` (string) for a refund. The `Refund.amount` schema in the same file (lines 111-114) defines `amount` as an `integer` in minor units (e.g. `100` cents for `$1.00`). The example contradicted its own schema.\n\nOther examples in the file (e.g. line item `total` at line 117) correctly use integer minor units.\n\nFixes #220.\n\n## Changes\n\n- `spec/2026-01-30/openapi/openapi.agentic_checkout_webhook.yaml` line 68: `amount: \"1.00\"` → `amount: 100`\n- `changelog/unreleased/fix-refund-amount-example-type.md` added\n\n## Scope\n\nSingle-version fix per the issue's citation of 2026-01-30. The newer `2026-04-17` spec replaces `refunds[]` with `adjustments[]` (already integer), so no fix needed there. Older spec versions (`2025-09-29`, `2025-12-12`, `2026-01-16`) contain the same string-form example — happy to extend the PR if maintainers prefer those frozen releases be left as-is or also corrected.\n\n## Checklist\n\n- [x] CLA — will sign on first PR via the bot\n- [x] Branch from main: `fix/refund-amount-example-type`\n- [x] Changelog entry added in `changelog/unreleased/`\n- [x] Single-purpose, minimal scope\n- [x] Linked issue: #220",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--ea3b9086d52a44bb",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/an-interview-with-craig-moffett-about-spacex-and-bubbles/",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T10:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stratechery/stratechery--ea3b9086d52a44bb.json",
+  "content_hash": "sha256:867b078b2e1fcca762b283d57ea1e63e6b7f439f660d8e405f8a682f2774e132",
+  "external_id": "https://stratechery.com/?p=20466",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "An Interview with Craig Moffett About SpaceX and Bubbles",
+  "content": "<p>An interview with Craig Moffett about SpaceX, from launch to broadband to mobile, plus how he is applying the lessons of the dot-com bubble to today.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

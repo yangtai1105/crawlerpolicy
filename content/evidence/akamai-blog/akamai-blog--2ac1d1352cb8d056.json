@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--2ac1d1352cb8d056",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/partners/2025/may/unlock-new-growth-opportunities-akamai-campaign-builder",
+  "supporting_urls": [],
+  "published_at": "2025-05-14T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--2ac1d1352cb8d056.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/partners/2025/may/unlock-new-growth-opportunities-akamai-campaign-builder",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Unlock New Growth Opportunities with Akamai Campaign Builder",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

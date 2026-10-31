@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--9bf7b28fb714a57e",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/user-agent-reduction",
+  "supporting_urls": [],
+  "published_at": "2022-10-27T16:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--9bf7b28fb714a57e.json",
+  "content_hash": "sha256:5915081ad14c5f1df12eba98c5981503f26f8dc3484965fb09ced8d3432ee134",
+  "external_id": "https://www.akamai.com/blog/developers/user-agent-reduction",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "User-Agent Reduction",
+  "content": "Chrome is rolling out changes to the browser’s User-Agent string that will affect how web servers, applications, and CDNs like Akamai gather information about the current user agent (such as the browser’s version, device, and platform information).",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

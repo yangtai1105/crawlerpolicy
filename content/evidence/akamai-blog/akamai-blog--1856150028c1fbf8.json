@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1856150028c1fbf8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/oct/ai-usage-control-employee-ai-use-needs-own-category",
+  "supporting_urls": [],
+  "published_at": "2026-10-12T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1856150028c1fbf8.json",
+  "content_hash": "sha256:d2b4224d23c87a9f97c31a8ee012a50a29609112112299e5a38bb620637680e6",
+  "external_id": "https://www.akamai.com/blog/ai/2026/oct/ai-usage-control-employee-ai-use-needs-own-category",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "AI Usage Control: Why Employee AI Use Needs Its Own Category",
+  "content": "Discover why traditional security tools leave gaps in enterprise AI use and how AI Usage Control (AIUC) provides crucial identity, data, and prompt-level risk governance.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

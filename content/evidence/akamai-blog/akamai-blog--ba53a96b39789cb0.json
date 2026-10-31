@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ba53a96b39789cb0",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2026/jun/changes-move-logic-smarter-more-connected-edge",
+  "supporting_urls": [],
+  "published_at": "2026-06-22T17:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ba53a96b39789cb0.json",
+  "content_hash": "sha256:e809af3db7ab57eaeaa1a12c4b66f99d3ee294ad4371c9bb0ba73b96841a8b15",
+  "external_id": "https://www.akamai.com/blog/edge/2026/jun/changes-move-logic-smarter-more-connected-edge",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "What Changes When You Move Your Logic to the Smarter, More Connected Edge?",
+  "content": "Discover how moving logic like mass redirects, data transformation, and bot triage to Akamai Functions lowers latency, reduces origin load, and cuts costs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

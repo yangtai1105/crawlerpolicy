@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--fe8857ddf533298f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/edge-dns--zone-apex-mapping---dnssec",
+  "supporting_urls": [],
+  "published_at": "2019-08-19T07:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--fe8857ddf533298f.json",
+  "content_hash": "sha256:d21da8798e1a39b6ac5393dfb50838b4cf30c611677f581ce6d3829a32621edc",
+  "external_id": "https://www.akamai.com/blog/security/edge-dns--zone-apex-mapping---dnssec",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Edge DNS: Zone Apex Mapping & DNSSEC",
+  "content": "Along with its DDoS resilience and impressive global footprint, Akamai Edge DNS offers zone administrators additional technical flexibility and implementation options to improve performance and simplify DNS operations. One example is zone apex mapping (ZAM), a feature that enables top level hostnames (e.g., akamai.com) to resolve directly to an Akamai edge IP. The popularity and appeal of ZAM do, however, prompt a number of questions about the technical specifics, such as: Is ZAM interoperable with DNSSEC?",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

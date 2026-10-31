@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6ab0f38b5217ee5e",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/dns-threat-report-q3-2022",
+  "supporting_urls": [],
+  "published_at": "2022-10-31T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6ab0f38b5217ee5e.json",
+  "content_hash": "sha256:bee39bc4f3ce8849a5de730d926b245d78c60991ede045cdda13f77ebf33994b",
+  "external_id": "https://www.akamai.com/blog/security-research/dns-threat-report-q3-2022",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "DNS Threat Report — Q3 2022",
+  "content": "Akamai's visibility into global traffic through Q3 provides insight into phishing campaigns and potential user susceptibility to malware attacks.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

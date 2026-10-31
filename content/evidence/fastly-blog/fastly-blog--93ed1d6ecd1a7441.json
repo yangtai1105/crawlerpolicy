@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--93ed1d6ecd1a7441",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/govern-protect-and-control-every-ai-request-with-fastly/",
+  "supporting_urls": [],
+  "published_at": "2026-09-21T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--93ed1d6ecd1a7441.json",
+  "content_hash": "sha256:17fb6f8063aa983f79e5be275505f2d3826a5455655eff03e2816070a0dd9b44",
+  "external_id": "https://www.fastly.com/blog/govern-protect-and-control-every-ai-request-with-fastly/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "AI Feeling Out of Control? Govern, Protect, and Control Every Request with Fastly",
+  "content": "Scale your AI securely. Fastly for AI gives enterprise leaders complete visibility into model usage, real-time cost controls, and edge-based threat protection",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

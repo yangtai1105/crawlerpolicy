@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1071a2f03cf41df1",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/feb/browser-extension-chrome-extensions-management",
+  "supporting_urls": [],
+  "published_at": "2024-02-21T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1071a2f03cf41df1.json",
+  "content_hash": "sha256:737a1f3d7ca7f72983b461828ed072cb55ce3daf9773837cce5f0977189e297b",
+  "external_id": "https://www.akamai.com/blog/security/2024/feb/browser-extension-chrome-extensions-management",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "What is Chrome Extensions Management? Needs, Risks and How to Choose",
+  "content": "Implement chrome extensions management to enhance security and performance. Protect against rixsky extensions to ensure enterprise security & compliance.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

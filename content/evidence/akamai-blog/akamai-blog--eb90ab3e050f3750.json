@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--eb90ab3e050f3750",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/dec/ai-pulse-first-agentic-cyber-week",
+  "supporting_urls": [],
+  "published_at": "2025-12-08T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--eb90ab3e050f3750.json",
+  "content_hash": "sha256:25f7c44acb866958adebbe6aee0cda6f0a5bb28c070482cd24a91e19c3c85bf9",
+  "external_id": "https://www.akamai.com/blog/security/2025/dec/ai-pulse-first-agentic-cyber-week",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "AI Pulse: The First Agentic Cyber Week",
+  "content": "In 2025, AI bots officially entered Cyber Week. Learn how agents shaped traffic and shopper intent — and why retailers must optimize for AI-driven commerce.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

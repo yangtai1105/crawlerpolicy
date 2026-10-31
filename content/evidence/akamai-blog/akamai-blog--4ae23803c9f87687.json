@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--4ae23803c9f87687",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/oct/vector-search-cant-tell-yes-from-no",
+  "supporting_urls": [],
+  "published_at": "2026-10-06T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--4ae23803c9f87687.json",
+  "content_hash": "sha256:f7514e5d2ff1de7623888290a3509434952c0075c528aa07b9e9642d7c8d1475",
+  "external_id": "https://www.akamai.com/blog/ai/2026/oct/vector-search-cant-tell-yes-from-no",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Vector Search Can’t Tell “Yes” From “No”",
+  "content": "Learn why vector search can rank contradictory statements as similar, and how hybrid retrieval can help RAG systems identify conflicting information.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

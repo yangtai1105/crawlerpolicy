@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--05002133a7b5d17e",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/fastly-unveils-aeda-autonomous-edge-security-gemini-enterprise/",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--05002133a7b5d17e.json",
+  "content_hash": "sha256:664d4be5c2c604d8b6e2e0e795f12a98223524d47d960195fe0a0cda6b68afde",
+  "external_id": "https://www.fastly.com/blog/fastly-unveils-aeda-autonomous-edge-security-gemini-enterprise/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Fastly Unveils AEDA: Autonomous Edge Security in Gemini Enterprise",
+  "content": "Discover Fastly’s Autonomous Edge Defense Agent (AEDA) in Gemini Enterprise, designed to streamline incident response and slash MTTR.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

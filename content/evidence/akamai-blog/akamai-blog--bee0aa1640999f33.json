@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--bee0aa1640999f33",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/akamai-summarizes-service-disruption-resolved",
+  "supporting_urls": [],
+  "published_at": "2021-07-22T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--bee0aa1640999f33.json",
+  "content_hash": "sha256:72994bc8388dc77a427d8a3fc5b313dbacb8b92c1bc4286585d03769da543453",
+  "external_id": "https://www.akamai.com/blog/news/akamai-summarizes-service-disruption-resolved",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Summarizes Service Disruption (RESOLVED)",
+  "content": "At 15:45 UTC on July 22, 2021, a software configuration update triggered a bug in our Secure Edge Content Delivery Network impacting that network's domain name service (DNS) system (the system that directs browsers to websites for that specific service). This caused a disruption impacting availability of some customer websites. The disruption lasted up to an hour. Upon rolling back the software configuration update, the services resumed normal operations.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

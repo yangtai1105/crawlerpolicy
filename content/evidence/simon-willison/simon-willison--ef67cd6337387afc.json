@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--ef67cd6337387afc",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/24/battledrones/",
+  "supporting_urls": [],
+  "published_at": "2026-10-24T03:59:57Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--ef67cd6337387afc.json",
+  "content_hash": "sha256:4da9f16abd3793032a7b6d09f31ac1cded8fbe996a9cedd9f4d966e5abf6118b",
+  "external_id": "https://simonwillison.net/2026/Oct/24/battledrones/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "battledrones v14: Compass Rose, a four player map",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/battledrones/releases/tag/v14\">battledrones v14: Compass Rose, a four player map</a></p>\n        <p>I added four player online mode to <a href=\"https://simonwillison.net/2026/Oct/20/battledrones/\">Battledrones</a> - previous maps were limited to two.</p>\n<p>Here's the initial prompt I used: </p>\n<blockquote>\n<p><code>Add a new map for a four player battle - four way rotational symmetry, up to four AI players, works with the WebSocket non-audio based multiplayer mode so up to four human players can join (any spare slots use AI)</code></p>\n</blockquote>\n<p>Claude Opus 5.5 added a new map called \"Compass Rose\" and modified the WebSockets multiplayer network code to support up to four players for that map, joining via share links or QR codes.</p>\n<p><img alt=\"The new map does indeed look a bit like a rose - it uses the cold and ice biome. Also shown are purple robots battling on the map.\" src=\"https://raw.githubusercontent.com/simonw/battledrones/v14/progress-shots/v14/compass-rose.jpg\" /></p>\n<p>The new teams use robots themed in purple and green, joining the existing blue and red designs. You can preview those colors in <a href=\"https://simonw.github.io/battledrones/models.html\">the updated model browser</a>.</p>\n<p>Here's <a href=\"https://simonw.github.io/battledrones/v14/?replay=https://gist.githubusercontent.com/simonw/faa550a002b25a78f1c88a64217786c1/raw/4ff9b03de71d757cd33eb5d1a0e388155b6c20e5/compass.json\">a ",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

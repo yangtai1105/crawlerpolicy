@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--fffb8dd78fff2034",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/22/armin-ronacher/",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T15:34:13Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--fffb8dd78fff2034.json",
+  "content_hash": "sha256:2b76ee279c0fbda645ee8f847b308f56019b2f5676ecaa461cd9234e288ac39d",
+  "external_id": "https://simonwillison.net/2026/Oct/22/armin-ronacher/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Quoting Armin Ronacher",
+  "content": "<blockquote cite=\"https://twitter.com/mitsuhiko/status/2113207589978636646\"><p>As fun as AI is, we built so much bad software over the last 30 years, and now the universe is punishing us for our sins.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://twitter.com/mitsuhiko/status/2113207589978636646\">Armin Ronacher</a></p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/security\">security</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/armin-ronacher\">armin-ronacher</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/ai-security-research\">ai-security-research</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

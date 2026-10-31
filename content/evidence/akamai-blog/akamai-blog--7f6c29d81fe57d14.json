@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7f6c29d81fe57d14",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/jul/building-real-time-recommendation-systems-ai",
+  "supporting_urls": [],
+  "published_at": "2026-07-20T09:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7f6c29d81fe57d14.json",
+  "content_hash": "sha256:1219d4f6d9dc595283294f1a3c30450791bace061f6e69ecb094ae2383bbec5c",
+  "external_id": "https://www.akamai.com/blog/ai/2026/jul/building-real-time-recommendation-systems-ai",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Why Taste Matters: Building Real-Time Recommendation Systems with AI",
+  "content": "Learn how recommendation systems use embeddings, user behavior, and edge inference to deliver fresher, more relevant experiences in real time.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

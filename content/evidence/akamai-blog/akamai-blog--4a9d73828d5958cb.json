@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--4a9d73828d5958cb",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/protecting-your-domain-names-taking-the-first-steps",
+  "supporting_urls": [],
+  "published_at": "2019-02-07T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--4a9d73828d5958cb.json",
+  "content_hash": "sha256:7738de28539ff11b7fb55552e10d62e2d6bd5c99125f8740a5d82e990c7dcbb9",
+  "external_id": "https://www.akamai.com/blog/security/protecting-your-domain-names-taking-the-first-steps",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Protecting your Domain Names: Taking the First Steps",
+  "content": "Everyone and everything on the Internet depends on the Domain Name System (DNS) being functional. The DNS has been a common vector for attacks in recent years, and 2019 seems to be no different. Many of these attacks have goals far more sinister than simply taking a company offline or defacing a website; reported attacks include redirecting some or all of an organization's domain to gain access to protected resources, intercept traffic, and even obtain TLS certificates for that domain.  Organizations should perform regular DNS reviews and audits. The following guidelines provide a starting point for your review.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

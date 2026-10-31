@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--809cacdc6571416a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2024/jul/2024-php-exploit-cve-one-day-after-disclosure",
+  "supporting_urls": [],
+  "published_at": "2024-07-10T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--809cacdc6571416a.json",
+  "content_hash": "sha256:8ef4335d02aecf57128ef0e47bb50ae5825baf737998c9e0c31984c86104e161",
+  "external_id": "https://www.akamai.com/blog/security-research/2024/jul/2024-php-exploit-cve-one-day-after-disclosure",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "CVE-2024-4577 Exploits in the Wild One Day After Disclosure",
+  "content": "Akamai researchers have observed numerous exploit attempts for the PHP vulnerability CVE-2024-4577 as early as one day after disclosure.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

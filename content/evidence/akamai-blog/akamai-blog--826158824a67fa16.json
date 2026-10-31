@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--826158824a67fa16",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/2026/aug/valkey-managed-database-real-time-memory-enterprise-ai",
+  "supporting_urls": [],
+  "published_at": "2026-08-18T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--826158824a67fa16.json",
+  "content_hash": "sha256:278b02094b3c62398a3af958084bea9771d28888119585ccb2f358b86d99e9d1",
+  "external_id": "https://www.akamai.com/blog/cloud/2026/aug/valkey-managed-database-real-time-memory-enterprise-ai",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Valkey Managed Database: Real-Time Memory for Enterprise AI",
+  "content": "Introducing Akamai Valkey Managed Database: a low-latency, in-memory data layer to optimize AI inference costs, accelerate RAG, and power real-time AI agents.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

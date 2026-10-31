@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--4e61789f5e3dee9d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/security-response-headers",
+  "supporting_urls": [],
+  "published_at": "2018-10-17T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--4e61789f5e3dee9d.json",
+  "content_hash": "sha256:8cef7d5805acc2007148ab557b36594c9b1463e76e998fac037da163aa51d2cd",
+  "external_id": "https://www.akamai.com/blog/security/security-response-headers",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Security Response Headers",
+  "content": "Security response headers are a critical security capability that all organizations should consider.  This blog post is the first in a series that will discuss different security headers and go in-depth with how to configure them for maximum benefit.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

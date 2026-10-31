@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--660eb916acdbc9c5",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/performance/2025/jul/optimizing-government-websites-peak-traffic-events",
+  "supporting_urls": [],
+  "published_at": "2025-07-18T21:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--660eb916acdbc9c5.json",
+  "content_hash": "sha256:e82fa23b056617a94166cd1fc24abf7e71af8201e1de12fdb7c4f56ca251202f",
+  "external_id": "https://www.akamai.com/blog/performance/2025/jul/optimizing-government-websites-peak-traffic-events",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Optimizing Government Websites for Peak Traffic Events",
+  "content": "Learn how to proactively withstand peak traffic events and improve your government website’s performance and security posture.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

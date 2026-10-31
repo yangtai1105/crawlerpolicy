@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--ec40d9de123c9e52",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/real-time-stripe-data-postgres",
+  "supporting_urls": [],
+  "published_at": "2026-10-15T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--ec40d9de123c9e52.json",
+  "content_hash": "sha256:4500fc37dcb9ccdfb647054c155d01272435910a8129809b701c6d2aa4e0ce4b",
+  "external_id": "https://stripe.com/blog/real-time-stripe-data-postgres",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Sync real-time Stripe data to Postgres with Stripe Data Pipeline",
+  "content": "Applications rely on current Stripe data to fulfill orders, update customer accounts, and manage access to paid features. Until now, developers have had to build and maintain custom integrations to keep application databases in sync with Stripe. We’re introducing real-time sync to Postgres for Stripe Data Pipeline, which lets them keep databases current without having to build custom integrations.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

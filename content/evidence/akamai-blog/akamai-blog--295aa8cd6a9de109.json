@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--295aa8cd6a9de109",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/jul/how-ai-bots-are-rewriting-rules-publishing",
+  "supporting_urls": [],
+  "published_at": "2025-07-10T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--295aa8cd6a9de109.json",
+  "content_hash": "sha256:890c5af7a81cfe1894db3971cce5acabfe5093465f88aa32312b3e44dfcaccc5",
+  "external_id": "https://www.akamai.com/blog/security/2025/jul/how-ai-bots-are-rewriting-rules-publishing",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "How AI Bots Are Rewriting the Rules of Publishing",
+  "content": "See how AI bots impact publishers and how Akamai helps you protect, control, and monetize your content as AI reshapes how people find information.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

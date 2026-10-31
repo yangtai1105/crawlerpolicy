@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--221be9845c7a67df",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/introducing-new-whoami-tool-dns-resolver-information",
+  "supporting_urls": [],
+  "published_at": "2018-05-09T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--221be9845c7a67df.json",
+  "content_hash": "sha256:81ab19b050c3e04d3d6993bda5a22ff7eb1bfd7cc5027674b1a2e310a3b954ff",
+  "external_id": "https://www.akamai.com/blog/developers/introducing-new-whoami-tool-dns-resolver-information",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Introducing New WhoAmI Tool DNS Resolver Information",
+  "content": "The Domain Name System (DNS) tools “whoami.akamai.net” and its alias “whoami.akamai.com” have been used for many years, often as a step in the process for diagnosing how a content delivery network (CDN) is directing traffic, locality, and network reachability issues. Whoami was originally introduced as a quick solution that, as often happens, ended up sticking around for far longer than expected.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

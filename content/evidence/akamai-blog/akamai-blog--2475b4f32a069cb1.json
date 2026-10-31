@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--2475b4f32a069cb1",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/sep/nis2-compliance-ai-age-traditional-cybersecurity-isnt-enough",
+  "supporting_urls": [],
+  "published_at": "2026-09-09T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--2475b4f32a069cb1.json",
+  "content_hash": "sha256:2daed623f014e69829628d1dd75c13768f0377cd71ff9add5e458b5c4db167af",
+  "external_id": "https://www.akamai.com/blog/security/2026/sep/nis2-compliance-ai-age-traditional-cybersecurity-isnt-enough",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "NIS2 Compliance in the AI Age: Why Traditional Cybersecurity Isn’t Enough",
+  "content": "Discover why achieving NIS2 compliance is more challenging in the AI age, the four key challenges organizations face, and why segmentation is essential.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

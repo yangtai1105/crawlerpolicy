@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--fbe4cdb3abc919ed",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/back-to-basics-insecure-deserialization/",
+  "supporting_urls": [],
+  "published_at": "2026-10-06T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--fbe4cdb3abc919ed.json",
+  "content_hash": "sha256:8c8381c3156d820c3296abb5db1b7cee2150456b70a1bb980b1420d56446123d",
+  "external_id": "https://www.fastly.com/blog/back-to-basics-insecure-deserialization/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Back to Basics: Insecure Deserialization",
+  "content": "Learn what insecure deserialization is, how attackers exploit it, and how to prevent attacks using secure coding best practices and the Fastly Next-Gen WAF.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

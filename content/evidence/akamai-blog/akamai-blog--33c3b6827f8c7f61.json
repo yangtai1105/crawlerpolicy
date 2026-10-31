@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--33c3b6827f8c7f61",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/may/introducing-extensionpedia-your-ultimate-resource-to-assess-and-mitigate-browser-extension-risks",
+  "supporting_urls": [],
+  "published_at": "2025-05-28T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--33c3b6827f8c7f61.json",
+  "content_hash": "sha256:ab7f516b410d527f9e4a9de5c90ec8b442b56fe261ad79ff77abd50bbcdb2b08",
+  "external_id": "https://www.akamai.com/blog/security/2025/may/introducing-extensionpedia-your-ultimate-resource-to-assess-and-mitigate-browser-extension-risks",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Introducing ExtensionPedia: Your Ultimate Resource to Assess and Mitigate Browser Extension Risks",
+  "content": "LayerX is proud to announce the launch of ExtensionPedia, the Browser Extension Risk Database and Knowledge Center, for immediate general availability! Browser extensions significantly enhance productivity, streamline workflows, and personalize user experiences.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

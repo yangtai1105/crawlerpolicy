@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7b37a141635c010e",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/discovering-a-critical-0-day",
+  "supporting_urls": [],
+  "published_at": "2021-08-04T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7b37a141635c010e.json",
+  "content_hash": "sha256:cec4a6e9fcf38d4b5fc90b50fccfd59e8f518954b56be8dd9bc7cad0f200c0e1",
+  "external_id": "https://www.akamai.com/blog/security/discovering-a-critical-0-day",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "hAFL1 – Our Journey of Fuzzing Hyper-V and Discovering a Critical 0-Day",
+  "content": "Within hours from the moment our in-house built fuzzer, hAFL1, started running – it found a critical, CVSS 9.9 RCE vulnerability in Hyper-V’s virtual driver.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

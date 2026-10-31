@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--afdc8a5c42f2b12e",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/smart-dns-for-the-new-network-optimizing-content-delivery",
+  "supporting_urls": [],
+  "published_at": "2020-12-17T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--afdc8a5c42f2b12e.json",
+  "content_hash": "sha256:c266d7b7b65c3ce72258b621ebabecbad3ec2188d00f1928edf4d4f3ca81ef82",
+  "external_id": "https://www.akamai.com/blog/security/smart-dns-for-the-new-network-optimizing-content-delivery",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Smart DNS for the New Network: Optimizing Content Delivery",
+  "content": "The presence of public \"over the top\" DNS resolution alternatives is a strong motivator for ISPs to invest in making their DNS resolution infrastructure the best that it can be. Resolvers are the glue that binds subscribers to their fixed and mobile broadband services. Operators of public DNS services will play a significant role in controlling the user experience and gain goodwill if they succeed in persuading subscribers to use their resolvers. Worse, when public DNS services fail, it's probable that subscribers will blame their service provider because they may not understand the critical role DNS plays, or may not even remember they switched their DNS settings!",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--72d623195ef759b3",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/trends-from-money20-20-2026-the-rise-of-hidden-financial-services",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--72d623195ef759b3.json",
+  "content_hash": "sha256:0d4f96a67738fa904b57d7a8e747b6f00030752d1f603566bcf5ccdac784fd77",
+  "external_id": "https://stripe.com/blog/trends-from-money20-20-2026-the-rise-of-hidden-financial-services",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Trends from Money20/20 2026: The rise of “hidden” financial services",
+  "content": "As fintech products become increasingly capable, the infrastructure behind them fades into the background. Three trends from Money20/20 show how stablecoins, agents, and always-on money are changing financial services.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

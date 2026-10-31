@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--37262fa46ba8ddb3",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2023/dec/safeguarding-patient-health-data-balancing-access-security",
+  "supporting_urls": [],
+  "published_at": "2024-01-02T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--37262fa46ba8ddb3.json",
+  "content_hash": "sha256:d59147e33796c4a71fb3d6566348ce27400911e0c0aa62d51271c63668af602e",
+  "external_id": "https://www.akamai.com/blog/security/2023/dec/safeguarding-patient-health-data-balancing-access-security",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Safeguarding Patient Health Data Means Balancing Access and Security",
+  "content": "Increased access to health data can leave providers and insurers vulnerable to data breaches, so it’s vital to invest in cybersecurity that can protect networks.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

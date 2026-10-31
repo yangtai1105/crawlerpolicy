@@ -1,0 +1,21 @@
+{
+  "evidence_id": "fastly-blog--67fba88557c06c96",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/control-ai-bot-scraping-with-fastly-bot-management/",
+  "supporting_urls": [],
+  "published_at": "2026-09-23T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--67fba88557c06c96.json",
+  "content_hash": "sha256:223535aafda2fc9dc8725a945e97dcf31e8fbf988e594a3bb74e93d0a39adfdd",
+  "external_id": "https://www.fastly.com/blog/control-ai-bot-scraping-with-fastly-bot-management/",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Knowledge Is Power: Control AI Bot Scraping with Fastly Bot Management",
+  "content": "Learn how Fastly Bot Management and ContentGuard help you strategically control AI scrapers and protect your cached content in the AI era.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "primary_archived_copy": "https://web.archive.org/web/20261031210233/https://www.fastly.com/blog/control-ai-bot-scraping-with-fastly-bot-management"
+  }
+}

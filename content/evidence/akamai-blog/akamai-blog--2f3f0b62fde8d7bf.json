@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--2f3f0b62fde8d7bf",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/dhpcd-cryptominer-hid-four-years",
+  "supporting_urls": [],
+  "published_at": "2022-10-26T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--2f3f0b62fde8d7bf.json",
+  "content_hash": "sha256:7a7daebb1a40ac53ba6a1059b9812b417ee6c610cbbdf4cb5140e908a1a1c335",
+  "external_id": "https://www.akamai.com/blog/security-research/dhpcd-cryptominer-hid-four-years",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "dhpcd: The Cryptominer That Hid for Four Years",
+  "content": "Akamai Researchers have uncovered a long-running attack campaign attack targeting Linux SSH servers that has been running a monero cryptominer.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--408438fae01fc7a2",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/fritzfrog-p2p",
+  "supporting_urls": [],
+  "published_at": "2022-02-10T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--408438fae01fc7a2.json",
+  "content_hash": "sha256:8c97a0c0019d6695b6827c7c5c38d91e09d57171a80703e5f5a1b60f6b297f44",
+  "external_id": "https://www.akamai.com/blog/security-research/fritzfrog-p2p",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "FritzFrog: P2P Botnet Hops Back on the Scene",
+  "content": "FritzFrog is a peer-to-peer botnet, which means its command and control server is not limited to a single, centralized machine, but rather can be done from every machine in its distributed network. In other words, every host running the malware process becomes part of the network, and is capable of sending, receiving, and executing the commands to control machines in the network.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

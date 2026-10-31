@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--232f0d1d8345e3db",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2026/feb/zerobot-malware-targets-n8n-automation-platform",
+  "supporting_urls": [],
+  "published_at": "2026-02-27T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--232f0d1d8345e3db.json",
+  "content_hash": "sha256:ce8a3fd6805fbdc8ac967eec1bd7e1f98ab5a033b9ad8fa2c95cbe9222b84ef2",
+  "external_id": "https://www.akamai.com/blog/security-research/2026/feb/zerobot-malware-targets-n8n-automation-platform",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Zerobot Malware Targets n8n Automation Platform",
+  "content": "The use of Mirai continues. Read how the Akamai SIRT identified active exploitation of vulnerabilities in the n8n automation platform and Tenda AC1206 routers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

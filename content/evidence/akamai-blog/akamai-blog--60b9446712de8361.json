@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--60b9446712de8361",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2025/jul/securing-the-frontier-navigating-security-in-llm-integrated-systems",
+  "supporting_urls": [],
+  "published_at": "2025-07-09T10:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--60b9446712de8361.json",
+  "content_hash": "sha256:c162d77e3059a28de9764e80ac99765d3c44a4a1f00f29f97fe5c64de6ca9a7e",
+  "external_id": "https://www.akamai.com/blog/developers/2025/jul/securing-the-frontier-navigating-security-in-llm-integrated-systems",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Securing the Frontier - Navigating Security in LLM-Integrated Systems",
+  "content": "In the previous parts of this series, we've explored the exciting new ways Large Language Models (LLMs) can integrate with APIs and act as intelligent As we integrate LLMs deeper into our applications, the attack surface naturally expands.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

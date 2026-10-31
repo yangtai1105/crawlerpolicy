@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--7664b109d9e8df6c",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/how-the-fastest-growing-enterprises-on-stripe-scale-globally",
+  "supporting_urls": [],
+  "published_at": "2026-10-27T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--7664b109d9e8df6c.json",
+  "content_hash": "sha256:fcf09068d7008b4679d9b1cd422a9b3679120b1118f1fbe2d98cc838dcb4334e",
+  "external_id": "https://stripe.com/blog/how-the-fastest-growing-enterprises-on-stripe-scale-globally",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How the fastest-growing enterprises on Stripe scale globally",
+  "content": "Despite slower global economic growth and greater geopolitical fragmentation, the fastest-growing enterprises continue to look beyond their home markets and are investing in tools and workflows that make expansion faster and more repeatable.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--82d8cd16d9b3c32b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/ddos-attacks-in-2022-targeting-everything-online",
+  "supporting_urls": [],
+  "published_at": "2023-03-10T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--82d8cd16d9b3c32b.json",
+  "content_hash": "sha256:d8948380aac10003c518d2bc0eb3c64a2239e9448ed9da776b415d7c95bdee89",
+  "external_id": "https://www.akamai.com/blog/security/ddos-attacks-in-2022-targeting-everything-online",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "DDoS Attacks in 2022: Targeting Everything Online, All at Once",
+  "content": "There was a big shift in DDoS targeting in 2022. Perhaps the most significant lesson learned: DDoS attackers are targeting everything, sometimes all at once.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

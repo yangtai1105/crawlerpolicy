@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--856d1a97304fae5a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/jul/keylogger-browser-extensions-security-risks-protect-enterprise",
+  "supporting_urls": [],
+  "published_at": "2025-07-29T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--856d1a97304fae5a.json",
+  "content_hash": "sha256:533cacfa1b13020c2b315d95f1505d73d73db5256d37d52b3ae2c487916f4bb9",
+  "external_id": "https://www.akamai.com/blog/security/2025/jul/keylogger-browser-extensions-security-risks-protect-enterprise",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Keylogger Browser Extensions: Security Risks and How to Protect Your Enterprise",
+  "content": "Keylogger extensions can lead to credential theft and phishing while bypassing your security systems. Discover key threats and how LayerX safeguards against them.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,32 @@
+{
+  "evidence_id": "akamai-blog--d8d58ea63b884cb8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/sep/beyond-identity-governing-the-agentic-enterprise",
+  "supporting_urls": [],
+  "published_at": "2026-09-22T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--d8d58ea63b884cb8.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security/2026/sep/beyond-identity-governing-the-agentic-enterprise",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Beyond Identity: Governing the Agentic Enterprise",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.akamai.com/blog/security/beyond-identity-governing-the-agentic-enterprise",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 5221,
+      "sha256": "e998a184cce9557783683fdf899bc6e0dd232fc5cdc2c762021aee3735b1d12e",
+      "cited_urls": [
+        "https://www.akamai.com/blog/security/beyond-identity-governing-the-agentic-enterprise",
+        "https://www.akamai.com/blog/author/kimberly-gomez",
+        "https://aigovernance.com/news/akamai-mcp-attack-surface-requires-zero-trust-controls-and-machine-identity-governance"
+      ]
+    }
+  }
+}

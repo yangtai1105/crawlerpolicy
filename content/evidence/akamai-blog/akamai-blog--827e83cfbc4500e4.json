@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--827e83cfbc4500e4",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/emotet-a-year-in-the-life-of-a-malware",
+  "supporting_urls": [],
+  "published_at": "2021-01-12T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--827e83cfbc4500e4.json",
+  "content_hash": "sha256:f90ecf6be2fcb24e7408382c9004c0ff01aac3190f5714800b42d1c63f88a81d",
+  "external_id": "https://www.akamai.com/blog/security/emotet-a-year-in-the-life-of-a-malware",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Emotet: A Year in the Life of a Malware",
+  "content": "Emotet malware has been around since 2014, but 2020 saw a resurgence of attacks. In September 2020, Emotet affected 14% of organizations worldwide. So, what is Emotet? And why is it so dangerous?",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

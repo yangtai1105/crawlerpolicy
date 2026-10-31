@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--fcf585bf3695d20d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/becoming-a-comms-and-analyst-relations-leader-rita-aspen-head-communications",
+  "supporting_urls": [],
+  "published_at": "2020-08-26T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--fcf585bf3695d20d.json",
+  "content_hash": "sha256:f228c42b9e39415d460c40f3237dee64c1fb1a3549355d71090992b7dc61e7b1",
+  "external_id": "https://www.akamai.com/blog/culture/becoming-a-comms-and-analyst-relations-leader-rita-aspen-head-communications",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Becoming a Comms and Analyst Relations Leader, Rita Aspen - Head, Communications & Analyst Relations, APJ",
+  "content": "My parents were first-generation immigrants from India. They worked hard, made Singapore their home and took all and any challenges head on. They have always lived by the simple philosophy, 'to be the change'. It's a philosophy that I try to live too, and in many ways it's what attracted me to Akamai not too long ago.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

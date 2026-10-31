@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--868ada9a46626df8",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/defense-without-detours-introducing-fastly-network-protect/",
+  "supporting_urls": [],
+  "published_at": "2026-10-14T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--868ada9a46626df8.json",
+  "content_hash": "sha256:88f5f4ec6280c316016174aafafeeabc642c4f1b3924c36031427b3fbbb81107",
+  "external_id": "https://www.fastly.com/blog/defense-without-detours-introducing-fastly-network-protect/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Defense Without Detours: Introducing Fastly Network Protect",
+  "content": "Discover Fastly Network Protect: scalable, hardwareless Layer 3 and 4 DDoS defense with unmatched global capacity, inline protection, and zero detours.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

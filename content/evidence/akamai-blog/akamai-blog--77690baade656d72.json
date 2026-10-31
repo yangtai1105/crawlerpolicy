@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--77690baade656d72",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2024/aug/edge-computing-5g-emerging-technology-shaping-future-it",
+  "supporting_urls": [],
+  "published_at": "2024-08-20T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--77690baade656d72.json",
+  "content_hash": "sha256:69ad2bf33c3fdc07a7ec3f67e5d016172a942e2e603ee9cfd6ca86c8aec8b512",
+  "external_id": "https://www.akamai.com/blog/edge/2024/aug/edge-computing-5g-emerging-technology-shaping-future-it",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Edge Computing and 5G: Emerging Technology Shaping the Future of IT",
+  "content": "Learn how and why enterprise businesses are using edge computing and 5G to deliver better digital experiences for their customers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,31 @@
+{
+  "evidence_id": "akamai-blog--cc7a58204bd2c58a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/oct/mapping-todays-nonhuman-interactions-requires-better-radar",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--cc7a58204bd2c58a.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security/2026/oct/mapping-todays-nonhuman-interactions-requires-better-radar",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Mapping Today’s Nonhuman Interactions Requires a Better Radar",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.akamai.com/blog/security/mapping-todays-nonhuman-interactions-requires-better-radar",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 6088,
+      "sha256": "672c8883d873032666f737731d21993ec0bb6e649d24233e240d80262cb07788",
+      "cited_urls": [
+        "https://www.akamai.com/blog/security/mapping-todays-nonhuman-interactions-requires-better-radar",
+        "https://www.akamai.com/blog/security/secure-grid-executive-order-14421-zero-trust"
+      ]
+    }
+  }
+}

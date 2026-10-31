@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--3cb7449a36bb4424",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/building-fastly-log-analytics-tools-open-source-approach-deeper-insights/",
+  "supporting_urls": [],
+  "published_at": "2026-09-03T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--3cb7449a36bb4424.json",
+  "content_hash": "sha256:fab3bc2584552a6eeec1b7e72ecb45ce78b0ea3a2b6b19e370fd6a7f55e727db",
+  "external_id": "https://www.fastly.com/blog/building-fastly-log-analytics-tools-open-source-approach-deeper-insights/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Building Fastly Log Analytics Tools: An Open-Source Approach to Deeper Insights",
+  "content": "Gain deeper insights with Fastly Log Analytics. Build an open-source, self-hosted dashboard to own your data, reduce vendor costs, and troubleshoot instantly.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

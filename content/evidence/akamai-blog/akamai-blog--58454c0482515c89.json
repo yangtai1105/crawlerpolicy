@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--58454c0482515c89",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/may/kubernetes-ingressnightmare-wake-up-fight-back-microsegmentation",
+  "supporting_urls": [],
+  "published_at": "2025-05-07T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--58454c0482515c89.json",
+  "content_hash": "sha256:46d465e6ec5f36574b580536121b582ea7dfee1434a249c46d11ad20b5a4d35a",
+  "external_id": "https://www.akamai.com/blog/security/2025/may/kubernetes-ingressnightmare-wake-up-fight-back-microsegmentation",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Kubernetes IngressNightmare: Wake Up and Fight Back with Microsegmentation",
+  "content": "Discover how to defend Kubernetes from Ingress vulnerabilities with microsegmentation and Zero Trust security from Akamai. Stay protected — inside and out.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

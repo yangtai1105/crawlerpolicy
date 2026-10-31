@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--aa22ae9bccc903c8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2025/apr/spin-js-ts-router-showdown-hono-vs-itty-vs-manual-routing",
+  "supporting_urls": [],
+  "published_at": "2025-04-30T10:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--aa22ae9bccc903c8.json",
+  "content_hash": "sha256:fc72928137a1a5c34b5649c2d0a9047aa83fdec019cc5cc440c720ba579e5a24",
+  "external_id": "https://www.akamai.com/blog/developers/2025/apr/spin-js-ts-router-showdown-hono-vs-itty-vs-manual-routing",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Spin JS/TS Router Showdown: Hono vs Itty vs Manual Routing",
+  "content": "A performance comparison of three routing approaches in Spin JS/TS apps — Hono, Itty, and manual routing — with benchmarks and guidance.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

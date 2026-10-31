@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--d1909a09dbce6912",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/akamai-has-addressed-browser-powered-desync-attacks",
+  "supporting_urls": [],
+  "published_at": "2022-08-10T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--d1909a09dbce6912.json",
+  "content_hash": "sha256:bb133da2e305d3df01938e3dc290e300465d53adba2a885366c88c40e4def954",
+  "external_id": "https://www.akamai.com/blog/security/akamai-has-addressed-browser-powered-desync-attacks",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Has Addressed Browser-Powered Desync Attacks",
+  "content": "On August 10, 2022, security researcher James Kettle presented a set of novel HTTP request smuggling attacks in his Black Hat talk,",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

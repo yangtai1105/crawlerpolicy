@@ -1,0 +1,30 @@
+{
+  "evidence_id": "akamai-blog--fb53753b78cb4f6b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/oct/monetizing-machines-akamai-customers-charge-ai-agents-edge",
+  "supporting_urls": [],
+  "published_at": "2026-10-12T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--fb53753b78cb4f6b.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/ai/2026/oct/monetizing-machines-akamai-customers-charge-ai-agents-edge",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Monetizing AI Agents at the Edge with Akamai Functions",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.akamai.com/blog/ai/monetizing-machines-akamai-customers-charge-ai-agents-edge",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 7926,
+      "sha256": "e269952f444bbc0d5c87fed3e832a0df1e7ca4d71cfedaf2e4c174c5d6a336c9",
+      "cited_urls": [
+        "https://www.akamai.com/blog/ai/monetizing-machines-akamai-customers-charge-ai-agents-edge"
+      ]
+    }
+  }
+}

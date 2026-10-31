@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--8ccdaec83fa27b96",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/nov/exploring-artificial-intelligence-is-ai-overhyped",
+  "supporting_urls": [],
+  "published_at": "2024-11-04T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--8ccdaec83fa27b96.json",
+  "content_hash": "sha256:ab24e80a6b1c9da93c8059eb68a09d40862f7ac8b5fd0c8d7ec3b370a5ab0a87",
+  "external_id": "https://www.akamai.com/blog/security/2024/nov/exploring-artificial-intelligence-is-ai-overhyped",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Exploring Artificial Intelligence: Is AI Overhyped?",
+  "content": "Dive into AI technologies like inference, deep learning, and generative models to learn how LLMs and AI are transforming cybersecurity and tech industries.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

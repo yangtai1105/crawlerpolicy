@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--0b4eda7c380bc28d",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/saas-platform-trends-in-AI-era",
+  "supporting_urls": [],
+  "published_at": "2026-10-19T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--0b4eda7c380bc28d.json",
+  "content_hash": "sha256:67015e955be6a742a4cee503f442354a0c7183d524094b67d3a1773cc72ee79b",
+  "external_id": "https://stripe.com/blog/saas-platform-trends-in-AI-era",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Stripe survey: Four trends reshaping how SaaS platforms compete in the AI era",
+  "content": "AI is creating more SaaS competition, and platforms are feeling the pressure. A Stripe survey of 200 platform leaders shows how they plan to evolve pricing, grow revenue, and retain customers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

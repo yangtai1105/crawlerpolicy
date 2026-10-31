@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--4a72e438579c6bda",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/fastly-named-leader-2026-idc-marketscape-waap/",
+  "supporting_urls": [],
+  "published_at": "2026-10-14T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--4a72e438579c6bda.json",
+  "content_hash": "sha256:f10de4efb4ca7efffd383ac9fe2dde48efde3b16c38dea952cf27e2bb93aa6f1",
+  "external_id": "https://www.fastly.com/blog/fastly-named-leader-2026-idc-marketscape-waap/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Fastly Named a Leader in the 2026 IDC MarketScape for WAAP",
+  "content": "Fastly named a Leader in the 2026 IDC MarketScape for WAAP. Learn how Fastly protects web apps and APIs with automated defense and low false positives.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--f4a64de185aa2cad",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/trends/black-friday",
+  "supporting_urls": [],
+  "published_at": "2021-11-29T09:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--f4a64de185aa2cad.json",
+  "content_hash": "sha256:f60f2505888ed7ccb31d2f2e2ee2007d1e62abaebdcca1d6fef6352412468026",
+  "external_id": "https://www.akamai.com/blog/trends/black-friday",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Black Friday Web Traffic Up Over 2020",
+  "content": "Online retail traffic that Akamai delivered during Black Friday was up 2% globally compared to Black Friday 2020 and 14% compared to average Friday retail traffic. The modest year-over-year increase can be attributed to the significant rise in 2020 traffic due to COVID-19–related lockdowns and restrictions that kept many shoppers out of physical stores.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

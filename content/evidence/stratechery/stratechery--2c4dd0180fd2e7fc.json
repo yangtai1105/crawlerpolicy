@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--2c4dd0180fd2e7fc",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/meta-earnings-muse-and-the-frontier-musebook/",
+  "supporting_urls": [],
+  "published_at": "2026-10-28T10:06:13Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stratechery/stratechery--2c4dd0180fd2e7fc.json",
+  "content_hash": "sha256:db4abacf2450e8c164a20e0930ce2b1c325a60ffbce401dbffbb88e564a0e40d",
+  "external_id": "https://stratechery.com/?p=20613",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Meta Earnings, Muse and the Frontier, Musebook",
+  "content": "<p>Meta's earnings come in the context of Zuckerberg delivering on his promise; if investors believe in Muse they must support Meta's spending on compute.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

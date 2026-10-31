@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--aa3cdae54abcad9f",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/cve-2026-82329-jfrog-artifactory-authentication-bypass-exploitation-activity/",
+  "supporting_urls": [],
+  "published_at": "2026-09-03T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--aa3cdae54abcad9f.json",
+  "content_hash": "sha256:3c4b13f3d2dd2bd4ed24e93e61e87c88d12f7eb9177b7757061ac1a03b923a47",
+  "external_id": "https://www.fastly.com/blog/cve-2026-82329-jfrog-artifactory-authentication-bypass-exploitation-activity/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "CVE-2026-82329: JFrog Artifactory Authentication Bypass Exploitation Activity",
+  "content": "Attacks targeting JFrog Artifactory (CVE-2026-82329) exploded in 72 hours. Fastly threat intelligence breaks down the mass scanning surge—and how our virtual patch protects you today.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

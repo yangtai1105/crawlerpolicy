@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--adbf5cd6dc776bb8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/introducing-web-security-analytics",
+  "supporting_urls": [],
+  "published_at": "2018-04-14T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--adbf5cd6dc776bb8.json",
+  "content_hash": "sha256:4c888455db2d91dcb159d5bf1d24d43b4989af6267694342eafa24412b56ca14",
+  "external_id": "https://www.akamai.com/blog/security/introducing-web-security-analytics",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Introducing Web Security Analytics",
+  "content": "Every security team knows that the success of any security product relies heavily on the ability to maintain an optimal security configuration. Any misconfiguration can result in malicious or undesired traffic reaching the application, or worse - legitimate traffic being blocked. In addition, it can result in noisy false positive security events, which can eventually mask real attacks from being detected and blocked. What is Web Security Analytics? Akamai's new Web Security Analytics tool provides a single unified and efficient interface to assess a wide range of security events, perform analysis of events, and evaluate any needed changes in order to maintain an optimal security configuration. For example, customers can use this tool to better:",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

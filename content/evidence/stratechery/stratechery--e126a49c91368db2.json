@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--e126a49c91368db2",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/the-end-of-the-internet/",
+  "supporting_urls": [],
+  "published_at": "2026-10-26T10:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stratechery/stratechery--e126a49c91368db2.json",
+  "content_hash": "sha256:9d269283b35ab1067c7a76929026f4e0caaa2601dde94f2105e6d418e0f4e963",
+  "external_id": "https://stratechery.com/?p=20540",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The End of the Internet",
+  "content": "<div class=\"wp-block-passport-restricted-content\">\n\n\n\n\n<div class=\"wp-block-passport-logged-out-view\">\n<div class=\"wp-block-group wp-block-passport-podcast-player-logged-out-view has-border-color has-global-padding is-layout-constrained wp-container-core-group-is-layout-27c52d2c wp-block-group-is-layout-constrained\">\n<div class=\"wp-block-group passport-podcast-player-logged-out-view-underlay has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n<div class=\"wp-block-group is-nowrap is-layout-flex wp-container-core-group-is-layout-878226d7 wp-block-group-is-layout-flex\">\n<div class=\"wp-block-group wp-container-content-9cfa9a5a has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n<p class=\"has-small-font-size wp-block-paragraph\"><strong>Listen to this <strong>post</strong>:</strong></p>\n\n\n\n<div class=\"wp-block-group has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\">\n<audio controls=\"controls\" disabled=\"disabled\" style=\"width: 100%;\"></audio>\n</div>\n</div>\n</div>\n</div>\n\n\n\n<div class=\"wp-block-group is-style-default passport-podcast-player-logged-out-view-overlay is-vertical is-content-justification-center is-nowrap is-layout-flex wp-container-core-group-is-layout-470faa6e wp-block-group-is-layout-flex\" style=\"margin-top: 0;\">\n<div class=\"wp-block-group wp-block-buttons has-global-padding is-layout-constrained wp-block-group-is-layout-constrained\"><div class=\"passport-logged-out align wp-block-passp",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

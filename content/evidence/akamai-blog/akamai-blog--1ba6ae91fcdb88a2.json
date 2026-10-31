@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1ba6ae91fcdb88a2",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2025/may/cpu-gpu-video-processing-unit-comparison",
+  "supporting_urls": [],
+  "published_at": "2025-05-14T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1ba6ae91fcdb88a2.json",
+  "content_hash": "sha256:07c74dbe20707ab61b3491fcbf5dbb28f3e60508503757b7c70c9c16e919f482",
+  "external_id": "https://www.akamai.com/blog/developers/2025/may/cpu-gpu-video-processing-unit-comparison",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Comparing Video Processing Units (VPUs), GPUs, and CPUs",
+  "content": "More users than ever subscribe to on-demand media streaming and engage with live streaming video over the internet, rather than broadcast television.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

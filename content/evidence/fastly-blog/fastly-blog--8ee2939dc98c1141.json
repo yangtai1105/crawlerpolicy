@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--8ee2939dc98c1141",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/cves-and-good-corporate-citizenship/",
+  "supporting_urls": [],
+  "published_at": "2026-10-20T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--8ee2939dc98c1141.json",
+  "content_hash": "sha256:99e0da64d37b0e9a2b4aa9b0233dfb45dd1b8cb8a2bf0d156ef38115d44d9251",
+  "external_id": "https://www.fastly.com/blog/cves-and-good-corporate-citizenship/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "CVEs and Good Corporate Citizenship",
+  "content": "A Retrospective on the PHP2Shell Response",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

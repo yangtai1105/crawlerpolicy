@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--bbace1a062a7c468",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2025/may/introducing-linode-interfaces",
+  "supporting_urls": [],
+  "published_at": "2025-05-13T10:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--bbace1a062a7c468.json",
+  "content_hash": "sha256:9c32aaa29ae264f7f49085264e97276ffe18028bc5fedefe1fc2239be8c6f274",
+  "external_id": "https://www.akamai.com/blog/developers/2025/may/introducing-linode-interfaces",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Introducing Linode Interfaces: Better Network Management (Open Beta)",
+  "content": "Join the beta for Linode Interfaces, a new network management tool offering clearer configurations, better security, and smarter routing.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1bfb5272d0bdc638",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/caught-on-camera-rethinking-iot-security",
+  "supporting_urls": [],
+  "published_at": "2021-04-09T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1bfb5272d0bdc638.json",
+  "content_hash": "sha256:a7c901b560275db47f39e57f4e806227ee3efce8890762e0e2053dd13db837cf",
+  "external_id": "https://www.akamai.com/blog/security/caught-on-camera-rethinking-iot-security",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Caught on Camera: Rethinking IoT Security",
+  "content": "We all know that we're on camera pretty much constantly -- most coffee shops, convenience stores, and even offices employ security cameras for protection. But what happens when those devices built to keep us safe become unsafe?",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

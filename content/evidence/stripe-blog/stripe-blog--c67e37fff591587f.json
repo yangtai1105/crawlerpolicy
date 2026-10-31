@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--c67e37fff591587f",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/new-ways-for-fintechs-to-move-money-and-expand-globally",
+  "supporting_urls": [],
+  "published_at": "2026-10-16T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--c67e37fff591587f.json",
+  "content_hash": "sha256:472da94dd319f3a45534e7ef14e187bee59f7ce52ccc014ef041fc1c548e6b6a",
+  "external_id": "https://stripe.com/blog/new-ways-for-fintechs-to-move-money-and-expand-globally",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "New ways for fintechs to move money and expand globally",
+  "content": "We’re introducing three updates to help fintechs launch products and grow internationally more easily: simpler payout management with Stripe Global Payouts, support for stablecoin cards in more countries, and unified APIs for building global financial products.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

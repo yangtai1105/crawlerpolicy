@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--f35463d8788add50",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/helping-personal-agents-shop-more-intelligently-and-reliably-with-link",
+  "supporting_urls": [],
+  "published_at": "2026-09-29T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--f35463d8788add50.json",
+  "content_hash": "sha256:ecf0febefc0363fe32fc445da0da68a93ba6bb594e4ea629633c4ff97aaee113",
+  "external_id": "https://stripe.com/blog/helping-personal-agents-shop-more-intelligently-and-reliably-with-link",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Helping personal agents shop more intelligently and reliably with Link",
+  "content": "As agents take on more purchases, agent builders have increasingly asked us to help agents navigate checkout and earn consumer trust. Today, we’re sharing three major improvements to support this broader set of needs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--97b9e77b4123c4f4",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/oct/6-steps-cyber-resilience-during-2024-us-presidential-election",
+  "supporting_urls": [],
+  "published_at": "2024-10-30T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--97b9e77b4123c4f4.json",
+  "content_hash": "sha256:6398a51d73c344a364076c52abbcfa5d896e0e81541bb964c7a038e76fcae49e",
+  "external_id": "https://www.akamai.com/blog/security/2024/oct/6-steps-cyber-resilience-during-2024-us-presidential-election",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "6 Steps for Cyber Resilience During the 2024 U.S. Presidential Election",
+  "content": "Learn about the risks to service availability during the 2024 U.S. presidential election — and the six steps you can take now to ensure your cyber resilience.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

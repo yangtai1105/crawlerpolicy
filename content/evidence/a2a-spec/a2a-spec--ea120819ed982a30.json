@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--ea120819ed982a30",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/pull/2408",
+  "supporting_urls": [],
+  "published_at": "2026-10-29T12:07:16Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--ea120819ed982a30.json",
+  "content_hash": "sha256:b694f5ab6d5d94fbc13725a1cb4ae55daea02fde4c18a103727b909e547de205",
+  "external_id": "pr:2408",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #2408: Merge main into dev-1.1",
+  "content": "Merge main into dev-1.1",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

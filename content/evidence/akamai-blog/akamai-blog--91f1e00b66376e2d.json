@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--91f1e00b66376e2d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/may/compliance-insights-stop-lateral-movement-boost-authorization",
+  "supporting_urls": [],
+  "published_at": "2025-05-19T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--91f1e00b66376e2d.json",
+  "content_hash": "sha256:935688498fd333a28d2416c556ede562cd7349e0b2cc14bff7af31c59660bf08",
+  "external_id": "https://www.akamai.com/blog/security/2025/may/compliance-insights-stop-lateral-movement-boost-authorization",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Compliance Insights: How to Stop Lateral Movement and Boost Authorization",
+  "content": "Stop lateral movement before it starts. Learn how to meet security compliance regulations with layered security, microsegmentation, and smart API protection.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

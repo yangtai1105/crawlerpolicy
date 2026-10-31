@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--221708e0125e0115",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/introducing-fastlys-ai-runtime-control-why-your-ai-strategy-needs-control-plane/",
+  "supporting_urls": [],
+  "published_at": "2026-09-21T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--221708e0125e0115.json",
+  "content_hash": "sha256:9bf1f0c34b26a2edb3f432893e9eebe8103470990afd4063e9b9002fb54be03f",
+  "external_id": "https://www.fastly.com/blog/introducing-fastlys-ai-runtime-control-why-your-ai-strategy-needs-control-plane/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing Fastly’s AI Runtime Control: Why Your AI Strategy Needs a Control Plane",
+  "content": "Discover Fastly’s AI Runtime Control. Gain real-time visibility, manage token spend, and govern enterprise AI usage securely at the edge.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

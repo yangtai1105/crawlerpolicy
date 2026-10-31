@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ffd31a40ae15b083",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/a-new-skimmer-uses-websockets-and-a-fake-credit-card-form-to-steal-sensitive-data",
+  "supporting_urls": [],
+  "published_at": "2020-11-10T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ffd31a40ae15b083.json",
+  "content_hash": "sha256:634f12382af3bc14bb942c9c32d2612608ef07968ef76f843ba49b91fdbd6550",
+  "external_id": "https://www.akamai.com/blog/security/a-new-skimmer-uses-websockets-and-a-fake-credit-card-form-to-steal-sensitive-data",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "A New Skimmer Uses WebSockets and a Fake Credit Card Form to Steal Sensitive Data",
+  "content": "A new skimmer attack was discovered this week, targeting various online e-commerce sites built with different frameworks. As I write this blog post, the attack is still active and exfiltrating data.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

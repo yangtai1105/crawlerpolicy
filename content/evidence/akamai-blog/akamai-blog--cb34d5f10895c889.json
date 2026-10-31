@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--cb34d5f10895c889",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/confluence-server-webwork-ognl-injection-cve-2021-26084",
+  "supporting_urls": [],
+  "published_at": "2021-09-15T07:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--cb34d5f10895c889.json",
+  "content_hash": "sha256:8c35068bef13f6955e2cf1a555307a9efae3b6e3db93cb89f99d4ce9a4cd5385",
+  "external_id": "https://www.akamai.com/blog/security/confluence-server-webwork-ognl-injection-cve-2021-26084",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Confluence Server Webwork OGNL Injection (CVE-2021-26084): How Akamai Helps You Protect Against Zero-Day Attacks",
+  "content": "Recently Atlassian has disclosed a critical RCE (Remote Code Execution) vulnerability in its Confluence server and Data Center products (CVE-2021-26084), which might allow unauthenticated users to execute arbitrary code on vulnerable servers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

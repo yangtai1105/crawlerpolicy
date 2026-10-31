@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6e6bf11ba4135889",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/oct/ai-pulse-openai-wild-bot-behavior-after-gpt5",
+  "supporting_urls": [],
+  "published_at": "2025-10-10T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6e6bf11ba4135889.json",
+  "content_hash": "sha256:9d463f5af4f63cf09ad08a4499693b943aeec54699c7d9a732dc7cff4867361a",
+  "external_id": "https://www.akamai.com/blog/security/2025/oct/ai-pulse-openai-wild-bot-behavior-after-gpt5",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "AI Pulse: OpenAI’s Wild Bot Behavior After GPT-5",
+  "content": "The AI Pulse series breaks down traffic trends and what they mean for apps, APIs, and businesses. In this post, read how OpenAI’s bots are changing after GPT-5.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

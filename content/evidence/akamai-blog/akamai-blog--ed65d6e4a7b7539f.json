@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ed65d6e4a7b7539f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/sep/reliable-compliant-apis-akamai-managed-service-api-performance",
+  "supporting_urls": [],
+  "published_at": "2025-09-24T10:30:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ed65d6e4a7b7539f.json",
+  "content_hash": "sha256:948876b5e71e62835c821bf5a818d63b426872da844914457c83d349b9ff3c2a",
+  "external_id": "https://www.akamai.com/blog/security/2025/sep/reliable-compliant-apis-akamai-managed-service-api-performance",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Reliable, Compliant APIs with Akamai Managed Service for API Performance",
+  "content": "Introducing Akamai’s new product that blends proactive testing, expert analysis, and tailored optimization to help APIs stay reliable, responsive, and compliant.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

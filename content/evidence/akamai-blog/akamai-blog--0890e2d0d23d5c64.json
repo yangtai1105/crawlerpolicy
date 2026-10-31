@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--0890e2d0d23d5c64",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/jul/password-manager-extensions",
+  "supporting_urls": [],
+  "published_at": "2025-07-01T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--0890e2d0d23d5c64.json",
+  "content_hash": "sha256:11c6580f3010060ee38efa0577003606859d9139651879c3a979e09e01d44b21",
+  "external_id": "https://www.akamai.com/blog/security/2025/jul/password-manager-extensions",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Password Manager Extensions: Security Risks and How to Protect Your Enterprise",
+  "content": "Password manager extensions can result in password and data leaks. Ask yourself these 5 questions when implementing browser extensions.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

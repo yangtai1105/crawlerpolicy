@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--7a9d2b71d7e281ed",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/ousd-now-live-on-stripe",
+  "supporting_urls": [],
+  "published_at": "2026-09-30T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--7a9d2b71d7e281ed.json",
+  "content_hash": "sha256:e746e89d634fd933729ac34436bb701c20bb5400610eb292b1bba06e2120a95b",
+  "external_id": "https://stripe.com/blog/ousd-now-live-on-stripe",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "OUSD is now the default stablecoin on Stripe",
+  "content": "Open USD (OUSD), a stablecoin built for global money movement, is now available across Stripe. Businesses can use OUSD to manage funds, make payments, and offer new financial services.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b81941464244787f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/vulnerability-scanning-ipv6-why-should-we-care",
+  "supporting_urls": [],
+  "published_at": "2022-10-19T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b81941464244787f.json",
+  "content_hash": "sha256:f35bfedab5eb824d85e93f4f2d8de92440a7a958de219d4695355d39039a58a3",
+  "external_id": "https://www.akamai.com/blog/security-research/vulnerability-scanning-ipv6-why-should-we-care",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Who’s Scanning the IPv6 Space? And, Frankly, Why Do We Even Care?",
+  "content": "Securing IPv6 is no longer optional, it's a necessity. In this first of its kind empirical study on the vulnerability scanning landscape of IPv6, you'll learn the challenges and differences between IPv6 and IPv4 to be better prepared for the future.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--396c7faacfb1e2ef",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2025/jan/kubernetes-log-query-rce-windows",
+  "supporting_urls": [],
+  "published_at": "2025-01-24T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--396c7faacfb1e2ef.json",
+  "content_hash": "sha256:a01c21a1d6922d9205f9d8dfafb6fac24b6640f2db8ab28a667c7d82f28c73e8",
+  "external_id": "https://www.akamai.com/blog/security-research/2025/jan/kubernetes-log-query-rce-windows",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Exploit Me, Baby, One More Time: Command Injection in Kubernetes Log Query",
+  "content": "A vulnerability in Kubernetes allows remote code execution. Read how abusing Log Query can lead to a complete takeover of  all Windows nodes in a cluster.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

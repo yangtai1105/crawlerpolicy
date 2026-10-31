@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--3a08b759d15fc557",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/what-is-style-smuggler-cve-2026-75650/",
+  "supporting_urls": [],
+  "published_at": "2026-09-16T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--3a08b759d15fc557.json",
+  "content_hash": "sha256:126b87437ddfe34d1c72890d6206ad327b6350df45c194f700bb8e938aa292e3",
+  "external_id": "https://www.fastly.com/blog/what-is-style-smuggler-cve-2026-75650/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "What is Style Smuggler (CVE-2026-75650)?",
+  "content": "CVE-2026-75650 (StyleSmuggler) is a critical SSTI being actively exploited in ecommerce platforms. Learn what it is and how Fastly customers can stay protected.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

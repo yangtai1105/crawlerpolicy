@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--52f002e3a48849aa",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/sep/introducing-ai-assistant-web-security-analytics",
+  "supporting_urls": [],
+  "published_at": "2026-09-10T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--52f002e3a48849aa.json",
+  "content_hash": "sha256:a9cbc1c5e9dd07443b0b674c752ec1dfcc01dfe4d840cd52aa7c766e3daff589",
+  "external_id": "https://www.akamai.com/blog/security/2026/sep/introducing-ai-assistant-web-security-analytics",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing AI Assistant for Akamai Web Security Analytics",
+  "content": "Discover how AI Assistant for Akamai Web Security Analytics helps SOC and AppSec teams investigate events faster and take guided action with natural language.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

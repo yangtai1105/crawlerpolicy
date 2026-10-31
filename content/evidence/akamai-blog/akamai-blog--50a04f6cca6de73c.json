@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--50a04f6cca6de73c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/finding-my-way-as-an-akamai-intern",
+  "supporting_urls": [],
+  "published_at": "2021-11-18T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--50a04f6cca6de73c.json",
+  "content_hash": "sha256:9fa11deb1b44265f7bab5042c0b66e8b3b1c241f2651d5121d7ac20f59150273",
+  "external_id": "https://www.akamai.com/blog/culture/finding-my-way-as-an-akamai-intern",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Finding My Way as an Akamai Intern",
+  "content": "It’s an exciting time to be starting a career in digital – but even more so when it’s at a company like Akamai. An organization driven by a commitment to developing talent within the industry, Akamai is an intellectually rigorous, demanding, and rewarding environment to be in at any level. But for new starters, programs like the summer internship can provide a 10- to 12-week opportunity to meet people and learn new skills – with real-world experiences, close working relationships, and access to subject matter experts.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

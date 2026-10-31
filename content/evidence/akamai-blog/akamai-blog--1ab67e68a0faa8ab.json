@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1ab67e68a0faa8ab",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/akamai-wellness-in-apj",
+  "supporting_urls": [],
+  "published_at": "2020-11-13T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1ab67e68a0faa8ab.json",
+  "content_hash": "sha256:749d8d8caab5f1dc76862fd1f0210eea3429a82cca78ca21b579b54fe602c9ce",
+  "external_id": "https://www.akamai.com/blog/culture/akamai-wellness-in-apj",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Wellness in APJ",
+  "content": "Creating the world's best and most secure digital experience demands the very best industry talent. But as a responsible employer, we also understand how important it is to play our part in looking after those brilliant minds.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

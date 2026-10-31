@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--5ada01cab2123958",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/dec/peak-season-is-world-you-operate-in",
+  "supporting_urls": [],
+  "published_at": "2025-12-17T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--5ada01cab2123958.json",
+  "content_hash": "sha256:215a032814999ab63292c1511420a20210abb2df527abb9b246401ce349d1baa",
+  "external_id": "https://www.akamai.com/blog/security/2025/dec/peak-season-is-world-you-operate-in",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Peak Season Isn’t a Season. It’s the World You Operate In.",
+  "content": "Peak season isn’t seasonal anymore. Learn why modern surges stem from security risks, not traffic, and how Akamai keeps businesses resilient every day.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

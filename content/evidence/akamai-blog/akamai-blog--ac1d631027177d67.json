@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ac1d631027177d67",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/performance/measuring-improving-core-web-vitals",
+  "supporting_urls": [],
+  "published_at": "2020-10-12T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ac1d631027177d67.json",
+  "content_hash": "sha256:39072953b98ba39cf067b6a852639d7aa5a13b40a6c622c8618b8d793d6e237c",
+  "external_id": "https://www.akamai.com/blog/performance/measuring-improving-core-web-vitals",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Measuring and Improving Core Web Vitals",
+  "content": "Google recently announced a proposed update to its search ranking algorithm: the Page Experience Update. This change, which launches in 2021, includes more performance signals in the ranking algorithm. A subtle but important feature of the update is that AMP will no longer be a requirement for promotion to Top Stories -- fast pages are all you need!",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

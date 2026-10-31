@@ -1,0 +1,19 @@
+{
+  "evidence_id": "ucp-spec--1bfcca571a0e32e7",
+  "source": "ucp-spec",
+  "source_url": "https://github.com/Universal-Commerce-Protocol/ucp/pull/935",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T07:11:06Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/ucp-spec/ucp-spec--1bfcca571a0e32e7.json",
+  "content_hash": "sha256:5bc45e54c7162af2bd3c7d6b9677d49d4e370c0746e7e654397a96c280b3e77f",
+  "external_id": "pr:935",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #935: chore: backport #690 (media variants) to release/2026-04-08",
+  "content": "# Description\n\nBackports #690 (`feat(media): model image, video, external video, and 3D variants`) to the `release/2026-04-08` release branch.\n\n### Adjustments from #690 for `2026-04-08`\n- **Schema Paths & `$id` URIs**: In `2026-04-08`, shared types reside under `source/schemas/shopping/types/` (prior to the `common/types/` reorganization on `main`). `media.json` and the new media schemas (`media_image.json`, `media_video.json`, `media_external_video.json`, `media_model_3d.json`, `media_source.json`) are placed in `source/schemas/shopping/types/` with `$id` values under `https://ucp.dev/schemas/shopping/types/`.\n- **Catalog Specification Paths & Links**: Applied the catalog documentation updates to `docs/specification/catalog/{index,rest,mcp}.md` (instead of `docs/specification/shopping/catalog/`), using `'catalog'` as the `schema_fields` spec parameter and `../embedded-protocol.md` for relative links from `docs/specification/catalog/index.md`.\n\n## Category (Required)\n\n_Please select one or more categories that apply to this change._\n\n- [ ] **Core Protocol**: Changes to the base communication layer, global context, or breaking refactors. (Requires Technical Council approval)\n- [ ] **Governance/Contributing**: Updates to GOVERNANCE.md, CONTRIBUTING.md, or CODEOWNERS. (Requires Governance Council approval)\n- [x] **Capability**: New schemas (Discovery, Cart, etc.) or extensions. (Requires Maintainer approval)\n- [x] **Documentation**: Updates to README, or documentations regarding schema or capabilities. (Requires Maintainer approval)\n- [ ] **Infrastructure**: CI/CD, Linters, or build scripts. (Requires DevOps Maintainer approval)\n- [ ] **Maintenance**: Version bumps, lockfile updates, or minor bug fixes. (Requires DevOps Maintainer approval)\n- [ ] **SDK**: Language-specific SDK updates and releases. (Requires DevOps Maintainer approval)\n- [ ] **Samples / Conformance**: Maintaining samples and the conformance suite. (Requires Maintainer approval)\n- [ ] **UCP Schema**: Changes to the `ucp-schema` tool (resolver, linter, validator). (Requires Maintainer approval)\n- [ ] **Community Health (.github)**: Updates to templates, workflows, or org-level configs. (Requires DevOps Maintainer approval)\n\n## Related Issues\n\nBackport of #690\n\n## Checklist\n\n- [x] I have followed the [Contributing Guide](https://github.com/Universal-Commerce-Protocol/.github/blob/main/CONTRIBUTING.md) (including Conventional Commits title requirements and `!` for breaking changes).\n- [x] I have updated the documentation (if applicable).\n- [x] My changes pass all local linting and formatting checks.\n- [ ] I have added tests that prove my fix is effective or that my feature works.\n- [x] New and existing unit tests pass locally with my changes.\n- [x] (For Core/Capability) I have included/updated the relevant JSON schemas.\n- [ ] I have regenerated Python Pydantic models by running generate_models.sh under python_sdk.\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

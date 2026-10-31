@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6decba4e8c8f684d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/cutting-the-red-tape-lessons-learned-from-cyberthreats-2021",
+  "supporting_urls": [],
+  "published_at": "2021-07-27T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6decba4e8c8f684d.json",
+  "content_hash": "sha256:d43a521bf00b2f2df5d7008bbd6ae11e4a22d2626f9395d672b6f8a669da9522",
+  "external_id": "https://www.akamai.com/blog/news/cutting-the-red-tape-lessons-learned-from-cyberthreats-2021",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Cutting the Red Tape: Lessons Learned from CyberThreats 2021",
+  "content": "If I had a dollar for every time I heard the phrase “digital transformation,” I would have a lot of dollars. I’m sure you would too. We’d have even more if we counted the term “Zero Trust.” (Maybe we should start counting them, now that I think about it!)",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

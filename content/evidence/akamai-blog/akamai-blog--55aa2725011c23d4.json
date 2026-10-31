@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--55aa2725011c23d4",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/krakow-internship",
+  "supporting_urls": [],
+  "published_at": "2021-02-09T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--55aa2725011c23d4.json",
+  "content_hash": "sha256:15b0529a1611dc522338ec70803026bcfb10022b96d60c58f4de28a2f086d3b0",
+  "external_id": "https://www.akamai.com/blog/culture/krakow-internship",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Krakow Internship",
+  "content": "The beginning of a new year is a time to look back and reflect on the previous one. December 31st is also the end date of our annual Krakow Internship Program.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

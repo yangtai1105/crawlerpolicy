@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1bf9cb5e1fda632b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/meet-josh-johnson-senior-enterprise-architect",
+  "supporting_urls": [],
+  "published_at": "2022-06-16T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1bf9cb5e1fda632b.json",
+  "content_hash": "sha256:e4e4287536f9d70f9dd30007adb1b341cd6f28c98550b817bbda72b8492235a0",
+  "external_id": "https://www.akamai.com/blog/developers/meet-josh-johnson-senior-enterprise-architect",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Meet Josh Johnson: Senior Enterprise Architect",
+  "content": "A love of technology and coding brought Josh Johnson to Akamai. Learn what he thinks a developer-first approach means for the Akamai developer community.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

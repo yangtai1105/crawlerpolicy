@@ -1,0 +1,32 @@
+{
+  "evidence_id": "akamai-blog--6a6bbb03a50581df",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/sep/introducing-more-granular-controls-ai-bot-traffic",
+  "supporting_urls": [],
+  "published_at": "2026-09-03T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6a6bbb03a50581df.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security/2026/sep/introducing-more-granular-controls-ai-bot-traffic",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Introducing More Granular Controls for AI Bot Traffic",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.akamai.com/blog/security/introducing-more-granular-controls-ai-bot-traffic",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 5529,
+      "sha256": "4d317dbf17cf0d7334ec07411dff572217ec6a7ad804f86da7df4cdb45f7923e",
+      "cited_urls": [
+        "https://www.akamai.com/blog/security/introducing-more-granular-controls-ai-bot-traffic",
+        "https://www.wokb.cz/Blog/botnet_blog.html",
+        "https://findcheapbroadband.com/blog/what-is-ai-crawler-traffic/"
+      ]
+    }
+  }
+}

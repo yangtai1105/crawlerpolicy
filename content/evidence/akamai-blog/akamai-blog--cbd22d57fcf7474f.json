@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--cbd22d57fcf7474f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/bots-tampering-with-tls-to-avoid-detection",
+  "supporting_urls": [],
+  "published_at": "2019-05-15T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--cbd22d57fcf7474f.json",
+  "content_hash": "sha256:b72b81caa0da6430cf2ed9916f5b87002fb4cb2f91ce7381f331a0f01ec90b6b",
+  "external_id": "https://www.akamai.com/blog/security/bots-tampering-with-tls-to-avoid-detection",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Bots Tampering with TLS to Avoid Detection",
+  "content": "Researchers at Akamai observed attackers using a novel approach for evading detection. This new technique - which we call Cipher Stunting - has become a growing threat, with its roots tracing back to early-2018. By using advanced methods, attackers are...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

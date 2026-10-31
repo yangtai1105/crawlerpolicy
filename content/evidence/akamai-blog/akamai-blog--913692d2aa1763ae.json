@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--913692d2aa1763ae",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/aug/critical-infrastructure-protection-cybersecurity-strategies-governments",
+  "supporting_urls": [],
+  "published_at": "2025-08-27T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--913692d2aa1763ae.json",
+  "content_hash": "sha256:be7cecb0c183e3d184346b9ea0cdd1f5fccf236a2d20728216ca7e5b3d28dbf4",
+  "external_id": "https://www.akamai.com/blog/security/2025/aug/critical-infrastructure-protection-cybersecurity-strategies-governments",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Protect Critical Infrastructure: Cybersecurity Strategies for Governments",
+  "content": "Learn actionable strategies that can help state and local governments protect critical infrastructure and dramatically reduce risk exposure.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

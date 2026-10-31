@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--0c160ca4f7c32960",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/20/battledrones/",
+  "supporting_urls": [],
+  "published_at": "2026-10-20T19:34:19Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--0c160ca4f7c32960.json",
+  "content_hash": "sha256:6cdcd37e23baf6584a02e533501023ca730cbea51c658f3ccb912f1bdf83ec81",
+  "external_id": "https://simonwillison.net/2026/Oct/20/battledrones/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Battle Drones - a vibe coded RTS with audio-based multiplayer",
+  "content": "<p>My latest vibe coded game experiment is a Command &amp; Conquer style RTS (Real Time Strategy) game called <a href=\"https://github.com/simonw/battledrones#readme\">Battle Drones</a> (<a href=\"https://simonw.github.io/battledrones/\">play it here</a>). Unlike <a href=\"https://simonwillison.net/2026/Aug/5/raccoon-heist/\">my previous experiments</a>, this one is <em>actually fun to play</em>. I'm somewhat embarrassed to admit that I got there by telling Claude to \"Make it a LOT more fun\". It also supports multiplayer between nearby devices using audio to synchronize game state! Here's what I've built so far, and some of the things I learned along the way.</p>\n\n<ul>\n  <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/#battle-drones\">Battle Drones</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/#how-i-built-this\">How I built this</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/#v1-the-initial-prototype\">v1: the initial prototype</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/#v2-full-sprites\">v2: full sprites</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/#v3-varied-terrain\">v3: varied terrain</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/#v4-the-fun-update\">v4: the fun update</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/20/battledrones/#v5-battle-drones-goes-3d\">v5: Battle Drones goes 3D</a></li>\n  <li><a href=\"htt",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

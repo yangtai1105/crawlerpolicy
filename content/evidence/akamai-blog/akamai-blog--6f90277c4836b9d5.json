@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6f90277c4836b9d5",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/jul/smash-grab-scale-agentic-ai-reshaping-threat-commerce",
+  "supporting_urls": [],
+  "published_at": "2026-07-15T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6f90277c4836b9d5.json",
+  "content_hash": "sha256:260438936d7ff48a46c0ae8d09f917e8de9e634b6ab9049a24b507b7953cc713",
+  "external_id": "https://www.akamai.com/blog/security/2026/jul/smash-grab-scale-agentic-ai-reshaping-threat-commerce",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Smash and Grab at Scale: Agentic AI Is Reshaping the Threat to Commerce",
+  "content": "The SOTI Security report examines how agentic AI is disrupting commerce security, scaling API abuse, and driving up infrastructure costs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

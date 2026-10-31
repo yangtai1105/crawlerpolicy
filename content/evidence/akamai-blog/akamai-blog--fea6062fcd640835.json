@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--fea6062fcd640835",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/aug/4-threats-ai-applications-new-cybersecurity-strategies",
+  "supporting_urls": [],
+  "published_at": "2025-08-28T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--fea6062fcd640835.json",
+  "content_hash": "sha256:4cc3f113ba8c7f663a86ba2d56267622124c622660ea49c595461e830b29d5f3",
+  "external_id": "https://www.akamai.com/blog/security/2025/aug/4-threats-ai-applications-new-cybersecurity-strategies",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "These 4 Threats to AI Applications Require New Cybersecurity Strategies",
+  "content": "Learn about the four threat categories that today’s cybersecurity teams must address to protect their companies’ AI investments.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

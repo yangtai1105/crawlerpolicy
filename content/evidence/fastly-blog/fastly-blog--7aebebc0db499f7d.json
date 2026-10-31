@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--7aebebc0db499f7d",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/fastlys-proactive-protection-critical-php-rce-cve-2026-109618/",
+  "supporting_urls": [],
+  "published_at": "2026-10-21T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--7aebebc0db499f7d.json",
+  "content_hash": "sha256:dbc4cb7f34a389c40eb8fa520d20ab9bc92ace5695a0d04ace83d7a9b0d6c7f7",
+  "external_id": "https://www.fastly.com/blog/fastlys-proactive-protection-critical-php-rce-cve-2026-109618/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Fastly’s Proactive Protection for PHP2Shell, Critical PHP RCE CVE-2026-109618 and CVE-2026-109619",
+  "content": "Learn about Fastly’s proactive protection and virtual patching for the critical php2shell vulnerabilities (CVE-2026-109618 and CVE-2026-109619). Read our deep dive.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

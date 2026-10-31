@@ -1,0 +1,19 @@
+{
+  "evidence_id": "ucp-spec--2e7c36c823712c50",
+  "source": "ucp-spec",
+  "source_url": "https://github.com/Universal-Commerce-Protocol/ucp/pull/941",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T07:09:18Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/ucp-spec/ucp-spec--2e7c36c823712c50.json",
+  "content_hash": "sha256:1f067a19b9452d56e8a9548342cdc7e4955f3eddacdfb1f6de832a6b121f00a0",
+  "external_id": "pr:941",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #941: chore: backport #690 (media variants) to release/2026-08-25",
+  "content": "# Description\n\nBackports #690 (`feat(media): model image, video, external video, and 3D variants`) to the `release/2026-08-25` release branch.\n\n## Category (Required)\n\n_Please select one or more categories that apply to this change._\n\n- [ ] **Core Protocol**: Changes to the base communication layer, global context, or breaking refactors. (Requires Technical Council approval)\n- [ ] **Governance/Contributing**: Updates to GOVERNANCE.md, CONTRIBUTING.md, or CODEOWNERS. (Requires Governance Council approval)\n- [x] **Capability**: New schemas (Discovery, Cart, etc.) or extensions. (Requires Maintainer approval)\n- [x] **Documentation**: Updates to README, or documentations regarding schema or capabilities. (Requires Maintainer approval)\n- [ ] **Infrastructure**: CI/CD, Linters, or build scripts. (Requires DevOps Maintainer approval)\n- [ ] **Maintenance**: Version bumps, lockfile updates, or minor bug fixes. (Requires DevOps Maintainer approval)\n- [ ] **SDK**: Language-specific SDK updates and releases. (Requires DevOps Maintainer approval)\n- [ ] **Samples / Conformance**: Maintaining samples and the conformance suite. (Requires Maintainer approval)\n- [ ] **UCP Schema**: Changes to the `ucp-schema` tool (resolver, linter, validator). (Requires Maintainer approval)\n- [ ] **Community Health (.github)**: Updates to templates, workflows, or org-level configs. (Requires DevOps Maintainer approval)\n\n## Related Issues\n\nBackport of #690\n\n## Checklist\n\n- [x] I have followed the [Contributing Guide](https://github.com/Universal-Commerce-Protocol/.github/blob/main/CONTRIBUTING.md) (including Conventional Commits title requirements and `!` for breaking changes).\n- [x] I have updated the documentation (if applicable).\n- [x] My changes pass all local linting and formatting checks.\n- [ ] I have added tests that prove my fix is effective or that my feature works.\n- [x] New and existing unit tests pass locally with my changes.\n- [x] (For Core/Capability) I have included/updated the relevant JSON schemas.\n- [ ] I have regenerated Python Pydantic models by running generate_models.sh under python_sdk.\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

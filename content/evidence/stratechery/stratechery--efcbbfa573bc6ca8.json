@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--efcbbfa573bc6ca8",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/at-long-last/",
+  "supporting_urls": [],
+  "published_at": "2026-10-30T17:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stratechery/stratechery--efcbbfa573bc6ca8.json",
+  "content_hash": "sha256:359fa2a2d79926920346d59fe2d0792f0c28c60ca2660eed81356cc2beb0119a",
+  "external_id": "https://stratechery.com/?p=20650",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "2026.44: At Long Last…",
+  "content": "<figure class=\"wp-block-image size-large\"><img alt=\"\" class=\"wp-image-20668\" height=\"1431\" src=\"https://i0.wp.com/stratechery.com/wp-content/uploads/2026/10/GettyImages-2302476744-blog-lead-lossless.png?resize=1700%2C1431&#038;ssl=1\" width=\"1700\" /><figcaption class=\"wp-element-caption\"><em>(Photo by Carmen Mandato/Getty Images)</em></figcaption></figure>\n\n\n\n<p class=\"wp-block-paragraph\">Welcome back to This Week in Stratechery!</p>\n\n\n\n<p class=\"wp-block-paragraph\">As a reminder, each week, every Friday, we&#8217;re sending out this overview of content in the Stratechery bundle; <span class=\"passport-tokenized-link\">highlighted links are free for everyone</span>. Additionally, you have complete control over what we send to you. If you don&#8217;t want to receive This Week in Stratechery emails (there is no podcast), please uncheck the box in <a href=\"https://stratechery.passport.online/member/account/delivery\">your delivery settings</a>.</p>\n\n\n\n<p class=\"wp-block-paragraph\">On that note, here were a few of our favorites this week.</p>\n\n\n\n<ol class=\"wp-block-list is-style-default\">\n<li><strong>Finally, Some Anthropic Numbers.</strong>&nbsp;Monday morning brought us Anthropic’s S-1, and not a moment too soon. After four years of arguments about the economics at frontier labs, we now have some real numbers to sink our teeth into, and <a href=\"https://stratechery.com/2026/anthropic-s-1-the-cost-of-compute-who-is-paying/\">Ben did just that with his Update on Tuesday</a>. Come for ",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

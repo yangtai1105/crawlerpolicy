@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--795a156a56997efa",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/performance/2026/jul/hidden-latency-tax-in-retail-personalization",
+  "supporting_urls": [],
+  "published_at": "2026-07-06T21:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--795a156a56997efa.json",
+  "content_hash": "sha256:e8d87175c3b90bbda1da52832bd5d3e8c294d21c45f94c3fd2a9ab2cb19b59f4",
+  "external_id": "https://www.akamai.com/blog/performance/2026/jul/hidden-latency-tax-in-retail-personalization",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "The Hidden Latency Tax in Retail Personalization",
+  "content": "Every personalization decision adds latency that has a measurable cost in conversions and order value. Learn where that cost comes from — and how to avoid paying it.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

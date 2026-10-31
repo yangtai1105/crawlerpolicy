@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--d6004129fe6b3999",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/releases/tag/v0.2.3",
+  "supporting_urls": [],
+  "published_at": "2025-06-14T19:20:49Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--d6004129fe6b3999.json",
+  "content_hash": "sha256:701dc27d3a11f9433c075d37a561e08b0c2668a51648f1755285b56bcfb40a30",
+  "external_id": "release:225353469",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Release v0.2.3",
+  "content": "## [0.2.3](https://github.com/google-a2a/A2A/compare/v0.2.2...v0.2.3) (2025-06-12)\n\n\n### Bug Fixes\n\n* Address some typos in gRPC annotations ([#747](https://github.com/google-a2a/A2A/issues/747)) ([f506881](https://github.com/google-a2a/A2A/commit/f506881c9b8ff0632d7c7107d5c426646ae31592))",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

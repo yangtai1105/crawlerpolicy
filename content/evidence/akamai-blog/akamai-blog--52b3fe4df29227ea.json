@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--52b3fe4df29227ea",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2023/jan/top-5-browsers-how-secure-are-they",
+  "supporting_urls": [],
+  "published_at": "2023-01-25T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--52b3fe4df29227ea.json",
+  "content_hash": "sha256:cd167997bdf7596bab8c6971aa6b1bf20d85e17fedaece826fa549d733d1aee2",
+  "external_id": "https://www.akamai.com/blog/security/2023/jan/top-5-browsers-how-secure-are-they",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Top 5 Browsers – How Secure Are They for Your Business?",
+  "content": "The top 5 browsers: security features, vulnerabilities, strengths and weaknesses and tips for improving browser security. Which one should you choose?",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

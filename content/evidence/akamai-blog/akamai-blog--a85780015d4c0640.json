@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a85780015d4c0640",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2025/jun/enhance-edge-native-apps-low-latency-multiple-edgeworkers",
+  "supporting_urls": [],
+  "published_at": "2025-06-11T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a85780015d4c0640.json",
+  "content_hash": "sha256:466ec9838a7f83b7fd22350f53d6f2a7b702a2c76becc0866dff8ba1f7cd3cd9",
+  "external_id": "https://www.akamai.com/blog/edge/2025/jun/enhance-edge-native-apps-low-latency-multiple-edgeworkers",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Enhance Your Edge Native Apps with Low Latency Using Multiple EdgeWorkers",
+  "content": "Learn how Flexible Composition lets you seamlessly deploy multiple EdgeWorkers in a single request for easier-to-build, scalable, edge native applications.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

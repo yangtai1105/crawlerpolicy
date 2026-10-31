@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7f214a342dcbe134",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/nov/beyond-nsx-strategic-alternative-vmware-customers",
+  "supporting_urls": [],
+  "published_at": "2025-11-25T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7f214a342dcbe134.json",
+  "content_hash": "sha256:c262caf64199f7f4ea796f5ed3e11158f248200b67b2450b920c8b14172a6335",
+  "external_id": "https://www.akamai.com/blog/security/2025/nov/beyond-nsx-strategic-alternative-vmware-customers",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Beyond NSX: A Strategic Alternative for VMware Customers",
+  "content": "Broadcom’s VMware acquisition has driven up costs and complexity. Akamai Guardicore Segmentation offers a modern, secure, and cost-efficient path beyond NSX.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

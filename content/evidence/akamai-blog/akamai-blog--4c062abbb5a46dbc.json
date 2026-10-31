@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--4c062abbb5a46dbc",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2026/aug/identifying-agentic-automation-behavioral-telemetry",
+  "supporting_urls": [],
+  "published_at": "2026-08-19T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--4c062abbb5a46dbc.json",
+  "content_hash": "sha256:da9cdab5146dd2bae85218f03fb27dee4a177f2329daf2cd1a2a26dfbe2fa230",
+  "external_id": "https://www.akamai.com/blog/security-research/2026/aug/identifying-agentic-automation-behavioral-telemetry",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Identifying Agentic Automation with Behavioral Telemetry",
+  "content": "Learn how Akamai uses Masked Autoencoder Transformer models to detect sparse behavioral telemetry from autonomous AI browser agents, such as Comet.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

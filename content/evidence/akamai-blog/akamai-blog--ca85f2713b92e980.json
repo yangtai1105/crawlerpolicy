@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ca85f2713b92e980",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/jul/beyond-perimeter-defense-implementing-zero-trust-federal-agencies",
+  "supporting_urls": [],
+  "published_at": "2025-07-25T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ca85f2713b92e980.json",
+  "content_hash": "sha256:c2266eba4136b8e72e060c114dea7380d03721f6f12defe6f32e86575599eeb8",
+  "external_id": "https://www.akamai.com/blog/security/2025/jul/beyond-perimeter-defense-implementing-zero-trust-federal-agencies",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Beyond Perimeter Defense: Implementing Zero Trust in Federal Agencies",
+  "content": "Learn how to address cybersecurity in this new perimeter-less world and get six steps to achieving Least Permissive Trust for federal agencies.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--9745873331052a6f",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+  "supporting_urls": [],
+  "published_at": "2026-10-29T14:06:27Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--9745873331052a6f.json",
+  "content_hash": "sha256:4b925c2a57717143e64ec42d4e33072eec9b661556a53948340216867a3c1337",
+  "external_id": "https://simonwillison.net/2026/Oct/29/ben-hylak/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Quoting Ben Hylak",
+  "content": "<blockquote cite=\"https://twitter.com/benhylak/status/2115172657910120740\"><p>every product i use should just be a headless mcp, that feeds into an agent, where i never have to think about anything underneath.</p>\n<p>except for our product, of course. </p>\n<p>in our product, customers love the ui and love us very much.</p>\n<p>we're special that way.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://twitter.com/benhylak/status/2115172657910120740\">Ben Hylak</a></p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/model-context-protocol\">model-context-protocol</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

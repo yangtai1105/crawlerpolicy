@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--1bf9dcc726688638",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/beyond-blocking-creative-ways-detect-hamper-video-piracy/",
+  "supporting_urls": [],
+  "published_at": "2026-10-15T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--1bf9dcc726688638.json",
+  "content_hash": "sha256:377e35b16397348c37b2a0e8df8fbb2d4c4fd1b3cb5adda6184415187a5baaa3",
+  "external_id": "https://www.fastly.com/blog/beyond-blocking-creative-ways-detect-hamper-video-piracy/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Beyond Blocking: Creative Ways to Detect and Hamper Video Piracy",
+  "content": "Discover smart ways to mitigate live video piracy, slow down restreamers with clever CDN tricks, and protect your streams.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

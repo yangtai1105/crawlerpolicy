@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ed7572c78ebca210",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/you-need-both-zero-trust-and-edr-xdr",
+  "supporting_urls": [],
+  "published_at": "2022-12-15T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ed7572c78ebca210.json",
+  "content_hash": "sha256:52a9e48d9cbd30652736ae45ac3aefd5ed999d3177da82418afa075d5ad3a7ea",
+  "external_id": "https://www.akamai.com/blog/security/you-need-both-zero-trust-and-edr-xdr",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Why Do I Need Zero Trust on My Endpoint If I Have EDR/XDR?",
+  "content": "Do you need a Zero Trust solution if you have EDR/XDR installed? The short answer is yes — you need both.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

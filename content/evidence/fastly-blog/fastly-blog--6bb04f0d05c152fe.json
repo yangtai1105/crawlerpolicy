@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--6bb04f0d05c152fe",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/video-data-myth-why-ai-hasnt-watched-internet-yet/",
+  "supporting_urls": [],
+  "published_at": "2026-10-08T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--6bb04f0d05c152fe.json",
+  "content_hash": "sha256:e089c5ae7d5061ca5a4b721413a9c731ffbdbf4dfb8e0046d8f17e72e51fb0cc",
+  "external_id": "https://www.fastly.com/blog/video-data-myth-why-ai-hasnt-watched-internet-yet/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The Video Data Myth: Why AI Hasn't \"Watched\" the Internet Yet",
+  "content": "AI hasn't watched the internet yet – not due to speed, but token costs and a lack of video labels. Discover the real data bottleneck.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

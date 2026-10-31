@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--e4d280fa5bf84577",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/jul/pqc-migration-deadline-dns-estate",
+  "supporting_urls": [],
+  "published_at": "2026-07-23T09:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--e4d280fa5bf84577.json",
+  "content_hash": "sha256:39bb98447e965a36c55cc7bfa58b45d285afb7382f9bf31d9ee6b24e93bc99ec",
+  "external_id": "https://www.akamai.com/blog/security/2026/jul/pqc-migration-deadline-dns-estate",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "PQC Migration Now Has a Deadline. Does Your DNS Estate?",
+  "content": "Learn why crypto-agility depends not just on adopting the right standards, but on maintaining a clear, unified view of your DNS environment before the migration begins.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

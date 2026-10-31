@@ -1,0 +1,19 @@
+{
+  "evidence_id": "acp-spec--a12eedf3a3b91431",
+  "source": "acp-spec",
+  "source_url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/pull/266",
+  "supporting_urls": [],
+  "published_at": "2026-06-15T23:48:10Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/acp-spec/acp-spec--a12eedf3a3b91431.json",
+  "content_hash": "sha256:239742ee01f576977340ac69a664fdba87d4d2842b899cb5a50ab3d34c974fa0",
+  "external_id": "pr:266",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "PR #266: fix: unwrap error envelope in released delegate_payment OpenAPI examples",
+  "content": "## Type of Change\r\n- [x] Bug fix (non-breaking)\r\n- [x] Example update\r\n\r\n## Description\r\nThis is the released-version follow-up to #243, pulled out of #252 after review feedback. #252 now only adds the validator, and this PR only carries the example fix.\r\n\r\n#243 removed the `error:` wrapper from the inline error response examples in `spec/unreleased/openapi/openapi.delegate_payment.yaml` and noted that the released versions still had the same wrapper, to be cleaned up later. This is that cleanup.\r\n\r\nThe `Error` schema is `additionalProperties: false` with `type`, `code`, and `message` required at the top level, so the wrapped `{ error: { ... } }` examples never matched the schema they reference. This PR drops the wrapper and lifts the fields up a level. None of the `type`, `code`, `message`, or `param` values change.\r\n\r\n37 examples were unwrapped: 7 each in 2025-09-29, 2025-12-12, 2026-01-16, and 2026-01-30, and 9 in 2026-04-17.\r\n\r\n## Motivation and Context\r\nThe wrapped examples never validated against the schema they point at, so anyone reading the spec or generating code from them gets the wrong shape for an error response. #243 fixed this for the unreleased spec and left the released versions for a separate change. Keeping it apart from the validator in #252 makes both easier to review.\r\n\r\n## Testing\r\n`pnpm run compile:schema` and `pnpm run validate:all` both pass. The diff only removes the wrapper line and re-indents the fields under it, so no example values change. I also ran the validator from #252 against these unwrapped files to confirm the combined result is clean.\r\n\r\n## Screenshots / Examples\r\nBefore (`spec/2026-04-17/openapi/openapi.delegate_payment.yaml`):\r\n\r\n```yaml\r\nunauthorized:\r\n  value:\r\n    error:\r\n      type: unauthorized\r\n      code: unauthorized\r\n      message: Unauthorized\r\n```\r\n\r\nAfter:\r\n\r\n```yaml\r\nunauthorized:\r\n  value:\r\n    type: unauthorized\r\n    code: unauthorized\r\n    message: Unauthorized\r\n```\r\n\r\n## Checklist\r\n- [x] My change follows the project's code style and conventions\r\n- [x] I added a changelog entry at `changelog/unreleased/unwrap-error-envelope-released-delegate-payment.md`\r\n- [x] I tested locally (`pnpm run compile:schema` and `pnpm run validate:all`)\r\n- [x] This change does not require a SEP (mechanical example fix, same shape as #243)\r\n\r\n## Scope Verification\r\n- [x] Minor, straightforward change. No protocol features, no schema changes, no breaking changes. Only example values lose their wrapper.\r\n\r\n## Additional Notes\r\nOnce this and #252 both land, the `invalid_request` examples validate cleanly. The 401, 429, 500, and 503 examples still fail, but only because of the `Error` enum gaps tracked in #161, which is a separate issue. At that point the six `delegate_payment|#/components/schemas/Error|*` allowlist entries #252 adds for these examples can be removed.\r\n\r\nRelated: follows #243, companion to #252, tracks #161 and #21.\r\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

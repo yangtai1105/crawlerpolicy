@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--27ee0dcd573ef39d",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+  "supporting_urls": [],
+  "published_at": "2026-10-28T13:55:15Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--27ee0dcd573ef39d.json",
+  "content_hash": "sha256:849dcd8e1370427c1461de10156dd7b8b12831af2b1af3368c5ca9834067e1a6",
+  "external_id": "https://simonwillison.net/2026/Oct/28/vibe-game-development/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The October inflection point for vibe game development",
+  "content": "<p>I've written before about how November 2025 was <a href=\"https://simonwillison.net/tags/november-2025-inflection/\">an inflection point for coding agents</a> - the point where Opus 4.5 and GPT-5.1 crossed a tipping point that meant their respective coding agents became reliable daily drivers for software engineers. I think we've reached a new inflection point in October 2026, and this time it's for <strong>vibe coding computer games</strong>.</p>\n\n<ul>\n  <li><a href=\"https://simonwillison.net/2026/Oct/28/vibe-game-development/#tree-appreciator\">Tree Appreciator</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/28/vibe-game-development/#emberwick\">Emberwick</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/28/vibe-game-development/#battle-drones\">Battle Drones</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/28/vibe-game-development/#pumpkin-farmer-aka-quarter-sun-cove\">Pumpkin Farmer, aka Quarter Sun Cove</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/28/vibe-game-development/#four-times-as-insulting\">Four times as insulting</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/28/vibe-game-development/#what-happens-if-someone-actually-puts-the-work-in-\">What happens if someone actually puts the work in?</a></li>\n  <li><a href=\"https://simonwillison.net/2026/Oct/28/vibe-game-development/#you-should-build-a-game-\">You should build a game!</a></li>\n</ul>\n\n<p>Claude Opus 5.5 in particular exhibits meaningful improvements in several ",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

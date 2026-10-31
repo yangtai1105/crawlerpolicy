@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--250bed506b2cc067",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/catch-me-if-you-can-evasive-and-defensive-techniques-in-phishing",
+  "supporting_urls": [],
+  "published_at": "2019-06-12T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--250bed506b2cc067.json",
+  "content_hash": "sha256:833c26ed46f08e9006668a92418836cbd5fbc6876153fb2352a2ed7d63f3aa6a",
+  "external_id": "https://www.akamai.com/blog/security/catch-me-if-you-can-evasive-and-defensive-techniques-in-phishing",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Catch Me If You Can: Evasive and Defensive Techniques in Phishing",
+  "content": "Phishing is a multifaceted type of attack, aimed at collecting usernames and passwords, personal information, or sometimes both. Yet, these attacks only work so long as the phishing kit itself remains hidden. Phishing is a numbers game and time is...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

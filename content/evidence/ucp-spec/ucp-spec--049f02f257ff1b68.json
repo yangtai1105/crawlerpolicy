@@ -1,0 +1,19 @@
+{
+  "evidence_id": "ucp-spec--049f02f257ff1b68",
+  "source": "ucp-spec",
+  "source_url": "https://github.com/Universal-Commerce-Protocol/ucp/pull/940",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T02:22:46Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/ucp-spec/ucp-spec--049f02f257ff1b68.json",
+  "content_hash": "sha256:57612119c47abc62617c0db7ddd9c5e78cc76ddec9f0d2b77e7551005effa27e",
+  "external_id": "pr:940",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #940: fix(checkout): allow cart-only checkout creation",
+  "content": "Allow a Platform to create a Checkout from a negotiated Cart without sending an ignored `line_items: []` placeholder:\n\n```json\n{\"cart_id\": \"cart_abc123\"}\n```\n\nPR #910 documented the workaround imposed by the base Checkout schema. This fixes the requirement at its source and makes the schema express the existing choice between inline items and Cart contents.\n\n## Changes\n\n- Declare `cart_id` as a create-only Checkout input.\n- Require `line_items` or `cart_id` using operation-scoped `anyOf`; accept both and preserve Cart precedence.\n- Keep legacy empty-array requests valid and reject requests with neither source.\n- Keep update, complete, and response item requirements unchanged.\n- Explicitly mark `cart_id` input-only, correcting unintended response exposure caused by a missing applicability annotation.\n- Update the Cart conversion example, simplify the companion prose, and add base/composed-schema regression coverage.\n\nNo new operation, transport wrapper, resolver vocabulary, or source framework. Existing REST/MCP schema references inherit the change. Cart negotiation and resource validation remain separate from request-shape validation.\n\n## Compatibility\n\nThe request relaxation preserves existing conforming request shapes, including Cart conversion with `line_items: []`. Platforms may omit the field only when using the updated contract; older receivers retain their old requirement.\n\n---\n\n## Checklist\n\n- [x] **Capability**: New schemas (Discovery, Cart, etc.) or extensions.\n- [x] I have followed the [Contributing Guide](https://github.com/Universal-Commerce-Protocol/.github/blob/main/CONTRIBUTING.md)\n- [x] I have updated the documentation (if applicable).\n- [x] My changes pass all local linting and formatting checks.\n- [x] I have added tests that prove my fix is effective or that my feature works.\n\n\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

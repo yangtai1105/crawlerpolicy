@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--c4a4813c08252fb8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/containers-vs-virtual-machines-cheat-sheet",
+  "supporting_urls": [],
+  "published_at": "2019-05-14T18:56:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--c4a4813c08252fb8.json",
+  "content_hash": "sha256:96c75ab54a3b373771ca3cc3b07c92a207a0098fd96cd279b6be919f05dacb36",
+  "external_id": "https://www.akamai.com/blog/security/containers-vs-virtual-machines-cheat-sheet",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Containers vs Virtual Machines – Your Cheat Sheet to Know the Differences",
+  "content": "Containers vs virtual machines is an ongoing debate in many IT shops around the world. Learn what makes each unique, their common use cases, and how to keep both secure.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

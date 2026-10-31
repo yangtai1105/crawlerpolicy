@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--ec86d61df5ecfd78",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/new-ddos-playbook-lessons-from-khan-academy-yottaa-magnolia/",
+  "supporting_urls": [],
+  "published_at": "2026-09-15T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--ec86d61df5ecfd78.json",
+  "content_hash": "sha256:50d47fee7472882beeb020dd88ea746c9617bf686134d4383a8e4153a6dd9f31",
+  "external_id": "https://www.fastly.com/blog/new-ddos-playbook-lessons-from-khan-academy-yottaa-magnolia/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The New DDoS Playbook: Lessons from Khan Academy, Yottaa, and Magnolia",
+  "content": "Khan Academy, Yottaa, and Magnolia stop DDoS attacks with automation that reacts faster than any team could. See how Fastly protects them at scale.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

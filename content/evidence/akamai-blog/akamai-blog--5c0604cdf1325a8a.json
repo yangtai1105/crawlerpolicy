@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--5c0604cdf1325a8a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/determining-malicious-probabilities-through-asns",
+  "supporting_urls": [],
+  "published_at": "2022-08-02T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--5c0604cdf1325a8a.json",
+  "content_hash": "sha256:9f0b7a4812063752d033dc363c79b3b1546eceaffce7d5ccb409a02890a1681b",
+  "external_id": "https://www.akamai.com/blog/security/determining-malicious-probabilities-through-asns",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Risky Business: Determining Malicious Probabilities Through ASNs",
+  "content": "Akamai researchers have analyzed ASNs to determine some shocking stats about the state of malicious IPs and where they are from.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

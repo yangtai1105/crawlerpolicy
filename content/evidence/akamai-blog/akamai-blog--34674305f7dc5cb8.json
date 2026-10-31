@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--34674305f7dc5cb8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/2026/jul/when-ai-models-outgrow-storage",
+  "supporting_urls": [],
+  "published_at": "2026-07-08T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--34674305f7dc5cb8.json",
+  "content_hash": "sha256:54d713119f7eb4a3a15a77276d4fbff828346d7a28a644672698dfc5f012b79b",
+  "external_id": "https://www.akamai.com/blog/cloud/2026/jul/when-ai-models-outgrow-storage",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "When AI Models Outgrow Storage",
+  "content": "Discover how Akamai Object Storage absorbs high-frequency machine data, mitigates egress costs, and scales production AI model outputs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

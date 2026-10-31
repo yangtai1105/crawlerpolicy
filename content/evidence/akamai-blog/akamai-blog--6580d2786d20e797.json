@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6580d2786d20e797",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/akamai-data-privacy-compliance",
+  "supporting_urls": [],
+  "published_at": "2022-02-16T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6580d2786d20e797.json",
+  "content_hash": "sha256:718b7ad63aaedf4e5792f1edfdd91573559f41f8013b263d02efca0d448429b8",
+  "external_id": "https://www.akamai.com/blog/security/akamai-data-privacy-compliance",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai’s Compliance with Cross-border Transfer Laws",
+  "content": "Akamai is compliant with applicable data privacy regulations in countries where we and our customers conduct business. This is a fundamental tenet of our company’s core values. After all, when you make life better for billions of people, billions of times a day, there’s an expectation that you will also protect their lives online. And that is exactly what we do.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

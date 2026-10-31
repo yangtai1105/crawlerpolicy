@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--8e29cf19e897d4f8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/datacenter-traces",
+  "supporting_urls": [],
+  "published_at": "2018-08-06T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--8e29cf19e897d4f8.json",
+  "content_hash": "sha256:2cee854a8355957f0df4f916a6082b456966e0069749f5e03fd5f58eb11c2daf",
+  "external_id": "https://www.akamai.com/blog/security/datacenter-traces",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Datacenter Traces",
+  "content": "In our research we use actual traces, collected from different production datacenters.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

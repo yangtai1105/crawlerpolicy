@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--fc8051b60f557b61",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts",
+  "supporting_urls": [],
+  "published_at": "2026-10-30T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--fc8051b60f557b61.json",
+  "content_hash": "sha256:f11095f94438be816c7dd3dbba55a6a5da851181d1dc5a3f793172733d3661df",
+  "external_id": "https://stripe.com/blog/stripe-on-stripe-what-we-learned-moving-1b-in-vendor-payments-to-global-payouts",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Stripe on Stripe: What we learned moving $1B in vendor payments to Global Payouts",
+  "content": "In early 2026, we began moving our vendor payments to Global Payouts, Stripe’s product for paying recipients in 160+ countries. New-market setup fell from six weeks to one, with a 99.9% payout success rate. Here’s what we learned.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

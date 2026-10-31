@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--44aad8030a9325cb",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2024/oct/pay-attention-to-your-non-production-subdomains",
+  "supporting_urls": [],
+  "published_at": "2024-10-17T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--44aad8030a9325cb.json",
+  "content_hash": "sha256:35568c596aac92720e0f28fd9a61ade67e42667a1d7a37a122840ae3d03996f2",
+  "external_id": "https://www.akamai.com/blog/developers/2024/oct/pay-attention-to-your-non-production-subdomains",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Pay Attention to Your Non-Production Subdomains",
+  "content": "It’s common for security teams to focus their best efforts on an organization’s primary production domain.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--a07647b64c8af3e8",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/21/php-security-release/",
+  "supporting_urls": [],
+  "published_at": "2026-10-21T18:41:53Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--a07647b64c8af3e8.json",
+  "content_hash": "sha256:c7b84971fa0eeb8128adfa18fafb3a5688985d44c48967ae0a9a6c9652f68a85",
+  "external_id": "https://simonwillison.net/2026/Oct/21/php-security-release/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Today's PHP Security Release, and How We're Strengthening PHP Security",
+  "content": "<p><strong><a href=\"https://thephp.foundation/blog/2026/10/21/todays-php-security-release-and-how-were-strengthening-php-security/\">Today&#x27;s PHP Security Release, and How We&#x27;re Strengthening PHP Security</a></strong></p>\nIf you're running anything on PHP it's vital you upgrade - today's updates (across the entire PHP 8.x line) address two remote code execution holes, and there have been exploits circulating since last night, thanks to a leak in the coordinated disclosure process.</p>\n<p>This post from the PHP Foundation explain what went so wrong:</p>\n<blockquote>\n<p>On Tuesday, October 20th, at around 15:00 UTC, the two CVE IDs began circulating on online forums and social media. They came with a wrong release time and a wrong CVSS score of 10.0 (the actual score is 9.2). No technical details leaked. In response, the PHP project brought its pre-announcement forward and <a href=\"https://www.php.net/archive/2026.php#2026-10-20-1\">published it at 19:30 UTC</a>. It also moved the release from October 22nd, 14:00 UTC, to October 21st, 14:00 UTC [...]</p>\n<p>As a result of the leak and pre-announcement around 20:00 UTC, Calif, one of the security firms that had reported the issues mistakenly published a video. It showed their proof of concept working against a number of targets and revealed a few additional, though limited, details about the vulnerabilities. Copies of the deleted video started circulating on social media soon after. The video contributed to accelerated de",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

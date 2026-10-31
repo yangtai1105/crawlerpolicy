@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a1879f4d4a92764d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2026/may/stealthy-p2p-cryptominer-ollama-endpoints",
+  "supporting_urls": [],
+  "published_at": "2026-05-21T20:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a1879f4d4a92764d.json",
+  "content_hash": "sha256:32743cbbffd5fcc8135407f81c6940a0115f206e84233051f971aa96715933c3",
+  "external_id": "https://www.akamai.com/blog/security-research/2026/may/stealthy-p2p-cryptominer-ollama-endpoints",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Decentralized Threat: Stealthy P2P Cryptominer Targeting Ollama Endpoints",
+  "content": "The Akamai SIRT uncovered a custom P2P Trojan masquerading as system activity. Learn how to detect and mitigate this stealthy Go-based cryptominer.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

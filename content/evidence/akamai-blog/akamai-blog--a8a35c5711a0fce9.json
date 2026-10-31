@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a8a35c5711a0fce9",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/aug/accelerating-enterprise-ai-proof-concept-production",
+  "supporting_urls": [],
+  "published_at": "2026-08-06T17:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a8a35c5711a0fce9.json",
+  "content_hash": "sha256:94d17eb072cc85dd69f228c49150ea4c4716a82b4a7d5a3910b5957e6d155cd2",
+  "external_id": "https://www.akamai.com/blog/ai/2026/aug/accelerating-enterprise-ai-proof-concept-production",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Accelerating Enterprise AI from Proof of Concept to Production",
+  "content": "Discover how Akamai AI Professional Services helps enterprises bridge the gap from proof of concept to secure, scalable, and manageable production AI.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

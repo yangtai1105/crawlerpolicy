@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--20ba8a6452f20844",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/akamai-connected-cloud-most-distributed-cloud-platform",
+  "supporting_urls": [],
+  "published_at": "2023-02-14T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--20ba8a6452f20844.json",
+  "content_hash": "sha256:3fae58327b54e2e28ffe4ba5588ec8a37c45001604f57c7adb04b089b11dfb52",
+  "external_id": "https://www.akamai.com/blog/cloud/akamai-connected-cloud-most-distributed-cloud-platform",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Cloud: The World’s Most Distributed Cloud Platform",
+  "content": "Introducing Akamai Connected Cloud, the massively distributed edge and cloud platform for cloud computing, security, and content delivery.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

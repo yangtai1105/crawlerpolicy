@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--1c8eb43ad30e3e9a",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/releases/tag/v0.3.0",
+  "supporting_urls": [],
+  "published_at": "2025-07-30T17:05:22Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--1c8eb43ad30e3e9a.json",
+  "content_hash": "sha256:89db037019b23b510cca2c54adda7e2bb1d99636a0613e41f101b610204adb0b",
+  "external_id": "release:236349720",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Release v0.3.0",
+  "content": "## [0.3.0](https://github.com/a2aproject/A2A/compare/v0.2.6...v0.3.0) (2025-07-30)\r\n\r\n\r\n### ⚠ BREAKING CHANGES\r\n\r\n* Add mTLS to SecuritySchemes, add oauth2 metadata url field, allow Skills to specify Security ([#901](https://github.com/a2aproject/A2A/issues/901))\r\n* Change Well-Known URI for Agent Card hosting from `agent.json` to `agent-card.json` ([#841](https://github.com/a2aproject/A2A/issues/841))\r\n* Add method for fetching extended card ([#929](https://github.com/a2aproject/A2A/issues/929))\r\n\r\n### Features\r\n\r\n* Add `signatures` to the `AgentCard` ([#917](https://github.com/a2aproject/A2A/issues/917)) ([ef4a305](https://github.com/a2aproject/A2A/commit/ef4a30505381e99b20103724cabef024389bacef))\r\n* Add method for fetching extended card ([#929](https://github.com/a2aproject/A2A/issues/929)) ([2cd7d98](https://github.com/a2aproject/A2A/commit/2cd7d98bc8566601b9a18ca8afe92a0b4d203248))\r\n* Add mTLS to SecuritySchemes, add oauth2 metadata url field, allow Skills to specify Security ([#901](https://github.com/a2aproject/A2A/issues/901)) ([e162c0c](https://github.com/a2aproject/A2A/commit/e162c0c6c4f609d2f4eef9042466d176ec75ebda))\r\n\r\n\r\n### Bug Fixes\r\n\r\n* **spec:** Add `SendMessageRequest.request` `json_name` mapping to `message` ([#904](https://github.com/a2aproject/A2A/issues/904)) ([2eef3f6](https://github.com/a2aproject/A2A/commit/2eef3f6113851e690cee70a1b1643e1ffd6d2a60))\r\n* **spec:** Add Transport enum to specification ([#909](https://github.com/a2aproject/A2A/issues/909)) ([e834347](https://github.com/a2aproject/A2A/commit/e834347c279186d9d7873b352298e8b19737dd5a))\r\n\r\n\r\n### Code Refactoring\r\n\r\n* Change Well-Known URI for Agent Card hosting from `agent.json` to `agent-card.json` ([#841](https://github.com/a2aproject/A2A/issues/841)) ([0858ddb](https://github.com/a2aproject/A2A/commit/0858ddb884dc4671681fd819648dfd697176abb3))",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--e1f2cf81545bb13f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/whats-new-for-developers-october-2022",
+  "supporting_urls": [],
+  "published_at": "2022-10-24T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--e1f2cf81545bb13f.json",
+  "content_hash": "sha256:bc5e21629a6b84fa19d0ffbb0735da17478100c8226a4a35fd6ad83d471a9171",
+  "external_id": "https://www.akamai.com/blog/developers/whats-new-for-developers-october-2022",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "What’s New for Developers: October 2022",
+  "content": "Read about our new Postman collections, the latest Akamai PowerShell release, our improvements to Edge Diagnostics, and how to quickly integrate Linode with Akamai.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

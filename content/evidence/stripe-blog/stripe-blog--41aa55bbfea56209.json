@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stripe-blog--41aa55bbfea56209",
+  "source": "stripe-blog",
+  "source_url": "https://stripe.com/blog/where-pricing-is-headed",
+  "supporting_urls": [],
+  "published_at": "2026-10-01T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/stripe-blog/stripe-blog--41aa55bbfea56209.json",
+  "content_hash": "sha256:e925901cd38131bde6909af9788980949e33e5345fa9dfc149a83957579c9bef",
+  "external_id": "https://stripe.com/blog/where-pricing-is-headed",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Why I tried to kill token billing (and why we kept it)",
+  "content": "Token billing is useful infrastructure, but usually a bad customer-facing pricing model. Your invoice should define the value your product delivers, not break down what it cost you to create it.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

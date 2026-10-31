@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--130d17d5e2c66494",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2026/jul/customers-choice-2026-gartner-edge-distribution-platforms",
+  "supporting_urls": [],
+  "published_at": "2026-07-21T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--130d17d5e2c66494.json",
+  "content_hash": "sha256:53dc2700b835a5b9ad18c78a2de2783dc6fc0be13fc6f849145073139b44e581",
+  "external_id": "https://www.akamai.com/blog/edge/2026/jul/customers-choice-2026-gartner-edge-distribution-platforms",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Recognized as a Customers’ Choice in the 2026 Gartner® Peer Insights™ Voice of the Customer for Edge Distribution Platforms",
+  "content": "Customers named Akamai a 2026 GartnerⓇ Peer Insights™ Customers’ Choice for Edge Distribution Platforms. See why they trust us to scale and secure their apps.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

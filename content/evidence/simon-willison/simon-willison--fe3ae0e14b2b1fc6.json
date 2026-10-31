@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--fe3ae0e14b2b1fc6",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/17/web-edit/",
+  "supporting_urls": [],
+  "published_at": "2026-10-17T13:16:49Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--fe3ae0e14b2b1fc6.json",
+  "content_hash": "sha256:d2fc501c1ef79d13611dc9a4c58a2d57308b2ffb4968475c7b356f4d35f2ab66",
+  "external_id": "https://simonwillison.net/2026/Oct/17/web-edit/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "web-edit 0.1a2",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/web-edit/releases/tag/0.1a2\">web-edit 0.1a2</a></p>\n        <p>web-edit (<a href=\"https://simonwillison.net/2026/Oct/12/web-edit/\">previously</a>) is my tiny web app for browsing and editing files in a folder. I mainly built it for editing files on different machines via Tailscale.</p>\n<p>I added a \"copy to clipboard\" option for both text and image data. I needed this because I was running pelican prompts on a laptop from my phone (here's <a href=\"https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fb1cec9726b6aa62d4de47100f90f0c1a\">DeepSeek 4.1 Flash 1017</a>) and I wanted an easy way to copy the resulting logs into a Gist.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/projects\">projects</a>, <a href=\"https://simonwillison.net/tags/pelican-riding-a-bicycle\">pelican-riding-a-bicycle</a>, <a href=\"https://simonwillison.net/tags/deepseek\">deepseek</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

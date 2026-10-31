@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a2ad630aeee02c24",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers",
+  "supporting_urls": [],
+  "published_at": null,
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a2ad630aeee02c24.json",
+  "content_hash": "sha256:5ef8ebdb4d9c66b4994f37de8de0f9cc061b89be2abeca087e9e84024e19e805",
+  "external_id": "https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PLEASE_READ_ME: The Opportunistic Ransomware Devastating MySQL Servers",
+  "content": "Guardicore Labs uncovers a Ransomware detection campaign targeting MySQL servers. Attackers use Double Extortion and publish data to pressure victims.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

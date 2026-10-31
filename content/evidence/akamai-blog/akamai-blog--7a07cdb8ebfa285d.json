@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7a07cdb8ebfa285d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/jun/beyond-implementation-building-zero-trust-strategy-works",
+  "supporting_urls": [],
+  "published_at": "2025-06-11T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7a07cdb8ebfa285d.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security/2025/jun/beyond-implementation-building-zero-trust-strategy-works",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Beyond Implementation: Building a Zero Trust Strategy That Works",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

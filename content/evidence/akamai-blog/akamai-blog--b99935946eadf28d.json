@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b99935946eadf28d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/magecart-attack-disguised-as-google-tag-manager",
+  "supporting_urls": [],
+  "published_at": "2023-02-15T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b99935946eadf28d.json",
+  "content_hash": "sha256:fd30dc562f069bd60d557c90cc289cd6418e001784bd060303eb6938e9ff1e81",
+  "external_id": "https://www.akamai.com/blog/security/magecart-attack-disguised-as-google-tag-manager",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Magecart Attack Disguised as Google Tag Manager",
+  "content": "Magecart skimmers constantly evolve. Recent attacks aimed at stealing sensitive customer information illustrate the need for comprehensive security solutions.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--06d0a5f271646a12",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/introduction-to-dns-data-exfiltration",
+  "supporting_urls": [],
+  "published_at": "2017-09-21T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--06d0a5f271646a12.json",
+  "content_hash": "sha256:bb236fd64b35518db1ccc2cb7553e8bf0c75fa5a6a7884bce97ce46fb94b1eaf",
+  "external_id": "https://www.akamai.com/blog/news/introduction-to-dns-data-exfiltration",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Introduction to DNS Data Exfiltration",
+  "content": "Written by Asaf Nadler and Avi Aminov Updated 2/14/19 After the initial publication of this blog post, Asaf Nadler and Avi Aminov wrote a paper on the detection of malicious and low throughput data exfiltration over the DNS protocol. The...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

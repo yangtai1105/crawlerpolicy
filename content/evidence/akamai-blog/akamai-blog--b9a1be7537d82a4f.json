@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b9a1be7537d82a4f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/feb/address-challenges-compliance-cybersecurity-zero-trust",
+  "supporting_urls": [],
+  "published_at": "2024-03-01T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b9a1be7537d82a4f.json",
+  "content_hash": "sha256:6435313a74e6ba7462209a66b421d00bce378b3a5bbd521410b748449055d1fe",
+  "external_id": "https://www.akamai.com/blog/security/2024/feb/address-challenges-compliance-cybersecurity-zero-trust",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Address the Challenges of Compliance and Cybersecurity with Zero Trust",
+  "content": "The intersection of compliance and cybersecurity is an opportunity for your organization to adopt solutions that simultaneously solve challenges in both areas.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

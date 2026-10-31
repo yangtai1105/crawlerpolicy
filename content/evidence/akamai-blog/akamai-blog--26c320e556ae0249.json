@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--26c320e556ae0249",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/centra-update-r26",
+  "supporting_urls": [],
+  "published_at": "2021-02-24T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--26c320e556ae0249.json",
+  "content_hash": "sha256:cd11ba770f39f8adfc7586f4ea6d7417521a88b6a0d1a1c0946a69fab15e8b04",
+  "external_id": "https://www.akamai.com/blog/security/centra-update-r26",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "What’s new in Guardicore Centra R26",
+  "content": "New improvements to Guardicore Centra make it the fastest and simplest solution to protect against ransomware and meet the needs of zero trust.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

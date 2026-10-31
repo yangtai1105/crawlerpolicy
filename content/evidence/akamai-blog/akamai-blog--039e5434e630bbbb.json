@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--039e5434e630bbbb",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/datastream-real-time-log-delivery-for-all-akamai-customers",
+  "supporting_urls": [],
+  "published_at": "2021-11-23T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--039e5434e630bbbb.json",
+  "content_hash": "sha256:e9f4591f68dfc2b26c9937b6d13adc1c8a4603bdaa349952d1e47929c44dbcd8",
+  "external_id": "https://www.akamai.com/blog/news/datastream-real-time-log-delivery-for-all-akamai-customers",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "DataStream: Real-time Log Delivery for All Akamai Customers",
+  "content": "We are pleased to announce that DataStream 2 is now available for all our customers. DataStream 2 provides customers with detailed log data from requests on the Akamai Intelligent Edge Platform within minutes. DataStream 2 gives customers unparalleled visibility into events at the Akamai edge and puts developers first by empowering them with the data needed to support critical operations.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

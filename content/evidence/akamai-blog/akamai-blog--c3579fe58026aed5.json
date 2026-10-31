@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--c3579fe58026aed5",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2024/nov/webassembly-jobs-and-cronjobs-in-kubernetes-with-spinkube",
+  "supporting_urls": [],
+  "published_at": "2025-05-11T10:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--c3579fe58026aed5.json",
+  "content_hash": "sha256:e40f686dbe54be12bcfd8866627da9caf0c232ed56999960b80c19a56e9a70f2",
+  "external_id": "https://www.akamai.com/blog/developers/2024/nov/webassembly-jobs-and-cronjobs-in-kubernetes-with-spinkube",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "WebAssembly Jobs and CronJobs in Kubernetes with SpinKube & the Spin Command Trigger",
+  "content": "Learn how to run WebAssembly workloads as Kubernetes Jobs and CronJobs using SpinKube and the Spin command trigger",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

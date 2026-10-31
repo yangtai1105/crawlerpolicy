@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1fa36a12429c2807",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2025/sep/layerx-finds-that-perplexitys-comet-browser-is-up-to-85-more-vulnerable-to-phishing-and-web-attacks-than-chrome",
+  "supporting_urls": [],
+  "published_at": "2025-09-08T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1fa36a12429c2807.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security-research/2025/sep/layerx-finds-that-perplexitys-comet-browser-is-up-to-85-more-vulnerable-to-phishing-and-web-attacks-than-chrome",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "LayerX Finds that Perplexity’s Comet Browser is Up To 85% More Vulnerable to Phishing and Web Attacks Than Chrome",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

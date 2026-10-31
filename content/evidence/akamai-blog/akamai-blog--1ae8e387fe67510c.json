@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1ae8e387fe67510c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/5g-security-iot-asavie-and-akamai",
+  "supporting_urls": [],
+  "published_at": "2020-10-27T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1ae8e387fe67510c.json",
+  "content_hash": "sha256:48748c7c8522ad3855f0f1ee34967dc3152839f6c5cf3e373ca04dbbc2e17fd0",
+  "external_id": "https://www.akamai.com/blog/news/5g-security-iot-asavie-and-akamai",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "5G, Security, IoT, Asavie, and Akamai",
+  "content": "Malicious actors never rest and have always worked remotely. That simple realization hit home during recent global events. Specifically, Akamai saw an increase in malware traffic of over 400% between March 9 and May 11, 2020 from corporate devices, most of which were being used outside of a traditional office environment.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

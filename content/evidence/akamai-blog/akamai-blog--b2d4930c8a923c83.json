@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b2d4930c8a923c83",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/jul/why-customer-experience-new-battleground-zero-trust",
+  "supporting_urls": [],
+  "published_at": "2025-07-21T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b2d4930c8a923c83.json",
+  "content_hash": "sha256:3e2ea2df47d54ad607a65c0c9cd696a3cb18481bd37d787c786e3952fe225afb",
+  "external_id": "https://www.akamai.com/blog/security/2025/jul/why-customer-experience-new-battleground-zero-trust",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Why Customer Experience Is the New Battleground in Zero Trust",
+  "content": "Learn why being named a Customer Favorite in Forrester's Zero Trust Wave reveals what we believe really matters in cybersecurity.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

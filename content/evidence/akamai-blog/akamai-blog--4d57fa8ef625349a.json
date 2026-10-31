@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--4d57fa8ef625349a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2025/mar/march-edimax-cameras-command-injection-mirai",
+  "supporting_urls": [],
+  "published_at": "2025-03-13T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--4d57fa8ef625349a.json",
+  "content_hash": "sha256:1cfd24e0c3d6c75f78f6fd60f26ff514076d01ec417bd808528ddcaac472901a",
+  "external_id": "https://www.akamai.com/blog/security-research/2025/mar/march-edimax-cameras-command-injection-mirai",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Negative Exposure: Edimax Network Cameras Used to Spread Mirai",
+  "content": "Mirai continues to plague organizations. Read how the Akamai SIRT identified a new command injection vulnerability that’s targeting Edimax devices.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

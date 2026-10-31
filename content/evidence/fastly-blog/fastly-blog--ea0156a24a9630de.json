@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--ea0156a24a9630de",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/building-resilience-why-we-started-with-secondary-dns/",
+  "supporting_urls": [],
+  "published_at": "2026-10-20T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--ea0156a24a9630de.json",
+  "content_hash": "sha256:ceb7039ecebfbbe3861c2e30d9baee60c4d80175f36e2d28fa62979dae79a4f7",
+  "external_id": "https://www.fastly.com/blog/building-resilience-why-we-started-with-secondary-dns/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Building Resilience: Why We Started with Secondary DNS",
+  "content": "Learn why starting with Secondary DNS builds instant application resilience, eliminates single points of failure, and keeps your web resolution fast and reliable.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

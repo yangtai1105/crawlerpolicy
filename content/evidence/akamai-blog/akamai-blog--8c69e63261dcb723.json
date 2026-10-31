@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--8c69e63261dcb723",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/navigating-new-reality-content-personalization-at-scale",
+  "supporting_urls": [],
+  "published_at": "2023-06-22T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--8c69e63261dcb723.json",
+  "content_hash": "sha256:69ac05d20b462e2a016e35d8be2d8475a65705ced4032859c3753da457ff4169",
+  "external_id": "https://www.akamai.com/blog/edge/navigating-new-reality-content-personalization-at-scale",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Navigating a New Reality: Content Personalization at Scale",
+  "content": "Prioritizing content personalization can improve user engagement, enhance customer experiences, and boost revenue on a global scale.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

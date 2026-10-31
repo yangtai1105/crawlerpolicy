@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--e4ee9e0564da9e17",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/introducing-ability-purge-cache-tag",
+  "supporting_urls": [],
+  "published_at": "2019-03-24T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--e4ee9e0564da9e17.json",
+  "content_hash": "sha256:6067327d78929be9cdbad6fbdceee2e524607379cc75e1c3320de06a72470496",
+  "external_id": "https://www.akamai.com/blog/developers/introducing-ability-purge-cache-tag",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Introducing Ability Purge Cache Tag",
+  "content": "The new purge by cache tag functionality in Akamai’s Fast Purge is now available to all Akamai content delivery product customers. To get to this point, we went through an exciting, year-long beta with more than 200 participants purging ~200,000,000 tags. During this time, we noted some fascinating (and surprising) ways that customers leveraged tags in their caching strategy -- we’ll share our six favorite here.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

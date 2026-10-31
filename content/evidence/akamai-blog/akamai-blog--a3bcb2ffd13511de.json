@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a3bcb2ffd13511de",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/aug/navigating-ai-risk-special-soti-report",
+  "supporting_urls": [],
+  "published_at": "2026-08-05T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a3bcb2ffd13511de.json",
+  "content_hash": "sha256:4d0222e237f49af830d9cf73ec460d0fbd2d2d5482166fa81d53081488d6c040",
+  "external_id": "https://www.akamai.com/blog/security/2026/aug/navigating-ai-risk-special-soti-report",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Shadow AI, Rogue Agents, and Data Leaks: A Special Report on Navigating AI Risk",
+  "content": "Discover top enterprise AI risks — from shadow AI to rogue agents and data leaks — plus practical CISO strategies in the new Akamai SOTI special report.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--82df3ec03c3bc104",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+  "supporting_urls": [],
+  "published_at": "2026-10-23T21:35:13Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--82df3ec03c3bc104.json",
+  "content_hash": "sha256:8e0fc5a72e41b91594be02c603be12024b698187e060033569e5af474c97aa72",
+  "external_id": "https://simonwillison.net/2026/Oct/23/quick-study-painter/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Quick Study",
+  "content": "<p><strong>Tool:</strong> <a href=\"https://tools.simonwillison.net/quick-study-painter\">Quick Study</a></p>\n        <p>Prompt <a href=\"https://claude.ai/share/71adda96-193f-4f2a-97c0-454e08066afb\">to Claude Opus 5.5 High</a>:</p>\n<blockquote>\n<p><code>Build an artifact where you open a photo and it rapidly (in a few seconds) paints a version of that photo using a canvas element and simulated paintbrush</code></p>\n</blockquote>\n<p>See also <a href=\"https://simonwillison.net/2026/Aug/25/pelican-watercolor/\">my previous experiment</a> getting Claude Fable to simulate a watercolor illustration with P5.js.</p>\n<p><img alt=\"A simulated oil painting of a photograph of a heron\" src=\"https://static.simonwillison.net/static/2026/heron-oil.webp\" /></p>\n<p>Quick Study uses <a href=\"https://en.wikipedia.org/wiki/Sobel_operator\">Sobel edge detection</a>, with no external libraries beyond Google Fonts.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/tools\">tools</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

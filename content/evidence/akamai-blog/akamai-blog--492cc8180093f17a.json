@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--492cc8180093f17a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/its-time-to-protect-every-sim",
+  "supporting_urls": [],
+  "published_at": "2022-08-12T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--492cc8180093f17a.json",
+  "content_hash": "sha256:3661d6dbb1c6ef16d915e2570789eeef338e2553b1c0cffc2af0c149a8d1aa66",
+  "external_id": "https://www.akamai.com/blog/security/its-time-to-protect-every-sim",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "It’s Time to Protect Every SIM",
+  "content": "Ensuring the security of billions of mobile devices is a priority. Learn how Akamai aims to protect and secure every SIM as we continually adapt to new threats.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

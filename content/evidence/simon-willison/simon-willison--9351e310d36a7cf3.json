@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--9351e310d36a7cf3",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+  "supporting_urls": [],
+  "published_at": "2026-10-28T16:45:23Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--9351e310d36a7cf3.json",
+  "content_hash": "sha256:da622c5767f23097a5b653ce230fe2d4922063923be66c6ea962f4cc2801456a",
+  "external_id": "https://simonwillison.net/2026/Oct/28/github-octoverse-2026/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "GitHub Octoverse 2026",
+  "content": "<p><strong><a href=\"https://github.blog/news-insights/octoverse/octoverse-commits-pushes-reach-new-highs-in-2026-as-developers-build-with-agents/\">GitHub Octoverse 2026</a></strong></p>\nI'm at GitHub Universe today (GitHub gave  me a free ticket through their \"GitHub Stars\" program). EVP Jay Parikh just announced this year's Octoverse report, and highlighted these numbers in particular:</p>\n<p><img alt=\"Photo of a conference keynote stage: a wide curved screen shows three line charts side by side, with a speaker in a black sweater and dark jeans standing at its right edge beneath an overhead lighting rig. Each chart has a large colored headline number above it and a shaded line that runs low and nearly flat across the left side, then curves sharply upward on the right to end in a dot at its peak. Left, in green: &quot;220M&quot; &quot;Merged PRs per month&quot;, y-axis 0M, 50M, 100M, 150M, 200M. Middle, in magenta: &quot;7.38B&quot; &quot;Commits per month&quot;, y-axis 0B, 2B, 4B, 6B, with the most dramatic, almost vertical final spike. Right, in orange: &quot;30.3M&quot; &quot;New repos per month&quot;, y-axis 0M, 10M, 20M, 30M, with a bumpier, more gradual climb. All three share the x-axis labels '23, '24, '25, '26.\" src=\"https://static.simonwillison.net/static/2026/github-numbers.jpg\" /></p>\n<p>This is a pretty stark representation of the impact of agentic engineering on GitHub. In 2026, merged pull requests tripled in less than a year to 220 million per month. Commits mo",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b56ce0cc1cdc5487",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/bots-scalping-israeli-government-services",
+  "supporting_urls": [],
+  "published_at": "2022-06-23T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b56ce0cc1cdc5487.json",
+  "content_hash": "sha256:c896b2ba038f9491f4acbdaed2c9860d696e7ca212e099840ad9ea542a28f582",
+  "external_id": "https://www.akamai.com/blog/security-research/bots-scalping-israeli-government-services",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Bots Are Scalping Israeli Government Services",
+  "content": "Bots can be used for good, but can also be nefarious. In this post, see Akamai's research on the Israeli Gamken bot copycat.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

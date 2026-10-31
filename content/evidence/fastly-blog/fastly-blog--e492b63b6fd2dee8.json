@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--e492b63b6fd2dee8",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/building-metered-streams-with-mpp-and-fastly-compute/",
+  "supporting_urls": [],
+  "published_at": "2026-09-22T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--e492b63b6fd2dee8.json",
+  "content_hash": "sha256:adbfdbfb6b7b49589dcbc4f8b2121061f077c40841b1c61fb0e31657674cbe56",
+  "external_id": "https://www.fastly.com/blog/building-metered-streams-with-mpp-and-fastly-compute/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Building Metered Streams with MPP and Fastly Compute",
+  "content": "Learn how to build an MPP streaming demo on Fastly Compute comparing Stripe Shared Payment Tokens and native Tempo payment sessions for pay-as-you-go agent APIs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--fd2f3b78d13002e5",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/partners/2025/mar/akamais-channel-first-strategy-driving-partner-success-2025",
+  "supporting_urls": [],
+  "published_at": "2025-03-24T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--fd2f3b78d13002e5.json",
+  "content_hash": "sha256:52a9abb5af7dc5042b481a8e2b32186295c4e38a28c14be3ee253d07049d9f42",
+  "external_id": "https://www.akamai.com/blog/partners/2025/mar/akamais-channel-first-strategy-driving-partner-success-2025",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai’s Channel-First Strategy: Driving Partner Success in 2025",
+  "content": "Customer success is Akamai’s priority — and our many industry awards highlight how we've empowered our partners to thrive. See what we have planned for 2025.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

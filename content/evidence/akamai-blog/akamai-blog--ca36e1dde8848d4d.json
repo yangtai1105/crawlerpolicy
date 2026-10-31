@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ca36e1dde8848d4d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network",
+  "supporting_urls": [],
+  "published_at": "2021-11-16T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ca36e1dde8848d4d.json",
+  "content_hash": "sha256:0b2425e5f45c3d75252a41b5928826e7d07bf0f032460f7ebf4f073b86618a94",
+  "external_id": "https://www.akamai.com/blog/security/digging-deeper-an-in-depth-analysis-of-a-fast-flux-network",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Digging Deeper – An In-Depth Analysis of a Fast Flux Network",
+  "content": "Fast Flux is a DNS technique used by botnets to hide various types of malicious activities, such as phishing, web proxying, malware delivery, and malware communication, behind an ever-changing network of compromised hosts acting as proxies. The Fast Flux network concept was first introduced in 2006, with the emergence of Storm Worm malware variants. The Fast Flux network is typically used to make the communication between malware and its command and control (C2) server more resistant to discovery. Akamai’s research team has analyzed sophisticated botnet infrastructure that leverages Fast Flux techniques including domains, nameservers, and IP address changes. Figure 1 shows an overview of such a network, which can also be referred to as a form of bulletproof hosting, that hosts various malicious services. These networks empower threat actors to execute attack campaigns by utilizing network capabilities to host malware binaries, proxy communication to C2 servers, phishing websites, or proxy attacks on websites across the internet.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

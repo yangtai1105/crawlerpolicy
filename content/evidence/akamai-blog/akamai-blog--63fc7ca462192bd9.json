@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--63fc7ca462192bd9",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/feb/industrialized-ransomware-confronting-new-reality",
+  "supporting_urls": [],
+  "published_at": "2026-02-10T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--63fc7ca462192bd9.json",
+  "content_hash": "sha256:a9ce4e3efe478c3731a65c6cc8154f94485a446fb466d04a447125906b621858",
+  "external_id": "https://www.akamai.com/blog/security/2026/feb/industrialized-ransomware-confronting-new-reality",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Industrialized Ransomware: Confronting the New Reality",
+  "content": "Read about the new ransomware reality and what most security strategies get wrong. Learn how to protect your organization in 2026.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

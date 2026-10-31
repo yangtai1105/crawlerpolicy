@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--147d275e2d8bbcd0",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/pull/2401",
+  "supporting_urls": [],
+  "published_at": "2026-10-29T10:52:27Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--147d275e2d8bbcd0.json",
+  "content_hash": "sha256:de8c55c60355280046e01e8f4d1285f0c9d7aace2cb97f92989b9d1f82e2ae6a",
+  "external_id": "pr:2401",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #2401: chore: merge main into dev-1.1",
+  "content": "## Summary\n\nSyncs **all changes from `main` into `dev-1.1`** (replacement for the closed #2373, which couldn't be updated because its head was the live `main` branch).\n\nThis is a merge of `main` (`89699392`) into `dev-1.1` (`40cffc57`). All of `dev-1.1`'s 1.1 work (`generation`, timeline/ADR-002, `SendLiveMessage`, client-written artifacts, terminal/non-terminal clarification, etc.) is preserved, and all of `main`'s post-branch commits are brought in.\n\n## Conflicts\n\nOnly two files conflicted; everything else (including `specification/a2a.proto` and `docs/specification.md`) merged cleanly.\n\n- **`docs/topics/what-is-a2a.md` → kept dev-1.1's version.** dev-1.1 has the current 1.1 rewrite (`/message:send` / `/message:stream` endpoint names, AI-catalog discovery, staged request-lifecycle diagrams); main's version is older (`/sendMessage`, single diagram). Taking main would have regressed 1.1.\n- **`docs/llms.txt` → took main's version wholesale.** main deliberately restructured this index into a link list; a line-level 3-way merge produced an incoherent hybrid, so the file is now byte-identical to main.\n\n## Verification\n\n- `specification/a2a.proto`: protolint clean, api-linter `problems: []`, and the 1.1 surface (`SendLiveMessage`, `TaskMessageUpdateEvent`, `artifact_updates`, parent/child additions, etc.) is intact alongside main's gRPC-URL example fix (#1997).\n- No conflict markers remain in the tree.\n- `docs/llms.txt` matches `main` exactly (any markdownlint findings there are main's pre-existing state, unchanged by this merge).\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

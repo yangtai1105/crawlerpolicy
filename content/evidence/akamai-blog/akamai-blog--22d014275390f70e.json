@@ -1,0 +1,32 @@
+{
+  "evidence_id": "akamai-blog--22d014275390f70e",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/sep/what-to-do-when-competitors-scraping-prices",
+  "supporting_urls": [],
+  "published_at": "2026-09-21T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--22d014275390f70e.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security/2026/sep/what-to-do-when-competitors-scraping-prices",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "What to Do When Your Competitors Are Scraping Your Prices",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.akamai.com/blog/security/what-to-do-when-competitors-scraping-prices",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 5411,
+      "sha256": "098266f5cf45d4a1c3ae0a6cb2fa53e0571621c0c9ba89e743beeb0ef9186ed4",
+      "cited_urls": [
+        "https://www.akamai.com/blog/security/what-to-do-when-competitors-scraping-prices",
+        "https://www.akamai.com/blog/author/matt-butcher",
+        "https://itnews.myitnewsletter.com/index?volume=342&issue=4&cat=vendor&section=Akamai-Technologies-News"
+      ]
+    }
+  }
+}

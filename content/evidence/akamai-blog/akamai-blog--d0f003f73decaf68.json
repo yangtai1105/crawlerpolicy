@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--d0f003f73decaf68",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2025/jun/cryptominers-anatomy-shutting-down-mining-botnets",
+  "supporting_urls": [],
+  "published_at": "2025-06-24T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--d0f003f73decaf68.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security-research/2025/jun/cryptominers-anatomy-shutting-down-mining-botnets",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Cryptominers’ Anatomy: Shutting Down Mining Botnets",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

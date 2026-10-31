@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7a36b166d0e59418",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/developers/2024/oct/asia-core-compute-region-expansions-singapore-mumbai",
+  "supporting_urls": [],
+  "published_at": "2024-10-03T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7a36b166d0e59418.json",
+  "content_hash": "sha256:d6e207f37976c859c080b58b69579a51eb21ec84d91fe1be28ffe8f6dec0b65e",
+  "external_id": "https://www.akamai.com/blog/developers/2024/oct/asia-core-compute-region-expansions-singapore-mumbai",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Increased Capacity in Asia: Mumbai and Singapore Expansions Now Available",
+  "content": "We’re continuing to expand our cloud computing footprint and capacity with both new core compute regions and expansions of popular regions.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

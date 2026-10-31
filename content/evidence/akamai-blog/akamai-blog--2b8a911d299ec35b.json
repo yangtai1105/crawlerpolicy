@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--2b8a911d299ec35b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/criminals-using-targeted-remote-file-inclusion-attacks-in-phishing-campaigns",
+  "supporting_urls": [],
+  "published_at": "2019-07-29T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--2b8a911d299ec35b.json",
+  "content_hash": "sha256:feed4902860580e6042a3155a18224fa30a4c53020f2da8ec5010ef79736b2a4",
+  "external_id": "https://www.akamai.com/blog/security/criminals-using-targeted-remote-file-inclusion-attacks-in-phishing-campaigns",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Criminals Using Targeted Remote File Inclusion Attacks in Phishing Campaigns",
+  "content": "In June 2019, logs on my personal website recorded markers that were clearly Remote File Inclusion (RFI) vulnerability attempts. The investigation into the attempts uncovered a campaign of targeted RFI attacks that currently are being leveraged to deploy phishing kits....",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

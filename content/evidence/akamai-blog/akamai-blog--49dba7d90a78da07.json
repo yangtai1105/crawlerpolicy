@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--49dba7d90a78da07",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/building-the-future-akamai-and-linode",
+  "supporting_urls": [],
+  "published_at": "2022-02-17T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--49dba7d90a78da07.json",
+  "content_hash": "sha256:4881c8f4e0e807eb2bec388c90bfa484cad10cd49d7715cf5f1c014e1e038c38",
+  "external_id": "https://www.akamai.com/blog/news/building-the-future-akamai-and-linode",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Building the Future — Akamai’s Outlook on the Linode Acquisition",
+  "content": "Akamai announced our intent to acquire Linode. The acquisition is intended to create the world’s most distributed compute platform. This new cloud to edge platform will make it easier for developers and businesses to build, run, and secure applications, especially given the complexities of Web3.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

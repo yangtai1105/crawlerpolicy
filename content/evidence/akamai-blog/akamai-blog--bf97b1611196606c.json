@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--bf97b1611196606c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2026/sep/akamai-joins-athena-coalition-shield-users-vulnerabilities",
+  "supporting_urls": [],
+  "published_at": "2026-09-28T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--bf97b1611196606c.json",
+  "content_hash": "sha256:6ce2ecfa21918f5d4588399468b04e687e49d60ff56e358d52f87eac09269181",
+  "external_id": "https://www.akamai.com/blog/security-research/2026/sep/akamai-joins-athena-coalition-shield-users-vulnerabilities",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Akamai Joins Athena Coalition to Shield Users from New Vulnerabilities",
+  "content": "Akamai joins Chainguard’s Athena Coalition, verifying that Akamai App & API Protector customers are automatically shielded from newly disclosed vulnerabilities.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

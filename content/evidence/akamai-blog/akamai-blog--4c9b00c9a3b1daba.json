@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--4c9b00c9a3b1daba",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/new-approach-blocking-malicious-javaScript",
+  "supporting_urls": [],
+  "published_at": "2022-02-09T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--4c9b00c9a3b1daba.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/security/new-approach-blocking-malicious-javaScript",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "A New Approach to Blocking Malicious JavaScript",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

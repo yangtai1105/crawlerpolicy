@@ -1,0 +1,26 @@
+{
+  "last_checked_at": "2026-10-31T20:51:06.172555+00:00",
+  "last_fetch_succeeded_at": "2026-10-31T20:51:06.172555+00:00",
+  "last_evidence_at": "2026-10-31T20:51:06.172555+00:00",
+  "last_hash": null,
+  "last_seen_guids": [
+    "release:330803766",
+    "release:296280427",
+    "release:236349720",
+    "release:233262960",
+    "release:228909317",
+    "release:228878295",
+    "release:225353469",
+    "release:224091076",
+    "release:221336355",
+    "release:224126056",
+    "release:224126194",
+    "pr:2408",
+    "pr:2401",
+    "pr:2153",
+    "pr:2322",
+    "pr:2270"
+  ],
+  "consecutive_failures": 0,
+  "first_seen": false
+}

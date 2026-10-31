@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--5e9622a44c33ecba",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/releases/tag/v1.0.1",
+  "supporting_urls": [],
+  "published_at": "2026-05-28T11:34:36Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--5e9622a44c33ecba.json",
+  "content_hash": "sha256:28245ac1dbc1e53a51f6e92381895de32c8bd6db1c761882d6a1980425354836",
+  "external_id": "release:330803766",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Release v1.0.1",
+  "content": "## [1.0.1](https://github.com/a2aproject/A2A/compare/v1.0.0...v1.0.1) (2026-05-26)\n\n\n### Bug Fixes\n\n* **spec:** prefer application/a2a+json in HTTP binding ([#1753](https://github.com/a2aproject/A2A/issues/1753)) ([7ff1004](https://github.com/a2aproject/A2A/commit/7ff10041597b9c8a736a477e1890d2c79173bbcf))\n* **spec:** recent transcoding-related error changes ([#1627](https://github.com/a2aproject/A2A/issues/1627)) ([757f0ec](https://github.com/a2aproject/A2A/commit/757f0ec6d067ec071ff915f21ab420200ba1baa3))\n* TaskStatus values in the specification ([#1801](https://github.com/a2aproject/A2A/issues/1801)) ([e997516](https://github.com/a2aproject/A2A/commit/e997516542bd6e3a12ecb6b4939aa0bae3b13a21))",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

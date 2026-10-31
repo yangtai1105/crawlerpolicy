@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--07ada267cb9dff75",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/apr/keytrap-highlights-need-enduring-dns-defenses-service-providers",
+  "supporting_urls": [],
+  "published_at": "2024-04-03T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--07ada267cb9dff75.json",
+  "content_hash": "sha256:6415a1cec0f19912a4a9df19fe7ccabe9b30f90e709b8b885e9d8d8488cc766c",
+  "external_id": "https://www.akamai.com/blog/security/2024/apr/keytrap-highlights-need-enduring-dns-defenses-service-providers",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "KeyTrap Highlights Need for Enduring DNS Defenses for Service Providers",
+  "content": "DNS resolvers must be highly resilient to malicious activity like DoS attacks and cache poisoning. Akamai CacheServe delivers enduring defenses.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

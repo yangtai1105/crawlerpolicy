@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--8570fc70cefd5f26",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2024/jan/integrating-mpulses-beacon-api-edgeworkers-visualize-client-requests",
+  "supporting_urls": [],
+  "published_at": "2024-01-24T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--8570fc70cefd5f26.json",
+  "content_hash": "sha256:d4b28691e0b46ce34b0e6dcf577b6ee62727244bbb11c4b4e0986bc6e7ce208f",
+  "external_id": "https://www.akamai.com/blog/edge/2024/jan/integrating-mpulses-beacon-api-edgeworkers-visualize-client-requests",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Integrating mPulse’s Beacon API with EdgeWorkers to Visualize All Client Requests",
+  "content": "Akamai mPulse combines with Akamai EdgeWorkers to visualize any client request and uses its http-request module to let users send their own requests.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

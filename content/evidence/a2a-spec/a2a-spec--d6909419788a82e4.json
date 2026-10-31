@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--d6909419788a82e4",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/releases/tag/v0.2.1",
+  "supporting_urls": [],
+  "published_at": "2025-05-27T17:41:27Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--d6909419788a82e4.json",
+  "content_hash": "sha256:068e4e0b72edbb27fab8bb362ecdc5e5d925cc38d409e83e90af24d973bc382b",
+  "external_id": "release:221336355",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Release v0.2.1",
+  "content": "## [0.2.1](https://github.com/google/A2A/compare/v0.2.0...v0.2.1) (2025-05-27)\n\n\n### Features\n\n* Add a new boolean for supporting authenticated extended cards ([#618](https://github.com/google/A2A/issues/618)) ([e0a3070](https://github.com/google/A2A/commit/e0a3070fc289110d43faf2e91b4ffe3c29ef81da))\n* Add optional referenceTaskIds for task followups ([#608](https://github.com/google/A2A/issues/608)) ([5368e77](https://github.com/google/A2A/commit/5368e7728cb523caf1a9218fda0b1646325f524b))",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

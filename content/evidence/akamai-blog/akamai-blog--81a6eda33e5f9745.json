@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--81a6eda33e5f9745",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/performance/better-real-user-monitoring-with-boomerangjs-and-akamai-mpulse",
+  "supporting_urls": [],
+  "published_at": "2021-06-20T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--81a6eda33e5f9745.json",
+  "content_hash": "sha256:805e331ecc3d1634d0e4d03c1e2410ec12534e340e31450ff4e4bc8e1a24f1fa",
+  "external_id": "https://www.akamai.com/blog/performance/better-real-user-monitoring-with-boomerangjs-and-akamai-mpulse",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Better Real User Monitoring with BoomerangJS and Akamai mPulse",
+  "content": "In this blog, we'll walk through a few different snippet insertion methods and available optimizations.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

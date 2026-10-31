@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--b01cf6d4a2e823f1",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/high-performance-by-default-why-speed-shouldnt-setup-step/",
+  "supporting_urls": [],
+  "published_at": "2026-10-07T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--b01cf6d4a2e823f1.json",
+  "content_hash": "sha256:ffa777e6e9e4985a6066f453adfb152d14ff91ed195c48ef63088e45f045ab50",
+  "external_id": "https://www.fastly.com/blog/high-performance-by-default-why-speed-shouldnt-setup-step/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "High Performance by Default: Why Speed Shouldn't Be a Setup Step",
+  "content": "Discover how Fastly's Recommended Defaults automatically optimize performance with built-in compression, HTTP/3, and TLS so speed is never a setup step.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a736b9c0aec1a6e4",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/oct/sentence-forgets-preserving-context-document-ingestion",
+  "supporting_urls": [],
+  "published_at": "2026-10-15T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a736b9c0aec1a6e4.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/ai/2026/oct/sentence-forgets-preserving-context-document-ingestion",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "What a Sentence Forgets: Preserving Context in Document Ingestion",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

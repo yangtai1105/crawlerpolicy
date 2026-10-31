@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ad437eac5c6cd9be",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2024/jul/akamai-perspective-on-july-patch-tuesday-2024",
+  "supporting_urls": [],
+  "published_at": "2024-07-11T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ad437eac5c6cd9be.json",
+  "content_hash": "sha256:4301c7b618031cac4b2e06a5070f67a91d7865db4dfc6d44469a4cd879ef9be4",
+  "external_id": "https://www.akamai.com/blog/security-research/2024/jul/akamai-perspective-on-july-patch-tuesday-2024",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai’s Perspective on July’s Patch Tuesday 2024",
+  "content": "Patches are raining down like Independence Day fireworks. July 2024’s Patch Tuesday has 137 total CVEs and one vulnerability found in the wild.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

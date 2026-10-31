@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--aa499b9824f2cffc",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger",
+  "supporting_urls": [],
+  "published_at": null,
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--aa499b9824f2cffc.json",
+  "content_hash": "sha256:70f0b67ea795244596dbff8d8590f2d96995ee409966f2e8b65d540e5b497364",
+  "external_id": "https://www.akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The Nansh0u Campaign – Hackers Arsenal Grows Stronger",
+  "content": "In the beginning of April, three attacks detected in the Guardicore Global Sensor Network (GGSN) caught our attention. All three had source IP addresses originating in South-Africa and hosted by VolumeDrive ISP (see IoCs).",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

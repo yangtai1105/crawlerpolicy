@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--ab9111040bfa768c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/command-injection-on-a-d-link-router",
+  "supporting_urls": [],
+  "published_at": "2021-02-09T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--ab9111040bfa768c.json",
+  "content_hash": "sha256:ecb35128d5a661c0a66751492f49cafcbcf6e556aa8a46e092378c363693707c",
+  "external_id": "https://www.akamai.com/blog/security/command-injection-on-a-d-link-router",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Command Injection on a D-Link Router",
+  "content": "During the COVID-19 pandemic, I wanted to extend the local WiFi in my home to reach all the floors. The goal was to have full connectivity from every location in the house.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

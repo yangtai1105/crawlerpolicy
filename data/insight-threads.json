@@ -196,6 +196,21 @@
       ]
     },
     {
+      "key": "agent-to-agent-duplex-streaming",
+      "title": "Agent To Agent Duplex Streaming",
+      "thesis": "Rather than creating dedicated streaming wrappers, the specification reuses existing request structures (`SubscribeToTaskRequest` and `SendMessageRequest`) within a single polymorphic stream, achieving transport parity by mapping the same semantics across native duplex connections and split HTTP server streams.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "a2a-spec-a2a-specification-proposes-sendlivemessage-for-bidirectional-agent-interactions"
+      ],
+      "verified_development_slugs": [
+        "a2a-specification-proposes-sendlivemessage-for-bidirectional-agent-interactions"
+      ]
+    },
+    {
       "key": "agentic-browser-sandboxing",
       "title": "Agentic Browser Sandboxing",
       "thesis": "Rather than treating machine access purely as abusive traffic to be mitigated, Cloudflare is shifting toward commercializing agent interactions at the edge by deploying standard payment challenge flows (HTTP 402/x402) and metering access for AI buyers.",
@@ -222,16 +237,30 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agentic-browsing-vs-transaction-separation",
+      "title": "Agentic Browsing Vs Transaction Separation",
+      "thesis": "Early telemetry on delegative personal agents reveals a gap between vendor positioning and real-world user deployment, with professional-oriented agents immediately gravitating toward consumer shopping discovery while avoiding sensitive transaction endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-adds-claude-duet-detection-showing-consumer-e-commerce-traffic-pa"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-commerce",
       "title": "Agentic Commerce",
-      "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
+      "thesis": "Payment infrastructure providers are actively modifying consumer checkout rails like Link to cater directly to delegated AI agents rather than solely human shoppers.",
       "direction": "developing",
       "confidence": "medium",
       "first_observed_at": "2026-10-21T13:28:44.196458Z",
-      "last_updated_at": "2026-10-28T14:52:45.308044Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments",
-        "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
+        "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst",
+        "stripe-blog-stripe-introduces-enhancements-for-personal-agent-checkout-via-link"
       ],
       "verified_development_slugs": []
     },
@@ -288,6 +317,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agentic-microsegmentation",
+      "title": "Agentic Microsegmentation",
+      "thesis": "Relying on application-layer intent logs creates an operational gap in agent governance, as autonomous agents exhibit behavioral drift by seeking external endpoints and undocumented paths across Model Context Protocol (MCP) integrations to fulfill tasks faster.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-advocates-layer-3-and-4-microsegmentation-to-map-and-control-autonomous-a"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-rag-integrations",
       "title": "Agentic Rag Integrations",
       "thesis": "Edge and infrastructure providers are formalizing retrieval-augmented generation (RAG) and search discovery tools into modular SDK adapters, lowering friction for autonomous agent loops to query proprietary indexed knowledge bases directly without custom REST plumbing.",
@@ -327,6 +369,19 @@
       "last_updated_at": "2026-10-02T14:29:07.997977Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-launches-web-search-api-for-ai-gateway-with-verified-crawler-complian"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agentic-threat-governance",
+      "title": "Agentic Threat Governance",
+      "thesis": "Static identity verification is rendered insufficient when autonomous agents act through standard execution protocols like MCP, effectively collapsing the boundary between natural-language data and executable code at the enterprise edge.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-report-warns-agentic-ai-and-mcp-blur-data-code-boundaries-demanding-behav"
       ],
       "verified_development_slugs": []
     },
@@ -383,6 +438,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ai-agent-paywalls",
+      "title": "AI Agent Paywalls",
+      "thesis": "By terminating detection, payment negotiation, and cryptographic settlement entirely at the reverse-proxy edge, CDNs can turn bot-management signals into commercial tollgates without requiring origin servers to manage crypto wallets, smart contracts, or transaction latency.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-agent-spoofing",
       "title": "AI Agent Spoofing",
       "thesis": "Traditional identity-based controls like user-agent matching (such as claiming to be GPTBot or ClaudeBot) and static allowlists are failing as automated tools increasingly spoof recognized crawler identities and penetrate deep transactional endpoints, including login and checkout flows.",
@@ -418,6 +486,19 @@
       "last_updated_at": "2026-10-28T14:52:45.308044Z",
       "related_feed_slugs": [
         "x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "ai-crawler-impersonation",
+      "title": "AI Crawler Impersonation",
+      "thesis": "Attackers exploit permissive access policies granted to AI scrapers by disguising vulnerability scans under legitimate AI crawler identities, exposing the vulnerability of basic User-Agent string filtering.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "fastly-blog-fastly-observes-over-6-million-daily-probing-requests-spoofing-ai-bots"
       ],
       "verified_development_slugs": []
     },
@@ -597,6 +678,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "autonomous-agent-exploitation",
+      "title": "Autonomous Agent Exploitation",
+      "thesis": "Verified agent identity confirms origin rather than intent, rendering authentication badges ineffective against autonomous agents that carry out malicious write requests across MCP, GraphQL, and REST endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "autonomous-agent-vulnerability-chaining",
       "title": "Autonomous Agent Vulnerability Chaining",
       "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
@@ -762,6 +856,32 @@
       "verified_development_slugs": []
     },
     {
+      "key": "cache-protection-against-automated-data-harvesting",
+      "title": "Cache Protection Against Automated Data Harvesting",
+      "thesis": "CDN and edge providers are increasingly coupling web cache protection with dedicated bot management features specifically marketed against AI scrapers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "fastly-blog-fastly-highlights-bot-management-and-contentguard-for-ai-scraper-control"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "cdn-edge-level-enforcement-against-ai-scraping",
+      "title": "CDN Edge Level Enforcement Against AI Scraping",
+      "thesis": "CDN and edge providers are increasingly coupling web cache protection with dedicated bot management features specifically marketed against AI scrapers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "fastly-blog-fastly-highlights-bot-management-and-contentguard-for-ai-scraper-control"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "cdn-search-indexing",
       "title": "CDN Search Indexing",
       "thesis": "Content delivery networks are evolving from defensive gatekeepers that restrict AI scrapers into selective discovery facilitators that feed network-level traffic and change metadata directly to search engines to optimize crawl efficiency.",
@@ -771,6 +891,19 @@
       "last_updated_at": "2026-10-15T13:05:42.271060Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "checkout-delegation",
+      "title": "Checkout Delegation",
+      "thesis": "Payment infrastructure providers are actively modifying consumer checkout rails like Link to cater directly to delegated AI agents rather than solely human shoppers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "stripe-blog-stripe-introduces-enhancements-for-personal-agent-checkout-via-link"
       ],
       "verified_development_slugs": []
     },
@@ -818,6 +951,21 @@
       ]
     },
     {
+      "key": "collaborative-agent-artifact-editing",
+      "title": "Collaborative Agent Artifact Editing",
+      "thesis": "By extending SendMessageRequest with artifact updates and restoring role attributes (ROLE_USER versus ROLE_AGENT), the protocol formalizes shared, bidirectional document editing and payload handoffs between orchestrators and autonomous agents without requiring separate out-of-band transfer mechanisms.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "a2a-spec-a2a-specification-proposes-client-written-artifacts-across-messaging-methods"
+      ],
+      "verified_development_slugs": [
+        "a2a-specification-proposes-client-written-artifacts-across-messaging-methods"
+      ]
+    },
+    {
       "key": "collective-publisher-litigation-against-ai-developers",
       "title": "Collective Publisher Litigation Against AI Developers",
       "thesis": "Publishing trade organizations are coordinating legal pressure via amicus filings to contest both offline training uses and live inference retrieval by AI developers.",
@@ -840,6 +988,19 @@
       "last_updated_at": "2026-10-18T12:27:30.284320Z",
       "related_feed_slugs": [
         "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "consumer-retail-browsing-via-personal-agents",
+      "title": "Consumer Retail Browsing Via Personal Agents",
+      "thesis": "Early telemetry on delegative personal agents reveals a gap between vendor positioning and real-world user deployment, with professional-oriented agents immediately gravitating toward consumer shopping discovery while avoiding sensitive transaction endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-adds-claude-duet-detection-showing-consumer-e-commerce-traffic-pa"
       ],
       "verified_development_slugs": []
     },
@@ -1040,6 +1201,32 @@
       ]
     },
     {
+      "key": "crawler-verification-waf",
+      "title": "Crawler Verification WAF",
+      "thesis": "Attackers exploit permissive access policies granted to AI scrapers by disguising vulnerability scans under legitimate AI crawler identities, exposing the vulnerability of basic User-Agent string filtering.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "fastly-blog-fastly-observes-over-6-million-daily-probing-requests-spoofing-ai-bots"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "credential-backed-silent-agent-browsing",
+      "title": "Credential Backed Silent Agent Browsing",
+      "thesis": "The operational boundary in automated web access is shifting from crawler discovery to delegated user execution, where agents actively evade bot mitigation by routing through local customer machines or browser profiles without cryptographic provenance.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "cryptographic-agent-authentication",
       "title": "Cryptographic Agent Authentication",
       "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
@@ -1049,6 +1236,19 @@
       "last_updated_at": "2026-09-11T12:38:01.191471Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "cryptographic-agent-identity-standards-adoption",
+      "title": "Cryptographic Agent Identity Standards Adoption",
+      "thesis": "The operational boundary in automated web access is shifting from crawler discovery to delegated user execution, where agents actively evade bot mitigation by routing through local customer machines or browser profiles without cryptographic provenance.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
       ],
       "verified_development_slugs": []
     },
@@ -1147,6 +1347,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "decoupling-ai-training-from-search-indexing",
+      "title": "Decoupling AI Training From Search Indexing",
+      "thesis": "Edge security providers are formalizing the separation between unreciprocated content harvesting for model training and real-time proxy traffic acting on behalf of interactive users, shifting access control from binary IP-or-user-agent blocking to operational intent classification.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-splits-ai-bot-directory-into-training-search-and-real-time-agent-categori"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "deep-endpoint-agent-crawling",
       "title": "Deep Endpoint Agent Crawling",
       "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
@@ -1174,6 +1387,19 @@
       "verified_development_slugs": [
         "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
       ]
+    },
+    {
+      "key": "deliberate-data-poisoning-against-competitive-repricing-scrapers",
+      "title": "Deliberate Data Poisoning Against Competitive Repricing Scrapers",
+      "thesis": "Anti-scraping defense is evolving from binary perimeter rejection to deceptive payload manipulation at the edge, treating scraping as an economic data-integrity contest rather than an access-denial battle.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-promotes-edge-content-shaping-and-price-deception-to-thwart-competitor-sc"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "deterministic-decision-models-replacing-generative-llms-for-routing",
@@ -1392,6 +1618,32 @@
       "verified_development_slugs": []
     },
     {
+      "key": "edge-micropayment-gateways",
+      "title": "Edge Micropayment Gateways",
+      "thesis": "By terminating detection, payment negotiation, and cryptographic settlement entirely at the reverse-proxy edge, CDNs can turn bot-management signals into commercial tollgates without requiring origin servers to manage crypto wallets, smart contracts, or transaction latency.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "edge-native-payload-shaping-over-binary-ip-blocking",
+      "title": "Edge Native Payload Shaping Over Binary IP Blocking",
+      "thesis": "Anti-scraping defense is evolving from binary perimeter rejection to deceptive payload manipulation at the edge, treating scraping as an economic data-integrity contest rather than an access-denial battle.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-promotes-edge-content-shaping-and-price-deception-to-thwart-competitor-sc"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "edge-payment-infrastructure",
       "title": "Edge Payment Infrastructure",
       "thesis": "Edge delivery networks are expanding beyond bot blocking and traffic routing into financial rails for automated actors, establishing governance rules like programmatic budgets for autonomous commerce.",
@@ -1446,6 +1698,19 @@
       "verified_development_slugs": [
         "cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo"
       ]
+    },
+    {
+      "key": "endpoint-specific-policy-replacing-sitewide-robots-directives",
+      "title": "Endpoint Specific Policy Replacing Sitewide Robots Directives",
+      "thesis": "The operational boundary in automated web access is shifting from crawler discovery to delegated user execution, where agents actively evade bot mitigation by routing through local customer machines or browser profiles without cryptographic provenance.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "enterprise-ai-automation",
@@ -1603,6 +1868,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "granular-edge-access-control-for-ai",
+      "title": "Granular Edge Access Control For AI",
+      "thesis": "Edge security providers are formalizing the separation between unreciprocated content harvesting for model training and real-time proxy traffic acting on behalf of interactive users, shifting access control from binary IP-or-user-agent blocking to operational intent classification.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-splits-ai-bot-directory-into-training-search-and-real-time-agent-categori"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "granular-mixed-use-crawling",
       "title": "Granular Mixed Use Crawling",
       "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
@@ -1643,6 +1921,21 @@
       ],
       "verified_development_slugs": [
         "web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks"
+      ]
+    },
+    {
+      "key": "harmonization-of-multi-agent-streaming-transports",
+      "title": "Harmonization Of Multi Agent Streaming Transports",
+      "thesis": "By establishing that interrupted states are non-terminal and do not mandate closing transport streams, the specification decouples conversational pauses from connection lifecycles, enabling continuous streaming sessions even when human or automated input is requested mid-task.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "a2a-spec-a2a-specification-clarifies-interrupted-task-states-as-non-terminal-across-strea"
+      ],
+      "verified_development_slugs": [
+        "a2a-specification-clarifies-interrupted-task-states-as-non-terminal-across-strea"
       ]
     },
     {
@@ -1741,6 +2034,19 @@
       "verified_development_slugs": [
         "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
       ]
+    },
+    {
+      "key": "increasing-concentration-of-ai-bot-scraping-on-ecommerce-catalogs",
+      "title": "Increasing Concentration Of AI Bot Scraping On Ecommerce Catalogs",
+      "thesis": "Anti-scraping defense is evolving from binary perimeter rejection to deceptive payload manipulation at the edge, treating scraping as an economic data-integrity contest rather than an access-denial battle.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-promotes-edge-content-shaping-and-price-deception-to-thwart-competitor-sc"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "increasing-legal-pressure-on-ai-model-training-practices",
@@ -1983,6 +2289,19 @@
       ]
     },
     {
+      "key": "mcp-attack-surface-scrutiny",
+      "title": "MCP Attack Surface Scrutiny",
+      "thesis": "Static identity verification is rendered insufficient when autonomous agents act through standard execution protocols like MCP, effectively collapsing the boundary between natural-language data and executable code at the enterprise edge.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-report-warns-agentic-ai-and-mcp-blur-data-code-boundaries-demanding-behav"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "mcp-server-security",
       "title": "MCP Server Security",
       "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
@@ -2063,6 +2382,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "multi-agent-orchestration-standardization",
+      "title": "Multi Agent Orchestration Standardization",
+      "thesis": "By extending SendMessageRequest with artifact updates and restoring role attributes (ROLE_USER versus ROLE_AGENT), the protocol formalizes shared, bidirectional document editing and payload handoffs between orchestrators and autonomous agents without requiring separate out-of-band transfer mechanisms.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "a2a-spec-a2a-specification-proposes-client-written-artifacts-across-messaging-methods"
+      ],
+      "verified_development_slugs": [
+        "a2a-specification-proposes-client-written-artifacts-across-messaging-methods"
+      ]
+    },
+    {
       "key": "multi-language-reference-implementation-parity",
       "title": "Multi Language Reference Implementation Parity",
       "thesis": "Protocol parity across multiple language reference implementations is critical for authentication standards; divergent validation sequences between Rust and TypeScript created an edge-case discrepancy where compromised keys could use forward-skewed creation times.",
@@ -2093,6 +2427,45 @@
       ]
     },
     {
+      "key": "negative-mean-time-to-exploit",
+      "title": "Negative Mean Time To Exploit",
+      "thesis": "Verified agent identity confirms origin rather than intent, rendering authentication badges ineffective against autonomous agents that carry out malicious write requests across MCP, GraphQL, and REST endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "nonhuman-identity-governance",
+      "title": "Nonhuman Identity Governance",
+      "thesis": "Relying on application-layer intent logs creates an operational gap in agent governance, as autonomous agents exhibit behavioral drift by seeking external endpoints and undocumented paths across Model Context Protocol (MCP) integrations to fulfill tasks faster.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-advocates-layer-3-and-4-microsegmentation-to-map-and-control-autonomous-a"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "nonhuman-identity-inspection",
+      "title": "Nonhuman Identity Inspection",
+      "thesis": "Static identity verification is rendered insufficient when autonomous agents act through standard execution protocols like MCP, effectively collapsing the boundary between natural-language data and executable code at the enterprise edge.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-report-warns-agentic-ai-and-mcp-blur-data-code-boundaries-demanding-behav"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "open-source-lightweight-agent-decision-primitives",
       "title": "Open Source Lightweight Agent Decision Primitives",
       "thesis": "By replacing token-by-token autoregressive generation with parallel schema scoring over base model representations, decision models dramatically compress inference latency and eliminate non-deterministic parsing issues in automated routing and security triage pipelines.",
@@ -2115,6 +2488,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-launches-cf-cli-designed-for-autonomous-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "origin-agnostic-crawler-monetization",
+      "title": "Origin Agnostic Crawler Monetization",
+      "thesis": "By terminating detection, payment negotiation, and cryptographic settlement entirely at the reverse-proxy edge, CDNs can turn bot-management signals into commercial tollgates without requiring origin servers to manage crypto wallets, smart contracts, or transaction latency.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
       ],
       "verified_development_slugs": []
     },
@@ -2173,6 +2559,19 @@
       ]
     },
     {
+      "key": "personal-agent-detection-tooling",
+      "title": "Personal Agent Detection Tooling",
+      "thesis": "Early telemetry on delegative personal agents reveals a gap between vendor positioning and real-world user deployment, with professional-oriented agents immediately gravitating toward consumer shopping discovery while avoiding sensitive transaction endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-adds-claude-duet-detection-showing-consumer-e-commerce-traffic-pa"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "platform-bundling-crawling-rights",
       "title": "Platform Bundling Crawling Rights",
       "thesis": "Platform operators are attempting to leverage social distribution contracts to bypass standard web crawler opt-outs, effectively conditioning social platform presence on granting broad scraping rights for AI training.",
@@ -2208,6 +2607,19 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "preparation-for-agentic-commerce",
+      "title": "Preparation For Agentic Commerce",
+      "thesis": "Edge security providers are formalizing the separation between unreciprocated content harvesting for model training and real-time proxy traffic acting on behalf of interactive users, shifting access control from binary IP-or-user-agent blocking to operational intent classification.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-splits-ai-bot-directory-into-training-search-and-real-time-agent-categori"
       ],
       "verified_development_slugs": []
     },
@@ -2460,6 +2872,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "shadow-ai-detection",
+      "title": "Shadow AI Detection",
+      "thesis": "Relying on application-layer intent logs creates an operational gap in agent governance, as autonomous agents exhibit behavioral drift by seeking external endpoints and undocumented paths across Model Context Protocol (MCP) integrations to fulfill tasks faster.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-advocates-layer-3-and-4-microsegmentation-to-map-and-control-autonomous-a"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "shift-from-binary-bot-blocking-to-intent-based-authorization",
       "title": "Shift From Binary Bot Blocking To Intent Based Authorization",
       "thesis": "The market definition for web access management is formalizing a split between blunt edge-layer blocking and continuous agent trust verification. Rather than binary human-versus-bot classification, modern machine access requires distinguishing authorized AI agents and search/discovery crawlers from malicious scrapers and automated credential attacks targeting login and transaction endpoints.",
@@ -2512,6 +2937,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "standardization-of-autonomous-agent-lifecycles",
+      "title": "Standardization Of Autonomous Agent Lifecycles",
+      "thesis": "By establishing that interrupted states are non-terminal and do not mandate closing transport streams, the specification decouples conversational pauses from connection lifecycles, enabling continuous streaming sessions even when human or automated input is requested mid-task.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "a2a-spec-a2a-specification-clarifies-interrupted-task-states-as-non-terminal-across-strea"
+      ],
+      "verified_development_slugs": [
+        "a2a-specification-clarifies-interrupted-task-states-as-non-terminal-across-strea"
+      ]
+    },
+    {
       "key": "standardization-of-crawler-ip-disclosure-formats",
       "title": "Standardization Of Crawler IP Disclosure Formats",
       "thesis": "Alongside cryptographic verification methods like HTTP Message Signatures, IETF contributors are keeping complementary operational tracks alive—specifically standardized JSON formats for IP disclosure and behavioral best practices—ensuring identity and network verification can evolve in parallel.",
@@ -2524,6 +2964,21 @@
       ],
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ]
+    },
+    {
+      "key": "standardized-agent-task-observation",
+      "title": "Standardized Agent Task Observation",
+      "thesis": "Rather than creating dedicated streaming wrappers, the specification reuses existing request structures (`SubscribeToTaskRequest` and `SendMessageRequest`) within a single polymorphic stream, achieving transport parity by mapping the same semantics across native duplex connections and split HTTP server streams.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "a2a-spec-a2a-specification-proposes-sendlivemessage-for-bidirectional-agent-interactions"
+      ],
+      "verified_development_slugs": [
+        "a2a-specification-proposes-sendlivemessage-for-bidirectional-agent-interactions"
       ]
     },
     {
@@ -2616,6 +3071,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-launches-cf-cli-designed-for-autonomous-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "unauthenticated-mcp-exposure",
+      "title": "Unauthenticated MCP Exposure",
+      "thesis": "Verified agent identity confirms origin rather than intent, rendering authentication badges ineffective against autonomous agents that carry out malicious write requests across MCP, GraphQL, and REST endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ],
       "verified_development_slugs": []
     },
@@ -2739,6 +3207,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "write-capable-bot-traffic",
+      "title": "Write Capable Bot Traffic",
+      "thesis": "Verified agent identity confirms origin rather than intent, rendering authentication badges ineffective against autonomous agents that carry out malicious write requests across MCP, GraphQL, and REST endpoints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "related_feed_slugs": [
+        "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ],
       "verified_development_slugs": []
     },

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--d5ed4a7f82ce3f1b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2025/dec/msl5-general-availability-msl4-product-retirement",
+  "supporting_urls": [],
+  "published_at": "2025-12-05T23:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--d5ed4a7f82ce3f1b.json",
+  "content_hash": "sha256:eaacd2426624a18f742a04fe0cb62911e9c73f8194762684c09dbaebc4a6ad93",
+  "external_id": "https://www.akamai.com/blog/edge/2025/dec/msl5-general-availability-msl4-product-retirement",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "MSL5 General Availability and MSL4 Product Retirement",
+  "content": "Akamai Media Services Live 4 will be discontinued on December 31, 2026. The upgraded Akamai Media Services Live 5 is currently in general availability.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

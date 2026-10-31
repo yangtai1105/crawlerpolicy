@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--31875b6e1ec44d1d",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/critical-rce-vulnerabilities-discovered-core-php-cve-2026-109618-cve-2026-109619/",
+  "supporting_urls": [],
+  "published_at": "2026-10-21T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--31875b6e1ec44d1d.json",
+  "content_hash": "sha256:e5b33296f72184a41867967e5b5311b2f904ba9acca1318dc5c21d23282f8210",
+  "external_id": "https://www.fastly.com/blog/critical-rce-vulnerabilities-discovered-core-php-cve-2026-109618-cve-2026-109619/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Critical RCE Vulnerabilities Discovered in Core PHP: CVE-2026-109618 and CVE-2026-109619",
+  "content": "Discover details on critical Core PHP RCE vulnerabilities CVE-2026-109618 and CVE-2026-109619. Learn about impacts, patching guidance, and Fastly WAF protection.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--280ccf913a2042b3",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/oct/open-enrollment-digital-strategy-tested-are-you-ready",
+  "supporting_urls": [],
+  "published_at": "2026-10-08T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--280ccf913a2042b3.json",
+  "content_hash": "sha256:c6cdce3d90cf8c032c10c73fb7aec95888cc25068cc092f81e515f0049f3284c",
+  "external_id": "https://www.akamai.com/blog/security/2026/oct/open-enrollment-digital-strategy-tested-are-you-ready",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Open Enrollment Is Where Digital Strategy Gets Tested. Are You Ready?",
+  "content": "Open enrollment puts payer infrastructure, security, APIs, and member experiences under pressure. Learn six ways that health plans can prepare from edge to core.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

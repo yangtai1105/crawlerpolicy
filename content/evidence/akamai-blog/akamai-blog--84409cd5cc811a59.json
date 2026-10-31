@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--84409cd5cc811a59",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/ransomware-questions-organizations-need-to-answer",
+  "supporting_urls": [],
+  "published_at": "2023-01-10T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--84409cd5cc811a59.json",
+  "content_hash": "sha256:e3b9229d7aa9b8a1426e8c9d32834dc969331f2b00f83d0153f3082bc84ea869",
+  "external_id": "https://www.akamai.com/blog/security/ransomware-questions-organizations-need-to-answer",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "3 Ransomware Questions Every Security Leader Should Be Able to Answer",
+  "content": "Read about how organizations need microsegmentation to identify and remediate ransomware attacks, and the ransomware questions they need to answer.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

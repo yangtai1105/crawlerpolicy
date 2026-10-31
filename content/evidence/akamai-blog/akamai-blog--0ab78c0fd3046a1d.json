@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--0ab78c0fd3046a1d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials",
+  "supporting_urls": [],
+  "published_at": null,
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--0ab78c0fd3046a1d.json",
+  "content_hash": "sha256:495e9c2431c6c81175286939e0013a39d72f90064f3131132b00f80be87a6ea7",
+  "external_id": "https://www.akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The Oracle of Delphi Will Steal Your Credentials",
+  "content": "Our deception technology is able to reroute attackers into honeypots, where they believe that they found their real target. The attacks brute forced passwords for RDP credentials to connect to the victim download and execute a previously undetected malware, which we named Trojan.sysscan.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--b49af419521bc979",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/dec/digital-signatures-traditional-post-quantum-cryptographic",
+  "supporting_urls": [],
+  "published_at": "2025-12-03T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--b49af419521bc979.json",
+  "content_hash": "sha256:0446e60159a1465acdfd38c7294f297bc07b076fa6966691d1a72eaa19b405b8",
+  "external_id": "https://www.akamai.com/blog/security/2025/dec/digital-signatures-traditional-post-quantum-cryptographic",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Digital Signatures: Traditional Vs. Post-Quantum Cryptographic Mechanisms",
+  "content": "Secure your connections against quantum threats. Learn about post-quantum cryptography and digital signatures.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

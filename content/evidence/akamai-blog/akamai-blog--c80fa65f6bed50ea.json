@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--c80fa65f6bed50ea",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/fake-cozy-bear-group-making-ddos-extortion-demands",
+  "supporting_urls": [],
+  "published_at": "2019-11-15T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--c80fa65f6bed50ea.json",
+  "content_hash": "sha256:7d46aeebffd5101da592cd963224bb21347e01a0ef9c32360a5de69da8682592",
+  "external_id": "https://www.akamai.com/blog/security/fake-cozy-bear-group-making-ddos-extortion-demands",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Fake Cozy Bear Group Making DDoS Extortion Demands",
+  "content": "A group calling themselves \"Cozy Bear\" has been emailing various companies with an extortion letter, demanding payment and threatening targeted DDoS attacks if their demands are not met....",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

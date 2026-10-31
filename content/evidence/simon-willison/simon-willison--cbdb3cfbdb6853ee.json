@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--cbdb3cfbdb6853ee",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
+  "supporting_urls": [],
+  "published_at": "2026-10-28T10:09:07Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--cbdb3cfbdb6853ee.json",
+  "content_hash": "sha256:bafee8497cb87e1880d39cac28cd05bd59790ecbe540a1f244078481a0e44de0",
+  "external_id": "https://simonwillison.net/2026/Oct/28/terk-terkowitz/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Quoting Terk Terkowitz",
+  "content": "<blockquote cite=\"https://www.aboutamazon.com/news/company-news/amazon-software-engineer-role-guideline-ai\"><p>If your work does not benefit from current AI tooling, that is a finding, not a failing. Document why, share it with your community of peers, bring it to your manager, and work to find solutions. An engineer who can explain where AI does not yet help their work is demonstrating the judgement we are asking for.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://www.aboutamazon.com/news/company-news/amazon-software-engineer-role-guideline-ai\">Terk Terkowitz</a>, An update from Amazon engineering leadership on the role of the developer in the age of AI</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/amazon\">amazon</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/agentic-engineering\">agentic-engineering</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

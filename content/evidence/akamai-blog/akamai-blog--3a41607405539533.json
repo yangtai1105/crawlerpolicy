@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--3a41607405539533",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/moveit-sqli-zero-day-exploit-clop-ransomware",
+  "supporting_urls": [],
+  "published_at": "2023-06-08T09:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--3a41607405539533.json",
+  "content_hash": "sha256:2b32ef69fc7efe56ddbb3d9512fadaa79f0c34c5a29528b33edce211bbe22940",
+  "external_id": "https://www.akamai.com/blog/security-research/moveit-sqli-zero-day-exploit-clop-ransomware",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "MOVEit SQLi Zero-Day (CVE-2023-34362) Exploited by CL0P Ransomware Group",
+  "content": "Akamai Security Intelligence Group, which has been examining the MOVEit vulnerability and its exploitation, provides recommendations for detection and mitigation.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

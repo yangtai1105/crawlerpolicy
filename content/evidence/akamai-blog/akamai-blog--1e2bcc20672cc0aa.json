@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1e2bcc20672cc0aa",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/critical-vulnerability-in-hyper-v-allowed-attackers-to-exploit-azure",
+  "supporting_urls": [],
+  "published_at": "2021-07-28T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1e2bcc20672cc0aa.json",
+  "content_hash": "sha256:04d3a1470bb1b9a395343c58cb640bbb3a6448f86e5164c3476623debec03226",
+  "external_id": "https://www.akamai.com/blog/security/critical-vulnerability-in-hyper-v-allowed-attackers-to-exploit-azure",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Critical 9.9 Vulnerability in Hyper-V Allowed Attackers to Exploit Azure",
+  "content": "Guardicore Labs, in collaboration with SafeBreach Labs, found a critical vulnerability in Hyper-V’s virtual network switch driver (vmswitch.sys).",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

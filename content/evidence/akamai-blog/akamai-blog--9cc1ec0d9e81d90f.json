@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--9cc1ec0d9e81d90f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2025/nov/rolypoly-vpn-the-malicious-free-vpn-extension-that-keeps-coming-back",
+  "supporting_urls": [],
+  "published_at": "2025-11-18T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--9cc1ec0d9e81d90f.json",
+  "content_hash": "sha256:50765cae6c71f914c177f2f2de132d9a8a2def2ccaf472404c1517286276aeaa",
+  "external_id": "https://www.akamai.com/blog/security-research/2025/nov/rolypoly-vpn-the-malicious-free-vpn-extension-that-keeps-coming-back",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "RolyPoly VPN: The Malicious “Free” VPN Extension That Keeps Coming Back",
+  "content": "Security researchers at LayerX Security have uncovered a campaign involving malicious VPN and ad-blocking extensions designed to steal sensitive user data. The campaign is persistent in its attempts to resurface, even after it has been taken down previously (more than once).",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

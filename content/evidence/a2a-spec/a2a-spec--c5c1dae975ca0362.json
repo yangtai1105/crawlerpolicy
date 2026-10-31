@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--c5c1dae975ca0362",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/pull/2322",
+  "supporting_urls": [],
+  "published_at": "2026-10-20T16:56:36Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--c5c1dae975ca0362.json",
+  "content_hash": "sha256:1308f94fe47b74fe4da3e07ee3f7d904ab30c784fa2cba31c0d7a07f1c50f775",
+  "external_id": "pr:2322",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #2322: feat: allow clients to write artifacts via SendMessageRequest (#1995)",
+  "content": "\n## Summary\n\nLets a client write artifacts (including multiple artifacts in one call, or chunked updates) over both live streams and unary/server-streaming calls, split out of #2153 so the live channel can be reviewed on its own.\n\nBecause `StreamRequest` in #2153 embeds `SendMessageRequest`, extending `SendMessageRequest` once enables client-written artifacts across `SendMessage`, `SendStreamingMessage`, and `SendLiveMessage` alike.\n\n## What's here\n\n1. **`SendMessageRequest.artifact_updates` (`repeated TaskArtifactUpdateEvent`)** — lets a client send work-item artifacts alongside a control `message` (for example `\"please translate this doc\"` + the doc when creating a task) or on their own when continuing an existing task (`task_id` set).\n   - `message` is required when creating a task (when no `task_id` is provided, as the agent needs a control message to know what to do with the artifacts); it may be omitted only when sending `artifact_updates` to an existing task.\n   - When `message` and `artifact_updates` are sent together and a `Task` is created/updated, `message` is appended to `timeline` first, followed by `artifact_updates` in list order. If the agent responds with a direct `Message` without creating a `Task`, neither is persisted in a task.\n\n2. **`AgentCapabilities.user_artifacts` (`optional bool`)** — indicates whether the agent accepts client-written (`ROLE_USER`) artifacts in `SendMessageRequest.artifact_updates` (otherwise `UnsupportedOperationError` / `StreamError`).\n\n3. **`generation` ownership** — on each client-sent `TaskArtifactUpdateEvent`, `generation` is server-owned: clients MUST leave it unset, servers MUST ignore any value received, and the server stamps the authoritative value when broadcasting the resulting `TaskArtifactUpdateEvent` downstream.\n\n4. **`Artifact.role`** — restored so a client-written artifact (`ROLE_USER`) stays distinguishable from an agent output (`ROLE_AGENT`, the default). Deferred out of the history ADR (#2129) for this change.\n\n## Verification\n\n`buf breaking` (FILE) clean, api-linter `problems: []`, protolint clean, markdownlint clean.\n\nRelated: #1995, #2153\n\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

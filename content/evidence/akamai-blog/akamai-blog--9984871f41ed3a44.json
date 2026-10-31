@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--9984871f41ed3a44",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/sep/your-dns-hiding-https-why-it-matters",
+  "supporting_urls": [],
+  "published_at": "2026-09-02T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--9984871f41ed3a44.json",
+  "content_hash": "sha256:a567a1534e279c49b3802d2bd761e51daf2c8062cf066f6ccdd52f7ad0593120",
+  "external_id": "https://www.akamai.com/blog/security/2026/sep/your-dns-hiding-https-why-it-matters",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Your DNS Is Hiding in HTTPS — This Is Why It Matters",
+  "content": "Discover why unmanaged DNS over HTTPS (DoH) creates security visibility gaps and how a controlled DoH strategy restores visibility without compromising privacy.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

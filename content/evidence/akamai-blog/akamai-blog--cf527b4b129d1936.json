@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--cf527b4b129d1936",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/ipcdump-guardicores-new-open-source-tool-for-linux-ipc-inspection",
+  "supporting_urls": [],
+  "published_at": "2021-02-10T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--cf527b4b129d1936.json",
+  "content_hash": "sha256:4edd01265fcf7d505e9458208af99baed7bc748824319c7e4785289d716d83e6",
+  "external_id": "https://www.akamai.com/blog/security/ipcdump-guardicores-new-open-source-tool-for-linux-ipc-inspection",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "IPCDump – Guardicore’s New Open-Source Tool for Linux IPC Inspection",
+  "content": "IPCdump allows software based firewall developers, researchers, and linux users to explore the Inter-process-communication (IPC) channels.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--3ed89a8ae8656098",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2025/jun/sleeper-sound-layerx-uncovers-malicious-sleeper-sound-management-extensions-with-nearly-1-5-million-users-worldwide",
+  "supporting_urls": [],
+  "published_at": "2025-06-04T06:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--3ed89a8ae8656098.json",
+  "content_hash": "sha256:ef71ec69bb6f9da8ed53f0cf0ff2d6cdc6d11c376519fa0e76b59c228c92ece2",
+  "external_id": "https://www.akamai.com/blog/security-research/2025/jun/sleeper-sound-layerx-uncovers-malicious-sleeper-sound-management-extensions-with-nearly-1-5-million-users-worldwide",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Sleeper Sound: LayerX Uncovers Malicious “Sleeper” Sound Management Extensions with Nearly 1.5 Million Users Worldwide",
+  "content": "LayerX has unearthed network of malicious “sleeper agent” extensions that appear to serve as infrastructure for future malicious activity, currently installed on nearly 1.5 million users worldwide.   LayerX has discovered a network of browser extensions that appear to serve as ‘sleeper agents’ for future malicious activity. The extensions appear to have all been […]",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

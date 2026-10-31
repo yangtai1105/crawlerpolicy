@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--606295be6fd061a9",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2024/nov/akamais-behavioral-ddos-engine-breakthrough-in-modern-ddos-mitigation",
+  "supporting_urls": [],
+  "published_at": "2024-11-07T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--606295be6fd061a9.json",
+  "content_hash": "sha256:bbe4143a967bbf5b8a20cd1783fd6f6ba74473bf0bef58d9b75f9a47151b081e",
+  "external_id": "https://www.akamai.com/blog/security/2024/nov/akamais-behavioral-ddos-engine-breakthrough-in-modern-ddos-mitigation",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Behavioral DDoS Engine: A Breakthrough in Modern DDoS Mitigation",
+  "content": "As digital infrastructure grows, so do the threats posed by DDoS attacks. See how the Akamai Behavioral DDoS Engine can keep your business online.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

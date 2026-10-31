@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--27723cd0b9b5250f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/global-traffic-management-for-cloud-data-centers-and-cdns",
+  "supporting_urls": [],
+  "published_at": "2019-03-06T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--27723cd0b9b5250f.json",
+  "content_hash": "sha256:e82f66aa14630d108b00d163ecb1f35d3eb24692d44b9be6106178b46b90334f",
+  "external_id": "https://www.akamai.com/blog/security/global-traffic-management-for-cloud-data-centers-and-cdns",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Global Traffic Management for Cloud, Data Centers, and CDNs",
+  "content": "Twenty years ago it would be common to have multiple data centers load balanced with specialized devices. The applications in multiple data centers would use the Domain Name System (DNS) to look up the application destination. The DNS system would be set up to with multiple data center locations. This would \"round robin\" the results between the data centers. If you have four data centers, the customers would get \"round-robined\" between each data center.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

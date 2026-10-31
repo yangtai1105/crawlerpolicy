@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--655cab5d68e52b05",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/guardicore-integrates-with-cyberark-for-privileged-access-management",
+  "supporting_urls": [],
+  "published_at": "2019-12-08T14:24:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--655cab5d68e52b05.json",
+  "content_hash": "sha256:a9848c8667a0d14e92657e913b17432350b31e2ff384e9ad0749052a8350bf1f",
+  "external_id": "https://www.akamai.com/blog/security/guardicore-integrates-with-cyberark-for-privileged-access-management",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Guardicore Centra Integration now available on CyberArk Marketplace",
+  "content": "Privileged Access Management is part of a zero-trust model. Guardicore strengthens its offering by integrating with CyberArk.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

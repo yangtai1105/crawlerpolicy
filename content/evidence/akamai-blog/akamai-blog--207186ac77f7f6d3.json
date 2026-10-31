@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--207186ac77f7f6d3",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/performance/six-years-since-world-ipv6-launch",
+  "supporting_urls": [],
+  "published_at": "2018-06-06T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--207186ac77f7f6d3.json",
+  "content_hash": "sha256:21361f075123b2afdddd46027fc3ecda665a4114d06896c2ba3a75c675dee477",
+  "external_id": "https://www.akamai.com/blog/performance/six-years-since-world-ipv6-launch",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Six Years Since World IPv6 Launch: Entering the Majority Phases",
+  "content": "While we still have a ways to go before residual users of IPv4 are truly \"laggards\", we are at a stage where the use of IPv6 should be considered the norm.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

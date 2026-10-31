@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--71b63033b099b8cd",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/xmr-cryptomining-targeting-x86i686-systems",
+  "supporting_urls": [],
+  "published_at": "2019-08-30T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--71b63033b099b8cd.json",
+  "content_hash": "sha256:1b4d249107500e323368702a638ce433b760f0c99587d2c71bcc8fa6b67180d9",
+  "external_id": "https://www.akamai.com/blog/security/xmr-cryptomining-targeting-x86i686-systems",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "XMR Cryptomining Targeting x86/i686 Systems",
+  "content": "I have been playing close attention to Internet of Things (IoT) malware targeting systems with Telnet enabled, while also collecting samples targeting systems with SSH enabled on port 22. I've collected over 650 samples landing in my honeypot within the...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

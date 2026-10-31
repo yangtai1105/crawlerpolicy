@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--1ae04057d84be42a",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/ai-bot-cosplay/",
+  "supporting_urls": [],
+  "published_at": "2026-10-13T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--1ae04057d84be42a.json",
+  "content_hash": "sha256:e56d91521c06d2a7034e6c262d00e27e490b64507cc081deeb96c73eb496332d",
+  "external_id": "https://www.fastly.com/blog/ai-bot-cosplay/",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "AI Bot Cosplay",
+  "content": "In a single day over 6M requests posed as AI bots to probe for .env files, Git metadata, credentials and other private files. Unpack the threat of AI bot cosplay and learn how Fastly's WAF rules can block impostors.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--fb6863e61c653230",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/rpc-toolkit-fantastic-interfaces-how-to-find",
+  "supporting_urls": [],
+  "published_at": "2023-02-22T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--fb6863e61c653230.json",
+  "content_hash": "sha256:8ace016d3655805db9c6b5bdc70f7ac5d56514d1a711cf2b8414541874e733f7",
+  "external_id": "https://www.akamai.com/blog/security-research/rpc-toolkit-fantastic-interfaces-how-to-find",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Fantastic RPC Interfaces and How to Find Them",
+  "content": "Looking for your next security research project? Our RPC Interface Analyzer tool can help you find it.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

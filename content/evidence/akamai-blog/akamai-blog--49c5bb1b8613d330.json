@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--49c5bb1b8613d330",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/dec/empower-cisos-visibility-agility-compliance-strategic-roi",
+  "supporting_urls": [],
+  "published_at": "2025-12-02T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--49c5bb1b8613d330.json",
+  "content_hash": "sha256:dc613970eb9901af1487af0393e44476c70ef7b652c0fc89019ec86dc27ea0d5",
+  "external_id": "https://www.akamai.com/blog/security/2025/dec/empower-cisos-visibility-agility-compliance-strategic-roi",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Empower CISOs with Visibility, Agility, Compliance, and Strategic ROI",
+  "content": "Learn how Akamai Prolexic Network Cloud Firewall allows CISOs to manage risk, resilience, and reputation by delivering visibility, agility, and proactive defense.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

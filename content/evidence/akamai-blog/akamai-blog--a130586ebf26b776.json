@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a130586ebf26b776",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/partners/2026/mar/rsac-2026-tag-partner-ai-security-showdown",
+  "supporting_urls": [],
+  "published_at": "2026-03-12T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a130586ebf26b776.json",
+  "content_hash": "sha256:9394cb51250fce50c65f9981fdc4091cd82677a968b917e3abd825e6ccc5b5fb",
+  "external_id": "https://www.akamai.com/blog/partners/2026/mar/rsac-2026-tag-partner-ai-security-showdown",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "RSAC 2026: Tag in a Partner for the AI Security Showdown",
+  "content": "Legacy security wasn't built for autonomous AI. See how Akamai partners are stepping into the ring to build trust and secure the agentic enterprise.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

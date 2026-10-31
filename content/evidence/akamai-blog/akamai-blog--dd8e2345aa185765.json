@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--dd8e2345aa185765",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/akamai-identified-as-a-leader-in-ddos-mitigation-by-forrester",
+  "supporting_urls": [],
+  "published_at": "2021-03-03T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--dd8e2345aa185765.json",
+  "content_hash": "sha256:76f97aac21eae22855932ef031e4c4f8565b95bb535b62936969a6e9c8bf1f7f",
+  "external_id": "https://www.akamai.com/blog/security/akamai-identified-as-a-leader-in-ddos-mitigation-by-forrester",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Identified as a Leader in DDoS Mitigation by Forrester",
+  "content": "This week, Akamai was again recognized as a Leader in the latest The Forrester Wave™: DDoS Mitigation Solutions, Q1 2021.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

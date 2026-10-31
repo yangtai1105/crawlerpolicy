@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--151f8eb37cf28cbf",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/oct/why-api-security-belongs-ecb-cyber-action-plans",
+  "supporting_urls": [],
+  "published_at": "2026-10-07T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--151f8eb37cf28cbf.json",
+  "content_hash": "sha256:0a4c568133b2c3df0ecba72a9ac65714f505f5ecb71c35a7bbcd19ebf09119e3",
+  "external_id": "https://www.akamai.com/blog/ai/2026/oct/why-api-security-belongs-ecb-cyber-action-plans",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Why API Security Belongs in ECB Cyber Action Plans",
+  "content": "Discover how securing shadow and zombie APIs helps banks meet the ECB cyber action plan mandates, improve posture, and mitigate AI-enabled threats.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

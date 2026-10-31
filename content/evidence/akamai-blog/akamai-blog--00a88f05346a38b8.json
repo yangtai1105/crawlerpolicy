@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--00a88f05346a38b8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/now-live--on-demand-learning-and-hands-on-labs-at-learn-akamai",
+  "supporting_urls": [],
+  "published_at": "2021-09-14T07:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--00a88f05346a38b8.json",
+  "content_hash": "sha256:f9930c8ed207c0a5b622e571a111af1b7f219272fc7ee85ba6cefa33da34df95",
+  "external_id": "https://www.akamai.com/blog/news/now-live--on-demand-learning-and-hands-on-labs-at-learn-akamai",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Now Live: On-Demand Learning and Hands-On Labs at Learn Akamai",
+  "content": "I’m excited to announce our new all-inclusive Learning Hub as the single destination for all product learning resources at Akamai. This new Hub gives users the ability to choose the method of learning that suits them best, whether that’s reading through technical documentation, exploring our on-demand elearning modules and hands-on labs, or joining a community discussion.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

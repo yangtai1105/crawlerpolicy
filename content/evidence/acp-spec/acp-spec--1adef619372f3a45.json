@@ -1,0 +1,19 @@
+{
+  "evidence_id": "acp-spec--1adef619372f3a45",
+  "source": "acp-spec",
+  "source_url": "https://github.com/agentic-commerce-protocol/agentic-commerce-protocol/pull/262",
+  "supporting_urls": [],
+  "published_at": "2026-06-11T16:02:33Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/acp-spec/acp-spec--1adef619372f3a45.json",
+  "content_hash": "sha256:78da7fe83d6b25a94dfbb0e0a11043165c86adc1419c181ac3af3ece31a6efc2",
+  "external_id": "pr:262",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "PR #262: fix: correct MessageInfo, MessageWarning, and MessageError examples",
+  "content": "# Fix MessageInfo, MessageWarning, and MessageError examples\n\n## 🔧 Type of Change\n\n- [ ] Documentation fix/improvement\n- [x] Bug fix (non-breaking)\n- [ ] Tooling improvement\n- [x] Example update\n- [ ] Minor data/enum addition\n- [ ] Other: [describe]\n\n---\n\n## 📝 Description\n\nCorrects the inline `example` values for `MessageInfo`, `MessageWarning`, and `MessageError` in the unreleased OpenAPI spec and JSON Schema bundle.\n\nThe previous examples used fields that do not exist in any of the three schemas (`id`, `message`, `display_context`) and omitted all required fields (`type`, `content_type`, `content`). All three schemas declare `additionalProperties: false`, so the examples would fail schema validation in any tool that validates inline OpenAPI examples (e.g. Spectral, Redocly, openapi-generator).\n\n---\n\n## 🎯 Motivation and Context\n\nThe incorrect examples were introduced in #140 when examples were added in bulk to satisfy the new CI validation rule. The CI rule only checks for the *presence* of an example, not whether it is valid against its schema, so the mistake was not caught automatically.\n\n---\n\n## 🧪 Testing\n\n- Manually verified each corrected example against the schema definition (required fields present, no extra fields, enum values valid).\n- `pnpm run validate:all` passes with no errors or warnings.\n\n---\n\n## 📸 Screenshots / Examples\n\n**Before (MessageError):**\n```yaml\nexample:\n  id: msg_err_01\n  message: Invalid email address format\n  code: invalid\n  param: $.buyer.email\n```\n\n**After (MessageError):**\n```yaml\nexample:\n  type: error\n  code: invalid\n  content_type: plain\n  content: Invalid email address format\n  param: $.buyer.email\n```\n\n---\n\n## ✅ Checklist\n\n- [x] I have signed the [Contributor License Agreement (CLA)](../legal/cla/INDIVIDUAL.md)\n- [x] My change follows the project's code style and conventions\n- [x] I have updated relevant documentation (if applicable)\n- [x] I have added/updated examples (if applicable)\n- [x] I have added a changelog entry file to `changelog/unreleased/fix-message-type-examples.md`\n- [x] I have tested my changes locally\n- [x] This change does NOT require a SEP (it's minor/non-breaking)\n- [x] All CI checks pass\n\n---\n\n## 🔍 Scope Verification\n\n- [ ] ❌ This adds/removes/modifies protocol features\n- [ ] ❌ This introduces breaking changes\n- [ ] ❌ This changes governance or processes\n- [ ] ❌ This is complex or controversial\n- [x] ✅ **This is a minor, straightforward change** (confirm by checking this)\n\n---\n\n## 📚 Additional Notes\n\nThe same incorrect examples exist in `spec/2026-04-17/` (the current stable release) but are out of scope for this PR since that version is a historical snapshot.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,6 +1,21 @@
 {
   "schema_version": 1,
   "candidates": {
+    "player:a2a project": {
+      "kind": "player",
+      "observed_name": "A2A Project",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 2,
+      "evidence_ids": [
+        "a2a-spec--c5c1dae975ca0362",
+        "a2a-spec--816f5d8844a50ffe"
+      ],
+      "feed_slugs": [
+        "2026-10-20-a2a-spec-a2a-specification-proposes-client-written-artifacts-across-messaging-methods",
+        "2026-10-13-a2a-spec-a2a-specification-clarifies-interrupted-task-states-as-non-terminal-across-strea"
+      ]
+    },
     "player:adobe": {
       "kind": "player",
       "observed_name": "Adobe",
@@ -12,6 +27,32 @@
       ],
       "feed_slugs": [
         "2026-10-30-x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s"
+      ]
+    },
+    "player:agent2agent protocol (spec)": {
+      "kind": "player",
+      "observed_name": "Agent2Agent Protocol (spec)",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "a2a-spec--ab47ccabfa0adab8"
+      ],
+      "feed_slugs": [
+        "2026-10-19-a2a-spec-a2a-specification-proposes-sendlivemessage-for-bidirectional-agent-interactions"
+      ]
+    },
+    "player:akamai technologies": {
+      "kind": "player",
+      "observed_name": "Akamai Technologies",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--22d014275390f70e"
+      ],
+      "feed_slugs": [
+        "2026-09-21-akamai-blog-akamai-promotes-edge-content-shaping-and-price-deception-to-thwart-competitor-sc"
       ]
     },
     "player:andy stone": {
@@ -38,6 +79,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:censys": {
+      "kind": "player",
+      "observed_name": "Censys",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ]
     },
     "player:charles schwab": {
@@ -90,6 +144,19 @@
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ]
+    },
+    "player:cloud security alliance": {
+      "kind": "player",
+      "observed_name": "Cloud Security Alliance",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--cc7a58204bd2c58a"
+      ],
+      "feed_slugs": [
+        "2026-10-22-akamai-blog-akamai-advocates-layer-3-and-4-microsegmentation-to-map-and-control-autonomous-a"
       ]
     },
     "player:cnn": {
@@ -183,6 +250,19 @@
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
+    "player:experian": {
+      "kind": "player",
+      "observed_name": "Experian",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0bda52142e5910a0"
+      ],
+      "feed_slugs": [
+        "2026-10-26-akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
+      ]
+    },
     "player:forbes": {
       "kind": "player",
       "observed_name": "Forbes",
@@ -220,6 +300,32 @@
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots"
+      ]
+    },
+    "player:hackerone": {
+      "kind": "player",
+      "observed_name": "HackerOne",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ]
+    },
+    "player:hugging face": {
+      "kind": "player",
+      "observed_name": "Hugging Face",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ]
     },
     "player:ietf web bot auth working group": {
@@ -293,6 +399,32 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:koi security": {
+      "kind": "player",
+      "observed_name": "Koi Security",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ]
+    },
+    "player:mandiant": {
+      "kind": "player",
+      "observed_name": "Mandiant",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ]
     },
     "player:mark zuckerberg": {
@@ -431,6 +563,19 @@
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
+    "player:sysdig": {
+      "kind": "player",
+      "observed_name": "Sysdig",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ]
+    },
     "player:the financial times": {
       "kind": "player",
       "observed_name": "The Financial Times",
@@ -566,6 +711,19 @@
         "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
       ]
     },
+    "player:x402 foundation": {
+      "kind": "player",
+      "observed_name": "x402 Foundation",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--fb53753b78cb4f6b"
+      ],
+      "feed_slugs": [
+        "2026-10-12-akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
+      ]
+    },
     "player:xai": {
       "kind": "player",
       "observed_name": "xAI",
@@ -605,6 +763,19 @@
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
+    "protocol:agent-to-agent protocol": {
+      "kind": "protocol",
+      "observed_name": "Agent-to-Agent protocol",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ]
+    },
     "protocol:cbcp": {
       "kind": "protocol",
       "observed_name": "CBCP",
@@ -616,6 +787,58 @@
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ]
+    },
+    "protocol:eip-3009": {
+      "kind": "protocol",
+      "observed_name": "EIP-3009",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--fb53753b78cb4f6b"
+      ],
+      "feed_slugs": [
+        "2026-10-12-akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
+      ]
+    },
+    "protocol:eip-712": {
+      "kind": "protocol",
+      "observed_name": "EIP-712",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--fb53753b78cb4f6b"
+      ],
+      "feed_slugs": [
+        "2026-10-12-akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
+      ]
+    },
+    "protocol:graphql": {
+      "kind": "protocol",
+      "observed_name": "GraphQL",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ]
+    },
+    "protocol:grpc": {
+      "kind": "protocol",
+      "observed_name": "gRPC",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ]
     },
     "protocol:http": {
@@ -635,6 +858,19 @@
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut",
         "2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots",
         "2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
+      ]
+    },
+    "protocol:http 402": {
+      "kind": "protocol",
+      "observed_name": "HTTP 402",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--fb53753b78cb4f6b"
+      ],
+      "feed_slugs": [
+        "2026-10-12-akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
       ]
     },
     "protocol:http message signatures": {
@@ -669,6 +905,19 @@
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
       ]
     },
+    "protocol:know your agent": {
+      "kind": "protocol",
+      "observed_name": "Know Your Agent",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0bda52142e5910a0"
+      ],
+      "feed_slugs": [
+        "2026-10-26-akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
+      ]
+    },
     "protocol:mastercard agent pay for machines": {
       "kind": "protocol",
       "observed_name": "Mastercard Agent Pay for Machines",
@@ -680,6 +929,19 @@
       ],
       "feed_slugs": [
         "2026-10-20-x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments"
+      ]
+    },
+    "protocol:rest": {
+      "kind": "protocol",
+      "observed_name": "REST",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ]
     },
     "protocol:rfc 9421": {
@@ -712,6 +974,19 @@
         "2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
       ]
     },
+    "protocol:rpc": {
+      "kind": "protocol",
+      "observed_name": "RPC",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0c53717bccfcaaab"
+      ],
+      "feed_slugs": [
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ]
+    },
     "protocol:sail": {
       "kind": "protocol",
       "observed_name": "SAIL",
@@ -736,6 +1011,19 @@
       ],
       "feed_slugs": [
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
+      ]
+    },
+    "protocol:trusted agent protocol": {
+      "kind": "protocol",
+      "observed_name": "Trusted Agent Protocol",
+      "first_seen_at": "2026-10-31T20:51:06.172555Z",
+      "last_seen_at": "2026-10-31T20:51:06.172555Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "akamai-blog--0bda52142e5910a0"
+      ],
+      "feed_slugs": [
+        "2026-10-26-akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
       ]
     }
   }

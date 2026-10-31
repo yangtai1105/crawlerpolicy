@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--9662e2a7cce372ed",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/trends/2026/feb/super-bowl-world-cup-akamai-delivers-perfect-event",
+  "supporting_urls": [],
+  "published_at": "2026-02-17T18:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--9662e2a7cce372ed.json",
+  "content_hash": "sha256:8a09a0ee9f4be223710bdbec4cff454491f4db2b126d897b43eacfd7a74569da",
+  "external_id": "https://www.akamai.com/blog/trends/2026/feb/super-bowl-world-cup-akamai-delivers-perfect-event",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "From Super Bowl to World Cup: How Akamai Delivers the Perfect Event",
+  "content": "Learn why Akamai is at the core of the biggest online sporting events, and how we help you be successful in the most critical moments.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

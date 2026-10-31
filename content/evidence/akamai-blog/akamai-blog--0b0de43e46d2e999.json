@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--0b0de43e46d2e999",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/feature-spotlight-kubernetes-enforcement",
+  "supporting_urls": [],
+  "published_at": "2023-02-02T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--0b0de43e46d2e999.json",
+  "content_hash": "sha256:bd031e357a17481c524d80f9bd19b3ecd53d078ed0f4761172ae413118dd76e4",
+  "external_id": "https://www.akamai.com/blog/security/feature-spotlight-kubernetes-enforcement",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Feature Spotlight: Kubernetes Enforcement",
+  "content": "Akamai’s new enforcement capabilities for K8s environments provides segmentation for applications and blocks lateral movement to, from, and inside K8s clusters.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

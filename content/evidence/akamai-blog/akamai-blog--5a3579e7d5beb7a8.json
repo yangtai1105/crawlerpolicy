@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--5a3579e7d5beb7a8",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/ddos-chart-toppers-bps-pps-and-rps-greatest-hits",
+  "supporting_urls": [],
+  "published_at": "2021-09-17T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--5a3579e7d5beb7a8.json",
+  "content_hash": "sha256:fb1685b147987480b83fa64e1cb6ac43d949b4bfdd4cf2d0c26ba7708753d72a",
+  "external_id": "https://www.akamai.com/blog/security/ddos-chart-toppers-bps-pps-and-rps-greatest-hits",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "DDoS Chart Toppers—BPS, PPS and RPS Greatest Hits",
+  "content": "New to the scene, monster-sized botnet Mēris is raising some eyebrows with giant requests per second (rps) attacks as shared by Cloudflare (17.2M rps, reported August 19), Yandex (peaking at 21.8M rps on September 5), and KrebsOnSecurity (2M rps on September 9). Some commentary came in on Slashdot, The Record, and The Hacker News.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

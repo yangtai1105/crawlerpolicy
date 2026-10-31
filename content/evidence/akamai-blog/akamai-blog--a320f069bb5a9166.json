@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--a320f069bb5a9166",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/akamai-apj-partner-summit",
+  "supporting_urls": [],
+  "published_at": "2022-12-13T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--a320f069bb5a9166.json",
+  "content_hash": "sha256:ae22db50ffcd53f1b3212b6b6e937d4da7db2f534aff4488b2fdc011e142dd00",
+  "external_id": "https://www.akamai.com/blog/news/akamai-apj-partner-summit",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Akamai Welcomed Partners to a Memorable Asia-Pacific and Japan Partner Summit",
+  "content": "Learn about the recent Akamai APJ Partner Summit 2022, including new revenue opportunities for our partners – and the awards we gave.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

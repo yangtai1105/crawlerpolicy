@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--9703ac861ec7f8ba",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/news/cve-2021-44228-zero-day-vulnerability",
+  "supporting_urls": [],
+  "published_at": "2021-12-10T21:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--9703ac861ec7f8ba.json",
+  "content_hash": "sha256:c6bca6325561d7bb409cc0285cc4890af92d2502a2f92fce34e14bbe66962d21",
+  "external_id": "https://www.akamai.com/blog/news/cve-2021-44228-zero-day-vulnerability",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "CVE-2021-44228 - Zero Day Vulnerability in Apache Log4j that allows remote code execution (RCE)",
+  "content": "See how Akamai helped open-source logging library Log4j fight against a critical unauthenticated remote code execution (RCE) vulnerability and reduce customer exposure.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

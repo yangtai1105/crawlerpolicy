@@ -1,0 +1,32 @@
+{
+  "evidence_id": "akamai-blog--0bda52142e5910a0",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/oct/silent-agents-are-already-on-your-site",
+  "supporting_urls": [],
+  "published_at": "2026-10-26T15:20:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--0bda52142e5910a0.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/ai/2026/oct/silent-agents-are-already-on-your-site",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Silent Agents Are Already on Your Site",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.akamai.com/blog/ai/silent-agents-are-already-on-your-site",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 6217,
+      "sha256": "5d93245b251be2b2bae1ed7299def107c105df166e1f9788db598ca3b3e74079",
+      "cited_urls": [
+        "https://www.akamai.com/blog/ai/silent-agents-are-already-on-your-site",
+        "https://vulners.com/akamaiblog/AKAMAIBLOG:49D107F4A6CC6783AFE499EEC143776D",
+        "https://www.akamai.com/blog/ai"
+      ]
+    }
+  }
+}

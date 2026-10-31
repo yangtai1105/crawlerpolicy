@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1c5c0341d4759c2f",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/2026/jul/every-application-now-lives-ai-ecosystem",
+  "supporting_urls": [],
+  "published_at": "2026-07-23T12:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1c5c0341d4759c2f.json",
+  "content_hash": "sha256:060eaecd358ab0469d9a9fc0d43e40b2ef24385c408b9ae28bb345e5fcebaef9",
+  "external_id": "https://www.akamai.com/blog/cloud/2026/jul/every-application-now-lives-ai-ecosystem",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Every Application Now Lives in an AI Ecosystem",
+  "content": "Discover why modern applications are all part of the AI ecosystem, how real-time inference drives performance, and how to avoid hidden data transfer costs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

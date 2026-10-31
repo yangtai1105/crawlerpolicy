@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--d40c94ccad11c94e",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/cant-wait-to-shut-you-down-msrpc-wininit",
+  "supporting_urls": [],
+  "published_at": "2023-01-31T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--d40c94ccad11c94e.json",
+  "content_hash": "sha256:86175ff262bf23a18a2198dae21ffff816be659635ead0519c40e712adb84f71",
+  "external_id": "https://www.akamai.com/blog/security-research/cant-wait-to-shut-you-down-msrpc-wininit",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Can't Wait to Shut You Down — Remote DoS Using Wininit.exe",
+  "content": "Akamai researchers explore a new vulnerability that can be exploited to lead to denial-of-service attacks against Windows machines.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

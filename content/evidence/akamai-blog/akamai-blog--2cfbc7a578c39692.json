@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--2cfbc7a578c39692",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/now-available-on-github-akamai-cli-utility-for-akamai-terraform",
+  "supporting_urls": [],
+  "published_at": "2022-08-30T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--2cfbc7a578c39692.json",
+  "content_hash": "sha256:0051a32ce64c39142069bb191eb5a162bb66fe685e64598bd34aff6ce00e6f91",
+  "external_id": "https://www.akamai.com/blog/security/now-available-on-github-akamai-cli-utility-for-akamai-terraform",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Now Available on GitHub: Akamai CLI Utility v1.0 for Akamai Terraform",
+  "content": "With v0.9 of the Akamai CLI for Terraform, application development teams can build on infrastructure as code (IaC) and maintain rapid development without compromising security.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

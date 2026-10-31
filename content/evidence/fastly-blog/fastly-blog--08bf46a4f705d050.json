@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--08bf46a4f705d050",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/accelerate-migrations-introducing-direct-fetch-fastly-object-storage/",
+  "supporting_urls": [],
+  "published_at": "2026-09-08T00:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--08bf46a4f705d050.json",
+  "content_hash": "sha256:b07f006abe495366d5cf3af28b6b002be964d1926273ade23b313589f47deb89",
+  "external_id": "https://www.fastly.com/blog/accelerate-migrations-introducing-direct-fetch-fastly-object-storage/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Accelerate Migrations: Introducing Direct Fetch for Fastly Object Storage",
+  "content": "Accelerate your data migrations with Fastly's new Direct Fetch API for Object Storage. Transfer from S3-compatible sources directly, bypassing client limits.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

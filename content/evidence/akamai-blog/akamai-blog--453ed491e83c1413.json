@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--453ed491e83c1413",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/newly-observed-domains-discovered-13-million-malicious-domains",
+  "supporting_urls": [],
+  "published_at": "2022-09-28T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--453ed491e83c1413.json",
+  "content_hash": "sha256:7e6416068d88954de05d3ba7f7056262490f84f3ead535d59106b77ee1a16aa4",
+  "external_id": "https://www.akamai.com/blog/security-research/newly-observed-domains-discovered-13-million-malicious-domains",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Flagging 13 Million Malicious Domains in 1 Month with Newly Observed Domains",
+  "content": "Threat Intelligence feeds are an integral part of any security strategy. In this new research see how Akamai researchers were able to find 8 million malicious domains every month to further protect our customers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

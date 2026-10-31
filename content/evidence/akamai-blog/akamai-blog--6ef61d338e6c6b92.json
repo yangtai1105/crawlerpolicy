@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--6ef61d338e6c6b92",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2025/may/abusing-dmsa-for-privilege-escalation-in-active-directory",
+  "supporting_urls": [],
+  "published_at": "2025-05-21T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--6ef61d338e6c6b92.json",
+  "content_hash": "sha256:22731a674d06c6809a35586681d9de6d4d8f629cbc32e5d4dedd6315c767bac0",
+  "external_id": "https://www.akamai.com/blog/security-research/2025/may/abusing-dmsa-for-privilege-escalation-in-active-directory",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "BadSuccessor: Abusing dMSA to Escalate Privileges in Active Directory",
+  "content": "Akamai researchers found a privilege escalation vulnerability in Windows Server 2025 that allows attackers to compromise any user in Active Directory.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "edition_date": "2026-10-31",
-  "generated_at": "2026-10-31T14:19:26.797580Z",
+  "generated_at": "2026-10-31T20:51:06.172555Z",
   "status": "published",
   "note": "Highest-consequence developments detected in this daily window.",
   "items": [
@@ -12,28 +12,28 @@
       "published_at": "2026-10-30T18:09:58Z"
     },
     {
+      "slug": "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-",
+      "status": "reported",
+      "importance": 0.78,
+      "published_at": "2026-10-30T19:30:00Z"
+    },
+    {
+      "slug": "akamai-blog-akamai-splits-ai-bot-directory-into-training-search-and-real-time-agent-categori",
+      "status": "reported",
+      "importance": 0.78,
+      "published_at": "2026-09-03T06:00:00Z"
+    },
+    {
       "slug": "x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit",
       "status": "signal",
       "importance": 0.72,
       "published_at": "2026-10-30T14:42:33Z"
     },
     {
-      "slug": "news-media-alliance-news-media-alliance-files-amicus-brief-in-multi-district-litigation-against-open",
+      "slug": "human-blog-human-security-adds-claude-duet-detection-showing-consumer-e-commerce-traffic-pa",
       "status": "reported",
-      "importance": 0.68,
-      "published_at": "2026-10-30T15:32:01Z"
-    },
-    {
-      "slug": "x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int",
-      "status": "signal",
-      "importance": 0.65,
-      "published_at": "2026-10-30T21:29:08Z"
-    },
-    {
-      "slug": "x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s",
-      "status": "signal",
-      "importance": 0.55,
-      "published_at": "2026-10-30T22:00:25Z"
+      "importance": 0.72,
+      "published_at": "2026-10-30T00:00:00Z"
     }
   ]
 }

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--09f92f3af3ea060c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/partners/2026/jul/partners-defend-network-ease-ai-anxiety",
+  "supporting_urls": [],
+  "published_at": "2026-07-28T15:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--09f92f3af3ea060c.json",
+  "content_hash": "sha256:3e8a2f8b2cbda7955a0286a5e56a41ef1fa5b1f479eb48f627939dbccd08bbc2",
+  "external_id": "https://www.akamai.com/blog/partners/2026/jul/partners-defend-network-ease-ai-anxiety",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "How Partners Can Defend the Network and Ease AI Anxiety",
+  "content": "Learn how Akamai Guardicore Segmentation empowers partners to ease customer AI anxiety and contain machine-speed exploits with automated microsegmentation.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

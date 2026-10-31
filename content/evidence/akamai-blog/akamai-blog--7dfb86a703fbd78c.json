@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7dfb86a703fbd78c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/performance/managing-traffic-from-the-outset-how-gtm-can-make-your-deploymets",
+  "supporting_urls": [],
+  "published_at": "2019-12-05T05:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7dfb86a703fbd78c.json",
+  "content_hash": "sha256:abd71e97933b0e6bf0dc46d1eeef10ef3eba558c6560edd6fa7039e20a92f820",
+  "external_id": "https://www.akamai.com/blog/performance/managing-traffic-from-the-outset-how-gtm-can-make-your-deploymets",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Managing Traffic From the Outset: How GTM Can Make Your Deployments Easier",
+  "content": "Global Traffic Management, or GTM, is a DNS-based load balancing service that offers application owners a level of flexibility and insight that is unmatched by traditional on-prem solutions.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

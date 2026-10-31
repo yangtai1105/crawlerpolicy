@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--f65063ec249f4bbe",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/vulnerability-in-debians-advanced-package-tool",
+  "supporting_urls": [],
+  "published_at": "2019-01-23T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--f65063ec249f4bbe.json",
+  "content_hash": "sha256:855cfe63ab50e79f01ad5a08eb9e569bb596b1feb88fef802637a656072e2156",
+  "external_id": "https://www.akamai.com/blog/security/vulnerability-in-debians-advanced-package-tool",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "A Vulnerability in Debian’s Apt Allows for Easy Lateral Movement in Data Centers",
+  "content": "Learn about the new vulnerability that was found in Debian’s Advanced Package Tool that allows for easy lateral movement in data center.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

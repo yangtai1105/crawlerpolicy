@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--3c90ede6d36d6233",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/17/document-currentscript/",
+  "supporting_urls": [],
+  "published_at": "2026-10-17T21:11:12Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--3c90ede6d36d6233.json",
+  "content_hash": "sha256:fefc3069db8f722a8b93efec664e3849b1de63c8da6bdd085e3492bfe80176cf",
+  "external_id": "https://simonwillison.net/2026/Oct/17/document-currentscript/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Inline rendering with document​.currentScript",
+  "content": "<p><strong><a href=\"https://leanrada.com/notes/inline-rendering-currentscript/\">Inline rendering with document​.currentScript</a></strong></p>\nLean Rada describes a neat trick that takes advantage of the <a href=\"https://developer.mozilla.org/en-US/docs/Web/API/Document/currentScript\">document.currentScript</a> property. You can use that to drop in a tiny inline <code>&lt;script&gt;</code> element that replaces itself when the page loads:</p>\n<pre><code>The year is &lt;script&gt;\ndocument.currentScript.replaceWith(\n  new Date().getFullYear())&lt;/script&gt;\n</code></pre>\n<p>If you define a shortcut function like this:</p>\n<pre><code>$=(...n)=&gt;document.currentScript.replaceWith(...n)\n</code></pre>\n<p>You get a tiny template language:</p>\n<pre><code>The year is &lt;script&gt;$(new Date().getFullYear())&lt;/script&gt;\n</code></pre>\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/javascript\">javascript</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

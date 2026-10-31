@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--1a4b08aa4d6f11c9",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/understanding-point-of-sale-security",
+  "supporting_urls": [],
+  "published_at": "2019-01-17T16:42:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--1a4b08aa4d6f11c9.json",
+  "content_hash": "sha256:7aba1a9800b55e5ba68ab5ce4826a56939fbf2cd68d538a46856f91852497645",
+  "external_id": "https://www.akamai.com/blog/security/understanding-point-of-sale-security",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "A Deep Dive into Point of Sale Security",
+  "content": "For many, Point of Sale systems are the weakest link in the IT security chain. Learn the microsegmentation policies that can make a difference.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

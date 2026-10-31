@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--7b09cac35135d179",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/owasp-top-10-api-security-risks-2023-edition",
+  "supporting_urls": [],
+  "published_at": "2023-06-21T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--7b09cac35135d179.json",
+  "content_hash": "sha256:79ec3e010856471baee285ac35935154eebbeb5661e6667ffcaf5e7956cb2fd4",
+  "external_id": "https://www.akamai.com/blog/security/owasp-top-10-api-security-risks-2023-edition",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "OWASP Top 10 API Security Risks: The 2023 Edition Is Finally Here",
+  "content": "We review the final changes in the 2023 update to the OWASP Top 10 API Security Risks to help you on your journey to secure your APIs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

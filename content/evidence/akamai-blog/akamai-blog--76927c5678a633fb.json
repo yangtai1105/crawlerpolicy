@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--76927c5678a633fb",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/cloud/2025/nov/cmos-perspective-why-moment-matters-ai-era",
+  "supporting_urls": [],
+  "published_at": "2025-11-19T14:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--76927c5678a633fb.json",
+  "content_hash": "sha256:1c96ab441403184ac42565072be0dd152121523548a71f8a4b04903501a45559",
+  "external_id": "https://www.akamai.com/blog/cloud/2025/nov/cmos-perspective-why-moment-matters-ai-era",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "A CMO’s Perspective: Why This Moment Matters in the AI Era",
+  "content": "Akamai’s CMO describes how the company is radically rethinking and extending the systems needed to unlock AI's true potential.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

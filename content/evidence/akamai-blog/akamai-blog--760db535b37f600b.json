@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--760db535b37f600b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/announcing-akamais-2030-sustainability-goals",
+  "supporting_urls": [],
+  "published_at": "2021-04-22T04:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--760db535b37f600b.json",
+  "content_hash": "sha256:cc70570335d0eebd8db5ff5204c495316aaae5fee6b87241c134e673f9c75c93",
+  "external_id": "https://www.akamai.com/blog/culture/announcing-akamais-2030-sustainability-goals",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Announcing Akamai's 2030 Sustainability Goals",
+  "content": "There are 4.66 billion (yes, with a B) internet users. Rough math will tell us that's three in every five people around the world -- talk about lessening the six degrees. I see head nods and shoulder shrugs. 4.66 billion people?",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

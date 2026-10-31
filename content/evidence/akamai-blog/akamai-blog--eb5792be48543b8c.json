@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--eb5792be48543b8c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/jun/akamai-defended-indian-bank-record-breaking-ddos-attacks",
+  "supporting_urls": [],
+  "published_at": "2026-06-17T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--eb5792be48543b8c.json",
+  "content_hash": "sha256:53991b7f0d069cf4ba35a3f574e10988d2ae142083b696fdeb0a8ea2fe3d2bd8",
+  "external_id": "https://www.akamai.com/blog/security/2026/jun/akamai-defended-indian-bank-record-breaking-ddos-attacks",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "How Akamai Defended an Indian Bank Against Record-Breaking DDoS Attacks",
+  "content": "Learn how Akamai successfully neutralized one of the largest DDoS attacks ever recorded in the Indian banking sector before a single customer was impacted.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

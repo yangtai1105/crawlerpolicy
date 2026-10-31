@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--423d9a27ea72b53d",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+  "supporting_urls": [],
+  "published_at": "2026-10-22T18:09:56Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--423d9a27ea72b53d.json",
+  "content_hash": "sha256:aa5632e72a68cf5d67c7535e936d4178f2a082cb2c33d9c5260a4f67b5a65130",
+  "external_id": "https://simonwillison.net/2026/Oct/22/donating-agent-skills/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Donating Agent Skills to the Agentic AI Foundation",
+  "content": "<p><strong><a href=\"https://www.anthropic.com/news/donating-agent-skills-to-the-agentic-ai-foundation\">Donating Agent Skills to the Agentic AI Foundation</a></strong></p>\nNews today from Anthropic:</p>\n<blockquote>\n<p>We’re committed to keeping Agent Skills open, community-driven, and vendor-neutral. Today, we are donating the standard to the Agentic AI Foundation (AAIF) under the Linux Foundation, <a href=\"https://www.anthropic.com/news/donating-the-model-context-protocol-and-establishing-of-the-agentic-ai-foundation\">which we co-founded</a> with Block and OpenAI last year, and to which we donated the Model Context Protocol (MCP).</p>\n</blockquote>\n<p>I'm pleased to note I called this one <a href=\"https://simonwillison.net/2025/Dec/19/agent-skills/\">last December</a>, when Anthropic first declared skills to be an \"open standard\":</p>\n<blockquote>\n<p>I wouldn't be surprised to see this end up <a href=\"https://simonwillison.net/2025/Dec/9/agentic-ai-foundation/\">in the AAIF</a>, recently the new home of the MCP specification.</p>\n</blockquote>\n<p>Fun side note: since my blog content is available to Claude via the <a href=\"https://github.com/datasette/datasette-mcp\">datasette-mcp</a>\nplugin I found that post by <a href=\"https://claude.ai/share/80b341de-590b-4834-bca9-0d9c9a3a0298\">prompting Claude</a> to \"<code>Use simonwillison.net MCP to find if I ever talked about how I want skills to be donated to a standards body</code>\".\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/t",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

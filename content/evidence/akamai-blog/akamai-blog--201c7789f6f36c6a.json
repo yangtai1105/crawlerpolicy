@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--201c7789f6f36c6a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/culture/how-akamai-works-with-internet-organizations",
+  "supporting_urls": [],
+  "published_at": "2022-06-03T13:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--201c7789f6f36c6a.json",
+  "content_hash": "sha256:c1284beeb52a9957ac6495d09554cd68ca6ab3ecc5f5a647a3b541b962fcc0dc",
+  "external_id": "https://www.akamai.com/blog/culture/how-akamai-works-with-internet-organizations",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "How Akamai Works with Internet Organizations",
+  "content": "Learn about a few of the internet organizations, who are developing standards and best practices, that Akamai works with to help foster innovation.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

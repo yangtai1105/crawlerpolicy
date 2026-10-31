@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--5c835f3e06a4f82c",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2025/mar/enhancing-public-sector-cybersecurity-with-akamai-api-security",
+  "supporting_urls": [],
+  "published_at": "2025-03-27T19:00:00Z",
+  "detected_at": "2026-10-31T20:51:06.172555Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--5c835f3e06a4f82c.json",
+  "content_hash": "sha256:04572872bb2379229b9502e1452408b969e5fc7c194bdb1c8a68527918e2dc25",
+  "external_id": "https://www.akamai.com/blog/security/2025/mar/enhancing-public-sector-cybersecurity-with-akamai-api-security",
+  "stage": "skipped_cutoff",
+  "analysis_attempts": 0,
+  "last_error": "item predates publication cutoff",
+  "title": "Enhancing Public Sector Cybersecurity with Akamai API Security",
+  "content": "Learn how Akamai's API security solution helps federal agencies identify, protect, and monitor API traffic in real time.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
