@@ -46,7 +46,7 @@ jobs:
         id: backfill
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_ANALYSIS_MODEL: gemini-3.7-flash
+          GEMINI_ANALYSIS_MODEL: gemini-3.8-flash
         run: |
           uv run python -m pipeline.backfill_feed \
             --since "${{ inputs.since }}" \

@@ -38,7 +38,7 @@ def test_config_uses_publication_defaults(monkeypatch, tmp_path):
 
     cfg = Config.from_env()
 
-    assert cfg.gemini_analysis_model == "gemini-3.7-flash"
+    assert cfg.gemini_analysis_model == "gemini-3.8-flash"
     assert cfg.publication_cutoff == datetime(2026, 8, 30, tzinfo=UTC)
     assert cfg.feed_dir == tmp_path / "content" / "feed"
 

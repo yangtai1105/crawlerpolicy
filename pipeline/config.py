@@ -98,7 +98,7 @@ class Config:
             repo_root=Path(repo_root_raw).resolve(),
             gemini_api_key=os.environ.get("GEMINI_API_KEY", ""),
             gemini_analysis_model=os.environ.get(
-                "GEMINI_ANALYSIS_MODEL", "gemini-3.7-flash"
+                "GEMINI_ANALYSIS_MODEL", "gemini-3.8-flash"
             ),
             publication_cutoff=cutoff.astimezone(UTC),
             xai_api_key=os.environ.get("XAI_API_KEY", ""),

@@ -45,7 +45,7 @@ jobs:
         continue-on-error: true
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_ANALYSIS_MODEL: gemini-3.7-flash
+          GEMINI_ANALYSIS_MODEL: gemini-3.8-flash
           XAI_API_KEY: ${{ secrets.XAI_API_KEY }}
           XAI_DISCOVERY_MODEL: grok-4.20-0309-non-reasoning
           XAI_MAX_DAILY_SEARCH_CALLS: "6"

@@ -130,7 +130,7 @@ The Astro dev server is at `http://localhost:4321`. Restart it after pipeline co
 
 GitHub Actions supplies secrets at runtime:
 
-- `GEMINI_API_KEY` — every LLM call in the pipeline: relevance checks, event analysis, weekly synthesis, and map readings (`GeminiStructuredModel`, model from the workflow's `GEMINI_ANALYSIS_MODEL`)
+- `GEMINI_API_KEY` — every LLM call in the pipeline: relevance checks, event analysis, weekly synthesis, and map readings (`GeminiStructuredModel`, model from the workflow's `GEMINI_ANALYSIS_MODEL`: `gemini-3.8-flash` for the daily and backfill runs, `gemini-4-argon` for the once-a-week Weekly Intelligence synthesis)
 - `ANTHROPIC_API_KEY` — still configured and passed to `map-readings.yml`, but no current pipeline code reads it
 - `XAI_API_KEY` — X discovery (`x-discovery`); the model comes from the workflow's `XAI_DISCOVERY_MODEL`
 - `ARCHIVE_DEPLOY_KEY` — SSH deploy key with write access to the private `yangtai1105/crawlerpolicy-archive` repository only

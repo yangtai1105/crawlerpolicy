@@ -457,7 +457,7 @@ async def generate_weekly_intelligence(
     cfg = Config(
         repo_root=repo_root,
         gemini_api_key="",
-        gemini_analysis_model="gemini-3.7-flash",
+        gemini_analysis_model="gemini-3.8-flash",
         publication_cutoff=datetime(2026, 8, 30, tzinfo=UTC),
         alert_emails=[],
     )
