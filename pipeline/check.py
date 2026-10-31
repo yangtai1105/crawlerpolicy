@@ -747,7 +747,7 @@ async def _analyze_evidence(
     dry_run: bool,
 ) -> AnalysisResult | None:
     if record.title is not None:
-        blob = f"{record.title}\n{record.content}"
+        blob = source.keyword_haystack(record.title, record.content)
         if not keyword_match(blob, source.keyword_filter or []):
             record.stage = EvidenceStage.ANALYZED
             record.last_error = None

@@ -122,7 +122,7 @@ async def run_backfill(
         record = candidate.record
         try:
             if record.title is not None:
-                searchable = f"{record.title}\n{record.content}"
+                searchable = candidate.source.keyword_haystack(record.title, record.content)
                 if not keyword_match(searchable, candidate.source.keyword_filter or []):
                     irrelevant += 1
                     _record_outcome(

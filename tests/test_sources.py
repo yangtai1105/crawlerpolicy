@@ -212,3 +212,35 @@ def test_repository_sources_use_track_tier_and_role_schema():
     assert all(source.default_tracks for source in sources)
     assert all(source.tier for source in sources)
     assert all(source.role for source in sources)
+
+
+def test_title_scoped_keyword_filter_ignores_article_body():
+    from pipeline.relevance import keyword_match
+
+    s = Source(
+        slug="vendor-blog",
+        type=SourceType.RSS_FEED,
+        url="https://vendor.example/feed",
+        keyword_filter=["AI agent", "scraping"],
+        keyword_filter_scope="title",
+        display_name="Vendor Blog",
+        default_tracks=[Track.ACCESS_CONTROLS],
+        tier=SourceTier.SPECIALIST,
+        role=SourceRole.INFRASTRUCTURE,
+    )
+    body = "Attackers now use an AI agent to automate scraping of login pages."
+
+    assert not keyword_match(s.keyword_haystack("Critical PHP RCE", body), s.keyword_filter)
+    assert keyword_match(s.keyword_haystack("Silent AI agents", ""), s.keyword_filter)
+    assert s.model_copy(update={"keyword_filter_scope": "content"}).keyword_haystack(
+        "Critical PHP RCE", body
+    ).endswith(body)
+
+
+def test_bot_vendor_blogs_filter_on_titles():
+    sources = {source.slug: source for source in load_sources(Path("sources.yaml"))}
+
+    for slug in ("akamai-blog", "fastly-blog", "imperva-blog"):
+        assert sources[slug].keyword_filter_scope == "title"
+        assert sources[slug].tier is SourceTier.SPECIALIST
+        assert "agentic" in sources[slug].keyword_filter

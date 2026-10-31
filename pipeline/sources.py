@@ -3,7 +3,7 @@ from __future__ import annotations
 
 from enum import StrEnum
 from pathlib import Path
-from typing import Self
+from typing import Literal, Self
 
 import yaml
 from pydantic import BaseModel, Field, field_validator, model_validator
@@ -50,6 +50,10 @@ class Source(BaseModel):
 
     # rss_feed
     keyword_filter: list[str] | None = None
+    # Security-vendor blogs mention "AI" and "bot" in nearly every body, so a
+    # broad feed can match on the title alone and leave the rest to the
+    # model relevance check.
+    keyword_filter_scope: Literal["content", "title"] = "content"
 
     # github_repo
     repo: str | None = None
@@ -75,6 +79,12 @@ class Source(BaseModel):
 
     # Optional analysis-model override per source.
     model: str | None = None
+
+    def keyword_haystack(self, title: str, content: str) -> str:
+        """Return the text the keyword filter matches against."""
+        if self.keyword_filter_scope == "title":
+            return title
+        return f"{title}\n{content}"
 
     @field_validator("default_tracks", mode="before")
     @classmethod
