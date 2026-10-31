@@ -395,7 +395,7 @@ async def _main() -> int:
             parser.error("GEMINI_API_KEY is required outside --dry-run")
         model = GeminiStructuredModel(
             api_key=api_key,
-            model=os.environ.get("GEMINI_ANALYSIS_MODEL", "gemini-3.7-flash"),
+            model=os.environ.get("GEMINI_ANALYSIS_MODEL", "gemini-3.8-flash"),
         )
     summary = await run_backfill(
         repo_root=Path(os.environ.get("REPO_ROOT", Path.cwd())).resolve(),
