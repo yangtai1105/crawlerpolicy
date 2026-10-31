@@ -144,6 +144,65 @@
   tier: specialist
   role: infrastructure
 
+# Bot-management vendors. Their blogs are mostly CVE, DDoS and fraud posts
+# whose bodies all mention "AI" or "bot", so these match on the title alone
+# and leave the rest to the model relevance check. A 75-day sample on
+# 2026-10-31 kept 10/62 Akamai, 2/25 Fastly and 0/10 Imperva posts.
+#
+# akamai.com answers declared crawlers (and Cloudflare Browser Run) with 403
+# on the blog, every article and robots.txt; the FeedBurner feed Akamai
+# publishes is reachable but carries titles and one-line summaries only.
+# Disabled until title-only items can be enriched before analysis: analysed
+# as-is, every post reads as an empty update and is consumed as noise.
+- slug: akamai-blog
+  type: rss_feed
+  enabled: false
+  url: https://feeds.feedburner.com/akamai/blog
+  keyword_filter: &vendor_title_keywords
+    - crawler
+    - crawling
+    - scraper
+    - scraping
+    - AI bot
+    - AI agent
+    - agentic
+    - agents
+    - bots
+    - bot traffic
+    - bot management
+    - verified bot
+    - nonhuman
+    - non-human
+    - robots.txt
+    - Web Bot Auth
+    - user agent
+    - LLM
+  keyword_filter_scope: title
+  display_name: Akamai Blog
+  default_tracks: [access-controls, identity-authorization, measurement-economics]
+  tier: specialist
+  role: infrastructure
+
+- slug: fastly-blog
+  type: rss_feed
+  url: https://www.fastly.com/blog_rss.xml
+  keyword_filter: *vendor_title_keywords
+  keyword_filter_scope: title
+  display_name: Fastly Blog
+  default_tracks: [access-controls, measurement-economics]
+  tier: specialist
+  role: infrastructure
+
+- slug: imperva-blog
+  type: rss_feed
+  url: https://www.imperva.com/blog/feed/
+  keyword_filter: *vendor_title_keywords
+  keyword_filter_scope: title
+  display_name: Imperva Blog
+  default_tracks: [access-controls, measurement-economics]
+  tier: specialist
+  role: infrastructure
+
 - slug: uk-cma
   type: rss_feed
   url: https://www.gov.uk/government/organisations/competition-and-markets-authority.atom

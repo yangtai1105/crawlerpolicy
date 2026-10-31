@@ -32,6 +32,17 @@ _TIMEOUT = httpx.Timeout(60.0)
 _POLL_INTERVAL = 5.0
 _POLL_MAX_SEC = 420.0  # 7 minutes — render=true with CF-challenged sites takes time
 
+# Bot-protection vendors answer a blocked render with an ordinary-looking page.
+# Without this check the block page is stored as the source's content and the
+# next real page reads as a material change.
+_BLOCK_MARKERS = (
+    "errors.edgesuite.net",  # Akamai
+    "px-captcha",  # HUMAN / PerimeterX
+    "access to this page has been denied",  # HUMAN / PerimeterX
+    "captcha-delivery.com",  # DataDome
+    "cf-chl-",  # Cloudflare challenge
+)
+
 
 def _headers() -> dict[str, str]:
     email = os.environ.get("CLOUDFLARE_EMAIL")
@@ -129,5 +140,20 @@ async def fetch_cf_browser_run(source: Source) -> FetchResult:
             raise RuntimeError(
                 f"cf_browser_run {source.slug}: empty content (status={metadata.get('status')})"
             )
+        blocked = _block_reason(markdown, html, metadata)
+        if blocked:
+            raise RuntimeError(f"cf_browser_run {source.slug}: blocked by target site ({blocked})")
 
     return FetchResult(mode=ResultMode.DIFFABLE, normalized_content=markdown, raw_ext="md")
+
+
+def _block_reason(markdown: str, html: str, metadata: dict) -> str | None:
+    """Name why a rendered page is a bot-protection block page, or None."""
+    status = metadata.get("status")
+    if isinstance(status, int) and status in {401, 403, 429}:
+        return f"HTTP {status}"
+    text = f"{markdown}\n{html}".lower()
+    for marker in _BLOCK_MARKERS:
+        if marker in text:
+            return marker
+    return None
