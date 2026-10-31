@@ -633,6 +633,7 @@ async def _process_items(
             status=status,
             now=now,
             dry_run=dry_run,
+            full_content=item.body or item.summary,
         )
         if event is not None:
             events.append(event)
@@ -655,6 +656,9 @@ def _evidence_for_item(
     evidence_id = make_evidence_id(source.slug, item.guid)
     relative_path = Path("content") / "evidence" / source.slug / f"{evidence_id}.json"
     content = item.body or item.summary
+    hashed = hash_content(content)
+    if source.evidence_excerpt_chars is not None:
+        content = content[: source.evidence_excerpt_chars]
     return EvidenceRecord(
         evidence_id=evidence_id,
         source=source.slug,
@@ -663,7 +667,7 @@ def _evidence_for_item(
         published_at=item.published_at,
         detected_at=now,
         content_path=relative_path.as_posix(),
-        content_hash=f"sha256:{hash_content(content)}",
+        content_hash=f"sha256:{hashed}",
         external_id=item.guid,
         stage=EvidenceStage.FETCHED,
         title=item.title,
@@ -702,6 +706,7 @@ async def _analyze_and_publish(
     status: SourceRunStatus,
     now: datetime,
     dry_run: bool,
+    full_content: str | None = None,
 ) -> Path | None:
     if circuit.is_open:
         message = str(circuit.failure)
@@ -719,6 +724,7 @@ async def _analyze_and_publish(
             analyze_change=analyze_change,
             now=now,
             dry_run=dry_run,
+            full_content=full_content,
         )
         if status.analysis is not StageStatus.FAILED:
             status.analysis = StageStatus.OK
@@ -761,10 +767,14 @@ async def _analyze_evidence(
     analyze_change: Callable,
     now: datetime,
     dry_run: bool,
+    full_content: str | None = None,
 ) -> AnalysisResult | None:
+    # The fetched text, when the evidence keeps only an excerpt of it. A
+    # replay in a later run has only the excerpt.
+    content = full_content or record.content
     grounded: grounded_reader.GroundedRead | None = None
     if record.title is not None:
-        blob = source.keyword_haystack(record.title, record.content)
+        blob = source.keyword_haystack(record.title, content)
         if not keyword_match(blob, source.keyword_filter or []):
             record.stage = EvidenceStage.ANALYZED
             record.last_error = None
@@ -775,9 +785,7 @@ async def _analyze_evidence(
             grounded = await _read_grounded(cfg, record, now=now, dry_run=dry_run)
             if grounded is None:
                 return None
-        relevance_text = (
-            f"{record.content}\n\n{grounded.text}" if grounded is not None else record.content
-        )
+        relevance_text = f"{content}\n\n{grounded.text}" if grounded is not None else content
         verdict = (
             await model_relevance(model, record.title, relevance_text)
             if model is not None
@@ -817,9 +825,9 @@ async def _analyze_evidence(
                     save_evidence(cfg.evidence_dir, record)
                 return None
 
-    curr_content = record.content
+    curr_content = content
     if grounded is not None:
-        curr_content = f"{record.content}\n\n{grounded_reader.article_context(grounded)}"
+        curr_content = f"{content}\n\n{grounded_reader.article_context(grounded)}"
     articles: list[article_reader.Article] = []
     if source.type is SourceType.XAI_SEARCH:
         # Linked article text deepens the analysis but is never persisted.

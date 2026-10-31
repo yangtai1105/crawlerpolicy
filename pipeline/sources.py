@@ -62,6 +62,10 @@ class Source(BaseModel):
     enrich_via: Literal["gemini_grounded"] | None = None
     # Ask the Wayback Machine to snapshot each material item's article URL.
     archive_primary: bool = False
+    # Keep only this many characters of each item in the public evidence store.
+    # For full-text feeds of paid or personal publications: the analysis still
+    # reads the whole item, but the repository never republishes it.
+    evidence_excerpt_chars: int | None = Field(default=None, ge=200)
 
     # github_repo
     repo: str | None = None

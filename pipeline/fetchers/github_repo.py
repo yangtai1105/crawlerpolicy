@@ -3,6 +3,7 @@ from __future__ import annotations
 
 import os
 from datetime import datetime
+from fnmatch import fnmatchcase
 
 import httpx
 
@@ -88,7 +89,6 @@ async def _fetch_merged_prs(
         },
     )
     resp.raise_for_status()
-    required_labels = set(source.pr_labels)
     items: list[CandidateItem] = []
     for pr in resp.json():
         if not pr.get("merged_at"):
@@ -100,7 +100,7 @@ async def _fetch_merged_prs(
         if since and merged < since:
             continue
         labels = {label["name"] for label in pr.get("labels", [])}
-        if required_labels and not (required_labels & labels):
+        if not await _pr_passes_filters(client, source, pr["number"], labels):
             continue
         items.append(
             CandidateItem(
@@ -113,3 +113,30 @@ async def _fetch_merged_prs(
             )
         )
     return items
+
+
+async def _pr_passes_filters(
+    client: httpx.AsyncClient, source: Source, number: int, labels: set[str]
+) -> bool:
+    """Keep a PR that carries a required label or touches a watched path.
+
+    Protocol repos merge far more SDK and tooling PRs than spec changes, so
+    `pr_path_globs` (fnmatch against changed file paths) narrows them to the
+    specification. With neither filter set, every merged PR is kept.
+    """
+    if not source.pr_labels and not source.pr_path_globs:
+        return True
+    if set(source.pr_labels) & labels:
+        return True
+    if not source.pr_path_globs:
+        return False
+    resp = await client.get(
+        f"https://api.github.com/repos/{source.repo}/pulls/{number}/files",
+        params={"per_page": 100},
+    )
+    resp.raise_for_status()
+    return any(
+        fnmatchcase(changed["filename"], pattern)
+        for changed in resp.json()
+        for pattern in source.pr_path_globs
+    )

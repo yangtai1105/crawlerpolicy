@@ -87,6 +87,8 @@ The site architecture is `/`, `/intelligence`, `/intelligence/{week}`, `/fronts/
 - Evidence is written before analysis and remains available if analysis fails. A later run replays pending evidence instead of refetching or losing it.
 - HTML and IETF sources establish a silent baseline on first observation. Do not backfill history for newly added canonical sources.
 - RSS and GitHub sources retain their bounded catch-up behavior.
+- Protocol repositories (`a2a-spec`, `ucp-spec`, `x402-spec`, `acp-spec`, `ap2-spec`, plus `mcp-spec` and `web-bot-auth-repo`) are `github_repo` sources. `pr_path_globs` (fnmatch against changed files) keeps only merged PRs that touch the specification; a PR passes on a `pr_labels` match or a path match.
+- Full-text feeds of paid or personal publications (`stratechery`, `simon-willison`) set `evidence_excerpt_chars`: analysis reads the whole item in the run that fetched it, but the public evidence store keeps only the excerpt and the hash of the full text. A later replay sees only the excerpt.
 - HTML fetching may follow a bounded explicit page relocation; do not add unrestricted crawling.
 - Cloudflare-challenged sources use `cf_browser_run` only when ordinary HTML fetches cannot recover the content.
 
