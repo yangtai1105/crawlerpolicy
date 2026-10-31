@@ -916,3 +916,46 @@ async def test_unindexed_vendor_item_waits_for_the_index_then_expires(repo, monk
     evidence = json.loads(next((repo / "content/evidence/vendor-blog").glob("*.json")).read_text())
     assert evidence["stage"] == EvidenceStage.ANALYZED.value
     assert evidence["last_error"].startswith("never indexed")
+
+
+async def test_excerpt_source_analyses_full_text_but_stores_only_an_excerpt(repo):
+    (repo / "sources.yaml").write_text(
+        yaml.safe_dump(
+            [
+                {
+                    "slug": "essay-feed",
+                    "type": "rss_feed",
+                    "url": "https://essays.example.test/feed",
+                    "keyword_filter": ["agents"],
+                    "evidence_excerpt_chars": 300,
+                    "display_name": "Essay Feed",
+                    "default_tracks": ["platform-ecosystem"],
+                    "tier": "commentary",
+                    "role": "reporting",
+                }
+            ]
+        )
+    )
+    body = "Opening paragraph. " * 20 + "Deep in the essay: agents now buy things. " + "x" * 5000
+    item = CandidateItem(
+        guid="essay-1",
+        title="The End of the Internet",
+        published_at=datetime(2026, 10, 26, 9, tzinfo=UTC),
+        url="https://essays.example.test/end",
+        summary="",
+        body=body,
+    )
+    analyze = AsyncMock(return_value=_material_analysis())
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 10, 27, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[item])),
+        analyze_change=analyze,
+    )
+
+    # The keyword sits past the excerpt, so matching must use the full text.
+    assert analyze.await_args.kwargs["curr_content"] == body
+    evidence = json.loads(next((repo / "content/evidence/essay-feed").glob("*.json")).read_text())
+    assert evidence["content"] == body[:300]
+    assert evidence["content_hash"] == f"sha256:{hashlib.sha256(body.encode()).hexdigest()}"

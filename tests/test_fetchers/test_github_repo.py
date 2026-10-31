@@ -112,3 +112,45 @@ async def test_applies_pr_label_filter_when_set(gh_source):
     guids = {item.guid for item in result.items}
     assert "pr:42" in guids
     assert "pr:43" not in guids
+
+
+@respx.mock
+async def test_path_globs_keep_only_prs_that_touch_the_spec(gh_source):
+    scoped = gh_source.model_copy(
+        update={"repo": "x402-foundation/x402", "pr_path_globs": ["specs/*"]}
+    )
+    base = "https://api.github.com/repos/x402-foundation/x402"
+    respx.get(f"{base}/releases").mock(return_value=Response(200, json=[]))
+    respx.get(f"{base}/pulls").mock(
+        return_value=Response(
+            200,
+            json=[
+                {
+                    "number": 7,
+                    "title": "spec: add upto scheme",
+                    "merged_at": "2026-10-20T09:00:00Z",
+                    "html_url": "https://x/7",
+                    "body": "",
+                    "labels": [],
+                },
+                {
+                    "number": 8,
+                    "title": "go sdk: bump deps",
+                    "merged_at": "2026-10-20T10:00:00Z",
+                    "html_url": "https://x/8",
+                    "body": "",
+                    "labels": [{"name": "go"}],
+                },
+            ],
+        )
+    )
+    respx.get(f"{base}/pulls/7/files").mock(
+        return_value=Response(200, json=[{"filename": "specs/schemes/upto/scheme_upto.md"}])
+    )
+    respx.get(f"{base}/pulls/8/files").mock(
+        return_value=Response(200, json=[{"filename": "go/go.mod"}])
+    )
+
+    result = await fetch_github_repo(scoped, since=None, seen_guids=[])
+
+    assert [item.guid for item in result.items] == ["pr:7"]

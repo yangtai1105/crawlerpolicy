@@ -325,6 +325,182 @@
   tier: primary
   role: standards
 
+# Agent and agent-commerce protocols. These repositories merge many more SDK,
+# tooling and merge-commit PRs than spec changes, so pr_path_globs keeps only
+# PRs that touch the specification itself. A 30-PR sample on 2026-10-31 kept
+# 5/24 A2A and 5/22 UCP PRs; x402 omits specs/schemes/, which is per-chain
+# implementation detail.
+- slug: a2a-spec
+  type: github_repo
+  repo: a2aproject/A2A
+  pr_path_globs: ["specification/*", "adrs/*"]
+  display_name: Agent2Agent Protocol (spec)
+  default_tracks: [standards-protocols, platform-ecosystem]
+  default_subject: agent
+  tier: primary
+  role: standards
+
+- slug: ucp-spec
+  type: github_repo
+  repo: Universal-Commerce-Protocol/ucp
+  pr_path_globs: ["source/schemas/*", "source/services/*"]
+  display_name: Universal Commerce Protocol (spec)
+  default_tracks: [standards-protocols, platform-ecosystem]
+  default_subject: agent
+  tier: primary
+  role: standards
+
+- slug: x402-spec
+  type: github_repo
+  repo: x402-foundation/x402
+  pr_path_globs:
+    - "specs/x402-specification*"
+    - "specs/transports-*"
+    - "specs/extensions/*"
+  display_name: x402 payments protocol (spec)
+  default_tracks: [standards-protocols, licensing-monetization]
+  default_subject: agent
+  tier: primary
+  role: standards
+
+- slug: acp-spec
+  type: github_repo
+  repo: agentic-commerce-protocol/agentic-commerce-protocol
+  pr_path_globs: ["spec/*", "rfcs/*"]
+  display_name: Agentic Commerce Protocol (spec)
+  default_tracks: [standards-protocols, platform-ecosystem]
+  default_subject: agent
+  tier: primary
+  role: standards
+
+- slug: ap2-spec
+  type: github_repo
+  repo: google-agentic-commerce/AP2
+  pr_path_globs: ["docs/ap2/*", "docs/specification*"]
+  display_name: Agent Payments Protocol (spec)
+  default_tracks: [standards-protocols, licensing-monetization]
+  default_subject: agent
+  tier: primary
+  role: standards
+
+# AI usage preferences: the vocabulary and its robots.txt / HTTP attachment.
+- slug: ietf-aipref-wg
+  type: html_page
+  url: https://datatracker.ietf.org/group/aipref/about/
+  display_name: IETF AI Preferences Working Group
+  default_tracks: [standards-protocols, access-controls, asset-rights]
+  tier: primary
+  role: standards
+
+# Google lists agent-style fetchers that act on a user's request separately
+# from its common crawlers (google-extended above).
+- slug: google-user-triggered-fetchers
+  type: html_page
+  url: https://developers.google.com/search/docs/crawling-indexing/google-user-triggered-fetchers
+  display_name: Google user-triggered fetchers
+  default_tracks: [access-controls, platform-ecosystem]
+  default_subject: agent
+  tier: primary
+  role: platform-docs
+
+# NIST renamed CAISI to CAISSI (Center for Advancing Innovation and Standards
+# for Super Intelligence); /caisi now redirects here. Its news and research
+# blog still carry the agent-evaluation work.
+- slug: nist-caisi
+  type: html_page
+  url: https://www.nist.gov/caissi
+  display_name: NIST CAISSI (formerly CAISI)
+  default_tracks: [policy-regulation, identity-authorization]
+  tier: primary
+  role: regulator
+
+# Directory of agents and crawlers; new browser agents tend to appear here
+# first. The /insights page is left out: its rolling 90-day metrics would
+# read as a change every day.
+- slug: knownagents-directory
+  type: html_page
+  url: https://knownagents.com/agents
+  display_name: Known Agents directory
+  default_tracks: [measurement-economics, access-controls]
+  tier: measurement
+  role: measurement
+
+# The landing page is little more than the current report's title and
+# section list, which is enough to detect a new quarterly report.
+- slug: tollbit-state-of-bots
+  type: html_page
+  url: https://tollbit.com/bots/
+  display_name: TollBit State of the Bots
+  default_tracks: [measurement-economics, licensing-monetization]
+  tier: measurement
+  role: measurement
+
+- slug: stripe-blog
+  type: rss_feed
+  url: https://stripe.com/blog/feed.rss
+  keyword_filter: ["agent", "agents", "agentic", "AI commerce", "machine payments", "x402"]
+  keyword_filter_scope: title
+  display_name: Stripe Blog
+  default_tracks: [licensing-monetization, platform-ecosystem]
+  default_subject: agent
+  tier: specialist
+  role: infrastructure
+
+# Independent analysis. Both feeds carry full text, so the evidence store
+# keeps only an excerpt (evidence_excerpt_chars); the analysis still reads
+# the whole post. Their titles rarely name the topic, so keywords match the
+# body, narrowed to web access rather than coding agents.
+- slug: stratechery
+  type: rss_feed
+  url: https://stratechery.com/feed/
+  keyword_filter:
+    - agentic
+    - AI agent
+    - AI agents
+    - crawler
+    - crawling
+    - scraping
+    - robots.txt
+    - open web
+    - publishers
+    - AI search
+    - Cloudflare
+    - pay per crawl
+    - licensing
+  evidence_excerpt_chars: 1500
+  display_name: Stratechery
+  default_tracks: [platform-ecosystem, search-discovery, licensing-monetization]
+  tier: commentary
+  role: reporting
+
+- slug: simon-willison
+  type: rss_feed
+  url: https://simonwillison.net/atom/everything/
+  keyword_filter:
+    - crawler
+    - crawling
+    - scraper
+    - scraping
+    - robots.txt
+    - prompt injection
+    - agentic browser
+    - AI browser
+    - browser agent
+    - computer use
+    - web agent
+    - Web Bot Auth
+    - user agent
+    - user-agent
+    - llms.txt
+    - Cloudflare
+    - paywall
+    - publishers
+  evidence_excerpt_chars: 1500
+  display_name: Simon Willison's Weblog
+  default_tracks: [platform-ecosystem, access-controls, identity-authorization]
+  tier: commentary
+  role: reporting
+
 - slug: cloudflare-research
   type: rss_feed
   url: https://blog.cloudflare.com/tag/research/rss/
