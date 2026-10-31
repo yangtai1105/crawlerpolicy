@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--7be9445682a1cc94",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/nma-files-amicus-brief-in-openai-mdl/",
+  "supporting_urls": [],
+  "published_at": "2026-10-30T15:32:01Z",
+  "detected_at": "2026-10-31T14:19:26.797580Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--7be9445682a1cc94.json",
+  "content_hash": "sha256:c563929860f9516c53bf1612818b0c9a1acc5a0deba981be252ade36ada0476c",
+  "external_id": "https://www.newsmediaalliance.org/?p=18864",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "News/Media Alliance Files Amicus Brief in News Publisher Suits Against OpenAI and Microsoft",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"1412\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2026/10/GettyImages-2270095980-1.jpg\" width=\"2122\" /></p>The News/Media Alliance filed its amicus brief in the multi-district litigation in which over a dozen news publishers have sued OpenAI and Microsoft for using their content without permission to train AI systems and power real-time AI answers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

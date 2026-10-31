@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--10e1fdf9f2c6fff5",
+  "source": "x-discovery",
+  "source_url": "https://x.com/sengineland/status/2116289144590614657",
+  "supporting_urls": [
+    "https://searchengineland.com/ai-traffic-drives-more-revenue-per-visit-adobe-499713"
+  ],
+  "published_at": "2026-10-30T22:00:25Z",
+  "detected_at": "2026-10-31T14:19:26.797580Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--10e1fdf9f2c6fff5.json",
+  "content_hash": "sha256:680d725e22467117050d41f581801842d6f2381ce2953ca9ccd9ba6675dd134d",
+  "external_id": "2116289144590614657",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Adobe reports AI visitors drove 83% more revenue per visit on U.S. retail sites in September",
+  "content": "X author: @sengineland\n\nAdobe released data showing AI visitors generated 83% more revenue per visit on U.S. retail sites in September 2026, up from parity the prior year, along with holiday season forecasts.\n\nLinked sources:\n- https://searchengineland.com/ai-traffic-drives-more-revenue-per-visit-adobe-499713",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "sengineland",
+    "post_url": "https://x.com/sengineland/status/2116289144590614657",
+    "linked_urls": [
+      "https://searchengineland.com/ai-traffic-drives-more-revenue-per-visit-adobe-499713"
+    ],
+    "provider_citations": [],
+    "front": "measurement-economics",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the listed items cover Adobe's data on AI visitors driving higher revenue per visit on retail sites."
+    },
+    "linked_articles": [
+      {
+        "url": "https://searchengineland.com/ai-traffic-drives-more-revenue-per-visit-adobe-499713",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://searchengineland.com/ai-traffic-drives-more-revenue-per-visit-adobe-499713'\nFor more information check: https://developer.mozilla.org/en-"
+      }
+    ]
+  }
+}

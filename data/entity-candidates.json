@@ -1,6 +1,19 @@
 {
   "schema_version": 1,
   "candidates": {
+    "player:adobe": {
+      "kind": "player",
+      "observed_name": "Adobe",
+      "first_seen_at": "2026-10-31T14:19:26.797580Z",
+      "last_seen_at": "2026-10-31T14:19:26.797580Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--10e1fdf9f2c6fff5"
+      ],
+      "feed_slugs": [
+        "2026-10-30-x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s"
+      ]
+    },
     "player:andy stone": {
       "kind": "player",
       "observed_name": "Andy Stone",
@@ -51,6 +64,19 @@
       ],
       "feed_slugs": [
         "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
+      ]
+    },
+    "player:chegg": {
+      "kind": "player",
+      "observed_name": "Chegg",
+      "first_seen_at": "2026-10-31T14:19:26.797580Z",
+      "last_seen_at": "2026-10-31T14:19:26.797580Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--ca29e9a98e42e91d"
+      ],
+      "feed_slugs": [
+        "2026-10-30-x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit"
       ]
     },
     "player:claudebot": {
@@ -129,6 +155,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:doordash": {
+      "kind": "player",
+      "observed_name": "DoorDash",
+      "first_seen_at": "2026-10-31T14:19:26.797580Z",
+      "last_seen_at": "2026-10-31T14:19:26.797580Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--5cf3f568a76179cd"
+      ],
+      "feed_slugs": [
+        "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
       ]
     },
     "player:el país": {
@@ -310,6 +349,19 @@
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
+    "player:penske media": {
+      "kind": "player",
+      "observed_name": "Penske Media",
+      "first_seen_at": "2026-10-31T14:19:26.797580Z",
+      "last_seen_at": "2026-10-31T14:19:26.797580Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--ca29e9a98e42e91d"
+      ],
+      "feed_slugs": [
+        "2026-10-30-x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit"
+      ]
+    },
     "player:radist": {
       "kind": "player",
       "observed_name": "Radist",
@@ -327,15 +379,17 @@
       "kind": "player",
       "observed_name": "Search Engine Land",
       "first_seen_at": "2026-10-24T12:27:35.735465Z",
-      "last_seen_at": "2026-10-28T14:52:45.308044Z",
-      "occurrences": 2,
+      "last_seen_at": "2026-10-31T14:19:26.797580Z",
+      "occurrences": 3,
       "evidence_ids": [
         "x-discovery--5177e7e21ef2c779",
-        "x-discovery--296c5b7386498d36"
+        "x-discovery--296c5b7386498d36",
+        "x-discovery--10e1fdf9f2c6fff5"
       ],
       "feed_slugs": [
         "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships",
-        "2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations"
+        "2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations",
+        "2026-10-30-x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s"
       ]
     },
     "player:selectel": {
@@ -484,17 +538,32 @@
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
+    "player:tony xu": {
+      "kind": "player",
+      "observed_name": "Tony Xu",
+      "first_seen_at": "2026-10-31T14:19:26.797580Z",
+      "last_seen_at": "2026-10-31T14:19:26.797580Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--5cf3f568a76179cd"
+      ],
+      "feed_slugs": [
+        "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
+      ]
+    },
     "player:walmart": {
       "kind": "player",
       "observed_name": "Walmart",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
-      "last_seen_at": "2026-10-18T12:27:30.284320Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-10-31T14:19:26.797580Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "x-discovery--575795a51d9ff9e6"
+        "x-discovery--575795a51d9ff9e6",
+        "x-discovery--5cf3f568a76179cd"
       ],
       "feed_slugs": [
-        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
+        "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
       ]
     },
     "player:xai": {

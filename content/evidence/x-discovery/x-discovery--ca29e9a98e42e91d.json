@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--ca29e9a98e42e91d",
+  "source": "x-discovery",
+  "source_url": "https://x.com/pressgazette/status/2116178950531469314",
+  "supporting_urls": [
+    "https://pressgazette.co.uk/news/penske-ai-overviews-lawsuit-dismissed-because-no-formal-bargain-struck-with-google/"
+  ],
+  "published_at": "2026-10-30T14:42:33Z",
+  "detected_at": "2026-10-31T14:19:26.797580Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--ca29e9a98e42e91d.json",
+  "content_hash": "sha256:3e58189d540d466b8ee17d8c8c9fe4b006c779a1384b23a269a7382059a7d6d4",
+  "external_id": "2116178950531469314",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Penske Media and Chegg appeal dismissal of AI Overviews lawsuit against Google",
+  "content": "X author: @pressgazette\n\nPenske Media and Chegg filed an appeal after a court dismissed their lawsuit against Google alleging AI Overviews harmed their traffic and revenue, citing no formal bargain with Google.\n\nLinked sources:\n- https://pressgazette.co.uk/news/penske-ai-overviews-lawsuit-dismissed-because-no-formal-bargain-struck-with-google/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "pressgazette",
+    "post_url": "https://x.com/pressgazette/status/2116178950531469314",
+    "linked_urls": [
+      "https://pressgazette.co.uk/news/penske-ai-overviews-lawsuit-dismissed-because-no-formal-bargain-struck-with-google/"
+    ],
+    "provider_citations": [],
+    "front": "governance-law",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover Penske Media and Chegg appealing the dismissal of their AI Overviews lawsuit against Google."
+    },
+    "linked_articles": [
+      {
+        "url": "https://pressgazette.co.uk/news/penske-ai-overviews-lawsuit-dismissed-because-no-formal-bargain-struck-with-google/",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://pressgazette.co.uk/news/penske-ai-overviews-lawsuit-dismissed-because-no-formal-bargain-struck-with-google/'\nFor more information check: "
+      }
+    ]
+  }
+}

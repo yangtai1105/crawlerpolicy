@@ -249,6 +249,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agentic-commerce-integration-over-automated-blocking",
+      "title": "Agentic Commerce Integration Over Automated Blocking",
+      "thesis": "Platform responses to delegated agentic commerce are diverging sharply between defensive blocking and partnership exploration, with DoorDash treating early agent traffic as a nascent advertising and distribution channel rather than hostile scraping.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-commerce-readiness",
       "title": "Agentic Commerce Readiness",
       "thesis": "Traditional bot detection relied on distinguishing humans from automated scripts using IP ranges and user-agent strings, but agentic web architectures obscure that boundary because benign assistants, scrapers, and credential-stuffing bots share the same cloud AI infrastructure. As a result, access governance is shifting toward granular endpoint policy enforcement and cryptographic identity binding to assess intent rather than relying on binary perimeter blocking.",
@@ -452,6 +465,19 @@
       ]
     },
     {
+      "key": "ai-overview-litigation",
+      "title": "AI Overview Litigation",
+      "thesis": "Publishers challenging search engines over AI summaries face significant judicial resistance when attempting to claim breach of implied contract or economic entitlement in the absence of a binding, formal commercial agreement.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-search-ranking-decoupling",
       "title": "AI Search Ranking Decoupling",
       "thesis": "The addition formalizes an explicit policy boundary between AI model training opt-outs and core search indexing algorithms, countering concerns that withholding training data might degrade search discovery.",
@@ -476,6 +502,19 @@
       "last_updated_at": "2026-10-24T12:27:35.735465Z",
       "related_feed_slugs": [
         "x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "ai-traffic-monetization-premium",
+      "title": "AI Traffic Monetization Premium",
+      "thesis": "AI referral traffic is shifting from exploratory query volume to high-intent transactional conversion, demonstrating a measurable commercial premium over conventional web visits.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s"
       ],
       "verified_development_slugs": []
     },
@@ -777,6 +816,19 @@
       "verified_development_slugs": [
         "openai-plans-acquisition-of-ona-to-power-persistent-cloud-environments-for-codex"
       ]
+    },
+    {
+      "key": "collective-publisher-litigation-against-ai-developers",
+      "title": "Collective Publisher Litigation Against AI Developers",
+      "thesis": "Publishing trade organizations are coordinating legal pressure via amicus filings to contest both offline training uses and live inference retrieval by AI developers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "news-media-alliance-news-media-alliance-files-amicus-brief-in-multi-district-litigation-against-open"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "commercial-agent-partnerships",
@@ -1189,6 +1241,19 @@
       "last_updated_at": "2026-10-24T12:27:35.735465Z",
       "related_feed_slugs": [
         "x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "divergent-platform-policies-on-agent-access",
+      "title": "Divergent Platform Policies On Agent Access",
+      "thesis": "Platform responses to delegated agentic commerce are diverging sharply between defensive blocking and partnership exploration, with DoorDash treating early agent traffic as a nascent advertising and distribution channel rather than hostile scraping.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
       ],
       "verified_development_slugs": []
     },
@@ -1782,6 +1847,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "judicial-scrutiny-of-implied-web-bargains",
+      "title": "Judicial Scrutiny Of Implied Web Bargains",
+      "thesis": "Publishers challenging search engines over AI summaries face significant judicial resistance when attempting to claim breach of implied contract or economic entitlement in the absence of a binding, formal commercial agreement.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "know-your-agent-governance",
       "title": "Know Your Agent Governance",
       "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
@@ -1970,6 +2048,19 @@
       "verified_development_slugs": [
         "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
       ]
+    },
+    {
+      "key": "monetization-of-delegated-machine-agents-via-ads-and-apis",
+      "title": "Monetization Of Delegated Machine Agents Via Ads And Apis",
+      "thesis": "Platform responses to delegated agentic commerce are diverging sharply between defensive blocking and partnership exploration, with DoorDash treating early agent traffic as a nascent advertising and distribution channel rather than hostile scraping.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "multi-language-reference-implementation-parity",
@@ -2201,6 +2292,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "publisher-traffic-loss-disputes",
+      "title": "Publisher Traffic Loss Disputes",
+      "thesis": "Publishers challenging search engines over AI summaries face significant judicial resistance when attempting to claim breach of implied contract or economic entitlement in the absence of a binding, formal commercial agreement.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "residential-proxy-agent-routing",
       "title": "Residential Proxy Agent Routing",
       "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
@@ -2257,6 +2361,32 @@
       "verified_development_slugs": [
         "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
       ]
+    },
+    {
+      "key": "robots-txt-modernization",
+      "title": "Robots Txt Modernization",
+      "thesis": "AI developers and search incumbents are moving away from proprietary crawler tokens toward unified usage-based syntax in robots.txt, separating permission for AI model training from general web search indexing.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-google-microsoft-anthropic-and-openai-back-shared-robots-txt-ai-training-opt-out"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "scrutiny-of-real-time-retrieval-and-model-training",
+      "title": "Scrutiny Of Real Time Retrieval And Model Training",
+      "thesis": "Publishing trade organizations are coordinating legal pressure via amicus filings to contest both offline training uses and live inference retrieval by AI developers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "news-media-alliance-news-media-alliance-files-amicus-brief-in-multi-district-litigation-against-open"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "sdk-hardening",
@@ -2356,6 +2486,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "shift-toward-high-intent-ai-commercial-conversions",
+      "title": "Shift Toward High Intent AI Commercial Conversions",
+      "thesis": "AI referral traffic is shifting from exploratory query volume to high-intent transactional conversion, demonstrating a measurable commercial premium over conventional web visits.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "stablecoin-edge-settlement",
       "title": "Stablecoin Edge Settlement",
       "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
@@ -2438,6 +2581,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "training-vs-search-decoupling",
+      "title": "Training Vs Search Decoupling",
+      "thesis": "AI developers and search incumbents are moving away from proprietary crawler tokens toward unified usage-based syntax in robots.txt, separating permission for AI model training from general web search indexing.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-google-microsoft-anthropic-and-openai-back-shared-robots-txt-ai-training-opt-out"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "transactional-agent-penetration",
       "title": "Transactional Agent Penetration",
       "thesis": "Relying on user-agent strings for crawler governance has broken down: 80% of AI agents do not declare a reliable identity, and popular identifiers like Meta-ExternalAgent, GPTBot, and ClaudeBot are heavily spoofed to bypass static filters. At the same time, AI agents are shifting from passive crawling of public pages to deep transactional interactions across authentication and checkout flows, blurring the distinction between automated shopping assistants and credential-stuffing bots.",
@@ -2473,6 +2629,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "datadome-blog-meta-muse-agentic-browser-operates-without-declared-user-agent-or-dedicated-ip-r"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "unified-ai-opt-outs",
+      "title": "Unified AI Opt Outs",
+      "thesis": "AI developers and search incumbents are moving away from proprietary crawler tokens toward unified usage-based syntax in robots.txt, separating permission for AI model training from general web search indexing.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-10-31T14:19:26.797580Z",
+      "last_updated_at": "2026-10-31T14:19:26.797580Z",
+      "related_feed_slugs": [
+        "x-discovery-google-microsoft-anthropic-and-openai-back-shared-robots-txt-ai-training-opt-out"
       ],
       "verified_development_slugs": []
     },

@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-10-30T14:51:31.332675Z",
-  "last_fully_successful_at": "2026-10-30T14:51:31.332675Z",
+  "last_attempted_at": "2026-10-31T14:19:26.797580Z",
+  "last_fully_successful_at": "2026-10-31T14:19:26.797580Z",
   "coverage": {
     "configured": 35,
     "completed": 35,
@@ -60,7 +60,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "google-extended--38d5e210d5e289ad"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -151,7 +153,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--3191778a6413a6ba"
+        "cloudflare-blog--0fd6b95b94ba2e86"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -172,17 +174,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--d648a9376fc6d657",
-        "uk-cma--0817938fb3acc998",
-        "uk-cma--b5dcba6fd0198a51",
-        "uk-cma--7b9879d005934549",
-        "uk-cma--b6d06a7ca6f74850",
-        "uk-cma--f7fd242fb40392d4",
-        "uk-cma--e16110f13d82adc2",
-        "uk-cma--8a48656621560567",
-        "uk-cma--fadbe98a0a84a258"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -213,13 +205,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--7a5d89b95c07f81e",
-        "eu-commission-digital--d0a675e884a3abc7",
-        "eu-commission-digital--25a21ccaf3ba0555",
-        "eu-commission-digital--c60dd0c76322fb93",
-        "eu-commission-digital--86e6ee15a79335fa",
-        "eu-commission-digital--87775ff746cd39e2",
-        "eu-commission-digital--5b523ec6aa7b8e93"
+        "eu-commission-digital--ee3122443406e2dc"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -240,9 +226,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--7be9445682a1cc94"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-30-news-media-alliance-news-media-alliance-files-amicus-brief-in-multi-district-litigation-against-open.md"
+      ]
     },
     "reddit-corporate": {
       "fetch": "ok",
@@ -290,9 +280,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--2d1f8500636ac07f"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -363,7 +351,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "rsl-standard--c948a09d6d5f5d83"
+        "rsl-standard--88dd6e466faf3f74"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -405,14 +393,28 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--871b7c9a2371bdfe"
+        "x-discovery--10e1fdf9f2c6fff5",
+        "x-discovery--ca29e9a98e42e91d",
+        "x-discovery--5cf3f568a76179cd",
+        "x-discovery--8f9612399ddd6128"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-10-30-x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s.md",
+        "content/feed/2026-10-30-x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit.md",
+        "content/feed/2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int.md",
+        "content/feed/2026-10-30-x-discovery-google-microsoft-anthropic-and-openai-back-shared-robots-txt-ai-training-opt-out.md"
+      ]
     }
   },
   "events_written": [],
-  "feed_items_written": [],
+  "feed_items_written": [
+    "content/feed/2026-10-30-news-media-alliance-news-media-alliance-files-amicus-brief-in-multi-district-litigation-against-open.md",
+    "content/feed/2026-10-30-x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s.md",
+    "content/feed/2026-10-30-x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit.md",
+    "content/feed/2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int.md",
+    "content/feed/2026-10-30-x-discovery-google-microsoft-anthropic-and-openai-back-shared-robots-txt-ai-training-opt-out.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -420,13 +422,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-10-30",
-    "item_count": 0,
-    "path": "data/daily/2026-10-30.json"
+    "status": "published",
+    "edition_date": "2026-10-31",
+    "item_count": 5,
+    "path": "data/daily/2026-10-31.json"
   },
   "insight_threads": {
-    "thread_count": 188,
+    "thread_count": 201,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -436,9 +438,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 1,
+    "candidate_count": 4,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.017312,
+    "estimated_tool_cost_usd": 0.129781,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

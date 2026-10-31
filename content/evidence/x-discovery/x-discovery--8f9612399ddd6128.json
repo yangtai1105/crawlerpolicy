@@ -1,0 +1,54 @@
+{
+  "evidence_id": "x-discovery--8f9612399ddd6128",
+  "source": "x-discovery",
+  "source_url": "https://x.com/vanessafox/status/2116231149873963129",
+  "supporting_urls": [
+    "https://www.vanessafox.com/complete-reference-blocking-llm-crawlers/#new-shared-standard-usage-ai-training-in-robots-txt"
+  ],
+  "published_at": "2026-10-30T18:09:58Z",
+  "detected_at": "2026-10-31T14:19:26.797580Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--8f9612399ddd6128.json",
+  "content_hash": "sha256:d0c1c2cddd2617ff9b8f8d64064065107d4bd8dc04a4b8a16ea68aec40a50b23",
+  "external_id": "2116231149873963129",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Google, Microsoft, Anthropic, OpenAI moving to support new robots.txt user-agent for AI training opt-out",
+  "content": "X author: @vanessafox\n\nGoogle, Microsoft, Anthropic, and OpenAI are working toward supporting (targeting early 2027) a new shared user-agent standard in robots.txt proposed by Anthropic's Kevin Kelley at the IETF, allowing sites to block content use for AI training.\n\nLinked sources:\n- https://www.vanessafox.com/complete-reference-blocking-llm-crawlers/#new-shared-standard-usage-ai-training-in-robots-txt",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "vanessafox",
+    "post_url": "https://x.com/vanessafox/status/2116231149873963129",
+    "linked_urls": [
+      "https://www.vanessafox.com/complete-reference-blocking-llm-crawlers/#new-shared-standard-usage-ai-training-in-robots-txt"
+    ],
+    "provider_citations": [],
+    "front": "access-discovery",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover the initiative by Google, Microsoft, Anthropic, and OpenAI to support a shared robots.txt user-agent standard at the IETF for AI training opt-outs."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.vanessafox.com/complete-reference-blocking-llm-crawlers/#new-shared-standard-usage-ai-training-in-robots-txt",
+        "final_url": "https://www.vanessafox.com/complete-reference-blocking-llm-crawlers/#new-shared-standard-usage-ai-training-in-robots-txt",
+        "method": "readability",
+        "chars": 15000,
+        "sha256": "6aa968fabceb6c61f7514d46d020b29e01de282211aba9735a14a6692b748aab",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-10-30/x-discovery--8f9612399ddd6128-1.md",
+        "archived_copy": "https://web.archive.org/web/20261031103150/https://www.vanessafox.com/complete-reference-blocking-llm-crawlers/"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 5,
+      "figures_kept": 3,
+      "missing": [
+        "403",
+        "365"
+      ]
+    }
+  }
+}

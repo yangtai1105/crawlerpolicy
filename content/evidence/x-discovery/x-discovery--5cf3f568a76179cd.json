@@ -1,0 +1,51 @@
+{
+  "evidence_id": "x-discovery--5cf3f568a76179cd",
+  "source": "x-discovery",
+  "source_url": "https://x.com/TechCrunch/status/2116281270934045179",
+  "supporting_urls": [
+    "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/"
+  ],
+  "published_at": "2026-10-30T21:29:08Z",
+  "detected_at": "2026-10-31T14:19:26.797580Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--5cf3f568a76179cd.json",
+  "content_hash": "sha256:397edc615b9138b20cf6f4d5f1f2017cca986ff516f35a2e7f45e5e5b2d3989e",
+  "external_id": "2116281270934045179",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "DoorDash open to working with third-party AI agent makers",
+  "content": "X author: @TechCrunch\n\nDoorDash stated it is open to partnering with third-party AI agent developers after receiving several hundred orders from AI agents.\n\nLinked sources:\n- https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "TechCrunch",
+    "post_url": "https://x.com/TechCrunch/status/2116281270934045179",
+    "linked_urls": [
+      "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "This is the first report in the list regarding DoorDash receiving orders from AI agents and expressing openness to partnering with agent developers."
+    },
+    "linked_articles": [
+      {
+        "url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+        "final_url": "https://techcrunch.com/2026/10/30/doordash-said-its-only-received-several-hundred-orders-from-ai-agents/",
+        "method": "readability",
+        "chars": 1822,
+        "sha256": "94e8e8a77be29e59335c2b9fae86f794946410d6f712a10988f94fa154cc60fd",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-10-30/x-discovery--5cf3f568a76179cd-1.md",
+        "archived_copy": "https://web.archive.org/web/20261031142344/https://techcrunch.com/2026/10/29/agent-identity-startup-mintive-lands-cowboy-ventures-coatue-angels-jeff-dean-andrej-karpathy/?sidebar=a"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 1,
+      "figures_kept": 1,
+      "missing": []
+    }
+  }
+}
