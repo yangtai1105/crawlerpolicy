@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--63e5f8da122ebc7d",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+  "supporting_urls": [],
+  "published_at": "2026-10-31T23:15:22Z",
+  "detected_at": "2026-11-01T14:45:54.040111Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--63e5f8da122ebc7d.json",
+  "content_hash": "sha256:0ad344891724b0c9c18c36490a78b470303a44c277e94f489fd3c942b4aa4951",
+  "external_id": "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "How We Took Over ChatGPT Accounts",
+  "content": "<p><strong><a href=\"https://www.parameter.ai/labs/we-found-a-gap-at-openai\">How We Took Over ChatGPT Accounts</a></strong></p>\nParameter Labs describe an exploit they found against ChatGPT's implementation of the artifacts pattern (OpenAI used to call this \"Canvas\" but it looks like the latest revision is called <a href=\"https://help.openai.com/en/articles/20001246-working-with-writing-blocks-and-code-blocks-in-chatgpt\">HTML previews</a>), where interactive custom HTML apps are displayed in a sandboxed iframe.</p>\n<p>It's important that HTML in these stays tightly sandboxed to avoid untrusted code interacting with OpenAI APIs and accessing private data.</p>\n<p>Parameter found quite a complex attack chain. OpenAI use the MathLive JavaScript library as part of their graph support, and that library includes <a href=\"https://mathlive.io/mathfield/virtual-keyboard/\">its own virtual keyboard</a>, which can be triggered in the parent page via <code>postMessage()</code> from the sandboxed iframe.</p>\n<p>That message receiving code uses <code>innerHTML</code>, so anything that sends a message can add custom HTML to the parent - and there was no mechanism to prevent other sandboxed frames, including HTML preview frames, from calling that method.</p>\n<p>This meant untrusted code in an iframe could insert HTML, and while <code>innerHTML</code> doesn't directly execute script elements it could be used to inject a new iframe <em>without</em> sandbox restrictions.</p>\n<p>OpenAI’s CSP rules ",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
