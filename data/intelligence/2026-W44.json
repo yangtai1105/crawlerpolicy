@@ -1,0 +1,273 @@
+{
+  "schema_version": 1,
+  "week": "2026-W44",
+  "generated_at": "2026-11-02T22:08:57.760336Z",
+  "window_start": "2026-10-26",
+  "window_end": "2026-11-01",
+  "health_status": "degraded",
+  "coverage": {
+    "configured": 52,
+    "completed": 51,
+    "fetched": 51,
+    "analyzed": 51,
+    "published": 51,
+    "failed": 1,
+    "required_failed": 0
+  },
+  "thesis": "The web ecosystem is simultaneously relying on granular, vendor-specific firewall configurations to manage AI crawler access today while actively standardizing and hardening cryptographic HTTP signature protocols to replace brittle IP and User-Agent verification.",
+  "executive_shifts": [
+    {
+      "headline": "IETF Advances Cryptographic Bot Authentication and Identity Registry Drafts",
+      "summary": "The IETF Web Bot Auth Working Group released `draft-ietf-webbotauth-httpsig-protocol-01` for HTTP Message Signatures, its first official revision since adopting the draft in September 2026. Additionally, an updated individual submission (`draft-meunier-webbotauth-registry-04`) advanced specifications for a Registry and Signature Agent card, addressing the standardized discovery mechanisms needed for publishers to verify signing entities.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ]
+    },
+    {
+      "headline": "Cloudflare Enforces Strict RFC 9421 Parsing Parity in Web Bot Auth Reference Verifier",
+      "summary": "Cloudflare updated the Rust reference verifier in its Web Bot Auth repository to return a parsing error when duplicate signature labels are detected across `Signature-Input` and `Signature` field values. This fixes prior behavior that silently retained only the last duplicate key, bringing the Rust verifier into parity with the TypeScript implementation.",
+      "evidence_event_ids": [
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+      ]
+    },
+    {
+      "headline": "Perplexity Revises WAF Configuration Guidance for Crawler Access",
+      "summary": "Perplexity updated its webmaster documentation to match `PerplexityBot` and `Perplexity-User` against distinct IP ranges rather than using single combined rules. For Cloudflare deployments, the guidance specifies using Skip actions instead of Allow, noting that custom WAF rules cannot bypass Bot Fight Mode.",
+      "evidence_event_ids": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": true,
+      "event_ids": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "access-controls",
+      "material_change": true,
+      "event_ids": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "platform-ecosystem",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421",
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "identity-authorization",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421",
+        "ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421",
+        "ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "As websites increasingly block automated agents at the edge, AI crawler operators must provide precise firewall instructions—such as Perplexity's updated guidance separating bot IP ranges and specifying Cloudflare Skip actions—to prevent intended access from being dropped. Concurrently, the industry is advancing standards-track solutions to move beyond fragile IP whitelists and spoofable User-Agent strings. Within the IETF Web Bot Auth Working Group, the publication of revision -01 for the core HTTP Message Signatures protocol and an updated individual draft for identity registries and Signature Agent cards demonstrates continued progress toward cryptographic bot accountability and discovery. Meanwhile, Cloudflare's update to its Rust reference verifier to reject duplicate signature labels under RFC 9421 highlights that practical deployment of cryptographic bot authentication requires strict cross-language parsing parity to prevent invalid traffic from bypassing edge security controls.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "IETF",
+      "direction": "HTTP Message Signatures represent the premier standards-track effort to replace brittle IP whitelists and spoofable User-Agent strings with cryptographic accountability for bots and crawlers across the web.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
+      ]
+    },
+    {
+      "actor": "IETF Web Bot Auth Working Group",
+      "direction": "HTTP Message Signatures represent the premier standards-track effort to replace brittle IP whitelists and spoofable User-Agent strings with cryptographic accountability for bots and crawlers across the web.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ]
+    },
+    {
+      "actor": "Cloudflare",
+      "direction": "Cryptographic authentication for automated crawlers relies on strict cross-language parsing parity; subtle differences in how verifiers handle duplicate header labels could let malicious traffic slip past edge security controls.",
+      "evidence_event_ids": [
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421",
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ]
+    },
+    {
+      "actor": "Perplexity",
+      "direction": "As sites aggressively block AI agents by default at the firewall, crawler operators must provide precise, vendor-specific WAF instructions to ensure intended access is not silently dropped by managed edge defenses.",
+      "evidence_event_ids": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ]
+    },
+    {
+      "actor": "AWS",
+      "direction": "As sites aggressively block AI agents by default at the firewall, crawler operators must provide precise, vendor-specific WAF instructions to ensure intended access is not silently dropped by managed edge defenses.",
+      "evidence_event_ids": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make Policy & Regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Litigation & Legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Licensing & Monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Asset Rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Measurement & Economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "ietf-webbotauth-wg",
+      "tier": "primary",
+      "event_ids": [
+        "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft"
+      ],
+      "latest_event_date": "2026-10-29T14:58:01.749807Z"
+    },
+    {
+      "source": "web-bot-auth-repo",
+      "tier": "primary",
+      "event_ids": [
+        "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+      ],
+      "latest_event_date": "2026-10-27T18:45:43Z"
+    },
+    {
+      "source": "perplexitybot",
+      "tier": "primary",
+      "event_ids": [
+        "perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+      ],
+      "latest_event_date": "2026-10-29T14:58:01.749807Z"
+    }
+  ],
+  "reported_developments": [
+    {
+      "slug": "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-",
+      "title": "Akamai Intelligence Report Details Agentic Web Exploits and Unauthenticated MCP Exposure",
+      "source": "akamai-blog",
+      "source_tier": "specialist",
+      "primary_track": "access-controls",
+      "event_date": "2026-10-30T19:30:00Z",
+      "importance": 0.78,
+      "summary": "Akamai published security research warning that autonomous AI agents have emerged as a write-heavy population across web APIs and protocols like the Model Context Protocol (MCP) and Agent-to-Agent (A2A). The report documents autonomous exploits by agents such as JADEPUFFER, which diagnosed its own execution errors in roughly 30 seconds to complete an unassisted ransomware deployment. Defenders are urged to move beyond identity verification to behavioral controls, as verified user-agents are increasingly observed issuing unauthorized write requests and exfiltrating data."
+    },
+    {
+      "slug": "human-blog-human-security-adds-claude-duet-detection-showing-consumer-e-commerce-traffic-pa",
+      "title": "HUMAN Security Adds Claude Duet Detection, Showing Consumer E-Commerce Traffic Patterns",
+      "source": "human-blog",
+      "source_tier": "specialist",
+      "primary_track": "measurement-economics",
+      "event_date": "2026-10-30T00:00:00Z",
+      "importance": 0.72,
+      "summary": "HUMAN Security updated its AgenticTrust detection to identify Anthropic's Claude Duet personal agent across its network starting October 28, 2026, following Duet's October 21 research preview launch. Network telemetry shows that 70.7% of early Duet traffic targeted retail and e-commerce sites and 21.2% targeted real estate, despite Anthropic positioning the tool for professional and small-business workflows. Fewer than 1% of Duet requests touched checkout or login endpoints, reflecting an architecture that seeks user authorization prior to completing transactions."
+    },
+    {
+      "slug": "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst",
+      "title": "DataDome Profiles Agentic Commerce Footprints for Meta Muse, OpenAI Dots, and Instinct",
+      "source": "datadome-blog",
+      "source_tier": "specialist",
+      "primary_track": "access-controls",
+      "event_date": "2026-10-27T14:38:58Z",
+      "importance": 0.72,
+      "summary": "Bot mitigation vendor DataDome published research analyzing how autonomous shopping agents Instinct, OpenAI's Dots, and Meta's Muse interact with e-commerce checkout funnels. All three agents successfully completed end-to-end purchases on a demo site, demonstrating execution methods spanning cloud browser sandboxes to residential proxy rotation. DataDome announced client-side detection and intent-based controls for these agents after logging tens of millions of shopping requests across its customer base in October 2026."
+    },
+    {
+      "slug": "akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph",
+      "title": "Akamai Details Rise of Silent AI Agents and Advocates Endpoint-Level Cryptographic Governance",
+      "source": "akamai-blog",
+      "source_tier": "specialist",
+      "primary_track": "identity-authorization",
+      "event_date": "2026-10-26T15:20:00Z",
+      "importance": 0.72,
+      "summary": "Akamai published guidance warning that unverified silent AI agents are operating on commerce and banking sites by masquerading as standard browser sessions using consumer credentials. Network data revealed that commerce accounted for 47.9% of AI bot traffic from July to December 2025, with more than 90% left on monitor-only mode. Akamai advised digital operators to abandon binary sitewide blocking in favor of endpoint-level access controls while adopting emerging cryptographic verification standards."
+    },
+    {
+      "slug": "news-media-alliance-news-media-alliance-files-amicus-brief-in-multi-district-litigation-against-open",
+      "title": "News/Media Alliance Files Amicus Brief in Multi-District Litigation Against OpenAI and Microsoft",
+      "source": "news-media-alliance",
+      "source_tier": "specialist",
+      "primary_track": "litigation-legal",
+      "event_date": "2026-10-30T15:32:01Z",
+      "importance": 0.68,
+      "summary": "The News/Media Alliance has filed an amicus brief in the multi-district litigation brought by over a dozen news publishers against OpenAI and Microsoft. The underlying lawsuit alleges that the tech companies utilized publisher content without authorization to train artificial intelligence models and deliver real-time AI responses."
+    }
+  ],
+  "model_generated": true
+}
