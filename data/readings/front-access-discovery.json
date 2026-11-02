@@ -1,0 +1,14 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "access-discovery",
+  "stance": "Crawler access discovery has shifted from general protocol compliance to granular, edge-level firewall bargaining where automated defense layers increasingly resist standard rule-making.",
+  "adoption_shape": "Perplexity moved to unbundle its automated footprints into distinct IP ranges for PerplexityBot and Perplexity-User, whereas Cloudflare's platform-level Bot Fight Mode remains rigid and unalterable by custom publisher WAF overrides.",
+  "new_entrants": "Perplexity is refining entry by establishing discrete routing for Perplexity-User alongside its primary bot, attempting to control site reach through Cloudflare Skip actions rather than simple Allow directives.",
+  "watch_for": "Whether Cloudflare adapts Bot Fight Mode to permit targeted crawler rule exemptions or continues to enforce total bypass restrictions against AI retrieval agents.",
+  "built_from": [
+    "perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-02T22:38:08.767630Z",
+  "merged_at": null
+}

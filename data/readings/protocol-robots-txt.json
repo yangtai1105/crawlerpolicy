@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "robots-txt",
+  "stance": "Robots.txt has been subordinated in operational practice by network-level Web Application Firewall configurations and explicit IP matching.",
+  "adoption_shape": "Perplexity moved to instruct webmasters on granular Cloudflare Skip rules split across distinct IP ranges, showing that crawler governance has shifted from standard file-based directives to active edge firewall exceptions.",
+  "new_entrants": "Perplexity has refined its footprint by separating traffic into PerplexityBot and Perplexity-User, attempting to control ingress permissions for its distinct IP ranges against strict edge filtering.",
+  "watch_for": "Whether updated documentation surfaces an alternative path around Cloudflare Bot Fight Mode or confirms that automated edge security remains an unbypassable barrier for AI crawlers.",
+  "built_from": [
+    "perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-02T22:38:08.767630Z",
+  "merged_at": null
+}

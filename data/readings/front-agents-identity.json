@@ -1,0 +1,17 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "agents-identity",
+  "stance": "Agent identity remains bifurcated between formal cryptographic signature standards being hardened by infrastructure maintainers and the fragile IP-based firewall workarounds still relied upon by major AI operators.",
+  "adoption_shape": "Standards bodies and edge providers like Cloudflare are consolidating around RFC 9421 HTTP message signatures and registry cards, while crawler operators like Perplexity remain outside that cryptographic layer, relying instead on split IP whitelists and manual WAF skip rules to navigate edge defenses.",
+  "new_entrants": "Perplexity has intervened directly at the webmaster configuration layer, attempting to control access routing by separating PerplexityBot and Perplexity-User across distinct IP ranges and prescribing Cloudflare Skip rules.",
+  "watch_for": "Whether commercial crawler operators adopt the IETF HTTP message signatures protocol or continue to rely exclusively on distinct IP ranges and edge firewall rule exemptions.",
+  "built_from": [
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft",
+    "web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+    "perplexitybot-perplexity-updates-waf-guidance-with-bot-specific-ip-matching-and-cloudflare-ski"
+  ],
+  "development_count": 4,
+  "generated_at": "2026-11-02T22:38:08.767630Z",
+  "merged_at": null
+}

@@ -1,0 +1,15 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "web-bot-auth",
+  "stance": "Web Bot Auth is undergoing foundational technical tightening, hardening its cryptographic parsing and identity registry specifications before achieving broader commercial implementation.",
+  "adoption_shape": "Movement is currently restricted to core protocol architects, with Cloudflare standardizing its Rust and TypeScript reference verifiers alongside individual IETF draft contributors, indicating an effort to stabilize validation rules internally before external parties commit.",
+  "new_entrants": "Recent contributions are led by the author of the revised identity registry and agent card draft alongside Cloudflare's reference verifier maintainers, both seeking to strictly control the parsing parameters and registration mechanisms of authenticating agents.",
+  "watch_for": "Whether the registry and signature agent card specification transitions from an individual draft into an adopted IETF working group baseline.",
+  "built_from": [
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft",
+    "web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+  ],
+  "development_count": 2,
+  "generated_at": "2026-11-02T22:38:08.767630Z",
+  "merged_at": null
+}
