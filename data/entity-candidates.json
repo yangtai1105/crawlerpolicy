@@ -696,6 +696,19 @@
         "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
       ]
     },
+    "player:universal commerce protocol": {
+      "kind": "player",
+      "observed_name": "Universal Commerce Protocol",
+      "first_seen_at": "2026-11-02T17:52:31.512194Z",
+      "last_seen_at": "2026-11-02T17:52:31.512194Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "ucp-spec--9f1e1582ff89ae60"
+      ],
+      "feed_slugs": [
+        "2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ]
+    },
     "player:walmart": {
       "kind": "player",
       "observed_name": "Walmart",
@@ -935,13 +948,15 @@
       "kind": "protocol",
       "observed_name": "REST",
       "first_seen_at": "2026-10-31T20:51:06.172555Z",
-      "last_seen_at": "2026-10-31T20:51:06.172555Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-02T17:52:31.512194Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "akamai-blog--0c53717bccfcaaab"
+        "akamai-blog--0c53717bccfcaaab",
+        "ucp-spec--9f1e1582ff89ae60"
       ],
       "feed_slugs": [
-        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+        "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-",
+        "2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
       ]
     },
     "protocol:rfc 9421": {
@@ -1024,6 +1039,19 @@
       ],
       "feed_slugs": [
         "2026-10-26-akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
+      ]
+    },
+    "protocol:ucp": {
+      "kind": "protocol",
+      "observed_name": "UCP",
+      "first_seen_at": "2026-11-02T17:52:31.512194Z",
+      "last_seen_at": "2026-11-02T17:52:31.512194Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "ucp-spec--9f1e1582ff89ae60"
+      ],
+      "feed_slugs": [
+        "2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
       ]
     }
   }

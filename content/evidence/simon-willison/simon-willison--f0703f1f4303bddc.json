@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--f0703f1f4303bddc",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+  "supporting_urls": [],
+  "published_at": "2026-11-01T23:24:22Z",
+  "detected_at": "2026-11-02T17:52:31.512194Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--f0703f1f4303bddc.json",
+  "content_hash": "sha256:6468117b0ec2974290c912af4be53133c527f5531a2d7ce539e7ee4c51c5bb1f",
+  "external_id": "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "If in doubt, delete the uv.lock file",
+  "content": "<p>I've been getting the occasional confusing Python dependency error since switching over to Python 3.15 and the rule I'm having to remember is:</p>\n<p><strong>If in doubt, delete the uv.lock file</strong></p>\n<p>Most of my projects are libraries which don't include a <code>uv.lock</code> file, since it's rude for a library dependency to lock versions for anything else that uses it.</p>\n<p>Running <code>uv run pytest</code> etc tends to leave <code>uv.lock</code> files lying around, which are listed in <code>.gitignore</code> and so do not get committed to my repositories.</p>\n<p>But... sometimes that <code>uv.lock</code> pins a version of a dependency that doesn't yet have a Python 3.15 wheel. An example from earlier today:</p>\n<pre><code>error: Failed to build `watchfiles==1.1.1`\n  cause: Call to `maturin.build_wheel` failed\n\nerror: the configured Python interpreter version (3.15) is newer\nthan PyO3's maximum supported version (3.14)\n</code></pre>\n<p>Deleting that file and running <code>uv run pytest</code> again usually fixes the problem.</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/uv\">uv</a>, <a href=\"https://simonwillison.net/tags/til\">til</a>, <a href=\"https://simonwillison.net/tags/python\">python</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

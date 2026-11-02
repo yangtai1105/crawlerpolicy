@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-11-01T14:45:54.040111+00:00",
-  "last_fetch_succeeded_at": "2026-11-01T14:45:54.040111+00:00",
-  "last_evidence_at": "2026-10-30T14:51:31.332675+00:00",
+  "last_checked_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_fetch_succeeded_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_evidence_at": "2026-11-02T17:52:31.512194+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/our-approach-to-alignment-research",
-    "https://openai.com/index/new-and-improved-content-moderation-tooling",
     "https://openai.com/index/efficient-training-of-language-models-to-fill-in-the-middle",
     "https://openai.com/index/a-hazard-analysis-framework-for-code-synthesis-large-language-models",
     "https://openai.com/index/dall-e-now-available-in-beta",
@@ -503,7 +501,9 @@
     "https://openai.com/index/greptile-code-review-codex-astra",
     "https://openai.com/index/legora-agentic-operating-system-for-legal-work",
     "https://openai.com/index/retell-ai",
-    "https://openai.com/index/updated-model-spec"
+    "https://openai.com/index/updated-model-spec",
+    "https://openai.com/index/grid-protectors-program",
+    "https://openai.com/index/lifeval"
   ],
   "consecutive_failures": 0,
   "first_seen": false

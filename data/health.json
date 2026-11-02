@@ -1,6 +1,6 @@
 {
   "status": "degraded",
-  "last_attempted_at": "2026-11-01T14:45:54.040111Z",
+  "last_attempted_at": "2026-11-02T17:52:31.512194Z",
   "last_fully_successful_at": "2026-10-31T20:51:06.172555Z",
   "coverage": {
     "configured": 52,
@@ -150,7 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--0dd58b53a5ea9498"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -180,7 +182,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "fastly-blog--32650ce9965f48df"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -210,7 +214,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--28a9fb70f7073518"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -240,9 +246,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--06d28d65b2216427"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -282,7 +286,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--bd900d2762a1ed74",
+        "web-bot-auth-repo--c7e4dd9cd0717195"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -312,9 +319,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ucp-spec--9f1e1582ff89ae60"
+      ],
+      "events_written": [
+        "content/events/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
+      ]
     },
     "x402-spec": {
       "fetch": "ok",
@@ -412,7 +425,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "stratechery--6d76435834215c3c"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -423,8 +438,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--63e5f8da122ebc7d",
-        "simon-willison--d4c415e4605589b0"
+        "simon-willison--d64667d49e9465be",
+        "simon-willison--f0703f1f4303bddc",
+        "simon-willison--592eb5a73f3367e8"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -445,7 +461,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--c8e6a8d39f8b3477",
+        "openai-blog--6c9a87cf0f7752f0"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -560,8 +579,12 @@
       "feed_items_written": []
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -569,13 +592,13 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-11-01",
-    "item_count": 0,
-    "path": "data/daily/2026-11-01.json"
+    "status": "published",
+    "edition_date": "2026-11-02",
+    "item_count": 1,
+    "path": "data/daily/2026-11-02.json"
   },
   "insight_threads": {
-    "thread_count": 237,
+    "thread_count": 239,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {

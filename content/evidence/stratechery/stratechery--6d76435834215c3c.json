@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--6d76435834215c3c",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/google-earnings-facebook-deja-vu-the-agent-play/",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T11:00:00Z",
+  "detected_at": "2026-11-02T17:52:31.512194Z",
+  "content_path": "content/evidence/stratechery/stratechery--6d76435834215c3c.json",
+  "content_hash": "sha256:ad8b5c84fe68de16a33b213c7fdf9671a32b3bc74bf29270ca710b71595c8444",
+  "external_id": "https://stratechery.com/?p=20740",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Google Earnings, Facebook Déjà Vu, The Agent Play",
+  "content": "<p>Google's earnings miss looks a lot like Facebook's, and that's a credit to Google. The company is being more aggressive than they get credit for.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

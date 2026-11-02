@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--6c9a87cf0f7752f0",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/lifeval",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T09:00:00Z",
+  "detected_at": "2026-11-02T17:52:31.512194Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--6c9a87cf0f7752f0.json",
+  "content_hash": "sha256:aaeff6aff65867f4588251d5b604c28c96a333b2dcf6f27c3d0283eb5c8b1eb5",
+  "external_id": "https://openai.com/index/lifeval",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "LifeVal",
+  "content": "Introducing LifeVal, a benchmark measuring how well AI helps people complete everyday tasks, from finding childcare to managing finances and government paperwork.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

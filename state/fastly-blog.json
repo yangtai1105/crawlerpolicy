@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-01T14:45:54.040111+00:00",
-  "last_fetch_succeeded_at": "2026-11-01T14:45:54.040111+00:00",
-  "last_evidence_at": "2026-10-31T20:51:06.172555+00:00",
+  "last_checked_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_fetch_succeeded_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_evidence_at": "2026-11-02T17:52:31.512194+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://www.fastly.com/blog/fastlys-proactive-protection-critical-php-rce-cve-2026-109618/",
@@ -28,7 +28,8 @@
     "https://www.fastly.com/blog/cmcdv2-leveling-up-your-video-streaming-telemetry/",
     "https://www.fastly.com/blog/accelerate-migrations-introducing-direct-fetch-fastly-object-storage/",
     "https://www.fastly.com/blog/cve-2026-82329-jfrog-artifactory-authentication-bypass-exploitation-activity/",
-    "https://www.fastly.com/blog/building-fastly-log-analytics-tools-open-source-approach-deeper-insights/"
+    "https://www.fastly.com/blog/building-fastly-log-analytics-tools-open-source-approach-deeper-insights/",
+    "https://www.fastly.com/blog/try-fastly-platform-free-aws-account/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

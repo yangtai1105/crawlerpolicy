@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--c8e6a8d39f8b3477",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/grid-protectors-program",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T15:00:00Z",
+  "detected_at": "2026-11-02T17:52:31.512194Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--c8e6a8d39f8b3477.json",
+  "content_hash": "sha256:035c9ef70692b5cc7049e1d3b5144ddf89b5b9a4c3c40197f3ce2f3f0401615b",
+  "external_id": "https://openai.com/index/grid-protectors-program",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing the Grid Protectors Program",
+  "content": "OpenAI’s Grid Protectors Program will work with utilities to help future compute campuses support grid reliability and protect consumer electricity costs.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

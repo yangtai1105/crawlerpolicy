@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--32650ce9965f48df",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/try-fastly-platform-free-aws-account/",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T00:00:00Z",
+  "detected_at": "2026-11-02T17:52:31.512194Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--32650ce9965f48df.json",
+  "content_hash": "sha256:a1407f2b7f84739d551342be4373821530b4b58da1d1f513ffb793ceca322ef7",
+  "external_id": "https://www.fastly.com/blog/try-fastly-platform-free-aws-account/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Try the Fastly Platform Free with your AWS Account",
+  "content": "Start a Fastly Free Trial via AWS Marketplace. Use your existing AWS account to skip procurement, reduce origin load, and streamline billing.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

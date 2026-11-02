@@ -1741,6 +1741,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "expansion-of-read-only-conversational-context-in-commerce-protocols",
+      "title": "Expansion Of Read Only Conversational Context In Commerce Protocols",
+      "thesis": "By backporting conversational Q&A bindings directly into an established release track, UCP formalizes agentic natural-language queries alongside transactional shopping primitives without forcing implementers onto an unreleased major version.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-02T17:52:31.512194Z",
+      "last_updated_at": "2026-11-02T17:52:31.512194Z",
+      "related_feed_slugs": [
+        "ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ],
+      "verified_development_slugs": [
+        "universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ]
+    },
+    {
       "key": "extension-of-platform-ai-licensing-agreements-downstream-to-regional-and-local-newsrooms",
       "title": "Extension Of Platform AI Licensing Agreements Downstream To Regional And Local Newsrooms",
       "thesis": "By separating product-specific AI licensing pilots from its broader pay-per-value generative search initiatives, Google is establishing distinct commercial tiers that pay flat participation rates for experimental features rather than usage-based attribution royalties.",
@@ -2935,6 +2950,21 @@
         "cloudflare-blog-cloudflare-opens-closed-beta-for-monetization-gateway-enabling-machine-to-machin"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "standardization-of-agentic-mcp-tools-for-commercial-q-a",
+      "title": "Standardization Of Agentic MCP Tools For Commercial Q A",
+      "thesis": "By backporting conversational Q&A bindings directly into an established release track, UCP formalizes agentic natural-language queries alongside transactional shopping primitives without forcing implementers onto an unreleased major version.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-02T17:52:31.512194Z",
+      "last_updated_at": "2026-11-02T17:52:31.512194Z",
+      "related_feed_slugs": [
+        "ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ],
+      "verified_development_slugs": [
+        "universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ]
     },
     {
       "key": "standardization-of-autonomous-agent-lifecycles",

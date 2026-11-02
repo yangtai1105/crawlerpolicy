@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-01T14:45:54.040111+00:00",
-  "last_fetch_succeeded_at": "2026-11-01T14:45:54.040111+00:00",
-  "last_evidence_at": "2026-11-01T14:45:54.040111+00:00",
+  "last_checked_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_fetch_succeeded_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_evidence_at": "2026-11-02T17:52:31.512194+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -35,7 +35,10 @@
     "https://simonwillison.net/2026/Oct/16/code-review/",
     "https://simonwillison.net/2026/Oct/16/sqlite-sparql-rust/",
     "https://simonwillison.net/2026/Oct/31/how-we-took-over-chatgpt-accounts/",
-    "https://simonwillison.net/2026/Oct/31/datasette-llm/"
+    "https://simonwillison.net/2026/Oct/31/datasette-llm/",
+    "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+    "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
+    "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

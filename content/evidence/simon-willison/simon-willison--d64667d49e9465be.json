@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--d64667d49e9465be",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T13:31:26Z",
+  "detected_at": "2026-11-02T17:52:31.512194Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--d64667d49e9465be.json",
+  "content_hash": "sha256:ba9506e917e28b659bf4b8d6b3162d9dc0b7ae65a6d6955f44a09bb73f0f4812",
+  "external_id": "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The U.S. Census Bureau and “Super Intelligence”",
+  "content": "<p>I was reminded today of <a href=\"https://www.apolloacademy.com/ai-adoption-rate-trending-down-for-large-companies/\">AI Adoption Rate Trending Down for Large Companies</a>, a chart produced by Apollo Global Management in September 2025, which appeared to show a slowdown in U.S. corporate AI adoption based on numbers collected by the U.S. Census Bureau. At the time I used that chart <a href=\"https://simonwillison.net/2025/Sep/9/apollo-ai-adoption/\">to demonstrate GPT-5 data analysis</a>, and then <a href=\"https://simonwillison.net/2025/Sep/9/claude-code-interpreter/#something-much-harder-recreating-the-ai-adoption-chart\">to experiment with Claude's new Code Interpreter</a>. I decided to try running those numbers again to see what had changed over the past year, and in doing so learned that the Bureau has fallen foul of <a href=\"https://www.whitehouse.gov/presidential-actions/2026/09/inaugurating-the-era-of-super-intelligence/\">Executive Order 14434</a>, aka the asinine Super Intelligence one.</p>\n<h4 id=\"first-the-updated-chart\">First, the updated chart</h4>\n<p>Every two weeks the U.S. Census Bureau runs a survey called the <a href=\"https://www.census.gov/hfp/btos/data\">Business Trends and Outlook Survey</a> (aka BTOS). Each time it goes to 200,000 businesses out of 1.2 million total - the surveyed group (a \"panel\") cycles such that an individual business only completes the survey every twelve weeks.</p>\n<p>The latest data is published on alternating Thursdays at 10am.</p>\n<",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
