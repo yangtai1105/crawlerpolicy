@@ -1,15 +1,15 @@
 {
-  "status": "degraded",
-  "last_attempted_at": "2026-11-02T17:52:31.512194Z",
+  "status": "critical",
+  "last_attempted_at": "2026-11-03T15:51:57.033950Z",
   "last_fully_successful_at": "2026-10-31T20:51:06.172555Z",
   "coverage": {
     "configured": 52,
-    "completed": 51,
+    "completed": 49,
     "fetched": 51,
-    "analyzed": 51,
-    "published": 51,
-    "failed": 1,
-    "required_failed": 0
+    "analyzed": 49,
+    "published": 49,
+    "failed": 3,
+    "required_failed": 1
   },
   "stages": {
     "fetch": {
@@ -23,13 +23,13 @@
       "pending": 0
     },
     "analysis": {
-      "ok": 51,
-      "failed": 0,
+      "ok": 49,
+      "failed": 2,
       "pending": 1
     },
     "publish": {
-      "ok": 51,
-      "failed": 0,
+      "ok": 49,
+      "failed": 2,
       "pending": 1
     }
   },
@@ -151,7 +151,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--0dd58b53a5ea9498"
+        "cloudflare-blog--5e1ad344896d1698"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -172,7 +172,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "akamai-blog--9b5680fb4e50257b",
+        "akamai-blog--acd80f8a8610b88d"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -182,9 +185,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "fastly-blog--32650ce9965f48df"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -194,16 +195,18 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "imperva-blog--68414b9fcb4e90c2"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
     "human-blog": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
+      "fetch": "failed",
+      "evidence": "failed",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
@@ -215,7 +218,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--28a9fb70f7073518"
+        "uk-cma--486626f6860d07ef"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -246,7 +249,16 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--860d3c64e3dc0e10",
+        "eu-commission-digital--8da508a3db8a6ce7",
+        "eu-commission-digital--488cbcbabe5d3fc6",
+        "eu-commission-digital--53a1cbda5bf13800",
+        "eu-commission-digital--1e56ad143b331234",
+        "eu-commission-digital--a377d7b3d0b73bce",
+        "eu-commission-digital--7582a56f804fb285",
+        "eu-commission-digital--43f581b4a30b590f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -256,7 +268,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "us-ftc-federal-register--33f7a1ae866ed787"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -276,7 +290,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "reddit-corporate--3715643323aedbb4"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -286,10 +302,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--bd900d2762a1ed74",
-        "web-bot-auth-repo--c7e4dd9cd0717195"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -319,15 +332,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ucp-spec--9f1e1582ff89ae60"
-      ],
-      "events_written": [
-        "content/events/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "x402-spec": {
       "fetch": "ok",
@@ -426,7 +433,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--6d76435834215c3c"
+        "stratechery--73a9a30039cf8f2f"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -438,9 +445,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--d64667d49e9465be",
-        "simon-willison--f0703f1f4303bddc",
-        "simon-willison--592eb5a73f3367e8"
+        "simon-willison--b6d6415fbcfcb16b",
+        "simon-willison--5e7a74e5ffe7b7df",
+        "simon-willison--ea9714bf73d30d21"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -462,8 +469,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--c8e6a8d39f8b3477",
-        "openai-blog--6c9a87cf0f7752f0"
+        "openai-blog--fb137ad89e891f8a",
+        "openai-blog--91bfcc1b7455bbc8",
+        "openai-blog--e9df8973a78de6ad"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -501,10 +509,12 @@
     "ietf-webbotauth-wg": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [],
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "evidence_ids": [
+        "ietf-webbotauth-wg--73b525a0d33d1f6c"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -569,33 +579,34 @@
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "xAI X Search did not return valid candidate JSON",
-      "evidence_ids": [],
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "evidence_ids": [
+        "x-discovery--49032b44c972fe9a",
+        "x-discovery--9664f58357c231c9"
+      ],
       "events_written": [],
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
-  ],
-  "feed_items_written": [
-    "content/feed/2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc.md"
-  ],
+  "events_written": [],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
-    "status": "ok",
-    "error": null
+    "status": "blocked",
+    "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}"
   },
-  "derived_errors": [],
+  "derived_errors": [
+    "state_of_play: 402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}"
+  ],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-11-02",
-    "item_count": 1,
-    "path": "data/daily/2026-11-02.json"
+    "status": "quiet",
+    "edition_date": "2026-11-03",
+    "item_count": 0,
+    "path": "data/daily/2026-11-03.json"
   },
   "insight_threads": {
     "thread_count": 239,
@@ -607,13 +618,13 @@
     "error": ""
   },
   "discovery": {
-    "status": "unavailable",
-    "candidate_count": 0,
-    "x_search_calls": 0,
-    "estimated_tool_cost_usd": 0.0,
+    "status": "live",
+    "candidate_count": 2,
+    "x_search_calls": 4,
+    "estimated_tool_cost_usd": 0.131778,
     "sources_configured": 1,
     "sources_completed": 0,
-    "sources_failed": 1,
+    "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }
 }

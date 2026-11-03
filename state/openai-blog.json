@@ -1,12 +1,9 @@
 {
-  "last_checked_at": "2026-11-02T17:52:31.512194+00:00",
-  "last_fetch_succeeded_at": "2026-11-02T17:52:31.512194+00:00",
-  "last_evidence_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_checked_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_fetch_succeeded_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_evidence_at": "2026-11-03T15:51:57.033950+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/efficient-training-of-language-models-to-fill-in-the-middle",
-    "https://openai.com/index/a-hazard-analysis-framework-for-code-synthesis-large-language-models",
-    "https://openai.com/index/dall-e-now-available-in-beta",
     "https://openai.com/index/reducing-bias-and-improving-safety-in-dall-e-2",
     "https://openai.com/index/dall-e-2-extending-creativity",
     "https://openai.com/index/dall-e-2-pre-training-mitigations",
@@ -503,7 +500,10 @@
     "https://openai.com/index/retell-ai",
     "https://openai.com/index/updated-model-spec",
     "https://openai.com/index/grid-protectors-program",
-    "https://openai.com/index/lifeval"
+    "https://openai.com/index/lifeval",
+    "https://openai.com/index/heimstaden",
+    "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+    "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties"
   ],
   "consecutive_failures": 0,
   "first_seen": false

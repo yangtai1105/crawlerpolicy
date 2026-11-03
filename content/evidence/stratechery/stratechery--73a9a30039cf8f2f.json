@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--73a9a30039cf8f2f",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/apple-earnings-memory-problems-the-hardware-company-regression/",
+  "supporting_urls": [],
+  "published_at": "2026-11-03T11:00:00Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/stratechery/stratechery--73a9a30039cf8f2f.json",
+  "content_hash": "sha256:50e40d2230619230c2f516f3b43e8f210e86374c692d2304a6b1ba75a9c1b042",
+  "external_id": "https://stratechery.com/?p=20761",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Apple Earnings, Memory Problems, The Hardware Company Regression",
+  "content": "<p>Apple's earnings suggest that the company's hardware business is doing better than ever, even in the face of memory challenges. Does the software story help or hurt?</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--91bfcc1b7455bbc8",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T18:00:00Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--91bfcc1b7455bbc8.json",
+  "content_hash": "sha256:b1c9bb0b0240f477bc33f5c7b8151c7b71103dc0fb03d2cdba5b891c18a94f30",
+  "external_id": "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Preparing our next security sprint to harden OpenAI",
+  "content": "OpenAI is preparing its next internal security sprint with Cathedral Systems to test and strengthen its defenses using AI.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

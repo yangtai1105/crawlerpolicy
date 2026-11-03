@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--b6d6415fbcfcb16b",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
+  "supporting_urls": [],
+  "published_at": "2026-11-03T05:32:25Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--b6d6415fbcfcb16b.json",
+  "content_hash": "sha256:39cd9bae2cc3a2afa6119f42d2db9f4c1b9352b0e558f590d881d82a43f1b47f",
+  "external_id": "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "I discovered a sound that leaks your exact location (and it's everywhere) - YouTube",
+  "content": "<p><strong><a href=\"https://www.youtube.com/watch?v=UytYrhYLOKI\">I discovered a sound that leaks your exact location (and it&#x27;s everywhere) - YouTube</a></strong></p>\nGenius piece of OSINT by Colsto, who demonstrates how you can take almost imperceptible background noise of planes from a video soundtrack, figure out their Doppler curves, then cross reference them against ADS-B data to find the exact location of the video based on their speed, distance, and gaps between different flights.</p>\n<p> \n\n    <p><small></small>Via <a href=\"https://lobste.rs/s/s1btqo/this_background_sound_leaks_your_exact\">Lobste.rs</a></small></p>\n\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/privacy\">privacy</a>, <a href=\"https://simonwillison.net/tags/youtube\">youtube</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

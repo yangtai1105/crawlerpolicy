@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--7582a56f804fb285",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2300",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T23:00:00Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--7582a56f804fb285.json",
+  "content_hash": "sha256:d4ca72077a6a9983f21481d764b89bf4ca62ad659b2a35522a9e7a929c505d59",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2300",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission conditionally approves JD.com's acquisition of CECONOMY under the Foreign Subsidies Regulation",
+  "content": "European Commission Press release Brussels, 03 Nov 2026 The European Commission has approved, under the Foreign Subsidies Regulation ('FSR'), the acquisition of CECONOMY AG ('CECONOMY') by JD.com, Inc. ('JD.com'). The approval is conditional upon full compliance with the commitments offered by the parties.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

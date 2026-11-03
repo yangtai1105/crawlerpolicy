@@ -1,0 +1,19 @@
+{
+  "evidence_id": "reddit-corporate--3715643323aedbb4",
+  "source": "reddit-corporate",
+  "source_url": "https://redditinc.com/news/we-are-testing-ad-placements-in-reddit-search-pages",
+  "supporting_urls": [],
+  "published_at": "2026-11-03T14:00:03Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/reddit-corporate/reddit-corporate--3715643323aedbb4.json",
+  "content_hash": "sha256:0f3ef4ceace1bbd2744cf6a6eefda0a3fad5b9bf758fd3dd3bc2f22f0c43baaf",
+  "external_id": "https://redditinc.com/news/we-are-testing-ad-placements-in-reddit-search-pages",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "We Are Testing Ad Placements in Reddit Search Pages",
+  "content": "<div class=\"hs-featured-image-wrapper\"> \n <a class=\"hs-featured-image-link\" href=\"https://redditinc.com/news/we-are-testing-ad-placements-in-reddit-search-pages?hsLang=en\" title=\"\"> <img alt=\"We Are Testing Ad Placements in Reddit Search Pages\" class=\"hs-featured-image\" src=\"https://redditinc.com/hubfs/BlogHeader_Snoo_Green_006@2x.png\" style=\"width: auto !important; float: left; margin: 0 15px 15px 0;\" /> </a> \n</div> \n<p style=\"line-height: 1.2;\"><span>People come to Reddit seeking human perspectives and experiences they can’t find elsewhere, with </span><a href=\"https://www.business.reddit.com/blog/path-to-purchase\"><u><span>half of Reddit users</span></u></a><span> saying the platform helps them discover something new. As we continue improving the user search experience on Reddit, we’re also beginning to test ad placements in search. These placements leverage existing ad targeting in search results pages on Reddit, which have high purchase and search intent.</span></p>  \n<img alt=\"\" height=\"1\" src=\"https://track.hubspot.com/__ptq.gif?a=40687240&amp;k=14&amp;r=https%3A%2F%2Fredditinc.com%2Fnews%2Fwe-are-testing-ad-placements-in-reddit-search-pages&amp;bu=https%253A%252F%252Fredditinc.com%252Fnews&amp;bvt=rss\" style=\"width: 1px!important;\" width=\"1\" />",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

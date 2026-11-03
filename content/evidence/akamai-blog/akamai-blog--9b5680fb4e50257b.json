@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--9b5680fb4e50257b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/nov/akamai-named-leader-2026-idc-marketscape-managed-edge",
+  "supporting_urls": [],
+  "published_at": "2026-11-03T14:00:00Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--9b5680fb4e50257b.json",
+  "content_hash": "sha256:584df5b167f7f21eb5fdc2a4b1b66d2e9a66b680ca4ab0ca2a77fe553f0f259f",
+  "external_id": "https://www.akamai.com/blog/ai/2026/nov/akamai-named-leader-2026-idc-marketscape-managed-edge",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Akamai Named a Leader in 2026 IDC MarketScape for Managed Edge",
+  "content": "IDC MarketScape named Akamai a Leader in Managed Edge Services 2026. Discover how edge computing drives low-latency, secure AI inference beyond the GPU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

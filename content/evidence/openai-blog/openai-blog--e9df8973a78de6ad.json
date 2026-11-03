@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--e9df8973a78de6ad",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T18:00:00Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--e9df8973a78de6ad.json",
+  "content_hash": "sha256:a83d932617d56710902509a0160e38dfe7e74c1baf3b295a61a05da82b45d9ae",
+  "external_id": "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Rewarding defenders with bigger bug bounties",
+  "content": "OpenAI is raising Security Bug Bounty rewards and introducing report quality, loyalty, and priority campaign bonuses for independent security researchers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

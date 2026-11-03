@@ -1,0 +1,19 @@
+{
+  "evidence_id": "us-ftc-federal-register--33f7a1ae866ed787",
+  "source": "us-ftc-federal-register",
+  "source_url": "https://www.federalregister.gov/documents/2026/11/03/2026-22379/sunshine-act-meeting-notice",
+  "supporting_urls": [],
+  "published_at": "2026-11-03T05:00:00Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/us-ftc-federal-register/us-ftc-federal-register--33f7a1ae866ed787.json",
+  "content_hash": "sha256:b690c9094467a7a4fc85e87702c707b9a9af038e9b17d6f691b4457ea7887120",
+  "external_id": "https://www.federalregister.gov/documents/2026/11/03/2026-22379/sunshine-act-meeting-notice",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Sunshine Act Meeting Notice",
+  "content": "Please take notice that the Federal Trade Commission (&quot;Commission&quot;) has scheduled a meeting, which will be closed to the public, for the consideration of law enforcement matters.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

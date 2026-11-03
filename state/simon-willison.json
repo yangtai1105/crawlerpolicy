@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-02T17:52:31.512194+00:00",
-  "last_fetch_succeeded_at": "2026-11-02T17:52:31.512194+00:00",
-  "last_evidence_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_checked_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_fetch_succeeded_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_evidence_at": "2026-11-03T15:51:57.033950+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -38,7 +38,10 @@
     "https://simonwillison.net/2026/Oct/31/datasette-llm/",
     "https://simonwillison.net/2026/Nov/2/census-bureau-super-intelligence/",
     "https://simonwillison.net/2026/Nov/1/delete-uv-lock-first/",
-    "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/"
+    "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
+    "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
+    "https://simonwillison.net/2026/Nov/3/october-newsletter/",
+    "https://simonwillison.net/2026/Nov/2/llm/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

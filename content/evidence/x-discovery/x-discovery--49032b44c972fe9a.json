@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--49032b44c972fe9a",
+  "source": "x-discovery",
+  "source_url": "https://x.com/sengineland/status/2117331482893017387",
+  "supporting_urls": [
+    "https://searchengineland.com/google-also-gives-publishers-more-control-over-how-ai-uses-their-content-499971"
+  ],
+  "published_at": "2026-11-02T19:02:18Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--49032b44c972fe9a.json",
+  "content_hash": "sha256:1e4cf1116d4fa542dbbc6a0e045110d4b6d4b54ea8ee6c01d19cc0eb1f576afa",
+  "external_id": "2117331482893017387",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Google, Bing, OpenAI, Anthropic support unified robots.txt opt-out for AI training",
+  "content": "X author: @sengineland\n\nSearch Engine Land reported that Google, Bing, OpenAI, and Anthropic now support a single robots.txt directive for opting out of AI training, with Google implementing in 2027; a separate control remains for AI Overviews. This standardizes publisher controls over crawler access for training data.\n\nLinked sources:\n- https://searchengineland.com/google-also-gives-publishers-more-control-over-how-ai-uses-their-content-499971",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "sengineland",
+    "post_url": "https://x.com/sengineland/status/2117331482893017387",
+    "linked_urls": [
+      "https://searchengineland.com/google-also-gives-publishers-more-control-over-how-ai-uses-their-content-499971"
+    ],
+    "provider_citations": [],
+    "front": "access-discovery",
+    "shadow": false
+  }
+}

@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-11-02T17:52:31.512194+00:00",
-  "last_fetch_succeeded_at": "2026-11-02T17:52:31.512194+00:00",
-  "last_evidence_at": "2026-10-31T20:51:06.172555+00:00",
+  "last_checked_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_fetch_succeeded_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_evidence_at": "2026-11-03T15:51:57.033950+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://www.akamai.com/blog/security/battling-dns-fatigue-defend-against-relentless-attacks",
-    "https://www.akamai.com/blog/security/2024/sep/why-insurers-need-visibility-into-apis-risks",
     "https://www.akamai.com/blog/security-research/2024/may/akamai-perspective-patch-tuesday-may-2024",
     "https://www.akamai.com/blog/security-research/rising-ddos-attacks-against-life-sciences-organizations",
     "https://www.akamai.com/blog/cloud/2024/may/saas-companies-adopting-distributed-cloud-computing",
@@ -503,7 +501,9 @@
     "https://www.akamai.com/blog/performance/launching-forward-with-ipv6",
     "https://www.akamai.com/blog/security/the-oracle-of-delphi-steal-your-credentials",
     "https://www.akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger",
-    "https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers"
+    "https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers",
+    "https://www.akamai.com/blog/ai/2026/nov/akamai-named-leader-2026-idc-marketscape-managed-edge",
+    "https://www.akamai.com/blog/security-research/2026/nov/cve-2026-98432-remote-uaf-linux-kernels-tcp-stack"
   ],
   "consecutive_failures": 0,
   "first_seen": false

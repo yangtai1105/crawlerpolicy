@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--9664f58357c231c9",
+  "source": "x-discovery",
+  "source_url": "https://x.com/pressgazette/status/2117640109281415287",
+  "supporting_urls": [
+    "https://www.businesstimes.com.sg/companies-markets/thomson-reuters-posts-higher-q3-revenue-lifts-2026-forecast"
+  ],
+  "published_at": "2026-11-03T15:28:40Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--9664f58357c231c9.json",
+  "content_hash": "sha256:721c935cf58507059e063033b34a3a1c197326116f897e50647cd5b448083c26",
+  "external_id": "2117640109281415287",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Reuters Q3 revenue up 12% boosted by generative AI licensing",
+  "content": "X author: @pressgazette\n\nReuters reported a 12% year-on-year increase in Q3 revenue to $232m, with generative AI licensing driving a 56% rise in news division transaction revenue to $44m. This reflects growing publisher compensation through AI content licensing deals.\n\nLinked sources:\n- https://www.businesstimes.com.sg/companies-markets/thomson-reuters-posts-higher-q3-revenue-lifts-2026-forecast",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "pressgazette",
+    "post_url": "https://x.com/pressgazette/status/2117640109281415287",
+    "linked_urls": [
+      "https://www.businesstimes.com.sg/companies-markets/thomson-reuters-posts-higher-q3-revenue-lifts-2026-forecast"
+    ],
+    "provider_citations": [],
+    "front": "rights-markets",
+    "shadow": false
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--a377d7b3d0b73bce",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2319",
+  "supporting_urls": [],
+  "published_at": "2026-11-03T08:52:42Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--a377d7b3d0b73bce.json",
+  "content_hash": "sha256:ba789dc278f21046d1ed2154f5a3a183e4773751c49f611d51f1fa7069e0ae86",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2319",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Keynote speech by President von der Leyen at the WinWin Brussels Summit",
+  "content": "European Commission Speech Brussels, 03 Nov 2026 “Check against delivery”\n \nLadies and Gentlemen,\nIt is a pleasure to be with you today. Europe has always been a continent of great ideas. And Brussels has a lo...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--acd80f8a8610b88d",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security-research/2026/nov/cve-2026-98432-remote-uaf-linux-kernels-tcp-stack",
+  "supporting_urls": [],
+  "published_at": "2026-11-02T21:00:00Z",
+  "detected_at": "2026-11-03T15:51:57.033950Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--acd80f8a8610b88d.json",
+  "content_hash": "sha256:2066874304c138afc97a24c2dd1f0f3d2dbeece5b01cc7103a343aed29421d4d",
+  "external_id": "https://www.akamai.com/blog/security-research/2026/nov/cve-2026-98432-remote-uaf-linux-kernels-tcp-stack",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "CVE-2026-98432: A Remote Use-After-Free in the Linux Kernel's TCP Stack",
+  "content": "Learn about CVE-2026-98432, a critical remote use-after-free flaw in the Linux kernel TCP stack, its root exploit risks, affected versions, and mitigation steps.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
