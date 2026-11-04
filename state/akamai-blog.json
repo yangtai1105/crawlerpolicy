@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-11-03T15:51:57.033950+00:00",
-  "last_fetch_succeeded_at": "2026-11-03T15:51:57.033950+00:00",
-  "last_evidence_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_checked_at": "2026-11-04T15:58:19.880292+00:00",
+  "last_fetch_succeeded_at": "2026-11-04T15:58:19.880292+00:00",
+  "last_evidence_at": "2026-11-04T15:58:19.880292+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://www.akamai.com/blog/security-research/2024/may/akamai-perspective-patch-tuesday-may-2024",
     "https://www.akamai.com/blog/security-research/rising-ddos-attacks-against-life-sciences-organizations",
     "https://www.akamai.com/blog/cloud/2024/may/saas-companies-adopting-distributed-cloud-computing",
     "https://www.akamai.com/blog/security/2024/may/accelerating-zero-trust-outcomes-with-generative-ai-part-2",
@@ -503,7 +502,8 @@
     "https://www.akamai.com/blog/security/the-nansh0u-campaign-hackers-arsenal-grows-stronger",
     "https://www.akamai.com/blog/security/please-read-me-opportunistic-ransomware-devastating-mysql-servers",
     "https://www.akamai.com/blog/ai/2026/nov/akamai-named-leader-2026-idc-marketscape-managed-edge",
-    "https://www.akamai.com/blog/security-research/2026/nov/cve-2026-98432-remote-uaf-linux-kernels-tcp-stack"
+    "https://www.akamai.com/blog/security-research/2026/nov/cve-2026-98432-remote-uaf-linux-kernels-tcp-stack",
+    "https://www.akamai.com/blog/ai/2026/nov/synthetic-cisos-call-ai-agents-most-underestimated-risk"
   ],
   "consecutive_failures": 0,
   "first_seen": false

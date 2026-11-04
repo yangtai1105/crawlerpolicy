@@ -10,9 +10,9 @@
   "content_path": "content/evidence/x-discovery/x-discovery--49032b44c972fe9a.json",
   "content_hash": "sha256:1e4cf1116d4fa542dbbc6a0e045110d4b6d4b54ea8ee6c01d19cc0eb1f576afa",
   "external_id": "2117331482893017387",
-  "stage": "fetched",
+  "stage": "analyzed",
   "analysis_attempts": 0,
-  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "last_error": null,
   "title": "Google, Bing, OpenAI, Anthropic support unified robots.txt opt-out for AI training",
   "content": "X author: @sengineland\n\nSearch Engine Land reported that Google, Bing, OpenAI, and Anthropic now support a single robots.txt directive for opting out of AI training, with Google implementing in 2027; a separate control remains for AI Overviews. This standardizes publisher controls over crawler access for training data.\n\nLinked sources:\n- https://searchengineland.com/google-also-gives-publishers-more-control-over-how-ai-uses-their-content-499971",
   "previous_content": "",
@@ -25,6 +25,11 @@
     ],
     "provider_citations": [],
     "front": "access-discovery",
-    "shadow": false
+    "shadow": false,
+    "novelty": {
+      "outcome": "covered",
+      "matched": "feed:x-discovery-google-microsoft-anthropic-and-openai-back-shared-robots-txt-ai-training-opt-out",
+      "reason": "This covers the same announcement regarding Google, Microsoft/Bing, Anthropic, and OpenAI backing a shared robots.txt standard for AI training opt-outs."
+    }
   }
 }

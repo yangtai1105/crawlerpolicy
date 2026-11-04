@@ -1855,6 +1855,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "generative-ai-publisher-licensing-revenue-acceleration",
+      "title": "Generative AI Publisher Licensing Revenue Acceleration",
+      "thesis": "AI licensing is demonstrating measurable, double-digit impacts on news publisher transaction financials, proving that proprietary editorial and archival access deals can serve as tangible commercial lines rather than nominal experiments.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-03T15:51:57.033950Z",
+      "last_updated_at": "2026-11-03T15:51:57.033950Z",
+      "related_feed_slugs": [
+        "x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "generative-ai-search-classification",
       "title": "Generative AI Search Classification",
       "thesis": "Categorizing an AI conversational system as a search engine under the DSA formally bridges generative AI tools and traditional web search regulations, subjecting AI-driven retrieval to systemic risk assessments, transparency requirements, and algorithmic oversight.",
@@ -2048,6 +2061,21 @@
       ],
       "verified_development_slugs": [
         "ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
+      ]
+    },
+    {
+      "key": "in-band-metadata-delivery-for-automated-web-clients",
+      "title": "In Band Metadata Delivery For Automated Web Clients",
+      "thesis": "While the core working group effort standardizes cryptographic request signing, peripheral draft proposals are defining specialized HTTP headers to transmit authenticated identity, provenance, and capability metadata in-band with automated client requests.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-03T15:51:57.033950Z",
+      "last_updated_at": "2026-11-03T15:51:57.033950Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
       ]
     },
     {
@@ -2626,6 +2654,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "premium-agentic-tier-pricing-models",
+      "title": "Premium Agentic Tier Pricing Models",
+      "thesis": "AI licensing is demonstrating measurable, double-digit impacts on news publisher transaction financials, proving that proprietary editorial and archival access deals can serve as tangible commercial lines rather than nominal experiments.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-03T15:51:57.033950Z",
+      "last_updated_at": "2026-11-03T15:51:57.033950Z",
+      "related_feed_slugs": [
+        "x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "preparation-for-agentic-commerce",
       "title": "Preparation For Agentic Commerce",
       "thesis": "Edge security providers are formalizing the separation between unreciprocated content harvesting for model training and real-time proxy traffic acting on behalf of interactive users, shifting access control from binary IP-or-user-agent blocking to operational intent classification.",
@@ -2994,6 +3035,21 @@
       ],
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ]
+    },
+    {
+      "key": "standardization-of-cryptographically-signed-agent-and-bot-request-headers",
+      "title": "Standardization Of Cryptographically Signed Agent And Bot Request Headers",
+      "thesis": "While the core working group effort standardizes cryptographic request signing, peripheral draft proposals are defining specialized HTTP headers to transmit authenticated identity, provenance, and capability metadata in-band with automated client requests.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-03T15:51:57.033950Z",
+      "last_updated_at": "2026-11-03T15:51:57.033950Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
       ]
     },
     {

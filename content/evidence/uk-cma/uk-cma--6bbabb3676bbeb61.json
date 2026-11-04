@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--6bbabb3676bbeb61",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/cma-cases/sky-slash-itv-merger-inquiry",
+  "supporting_urls": [],
+  "published_at": "2026-11-04T13:52:01Z",
+  "detected_at": "2026-11-04T15:58:19.880292Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--6bbabb3676bbeb61.json",
+  "content_hash": "sha256:90d936b682664ad8f2605e8907e9387976ad12ebf6e7a96dfc95eb5f41b16d6b",
+  "external_id": "https://www.gov.uk/cma-cases/sky-slash-itv-merger-inquiry#2026-11-04T13:52:01Z",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Sky / ITV merger inquiry",
+  "content": "The Competition and Markets Authority (CMA) is investigating the anticipated acquisition of ITV M&E Holdings Limited (ITV) by Sky UK Limited.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

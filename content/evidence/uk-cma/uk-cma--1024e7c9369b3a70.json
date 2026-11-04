@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--1024e7c9369b3a70",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/government/publications/argos-limited-and-dsg-retail-limited-undertakings",
+  "supporting_urls": [],
+  "published_at": "2026-11-04T11:32:18Z",
+  "detected_at": "2026-11-04T15:58:19.880292Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--1024e7c9369b3a70.json",
+  "content_hash": "sha256:8bbca116bbc24eed7351c660f27e7b2e5a6f6edb49921e779a5bd5591b3a7496",
+  "external_id": "https://www.gov.uk/government/publications/argos-limited-and-dsg-retail-limited-undertakings#2026-11-04T11:32:18Z",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Guidance: Argos Limited and DSG Retail Limited undertakings",
+  "content": "Released in 2026: The undertakings required these electrical retailers to advertise their extended warranties on the Compare Extended Warranties website.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

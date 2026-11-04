@@ -1,36 +1,36 @@
 {
   "status": "critical",
-  "last_attempted_at": "2026-11-03T15:51:57.033950Z",
+  "last_attempted_at": "2026-11-04T15:58:19.880292Z",
   "last_fully_successful_at": "2026-10-31T20:51:06.172555Z",
   "coverage": {
     "configured": 52,
-    "completed": 49,
-    "fetched": 51,
-    "analyzed": 49,
-    "published": 49,
-    "failed": 3,
-    "required_failed": 1
+    "completed": 42,
+    "fetched": 49,
+    "analyzed": 43,
+    "published": 43,
+    "failed": 10,
+    "required_failed": 2
   },
   "stages": {
     "fetch": {
-      "ok": 51,
-      "failed": 1,
+      "ok": 49,
+      "failed": 3,
       "pending": 0
     },
     "evidence": {
-      "ok": 51,
-      "failed": 1,
+      "ok": 50,
+      "failed": 2,
       "pending": 0
     },
     "analysis": {
-      "ok": 49,
-      "failed": 2,
-      "pending": 1
+      "ok": 43,
+      "failed": 7,
+      "pending": 2
     },
     "publish": {
-      "ok": 49,
-      "failed": 2,
-      "pending": 1
+      "ok": 43,
+      "failed": 7,
+      "pending": 2
     }
   },
   "per_source": {
@@ -147,11 +147,11 @@
     "cloudflare-blog": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
       "evidence_ids": [
-        "cloudflare-blog--5e1ad344896d1698"
+        "cloudflare-blog--bab89b5eb36af171"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -169,12 +169,11 @@
     "akamai-blog": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
       "evidence_ids": [
-        "akamai-blog--9b5680fb4e50257b",
-        "akamai-blog--acd80f8a8610b88d"
+        "akamai-blog--4fb38ab1bada86d7"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -195,9 +194,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "imperva-blog--68414b9fcb4e90c2"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -214,11 +211,30 @@
     "uk-cma": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
       "evidence_ids": [
-        "uk-cma--486626f6860d07ef"
+        "uk-cma--f861e3eb8b4c414f",
+        "uk-cma--6bbabb3676bbeb61",
+        "uk-cma--86a7c242ee0f0f59",
+        "uk-cma--024fab1efe2288be",
+        "uk-cma--c510a7bec834703b",
+        "uk-cma--cd9465cb900d3cfa",
+        "uk-cma--2c78230718bd51a6",
+        "uk-cma--8cbfdab125934c72",
+        "uk-cma--310fa7630937e9d3",
+        "uk-cma--b2a9f5e05e6c2d8b",
+        "uk-cma--3ecba24ebebe87e3",
+        "uk-cma--dc51cc86178ff09b",
+        "uk-cma--28cacab46676f8d1",
+        "uk-cma--75401b36018c7464",
+        "uk-cma--c34f36c9301f7d4d",
+        "uk-cma--a1e786fdce114023",
+        "uk-cma--cdcc53364dd1bfb2",
+        "uk-cma--02617b6916318b92",
+        "uk-cma--0f78df8193f800de",
+        "uk-cma--1024e7c9369b3a70"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -244,21 +260,12 @@
       "feed_items_written": []
     },
     "eu-commission-digital": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--860d3c64e3dc0e10",
-        "eu-commission-digital--8da508a3db8a6ce7",
-        "eu-commission-digital--488cbcbabe5d3fc6",
-        "eu-commission-digital--53a1cbda5bf13800",
-        "eu-commission-digital--1e56ad143b331234",
-        "eu-commission-digital--a377d7b3d0b73bce",
-        "eu-commission-digital--7582a56f804fb285",
-        "eu-commission-digital--43f581b4a30b590f"
-      ],
+      "fetch": "failed",
+      "evidence": "failed",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "",
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -268,9 +275,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "us-ftc-federal-register--33f7a1ae866ed787"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -290,9 +295,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "reddit-corporate--3715643323aedbb4"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -429,11 +432,11 @@
     "stratechery": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
       "evidence_ids": [
-        "stratechery--73a9a30039cf8f2f"
+        "stratechery--52e0f2d0b039d24d"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -441,13 +444,11 @@
     "simon-willison": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
       "evidence_ids": [
-        "simon-willison--b6d6415fbcfcb16b",
-        "simon-willison--5e7a74e5ffe7b7df",
-        "simon-willison--ea9714bf73d30d21"
+        "simon-willison--0582594ea83c0344"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -465,13 +466,12 @@
     "openai-blog": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
       "evidence_ids": [
-        "openai-blog--fb137ad89e891f8a",
-        "openai-blog--91bfcc1b7455bbc8",
-        "openai-blog--e9df8973a78de6ad"
+        "openai-blog--2feee1b5121def5a",
+        "openai-blog--aa4ca9342640f304"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -509,14 +509,18 @@
     "ietf-webbotauth-wg": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
         "ietf-webbotauth-wg--73b525a0d33d1f6c"
       ],
-      "events_written": [],
-      "feed_items_written": []
+      "events_written": [
+        "content/events/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -571,29 +575,38 @@
     "cloudflare-radar-ai-insights": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [],
+      "analysis": "failed",
+      "publish": "failed",
+      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--e9d0b5cf31e97b89"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "ok",
+      "fetch": "failed",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": "xAI X Search did not return valid candidate JSON",
       "evidence_ids": [
         "x-discovery--49032b44c972fe9a",
         "x-discovery--9664f58357c231c9"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue.md"
+      ]
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md",
+    "content/feed/2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "blocked",
@@ -604,12 +617,12 @@
   ],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-11-03",
+    "edition_date": "2026-11-04",
     "item_count": 0,
-    "path": "data/daily/2026-11-03.json"
+    "path": "data/daily/2026-11-04.json"
   },
   "insight_threads": {
-    "thread_count": 239,
+    "thread_count": 243,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -618,13 +631,13 @@
     "error": ""
   },
   "discovery": {
-    "status": "live",
-    "candidate_count": 2,
-    "x_search_calls": 4,
-    "estimated_tool_cost_usd": 0.131778,
+    "status": "unavailable",
+    "candidate_count": 0,
+    "x_search_calls": 0,
+    "estimated_tool_cost_usd": 0.0,
     "sources_configured": 1,
     "sources_completed": 0,
-    "sources_failed": 0,
+    "sources_failed": 1,
     "sources_skipped_by_cap": 0
   }
 }

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--2c78230718bd51a6",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/government/publications/local-bus-services-market-investigation-order-2012",
+  "supporting_urls": [],
+  "published_at": "2026-11-04T11:35:18Z",
+  "detected_at": "2026-11-04T15:58:19.880292Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--2c78230718bd51a6.json",
+  "content_hash": "sha256:822109773800680231e07422736ed25917f3d33af1bf7810d3a843cecf0b2e4b",
+  "external_id": "https://www.gov.uk/government/publications/local-bus-services-market-investigation-order-2012#2026-11-04T11:35:18Z",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Guidance: Local Bus Services Market Investigation Order 2012",
+  "content": "This order requires local bus operators, with bus stations, to allow competing bus operators access to their bus stations.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

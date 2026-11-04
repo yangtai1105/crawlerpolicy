@@ -332,19 +332,21 @@
       "kind": "player",
       "observed_name": "IETF Web Bot Auth Working Group",
       "first_seen_at": "2026-10-22T13:30:16.624196Z",
-      "last_seen_at": "2026-10-29T14:58:01.749807Z",
-      "occurrences": 4,
+      "last_seen_at": "2026-11-03T15:51:57.033950Z",
+      "occurrences": 5,
       "evidence_ids": [
         "ietf-webbotauth-wg--c6dc433a924a1ecc",
         "ietf-webbotauth-wg--590751b5f4db81f6",
         "ietf-webbotauth-wg--585a35def49ea164",
-        "ietf-webbotauth-wg--79c2f8436380dea1"
+        "ietf-webbotauth-wg--79c2f8436380dea1",
+        "ietf-webbotauth-wg--73b525a0d33d1f6c"
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
         "2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit",
         "2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft",
-        "2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
+        "2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
       ]
     },
     "player:instinct": {
@@ -360,6 +362,19 @@
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
         "2026-10-27-datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
+      ]
+    },
+    "player:internet engineering task force": {
+      "kind": "player",
+      "observed_name": "Internet Engineering Task Force",
+      "first_seen_at": "2026-11-03T15:51:57.033950Z",
+      "last_seen_at": "2026-11-03T15:51:57.033950Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "ietf-webbotauth-wg--73b525a0d33d1f6c"
+      ],
+      "feed_slugs": [
+        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
       ]
     },
     "player:james grimmelmann": {
@@ -507,6 +522,19 @@
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
       ]
     },
+    "player:reuters": {
+      "kind": "player",
+      "observed_name": "Reuters",
+      "first_seen_at": "2026-11-03T15:51:57.033950Z",
+      "last_seen_at": "2026-11-03T15:51:57.033950Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--9664f58357c231c9"
+      ],
+      "feed_slugs": [
+        "2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
+      ]
+    },
     "player:search engine land": {
       "kind": "player",
       "observed_name": "Search Engine Land",
@@ -561,6 +589,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:skadden, arps, slate, meagher & flom": {
+      "kind": "player",
+      "observed_name": "Skadden, Arps, Slate, Meagher & Flom",
+      "first_seen_at": "2026-11-03T15:51:57.033950Z",
+      "last_seen_at": "2026-11-03T15:51:57.033950Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--9664f58357c231c9"
+      ],
+      "feed_slugs": [
+        "2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
       ]
     },
     "player:sysdig": {
@@ -681,6 +722,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:thomson reuters": {
+      "kind": "player",
+      "observed_name": "Thomson Reuters",
+      "first_seen_at": "2026-11-03T15:51:57.033950Z",
+      "last_seen_at": "2026-11-03T15:51:57.033950Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--9664f58357c231c9"
+      ],
+      "feed_slugs": [
+        "2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
       ]
     },
     "player:tony xu": {
@@ -858,19 +912,21 @@
       "kind": "protocol",
       "observed_name": "HTTP",
       "first_seen_at": "2026-10-13T15:36:53.900599Z",
-      "last_seen_at": "2026-10-24T12:27:35.735465Z",
-      "occurrences": 4,
+      "last_seen_at": "2026-11-03T15:51:57.033950Z",
+      "occurrences": 5,
       "evidence_ids": [
         "datadome-blog--42fa450a86dba89a",
         "cloudflare-blog--5a2555e77804fad4",
         "cloudflare-blog--cc3fb6ecbefdd443",
-        "x-discovery--fe5003d0c481d2df"
+        "x-discovery--fe5003d0c481d2df",
+        "ietf-webbotauth-wg--73b525a0d33d1f6c"
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots",
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut",
         "2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots",
-        "2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
+        "2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests",
+        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
       ]
     },
     "protocol:http 402": {
@@ -890,19 +946,21 @@
       "kind": "protocol",
       "observed_name": "HTTP Message Signatures",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-10-29T14:58:01.749807Z",
-      "occurrences": 4,
+      "last_seen_at": "2026-11-03T15:51:57.033950Z",
+      "occurrences": 5,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
         "ietf-webbotauth-wg--590751b5f4db81f6",
         "ietf-webbotauth-wg--585a35def49ea164",
-        "ietf-webbotauth-wg--79c2f8436380dea1"
+        "ietf-webbotauth-wg--79c2f8436380dea1",
+        "ietf-webbotauth-wg--73b525a0d33d1f6c"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
         "2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit",
         "2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft",
-        "2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro"
+        "2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
+        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
       ]
     },
     "protocol:jafar": {

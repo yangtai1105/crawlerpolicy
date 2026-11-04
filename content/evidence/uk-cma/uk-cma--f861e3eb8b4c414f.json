@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--f861e3eb8b4c414f",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/cma-cases/nrg-fleet-services-slash-specialist-fleet-services-merger-inquiry",
+  "supporting_urls": [],
+  "published_at": "2026-11-04T14:00:50Z",
+  "detected_at": "2026-11-04T15:58:19.880292Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--f861e3eb8b4c414f.json",
+  "content_hash": "sha256:ec54ad76ea078b752456a4c8868e325bc4816be301cff0b701de352d733aaac4",
+  "external_id": "https://www.gov.uk/cma-cases/nrg-fleet-services-slash-specialist-fleet-services-merger-inquiry#2026-11-04T14:00:50Z",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "NRG Fleet Services / Specialist Fleet Services merger inquiry",
+  "content": "The Competition and Markets Authority (CMA) is investigating the completed acquisition by NRG Fleet Services of Specialist Fleet Services.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

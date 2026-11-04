@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--c510a7bec834703b",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/government/publications/payday-lending-market-investigation-order-2015",
+  "supporting_urls": [],
+  "published_at": "2026-11-04T11:36:23Z",
+  "detected_at": "2026-11-04T15:58:19.880292Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--c510a7bec834703b.json",
+  "content_hash": "sha256:00a21a67e0b01a92a31d58ccdbcb6908b37ec3b7e3c14275941d27fb6c45f51b",
+  "external_id": "https://www.gov.uk/government/publications/payday-lending-market-investigation-order-2015#2026-11-04T11:36:23Z",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Guidance: Payday Lending Market Investigation Order 2015",
+  "content": "Revoked in 2026: The order imposed new obligations on online and high street payday lenders.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

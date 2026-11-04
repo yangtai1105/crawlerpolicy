@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--310fa7630937e9d3",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/government/publications/home-credit-market-investigation-order",
+  "supporting_urls": [],
+  "published_at": "2026-11-04T11:34:25Z",
+  "detected_at": "2026-11-04T15:58:19.880292Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--310fa7630937e9d3.json",
+  "content_hash": "sha256:303e16e2daeaf7302cd9e75f6c34929e0593ec274120effd2157797ce122250c",
+  "external_id": "https://www.gov.uk/government/publications/home-credit-market-investigation-order#2026-11-04T11:34:25Z",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Guidance: Home Credit Market Investigation Order (varied in 2026)",
+  "content": "Varied in 2026: The Order as varied provides for better early termination loan terms.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

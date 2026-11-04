@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-03T15:51:57.033950+00:00",
-  "last_fetch_succeeded_at": "2026-11-03T15:51:57.033950+00:00",
-  "last_evidence_at": "2026-11-03T15:51:57.033950+00:00",
+  "last_checked_at": "2026-11-04T15:58:19.880292+00:00",
+  "last_fetch_succeeded_at": "2026-11-04T15:58:19.880292+00:00",
+  "last_evidence_at": "2026-11-04T15:58:19.880292+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -41,7 +41,8 @@
     "https://simonwillison.net/2026/Nov/1/kyle-kingsbury/",
     "https://simonwillison.net/2026/Nov/3/a-sound-that-leaks-your-exact-location/",
     "https://simonwillison.net/2026/Nov/3/october-newsletter/",
-    "https://simonwillison.net/2026/Nov/2/llm/"
+    "https://simonwillison.net/2026/Nov/2/llm/",
+    "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--b2a9f5e05e6c2d8b",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/government/publications/cement-market-data-order-2016-and-cement-market-data-remedy-undertakings",
+  "supporting_urls": [],
+  "published_at": "2026-11-04T11:34:02Z",
+  "detected_at": "2026-11-04T15:58:19.880292Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--b2a9f5e05e6c2d8b.json",
+  "content_hash": "sha256:6cdf09dc678145e3fbdcddde13068f15f78c3c95257706a8f6c4622c26cf171f",
+  "external_id": "https://www.gov.uk/government/publications/cement-market-data-order-2016-and-cement-market-data-remedy-undertakings#2026-11-04T11:34:02Z",
+  "stage": "fetched",
+  "analysis_attempts": 0,
+  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "title": "Guidance: Cement Market Data Order 2016 and Cement Market Data Remedy Undertakings",
+  "content": "An order and undertakings to restrict the disclosure and publication of cement production and sales volume data.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
