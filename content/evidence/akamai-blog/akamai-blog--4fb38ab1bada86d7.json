@@ -8,12 +8,23 @@
   "content_path": "content/evidence/akamai-blog/akamai-blog--4fb38ab1bada86d7.json",
   "content_hash": "sha256:fffe8ab790db570926e82fdf90a5c731a01628da092e114fc06358fe8f09baaa",
   "external_id": "https://www.akamai.com/blog/ai/2026/nov/synthetic-cisos-call-ai-agents-most-underestimated-risk",
-  "stage": "fetched",
+  "stage": "analyzed",
   "analysis_attempts": 0,
-  "last_error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+  "last_error": null,
   "title": "Synthetic CISOs Call AI Agents the Most Underestimated Risk",
   "content": "Synthetic CISOs rank AI agents as the top underestimated threat. See key survey findings and learn how to secure overpermissioned agents and vulnerable APIs.",
   "previous_content": "",
   "unified_diff": "",
-  "discovery_metadata": {}
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.akamai.com/blog/ai/synthetic-cisos-call-ai-agents-most-underestimated-risk",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 6909,
+      "sha256": "9adbc35ddff22900356f2894a641cdbfb592e5a04d1a6eff6712ddd466bfc4b7",
+      "cited_urls": [
+        "https://www.akamai.com/blog/ai/synthetic-cisos-call-ai-agents-most-underestimated-risk"
+      ]
+    }
+  }
 }

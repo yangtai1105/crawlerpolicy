@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--b3fb40b0c67fe992",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/178",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T14:34:12Z",
+  "detected_at": "2026-11-05T16:10:50.204137Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--b3fb40b0c67fe992.json",
+  "content_hash": "sha256:55b1e9be7476c7ed8a009d28865af21029f76a6f7f6b897e5a4b5c41daf6576d",
+  "external_id": "pr:178",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #178: fix(deps): update vulnerable dependencies",
+  "content": "Refresh Python, npm, Rust, and Go dependencies and include transitive dependencies in Dependabot updates. Remove the unused example lockfile.\n\ngo-jose v3 remains blocked on the upstream smallstep migration.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

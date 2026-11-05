@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--3d4cab7173370f0e",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/cma-cases/googles-mobile-platform",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T13:29:57Z",
+  "detected_at": "2026-11-05T16:10:50.204137Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--3d4cab7173370f0e.json",
+  "content_hash": "sha256:9a26de5c726dd4f8740cd08762da7a43c5cbc495a5db11c4f3c4f53f4db737fd",
+  "external_id": "https://www.gov.uk/cma-cases/googles-mobile-platform#2026-11-05T13:29:57Z",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Google’s mobile platform",
+  "content": "The Competition and Markets Authority (CMA) has designated Google as having strategic market status (SMS) in the provision of its mobile platform.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

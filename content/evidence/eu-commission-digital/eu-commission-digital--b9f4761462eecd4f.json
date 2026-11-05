@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b9f4761462eecd4f",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2353",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T09:47:10Z",
+  "detected_at": "2026-11-05T16:10:50.204137Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b9f4761462eecd4f.json",
+  "content_hash": "sha256:4939246920c404c68520d095275f69bd172f7ae0fe531ea96e6b288701fd5602",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2353",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission proposes 2027 fishing opportunities for fish stocks in the Atlantic, Kattegat and Skagerrak",
+  "content": "European Commission Press release Brussels, 05 Nov 2026 Today, the European Commission adopted its proposal for the 2027 fishing opportunities for 11 fish stocks managed by the EU in the Atlantic, Kattegat and Skagerrak.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

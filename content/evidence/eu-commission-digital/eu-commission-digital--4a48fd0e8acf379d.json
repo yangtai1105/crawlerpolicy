@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--4a48fd0e8acf379d",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2349",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T08:01:16Z",
+  "detected_at": "2026-11-05T16:10:50.204137Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--4a48fd0e8acf379d.json",
+  "content_hash": "sha256:63c4bb01945930a0701328dedd8c1b040dff400f28f01b2446dda9677b552739",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2349",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission disburses €4.36 billion to Ukraine under the €90 billion Ukraine Support Loan",
+  "content": "European Commission Press release Brussels, 05 Nov 2026 Today, the European Commission disbursed €4.36 billion to Ukraine under the Ukraine Support Loan. This payment includes €3.7 billion for the second instalment of macro-financial assistance (MFA) agreed for 2026 and €658 million under the defence leg of the Loan.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

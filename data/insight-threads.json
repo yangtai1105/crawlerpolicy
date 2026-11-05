@@ -15,6 +15,34 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ad-monetization-aware-edge-blocking",
+      "title": "Ad Monetization Aware Edge Blocking",
+      "thesis": "Personal agents break the traditional binary of human versus automated bot traffic by executing legitimate user intents while generating automated request footprints. Cloudflare addresses this divergence by decoupling agent access controls from general crawler rules and tying agent identity into user-level authentication and fraud-detection layers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-04T15:58:19.880292Z",
+      "last_updated_at": "2026-11-04T15:58:19.880292Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "adoption-of-ietf-standardization-efforts-for-ai-training-opt-out-mechanisms",
+      "title": "Adoption Of Ietf Standardization Efforts For AI Training Opt Out Mechanisms",
+      "thesis": "By implementing IETF aipref draft signals alongside robots.txt, Anthropic bridges broad protocol-level AI training preferences with bot-specific crawler directives, establishing explicit conflict-resolution rules where specific user-agent blocks override general opt-outs.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-05T16:10:50.204137Z",
+      "last_updated_at": "2026-11-05T16:10:50.204137Z",
+      "related_feed_slugs": [
+        "claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+      ],
+      "verified_development_slugs": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+      ]
+    },
+    {
       "key": "aeo-dashboard-commoditization",
       "title": "Aeo Dashboard Commoditization",
       "thesis": "By uniting edge-level crawler log telemetry with LLM citation and mention tracking into a low-cost subscription, infrastructure providers are expanding directly into search and discovery analytics.",
@@ -854,6 +882,21 @@
         "cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "browser-use-agent-emergence",
+      "title": "Browser Use Agent Emergence",
+      "thesis": "AI model developers are establishing dedicated agent user identifiers for autonomous browser execution (such as Claude-Agent) that operate separately from fetch-only assistant crawlers (such as Claude-User) and developer coding tools (such as Claude-Code).",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-05T16:10:50.204137Z",
+      "last_updated_at": "2026-11-05T16:10:50.204137Z",
+      "related_feed_slugs": [
+        "knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ],
+      "verified_development_slugs": [
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ]
     },
     {
       "key": "cache-protection-against-automated-data-harvesting",
@@ -1967,6 +2010,21 @@
       ]
     },
     {
+      "key": "hierarchical-resolution-frameworks-reconciling-bot-specific-crawler-directives-with-universal-data-use-preferences",
+      "title": "Hierarchical Resolution Frameworks Reconciling Bot Specific Crawler Directives With Universal Data Use Preferences",
+      "thesis": "By implementing IETF aipref draft signals alongside robots.txt, Anthropic bridges broad protocol-level AI training preferences with bot-specific crawler directives, establishing explicit conflict-resolution rules where specific user-agent blocks override general opt-outs.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-05T16:10:50.204137Z",
+      "last_updated_at": "2026-11-05T16:10:50.204137Z",
+      "related_feed_slugs": [
+        "claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+      ],
+      "verified_development_slugs": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+      ]
+    },
+    {
       "key": "http-402-implementation",
       "title": "Http 402 Implementation",
       "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
@@ -2602,6 +2660,19 @@
       ]
     },
     {
+      "key": "personal-agent-access-management",
+      "title": "Personal Agent Access Management",
+      "thesis": "Personal agents break the traditional binary of human versus automated bot traffic by executing legitimate user intents while generating automated request footprints. Cloudflare addresses this divergence by decoupling agent access controls from general crawler rules and tying agent identity into user-level authentication and fraud-detection layers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-04T15:58:19.880292Z",
+      "last_updated_at": "2026-11-04T15:58:19.880292Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "personal-agent-detection-tooling",
       "title": "Personal Agent Detection Tooling",
       "thesis": "Early telemetry on delegative personal agents reveals a gap between vendor positioning and real-world user deployment, with professional-oriented agents immediately gravitating toward consumer shopping discovery while avoiding sensitive transaction endpoints.",
@@ -2899,6 +2970,21 @@
       ],
       "verified_development_slugs": [
         "cloudflare-unveils-accountable-designation-and-controls-to-separate-search-disco"
+      ]
+    },
+    {
+      "key": "segmentation-of-agent-roles",
+      "title": "Segmentation Of Agent Roles",
+      "thesis": "AI model developers are establishing dedicated agent user identifiers for autonomous browser execution (such as Claude-Agent) that operate separately from fetch-only assistant crawlers (such as Claude-User) and developer coding tools (such as Claude-Code).",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-05T16:10:50.204137Z",
+      "last_updated_at": "2026-11-05T16:10:50.204137Z",
+      "related_feed_slugs": [
+        "knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ],
+      "verified_development_slugs": [
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
       ]
     },
     {
@@ -3209,6 +3295,19 @@
       "last_updated_at": "2026-09-25T13:16:43.869306Z",
       "related_feed_slugs": [
         "datadome-blog-kiabi-deploys-datadome-across-international-properties-to-manage-bot-traffic-and"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "user-agent-attribution-in-fraud-detection",
+      "title": "User Agent Attribution In Fraud Detection",
+      "thesis": "Personal agents break the traditional binary of human versus automated bot traffic by executing legitimate user intents while generating automated request footprints. Cloudflare addresses this divergence by decoupling agent access controls from general crawler rules and tying agent identity into user-level authentication and fraud-detection layers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-04T15:58:19.880292Z",
+      "last_updated_at": "2026-11-04T15:58:19.880292Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a"
       ],
       "verified_development_slugs": []
     },

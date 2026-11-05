@@ -416,6 +416,19 @@
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
+    "player:known agents": {
+      "kind": "player",
+      "observed_name": "Known Agents",
+      "first_seen_at": "2026-11-05T16:10:50.204137Z",
+      "last_seen_at": "2026-11-05T16:10:50.204137Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "knownagents-directory--1b700648a1f116c8"
+      ],
+      "feed_slugs": [
+        "2026-11-05-knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ]
+    },
     "player:koi security": {
       "kind": "player",
       "observed_name": "Koi Security",

@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-05",
+  "generated_at": "2026-11-05T16:10:50.204137Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+      "status": "verified",
+      "importance": 0.85,
+      "published_at": "2026-11-05T16:10:50.204137Z"
+    },
+    {
+      "slug": "knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot",
+      "status": "verified",
+      "importance": 0.55,
+      "published_at": "2026-11-05T16:10:50.204137Z"
+    }
+  ]
+}

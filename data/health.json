@@ -1,36 +1,36 @@
 {
-  "status": "critical",
-  "last_attempted_at": "2026-11-04T15:58:19.880292Z",
-  "last_fully_successful_at": "2026-10-31T20:51:06.172555Z",
+  "status": "healthy",
+  "last_attempted_at": "2026-11-05T16:10:50.204137Z",
+  "last_fully_successful_at": "2026-11-05T16:10:50.204137Z",
   "coverage": {
     "configured": 52,
-    "completed": 42,
-    "fetched": 49,
-    "analyzed": 43,
-    "published": 43,
-    "failed": 10,
-    "required_failed": 2
+    "completed": 52,
+    "fetched": 52,
+    "analyzed": 52,
+    "published": 52,
+    "failed": 0,
+    "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 49,
-      "failed": 3,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "evidence": {
-      "ok": 50,
-      "failed": 2,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "analysis": {
-      "ok": 43,
-      "failed": 7,
-      "pending": 2
+      "ok": 52,
+      "failed": 0,
+      "pending": 0
     },
     "publish": {
-      "ok": 43,
-      "failed": 7,
-      "pending": 2
+      "ok": 52,
+      "failed": 0,
+      "pending": 0
     }
   },
   "per_source": {
@@ -50,9 +50,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "claudebot--1de3a3f9ed9963bf"
+      ],
+      "events_written": [
+        "content/events/2026-11-05-claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-05-claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai.md"
+      ]
     },
     "google-extended": {
       "fetch": "ok",
@@ -147,14 +153,16 @@
     "cloudflare-blog": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
         "cloudflare-blog--bab89b5eb36af171"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-04-cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a.md"
+      ]
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -162,18 +170,21 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--c8582da2332d74f0"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
     "akamai-blog": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
-        "akamai-blog--4fb38ab1bada86d7"
+        "akamai-blog--4fb38ab1bada86d7",
+        "akamai-blog--8d91b4bbe8badd68"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -199,11 +210,11 @@
       "feed_items_written": []
     },
     "human-blog": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
@@ -211,30 +222,35 @@
     "uk-cma": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
-        "uk-cma--f861e3eb8b4c414f",
-        "uk-cma--6bbabb3676bbeb61",
-        "uk-cma--86a7c242ee0f0f59",
         "uk-cma--024fab1efe2288be",
-        "uk-cma--c510a7bec834703b",
-        "uk-cma--cd9465cb900d3cfa",
-        "uk-cma--2c78230718bd51a6",
-        "uk-cma--8cbfdab125934c72",
-        "uk-cma--310fa7630937e9d3",
-        "uk-cma--b2a9f5e05e6c2d8b",
-        "uk-cma--3ecba24ebebe87e3",
-        "uk-cma--dc51cc86178ff09b",
-        "uk-cma--28cacab46676f8d1",
-        "uk-cma--75401b36018c7464",
-        "uk-cma--c34f36c9301f7d4d",
-        "uk-cma--a1e786fdce114023",
-        "uk-cma--cdcc53364dd1bfb2",
         "uk-cma--02617b6916318b92",
         "uk-cma--0f78df8193f800de",
-        "uk-cma--1024e7c9369b3a70"
+        "uk-cma--1024e7c9369b3a70",
+        "uk-cma--28cacab46676f8d1",
+        "uk-cma--2c78230718bd51a6",
+        "uk-cma--310fa7630937e9d3",
+        "uk-cma--3ecba24ebebe87e3",
+        "uk-cma--6bbabb3676bbeb61",
+        "uk-cma--75401b36018c7464",
+        "uk-cma--86a7c242ee0f0f59",
+        "uk-cma--8cbfdab125934c72",
+        "uk-cma--a1e786fdce114023",
+        "uk-cma--b2a9f5e05e6c2d8b",
+        "uk-cma--c34f36c9301f7d4d",
+        "uk-cma--c510a7bec834703b",
+        "uk-cma--cd9465cb900d3cfa",
+        "uk-cma--cdcc53364dd1bfb2",
+        "uk-cma--dc51cc86178ff09b",
+        "uk-cma--f861e3eb8b4c414f",
+        "uk-cma--6314c0bb44edfaec",
+        "uk-cma--e59b7c53d0e804f1",
+        "uk-cma--84d8a207c5ba723f",
+        "uk-cma--3d4cab7173370f0e",
+        "uk-cma--1a91b34bf11fe293"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -245,7 +261,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma-google-search-case--575d6029769bb507"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -260,12 +278,23 @@
       "feed_items_written": []
     },
     "eu-commission-digital": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "",
-      "evidence_ids": [],
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "eu-commission-digital--576b2a76854389bc",
+        "eu-commission-digital--005906587b9dfb9a",
+        "eu-commission-digital--928a09bb1e9d3705",
+        "eu-commission-digital--2e329438848e30d6",
+        "eu-commission-digital--b9f4761462eecd4f",
+        "eu-commission-digital--1a75fe8ff84ce0fc",
+        "eu-commission-digital--fc3ce55af639b3fa",
+        "eu-commission-digital--9dc90eeb82f12f09",
+        "eu-commission-digital--4a48fd0e8acf379d",
+        "eu-commission-digital--2d65a5eb795cdd64"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -275,7 +304,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "us-ftc-federal-register--0105d15e47d353a7"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -295,7 +326,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "reddit-corporate--5065da1c286de5fe"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -305,7 +338,12 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--5f03419588b4a107",
+        "web-bot-auth-repo--b3fb40b0c67fe992",
+        "web-bot-auth-repo--39cfcc7ab18536d8",
+        "web-bot-auth-repo--2698479946ae72bd"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -405,9 +443,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "knownagents-directory--1b700648a1f116c8"
+      ],
+      "events_written": [
+        "content/events/2026-11-05-knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-05-knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot.md"
+      ]
     },
     "tollbit-state-of-bots": {
       "fetch": "ok",
@@ -432,11 +476,12 @@
     "stratechery": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
-        "stratechery--52e0f2d0b039d24d"
+        "stratechery--52e0f2d0b039d24d",
+        "stratechery--0fefe14820aac6b9"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -444,9 +489,9 @@
     "simon-willison": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
         "simon-willison--0582594ea83c0344"
       ],
@@ -466,12 +511,13 @@
     "openai-blog": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
         "openai-blog--2feee1b5121def5a",
-        "openai-blog--aa4ca9342640f304"
+        "openai-blog--aa4ca9342640f304",
+        "openai-blog--32bec11eefc540d7"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -513,14 +559,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "ietf-webbotauth-wg--73b525a0d33d1f6c"
+        "ietf-webbotauth-wg--877da0ccdeecc937"
       ],
-      "events_written": [
-        "content/events/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md"
-      ]
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -575,9 +617,9 @@
     "cloudflare-radar-ai-insights": {
       "fetch": "ok",
       "evidence": "ok",
-      "analysis": "failed",
-      "publish": "failed",
-      "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [
         "cloudflare-radar-ai-insights--e9d0b5cf31e97b89"
       ],
@@ -585,59 +627,54 @@
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "failed",
+      "fetch": "ok",
       "evidence": "ok",
       "analysis": "ok",
       "publish": "ok",
-      "error": "xAI X Search did not return valid candidate JSON",
-      "evidence_ids": [
-        "x-discovery--49032b44c972fe9a",
-        "x-discovery--9664f58357c231c9"
-      ],
+      "error": null,
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue.md"
-      ]
+      "feed_items_written": []
     }
   },
   "events_written": [
-    "content/events/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md"
+    "content/events/2026-11-05-claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai.md",
+    "content/events/2026-11-05-knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade.md",
-    "content/feed/2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue.md"
+    "content/feed/2026-11-05-claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai.md",
+    "content/feed/2026-11-04-cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a.md",
+    "content/feed/2026-11-05-knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot.md"
   ],
   "provider": {
     "name": "gemini",
-    "status": "blocked",
-    "error": "402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}"
+    "status": "ok",
+    "error": null
   },
-  "derived_errors": [
-    "state_of_play: 402 RESOURCE_EXHAUSTED. {'error': {'code': 402, 'message': 'Your prepayment credits are depleted. Please go to AI Studio at https://ai.studio/projects to manage your project and billing. Learn more at https://ai.google.dev/gemini-api/docs/billing#prepay. ', 'status': 'RESOURCE_EXHAUSTED'}}"
-  ],
+  "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-11-04",
-    "item_count": 0,
-    "path": "data/daily/2026-11-04.json"
+    "status": "published",
+    "edition_date": "2026-11-05",
+    "item_count": 2,
+    "path": "data/daily/2026-11-05.json"
   },
   "insight_threads": {
-    "thread_count": 243,
+    "thread_count": 250,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
     "status": "ok",
-    "proposed": 0,
+    "proposed": 2,
     "error": ""
   },
   "discovery": {
-    "status": "unavailable",
+    "status": "live",
     "candidate_count": 0,
-    "x_search_calls": 0,
-    "estimated_tool_cost_usd": 0.0,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.010672,
     "sources_configured": 1,
-    "sources_completed": 0,
-    "sources_failed": 1,
+    "sources_completed": 1,
+    "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }
 }

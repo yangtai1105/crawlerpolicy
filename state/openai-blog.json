@@ -1,10 +1,9 @@
 {
-  "last_checked_at": "2026-11-04T15:58:19.880292+00:00",
-  "last_fetch_succeeded_at": "2026-11-04T15:58:19.880292+00:00",
-  "last_evidence_at": "2026-11-04T15:58:19.880292+00:00",
+  "last_checked_at": "2026-11-05T16:10:50.204137+00:00",
+  "last_fetch_succeeded_at": "2026-11-05T16:10:50.204137+00:00",
+  "last_evidence_at": "2026-11-05T16:10:50.204137+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/dall-e-2-pre-training-mitigations",
     "https://openai.com/index/vpt",
     "https://openai.com/index/evolution-through-large-models",
     "https://openai.com/index/critiques",
@@ -503,7 +502,8 @@
     "https://openai.com/index/preparing-our-next-security-sprint-to-harden-openai",
     "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
     "https://openai.com/index/openai-to-acquire-pierre",
-    "https://openai.com/index/daybreak-red-aws-govcloud"
+    "https://openai.com/index/daybreak-red-aws-govcloud",
+    "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure"
   ],
   "consecutive_failures": 0,
   "first_seen": false

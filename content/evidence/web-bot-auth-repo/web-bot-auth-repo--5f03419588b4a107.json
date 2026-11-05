@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--5f03419588b4a107",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/176",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T14:56:25Z",
+  "detected_at": "2026-11-05T16:10:50.204137Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--5f03419588b4a107.json",
+  "content_hash": "sha256:a3078a7ead81366682f704438a5174370581517d6281676e674b04f3e590c67d",
+  "external_id": "pr:176",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #176: feat(rust)!: align key discovery with protocol-01",
+  "content": "Keep origin fallback (so that it works without the well-known). This also keeps CIMD discovery.\n\ntype=jwks_uri/directory will break, but we have not observed any so far. Similarly, we remove the possibility for data: inlining",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
