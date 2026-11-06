@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--36d84d52479ae728",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/cultfit-builds-with-codex",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T20:00:00Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--36d84d52479ae728.json",
+  "content_hash": "sha256:eb59f9cb18aebcb0f5a91c130a8ede4802994a367f45a02cbd135f9ad19a4a9c",
+  "external_id": "https://openai.com/index/cultfit-builds-with-codex",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Cult.fit builds operational muscle with Codex",
+  "content": "Cult.fit is using Codex to help teams across functions build tools, move faster, and change how work gets done.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--e7e4db9986dd45cb",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2365",
+  "supporting_urls": [],
+  "published_at": "2026-11-06T09:39:32Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--e7e4db9986dd45cb.json",
+  "content_hash": "sha256:26242779cdfd91d283e2c3cb708c02e90c5330a2667a9a27f34ab76fc4ace1a6",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2365",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission launches second Annual Migration Management Cycle under the Pact on Migration and Asylum",
+  "content": "European Commission Press release Brussels, 06 Nov 2026 Today, the European Commission is launching the second Annual Migration Management Cycle, delivering on a core component of the Pact on Migration and Asylum.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

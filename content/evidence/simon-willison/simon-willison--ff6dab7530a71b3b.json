@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--ff6dab7530a71b3b",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/5/paul-ford/",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T17:34:03Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--ff6dab7530a71b3b.json",
+  "content_hash": "sha256:037f16f88f3978e164dbf8c0abd8619f2f4d6392cec501f725b99113538e568e",
+  "external_id": "https://simonwillison.net/2026/Nov/5/paul-ford/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Quoting Paul Ford",
+  "content": "<blockquote cite=\"https://ftrain.com/aboard-the-web-is-more-than-enough\"><p>The web browser is very, very, very powerful software for applications, <em>and the cost of accessing that power is going down seemingly every day</em>.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://ftrain.com/aboard-the-web-is-more-than-enough\">Paul Ford</a>, The Web Is More Than Enough</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/browsers\">browsers</a>, <a href=\"https://simonwillison.net/tags/paul-ford\">paul-ford</a>, <a href=\"https://simonwillison.net/tags/web-development\">web-development</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

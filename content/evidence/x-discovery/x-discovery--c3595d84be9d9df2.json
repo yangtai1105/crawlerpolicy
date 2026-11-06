@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--c3595d84be9d9df2",
+  "source": "x-discovery",
+  "source_url": "https://x.com/bayaiuai/status/2118399125469143153",
+  "supporting_urls": [
+    "https://www.adweek.com/"
+  ],
+  "published_at": "2026-11-05T17:44:44Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--c3595d84be9d9df2.json",
+  "content_hash": "sha256:5bf7b0404cd54a22a900ac99a729373252bf64eea237d99688cb467d21c0e702",
+  "external_id": "2118399125469143153",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Anthropic signs first paid licensing deal with Associated Press",
+  "content": "X author: @bayaiuai\n\nAnthropic signed its first paid publisher licensing deal with the Associated Press for live attributed election data in Claude, ending its holdout on paid deals after publishers blocked its crawlers.\n\nLinked sources:\n- https://www.adweek.com/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "bayaiuai",
+    "post_url": "https://x.com/bayaiuai/status/2118399125469143153",
+    "linked_urls": [
+      "https://www.adweek.com/"
+    ],
+    "provider_citations": [],
+    "front": "rights-markets",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Anthropic's first paid licensing deal with the Associated Press has not been reported in any previously seen items."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.adweek.com/",
+        "error": "ValueError: no article body in static HTML (336 chars)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "player_slug": "cloudflare",
+  "protocol_slug": "web-bot-auth",
+  "from_status": "none",
+  "to_status": "shipped",
+  "evidence_level": "primary",
+  "since": "2026-11-06",
+  "source_urls": [
+    "https://github.com/cloudflare/web-bot-auth/pull/187"
+  ],
+  "supporting_development_slug": "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+  "feed_slug": "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures",
+  "proposed_by": "2026-11-06T15:41:50.881618+00:00"
+}

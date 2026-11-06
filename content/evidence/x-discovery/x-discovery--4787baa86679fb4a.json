@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--4787baa86679fb4a",
+  "source": "x-discovery",
+  "source_url": "https://x.com/Zunbeamzero/status/2118379728218296596",
+  "supporting_urls": [
+    "https://www.cloudflare.com/"
+  ],
+  "published_at": "2026-11-05T16:27:39Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--4787baa86679fb4a.json",
+  "content_hash": "sha256:bb331681ab3397af589c094e40d3fdbbf04bb8b007b8cc0b8f77b9f481a65434",
+  "external_id": "2118379728218296596",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Cloudflare adds Personal Assistants traffic category with per-agent controls; Descope launches Envoy for Personal Agent Protocol",
+  "content": "X author: @Zunbeamzero\n\nCloudflare shipped a new traffic category for Personal Assistants with per-agent Allow/Block options. Descope launched Envoy supporting Meta/Sierra's draft Personal Agent Protocol for scoped agent identities and permissions, with GoFundMe and GoodRx as partners.\n\nLinked sources:\n- https://www.cloudflare.com/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "Zunbeamzero",
+    "post_url": "https://x.com/Zunbeamzero/status/2118379728218296596",
+    "linked_urls": [
+      "https://www.cloudflare.com/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "While Cloudflare's personal agent controls were previously covered, Descope's launch of Envoy supporting the Meta/Sierra Personal Agent Protocol is a new development."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.cloudflare.com/",
+        "error": "ValueError: no article body in static HTML (205 chars)"
+      }
+    ]
+  }
+}

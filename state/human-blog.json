@@ -1,10 +1,11 @@
 {
-  "last_checked_at": "2026-11-05T16:10:50.204137+00:00",
-  "last_fetch_succeeded_at": "2026-11-05T16:10:50.204137+00:00",
-  "last_evidence_at": "2026-10-31T20:51:06.172555+00:00",
+  "last_checked_at": "2026-11-06T15:41:50.881618+00:00",
+  "last_fetch_succeeded_at": "2026-11-06T15:41:50.881618+00:00",
+  "last_evidence_at": "2026-11-06T15:41:50.881618+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "humansecurity.com/human-sightline-detects-claude-duet"
+    "humansecurity.com/human-sightline-detects-claude-duet",
+    "humansecurity.com/iris-report-ciso-cmo-perspectives-on-agentic-traffic-visibility"
   ],
   "consecutive_failures": 0,
   "first_seen": false

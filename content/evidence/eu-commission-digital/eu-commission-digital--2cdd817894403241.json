@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--2cdd817894403241",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2370",
+  "supporting_urls": [],
+  "published_at": "2026-11-06T13:25:32Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--2cdd817894403241.json",
+  "content_hash": "sha256:a94900c90a89cf206f22e7411ad90b6e66cded2155d3980d3f1e5dea69ba954b",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2370",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by Commissioner Hoekstra at the 22nd Athens Tax Forum",
+  "content": "European Commission Speech Athens, 06 Nov 2026 Ladies and Gentlemen,\nA very good morning to all of you.\nIt's a great pleasure to be back in beautiful Greece and to be here today at the 22nd Athens Tax Forum ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

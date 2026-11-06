@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--2f675ebb40cb7d9e",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/187",
+  "supporting_urls": [],
+  "published_at": "2026-11-06T15:07:02Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--2f675ebb40cb7d9e.json",
+  "content_hash": "sha256:883d5bd89491c50579d068ef0874354eb6a449fde18edf374ef39a8cb4710c8d",
+  "external_id": "pr:187",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #187: feat(rust): Ban shared-HMAC for web bot auth default verification",
+  "content": "Per the protocol, shared HMAC is no longer considered acceptable for Web Bot Auth. Today, shared HMAC is not supported in keyrings, but may still have value for generic HTTP message signatures. Rather than prevent the use of the underlying HTTP message signatures library, we opt to make the Web Bot Auth verifier much stricter and enforce the contracts there.\n\nThis approach allows us to ensure full RFC 9421 coverage while also enforcing new Web Bot Auth requirements. The other approach - removing the algorithm altogether from `Algorithm` enum - would be a much more low-level breaking change.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

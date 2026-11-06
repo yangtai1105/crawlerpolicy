@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--fca2c6b4eef04b57",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2363",
+  "supporting_urls": [],
+  "published_at": "2026-11-06T09:01:25Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--fca2c6b4eef04b57.json",
+  "content_hash": "sha256:09adba8f04ac72afad8a94ae72267d46d164c56dee9b24997725d4245645ae38",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2363",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU releases €16 million in humanitarian aid for Myanmar and Rohingya refugees in Bangladesh",
+  "content": "European Commission Press release Brussels, 06 Nov 2026 The European Union has allocated an additional €16 million in humanitarian aid to help communities impacted by the ongoing conflict in Myanmar, as well as Rohingya refugees and their host communities in Bangladesh. These new funds come as escalating conflict in Myanmar continues to increase the needs of the population and to drive displacement within and beyond its borders.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

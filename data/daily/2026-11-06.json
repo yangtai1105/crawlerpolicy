@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-06",
+  "generated_at": "2026-11-06T15:41:50.881618Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls",
+      "status": "reported",
+      "importance": 0.82,
+      "published_at": "2026-11-05T17:03:04Z"
+    },
+    {
+      "slug": "x-discovery-anthropic-signs-first-paid-publisher-licensing-deal-with-associated-press",
+      "status": "signal",
+      "importance": 0.78,
+      "published_at": "2026-11-05T17:44:44Z"
+    },
+    {
+      "slug": "x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age",
+      "status": "signal",
+      "importance": 0.75,
+      "published_at": "2026-11-05T16:27:39Z"
+    },
+    {
+      "slug": "cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un",
+      "status": "reported",
+      "importance": 0.68,
+      "published_at": "2026-11-06T14:00:00Z"
+    },
+    {
+      "slug": "human-blog-human-iris-report-reveals-severe-visibility-gap-for-ai-agent-traffic-across-ciso",
+      "status": "reported",
+      "importance": 0.68,
+      "published_at": "2026-10-26T00:00:00Z"
+    }
+  ]
+}

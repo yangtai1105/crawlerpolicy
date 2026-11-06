@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-11-05T16:10:50.204137+00:00",
-  "last_fetch_succeeded_at": "2026-11-05T16:10:50.204137+00:00",
-  "last_evidence_at": "2026-11-05T16:10:50.204137+00:00",
+  "last_checked_at": "2026-11-06T15:41:50.881618+00:00",
+  "last_fetch_succeeded_at": "2026-11-06T15:41:50.881618+00:00",
+  "last_evidence_at": "2026-11-06T15:41:50.881618+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/vpt",
-    "https://openai.com/index/evolution-through-large-models",
     "https://openai.com/index/critiques",
     "https://openai.com/index/techniques-for-training-large-neural-networks",
     "https://openai.com/index/best-practices-for-deploying-language-models",
@@ -503,7 +501,9 @@
     "https://openai.com/index/rewarding-defenders-with-bigger-bug-bounties",
     "https://openai.com/index/openai-to-acquire-pierre",
     "https://openai.com/index/daybreak-red-aws-govcloud",
-    "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure"
+    "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
+    "https://openai.com/index/australian-universities-ai-native-graduates",
+    "https://openai.com/index/cultfit-builds-with-codex"
   ],
   "consecutive_failures": 0,
   "first_seen": false

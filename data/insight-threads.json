@@ -138,6 +138,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-identity-standards",
+      "title": "Agent Identity Standards",
+      "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-licensing-paywalls",
       "title": "Agent Licensing Paywalls",
       "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
@@ -414,6 +427,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agentic-traffic-visibility-gap",
+      "title": "Agentic Traffic Visibility Gap",
+      "thesis": "An organizational split exists between security and marketing over agentic web traffic: CMOs view unmeasured AI agents as economic waste causing distorted CAC and broken attribution, while CISOs categorize automated traffic primarily as security threats like scraping and account takeover, leaving both sides without telemetry to discern beneficial autonomous agents from malicious bots.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "human-blog-human-iris-report-reveals-severe-visibility-gap-for-ai-agent-traffic-across-ciso"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-web-governance",
       "title": "Agentic Web Governance",
       "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
@@ -574,6 +600,19 @@
       ]
     },
     {
+      "key": "ai-licensing-deals-for-live-election-data",
+      "title": "AI Licensing Deals For Live Election Data",
+      "thesis": "Publisher-side crawler blocking is demonstrating direct commercial leverage, forcing major model developers to transition from unilateral scraping to commercial licensing partnerships for timely, high-stakes information.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "x-discovery-anthropic-signs-first-paid-publisher-licensing-deal-with-associated-press"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-overview-litigation",
       "title": "AI Overview Litigation",
       "thesis": "Publishers challenging search engines over AI summaries face significant judicial resistance when attempting to claim breach of implied contract or economic entitlement in the absence of a binding, formal commercial agreement.",
@@ -665,6 +704,21 @@
         "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "asymmetric-bot-identity",
+      "title": "Asymmetric Bot Identity",
+      "thesis": "Crawler authentication protocols are hardening against symmetric cryptography, where shared secrets create untenable key-distribution and trust vulnerabilities across decentralized web hosts. By enforcing protocol restrictions in the verification layer rather than the cryptographic primitive library, maintainers retain broader RFC 9421 compliance while enforcing strict public-key guarantees for bot verification.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures"
+      ],
+      "verified_development_slugs": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures"
+      ]
     },
     {
       "key": "automated-scraping-supply-chain-growth",
@@ -867,6 +921,19 @@
       "last_updated_at": "2026-10-16T13:02:04.849772Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "bot-vs-agent-classification-failure",
+      "title": "Bot Vs Agent Classification Failure",
+      "thesis": "An organizational split exists between security and marketing over agentic web traffic: CMOs view unmeasured AI agents as economic waste causing distorted CAC and broken attribution, while CISOs categorize automated traffic primarily as security threats like scraping and account takeover, leaving both sides without telemetry to discern beneficial autonomous agents from malicious bots.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "human-blog-human-iris-report-reveals-severe-visibility-gap-for-ai-agent-traffic-across-ciso"
       ],
       "verified_development_slugs": []
     },
@@ -1132,6 +1199,19 @@
       ]
     },
     {
+      "key": "crawler-blocks-driving-commercial-licensing",
+      "title": "Crawler Blocks Driving Commercial Licensing",
+      "thesis": "Publisher-side crawler blocking is demonstrating direct commercial leverage, forcing major model developers to transition from unilateral scraping to commercial licensing partnerships for timely, high-stakes information.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "x-discovery-anthropic-signs-first-paid-publisher-licensing-deal-with-associated-press"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "crawler-identity-spoofing",
       "title": "Crawler Identity Spoofing",
       "thesis": "Relying on user-agent strings for crawler governance has broken down: 80% of AI agents do not declare a reliable identity, and popular identifiers like Meta-ExternalAgent, GPTBot, and ClaudeBot are heavily spoofed to bypass static filters. At the same time, AI agents are shifting from passive crawling of public pages to deep transactional interactions across authentication and checkout flows, blurring the distinction between automated shopping assistants and credential-stuffing bots.",
@@ -1335,17 +1415,49 @@
     {
       "key": "cryptographic-bot-verification",
       "title": "Cryptographic Bot Verification",
-      "thesis": "Edge networks are transitioning from binary access control (block vs. allow) into programmatic settlement platforms where automated traffic can be identified via cryptographic signatures (Web Bot Auth) and monetized dynamically per request or token (x402 protocol), decoupling crawl authorization from training permissions.",
+      "thesis": "General-purpose RFC 9421 HTTP signature validity is no longer sufficient for crawler authentication; verifiers are tightening application-layer constraints that strictly isolate Web Bot Auth traffic from other signature use cases and prevent attackers from detaching bot identity claims from the underlying signature.",
       "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-09-02T12:35:00.275423Z",
-      "last_updated_at": "2026-09-30T14:39:16.784317Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
       "related_feed_slugs": [
         "ietf-webbotauth-wg-ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft",
-        "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
+        "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro",
+        "web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
       ],
       "verified_development_slugs": [
-        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft"
+        "ietf-web-bot-auth-wg-officially-adopts-http-message-signatures-protocol-draft",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
+      ]
+    },
+    {
+      "key": "cryptographic-crawler-authentication",
+      "title": "Cryptographic Crawler Authentication",
+      "thesis": "Crawler authentication protocols are hardening against symmetric cryptography, where shared secrets create untenable key-distribution and trust vulnerabilities across decentralized web hosts. By enforcing protocol restrictions in the verification layer rather than the cryptographic primitive library, maintainers retain broader RFC 9421 compliance while enforcing strict public-key guarantees for bot verification.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures"
+      ],
+      "verified_development_slugs": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures"
+      ]
+    },
+    {
+      "key": "cryptographic-crawler-identity-verification",
+      "title": "Cryptographic Crawler Identity Verification",
+      "thesis": "Cryptographic crawler authentication protocols are vulnerable to subtle string serialization mismatches in reference libraries, where an incorrect parameter label turns an otherwise valid cryptographic signature into an immediate verification failure.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
       ]
     },
     {
@@ -1403,6 +1515,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "decoupling-of-client-identity-from-access-tokens-to-guarantee-unbiasable-bot-and-agent-access",
+      "title": "Decoupling Of Client Identity From Access Tokens To Guarantee Unbiasable Bot And Agent Access",
+      "thesis": "By decoupling parameter selection from protocol design via multivariate quadratic schemes and VOLE-in-the-Head zero-knowledge proofs, edge platforms can construct issuer-hiding endorsements that verify an agent's legitimacy across an anchor set without exposing who authorized it.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "deep-endpoint-agent-crawling",
       "title": "Deep Endpoint Agent Crawling",
       "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
@@ -1430,6 +1555,32 @@
       "verified_development_slugs": [
         "web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
       ]
+    },
+    {
+      "key": "delegated-agent-governance",
+      "title": "Delegated Agent Governance",
+      "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "delegated-agent-identity-protocols",
+      "title": "Delegated Agent Identity Protocols",
+      "thesis": "Edge networks and identity providers are formalizing a structural division between standard automated crawlers and delegated personal agents by building protocol-level identity and granular traffic-management controls.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "deliberate-data-poisoning-against-competitive-repricing-scrapers",
@@ -1700,6 +1851,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "edge-proxy-normalization-of-rfc-9421-signatures",
+      "title": "Edge Proxy Normalization Of Rfc 9421 Signatures",
+      "thesis": "Edge bot verification implementations often stumble on header-folding and component-identifier edge cases in general-purpose RFC 9421 libraries, necessitating pre-normalization workarounds until upstream cryptographic parsers mature.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+      ]
+    },
+    {
       "key": "edge-search-retrieval",
       "title": "Edge Search Retrieval",
       "thesis": "Edge and infrastructure providers are formalizing retrieval-augmented generation (RAG) and search discovery tools into modular SDK adapters, lowering friction for autonomous agent loops to query proprietary indexed knowledge bases directly without custom REST plumbing.",
@@ -1948,6 +2114,19 @@
       "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "akamai-blog-akamai-splits-ai-bot-directory-into-training-search-and-real-time-agent-categori"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "granular-edge-agent-access-management",
+      "title": "Granular Edge Agent Access Management",
+      "thesis": "Edge networks and identity providers are formalizing a structural division between standard automated crawlers and delegated personal agents by building protocol-level identity and granular traffic-management controls.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
       ],
       "verified_development_slugs": []
     },
@@ -2375,6 +2554,34 @@
       ]
     },
     {
+      "key": "marketing-versus-security-policy-divergence",
+      "title": "Marketing Versus Security Policy Divergence",
+      "thesis": "An organizational split exists between security and marketing over agentic web traffic: CMOs view unmeasured AI agents as economic waste causing distorted CAC and broken attribution, while CISOs categorize automated traffic primarily as security threats like scraping and account takeover, leaving both sides without telemetry to discern beneficial autonomous agents from malicious bots.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "human-blog-human-iris-report-reveals-severe-visibility-gap-for-ai-agent-traffic-across-ciso"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "maturity-gaps-in-ecosystem-http-signature-libraries",
+      "title": "Maturity Gaps In Ecosystem Http Signature Libraries",
+      "thesis": "Edge bot verification implementations often stumble on header-folding and component-identifier edge cases in general-purpose RFC 9421 libraries, necessitating pre-normalization workarounds until upstream cryptographic parsers mature.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+      ]
+    },
+    {
       "key": "mcp-access-control",
       "title": "MCP Access Control",
       "thesis": "By bundling link-depth web crawling with gated Model Context Protocol (`/mcp`) endpoints behind identity tokens, infrastructure providers are standardizing the full pipeline from raw site indexing to secure agent retrieval.",
@@ -2645,6 +2852,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "per-agent-access-control",
+      "title": "Per Agent Access Control",
+      "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "persistent-agent-environments",
       "title": "Persistent Agent Environments",
       "thesis": "AI agent architectures are shifting from ephemeral, stateless request-response loops toward persistent execution environments capable of sustaining long-running state across multi-step enterprise operations.",
@@ -2686,6 +2906,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "personal-assistant-classification",
+      "title": "Personal Assistant Classification",
+      "thesis": "Edge networks and identity providers are formalizing a structural division between standard automated crawlers and delegated personal agents by building protocol-level identity and granular traffic-management controls.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "platform-bundling-crawling-rights",
       "title": "Platform Bundling Crawling Rights",
       "thesis": "Platform operators are attempting to leverage social distribution contracts to bypass standard web crawler opt-outs, effectively conditioning social platform presence on granting broad scraping rights for AI training.",
@@ -2708,6 +2941,19 @@
       "last_updated_at": "2026-09-29T14:38:47.453910Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-unveils-ai-era-security-framework-and-expands-bot-governance-tools"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "post-quantum-cryptographic-preparation-moving-into-application-layer-edge-access-controls",
+      "title": "Post Quantum Cryptographic Preparation Moving Into Application Layer Edge Access Controls",
+      "thesis": "By decoupling parameter selection from protocol design via multivariate quadratic schemes and VOLE-in-the-Head zero-knowledge proofs, edge platforms can construct issuer-hiding endorsements that verify an agent's legitimacy across an anchor set without exposing who authorized it.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
       ],
       "verified_development_slugs": []
     },
@@ -2747,6 +2993,19 @@
       "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "akamai-blog-akamai-splits-ai-bot-directory-into-training-search-and-real-time-agent-categori"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "privacy-preserving-reputation",
+      "title": "Privacy Preserving Reputation",
+      "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
       ],
       "verified_development_slugs": []
     },
@@ -2884,6 +3143,21 @@
       ],
       "verified_development_slugs": [
         "web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules"
+      ]
+    },
+    {
+      "key": "rfc-9421-implementation-hardening",
+      "title": "Rfc 9421 Implementation Hardening",
+      "thesis": "Crawler authentication protocols are hardening against symmetric cryptography, where shared secrets create untenable key-distribution and trust vulnerabilities across decentralized web hosts. By enforcing protocol restrictions in the verification layer rather than the cryptographic primitive library, maintainers retain broader RFC 9421 compliance while enforcing strict public-key guarantees for bot verification.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures"
+      ],
+      "verified_development_slugs": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures"
       ]
     },
     {
@@ -3053,6 +3327,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "shift-toward-cryptographic-proof-of-authorization-over-behavioral-fingerprinting-for-agent-traffic",
+      "title": "Shift Toward Cryptographic Proof Of Authorization Over Behavioral Fingerprinting For Agent Traffic",
+      "thesis": "By decoupling parameter selection from protocol design via multivariate quadratic schemes and VOLE-in-the-Head zero-knowledge proofs, edge platforms can construct issuer-hiding endorsements that verify an agent's legitimacy across an anchor set without exposing who authorized it.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "shift-toward-high-intent-ai-commercial-conversions",
       "title": "Shift Toward High Intent AI Commercial Conversions",
       "thesis": "AI referral traffic is shifting from exploratory query volume to high-intent transactional conversion, demonstrating a measurable commercial premium over conventional web visits.",
@@ -3139,6 +3426,21 @@
       ]
     },
     {
+      "key": "standardization-testing-for-cryptographic-crawler-headers",
+      "title": "Standardization Testing For Cryptographic Crawler Headers",
+      "thesis": "Edge bot verification implementations often stumble on header-folding and component-identifier edge cases in general-purpose RFC 9421 libraries, necessitating pre-normalization workarounds until upstream cryptographic parsers mature.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+      ]
+    },
+    {
       "key": "standardized-agent-task-observation",
       "title": "Standardized Agent Task Observation",
       "thesis": "Rather than creating dedicated streaming wrappers, the specification reuses existing request structures (`SubscribeToTaskRequest` and `SendMessageRequest`) within a single polymorphic stream, achieving transport parity by mapping the same semantics across native duplex connections and split HTTP server streams.",
@@ -3166,6 +3468,36 @@
       ],
       "verified_development_slugs": [
         "web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks"
+      ]
+    },
+    {
+      "key": "strict-identity-binding",
+      "title": "Strict Identity Binding",
+      "thesis": "General-purpose RFC 9421 HTTP signature validity is no longer sufficient for crawler authentication; verifiers are tightening application-layer constraints that strictly isolate Web Bot Auth traffic from other signature use cases and prevent attackers from detaching bot identity claims from the underlying signature.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
+      ],
+      "verified_development_slugs": [
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
+      ]
+    },
+    {
+      "key": "strict-rfc-9421-http-message-signatures-compliance",
+      "title": "Strict Rfc 9421 Http Message Signatures Compliance",
+      "thesis": "Cryptographic crawler authentication protocols are vulnerable to subtle string serialization mismatches in reference libraries, where an incorrect parameter label turns an otherwise valid cryptographic signature into an immediate verification failure.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
       ]
     },
     {

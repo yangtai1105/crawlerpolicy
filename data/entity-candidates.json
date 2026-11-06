@@ -68,6 +68,19 @@
         "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
       ]
     },
+    "player:associated press": {
+      "kind": "player",
+      "observed_name": "Associated Press",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--c3595d84be9d9df2"
+      ],
+      "feed_slugs": [
+        "2026-11-05-x-discovery-anthropic-signs-first-paid-publisher-licensing-deal-with-associated-press"
+      ]
+    },
     "player:axios": {
       "kind": "player",
       "observed_name": "Axios",
@@ -224,6 +237,19 @@
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
+    "player:descope": {
+      "kind": "player",
+      "observed_name": "Descope",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--4787baa86679fb4a"
+      ],
+      "feed_slugs": [
+        "2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
+      ]
+    },
     "player:doordash": {
       "kind": "player",
       "observed_name": "DoorDash",
@@ -287,6 +313,32 @@
       ],
       "feed_slugs": [
         "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
+      ]
+    },
+    "player:gofundme": {
+      "kind": "player",
+      "observed_name": "GoFundMe",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--4787baa86679fb4a"
+      ],
+      "feed_slugs": [
+        "2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
+      ]
+    },
+    "player:goodrx": {
+      "kind": "player",
+      "observed_name": "GoodRx",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--4787baa86679fb4a"
+      ],
+      "feed_slugs": [
+        "2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
       ]
     },
     "player:gptbot": {
@@ -481,6 +533,19 @@
         "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships"
       ]
     },
+    "player:mozilla": {
+      "kind": "player",
+      "observed_name": "Mozilla",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-research--a8857902d6605e13"
+      ],
+      "feed_slugs": [
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ]
+    },
     "player:nieman lab": {
       "kind": "player",
       "observed_name": "Nieman Lab",
@@ -602,6 +667,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "player:sierra": {
+      "kind": "player",
+      "observed_name": "Sierra",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--4787baa86679fb4a"
+      ],
+      "feed_slugs": [
+        "2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
       ]
     },
     "player:skadden, arps, slate, meagher & flom": {
@@ -791,6 +869,19 @@
         "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
       ]
     },
+    "player:web bot auth": {
+      "kind": "player",
+      "observed_name": "Web Bot Auth",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--478630190caac379"
+      ],
+      "feed_slugs": [
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ]
+    },
     "player:x402 foundation": {
       "kind": "player",
       "observed_name": "x402 Foundation",
@@ -867,6 +958,19 @@
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ]
+    },
+    "protocol:ed25519": {
+      "kind": "protocol",
+      "observed_name": "Ed25519",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--478630190caac379"
+      ],
+      "feed_slugs": [
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
       ]
     },
     "protocol:eip-3009": {
@@ -959,21 +1063,23 @@
       "kind": "protocol",
       "observed_name": "HTTP Message Signatures",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-11-03T15:51:57.033950Z",
-      "occurrences": 5,
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 6,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
         "ietf-webbotauth-wg--590751b5f4db81f6",
         "ietf-webbotauth-wg--585a35def49ea164",
         "ietf-webbotauth-wg--79c2f8436380dea1",
-        "ietf-webbotauth-wg--73b525a0d33d1f6c"
+        "ietf-webbotauth-wg--73b525a0d33d1f6c",
+        "web-bot-auth-repo--e806f56c6990d66a"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
         "2026-10-23-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-new-sail-internet-draft-for-source-address-identit",
         "2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft",
         "2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
-        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
+        "2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
       ]
     },
     "protocol:jafar": {
@@ -1015,6 +1121,86 @@
         "2026-10-20-x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments"
       ]
     },
+    "protocol:mayo": {
+      "kind": "protocol",
+      "observed_name": "MAYO",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-research--a8857902d6605e13"
+      ],
+      "feed_slugs": [
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ]
+    },
+    "protocol:mole": {
+      "kind": "protocol",
+      "observed_name": "MOLE",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 2,
+      "evidence_ids": [
+        "cloudflare-blog--e90a223bc8cbeec1",
+        "cloudflare-research--a8857902d6605e13"
+      ],
+      "feed_slugs": [
+        "2026-11-05-cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls",
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ]
+    },
+    "protocol:oauth": {
+      "kind": "protocol",
+      "observed_name": "OAuth",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-blog--e90a223bc8cbeec1"
+      ],
+      "feed_slugs": [
+        "2026-11-05-cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
+      ]
+    },
+    "protocol:personal agent protocol": {
+      "kind": "protocol",
+      "observed_name": "Personal Agent Protocol",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--4787baa86679fb4a"
+      ],
+      "feed_slugs": [
+        "2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
+      ]
+    },
+    "protocol:poppy": {
+      "kind": "protocol",
+      "observed_name": "Poppy",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-blog--e90a223bc8cbeec1"
+      ],
+      "feed_slugs": [
+        "2026-11-05-cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
+      ]
+    },
+    "protocol:privacy pass": {
+      "kind": "protocol",
+      "observed_name": "Privacy Pass",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-research--a8857902d6605e13"
+      ],
+      "feed_slugs": [
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ]
+    },
     "protocol:rest": {
       "kind": "protocol",
       "observed_name": "REST",
@@ -1030,21 +1216,40 @@
         "2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
       ]
     },
+    "protocol:rfc 9110": {
+      "kind": "protocol",
+      "observed_name": "RFC 9110",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--202719f2d0bba953"
+      ],
+      "feed_slugs": [
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+      ]
+    },
     "protocol:rfc 9421": {
       "kind": "protocol",
       "observed_name": "RFC 9421",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-10-28T14:52:45.308044Z",
-      "occurrences": 3,
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 6,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
         "web-bot-auth-repo--f2800be0b3b43903",
-        "web-bot-auth-repo--cb346e9d26f1be1d"
+        "web-bot-auth-repo--cb346e9d26f1be1d",
+        "web-bot-auth-repo--2f675ebb40cb7d9e",
+        "web-bot-auth-repo--202719f2d0bba953",
+        "web-bot-auth-repo--478630190caac379"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-key-algorithm-matching-rules",
-        "2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+        "2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421",
+        "2026-11-06-web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
       ]
     },
     "protocol:rfc 9651": {
@@ -1073,6 +1278,32 @@
         "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ]
     },
+    "protocol:rsassa-pkcs1-v1_5": {
+      "kind": "protocol",
+      "observed_name": "RSASSA-PKCS1-v1_5",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--478630190caac379"
+      ],
+      "feed_slugs": [
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ]
+    },
+    "protocol:rsassa-pss": {
+      "kind": "protocol",
+      "observed_name": "RSASSA-PSS",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--478630190caac379"
+      ],
+      "feed_slugs": [
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ]
+    },
     "protocol:sail": {
       "kind": "protocol",
       "observed_name": "SAIL",
@@ -1090,13 +1321,15 @@
       "kind": "protocol",
       "observed_name": "TLS",
       "first_seen_at": "2026-10-15T13:05:42.271060Z",
-      "last_seen_at": "2026-10-15T13:05:42.271060Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "cloudflare-blog--5a2555e77804fad4"
+        "cloudflare-blog--5a2555e77804fad4",
+        "cloudflare-research--a8857902d6605e13"
       ],
       "feed_slugs": [
-        "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
+        "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut",
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
       ]
     },
     "protocol:trusted agent protocol": {
@@ -1112,6 +1345,19 @@
         "2026-10-26-akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
       ]
     },
+    "protocol:turboshake": {
+      "kind": "protocol",
+      "observed_name": "TurboSHAKE",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-research--a8857902d6605e13"
+      ],
+      "feed_slugs": [
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ]
+    },
     "protocol:ucp": {
       "kind": "protocol",
       "observed_name": "UCP",
@@ -1123,6 +1369,19 @@
       ],
       "feed_slugs": [
         "2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ]
+    },
+    "protocol:uov": {
+      "kind": "protocol",
+      "observed_name": "UOV",
+      "first_seen_at": "2026-11-06T15:41:50.881618Z",
+      "last_seen_at": "2026-11-06T15:41:50.881618Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-research--a8857902d6605e13"
+      ],
+      "feed_slugs": [
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
       ]
     }
   }

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--73d477ff9180e620",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/australian-universities-ai-native-graduates",
+  "supporting_urls": [],
+  "published_at": "2026-11-05T17:00:00Z",
+  "detected_at": "2026-11-06T15:41:50.881618Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--73d477ff9180e620.json",
+  "content_hash": "sha256:95e94d6b252d142b0a5165dd3f327fe52c2d920c0c725c016bbad224ef375ed5",
+  "external_id": "https://openai.com/index/australian-universities-ai-native-graduates",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Australian universities are creating AI-native graduates",
+  "content": "Australian universities are expanding access to ChatGPT and bringing AI into teaching and learning to prepare students for an AI-enabled workforce.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
