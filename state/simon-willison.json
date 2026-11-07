@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-06T15:41:50.881618+00:00",
-  "last_fetch_succeeded_at": "2026-11-06T15:41:50.881618+00:00",
-  "last_evidence_at": "2026-11-06T15:41:50.881618+00:00",
+  "last_checked_at": "2026-11-07T14:42:22.545161+00:00",
+  "last_fetch_succeeded_at": "2026-11-07T14:42:22.545161+00:00",
+  "last_evidence_at": "2026-11-07T14:42:22.545161+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -43,7 +43,8 @@
     "https://simonwillison.net/2026/Nov/3/october-newsletter/",
     "https://simonwillison.net/2026/Nov/2/llm/",
     "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
-    "https://simonwillison.net/2026/Nov/5/paul-ford/"
+    "https://simonwillison.net/2026/Nov/5/paul-ford/",
+    "https://simonwillison.net/2026/Nov/6/nilay-patel/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

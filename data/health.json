@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-06T15:41:50.881618Z",
-  "last_fully_successful_at": "2026-11-06T15:41:50.881618Z",
+  "last_attempted_at": "2026-11-07T14:42:22.545161Z",
+  "last_fully_successful_at": "2026-11-07T14:42:22.545161Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -150,14 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--2a6c2916f0077a0d",
-        "cloudflare-blog--e90a223bc8cbeec1"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-05-cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls.md"
-      ]
+      "feed_items_written": []
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -205,13 +200,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "human-blog--6c6ec80fce8c9d51"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-10-26-human-blog-human-iris-report-reveals-severe-visibility-gap-for-ai-agent-traffic-across-ciso.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -219,9 +210,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--157a7e9d037f63c5"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -251,18 +240,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--2cdd817894403241",
-        "eu-commission-digital--86574511b4d4569e",
-        "eu-commission-digital--21c8be44603fbc68",
-        "eu-commission-digital--399b29762873c07a",
-        "eu-commission-digital--6c9162464d562c10",
-        "eu-commission-digital--e7e4db9986dd45cb",
-        "eu-commission-digital--a77d15c9981ff457",
-        "eu-commission-digital--fca2c6b4eef04b57",
-        "eu-commission-digital--3a54e893283cdd2e",
-        "eu-commission-digital--309efccb906228f1"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -302,24 +280,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--2f675ebb40cb7d9e",
-        "web-bot-auth-repo--202719f2d0bba953",
-        "web-bot-auth-repo--478630190caac379",
-        "web-bot-auth-repo--e806f56c6990d66a"
-      ],
-      "events_written": [
-        "content/events/2026-11-06-web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures.md",
-        "content/events/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and.md",
-        "content/events/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter.md",
-        "content/events/2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-06-web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures.md",
-        "content/feed/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and.md",
-        "content/feed/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter.md",
-        "content/feed/2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -347,7 +310,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ucp-spec--20712527439b1457"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -448,7 +413,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--89f947a35f57d3a0"
+        "stratechery--7a16e22b0af1ff09"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -460,7 +425,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--ff6dab7530a71b3b"
+        "simon-willison--8bffc673b30c4fed"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -471,13 +436,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-research--a8857902d6605e13"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un.md"
-      ]
+      "feed_items_written": []
     },
     "openai-blog": {
       "fetch": "ok",
@@ -485,10 +446,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--73d477ff9180e620",
-        "openai-blog--36d84d52479ae728"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -528,9 +486,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--7c5180a5dec98ea0"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -600,34 +556,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "x-discovery--4787baa86679fb4a",
-        "x-discovery--c3595d84be9d9df2"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age.md",
-        "content/feed/2026-11-05-x-discovery-anthropic-signs-first-paid-publisher-licensing-deal-with-associated-press.md"
-      ]
+      "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-11-06-web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures.md",
-    "content/events/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and.md",
-    "content/events/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter.md",
-    "content/events/2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-.md"
-  ],
-  "feed_items_written": [
-    "content/feed/2026-11-05-cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls.md",
-    "content/feed/2026-10-26-human-blog-human-iris-report-reveals-severe-visibility-gap-for-ai-agent-traffic-across-ciso.md",
-    "content/feed/2026-11-06-web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures.md",
-    "content/feed/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and.md",
-    "content/feed/2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter.md",
-    "content/feed/2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-.md",
-    "content/feed/2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un.md",
-    "content/feed/2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age.md",
-    "content/feed/2026-11-05-x-discovery-anthropic-signs-first-paid-publisher-licensing-deal-with-associated-press.md"
-  ],
+  "events_written": [],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -635,10 +570,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-11-06",
-    "item_count": 5,
-    "path": "data/daily/2026-11-06.json"
+    "status": "quiet",
+    "edition_date": "2026-11-07",
+    "item_count": 0,
+    "path": "data/daily/2026-11-07.json"
   },
   "insight_threads": {
     "thread_count": 274,
@@ -646,14 +581,14 @@
   },
   "map_proposals": {
     "status": "ok",
-    "proposed": 1,
+    "proposed": 0,
     "error": ""
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 2,
-    "x_search_calls": 1,
-    "estimated_tool_cost_usd": 0.03439,
+    "candidate_count": 0,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.098326,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
