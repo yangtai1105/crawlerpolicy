@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "positions": [
+    {
+      "player_slug": "anthropic",
+      "protocol_slug": "aipref-vocab",
+      "status": "shipped",
+      "since": "2026-11-05",
+      "previous_status": "none",
+      "last_changed_at": "2026-11-07T14:50:42.892831Z",
+      "evidence_level": "primary",
+      "source_urls": [
+        "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+      ],
+      "supporting_development_slugs": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+      ],
+      "proposed_by": "2026-11-05T16:10:50.204137+00:00",
+      "merged_at": null,
+      "note": ""
+    },
+    {
+      "player_slug": "anthropic",
+      "protocol_slug": "robots-txt",
+      "status": "shipped",
+      "since": "2026-11-05",
+      "previous_status": "none",
+      "last_changed_at": "2026-11-07T14:50:42.892831Z",
+      "evidence_level": "primary",
+      "source_urls": [
+        "https://support.anthropic.com/en/articles/8896518-does-anthropic-crawl-data-from-the-web-and-how-can-site-owners-block-the-crawler"
+      ],
+      "supporting_development_slugs": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+      ],
+      "proposed_by": "2026-11-05T16:10:50.204137+00:00",
+      "merged_at": null,
+      "note": ""
+    },
+    {
+      "player_slug": "cloudflare",
+      "protocol_slug": "web-bot-auth",
+      "status": "shipped",
+      "since": "2026-11-06",
+      "previous_status": "none",
+      "last_changed_at": "2026-11-07T14:50:42.892831Z",
+      "evidence_level": "primary",
+      "source_urls": [
+        "https://github.com/cloudflare/web-bot-auth/pull/187"
+      ],
+      "supporting_development_slugs": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures"
+      ],
+      "proposed_by": "2026-11-06T15:41:50.881618+00:00",
+      "merged_at": null,
+      "note": ""
+    }
+  ]
+}
