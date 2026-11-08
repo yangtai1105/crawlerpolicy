@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-07T14:42:22.545161Z",
-  "last_fully_successful_at": "2026-11-07T14:42:22.545161Z",
+  "last_attempted_at": "2026-11-08T14:47:39.869297Z",
+  "last_fully_successful_at": "2026-11-08T14:47:39.869297Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -310,9 +310,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ucp-spec--20712527439b1457"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -412,9 +410,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "stratechery--7a16e22b0af1ff09"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -425,7 +421,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--8bffc673b30c4fed"
+        "simon-willison--98f92de2b1aa592e"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -571,9 +567,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-11-07",
+    "edition_date": "2026-11-08",
     "item_count": 0,
-    "path": "data/daily/2026-11-07.json"
+    "path": "data/daily/2026-11-08.json"
   },
   "insight_threads": {
     "thread_count": 274,
@@ -588,7 +584,7 @@
     "status": "live",
     "candidate_count": 0,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.098326,
+    "estimated_tool_cost_usd": 0.092997,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
