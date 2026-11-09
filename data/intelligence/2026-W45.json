@@ -1,0 +1,310 @@
+{
+  "schema_version": 1,
+  "week": "2026-W45",
+  "generated_at": "2026-11-09T22:52:15.781240Z",
+  "window_start": "2026-11-02",
+  "window_end": "2026-11-08",
+  "health_status": "healthy",
+  "coverage": {
+    "configured": 52,
+    "completed": 52,
+    "fetched": 52,
+    "analyzed": 52,
+    "published": 52,
+    "failed": 0,
+    "required_failed": 0
+  },
+  "thesis": "The web ecosystem is hardening cryptographic bot verification through strict IETF specification alignment while simultaneously deploying granular protocols for AI training preferences, agent metadata, and commercial agent interactions.",
+  "executive_shifts": [
+    {
+      "headline": "Web Bot Auth Enforces Strict Cryptographic Verification and Patches Interoperability Bugs",
+      "summary": "The Web Bot Auth reference implementation and Cloudflare's Caddy plugin moved toward strict fail-closed enforcement under draft-ietf-webbotauth-httpsig-protocol-00. Verifiers now reject shared HMAC signatures, require explicit web-bot-auth tags and parameter coverage, combine split signature headers, and correctly serialize RSASSA-PKCS1-v1_5 algorithm identifiers as rsa-v1_5-sha256 to prevent false-positive 401 rejections.",
+      "evidence_event_ids": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
+      ]
+    },
+    {
+      "headline": "Anthropic Adopts IETF Training Opt-Out Signals and Registers Cloud Browser Agent",
+      "summary": "Anthropic began recognizing the IETF aipref machine-readable signal globally to let website owners opt out of AI model training, noting that specific ClaudeBot directives in robots.txt supersede general preference signals. Additionally, the Known Agents directory cataloged Claude-Agent, Anthropic's cloud browser agent for Claude Duet designed to execute multi-step tasks for users.",
+      "evidence_event_ids": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ]
+    },
+    {
+      "headline": "Emerging Standards Expand Agent Metadata Declarations and Read-Only Commerce Queries",
+      "summary": "A new Internet-Draft (draft-vilgalys-webbotauth-signed-agent-metadata-00) submitted to the IETF Web Bot Auth Working Group proposes a dedicated Signed-Agent-Metadata HTTP header for verifiable agent claims. Separately, the Universal Commerce Protocol backported the dev.ucp.common.ask capability to its 2026-08-25 release branch, allowing platforms to submit read-only natural-language buyer questions via REST and Model Context Protocol interfaces.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
+        "universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "access-controls",
+      "material_change": true,
+      "event_ids": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ],
+      "summary": "6 verified material developments."
+    },
+    {
+      "track": "platform-ecosystem",
+      "material_change": true,
+      "event_ids": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+        "universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc",
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot",
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ],
+      "summary": "5 verified material developments."
+    },
+    {
+      "track": "identity-authorization",
+      "material_change": true,
+      "event_ids": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+        "universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc",
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ],
+      "summary": "7 verified material developments."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": true,
+      "event_ids": [
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ],
+      "summary": "1 verified material development."
+    }
+  ],
+  "intelligence_read": "Recent updates demonstrate a transition from loose bot identification to strict, fail-closed cryptographic enforcement. Cloudflare and the Web Bot Auth project patched critical serialization and multi-header parsing bugs while enforcing draft-00 parameter requirements and rejecting shared HMAC signatures to ensure public verifiability. Concurrently, the IETF Web Bot Auth Working Group received a new draft for signed agent metadata headers. Beyond cryptographic verification, the ecosystem is formalizing how agents declare intent and interact with content: Anthropic adopted the IETF aipref standard for AI training opt-outs and registered its Claude-Agent browser automation bot, while the Universal Commerce Protocol backported a read-only question-and-answer capability for buyer platforms.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "Anthropic",
+      "direction": "Anthropic becomes one of the earliest frontier AI labs to officially support the IETF aipref standard for AI training opt-outs, validating standard-setting efforts to separate general data-use permissions from transport-level crawling blocks.",
+      "evidence_event_ids": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ]
+    },
+    {
+      "actor": "IETF",
+      "direction": "Anthropic becomes one of the earliest frontier AI labs to officially support the IETF aipref standard for AI training opt-outs, validating standard-setting efforts to separate general data-use permissions from transport-level crawling blocks.",
+      "evidence_event_ids": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
+      ]
+    },
+    {
+      "actor": "Universal Commerce Protocol",
+      "direction": "Autonomous and delegated commercial agents require standardized ways to query product and merchant knowledge bases without executing state-changing shopping cart actions.",
+      "evidence_event_ids": [
+        "universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ]
+    },
+    {
+      "actor": "Cloudflare",
+      "direction": "Cryptographic crawler verification relies on public verifiability without distributing private signing secrets to edge verifiers. Deprecating shared HMAC prevents insecure authentication setups from undermining the emerging cryptographic bot identification ecosystem.",
+      "evidence_event_ids": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ]
+    },
+    {
+      "actor": "Known Agents",
+      "direction": "As autonomous browsing agents move into commercial workflows like Claude Duet, operators require distinct user-agent signatures to manage, rate-limit, or block automated task execution without necessarily breaking user-prompt search lookups.",
+      "evidence_event_ids": [
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ]
+    },
+    {
+      "actor": "Web Bot Auth",
+      "direction": "As automated crawlers and platform agents shift toward cryptographic header signatures instead of IP whitelisting or static user-agent tokens, exact cross-implementation parity on RFC 9421 algorithm identifiers is required to avoid widespread false-positive bot blocks.",
+      "evidence_event_ids": [
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ]
+    },
+    {
+      "actor": "IETF Web Bot Auth Working Group",
+      "direction": "Moving beyond binary bot blocking requires automated clients to present verifiable claims about their identity and intent; standardizing a signed agent metadata header offers an interoperable mechanism to deliver trusted agent declarations directly to web servers.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ]
+    },
+    {
+      "actor": "Internet Engineering Task Force",
+      "direction": "Moving beyond binary bot blocking requires automated clients to present verifiable claims about their identity and intent; standardizing a signed agent metadata header offers an interoperable mechanism to deliver trusted agent declarations directly to web servers.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make Policy & Regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Litigation & Legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Search & AI Discovery materially change?",
+      "tracks": [
+        "search-discovery"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Licensing & Monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Asset Rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "claudebot",
+      "tier": "primary",
+      "event_ids": [
+        "anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+      ],
+      "latest_event_date": "2026-11-05T16:10:50.204137Z"
+    },
+    {
+      "source": "ucp-spec",
+      "tier": "primary",
+      "event_ids": [
+        "universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+      ],
+      "latest_event_date": "2026-11-02T15:56:13Z"
+    },
+    {
+      "source": "web-bot-auth-repo",
+      "tier": "primary",
+      "event_ids": [
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+        "cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ],
+      "latest_event_date": "2026-11-06T15:07:02Z"
+    },
+    {
+      "source": "knownagents-directory",
+      "tier": "measurement",
+      "event_ids": [
+        "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+      ],
+      "latest_event_date": "2026-11-05T16:10:50.204137Z"
+    },
+    {
+      "source": "ietf-webbotauth-wg",
+      "tier": "primary",
+      "event_ids": [
+        "ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+      ],
+      "latest_event_date": "2026-11-03T15:51:57.033950Z"
+    }
+  ],
+  "reported_developments": [
+    {
+      "slug": "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls",
+      "title": "Cloudflare Launches Trusted Agent Delegation Coalition and Agent Access Controls",
+      "source": "cloudflare-blog",
+      "source_tier": "specialist",
+      "primary_track": "identity-authorization",
+      "event_date": "2026-11-05T17:03:04Z",
+      "importance": 0.82,
+      "summary": "Cloudflare introduced the Trusted Agent Delegation (TAD) coalition to advance open standards for identifying and governing personal AI agents across the web. The company argued that remotely hosted agents act as intermediaries that strip identity, reputation, and accountability, shifting abuse costs to site operators. In parallel, Cloudflare released production features including a Personal Assistants traffic classification, granular per-agent access rules, and early-access account abuse protections that isolate misbehaving users behind shared agents via hashed user identifiers."
+    },
+    {
+      "slug": "cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a",
+      "title": "Cloudflare Adds Visibility Analytics and Granular Policy Controls for Personal AI Agents",
+      "source": "cloudflare-blog",
+      "source_tier": "specialist",
+      "primary_track": "access-controls",
+      "event_date": "2026-11-04T14:00:00Z",
+      "importance": 0.82,
+      "summary": "Cloudflare has introduced dedicated analytics and granular access rules for personal agents acting on behalf of human users. In Security Analytics, personal assistants appear as a distinct classification category alongside existing automated and human traffic types. Site owners can inspect per-agent request behavior, link activity to user accounts via Account Abuse Protection, and enforce individual policies including Allow, Block, or Block on pages with ads."
+    },
+    {
+      "slug": "cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un",
+      "title": "Cloudflare Designs Post-Quantum Anonymous Credentials for Agent Rate Limiting Under MOLE",
+      "source": "cloudflare-research",
+      "source_tier": "specialist",
+      "primary_track": "identity-authorization",
+      "event_date": "2026-11-06T14:00:00Z",
+      "importance": 0.68,
+      "summary": "Cloudflare Research published design architectures and benchmarks for post-quantum anonymous credentials under MOLE (Moderation Of unLinkable Endorsements), the successor framework to Privacy Pass. The project aims to develop tools to moderate agentic traffic without compromising user privacy or allowing edge operators to discriminate by client issuer. Cloudflare demonstrated that combining VOLE-in-the-Head zero-knowledge proofs with multivariate signatures like UOV enables viable post-quantum token sizes and millisecond execution times."
+    }
+  ],
+  "model_generated": true
+}
