@@ -1,0 +1,16 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "web-bot-auth",
+  "stance": "Web Bot Auth remains in an author-driven tightening phase where its reference implementation is aggressively hardening cryptographic constraints to match draft-00.",
+  "adoption_shape": "Momentum is strictly concentrated in Cloudflare maintaining its Go Caddy reference plugin, showing that validation logic is being refined internally before seeing visible adoption from third-party server vendors.",
+  "new_entrants": "No new external vendors have arrived; rather, Cloudflare's reference maintainers have asserted stricter control by enforcing draft-00 tagging, mandatory signature parameters, cryptographic coverage of Signature-Agent headers, and an outright rejection of HMAC signatures.",
+  "watch_for": "An upstream fix in the Go HTTP message signature library for the documented parsing bug where dictionary members of the Signature-Agent header fail verification.",
+  "built_from": [
+    "web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+    "web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+    "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures"
+  ],
+  "development_count": 3,
+  "generated_at": "2026-11-09T23:18:41.915981Z",
+  "merged_at": null
+}

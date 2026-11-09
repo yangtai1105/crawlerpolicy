@@ -1,0 +1,21 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "agents-identity",
+  "stance": "Agent identity is hardening into formal cryptographic verification at the web-server layer, even as autonomous actors still register themselves through conventional directories and preference signals.",
+  "adoption_shape": "Cloudflare has moved rapidly to enforce IETF Web Bot Auth draft-00 requirements by mandating tag parameters, banning HMAC signatures, and resolving algorithm serialization bugs, whereas major agent operator Anthropic has adopted standard IETF aipref opt-out signals and directory listings while keeping ClaudeBot robots.txt directives authoritative.",
+  "new_entrants": "Anthropic introduced its Claude-Agent browser automation bot into the Known Agents directory to operate on behalf of users, while a new IETF submission by Vilgalys seeks to establish a dedicated Signed-Agent-Metadata HTTP header field within the Web Bot Auth Working Group.",
+  "watch_for": "The adoption of cryptographic Web Bot Auth headers by interactive bots like Anthropic's Claude-Agent, or the resolution of upstream parsing bugs that prevent proper verification of Signature-Agent header dictionary members.",
+  "built_from": [
+    "ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
+    "claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+    "knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot",
+    "web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+    "web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
+    "web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+    "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures"
+  ],
+  "development_count": 8,
+  "generated_at": "2026-11-09T23:18:41.915981Z",
+  "merged_at": null
+}

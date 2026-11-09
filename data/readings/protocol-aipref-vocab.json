@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "aipref-vocab",
+  "stance": "The IETF aipref vocabulary has transitioned from proposal to live global enforcement, yet it remains subordinate to vendor-specific crawler directives.",
+  "adoption_shape": "Anthropic is the lone reported mover adopting the draft specification across its global services, demonstrating an initial step toward formal standardization that nonetheless privileges proprietary ClaudeBot robots.txt instructions over the shared signal.",
+  "new_entrants": "Anthropic arrived as the initial adopting platform, using the standard to let website owners opt out of AI model training while retaining override control through ClaudeBot rules.",
+  "watch_for": "Whether other AI model developers move to recognize the IETF aipref training opt-out signal or leave Anthropic as its sole implementer.",
+  "built_from": [
+    "claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-09T23:18:41.915981Z",
+  "merged_at": null
+}

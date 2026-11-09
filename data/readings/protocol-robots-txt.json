@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "robots-txt",
+  "stance": "robots.txt maintains its position as the ultimate governing authority for crawler behavior even as standardized AI training opt-out mechanisms begin to emerge.",
+  "adoption_shape": "Anthropic has stepped forward to implement the IETF aipref draft standard globally while explicitly preserving robots.txt precedence, establishing an early divide between this protocol adoption and other AI developers who have not yet recognized the signal.",
+  "new_entrants": "Anthropic is the notable new participant, seeking to give publishers standardized machine-readable training opt-outs while retaining granular control via specific ClaudeBot directives.",
+  "watch_for": "Whether other AI service providers follow Anthropic in adopting the IETF aipref signal and subordinating it to explicit robots.txt directives in the coming months.",
+  "built_from": [
+    "claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-09T23:18:41.915981Z",
+  "merged_at": null
+}

@@ -1,0 +1,19 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "access-discovery",
+  "stance": "Access and identity discovery is shifting from passive conventions into strict cryptographic verification, even as major operators retain unilateral control by prioritizing bespoke bot directives over standardized opt-out signals.",
+  "adoption_shape": "Infrastructure tooling led by Cloudflare is aggressively implementing and hardening IETF Web Bot Auth specifications—banning HMAC and requiring draft-00 parameters—while AI operators like Anthropic adopt opt-out frameworks like IETF aipref only on the condition that their specific robots.txt directives take precedence.",
+  "new_entrants": "Anthropic entered the browser execution layer with Claude-Agent for Claude Duet, establishing automated multi-step task execution across sites, while new IETF contributors are seeking to standardize bot identity through the proposed Signed-Agent-Metadata HTTP header.",
+  "watch_for": "Whether upstream Go HTTP message signature libraries resolve the dictionary member parsing bug that currently impedes native Signature-Agent validation under draft-ietf-webbotauth-httpsig-protocol-00.",
+  "built_from": [
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
+    "claudebot-anthropic-adopts-ietf-aipref-machine-readable-signal-to-opt-out-of-ai-model-trai",
+    "knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot",
+    "web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+    "web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+    "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures"
+  ],
+  "development_count": 6,
+  "generated_at": "2026-11-09T23:18:41.915981Z",
+  "merged_at": null
+}

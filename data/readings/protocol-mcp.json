@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "mcp",
+  "stance": "MCP is becoming an institutionalized bridge for conversational agent access by gaining backward-compatible parity with traditional REST APIs in established commerce specifications.",
+  "adoption_shape": "The Universal Commerce Protocol Technical Council moved to embed MCP support directly into an existing release branch, demonstrating that commerce standards bodies now treat agent protocol connectivity as an essential, non-disruptive layer alongside standard REST endpoints.",
+  "new_entrants": "The Universal Commerce Protocol entered the ecosystem to control platform-driven buyer inquiry channels via the new dev.ucp.common.ask interface.",
+  "watch_for": "Whether participating platforms deploy buyer interactions across the newly exposed MCP interface or remain confined to conventional REST endpoints.",
+  "built_from": [
+    "ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-09T23:18:41.915981Z",
+  "merged_at": null
+}

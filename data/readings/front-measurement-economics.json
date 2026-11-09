@@ -1,0 +1,14 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "measurement-economics",
+  "stance": "Measurement repositories are now forced to expand their registries beyond standard crawlers to account for task-executing browser automation bots.",
+  "adoption_shape": "The growth of the Known Agents directory across 41 pages shows catalogers actively incorporating autonomous user agents, recognizing that interactive browsing bots represent a distinct operational profile from conventional data collection bots.",
+  "new_entrants": "Anthropic arrived with Claude-Agent, seeking to operate a cloud browser agent for Claude Duet that performs multi-step tasks on behalf of users.",
+  "watch_for": "Whether tracking frameworks record further additions of cloud browser agents that expand the directory beyond its current 41 pages.",
+  "built_from": [
+    "knownagents-directory-known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-09T23:18:41.915981Z",
+  "merged_at": null
+}
