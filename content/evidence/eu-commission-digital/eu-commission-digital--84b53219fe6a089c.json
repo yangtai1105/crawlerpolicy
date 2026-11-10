@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--84b53219fe6a089c",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2387",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T09:07:29Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--84b53219fe6a089c.json",
+  "content_hash": "sha256:3e84d81002bda6a94b98ff4bc34520fb3cd55c63a1a5e24d5c797898fdf1b871",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2387",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission greenlights Estonia's final payment request for €190.6 million under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 10 Nov 2026 Today, the European Commission greenlighted Estonia's fifth and final payment request for €190.6 million under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

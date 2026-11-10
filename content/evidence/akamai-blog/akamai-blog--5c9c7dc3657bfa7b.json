@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--5c9c7dc3657bfa7b",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2026/nov/akamai-functions-business-case-edge-native-serverless",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T15:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--5c9c7dc3657bfa7b.json",
+  "content_hash": "sha256:1f2d37632f94e292cf4a1537951a17d8cc5d4bd9ae4891156c164e10263a8c36",
+  "external_id": "https://www.akamai.com/blog/edge/2026/nov/akamai-functions-business-case-edge-native-serverless",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Akamai Functions: The Business Case for Edge Native Serverless",
+  "content": "Discover how Akamai Functions cuts latency and cloud costs by running fast WebAssembly code at the edge with zero cold starts and no idle capacity fees.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

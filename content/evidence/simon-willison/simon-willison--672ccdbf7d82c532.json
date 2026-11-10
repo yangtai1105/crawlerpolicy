@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--672ccdbf7d82c532",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T23:57:21Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--672ccdbf7d82c532.json",
+  "content_hash": "sha256:73af69b1aa8ebe11032d63f9eb9a1085546d4b25b5454e70de856d01c7cec0f2",
+  "external_id": "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Locating the source of a mysterious beep with Claude",
+  "content": "<p>Our house has a box room, full of boxes that we still haven't unpacked from our last move. A couple of weeks ago something in that room started <em>intermittently beeping</em>. The beeps were far enough apart that standing in the room and trying to determine the source of the noise was frustrating, and I really didn't want to dig through every one of those boxes. So I had Claude Code build <a href=\"https://github.com/simonw/beep-locator\">Beep Locator</a>, a software system for triangulating the source of a mysterious beep using multiple devices scattered around the room.</p>\n<p>Here's what Beep Locator looks like after it has been running for a while:</p>\n<p><img alt=\"Screenshot of a web app that uses several phones, tablets and laptops as microphones to locate a mystery beeping sound in a room. The left column has an &quot;Add a listener&quot; panel with a QR code and join link, a &quot;Controls&quot; panel with buttons including &quot;Calibrate&quot;, &quot;Test beep&quot; and &quot;It just beeped!&quot; plus a &quot;Listen for beeps&quot; checkbox, and a &quot;Mystery beep&quot; note reading &quot;3345 Hz · 3 confirmed · remembered across sessions&quot;. Below that, a &quot;Devices&quot; list shows five color-coded listeners (Simon iPhone, New iPad, Old iPad, MacBook Pro, Surface Ultra), each marked &quot;✓ mic working · ✓ speaker working&quot;. The main area is a gridded map with a 1 m scale bar that shows the five devices as colored dots and earlier sounds as small ti",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

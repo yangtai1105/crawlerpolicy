@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--6fd3b4c76c2b99c8",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/cma-cases/trainline-consumer-protection-enforcement-case",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T12:33:41Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--6fd3b4c76c2b99c8.json",
+  "content_hash": "sha256:134d47e5514bcf7f727958ab03fc6ef4e8ba150020ad6ea2c682cd402cf845ca",
+  "external_id": "https://www.gov.uk/cma-cases/trainline-consumer-protection-enforcement-case#2026-11-09T12:33:41Z",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Trainline: consumer protection enforcement case",
+  "content": "The Competition and Markets Authority (CMA) is investigating suspected infringements of consumer law in relation to the presentation of mandatory fees for train and coach tickets by Trainline in the UK.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

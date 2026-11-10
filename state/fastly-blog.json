@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_fetch_succeeded_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_evidence_at": "2026-11-02T17:52:31.512194+00:00",
+  "last_checked_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_fetch_succeeded_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_evidence_at": "2026-11-10T16:07:51.172582+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://www.fastly.com/blog/fastlys-proactive-protection-critical-php-rce-cve-2026-109618/",
@@ -29,7 +29,9 @@
     "https://www.fastly.com/blog/accelerate-migrations-introducing-direct-fetch-fastly-object-storage/",
     "https://www.fastly.com/blog/cve-2026-82329-jfrog-artifactory-authentication-bypass-exploitation-activity/",
     "https://www.fastly.com/blog/building-fastly-log-analytics-tools-open-source-approach-deeper-insights/",
-    "https://www.fastly.com/blog/try-fastly-platform-free-aws-account/"
+    "https://www.fastly.com/blog/try-fastly-platform-free-aws-account/",
+    "https://www.fastly.com/blog/static-publishing-fastly-compute-whats-new-v8/",
+    "https://www.fastly.com/blog/do-you-have-green-website/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

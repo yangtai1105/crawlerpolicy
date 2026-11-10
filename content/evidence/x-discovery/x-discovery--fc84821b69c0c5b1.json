@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--fc84821b69c0c5b1",
+  "source": "x-discovery",
+  "source_url": "https://x.com/sengineland/status/2119898035106820156",
+  "supporting_urls": [
+    "https://searchengineland.com/ai-search-activity-invisible-google-ads-search-terms-reports-study-500872"
+  ],
+  "published_at": "2026-11-09T21:00:52Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--fc84821b69c0c5b1.json",
+  "content_hash": "sha256:6833a451360213c43972713d6769e0d85df9c2789fe5bbc6344fc310c9278b8c",
+  "external_id": "2119898035106820156",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Google analysis shows AI Mode queries run 3x longer but not visible in Ads search terms reports",
+  "content": "X author: @sengineland\n\nSearch Engine Land reported on a new analysis of 400+ Google Ads accounts showing that Google’s claim of AI Mode queries running 3x longer is not reflected in search terms reports, with three possible explanations identified.\n\nLinked sources:\n- https://searchengineland.com/ai-search-activity-invisible-google-ads-search-terms-reports-study-500872",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "sengineland",
+    "post_url": "https://x.com/sengineland/status/2119898035106820156",
+    "linked_urls": [
+      "https://searchengineland.com/ai-search-activity-invisible-google-ads-search-terms-reports-study-500872"
+    ],
+    "provider_citations": [],
+    "front": "measurement-economics",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "This is a new report analyzing the lack of visibility for Google AI Mode queries in Google Ads search terms reports, which has not been previously covered."
+    },
+    "linked_articles": [
+      {
+        "url": "https://searchengineland.com/ai-search-activity-invisible-google-ads-search-terms-reports-study-500872",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://searchengineland.com/ai-search-activity-invisible-google-ads-search-terms-reports-study-500872'\nFor more information check: https://devel"
+      }
+    ]
+  }
+}

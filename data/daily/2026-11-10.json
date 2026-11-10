@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-10",
+  "generated_at": "2026-11-10T16:07:51.172582Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic",
+      "status": "reported",
+      "importance": 0.78,
+      "published_at": "2026-11-09T00:00:00Z"
+    },
+    {
+      "slug": "cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+      "status": "verified",
+      "importance": 0.68,
+      "published_at": "2026-11-09T00:00:00Z"
+    },
+    {
+      "slug": "datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-11-09T13:53:28Z"
+    },
+    {
+      "slug": "x-discovery-study-finds-google-ai-mode-search-queries-missing-from-ads-search-terms-reports",
+      "status": "signal",
+      "importance": 0.6,
+      "published_at": "2026-11-09T21:00:52Z"
+    },
+    {
+      "slug": "c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite",
+      "status": "verified",
+      "importance": 0.58,
+      "published_at": "2026-11-10T16:07:51.172582Z"
+    }
+  ]
+}

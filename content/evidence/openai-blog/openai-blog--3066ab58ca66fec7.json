@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--3066ab58ca66fec7",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T12:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--3066ab58ca66fec7.json",
+  "content_hash": "sha256:ea9bbe1eca228194ccf1e8c8ecf200c429edddb8fedd84ff577bbc379a86c1f4",
+  "external_id": "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Helping caregivers use AI in everyday life",
+  "content": "OpenAI Academy is bringing free, hands-on ChatGPT workshops to caregivers in five U.S. cities, helping them build practical AI skills for everyday life.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

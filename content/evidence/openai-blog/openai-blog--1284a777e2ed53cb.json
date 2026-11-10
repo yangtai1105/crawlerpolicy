@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--1284a777e2ed53cb",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/coderabbit-codex-daybreak",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T08:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--1284a777e2ed53cb.json",
+  "content_hash": "sha256:138253af39dc25959c8893f6bf65dcb259e5686ab5339ec266d045195905ef6d",
+  "external_id": "https://openai.com/index/coderabbit-codex-daybreak",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "CodeRabbit scales agentic software development and ships 20x more",
+  "content": "CodeRabbit uses OpenAI models to govern and trust AI-generated code and Codex to ship 20 times more software with the same engineering team.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

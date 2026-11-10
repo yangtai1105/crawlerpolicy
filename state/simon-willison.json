@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_fetch_succeeded_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_evidence_at": "2026-11-08T14:47:39.869297+00:00",
+  "last_checked_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_fetch_succeeded_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_evidence_at": "2026-11-10T16:07:51.172582+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -45,7 +45,15 @@
     "https://simonwillison.net/2026/Nov/3/qwen-can-interpret-model-weights/",
     "https://simonwillison.net/2026/Nov/5/paul-ford/",
     "https://simonwillison.net/2026/Nov/6/nilay-patel/",
-    "https://simonwillison.net/2026/Nov/7/link-rel-next/"
+    "https://simonwillison.net/2026/Nov/7/link-rel-next/",
+    "https://simonwillison.net/2026/Nov/10/muse-ember/",
+    "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+    "https://simonwillison.net/2026/Nov/10/yonkers-rises/",
+    "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+    "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
+    "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+    "https://simonwillison.net/2026/Nov/9/details-summary/",
+    "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

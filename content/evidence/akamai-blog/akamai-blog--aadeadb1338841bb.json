@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--aadeadb1338841bb",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/edge/2026/nov/webassembly-didnt-miss-the-moment-ai-was-just-late",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T14:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--aadeadb1338841bb.json",
+  "content_hash": "sha256:6148a40d1c1b6ce40851b4c1fb5c7e5022a53b746df6bfe28f4d4e8d5b3e2ef8",
+  "external_id": "https://www.akamai.com/blog/edge/2026/nov/webassembly-didnt-miss-the-moment-ai-was-just-late",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "WebAssembly Didn’t Miss the Moment. AI Was Just Late.",
+  "content": "Akamai Functions is now generally available, and it’s the best place to run the sandboxed, fast-starting code that AI agents keep writing.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

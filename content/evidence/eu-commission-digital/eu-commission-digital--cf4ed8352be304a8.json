@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--cf4ed8352be304a8",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2388",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T09:07:46Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--cf4ed8352be304a8.json",
+  "content_hash": "sha256:ce36f43e8717a4b2436cb28c519490086b944bb1da56018f18dd56a5c09c9259",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2388",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission greenlights Luxembourg's final payment request for €59 million under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 10 Nov 2026 Today, the European Commission positively assessed Luxembourg's fourth and final payment request for €59 million under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

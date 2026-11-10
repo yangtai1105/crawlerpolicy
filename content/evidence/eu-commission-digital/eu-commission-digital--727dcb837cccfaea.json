@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--727dcb837cccfaea",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2373",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T23:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--727dcb837cccfaea.json",
+  "content_hash": "sha256:2697f9fc1f0a073ab4a942d3d9e012f22844647a76fabfae66323679a7be365c",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2373",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission approves €2 billion Belgian State aid to support offshore wind energy",
+  "content": "European Commission Press release Brussels, 10 Nov 2026 The European Commission has approved a €2.04 billion Belgian scheme to support offshore wind energy in line with the objectives of the Clean Industrial Deal. This measure will contribute to the transition towards a net-zero economy.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

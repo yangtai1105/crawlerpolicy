@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--1db03e546faa1470",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/188",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T14:24:02Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--1db03e546faa1470.json",
+  "content_hash": "sha256:a83a68859ba60a7b1d69cf75af5dbce770bedb2859074b02b5bc26aad74f65ec",
+  "external_id": "pr:188",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #188: Release v0.8.0",
+  "content": "A number of major changes for Rust:\n\n1. `verify` now validates expiry times; the older `verify` is now renamed to `verify_ignore_expiry`.\n\n2. Signature-Agent dictionary syntax is now the norm over the older string syntax.\n\n3. A new collision safe KeyRing API was introduced.\n\n4. Duplicate covered components, signature labels and key mismatches are now rejected by verifiers.\n\n5. Support for inline key directories is now dropped.\n\n6. Bugfixes for parsing directories from multiple signature agents with signed coverage.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

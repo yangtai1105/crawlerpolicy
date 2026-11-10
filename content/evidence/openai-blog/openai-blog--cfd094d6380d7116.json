@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--cfd094d6380d7116",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/control-room",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T13:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--cfd094d6380d7116.json",
+  "content_hash": "sha256:dd03698cbb05c4a6d464f06061557b347e750b0c9c783cfb4d30ca95e0479aad",
+  "external_id": "https://openai.com/index/control-room",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Control Room: A central system to track and stop model workloads across our research infrastructure",
+  "content": "Learn how OpenAI’s Control Room tracks model workloads across our research infrastructure and can rapidly stop them when safety or security concerns arise.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

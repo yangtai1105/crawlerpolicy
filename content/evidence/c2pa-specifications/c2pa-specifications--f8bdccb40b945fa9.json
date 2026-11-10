@@ -1,0 +1,19 @@
+{
+  "evidence_id": "c2pa-specifications--f8bdccb40b945fa9",
+  "source": "c2pa-specifications",
+  "source_url": "https://spec.c2pa.org/",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T16:07:51.172582Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/snapshots/c2pa-specifications/2026-11-10.html",
+  "content_hash": "sha256:f4d2575272cf4d731257c02b921c19dbf06cbb260e492d175c026045a76448be",
+  "external_id": "f4d2575272cf4d731257c02b921c19dbf06cbb260e492d175c026045a76448be",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": null,
+  "content": "2.5\n2.5\n2.4\n2.3\n2.2\n2.1\n2.0\n1.4\n1.3\n1.2\n1.1\n1.0\nC2PA Specifications\nThe Coalition for Content Provenance and Authenticity (C2PA) addresses the prevalence of misleading information online through the development of technical standards for certifying the source and history (or provenance) of media content. C2PA is a Joint Development Foundation project.\nThis site contains the various specifications and informative documents produced by the C2PA.\nTechnical Specifications\nContent Credentials\nContent Credentials JSON (crJSON)\nAttestations\nSoft Binding API\nGuidance & Informative Documents\nExplainer\nGuidance for Implementers\nUser Experience Guidance\nSecurity Considerations\nHarms Modelling\nGuidance for Artificial Intelligence and Machine Learning\nGuidance for Music Assets\nRecommendations\nHuman and Organizational Identity Recommendation\nPDF Versions of these documents are also available via the Download button in the page header.",
+  "previous_content": "2.5\n2.5\n2.4\n2.3\n2.2\n2.1\n2.0\n1.4\n1.3\n1.2\n1.1\n1.0\nC2PA Specifications\nThe Coalition for Content Provenance and Authenticity (C2PA) addresses the prevalence of misleading information online through the development of technical standards for certifying the source and history (or provenance) of media content. C2PA is a Joint Development Foundation project.\nThis site contains the various specifications and informative documents produced by the C2PA.\nTechnical Specifications\nContent Credentials\nContent Credentials JSON (crJSON)\nAttestations\nSoft Binding API\nGuidance & Informative Documents\nExplainer\nGuidance for Implementers\nUser Experience Guidance\nSecurity Considerations\nHarms Modelling\nGuidance for Artificial Intelligence and Machine Learning\nRecommendations\nHuman and Organizational Identity Recommendation\nPDF Versions of these documents are also available via the Download button in the page header.",
+  "unified_diff": "--- prev\n+++ curr\n@@ -25,6 +25,7 @@\n Security Considerations\n Harms Modelling\n Guidance for Artificial Intelligence and Machine Learning\n+Guidance for Music Assets\n Recommendations\n Human and Organizational Identity Recommendation\n PDF Versions of these documents are also available via the Download button in the page header.",
+  "discovery_metadata": {}
+}

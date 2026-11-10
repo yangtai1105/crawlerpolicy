@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--511cb99f88bf2a6f",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/static-publishing-fastly-compute-whats-new-v8/",
+  "supporting_urls": [],
+  "published_at": "2026-11-11T00:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--511cb99f88bf2a6f.json",
+  "content_hash": "sha256:ae5f221333f4bff4470ea8f946bd33dbe9bb292d02cdc67550e35948030c209f",
+  "external_id": "https://www.fastly.com/blog/static-publishing-fastly-compute-whats-new-v8/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Static Publishing on Fastly Compute: What’s New in v8",
+  "content": "Version 8 of Compute JS Static Publish adds Object Storage support, named collections, and preview URLs. Serve static sites from the edge with no origin.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

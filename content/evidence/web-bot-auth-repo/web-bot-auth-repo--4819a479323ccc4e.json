@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--4819a479323ccc4e",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/177",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T16:43:16Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--4819a479323ccc4e.json",
+  "content_hash": "sha256:928f772d0fedfa9deba70ab9ca00262f6e4dd7c6c625ab20b927a664eeba9e08",
+  "external_id": "pr:177",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #177: feat(typescript)!: align key discovery with protocol-01",
+  "content": "Keep origin fallback (so that it works without the well-known). This also keeps CIMD discovery.\n\ntype=jwks_uri/directory will break, but we have not observed any so far. Similarly, we remove the possibility for data: inlining\n\n\nNonces are no longer restricted to 64 bytes either.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

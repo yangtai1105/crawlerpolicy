@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--39d498269374be93",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/192",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T16:44:04Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--39d498269374be93.json",
+  "content_hash": "sha256:897c86b96ea1f383134d38f3b039fc969ad36296c45b9dd1c9ef561e4bbdf4ca",
+  "external_id": "pr:192",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #192: fix(httpie): limit signed redirects to the same origin",
+  "content": "Keep same-origin redirects working and reject changes to the scheme, host, or port. Account for default ports and check each redirect in a chain.\n\nAdd redirect tests and document the behavior.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

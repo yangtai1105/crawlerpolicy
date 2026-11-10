@@ -1,16 +1,9 @@
 {
-  "last_checked_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_fetch_succeeded_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_evidence_at": "2026-11-06T15:41:50.881618+00:00",
+  "last_checked_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_fetch_succeeded_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_evidence_at": "2026-11-10T16:07:51.172582+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/critiques",
-    "https://openai.com/index/techniques-for-training-large-neural-networks",
-    "https://openai.com/index/best-practices-for-deploying-language-models",
-    "https://openai.com/index/teaching-models-to-express-their-uncertainty-in-words",
-    "https://openai.com/index/codex-apps",
-    "https://openai.com/index/dall-e-2-update",
-    "https://openai.com/index/leadership-team-update",
     "https://openai.com/index/hierarchical-text-conditional-image-generation-with-clip-latents",
     "https://openai.com/index/measuring-goodharts-law",
     "https://openai.com/index/gpt-3-edit-insert",
@@ -503,7 +496,14 @@
     "https://openai.com/index/daybreak-red-aws-govcloud",
     "https://openai.com/index/setting-new-standard-responsible-ai-infrastructure",
     "https://openai.com/index/australian-universities-ai-native-graduates",
-    "https://openai.com/index/cultfit-builds-with-codex"
+    "https://openai.com/index/cultfit-builds-with-codex",
+    "https://openai.com/index/helping-caregivers-use-ai-in-everyday-life",
+    "https://openai.com/index/closing-ai-guidance-gap-education",
+    "https://openai.com/index/ai-effect-on-freelance-work",
+    "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+    "https://openai.com/index/control-room",
+    "https://openai.com/index/coderabbit-codex-daybreak",
+    "https://openai.com/index/kuken"
   ],
   "consecutive_failures": 0,
   "first_seen": false

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--acbfcbe1f3882dea",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T19:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--acbfcbe1f3882dea.json",
+  "content_hash": "sha256:5dcfbcaafa7dd597ba2b0c966f4c162ed89dde3a872ac3861c62f1451830b336",
+  "external_id": "https://openai.com/index/chatgpt-enterprise-aws-marketplace",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "ChatGPT Enterprise now available in AWS Marketplace",
+  "content": "ChatGPT Enterprise is now available through AWS Marketplace, helping organizations simplify procurement through existing AWS purchasing and billing relationships.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

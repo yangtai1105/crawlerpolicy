@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--32c5951013ebe68f",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/193",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T14:08:56Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--32c5951013ebe68f.json",
+  "content_hash": "sha256:f9d536a4199351394f87fcc6039344ef3d063a7538fd7934c90cecc6dc31b776",
+  "external_id": "pr:193",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #193: fix: align signature-agent discovery with signed coverage",
+  "content": "Required for #188 ",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--50ee673d92a5f097",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T05:34:14Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--50ee673d92a5f097.json",
+  "content_hash": "sha256:2501c4c378ac89d0310310b5dce2851ebbd837ce336fc6e6ee20a52a38e6c794",
+  "external_id": "https://simonwillison.net/2026/Nov/10/prompting-claude-fable-52/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Quoting Prompting Claude Fable 5.2",
+  "content": "<blockquote cite=\"https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2#say-who-owns-the-code\"><p>Claude Fable 5.2 responds closely to what the prompt says about who owns the code it works on. In Anthropic’s testing on small coding tasks, when a prompt said nothing about ownership or presented the code base as someone else’s, the model tended to add to the existing structure, even when that repeated existing code. [...]</p>\n<p>If you want the model to improve the structure as it works, say that the code is its own:</p>\n<blockquote>\n<p><code>This codebase is yours: what it's for and how it's built are your call, and you'll keep building on it.</code></p>\n</blockquote>\n<p>In Anthropic’s testing on small coding tasks, the model merged repeated code in about half of the tries with this sentence, and in under a tenth of the tries without it.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://platform.claude.com/docs/en/build-with-claude/prompt-engineering/prompting-claude-fable-5-2#say-who-owns-the-code\">Prompting Claude Fable 5.2</a>, Anthropic documentation</p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/prompt-engineering\">prompt-engineering</a>, <a href=\"https://simonwillison.net/tags/anthropic\">anthropic</a>, <a href=\"https://simonwillison.net/tags/generative-ai\">generative-ai</a>, <a href=\"https://simonwillison.net/tags/ai\">ai</a>, <a href=\"https://simonwillison.net/tags/llms\">llms</a>, <a href=\"https://simonwill",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -252,6 +252,21 @@
       ]
     },
     {
+      "key": "agent-vs-crawler-taxonomy-differentiation",
+      "title": "Agent Vs Crawler Taxonomy Differentiation",
+      "thesis": "By introducing formal classifications for access level (direct crawler versus intermediary agent) and content use (full retention, reference citation, or immediate consumption), Cloudflare is institutionalizing a granular taxonomy that separates long-term model training and search indexing from ephemerally executed delegated agent tasks.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ]
+    },
+    {
       "key": "agentic-browser-sandboxing",
       "title": "Agentic Browser Sandboxing",
       "thesis": "Rather than treating machine access purely as abusive traffic to be mitigated, Cloudflare is shifting toward commercializing agent interactions at the edge by deploying standard payment challenge flows (HTTP 402/x402) and metering access for AI buyers.",
@@ -641,6 +656,19 @@
       ]
     },
     {
+      "key": "ai-search-reporting-opacity",
+      "title": "AI Search Reporting Opacity",
+      "thesis": "Advertiser-facing reporting mechanisms may systematically obscure or aggregate AI-driven conversational search interactions, creating an informational gap between public platform metrics and actionable campaign data.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "x-discovery-study-finds-google-ai-mode-search-queries-missing-from-ads-search-terms-reports"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-search-visibility-correlation",
       "title": "AI Search Visibility Correlation",
       "thesis": "Licensing deals are increasingly analyzed not just as data acquisition agreements, but as structural factors influencing publisher visibility and retrieval priority within emerging AI search engines.",
@@ -718,6 +746,21 @@
       ],
       "verified_development_slugs": [
         "web-bot-auth-verifier-disallows-shared-hmac-signatures"
+      ]
+    },
+    {
+      "key": "audio-provenance-standardization",
+      "title": "Audio Provenance Standardization",
+      "thesis": "Provenance architectures are diversifying beyond visual and synthetic text media to standardize how audio and musical works assert authenticity, origins, and rights metadata across distribution pipelines.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+      ],
+      "verified_development_slugs": [
+        "c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
       ]
     },
     {
@@ -1102,6 +1145,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "consolidation-around-platform-embedded-agents",
+      "title": "Consolidation Around Platform Embedded Agents",
+      "thesis": "Agent traffic is rapidly centralizing around established mega-platforms embedding agents into existing user surfaces rather than standalone agentic browsers, with research and search page interactions dominating over transactional checkout execution.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "consumer-retail-browsing-via-personal-agents",
       "title": "Consumer Retail Browsing Via Personal Agents",
       "thesis": "Early telemetry on delegative personal agents reveals a gap between vendor positioning and real-world user deployment, with professional-oriented agents immediately gravitating toward consumer shopping discovery while avoiding sensitive transaction endpoints.",
@@ -1113,6 +1169,21 @@
         "human-blog-human-security-adds-claude-duet-detection-showing-consumer-e-commerce-traffic-pa"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "content-credentials-expansion-to-music",
+      "title": "Content Credentials Expansion To Music",
+      "thesis": "Provenance architectures are diversifying beyond visual and synthetic text media to standardize how audio and musical works assert authenticity, origins, and rights metadata across distribution pipelines.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+      ],
+      "verified_development_slugs": [
+        "c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+      ]
     },
     {
       "key": "content-provenance-standardization",
@@ -1461,6 +1532,21 @@
       ]
     },
     {
+      "key": "declarative-content-retention-tracking",
+      "title": "Declarative Content Retention Tracking",
+      "thesis": "By introducing formal classifications for access level (direct crawler versus intermediary agent) and content use (full retention, reference citation, or immediate consumption), Cloudflare is institutionalizing a granular taxonomy that separates long-term model training and search indexing from ephemerally executed delegated agent tasks.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ]
+    },
+    {
       "key": "declarative-licensing-parsing",
       "title": "Declarative Licensing Parsing",
       "thesis": "By shifting document validity enforcement from HTTP transport headers to XML namespace inspection, the standard adopts the robustness principle to prevent crawler parsing failures caused by misconfigured web server Content-Type headers.",
@@ -1524,6 +1610,19 @@
       "last_updated_at": "2026-11-06T15:41:50.881618Z",
       "related_feed_slugs": [
         "cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "dedicated-bot-governance-decoupling-from-generic-waap-cdn-bundles",
+      "title": "Dedicated Bot Governance Decoupling From Generic Waap CDN Bundles",
+      "thesis": "The growth of delegated AI agents that research, shop, and compare prices has introduced 'gray bots'—traffic that cannot be classified as good or bad by user-agent string or IP identity alone. Consequently, bot defense is shifting from edge gating to real-time, behavioral intent scoring that spans websites, APIs, and MCP servers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand"
       ],
       "verified_development_slugs": []
     },
@@ -1665,6 +1764,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "displacement-of-standalone-agent-browsers",
+      "title": "Displacement Of Standalone Agent Browsers",
+      "thesis": "Agent traffic is rapidly centralizing around established mega-platforms embedding agents into existing user surfaces rather than standalone agentic browsers, with research and search page interactions dominating over transactional checkout execution.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "divergent-platform-policies-on-agent-access",
       "title": "Divergent Platform Policies On Agent Access",
       "thesis": "Platform responses to delegated agentic commerce are diverging sharply between defensive blocking and partnership exploration, with DoorDash treating early agent traffic as a nascent advertising and distribution channel rather than hostile scraping.",
@@ -1691,6 +1803,19 @@
       "verified_development_slugs": [
         "uk-cma-opens-further-consultation-on-user-choice-conduct-requirement-for-google-"
       ]
+    },
+    {
+      "key": "domination-of-product-search-over-checkout-execution-in-agent-workloads",
+      "title": "Domination Of Product Search Over Checkout Execution In Agent Workloads",
+      "thesis": "Agent traffic is rapidly centralizing around established mega-platforms embedding agents into existing user surfaces rather than standalone agentic browsers, with research and search page interactions dominating over transactional checkout execution.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "downstream-use-metering",
@@ -1745,6 +1870,21 @@
         "cloudflare-blog-cloudflare-and-openai-pilot-edge-signals-to-drive-chatgpt-search-crawling"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "edge-bot-directory-standardization",
+      "title": "Edge Bot Directory Standardization",
+      "thesis": "By introducing formal classifications for access level (direct crawler versus intermediary agent) and content use (full retention, reference citation, or immediate consumption), Cloudflare is institutionalizing a granular taxonomy that separates long-term model training and search indexing from ephemerally executed delegated agent tasks.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ]
     },
     {
       "key": "edge-browser-runtimes",
@@ -2368,6 +2508,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "institutional-recognition-of-autonomous-shopping-agents-as-gray-bots",
+      "title": "Institutional Recognition Of Autonomous Shopping Agents As Gray Bots",
+      "thesis": "The growth of delegated AI agents that research, shop, and compare prices has introduced 'gray bots'—traffic that cannot be classified as good or bad by user-agent string or IP identity alone. Consequently, bot defense is shifting from edge gating to real-time, behavioral intent scoring that spans websites, APIs, and MCP servers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "intent-based-access-control",
       "title": "Intent Based Access Control",
       "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
@@ -2377,6 +2530,19 @@
       "last_updated_at": "2026-10-28T14:52:45.308044Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "intent-based-agent-scoring-replacing-binary-bot-detection",
+      "title": "Intent Based Agent Scoring Replacing Binary Bot Detection",
+      "thesis": "The growth of delegated AI agents that research, shop, and compare prices has introduced 'gray bots'—traffic that cannot be classified as good or bad by user-agent string or IP identity alone. Consequently, bot defense is shifting from edge gating to real-time, behavioral intent scoring that spans websites, APIs, and MCP servers.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand"
       ],
       "verified_development_slugs": []
     },
@@ -2632,6 +2798,19 @@
       "last_updated_at": "2026-09-22T13:08:11.171940Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-launches-worker-previews-with-isolated-state-and-agent-development-to"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "measurement-gap-in-generative-search-queries",
+      "title": "Measurement Gap In Generative Search Queries",
+      "thesis": "Advertiser-facing reporting mechanisms may systematically obscure or aggregate AI-driven conversational search interactions, creating an informational gap between public platform metrics and actionable campaign data.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-10T16:07:51.172582Z",
+      "last_updated_at": "2026-11-10T16:07:51.172582Z",
+      "related_feed_slugs": [
+        "x-discovery-study-finds-google-ai-mode-search-queries-missing-from-ads-search-terms-reports"
       ],
       "verified_development_slugs": []
     },

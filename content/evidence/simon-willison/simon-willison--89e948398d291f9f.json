@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--89e948398d291f9f",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T04:32:33Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--89e948398d291f9f.json",
+  "content_hash": "sha256:d82ff2b2c437894aac89dd4238073c3d9335246e59b5222c428eaa67c265de9c",
+  "external_id": "https://simonwillison.net/2026/Nov/9/hn-50421091/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The Web Is More Than Enough, by Paul Ford",
+  "content": "<p><a href=\"https://news.ycombinator.com/item?id=50416456#50421091\">My comment</a> on <a href=\"https://news.ycombinator.com/item?id=50416456\">The Web Is More Than Enough, by Paul Ford</a> &mdash; Hacker News.</p><p>OK, this comment convinced me to give that a shot.</p>\n<p>Here's a thing I made in Three.js this morning - a Nudibranch themed Faberge Egg: <a href=\"https://static.simonwillison.net/static/2026/Hidden-Reef-Egg-threejs.html\">https://static.simonwillison.net/static/2026/Hidden-Reef-Egg...</a> (77KB)</p>\n<p>I just asked Claude (Opus 5.5 Medium running in regular Claude Chat) to port that to Vanilla JS, in the same thread where it had built it, and got this: <a href=\"https://static.simonwillison.net/static/2026/Hidden-Reef-Egg-Vanilla-WebGL.html\">https://static.simonwillison.net/static/2026/Hidden-Reef-Egg...</a> (98KB)</p>\n<p>They aren't identical - you can see what Claude said about that in the transcript (I don't fully understand why it differed): <a href=\"https://claude.ai/share/e56d163e-2793-4677-aa11-191d5058b414\">https://claude.ai/share/e56d163e-2793-4677-aa11-191d5058b414</a></p>\n<p>But yeah, it turns out Claude Opus 5.5 is perfectly capable of 3D modeling in Vanilla JS + WebGL without Three.js.</p>\n<p>In eyeballing the code I find the Three.js slightly easier to understand myself, but I rarely look at the code for these 3D projects so that isn't a particularly big deal.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/claude\">claude</a>, ",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

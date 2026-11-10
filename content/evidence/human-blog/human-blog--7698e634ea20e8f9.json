@@ -1,0 +1,30 @@
+{
+  "evidence_id": "human-blog--7698e634ea20e8f9",
+  "source": "human-blog",
+  "source_url": "https://www.humansecurity.com/learn/blog/october-2026-agentic-traffic/",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T00:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/human-blog/human-blog--7698e634ea20e8f9.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "humansecurity.com/october-2026-agentic-traffic",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "State of Agentic Traffic – October 2026: Meta and OpenAI now account for 90% of agentic traffic",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.humansecurity.com/learn/blog/october-2026-agentic-traffic/",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 5434,
+      "sha256": "9a157fb82b68e20df5e729e44b5df33ab3fd30a4d1a38cdcfb0eae1e34994f67",
+      "cited_urls": [
+        "https://www.humansecurity.com/learn/blog/october-2026-agentic-traffic/"
+      ]
+    }
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--e41d8b8fb1ec27ab",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T23:58:46Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--e41d8b8fb1ec27ab.json",
+  "content_hash": "sha256:441e0c29bc8ab30d3ccc99935321f7478a6b5b60930283618b9e59fdbf9c8d38",
+  "external_id": "https://simonwillison.net/2026/Nov/9/llm-anthropic/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "llm-anthropic 0.31",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-anthropic/releases/tag/0.31\">llm-anthropic 0.31</a></p>\n        <p>Anthropic <a href=\"https://www.anthropic.com/claude-fable-and-mythos-5-2\">released Fable 5.2 and Mythos 5.2</a> today. Fable 5.2 is currently <a href=\"https://artificialanalysis.ai/models/claude-fable-5-2\">ranked first on Artificial Analysis</a>. Anthropic say it \"solved two open problems in the physics of black holes\", so clearly their internal benchmarks have become more ambitious!</p>\n<p>I've added the new models to <code>llm-anthropic</code>, so you can now run prompts through Fable 5.2 like this:</p>\n<pre><code>uv tool install llm\nllm install llm-anthropic\nllm keys set anthropic\n# paste key here\nllm -m claude-fable-5.2 \"Generate an SVG of a pelican riding a bicycle\"\n</code></pre>\n<p>I ran pelicans at all five reasoning levels - <code>low</code>, <code>medium</code>, <code>high</code>, <code>xhigh</code>, and <code>max</code>. You can <a href=\"https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fbcd1a1bf38b929b0bbbae2e38b808e97\">see them all here</a> - here's the best result I got, from <code>xhigh</code>:</p>\n<p><img alt=\"It's good - legs the right side of the bicycle, good frame, nice pouch, weird little fingers on the handlebars. The pouch looks slightly misaligned with the top of the beak.\" src=\"https://static.simonwillison.net/static/2026/fable-5.2-xhigh.avif\" /></p>\n<p><code>max</code> fa",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

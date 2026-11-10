@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--d0cffb91def49e1d",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+  "supporting_urls": [],
+  "published_at": "2026-11-08T22:26:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--d0cffb91def49e1d.json",
+  "content_hash": "sha256:a33011c458226906cb95ddb7cb0781b8bdf3f38f473ec601aa172c73f2f2617d",
+  "external_id": "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "parse_number() as a SQLite extension: C vs Rust",
+  "content": "<p><strong>Research:</strong> <a href=\"https://github.com/simonw/research/tree/main/sqlite-parse-number-c-vs-rust#readme\">parse_number() as a SQLite extension: C vs Rust</a></p>\n        <p>I was out walking the dog when I got curious about how easy/difficult it would be to write a SQLite C extension that adds a <code>parse_number()</code> function for turning strings like <code>-$1,234.56</code> or <code>'12.5%'</code> into numeric values that could be summed and sorted.</p>\n<p>I fired up regular Claude chat (Opus 5.5) <a href=\"https://claude.ai/share/7f18f157-6c96-4d49-a1d4-f02403e3b261\">and prompted</a>:</p>\n<blockquote>\n<p><code>I'm thinking about a SQLite custom function 'parse_number(value)' that strips ',', '$', '£' and '%', handles a leading '-', and returns 'NULL' for anything it can’t parse</code></p>\n<p><code>Explore the difference between building this as a SQLite extension in C v.s. in Rust - I want to compare performance and code complexity and size of the resulting</code>.so<code>(or whatever) file</code></p>\n</blockquote>\n<p>This gave me a solid starting point - the Rust extension was 321 KB (using <a href=\"https://github.com/rusqlite/rusqlite\">Rusqlite</a>) and 298 KB (using <a href=\"https://github.com/asg017/sqlite-loadable-rs\">sqlite-loadable-rs</a>), while the C extension was 14 KB. But the Rust extension was faster!</p>\n<p>Turns out that's because the Rust equivalent of C's <code>strtod</code> is \"twice as fast\". So I prompted:</p>\n<blockquote>\n<p><code>Tr",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

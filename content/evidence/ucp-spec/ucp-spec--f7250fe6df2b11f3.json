@@ -1,0 +1,19 @@
+{
+  "evidence_id": "ucp-spec--f7250fe6df2b11f3",
+  "source": "ucp-spec",
+  "source_url": "https://github.com/Universal-Commerce-Protocol/ucp/pull/1016",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T03:23:39Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/ucp-spec/ucp-spec--f7250fe6df2b11f3.json",
+  "content_hash": "sha256:11a252e85dca421bc41f2a4f0524c780ad56019242890fb13fecf2c150dbf48f",
+  "external_id": "pr:1016",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #1016: feat: add optional response-only list_price to item schema",
+  "content": "Adds an optional, response-only `list_price` field to the shared shopping item schema and defines reference pricing once in the specification overview across catalog, cart, checkout, and order, following the Shopping Tech Council consensus on #751 and refinements in #1031. Fixes #751. cc @qinyingran-TT for review.\n\n### Overview and Schema Alignment\n\n* **Single reference-price definition**: Defines `list_price` once in the specification overview as a reference price (a benchmark offered by the business so buyers can judge the value of the sale price, typically shown as a strikethrough) rather than a pre-discount price, removing the need for separate carve-outs in the cart and checkout specs.\n* **Shared item and catalog consistency**: Adds response-only `list_price` to the shared shopping item schema and updates catalog variant and product schemas so all three share the same reference-price semantics and currency-matching requirement.\n* **Business-owned basis and jurisdictional responsibility**: Leaves the comparison basis to the business within applicable law (such as typical price over a prior window, lowest recent price, bona fide former price, or manufacturer's suggested retail price). The business determines whether and what to send for the buyer's context (when known) and omits it where an unlabeled strikethrough cannot lawfully be shown; presenting `list_price` is optional for platforms, and a platform that presents it uses the value received.\n\n### Core Invariants\n\n* **Comparison, not a deduction**: The gap between the reference price and the sale price has no financial effect (`price` is the unit selling price before any discounts in `totals`). Businesses must not report the gap as a discount (for example, in `totals` or `discounts.applied`), platforms must not derive an amount owed from it, and resource totals remain authoritative.\n* **Same currency and sale basis**: On line items, `list_price` is denominated in the resource currency per one whole unit of the item's sale basis (or per `each` when omitted). On catalog variants and products, the reference price currency must match the sale price currency.\n* **Savings presentation**: Platforms should only present a saving (strikethrough, percentage, or saved amount) when the reference price exceeds the sale price. A reference price at or below the sale price remains valid (for example, manufacturer's suggested retail price on goods sold at a premium).\n* **Order snapshot**: Businesses may surface the reference price captured at checkout on order line items, must not recompute it from live catalog data, and omit it if it was not retained.\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--2c9c3998053d2bae",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/kuken",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T08:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--2c9c3998053d2bae.json",
+  "content_hash": "sha256:ef081bcec3f35b549af9d7f78ed0dc9079ad0c7e05105ab5a264ebadc6ad9e1b",
+  "external_id": "https://openai.com/index/kuken",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Kuken Industries searches 70 years of drawings in minutes",
+  "content": "Kuken Industries uses the OpenAI API to search 70 years of cooling tower drawings. Engineers can find the drawing for a repair in 4.5 minutes, down from nearly an hour.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

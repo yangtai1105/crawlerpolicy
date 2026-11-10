@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-08T14:47:39.869297Z",
-  "last_fully_successful_at": "2026-11-08T14:47:39.869297Z",
+  "last_attempted_at": "2026-11-10T16:07:51.172582Z",
+  "last_fully_successful_at": "2026-11-10T16:07:51.172582Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -140,9 +140,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "cf-changelog-radar--6921f9e63b3d07d2"
+      ],
+      "events_written": [
+        "content/events/2026-11-09-cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-09-cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada.md"
+      ]
     },
     "cloudflare-blog": {
       "fetch": "ok",
@@ -150,7 +156,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--a89398de5e3d1fbf"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -160,9 +168,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--2cda60833a5ea7fc"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-09-datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand.md"
+      ]
     },
     "akamai-blog": {
       "fetch": "ok",
@@ -170,7 +182,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "akamai-blog--5c9c7dc3657bfa7b",
+        "akamai-blog--aadeadb1338841bb"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -180,7 +195,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "fastly-blog--511cb99f88bf2a6f",
+        "fastly-blog--fbda7d657faddcd9"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -190,7 +208,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "imperva-blog--c5995a9cbf70eadb"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -200,9 +220,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "human-blog--7698e634ea20e8f9"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-09-human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic.md"
+      ]
     },
     "uk-cma": {
       "fetch": "ok",
@@ -210,7 +234,14 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--c5aff8f8d9c4e7e3",
+        "uk-cma--2602da275093bae0",
+        "uk-cma--3dba7bbbfb759d16",
+        "uk-cma--9ef91cbbb53fd1c4",
+        "uk-cma--07b43644c0485574",
+        "uk-cma--6fd3b4c76c2b99c8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -240,7 +271,18 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--3edd693aa781cda6",
+        "eu-commission-digital--7e02b0946afdc06a",
+        "eu-commission-digital--338d9becb3cb1508",
+        "eu-commission-digital--b3349ea6e3c5a675",
+        "eu-commission-digital--c2f1fbb43eb006fb",
+        "eu-commission-digital--aac8e65dff8bceb6",
+        "eu-commission-digital--cf4ed8352be304a8",
+        "eu-commission-digital--84b53219fe6a089c",
+        "eu-commission-digital--727dcb837cccfaea",
+        "eu-commission-digital--643c72b77c5822df"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -270,7 +312,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "reddit-corporate--43ff14ec40b9c35e"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -280,7 +324,14 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--1db03e546faa1470",
+        "web-bot-auth-repo--32c5951013ebe68f",
+        "web-bot-auth-repo--39d498269374be93",
+        "web-bot-auth-repo--4819a479323ccc4e",
+        "web-bot-auth-repo--e31d368bba06da74",
+        "web-bot-auth-repo--9b5eafc7d9a4b321"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -310,7 +361,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ucp-spec--af1e6563fd78c0b5",
+        "ucp-spec--f7250fe6df2b11f3"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -410,7 +464,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "stratechery--6871fa3393e09792",
+        "stratechery--c4a385f7c5ab5dce"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -421,7 +478,14 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--98f92de2b1aa592e"
+        "simon-willison--860a3e17aa606659",
+        "simon-willison--50ee673d92a5f097",
+        "simon-willison--1470dd8b7244e308",
+        "simon-willison--e41d8b8fb1ec27ab",
+        "simon-willison--672ccdbf7d82c532",
+        "simon-willison--89e948398d291f9f",
+        "simon-willison--1401636f99ca04a7",
+        "simon-willison--d0cffb91def49e1d"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -442,7 +506,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--3066ab58ca66fec7",
+        "openai-blog--3e1ff572e0ca1af1",
+        "openai-blog--c6e0bc61fa598e50",
+        "openai-blog--acbfcbe1f3882dea",
+        "openai-blog--cfd094d6380d7116",
+        "openai-blog--1284a777e2ed53cb",
+        "openai-blog--2c9c3998053d2bae"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -482,7 +554,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ietf-webbotauth-wg--0dda7617c4dcf71f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -492,9 +566,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "c2pa-specifications--f8bdccb40b945fa9"
+      ],
+      "events_written": [
+        "content/events/2026-11-10-c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-10-c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite.md"
+      ]
     },
     "w3c-tdmrep": {
       "fetch": "ok",
@@ -542,7 +622,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--2c6a8d92ee50a678"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -552,13 +634,26 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "x-discovery--fc84821b69c0c5b1"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-09-x-discovery-study-finds-google-ai-mode-search-queries-missing-from-ads-search-terms-reports.md"
+      ]
     }
   },
-  "events_written": [],
-  "feed_items_written": [],
+  "events_written": [
+    "content/events/2026-11-09-cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada.md",
+    "content/events/2026-11-10-c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite.md"
+  ],
+  "feed_items_written": [
+    "content/feed/2026-11-09-cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada.md",
+    "content/feed/2026-11-09-datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand.md",
+    "content/feed/2026-11-09-human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic.md",
+    "content/feed/2026-11-10-c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite.md",
+    "content/feed/2026-11-09-x-discovery-study-finds-google-ai-mode-search-queries-missing-from-ads-search-terms-reports.md"
+  ],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -566,25 +661,25 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "quiet",
-    "edition_date": "2026-11-08",
-    "item_count": 0,
-    "path": "data/daily/2026-11-08.json"
+    "status": "published",
+    "edition_date": "2026-11-10",
+    "item_count": 5,
+    "path": "data/daily/2026-11-10.json"
   },
   "insight_threads": {
-    "thread_count": 274,
+    "thread_count": 287,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
     "status": "ok",
-    "proposed": 0,
+    "proposed": 1,
     "error": ""
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 0,
+    "candidate_count": 1,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.092997,
+    "estimated_tool_cost_usd": 0.118529,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

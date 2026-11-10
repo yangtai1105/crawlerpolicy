@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_fetch_succeeded_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_evidence_at": "2026-11-05T16:10:50.204137+00:00",
+  "last_checked_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_fetch_succeeded_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_evidence_at": "2026-11-10T16:07:51.172582+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://www.akamai.com/blog/cloud/2024/may/saas-companies-adopting-distributed-cloud-computing",
-    "https://www.akamai.com/blog/security/2024/may/accelerating-zero-trust-outcomes-with-generative-ai-part-2",
     "https://www.akamai.com/blog/security/2024/may/effectively-deploying-segmentation-to-mitigate-cyberattack-risks",
     "https://www.akamai.com/blog/ai/2026/chatbot-security",
     "https://www.akamai.com/blog/security/2024/may/accelerating-zero-trust-outcomes-with-generative-ai-part-1",
@@ -503,7 +501,9 @@
     "https://www.akamai.com/blog/ai/2026/nov/akamai-named-leader-2026-idc-marketscape-managed-edge",
     "https://www.akamai.com/blog/security-research/2026/nov/cve-2026-98432-remote-uaf-linux-kernels-tcp-stack",
     "https://www.akamai.com/blog/ai/2026/nov/synthetic-cisos-call-ai-agents-most-underestimated-risk",
-    "https://www.akamai.com/blog/security/2026/nov/higher-ed-needs-new-playbook-ransomware-ai-risk-compliance"
+    "https://www.akamai.com/blog/security/2026/nov/higher-ed-needs-new-playbook-ransomware-ai-risk-compliance",
+    "https://www.akamai.com/blog/edge/2026/nov/akamai-functions-business-case-edge-native-serverless",
+    "https://www.akamai.com/blog/edge/2026/nov/webassembly-didnt-miss-the-moment-ai-was-just-late"
   ],
   "consecutive_failures": 0,
   "first_seen": false

@@ -189,13 +189,15 @@
       "kind": "player",
       "observed_name": "Coalition for Content Provenance and Authenticity",
       "first_seen_at": "2026-10-25T12:58:48.818827Z",
-      "last_seen_at": "2026-10-25T12:58:48.818827Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-10T16:07:51.172582Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "c2pa-specifications--df274e50e9d77939"
+        "c2pa-specifications--df274e50e9d77939",
+        "c2pa-specifications--f8bdccb40b945fa9"
       ],
       "feed_slugs": [
-        "2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+        "2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications",
+        "2026-11-10-c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
       ]
     },
     "player:copilot": {
@@ -300,6 +302,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:gartner": {
+      "kind": "player",
+      "observed_name": "Gartner",
+      "first_seen_at": "2026-11-10T16:07:51.172582Z",
+      "last_seen_at": "2026-11-10T16:07:51.172582Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "datadome-blog--2cda60833a5ea7fc"
+      ],
+      "feed_slugs": [
+        "2026-11-09-datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand"
       ]
     },
     "player:gemini": {
@@ -617,17 +632,19 @@
       "kind": "player",
       "observed_name": "Search Engine Land",
       "first_seen_at": "2026-10-24T12:27:35.735465Z",
-      "last_seen_at": "2026-10-31T14:19:26.797580Z",
-      "occurrences": 3,
+      "last_seen_at": "2026-11-10T16:07:51.172582Z",
+      "occurrences": 4,
       "evidence_ids": [
         "x-discovery--5177e7e21ef2c779",
         "x-discovery--296c5b7386498d36",
-        "x-discovery--10e1fdf9f2c6fff5"
+        "x-discovery--10e1fdf9f2c6fff5",
+        "x-discovery--fc84821b69c0c5b1"
       ],
       "feed_slugs": [
         "2026-10-23-x-discovery-search-engine-land-maps-ai-company-and-publisher-licensing-partnerships",
         "2026-10-27-x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations",
-        "2026-10-30-x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s"
+        "2026-10-30-x-discovery-adobe-data-finds-ai-visitors-generated-83-more-revenue-per-visit-on-u-s-retail-s",
+        "2026-11-09-x-discovery-study-finds-google-ai-mode-search-queries-missing-from-ads-search-terms-reports"
       ]
     },
     "player:selectel": {
@@ -899,13 +916,15 @@
       "kind": "player",
       "observed_name": "xAI",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
-      "last_seen_at": "2026-10-18T12:27:30.284320Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-10T16:07:51.172582Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "x-discovery--575795a51d9ff9e6"
+        "x-discovery--575795a51d9ff9e6",
+        "human-blog--7698e634ea20e8f9"
       ],
       "feed_slugs": [
-        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
+        "2026-11-09-human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic"
       ]
     },
     "player:yandex": {

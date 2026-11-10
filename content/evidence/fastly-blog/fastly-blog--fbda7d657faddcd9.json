@@ -1,0 +1,19 @@
+{
+  "evidence_id": "fastly-blog--fbda7d657faddcd9",
+  "source": "fastly-blog",
+  "source_url": "https://www.fastly.com/blog/do-you-have-green-website/",
+  "supporting_urls": [],
+  "published_at": "2026-11-09T00:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/fastly-blog/fastly-blog--fbda7d657faddcd9.json",
+  "content_hash": "sha256:b733717e80d97f30c332afdee072508872ac23d33a66030e39220d8346f91688",
+  "external_id": "https://www.fastly.com/blog/do-you-have-green-website/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Do You Have a Green Website?",
+  "content": "Websites that run on Fastly are green. Read this blog to learn how.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

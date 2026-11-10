@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_fetch_succeeded_at": "2026-11-08T14:47:39.869297+00:00",
-  "last_evidence_at": null,
+  "last_checked_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_fetch_succeeded_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_evidence_at": "2026-11-10T16:07:51.172582+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://developers.cloudflare.com/changelog/post/2026-03-06-radar-region-filtering-traffic-volume-navigation/",
@@ -22,7 +22,8 @@
     "https://developers.cloudflare.com/changelog/post/2026-04-17-radar-ai-insights-updates/",
     "https://developers.cloudflare.com/changelog/post/2026-04-14-radar-citations/",
     "https://developers.cloudflare.com/changelog/post/2026-04-01-radar-routing-section/",
-    "https://developers.cloudflare.com/changelog/post/2026-03-26-url-scanner-improvements/"
+    "https://developers.cloudflare.com/changelog/post/2026-03-26-url-scanner-improvements/",
+    "https://developers.cloudflare.com/changelog/post/2026-11-09-radar-bots-directory-botbase/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

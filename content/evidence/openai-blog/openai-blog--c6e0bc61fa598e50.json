@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--c6e0bc61fa598e50",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/ai-effect-on-freelance-work",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T07:00:00Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--c6e0bc61fa598e50.json",
+  "content_hash": "sha256:c95a89c755d48801be8ead3f35eb9dd32697b921086abaa70d76fdfd149283c2",
+  "external_id": "https://openai.com/index/ai-effect-on-freelance-work",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Work at the Frontier: AI’s effect on freelance work",
+  "content": "New research from OpenAI and Upwork finds shifting demand for freelance work, new skill combinations, and larger budgets and more hours for AI-related projects.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

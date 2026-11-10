@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--860a3e17aa606659",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T07:28:21Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--860a3e17aa606659.json",
+  "content_hash": "sha256:620dc900de22e9476f6464c95f91e298314167086ac51376bb9f894ec9942eae",
+  "external_id": "https://simonwillison.net/2026/Nov/10/muse-ember/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing Our Smallest, Most Efficient Model: Muse Ember",
+  "content": "<p><strong><a href=\"https://research.meta.ai/blog/muse-ember\">Introducing Our Smallest, Most Efficient Model: Muse Ember</a></strong></p>\nMeta AI just launched their entry in the Claude Haiku/GPT Luna category: Muse Ember, which they describe as:</p>\n<blockquote>\n<p>[...] our smallest and most efficient model designed for complex reasoning execution and the work agents repeat all day: tool calls, coding subtasks, routing, extraction, and long document parsing.</p>\n</blockquote>\n<p>For shorter prompts it's priced the same as GPT-6 Luna and Claude Haiku 5.5 - both are $0.10/million input tokens and $0.50/million output. Today's other big model release, Claude Fable 5.2, is <em>80x that price</em> at $8/$40.</p>\n<p>The pricing is a little less straightforward as prompts get longer, though. Luna, Ember, and Haiku all support up to a million input tokens, but they also all have a threshold after which the price goes up. Taking <em>that</em> threshold into account Ember is priced between the two others:</p>\n<center><table>\n  <thead>\n    <tr>\n      <th>Model</th>\n      <th>Prompt size</th>\n      <th>Input ($/M)</th>\n      <th>Cached input</th>\n      <th>Output</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td rowspan=\"2\">GPT-6 Luna</td>\n      <td>≤272k</td>\n      <td>$0.10</td>\n      <td>$0.01</td>\n      <td>$0.50</td>\n    </tr>\n    <tr>\n      <td>&gt;272k</td>\n      <td>$0.20</td>\n      <td>$0.02</td>\n      <td>$0.75</td>\n    </tr>\n    <tr>\n      <td rowspan=\"2\">Muse Ember 1.0",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

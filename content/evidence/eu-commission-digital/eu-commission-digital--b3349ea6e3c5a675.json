@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b3349ea6e3c5a675",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2392",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T09:22:38Z",
+  "detected_at": "2026-11-10T16:07:51.172582Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b3349ea6e3c5a675.json",
+  "content_hash": "sha256:3bab02be48cfe0e619ad9a73718bd676cee3a548e88ee068e3eb5c6e43799493",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2392",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by President von der Leyen with Bulgarian Prime Minister Radev",
+  "content": "European Commission Statement Varna, 10 Nov 2026 Dear Prime Minister,\nDear Rumen,\nI also want to express my deepest condolences to the victims of the multiple cars crash, the wounded, their families, but also ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
