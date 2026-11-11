@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--0f7368a2c98511a6",
+  "source": "x-discovery",
+  "source_url": "https://x.com/OpenAI/status/2120216592395174382",
+  "supporting_urls": [
+    "https://openai.com/index/introducing-businesses-chatgpt/"
+  ],
+  "published_at": "2026-11-10T18:06:42Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--0f7368a2c98511a6.json",
+  "content_hash": "sha256:77b67d74593b630237b970820d9ecef28d2d009263764940d41a167e813f5d4d",
+  "external_id": "2120216592395174382",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "OpenAI launches Businesses in ChatGPT with Business Agents",
+  "content": "X author: @OpenAI\n\nOpenAI shipped Business Hub in beta, allowing eligible U.S. ecommerce and service businesses to claim profiles, publish labeled Business Agents that answer customer questions using provided data, and view aggregated insights on mentions, clicks, and topics without sharing conversations.\n\nLinked sources:\n- https://openai.com/index/introducing-businesses-chatgpt/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "OpenAI",
+    "post_url": "https://x.com/OpenAI/status/2120216592395174382",
+    "linked_urls": [
+      "https://openai.com/index/introducing-businesses-chatgpt/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items mention OpenAI's launch of Business Hub or Business Agents in ChatGPT."
+    },
+    "linked_articles": [
+      {
+        "url": "https://openai.com/index/introducing-businesses-chatgpt/",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://openai.com/index/introducing-businesses-chatgpt/'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/40"
+      }
+    ]
+  }
+}

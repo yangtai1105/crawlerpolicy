@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--234e80a57c003c9a",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+  "supporting_urls": [],
+  "published_at": "2026-11-11T15:11:59Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--234e80a57c003c9a.json",
+  "content_hash": "sha256:55a2d38f413b26ace3452b7d37a8755883bcebfd2df0d7a75bb7018af6c6e339",
+  "external_id": "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Anthropic's IPO roadshow video",
+  "content": "<p><strong><a href=\"https://ipo.anthropic.com/us/#roadshow-video\">Anthropic&#x27;s IPO roadshow video</a></strong></p>\nAnthropic kicked off their IPO roadshow yesterday, and their roadshow video has some previously unreleased information about how their business works.</p>\n<p>The section on \"Approach to compute\" with co-founder Tom Brown is particularly interesting, describing how Anthropic train and serve Claude across AWS Trainium, Google TPUs, NVIDIA GPUs, and AMD GPUs.</p>\n<p>I'm not sure why there's no official video transcript, but here's <a href=\"https://gist.github.com/simonw/9806757fe8acec6221cb0a5cce4d720d\">one that I extracted</a> using MacWhisper. Highlights below:</p>\n<blockquote>\n<p>We train and serve Claude now across all four major chip families. That's only possible because early on we made an unconventional bet on a multi-chip strategy. At the time, many people thought that running AI models on different chips wasn't worth the effort. Each chip needs its own tailored software stack and inference stack, which is expensive and difficult to build. We've now been doing it for years, and we've gotten incredibly good at it. [...]</p>\n<p>As an example, this year, we started working with AMD GPUs for the first time. In the past, bringing on a new chip platform took dozens of engineers months of work <strong>This time, we had Mythos try it out. It got Claude running on AMD in just three days, with basically no human intervention</strong>. Claude ported or wrote almos",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

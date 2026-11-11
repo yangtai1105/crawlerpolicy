@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--31d0660f31f20cb6",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/intel-earnings-amd-earnings-intel-and-amds-divergence/",
+  "supporting_urls": [],
+  "published_at": "2026-11-11T11:00:00Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/stratechery/stratechery--31d0660f31f20cb6.json",
+  "content_hash": "sha256:c17f75a7ac8ee3a015e0b4877d576138def6852a2ce21264ac1d54bd12e7b386",
+  "external_id": "https://stratechery.com/?p=21146",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Intel Earnings, AMD Earnings, Intel and AMD’s Divergence",
+  "content": "<p>Intel and AMD's diverging earnings point to fundamental historical differences, and make me wonder if Intel needs to find a new (old) path.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

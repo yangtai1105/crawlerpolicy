@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--51f6fb4a2e1c9234",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/chatgpt-plus-for-veterans",
+  "supporting_urls": [],
+  "published_at": "2026-11-11T08:00:00Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--51f6fb4a2e1c9234.json",
+  "content_hash": "sha256:b5805270b7462531537a8af7913816a5bf5ffc21d7bd592b82e85ed379673b78",
+  "external_id": "https://openai.com/index/chatgpt-plus-for-veterans",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "ChatGPT Plus for veterans and servicemembers",
+  "content": "More than 20,000 veterans and transitioning service members have claimed a free year of ChatGPT Plus. See how they use it to prepare for civilian careers.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--dcc1ad22aa8bfed8",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2413",
+  "supporting_urls": [],
+  "published_at": "2026-11-11T10:41:44Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--dcc1ad22aa8bfed8.json",
+  "content_hash": "sha256:9e7e1318518ccbf6621e29351a018073adf7ce21cb4ae8f86b8358f1809e1ca9",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2413",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Opening remarks by Commissioner Hansen at the first in-person meeting of the Women in Farming Platform",
+  "content": "European Commission Speech Brussels, 11 Nov 2026 Ladies and gentlemen,\nDear women farmers and entrepreneurs,\nDear representatives of the European Investment Bank,\nand National financial institutions,\nThank you...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -125,6 +125,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-identification-and-brand-opt-outs",
+      "title": "Agent Identification And Brand Opt Outs",
+      "thesis": "Major platforms are using terms of service and crawler controls defensively to exclude third-party consumer agents while replacing them with vertically integrated first-party agentic alternatives.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-amazon-blocks-meta-s-muse-shopping-agent-and-deploys-proprietary-agent-alternati"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-identity-spoofing",
       "title": "Agent Identity Spoofing",
       "thesis": "Relying on declarative user-agent matching creates a dual vulnerability: honest bots face crude blocklists while malicious scrapers and spoofed agents trivially bypass controls simply by asserting trusted identity tokens.",
@@ -220,6 +233,19 @@
       "verified_development_slugs": [
         "cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-"
       ]
+    },
+    {
+      "key": "agent-spending-limits",
+      "title": "Agent Spending Limits",
+      "thesis": "Enterprise defense against automated systems is shifting from general web crawlers to delegated transactional agents, replacing blanket bans with gated architectures, signed profiles, and financial caps.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "agent-telemetry",
@@ -764,6 +790,19 @@
       ]
     },
     {
+      "key": "authenticated-agent-gateways",
+      "title": "Authenticated Agent Gateways",
+      "thesis": "Enterprise defense against automated systems is shifting from general web crawlers to delegated transactional agents, replacing blanket bans with gated architectures, signed profiles, and financial caps.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "automated-scraping-supply-chain-growth",
       "title": "Automated Scraping Supply Chain Growth",
       "thesis": "Automated access has evolved beyond superficial public page harvesting at the perimeter into deep transactional and authenticated user flows, rendering binary identity checks inadequate without real-time session intent analysis.",
@@ -990,6 +1029,19 @@
       "last_updated_at": "2026-10-15T13:05:42.271060Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "branded-conversational-agents",
+      "title": "Branded Conversational Agents",
+      "thesis": "By introducing publisher-managed profiles and designated Business Agents alongside privacy-preserving discovery metrics, OpenAI is constructing a formal publisher-facing commercial layer within conversational search.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-openai-launches-business-hub-beta-for-labeled-business-agents-and-analytics"
       ],
       "verified_development_slugs": []
     },
@@ -1641,6 +1693,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "defensive-agent-exclusion",
+      "title": "Defensive Agent Exclusion",
+      "thesis": "Enterprise defense against automated systems is shifting from general web crawlers to delegated transactional agents, replacing blanket bans with gated architectures, signed profiles, and financial caps.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "defensive-key-management",
       "title": "Defensive Key Management",
       "thesis": "As cryptographic bot verification libraries mature, internal state management requires defensive error propagation to prevent subtle key corruption or unexpected credential overwrites in long-running verification engines.",
@@ -1844,6 +1909,19 @@
       "verified_development_slugs": [
         "european-commission-designates-chatgpt-as-vlose-reddit-and-roblox-as-vlops-under"
       ]
+    },
+    {
+      "key": "dynamic-agent-key-discovery",
+      "title": "Dynamic Agent Key Discovery",
+      "thesis": "AI operators are decoupling product-level agent identities from parent corporate domains in cryptographic authentication headers, forcing bot verifiers to handle dynamic, multi-domain signature registries rather than hardcoded corporate trust lists.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "dynamic-session-level-crawler-scoring",
@@ -2241,6 +2319,19 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "gradual-signature-directory-rollouts",
+      "title": "Gradual Signature Directory Rollouts",
+      "thesis": "AI operators are decoupling product-level agent identities from parent corporate domains in cryptographic authentication headers, forcing bot verifiers to handle dynamic, multi-domain signature registries rather than hardcoded corporate trust lists.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
       ],
       "verified_development_slugs": []
     },
@@ -2733,6 +2824,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "marketplace-agent-blocking",
+      "title": "Marketplace Agent Blocking",
+      "thesis": "Major platforms are using terms of service and crawler controls defensively to exclude third-party consumer agents while replacing them with vertically integrated first-party agentic alternatives.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-amazon-blocks-meta-s-muse-shopping-agent-and-deploys-proprietary-agent-alternati"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "maturity-gaps-in-ecosystem-http-signature-libraries",
       "title": "Maturity Gaps In Ecosystem Http Signature Libraries",
       "thesis": "Edge bot verification implementations often stumble on header-folding and component-identifier edge cases in general-purpose RFC 9421 libraries, necessitating pre-normalization workarounds until upstream cryptographic parsers mature.",
@@ -3189,6 +3293,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "product-specific-agent-cryptographic-identities",
+      "title": "Product Specific Agent Cryptographic Identities",
+      "thesis": "AI operators are decoupling product-level agent identities from parent corporate domains in cryptographic authentication headers, forcing bot verifiers to handle dynamic, multi-domain signature registries rather than hardcoded corporate trust lists.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "programmatic-web-interaction",
       "title": "Programmatic Web Interaction",
       "thesis": "By natively integrating WebMCP into a purpose-built edge browser, Cloudflare is shifting machine browsing from fragile visual scraping and DOM synthesis toward explicit, standardized programmatic tool calling.",
@@ -3198,6 +3315,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-adds-webmcp-support-and-terminal-rendering-to-kitesurf-agent-browser"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "proprietary-agent-self-preferencing",
+      "title": "Proprietary Agent Self Preferencing",
+      "thesis": "Major platforms are using terms of service and crawler controls defensively to exclude third-party consumer agents while replacing them with vertically integrated first-party agentic alternatives.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-amazon-blocks-meta-s-muse-shopping-agent-and-deploys-proprietary-agent-alternati"
       ],
       "verified_development_slugs": []
     },
@@ -3532,6 +3662,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "signed-agent-identity-verification",
+      "title": "Signed Agent Identity Verification",
+      "thesis": "Enterprise defense against automated systems is shifting from general web crawlers to delegated transactional agents, replacing blanket bans with gated architectures, signed profiles, and financial caps.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "stablecoin-edge-settlement",
       "title": "Stablecoin Edge Settlement",
       "thesis": "By shifting from upfront enterprise licensing or human credit-card subscriptions to inline HTTP 402 machine payments, infrastructure providers are operationalizing an autonomous economy where agents pay micro-metered rates directly at request time.",
@@ -3702,6 +3845,19 @@
       "last_updated_at": "2026-10-05T16:50:30.941105Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-and-industry-analysts-frame-agent-trust-management-as-a-layer-distinct-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "synthetic-search-analytics",
+      "title": "Synthetic Search Analytics",
+      "thesis": "By introducing publisher-managed profiles and designated Business Agents alongside privacy-preserving discovery metrics, OpenAI is constructing a formal publisher-facing commercial layer within conversational search.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-11T15:53:10.884486Z",
+      "last_updated_at": "2026-11-11T15:53:10.884486Z",
+      "related_feed_slugs": [
+        "x-discovery-openai-launches-business-hub-beta-for-labeled-business-agents-and-analytics"
       ],
       "verified_development_slugs": []
     },

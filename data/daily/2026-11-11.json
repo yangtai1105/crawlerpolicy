@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-11",
+  "generated_at": "2026-11-11T15:53:10.884486Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat",
+      "status": "signal",
+      "importance": 0.78,
+      "published_at": "2026-11-11T15:28:43Z"
+    },
+    {
+      "slug": "x-discovery-amazon-blocks-meta-s-muse-shopping-agent-and-deploys-proprietary-agent-alternati",
+      "status": "signal",
+      "importance": 0.75,
+      "published_at": "2026-11-11T15:35:33Z"
+    },
+    {
+      "slug": "x-discovery-openai-launches-business-hub-beta-for-labeled-business-agents-and-analytics",
+      "status": "signal",
+      "importance": 0.72,
+      "published_at": "2026-11-10T18:06:42Z"
+    },
+    {
+      "slug": "datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai",
+      "status": "reported",
+      "importance": 0.68,
+      "published_at": "2026-11-11T14:50:47Z"
+    }
+  ]
+}

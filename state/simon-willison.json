@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-10T16:07:51.172582+00:00",
-  "last_fetch_succeeded_at": "2026-11-10T16:07:51.172582+00:00",
-  "last_evidence_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_checked_at": "2026-11-11T15:53:10.884486+00:00",
+  "last_fetch_succeeded_at": "2026-11-11T15:53:10.884486+00:00",
+  "last_evidence_at": "2026-11-11T15:53:10.884486+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -53,7 +53,9 @@
     "https://simonwillison.net/2026/Nov/9/mysterious-beeps/",
     "https://simonwillison.net/2026/Nov/9/hn-50421091/",
     "https://simonwillison.net/2026/Nov/9/details-summary/",
-    "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/"
+    "https://simonwillison.net/2026/Nov/8/sqlite-parse-number-c-vs-rust/",
+    "https://simonwillison.net/2026/Nov/11/anthropic-ipo-roadshow/",
+    "https://simonwillison.net/2026/Nov/10/llm-gemini/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

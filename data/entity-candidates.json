@@ -111,13 +111,15 @@
       "kind": "player",
       "observed_name": "Charles Schwab",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
-      "last_seen_at": "2026-10-18T12:27:30.284320Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-11T15:53:10.884486Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "x-discovery--575795a51d9ff9e6"
+        "x-discovery--575795a51d9ff9e6",
+        "x-discovery--1d8ca0c48437bf91"
       ],
       "feed_slugs": [
-        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
+        "2026-11-11-x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
       ]
     },
     "player:chatgpt": {
@@ -224,6 +226,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:delta": {
+      "kind": "player",
+      "observed_name": "Delta",
+      "first_seen_at": "2026-11-11T15:53:10.884486Z",
+      "last_seen_at": "2026-11-11T15:53:10.884486Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--1d8ca0c48437bf91"
+      ],
+      "feed_slugs": [
+        "2026-11-11-x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
       ]
     },
     "player:delta air lines": {
@@ -474,13 +489,15 @@
       "kind": "player",
       "observed_name": "JPMorgan Chase",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
-      "last_seen_at": "2026-10-18T12:27:30.284320Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-11T15:53:10.884486Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "x-discovery--575795a51d9ff9e6"
+        "x-discovery--575795a51d9ff9e6",
+        "x-discovery--1d8ca0c48437bf91"
       ],
       "feed_slugs": [
-        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+        "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
+        "2026-11-11-x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
       ]
     },
     "player:known agents": {
@@ -559,6 +576,19 @@
       ],
       "feed_slugs": [
         "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ]
+    },
+    "player:muse": {
+      "kind": "player",
+      "observed_name": "Muse",
+      "first_seen_at": "2026-11-11T15:53:10.884486Z",
+      "last_seen_at": "2026-11-11T15:53:10.884486Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "datadome-blog--da8d7906e0961578"
+      ],
+      "feed_slugs": [
+        "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
       ]
     },
     "player:nieman lab": {
@@ -875,15 +905,17 @@
       "kind": "player",
       "observed_name": "Walmart",
       "first_seen_at": "2026-10-18T12:27:30.284320Z",
-      "last_seen_at": "2026-10-31T14:19:26.797580Z",
-      "occurrences": 2,
+      "last_seen_at": "2026-11-11T15:53:10.884486Z",
+      "occurrences": 3,
       "evidence_ids": [
         "x-discovery--575795a51d9ff9e6",
-        "x-discovery--5cf3f568a76179cd"
+        "x-discovery--5cf3f568a76179cd",
+        "x-discovery--1d8ca0c48437bf91"
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
-        "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int"
+        "2026-10-30-x-discovery-doordash-reports-modest-ai-agent-volumes-but-signals-openness-to-third-party-int",
+        "2026-11-11-x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
       ]
     },
     "player:web bot auth": {
@@ -1082,15 +1114,16 @@
       "kind": "protocol",
       "observed_name": "HTTP Message Signatures",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-11-06T15:41:50.881618Z",
-      "occurrences": 6,
+      "last_seen_at": "2026-11-11T15:53:10.884486Z",
+      "occurrences": 7,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
         "ietf-webbotauth-wg--590751b5f4db81f6",
         "ietf-webbotauth-wg--585a35def49ea164",
         "ietf-webbotauth-wg--79c2f8436380dea1",
         "ietf-webbotauth-wg--73b525a0d33d1f6c",
-        "web-bot-auth-repo--e806f56c6990d66a"
+        "web-bot-auth-repo--e806f56c6990d66a",
+        "datadome-blog--da8d7906e0961578"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
@@ -1098,7 +1131,8 @@
         "2026-10-27-ietf-webbotauth-wg-ietf-web-bot-auth-wg-sees-revision-of-registry-and-signature-agent-card-draft",
         "2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
         "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
-        "2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-"
+        "2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
+        "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
       ]
     },
     "protocol:jafar": {
@@ -1252,15 +1286,16 @@
       "kind": "protocol",
       "observed_name": "RFC 9421",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-11-06T15:41:50.881618Z",
-      "occurrences": 6,
+      "last_seen_at": "2026-11-11T15:53:10.884486Z",
+      "occurrences": 7,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
         "web-bot-auth-repo--f2800be0b3b43903",
         "web-bot-auth-repo--cb346e9d26f1be1d",
         "web-bot-auth-repo--2f675ebb40cb7d9e",
         "web-bot-auth-repo--202719f2d0bba953",
-        "web-bot-auth-repo--478630190caac379"
+        "web-bot-auth-repo--478630190caac379",
+        "datadome-blog--da8d7906e0961578"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
@@ -1268,7 +1303,8 @@
         "2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421",
         "2026-11-06-web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures",
         "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
-        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
+        "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
       ]
     },
     "protocol:rfc 9651": {

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "us-ftc-federal-register--e13a4ed58b4e6bb6",
+  "source": "us-ftc-federal-register",
+  "source_url": "https://www.federalregister.gov/documents/2026/11/12/2026-23028/ses-performance-review-board",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T05:00:00Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/us-ftc-federal-register/us-ftc-federal-register--e13a4ed58b4e6bb6.json",
+  "content_hash": "sha256:00b4ed676d088f231206c66e1245597f2167f98ea0420749da4e1c3e9145954b",
+  "external_id": "https://www.federalregister.gov/documents/2026/11/12/2026-23028/ses-performance-review-board",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "SES Performance Review Board",
+  "content": "Notice is hereby given of the appointment of members to the FTC Performance Review Board.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

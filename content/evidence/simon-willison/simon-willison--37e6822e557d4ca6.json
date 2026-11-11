@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--37e6822e557d4ca6",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T20:09:44Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--37e6822e557d4ca6.json",
+  "content_hash": "sha256:6860407a73c9664c66bb44d9f8fc7d58f55a6674f0419d8810e5dbc65f27892a",
+  "external_id": "https://simonwillison.net/2026/Nov/10/llm-gemini/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "llm-gemini 0.36",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-gemini/releases/tag/0.36\">llm-gemini 0.36</a></p>\n        <p>Gemini 4 Carbon was announced <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-carbon/\">two weeks ago</a> for \"a subset of cyber defenders\", but today it's <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-carbon-now-available/\">available to everyone else</a>.</p>\n<p>This is Google's best ever Gemini, priced at $2/million input and $10/million output at launch (that's GPT-6.1 Sol / Claude Sonnet 5.5 prices) but scheduled to double in price to $4/$20 on December 1st (same as Opus 5.5).</p>\n<p>Here are <a href=\"https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fe5bf860633fc12e8f926f305c4c3190c\">three pelicans</a> for the low, medium and high thinking efforts (it defaults to medium). This is the pelican I got for high:</p>\n<p><img alt=\"A lovely pelican. Looks like it has a monocle on. Nice elegant sailor hat with a blue bow. Basket and fish. Funky but workable bicycle design. Pleasing use of gradients.\" src=\"https://static.simonwillison.net/static/2026/carbon-pelican.webp\" /></p>\n<p>Gemini pelicans have all been great for a while now, so I also tested it out using Google's Antigravity IDE with a prompt I first tried <a href=\"https://simonwillison.net/2026/Nov/10/yonkers-rises/\">with Claude Fable 5.2 yesterday</a>:",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

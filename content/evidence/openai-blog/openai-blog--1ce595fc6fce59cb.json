@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--1ce595fc6fce59cb",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/gilbert-tobin-sam-nickless",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T00:00:00Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--1ce595fc6fce59cb.json",
+  "content_hash": "sha256:98ff53fe555208d62d111c37eb75ef4144bae6492b6709dd99501ad89e1079d1",
+  "external_id": "https://openai.com/index/gilbert-tobin-sam-nickless",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Gilbert + Tobin rethinks the business of law with AI",
+  "content": "A conversation with Sam Nickless, Partner and Chief Executive Officer at Gilbert + Tobin.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

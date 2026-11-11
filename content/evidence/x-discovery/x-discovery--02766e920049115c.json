@@ -1,0 +1,32 @@
+{
+  "evidence_id": "x-discovery--02766e920049115c",
+  "source": "x-discovery",
+  "source_url": "https://x.com/AIPulseNewsX/status/2120540942755340631",
+  "supporting_urls": [],
+  "published_at": "2026-11-11T15:35:33Z",
+  "detected_at": "2026-11-11T15:53:10.884486Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--02766e920049115c.json",
+  "content_hash": "sha256:f8e202f72a1953391cedbae111470d3280e06472d7c257e85ab4bddac3a46753",
+  "external_id": "2120540942755340631",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Amazon blocked Meta's Muse AI agent then launched its own",
+  "content": "X author: @AIPulseNewsX\n\nAmazon blocked Meta's Muse shopping agent within 12 days citing unauthorized access and terms violations (while its robots.txt blocks several AI user-agents), then launched its own \"Buy for Me\" agent that identifies itself and allows brand opt-outs.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "AIPulseNewsX",
+    "post_url": "https://x.com/AIPulseNewsX/status/2120540942755340631",
+    "linked_urls": [],
+    "provider_citations": [],
+    "front": "access-discovery",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Amazon's blocking of Meta's Muse shopping agent and subsequent launch of its own 'Buy for Me' agent has not been covered in previous items."
+    },
+    "linked_articles": []
+  }
+}
