@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--c80481b1b292445a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/ai/2026/nov/ai-vulnerability-surge-exposure-response",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T15:00:00Z",
+  "detected_at": "2026-11-12T16:36:29.095235Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--c80481b1b292445a.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "https://www.akamai.com/blog/ai/2026/nov/ai-vulnerability-surge-exposure-response",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "When AI Finds the Bugs: Rethinking Exposure in a Flood of Vulnerabilities",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

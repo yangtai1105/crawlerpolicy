@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--daee61c082469802",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2415",
+  "supporting_urls": [],
+  "published_at": "2026-11-11T23:00:00Z",
+  "detected_at": "2026-11-12T16:36:29.095235Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--daee61c082469802.json",
+  "content_hash": "sha256:fbd7e17ed943c626137956c7fd59a62a377164274b2c600a5a1b7fd234691082",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2415",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission welcomes Nederlandse Spoorwegen's new sales policy for railway vehicles and closes antitrust investigation",
+  "content": "European Commission Press release Brussels, 12 Nov 2026 The European Commission has decided to close its preliminary antitrust probe into allegedly anticompetitive behaviour by the Dutch State-owned rail incumbent Nederlandse Spoorwegen (‘NS').",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

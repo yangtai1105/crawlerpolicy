@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--26492d122ae79ac7",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2425",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T13:46:04Z",
+  "detected_at": "2026-11-12T16:36:29.095235Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--26492d122ae79ac7.json",
+  "content_hash": "sha256:db5e9c61e1b2eb3fbbbed6f02ec7ddf9e714d4626df946af3e7141f25b0520e8",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2425",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Joint statement by President von der Leyen and President Costa following their meeting with President Zelenskyy in Dublin",
+  "content": "European Commission Statement Dublin, 12 Nov 2026 The EPC Summit in Dublin was another opportunity to reaffirm our unwavering support for President Zelenskyy and Ukraine.\nWe welcome the talks this week in Abu D...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -99,6 +99,19 @@
       ]
     },
     {
+      "key": "agent-compliance-benchmarking",
+      "title": "Agent Compliance Benchmarking",
+      "thesis": "Evaluating AI agents against both machine-readable protocols and legal terms marks a shift toward testing whether autonomous software respects site-level access boundaries beyond traditional search indexers.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-12T16:36:29.095235Z",
+      "last_updated_at": "2026-11-12T16:36:29.095235Z",
+      "related_feed_slugs": [
+        "x-discovery-researchers-release-scrapebench-to-test-ai-agent-compliance-with-robots-txt-and-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-development-lifecycle",
       "title": "Agent Development Lifecycle",
       "thesis": "By automatically provisioning isolated Durable Object namespaces and Container applications per branch, Cloudflare shifts serverless edge testing from stateless mock environments to state-isolated sandboxes tailored for autonomous AI agents executing iterative deploy-test-fix loops via MCP.",
@@ -293,6 +306,21 @@
       ]
     },
     {
+      "key": "agentic-browser-adoption",
+      "title": "Agentic Browser Adoption",
+      "thesis": "AI developers are continuing to decouple interactive assistant fetches and browser automation from generic crawling, introducing specialized user-agent strings for specific product features like notebook source imports and legal research.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-12T16:36:29.095235Z",
+      "last_updated_at": "2026-11-12T16:36:29.095235Z",
+      "related_feed_slugs": [
+        "knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ],
+      "verified_development_slugs": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    },
+    {
       "key": "agentic-browser-sandboxing",
       "title": "Agentic Browser Sandboxing",
       "thesis": "Rather than treating machine access purely as abusive traffic to be mitigated, Cloudflare is shifting toward commercializing agent interactions at the edge by deploying standard payment challenge flows (HTTP 402/x402) and metering access for AI buyers.",
@@ -328,6 +356,19 @@
       "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "human-blog-human-security-adds-claude-duet-detection-showing-consumer-e-commerce-traffic-pa"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agentic-checkout-blocking",
+      "title": "Agentic Checkout Blocking",
+      "thesis": "Enterprise boundaries around agent access are segregating read-only discovery from transactional execution, driven by regulatory attestation requirements and disintermediation defense rather than mere server scraping load.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-12T16:36:29.095235Z",
+      "last_updated_at": "2026-11-12T16:36:29.095235Z",
+      "related_feed_slugs": [
+        "x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings"
       ],
       "verified_development_slugs": []
     },
@@ -1825,6 +1866,19 @@
       "last_updated_at": "2026-10-24T12:27:35.735465Z",
       "related_feed_slugs": [
         "x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "disintermediation-defense",
+      "title": "Disintermediation Defense",
+      "thesis": "Enterprise boundaries around agent access are segregating read-only discovery from transactional execution, driven by regulatory attestation requirements and disintermediation defense rather than mere server scraping load.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-12T16:36:29.095235Z",
+      "last_updated_at": "2026-11-12T16:36:29.095235Z",
+      "related_feed_slugs": [
+        "x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings"
       ],
       "verified_development_slugs": []
     },
@@ -3412,6 +3466,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "regulatory-attestation-barriers",
+      "title": "Regulatory Attestation Barriers",
+      "thesis": "Enterprise boundaries around agent access are segregating read-only discovery from transactional execution, driven by regulatory attestation requirements and disintermediation defense rather than mere server scraping load.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-12T16:36:29.095235Z",
+      "last_updated_at": "2026-11-12T16:36:29.095235Z",
+      "related_feed_slugs": [
+        "x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "residential-proxy-agent-routing",
       "title": "Residential Proxy Agent Routing",
       "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
@@ -3483,6 +3550,19 @@
       "verified_development_slugs": [
         "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
       ]
+    },
+    {
+      "key": "robots-txt-compliance-testing",
+      "title": "Robots Txt Compliance Testing",
+      "thesis": "Evaluating AI agents against both machine-readable protocols and legal terms marks a shift toward testing whether autonomous software respects site-level access boundaries beyond traditional search indexers.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-12T16:36:29.095235Z",
+      "last_updated_at": "2026-11-12T16:36:29.095235Z",
+      "related_feed_slugs": [
+        "x-discovery-researchers-release-scrapebench-to-test-ai-agent-compliance-with-robots-txt-and-"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "robots-txt-modernization",
@@ -3977,6 +4057,21 @@
         "cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "user-agent-specialization",
+      "title": "User Agent Specialization",
+      "thesis": "AI developers are continuing to decouple interactive assistant fetches and browser automation from generic crawling, introducing specialized user-agent strings for specific product features like notebook source imports and legal research.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-12T16:36:29.095235Z",
+      "last_updated_at": "2026-11-12T16:36:29.095235Z",
+      "related_feed_slugs": [
+        "knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ],
+      "verified_development_slugs": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
     },
     {
       "key": "user-choice-screens-and-search-default-regulation",

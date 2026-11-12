@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--cf40261e296f4305",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/children-first-declaration",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T00:00:00Z",
+  "detected_at": "2026-11-12T16:36:29.095235Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--cf40261e296f4305.json",
+  "content_hash": "sha256:ba704cb5a556833ff3dec6b688ae417391083d43ae5c4ecdb64bd99a927854b9",
+  "external_id": "https://openai.com/index/children-first-declaration",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Supporting research on AI and children’s safety",
+  "content": "OpenAI commits $2 million to research on AI and children’s safety. The work supports shared tools to measure risks and opportunities for young people.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

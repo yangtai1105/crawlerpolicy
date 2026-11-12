@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--acba168029a116fd",
+  "source": "x-discovery",
+  "source_url": "https://x.com/ktwu01/status/2120665138944467304",
+  "supporting_urls": [
+    "https://arxiv.org/pdf/2411.XXXXX.pdf"
+  ],
+  "published_at": "2026-11-11T23:49:03Z",
+  "detected_at": "2026-11-12T16:36:29.095235Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--acba168029a116fd.json",
+  "content_hash": "sha256:27fd0373ad681b2676a6774388de0480f8ae00333749e57877fe0d5e85f8d9a7",
+  "external_id": "2120665138944467304",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "ScrapeBench benchmark released for evaluating AI agents' legal compliance with robots.txt and terms of service",
+  "content": "X author: @ktwu01\n\nResearchers released ScrapeBench, a benchmark testing AI agents' compliance with robots.txt and website terms of service prohibitions on scraping across 1,626 sites.\n\nLinked sources:\n- https://arxiv.org/pdf/2411.XXXXX.pdf",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "ktwu01",
+    "post_url": "https://x.com/ktwu01/status/2120665138944467304",
+    "linked_urls": [
+      "https://arxiv.org/pdf/2411.XXXXX.pdf"
+    ],
+    "provider_citations": [],
+    "front": "access-discovery",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items mention ScrapeBench or a benchmark evaluating AI agents' compliance with robots.txt and website terms of service."
+    },
+    "linked_articles": [
+      {
+        "url": "https://arxiv.org/pdf/2411.XXXXX.pdf",
+        "error": "HTTPStatusError: Client error '404 Not Found' for url 'https://arxiv.org/pdf/2411.XXXXX'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/404"
+      }
+    ]
+  }
+}

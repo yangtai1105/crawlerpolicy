@@ -1,0 +1,19 @@
+{
+  "evidence_id": "cf-changelog-ai-search--5fefed6daaf855c8",
+  "source": "cf-changelog-ai-search",
+  "source_url": "https://developers.cloudflare.com/changelog/post/2026-11-12-d1-data-source/",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T12:00:00Z",
+  "detected_at": "2026-11-12T16:36:29.095235Z",
+  "content_path": "content/evidence/cf-changelog-ai-search/cf-changelog-ai-search--5fefed6daaf855c8.json",
+  "content_hash": "sha256:7e13686a16c57ed1dbcde791cd6710ad3baad9dd2ff277ad0e2b99116ff01af3",
+  "external_id": "https://developers.cloudflare.com/changelog/post/2026-11-12-d1-data-source/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "AI Search, D1 - AI Search supports D1 databases as a data source (beta)",
+  "content": "<p><a href=\"https://developers.cloudflare.com/ai-search/\">AI Search</a> can now use a <a href=\"https://developers.cloudflare.com/d1/\">D1</a> database as a data source. AI Search runs a read-only query that you provide and indexes each returned row as a separate document. Scheduled syncs keep the index current as rows are added, changed, or removed.</p>\n<p>Create D1-backed instances from the dashboard, the REST API, or the Workers binding.</p>\n<img alt=\"Selecting a D1 database as the data source when creating an AI Search instance in the dashboard\" height=\"1676\" src=\"https://developers.cloudflare.com/cdn-cgi/image/onerror=redirect,width=1964,height=1676,format=webp/_astro/d1-data-source-dashboard.DkeDgrZb.png\" width=\"1964\" />\n<figure class=\"nb-code-figure\"><pre class=\"astro-code astro-code-themes github-light github-dark nb-shiki-c6xiwz\" tabindex=\"0\"><code><span class=\"line\"><span class=\"nb-shiki-1t8gfj\">curl</span><span class=\"nb-shiki-dzsirb\"> -X</span><span class=\"nb-shiki-mdbnqw\"> POST</span><span class=\"nb-shiki-mdbnqw\"> \"https://api.cloudflare.com/client/v4/accounts/&lt;ACCOUNT_ID&gt;/ai-search/namespaces/default/instances\"</span><span class=\"nb-shiki-dzsirb\"> \\</span></span>\n<span class=\"line\"><span class=\"nb-shiki-dzsirb\">  -H</span><span class=\"nb-shiki-mdbnqw\"> \"Authorization: Bearer &lt;API_TOKEN&gt;\"</span><span class=\"nb-shiki-dzsirb\"> \\</span></span>\n<span class=\"line\"><span class=\"nb-shiki-dzsirb\">  -H</span><span class=\"nb-shiki-mdbnqw\"> \"Content-Type: application/json\"</span><span class=\"nb-shiki-dzsirb\"> \\</span></span>\n<span class=\"line\"><span class=\"nb-shiki-dzsirb\">  --data</span><span class=\"nb-shiki-mdbnqw\"> '{</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">    \"id\": \"help-center\",</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">    \"type\": \"d1\",</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">    \"source\": \"&lt;D1_DATABASE_ID&gt;\",</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">    \"token_id\": \"&lt;SERVICE_TOKEN_ID&gt;\",</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">    \"source_params\": {</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">      \"d1\": {</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">        \"query\": \"SELECT article_id AS id, title, content, category AS meta_category\\nFROM articles\\nWHERE published = 1\"</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">      }</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">    }</span></span>\n<span class=\"line\"><span class=\"nb-shiki-mdbnqw\">  }'</span></span></code></pre></figure>\n<p>Learn more in <a href=\"https://developers.cloudflare.com/ai-search/configuration/data-source/d1/\">D1 data source</a>.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

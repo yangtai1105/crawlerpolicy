@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-11T15:53:10.884486Z",
-  "last_fully_successful_at": "2026-11-11T15:53:10.884486Z",
+  "last_attempted_at": "2026-11-12T16:36:29.095235Z",
+  "last_fully_successful_at": "2026-11-12T16:36:29.095235Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -150,9 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--d4f282bb6cae829e"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -162,13 +160,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--da8d7906e0961578"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai.md"
-      ]
+      "feed_items_written": []
     },
     "akamai-blog": {
       "fetch": "ok",
@@ -176,7 +170,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "akamai-blog--c80481b1b292445a",
+        "akamai-blog--379e534745d00f72"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -196,7 +193,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "imperva-blog--21592f952aa2bbd9"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -217,9 +216,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--ad504e2d8581e2f3",
-        "uk-cma--d52f0f668a1c953f",
-        "uk-cma--e9c342d266303bd8"
+        "uk-cma--26a2d94cf283f8b3"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -251,16 +248,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--a2baa635fd60a7d5",
-        "eu-commission-digital--2c28b11aae50d2f1",
-        "eu-commission-digital--d8a8bee53a6f3672",
-        "eu-commission-digital--dcc1ad22aa8bfed8",
-        "eu-commission-digital--485735bd49cc64b8",
-        "eu-commission-digital--48bf58525923c33b",
-        "eu-commission-digital--dbff5ea6861b7fea",
-        "eu-commission-digital--3197115f163de0c3",
-        "eu-commission-digital--ab69ab010a88c575",
-        "eu-commission-digital--aa8c67dee0d814e8"
+        "eu-commission-digital--fed3cddb7f079a0b",
+        "eu-commission-digital--4b82ce7397b37890",
+        "eu-commission-digital--26492d122ae79ac7",
+        "eu-commission-digital--4e721033753a7606",
+        "eu-commission-digital--c3135bdb00c63cde",
+        "eu-commission-digital--1e3950c565b2cca0",
+        "eu-commission-digital--2eaeabf3266f90b0",
+        "eu-commission-digital--2beec3abf4a1c384",
+        "eu-commission-digital--daee61c082469802"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -271,9 +267,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "us-ftc-federal-register--e13a4ed58b4e6bb6"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -333,9 +327,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ucp-spec--0373ecc793ac9557"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -406,10 +398,14 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "knownagents-directory--e151ba509ea838ae"
+        "knownagents-directory--d1a63e4a5cc93387"
       ],
-      "events_written": [],
-      "feed_items_written": []
+      "events_written": [
+        "content/events/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md"
+      ]
     },
     "tollbit-state-of-bots": {
       "fetch": "ok",
@@ -438,7 +434,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--31d0660f31f20cb6"
+        "stratechery--39907dee3258eb83"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -450,8 +446,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--234e80a57c003c9a",
-        "simon-willison--37e6822e557d4ca6"
+        "simon-willison--de3076ab2ff8fe4d",
+        "simon-willison--8dd016016364b66f",
+        "simon-willison--37b179490950dff5",
+        "simon-willison--4a780ecaf4f3464a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -462,9 +460,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-research--6c11e07d8e05e160"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -475,8 +471,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--1ce595fc6fce59cb",
-        "openai-blog--51f6fb4a2e1c9234"
+        "openai-blog--9807c3a1988b8f03",
+        "openai-blog--cf40261e296f4305"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -497,7 +493,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cf-changelog-ai-search--5fefed6daaf855c8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -517,7 +515,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "ietf-webbotauth-wg--cdd8d426a6629210"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -588,24 +588,23 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--0f7368a2c98511a6",
-        "x-discovery--1d8ca0c48437bf91",
-        "x-discovery--02766e920049115c"
+        "x-discovery--3b569bca61c9fcdd",
+        "x-discovery--acba168029a116fd"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-11-10-x-discovery-openai-launches-business-hub-beta-for-labeled-business-agents-and-analytics.md",
-        "content/feed/2026-11-11-x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat.md",
-        "content/feed/2026-11-11-x-discovery-amazon-blocks-meta-s-muse-shopping-agent-and-deploys-proprietary-agent-alternati.md"
+        "content/feed/2026-11-11-x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings.md",
+        "content/feed/2026-11-11-x-discovery-researchers-release-scrapebench-to-test-ai-agent-compliance-with-robots-txt-and-.md"
       ]
     }
   },
-  "events_written": [],
+  "events_written": [
+    "content/events/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md"
+  ],
   "feed_items_written": [
-    "content/feed/2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai.md",
-    "content/feed/2026-11-10-x-discovery-openai-launches-business-hub-beta-for-labeled-business-agents-and-analytics.md",
-    "content/feed/2026-11-11-x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat.md",
-    "content/feed/2026-11-11-x-discovery-amazon-blocks-meta-s-muse-shopping-agent-and-deploys-proprietary-agent-alternati.md"
+    "content/feed/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md",
+    "content/feed/2026-11-11-x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings.md",
+    "content/feed/2026-11-11-x-discovery-researchers-release-scrapebench-to-test-ai-agent-compliance-with-robots-txt-and-.md"
   ],
   "provider": {
     "name": "gemini",
@@ -615,12 +614,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-11",
-    "item_count": 4,
-    "path": "data/daily/2026-11-11.json"
+    "edition_date": "2026-11-12",
+    "item_count": 3,
+    "path": "data/daily/2026-11-12.json"
   },
   "insight_threads": {
-    "thread_count": 299,
+    "thread_count": 306,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -630,9 +629,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 3,
+    "candidate_count": 2,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.133767,
+    "estimated_tool_cost_usd": 0.108733,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
