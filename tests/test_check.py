@@ -270,6 +270,30 @@ async def test_pre_cutoff_item_is_not_analyzed_or_published(repo):
     assert EvidenceStage.SKIPPED_CUTOFF.value in evidence[0].read_text()
 
 
+async def test_archive_items_far_before_the_cutoff_leave_no_evidence(repo):
+    _write_item_source(repo)
+    analyze = AsyncMock(return_value=_material_analysis())
+    ancient = _item("ancient", datetime(2014, 3, 1, tzinfo=UTC))
+    in_window = _item("june", datetime(2026, 6, 15, tzinfo=UTC))
+
+    await run_check(
+        repo_root=repo,
+        now=datetime(2026, 8, 30, 8, tzinfo=UTC),
+        fetch_dispatch=AsyncMock(
+            return_value=FetchResult(mode=ResultMode.PER_ITEM, items=[ancient, in_window])
+        ),
+        analyze_change=analyze,
+    )
+
+    analyze.assert_not_awaited()
+    evidence = list((repo / "content" / "evidence").glob("*/*.json"))
+    # Only the item inside the backfill window is kept for backfill-feed.
+    assert len(evidence) == 1
+    assert '"external_id": "june"' in evidence[0].read_text()
+    state = json.loads((repo / "state" / "ecosystem-report.json").read_text())
+    assert {"ancient", "june"} <= set(state["last_seen_guids"])
+
+
 async def test_reported_item_writes_feed_without_development(repo):
     _write_item_source(repo, tier="specialist")
     current = _item("current", datetime(2026, 8, 30, 7, tzinfo=UTC))
