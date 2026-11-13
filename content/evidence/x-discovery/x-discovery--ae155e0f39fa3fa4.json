@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--ae155e0f39fa3fa4",
+  "source": "x-discovery",
+  "source_url": "https://x.com/Reuters/status/2121055467308736674",
+  "supporting_urls": [
+    "https://www.reuters.com/business/openai-google-anthropic-hit-with-lawsuit-seeking-halt-frontier-ai-development-2026-11-12/"
+  ],
+  "published_at": "2026-11-13T01:40:05Z",
+  "detected_at": "2026-11-13T15:56:00.186978Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--ae155e0f39fa3fa4.json",
+  "content_hash": "sha256:58ef6fdf3c3a69e42e1bf09adea29c0f888089c3e2d7889ac67a78c398bdc4d8",
+  "external_id": "2121055467308736674",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "OpenAI, Google, Anthropic hit with lawsuit seeking halt to frontier AI development",
+  "content": "X author: @Reuters\n\nReuters reports that OpenAI, Google and Anthropic have been hit with a lawsuit seeking to halt frontier AI development over serious risks. Public Citizen and other advocacy groups filed the action.\n\nLinked sources:\n- https://www.reuters.com/business/openai-google-anthropic-hit-with-lawsuit-seeking-halt-frontier-ai-development-2026-11-12/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "Reuters",
+    "post_url": "https://x.com/Reuters/status/2121055467308736674",
+    "linked_urls": [
+      "https://www.reuters.com/business/openai-google-anthropic-hit-with-lawsuit-seeking-halt-frontier-ai-development-2026-11-12/"
+    ],
+    "provider_citations": [],
+    "front": "governance-law",
+    "shadow": false
+  }
+}

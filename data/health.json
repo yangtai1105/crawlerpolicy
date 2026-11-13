@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-12T16:36:29.095235Z",
-  "last_fully_successful_at": "2026-11-12T16:36:29.095235Z",
+  "last_attempted_at": "2026-11-13T15:56:00.186978Z",
+  "last_fully_successful_at": "2026-11-13T15:56:00.186978Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -150,7 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--073cb47d940d1ee0"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -170,10 +172,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "akamai-blog--c80481b1b292445a",
-        "akamai-blog--379e534745d00f72"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -194,7 +193,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "imperva-blog--21592f952aa2bbd9"
+        "imperva-blog--38c6f70c6912c390"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -205,9 +204,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "human-blog--ddb55490259b2a0a"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-10-human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026.md"
+      ]
     },
     "uk-cma": {
       "fetch": "ok",
@@ -216,7 +219,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--26a2d94cf283f8b3"
+        "uk-cma--7e9f28711c5cddcf"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -248,15 +251,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--fed3cddb7f079a0b",
-        "eu-commission-digital--4b82ce7397b37890",
-        "eu-commission-digital--26492d122ae79ac7",
-        "eu-commission-digital--4e721033753a7606",
-        "eu-commission-digital--c3135bdb00c63cde",
-        "eu-commission-digital--1e3950c565b2cca0",
-        "eu-commission-digital--2eaeabf3266f90b0",
-        "eu-commission-digital--2beec3abf4a1c384",
-        "eu-commission-digital--daee61c082469802"
+        "eu-commission-digital--422661f431853360",
+        "eu-commission-digital--3cb17fa74c23e6cb",
+        "eu-commission-digital--ba8935cfb6d61ba2",
+        "eu-commission-digital--8d78f7a16c41e4b9",
+        "eu-commission-digital--c3359c1653ce726e"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -397,15 +396,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "knownagents-directory--d1a63e4a5cc93387"
-      ],
-      "events_written": [
-        "content/events/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "tollbit-state-of-bots": {
       "fetch": "ok",
@@ -434,7 +427,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--39907dee3258eb83"
+        "stratechery--48b6ae557ad48510"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -446,10 +439,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--de3076ab2ff8fe4d",
-        "simon-willison--8dd016016364b66f",
-        "simon-willison--37b179490950dff5",
-        "simon-willison--4a780ecaf4f3464a"
+        "simon-willison--b18888aa2d46a0d0"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -471,11 +461,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--9807c3a1988b8f03",
-        "openai-blog--cf40261e296f4305"
+        "openai-blog--38e78a5d353bf387",
+        "openai-blog--8c6b46e6435f3e10"
       ],
-      "events_written": [],
-      "feed_items_written": []
+      "events_written": [
+        "content/events/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md"
+      ]
     },
     "cf-changelog-ai-gateway": {
       "fetch": "ok",
@@ -494,7 +488,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cf-changelog-ai-search--5fefed6daaf855c8"
+        "cf-changelog-ai-search--a38c7571067c60d3"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -515,9 +509,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--cdd8d426a6629210"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -588,23 +580,22 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--3b569bca61c9fcdd",
-        "x-discovery--acba168029a116fd"
+        "x-discovery--947cfcc433075ab7",
+        "x-discovery--ae155e0f39fa3fa4"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-11-11-x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings.md",
-        "content/feed/2026-11-11-x-discovery-researchers-release-scrapebench-to-test-ai-agent-compliance-with-robots-txt-and-.md"
+        "content/feed/2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content.md"
       ]
     }
   },
   "events_written": [
-    "content/events/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md"
+    "content/events/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo.md",
-    "content/feed/2026-11-11-x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings.md",
-    "content/feed/2026-11-11-x-discovery-researchers-release-scrapebench-to-test-ai-agent-compliance-with-robots-txt-and-.md"
+    "content/feed/2026-11-10-human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026.md",
+    "content/feed/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md",
+    "content/feed/2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content.md"
   ],
   "provider": {
     "name": "gemini",
@@ -614,12 +605,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-12",
+    "edition_date": "2026-11-13",
     "item_count": 3,
-    "path": "data/daily/2026-11-12.json"
+    "path": "data/daily/2026-11-13.json"
   },
   "insight_threads": {
-    "thread_count": 306,
+    "thread_count": 313,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -631,7 +622,7 @@
     "status": "live",
     "candidate_count": 2,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.108733,
+    "estimated_tool_cost_usd": 0.077111,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

@@ -1,0 +1,30 @@
+{
+  "evidence_id": "human-blog--ddb55490259b2a0a",
+  "source": "human-blog",
+  "source_url": "https://www.humansecurity.com/learn/blog/black-friday-2026-bot-traffic-predictions/",
+  "supporting_urls": [],
+  "published_at": "2026-11-10T00:00:00Z",
+  "detected_at": "2026-11-13T15:56:00.186978Z",
+  "content_path": "content/evidence/human-blog/human-blog--ddb55490259b2a0a.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "humansecurity.com/black-friday-2026-bot-traffic-predictions",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Black Friday 2026 Predictions: 4 Bot Traffic Threats to Watch",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.humansecurity.com/learn/blog/black-friday-2026-bot-traffic-predictions/",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 7348,
+      "sha256": "0ffc977577691264ecadec4bc26a21c5ccecb2411c9184bba9faf43e793fba19",
+      "cited_urls": [
+        "https://www.humansecurity.com/learn/blog/black-friday-2026-bot-traffic-predictions/"
+      ]
+    }
+  }
+}

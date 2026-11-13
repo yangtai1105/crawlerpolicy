@@ -375,17 +375,20 @@
     {
       "key": "agentic-commerce",
       "title": "Agentic Commerce",
-      "thesis": "Payment infrastructure providers are actively modifying consumer checkout rails like Link to cater directly to delegated AI agents rather than solely human shoppers.",
+      "thesis": "By integrating payment capabilities directly into agent workflows under explicit user approval, OpenAI is operationalizing agents as transactional economic actors rather than strictly informational tools.",
       "direction": "developing",
-      "confidence": "medium",
+      "confidence": "high",
       "first_observed_at": "2026-10-21T13:28:44.196458Z",
-      "last_updated_at": "2026-10-31T20:51:06.172555Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
       "related_feed_slugs": [
         "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments",
         "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst",
-        "stripe-blog-stripe-introduces-enhancements-for-personal-agent-checkout-via-link"
+        "stripe-blog-stripe-introduces-enhancements-for-personal-agent-checkout-via-link",
+        "openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases"
       ],
-      "verified_development_slugs": []
+      "verified_development_slugs": [
+        "openai-introduces-chatgpt-wallet-for-agent-purchases"
+      ]
     },
     {
       "key": "agentic-commerce-friction",
@@ -509,6 +512,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agentic-traffic-differentiation",
+      "title": "Agentic Traffic Differentiation",
+      "thesis": "Automated traffic filtering is evolving from a binary human-versus-bot model into a three-way triage among human users, hostile bots, and authorized consumer AI agents. Because legitimate shopping agents spike in tandem with peak retail demand and carry low block rates, indiscriminate bot mitigation risks dropping high-intent, revenue-generating customer transactions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-traffic-visibility-gap",
       "title": "Agentic Traffic Visibility Gap",
       "thesis": "An organizational split exists between security and marketing over agentic web traffic: CMOs view unmeasured AI agents as economic waste causing distorted CAC and broken attribution, while CISOs categorize automated traffic primarily as security threats like scraping and account takeover, leaving both sides without telemetry to discern beneficial autonomous agents from malicious bots.",
@@ -544,6 +560,19 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "ai-agent-e-commerce-surge",
+      "title": "AI Agent E Commerce Surge",
+      "thesis": "Automated traffic filtering is evolving from a binary human-versus-bot model into a three-way triage among human users, hostile bots, and authorized consumer AI agents. Because legitimate shopping agents spike in tandem with peak retail demand and carry low block rates, indiscriminate bot mitigation risks dropping high-intent, revenue-generating customer transactions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026"
       ],
       "verified_development_slugs": []
     },
@@ -1212,6 +1241,19 @@
       ]
     },
     {
+      "key": "collective-licensing-clearinghouses",
+      "title": "Collective Licensing Clearinghouses",
+      "thesis": "The deal marks a transition from bilateral, flat-fee AI licensing contracts toward collective, value-based clearinghouses using segmented royalty pools, which prevent high-value vertical content from being diluted by high-volume general web crawls.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "related_feed_slugs": [
+        "x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "collective-publisher-litigation-against-ai-developers",
       "title": "Collective Publisher Litigation Against AI Developers",
       "thesis": "Publishing trade organizations are coordinating legal pressure via amicus filings to contest both offline training uses and live inference retrieval by AI developers.",
@@ -1786,6 +1828,21 @@
         "x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "delegated-payment-authorization",
+      "title": "Delegated Payment Authorization",
+      "thesis": "By integrating payment capabilities directly into agent workflows under explicit user approval, OpenAI is operationalizing agents as transactional economic actors rather than strictly informational tools.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "related_feed_slugs": [
+        "openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases"
+      ],
+      "verified_development_slugs": [
+        "openai-introduces-chatgpt-wallet-for-agent-purchases"
+      ]
     },
     {
       "key": "deliberate-data-poisoning-against-competitive-repricing-scrapers",
@@ -3189,6 +3246,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "pay-per-value-attribution-pricing",
+      "title": "Pay Per Value Attribution Pricing",
+      "thesis": "The deal marks a transition from bilateral, flat-fee AI licensing contracts toward collective, value-based clearinghouses using segmented royalty pools, which prevent high-value vertical content from being diluted by high-volume general web crawls.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "related_feed_slugs": [
+        "x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "per-agent-access-control",
       "title": "Per Agent Access Control",
       "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
@@ -3304,6 +3374,19 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-reaches-100m-in-donated-services-across-impact-programs-and-ai-protec"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "pre-holiday-account-takeover-spikes",
+      "title": "Pre Holiday Account Takeover Spikes",
+      "thesis": "Automated traffic filtering is evolving from a binary human-versus-bot model into a three-way triage among human users, hostile bots, and authorized consumer AI agents. Because legitimate shopping agents spike in tandem with peak retail demand and carry low block rates, indiscriminate bot mitigation risks dropping high-intent, revenue-generating customer transactions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "related_feed_slugs": [
+        "human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026"
       ],
       "verified_development_slugs": []
     },
@@ -3550,6 +3633,19 @@
       "verified_development_slugs": [
         "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
       ]
+    },
+    {
+      "key": "robots-txt-commercial-protocols",
+      "title": "Robots Txt Commercial Protocols",
+      "thesis": "The deal marks a transition from bilateral, flat-fee AI licensing contracts toward collective, value-based clearinghouses using segmented royalty pools, which prevent high-value vertical content from being diluted by high-volume general web crawls.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "related_feed_slugs": [
+        "x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "robots-txt-compliance-testing",

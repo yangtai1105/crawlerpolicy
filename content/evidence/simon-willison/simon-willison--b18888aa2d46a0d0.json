@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--b18888aa2d46a0d0",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T22:55:19Z",
+  "detected_at": "2026-11-13T15:56:00.186978Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--b18888aa2d46a0d0.json",
+  "content_hash": "sha256:b4316a9a0ba7f99a1460e5b31b3379c7e883b7cc84074cc55f52880a61244e76",
+  "external_id": "https://simonwillison.net/2026/Nov/12/llm-gemini/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "llm-gemini 0.37",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/llm-gemini/releases/tag/0.37\">llm-gemini 0.37</a></p>\n        <p>Google launched <a href=\"https://blog.google/innovation-and-ai/models-and-research/gemini-models/introducing-gemini-4-hydrogen/\">Gemini 4 Hydrogen</a> today - the lowest cost member of the Gemini 4 family.</p>\n<p>It's actually not too far off the price of its much bigger siblings, Carbon and Argon. I'm finding Gemini 4's pricing <em>really</em> confusing. Here's the pricing scheme:</p>\n<center><table>\n  <thead>\n    <tr>\n      <th>Model</th>\n      <th>Dates</th>\n      <th>Input ($/M)</th>\n      <th>Cached input</th>\n      <th>Output</th>\n    </tr>\n  </thead>\n  <tbody>\n    <tr>\n      <td rowspan=\"2\">Gemini 4 Carbon</td>\n      <td>Through Nov 30, 2026</td>\n      <td>$2.00</td>\n      <td>$0.10</td>\n      <td>$10.00</td>\n    </tr>\n    <tr>\n      <td>From Dec 1, 2026</td>\n      <td>$4.00</td>\n      <td>$0.20</td>\n      <td>$20.00</td>\n    </tr>\n    <tr>\n      <td rowspan=\"2\">Gemini 4 Argon</td>\n      <td>Through Nov 30, 2026</td>\n      <td>$2.00</td>\n      <td>$0.10</td>\n      <td>$10.00</td>\n    </tr>\n    <tr>\n      <td>From Dec 1, 2026</td>\n      <td>$4.00</td>\n      <td>$0.20</td>\n      <td>$20.00</td>\n    </tr>\n    <tr>\n      <td>Gemini 4 Hydrogen</td>\n      <td>&nbsp;</td>\n      <td>$1.50</td>\n      <td>$0.075</td>\n      <td>$7.50</td>\n    </tr>\n  </tbody>\n</table></center>\n\n<p>Carbon and Argon are <em>the same price</em>, and both are scheduled to d",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

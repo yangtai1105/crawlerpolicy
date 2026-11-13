@@ -308,6 +308,19 @@
         "2026-11-11-x-discovery-united-airlines-blocks-personal-ai-agents-from-completing-flight-bookings"
       ]
     },
+    "player:doug leeds": {
+      "kind": "player",
+      "observed_name": "Doug Leeds",
+      "first_seen_at": "2026-11-13T15:56:00.186978Z",
+      "last_seen_at": "2026-11-13T15:56:00.186978Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--947cfcc433075ab7"
+      ],
+      "feed_slugs": [
+        "2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
+      ]
+    },
     "player:ebay": {
       "kind": "player",
       "observed_name": "eBay",
@@ -621,6 +634,19 @@
         "2026-10-22-x-discovery-news-media-alliance-demands-meta-withdraw-ai-scraping-terms-for-business-account"
       ]
     },
+    "player:mather economics": {
+      "kind": "player",
+      "observed_name": "Mather Economics",
+      "first_seen_at": "2026-11-13T15:56:00.186978Z",
+      "last_seen_at": "2026-11-13T15:56:00.186978Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--947cfcc433075ab7"
+      ],
+      "feed_slugs": [
+        "2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
+      ]
+    },
     "player:meta ai": {
       "kind": "player",
       "observed_name": "Meta AI",
@@ -863,6 +889,19 @@
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
+    "player:the internet licensing collective": {
+      "kind": "player",
+      "observed_name": "The Internet Licensing Collective",
+      "first_seen_at": "2026-11-13T15:56:00.186978Z",
+      "last_seen_at": "2026-11-13T15:56:00.186978Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--947cfcc433075ab7"
+      ],
+      "feed_slugs": [
+        "2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
+      ]
+    },
     "player:the new york times": {
       "kind": "player",
       "observed_name": "The New York Times",
@@ -1052,6 +1091,19 @@
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents",
         "2026-11-09-human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic"
+      ]
+    },
+    "player:yahoo": {
+      "kind": "player",
+      "observed_name": "Yahoo",
+      "first_seen_at": "2026-11-13T15:56:00.186978Z",
+      "last_seen_at": "2026-11-13T15:56:00.186978Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--947cfcc433075ab7"
+      ],
+      "feed_slugs": [
+        "2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
       ]
     },
     "player:yandex": {
@@ -1452,6 +1504,19 @@
       ],
       "feed_slugs": [
         "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ]
+    },
+    "protocol:rsl protocol": {
+      "kind": "protocol",
+      "observed_name": "RSL Protocol",
+      "first_seen_at": "2026-11-13T15:56:00.186978Z",
+      "last_seen_at": "2026-11-13T15:56:00.186978Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--947cfcc433075ab7"
+      ],
+      "feed_slugs": [
+        "2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
       ]
     },
     "protocol:sail": {

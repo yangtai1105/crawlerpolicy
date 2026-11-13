@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-12T16:36:29.095235+00:00",
-  "last_fetch_succeeded_at": "2026-11-12T16:36:29.095235+00:00",
-  "last_evidence_at": "2026-11-12T16:36:29.095235+00:00",
+  "last_checked_at": "2026-11-13T15:56:00.186978+00:00",
+  "last_fetch_succeeded_at": "2026-11-13T15:56:00.186978+00:00",
+  "last_evidence_at": "2026-11-13T15:56:00.186978+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -59,7 +59,8 @@
     "https://simonwillison.net/2026/Nov/11/gemini-decisions-api/",
     "https://simonwillison.net/2026/Nov/11/aws-emulator/",
     "https://simonwillison.net/2026/Nov/11/tools-tags/",
-    "https://simonwillison.net/2026/Nov/11/llm/"
+    "https://simonwillison.net/2026/Nov/11/llm/",
+    "https://simonwillison.net/2026/Nov/12/llm-gemini/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

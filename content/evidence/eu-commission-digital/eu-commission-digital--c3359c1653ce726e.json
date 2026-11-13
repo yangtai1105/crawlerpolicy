@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--c3359c1653ce726e",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2360",
+  "supporting_urls": [],
+  "published_at": "2026-11-12T23:00:00Z",
+  "detected_at": "2026-11-13T15:56:00.186978Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--c3359c1653ce726e.json",
+  "content_hash": "sha256:903e4b249ece76d7bb2f541abe640e6bded2e98d3274931ac264b78bbe247730",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2360",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission approves €286 million German State aid to port of Hamburg",
+  "content": "European Commission Press release Brussels, 13 Nov 2026 The European Commission has approved, under EU State aid rules, two €143 million German measures to support infrastructure works in the port of Hamburg. The measures concern two distinct infrastructure projects, one at the Salzgitter quay and one at the Steinwerder quay.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-13",
+  "generated_at": "2026-11-13T15:56:00.186978Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases",
+      "status": "verified",
+      "importance": 0.82,
+      "published_at": "2026-11-13T15:00:00Z"
+    },
+    {
+      "slug": "x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content",
+      "status": "signal",
+      "importance": 0.78,
+      "published_at": "2026-11-12T21:30:07Z"
+    },
+    {
+      "slug": "human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026",
+      "status": "reported",
+      "importance": 0.72,
+      "published_at": "2026-11-10T00:00:00Z"
+    }
+  ]
+}

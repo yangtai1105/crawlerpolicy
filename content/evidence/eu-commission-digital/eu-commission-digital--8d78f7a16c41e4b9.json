@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--8d78f7a16c41e4b9",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2431",
+  "supporting_urls": [],
+  "published_at": "2026-11-13T08:53:08Z",
+  "detected_at": "2026-11-13T15:56:00.186978Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--8d78f7a16c41e4b9.json",
+  "content_hash": "sha256:1f5692702a4ff44957fa9d551436f7aff50931c31bbc13e65ebf078d8bbcb9d6",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2431",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Doorstep by President von der Leyen ahead of the informal meeting of the European Council of 13 November",
+  "content": "European Commission Statement Dublin, 13 Nov 2026 Today, we are going to discuss AI. It is going to be very interesting. Of course, we are going to discuss the risks, like, for example, runaway AI, but also the...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
