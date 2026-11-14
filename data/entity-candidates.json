@@ -498,6 +498,19 @@
         "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
       ]
     },
+    "player:indonesian parliament": {
+      "kind": "player",
+      "observed_name": "Indonesian Parliament",
+      "first_seen_at": "2026-11-14T14:47:35.236589Z",
+      "last_seen_at": "2026-11-14T14:47:35.236589Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--35c189c5624b8bd1"
+      ],
+      "feed_slugs": [
+        "2026-11-13-x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t"
+      ]
+    },
     "player:instinct": {
       "kind": "player",
       "observed_name": "Instinct",
@@ -863,6 +876,19 @@
         "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
       ]
     },
+    "player:thales": {
+      "kind": "player",
+      "observed_name": "Thales",
+      "first_seen_at": "2026-11-14T14:47:35.236589Z",
+      "last_seen_at": "2026-11-14T14:47:35.236589Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--9a189f378d284975"
+      ],
+      "feed_slugs": [
+        "2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents"
+      ]
+    },
     "player:the financial times": {
       "kind": "player",
       "observed_name": "The Financial Times",
@@ -994,6 +1020,19 @@
       ],
       "feed_slugs": [
         "2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
+      ]
+    },
+    "player:tiktok": {
+      "kind": "player",
+      "observed_name": "TikTok",
+      "first_seen_at": "2026-11-14T14:47:35.236589Z",
+      "last_seen_at": "2026-11-14T14:47:35.236589Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--35c189c5624b8bd1"
+      ],
+      "feed_slugs": [
+        "2026-11-13-x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t"
       ]
     },
     "player:tony xu": {
@@ -1130,6 +1169,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ]
+    },
+    "protocol:agent pay": {
+      "kind": "protocol",
+      "observed_name": "Agent Pay",
+      "first_seen_at": "2026-11-14T14:47:35.236589Z",
+      "last_seen_at": "2026-11-14T14:47:35.236589Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--9a189f378d284975"
+      ],
+      "feed_slugs": [
+        "2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents"
       ]
     },
     "protocol:agent-to-agent protocol": {
@@ -1551,13 +1603,15 @@
       "kind": "protocol",
       "observed_name": "Trusted Agent Protocol",
       "first_seen_at": "2026-10-31T20:51:06.172555Z",
-      "last_seen_at": "2026-10-31T20:51:06.172555Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-14T14:47:35.236589Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "akamai-blog--0bda52142e5910a0"
+        "akamai-blog--0bda52142e5910a0",
+        "x-discovery--9a189f378d284975"
       ],
       "feed_slugs": [
-        "2026-10-26-akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph"
+        "2026-10-26-akamai-blog-akamai-details-rise-of-silent-ai-agents-and-advocates-endpoint-level-cryptograph",
+        "2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents"
       ]
     },
     "protocol:turboshake": {

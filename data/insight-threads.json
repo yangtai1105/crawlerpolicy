@@ -804,6 +804,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ai-training-licensing-mandates",
+      "title": "AI Training Licensing Mandates",
+      "thesis": "The legislation conflates link preview aggregation with full republication and formally couples search index snippets with generative AI model training under a single mandatory collective licensing mandate enforced by local operating permit revocation.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-14T14:47:35.236589Z",
+      "last_updated_at": "2026-11-14T14:47:35.236589Z",
+      "related_feed_slugs": [
+        "x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ai-training-rights-disputes",
       "title": "AI Training Rights Disputes",
       "thesis": "Platform attempts to broaden commercial data-use clauses often collide with publisher sensitivities around AI training rights, forcing companies to explicitly decouple standard ad-tech crawling language from AI development permissions and re-pledge allegiance to robots.txt.",
@@ -1558,13 +1571,14 @@
     {
       "key": "cryptographic-agent-authentication",
       "title": "Cryptographic Agent Authentication",
-      "thesis": "Cryptographic authentication proves platform origin and governance defines permitted scope, but neither protocol layer can determine dynamic intent or prevent authenticated agents with over-scoped credentials from executing malicious actions.",
-      "direction": "emerging",
+      "thesis": "Agent identification is shifting from passive heuristic fingerprinting and user-agent string declarations toward cryptographically verifiable identity standards anchored by major financial networks and edge infrastructure providers.",
+      "direction": "developing",
       "confidence": "medium",
       "first_observed_at": "2026-09-11T12:38:01.191471Z",
-      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-11-14T14:47:35.236589Z",
       "related_feed_slugs": [
-        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks"
+        "datadome-blog-datadome-evaluates-web-bot-auth-and-know-your-agent-trust-frameworks",
+        "x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents"
       ],
       "verified_development_slugs": []
     },
@@ -2907,6 +2921,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "majority-bot-traffic-inflection",
+      "title": "Majority Bot Traffic Inflection",
+      "thesis": "Agent identification is shifting from passive heuristic fingerprinting and user-agent string declarations toward cryptographically verifiable identity standards anchored by major financial networks and edge infrastructure providers.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-14T14:47:35.236589Z",
+      "last_updated_at": "2026-11-14T14:47:35.236589Z",
+      "related_feed_slugs": [
+        "x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "managed-web-crawling",
       "title": "Managed Web Crawling",
       "thesis": "By bundling link-depth web crawling with gated Model Context Protocol (`/mcp`) endpoints behind identity tokens, infrastructure providers are standardizing the full pipeline from raw site indexing to secure agent retrieval.",
@@ -2920,6 +2947,19 @@
       "verified_development_slugs": [
         "cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-"
       ]
+    },
+    {
+      "key": "market-access-conditioned-on-content-payments",
+      "title": "Market Access Conditioned On Content Payments",
+      "thesis": "The legislation conflates link preview aggregation with full republication and formally couples search index snippets with generative AI model training under a single mandatory collective licensing mandate enforced by local operating permit revocation.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-14T14:47:35.236589Z",
+      "last_updated_at": "2026-11-14T14:47:35.236589Z",
+      "related_feed_slugs": [
+        "x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "marketing-versus-security-policy-divergence",
@@ -3255,6 +3295,19 @@
       "last_updated_at": "2026-11-13T15:56:00.186978Z",
       "related_feed_slugs": [
         "x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "payment-network-mediation-of-autonomous-ai-agents",
+      "title": "Payment Network Mediation Of Autonomous AI Agents",
+      "thesis": "Agent identification is shifting from passive heuristic fingerprinting and user-agent string declarations toward cryptographically verifiable identity standards anchored by major financial networks and edge infrastructure providers.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-14T14:47:35.236589Z",
+      "last_updated_at": "2026-11-14T14:47:35.236589Z",
+      "related_feed_slugs": [
+        "x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents"
       ],
       "verified_development_slugs": []
     },
@@ -3952,6 +4005,19 @@
       "verified_development_slugs": [
         "a2a-specification-proposes-sendlivemessage-for-bidirectional-agent-interactions"
       ]
+    },
+    {
+      "key": "statutory-publisher-remuneration",
+      "title": "Statutory Publisher Remuneration",
+      "thesis": "The legislation conflates link preview aggregation with full republication and formally couples search index snippets with generative AI model training under a single mandatory collective licensing mandate enforced by local operating permit revocation.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-14T14:47:35.236589Z",
+      "last_updated_at": "2026-11-14T14:47:35.236589Z",
+      "related_feed_slugs": [
+        "x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "strict-edge-enforcement-of-rfc-9421-http-message-signatures",

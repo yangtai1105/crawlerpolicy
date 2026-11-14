@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-14",
+  "generated_at": "2026-11-14T14:47:35.236589Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t",
+      "status": "signal",
+      "importance": 0.78,
+      "published_at": "2026-11-13T17:15:27Z"
+    },
+    {
+      "slug": "x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents",
+      "status": "signal",
+      "importance": 0.72,
+      "published_at": "2026-11-13T18:30:00Z"
+    }
+  ]
+}

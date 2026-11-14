@@ -1,0 +1,54 @@
+{
+  "evidence_id": "x-discovery--35c189c5624b8bd1",
+  "source": "x-discovery",
+  "source_url": "https://x.com/NiemanLab/status/2121290861875020184",
+  "supporting_urls": [
+    "https://www.niemanlab.org/2026/11/indonesias-new-copyright-bill-would-force-google-and-meta-to-pay-to-aggregate-news/"
+  ],
+  "published_at": "2026-11-13T17:15:27Z",
+  "detected_at": "2026-11-14T14:47:35.236589Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--35c189c5624b8bd1.json",
+  "content_hash": "sha256:ae347a3c7264de22d3e40c4d656d19ee673aa85afc39b33fd06dddbf36d9dcbe",
+  "external_id": "2121290861875020184",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Indonesia advances new copyright bill requiring payment for news snippets and AI training",
+  "content": "X author: @NiemanLab\n\nIndonesia's new copyright bill would require tech platforms like Google and Meta to pay for displaying news previews or using them to train AI models.\n\nLinked sources:\n- https://www.niemanlab.org/2026/11/indonesias-new-copyright-bill-would-force-google-and-meta-to-pay-to-aggregate-news/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "NiemanLab",
+    "post_url": "https://x.com/NiemanLab/status/2121290861875020184",
+    "linked_urls": [
+      "https://www.niemanlab.org/2026/11/indonesias-new-copyright-bill-would-force-google-and-meta-to-pay-to-aggregate-news/"
+    ],
+    "provider_citations": [],
+    "front": "governance-law",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Indonesia's proposed copyright bill requiring platforms to pay for news previews and AI training data has not been previously reported."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.niemanlab.org/2026/11/indonesias-new-copyright-bill-would-force-google-and-meta-to-pay-to-aggregate-news/",
+        "final_url": "https://www.niemanlab.org/2026/11/indonesias-new-copyright-bill-would-force-google-and-meta-to-pay-to-aggregate-news/",
+        "method": "readability",
+        "chars": 2109,
+        "sha256": "959cdca10fa14102e6e82eee759422bd7f16fcec0a9acb2485a90ac82d2345dd",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-11-13/x-discovery--35c189c5624b8bd1-1.md"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 5,
+      "figures_kept": 2,
+      "missing": [
+        "92%",
+        "84%",
+        "79%"
+      ]
+    }
+  }
+}

@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-13T15:56:00.186978Z",
-  "last_fully_successful_at": "2026-11-13T15:56:00.186978Z",
+  "last_attempted_at": "2026-11-14T14:47:35.236589Z",
+  "last_fully_successful_at": "2026-11-14T14:47:35.236589Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -151,7 +151,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--073cb47d940d1ee0"
+        "cloudflare-blog--6e2034b649e3bf19",
+        "cloudflare-blog--5b4b589d44b70120"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -192,9 +193,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "imperva-blog--38c6f70c6912c390"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -204,13 +203,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "human-blog--ddb55490259b2a0a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-10-human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026.md"
-      ]
+      "feed_items_written": []
     },
     "uk-cma": {
       "fetch": "ok",
@@ -218,9 +213,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--7e9f28711c5cddcf"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -250,13 +243,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--422661f431853360",
-        "eu-commission-digital--3cb17fa74c23e6cb",
-        "eu-commission-digital--ba8935cfb6d61ba2",
-        "eu-commission-digital--8d78f7a16c41e4b9",
-        "eu-commission-digital--c3359c1653ce726e"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -427,7 +414,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--48b6ae557ad48510"
+        "stratechery--90a5bde260ee85bf"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -439,7 +426,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--b18888aa2d46a0d0"
+        "simon-willison--47cfedc082be3f2a",
+        "simon-willison--a063ccf9ff42ef37"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -460,16 +448,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--38e78a5d353bf387",
-        "openai-blog--8c6b46e6435f3e10"
-      ],
-      "events_written": [
-        "content/events/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "cf-changelog-ai-gateway": {
       "fetch": "ok",
@@ -487,9 +468,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-ai-search--a38c7571067c60d3"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -569,7 +548,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--4472dd79799a6996"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -580,22 +561,20 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--947cfcc433075ab7",
-        "x-discovery--ae155e0f39fa3fa4"
+        "x-discovery--35c189c5624b8bd1",
+        "x-discovery--9a189f378d284975"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content.md"
+        "content/feed/2026-11-13-x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t.md",
+        "content/feed/2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents.md"
       ]
     }
   },
-  "events_written": [
-    "content/events/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md"
-  ],
+  "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-11-10-human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026.md",
-    "content/feed/2026-11-13-openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases.md",
-    "content/feed/2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content.md"
+    "content/feed/2026-11-13-x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t.md",
+    "content/feed/2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents.md"
   ],
   "provider": {
     "name": "gemini",
@@ -605,12 +584,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-13",
-    "item_count": 3,
-    "path": "data/daily/2026-11-13.json"
+    "edition_date": "2026-11-14",
+    "item_count": 2,
+    "path": "data/daily/2026-11-14.json"
   },
   "insight_threads": {
-    "thread_count": 313,
+    "thread_count": 318,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -621,8 +600,8 @@
   "discovery": {
     "status": "live",
     "candidate_count": 2,
-    "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.077111,
+    "x_search_calls": 6,
+    "estimated_tool_cost_usd": 0.167809,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
