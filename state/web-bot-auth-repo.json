@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-14T14:47:35.236589+00:00",
-  "last_fetch_succeeded_at": "2026-11-14T14:47:35.236589+00:00",
-  "last_evidence_at": "2026-11-10T16:07:51.172582+00:00",
+  "last_checked_at": "2026-11-15T15:23:53.906711+00:00",
+  "last_fetch_succeeded_at": "2026-11-15T15:23:53.906711+00:00",
+  "last_evidence_at": "2026-11-15T15:23:53.906711+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "pr:76",
@@ -94,7 +94,10 @@
     "pr:192",
     "pr:177",
     "pr:191",
-    "pr:190"
+    "pr:190",
+    "pr:197",
+    "pr:198",
+    "pr:196"
   ],
   "consecutive_failures": 0,
   "first_seen": false

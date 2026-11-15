@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--4d6ee0828b2d96f3",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+  "supporting_urls": [],
+  "published_at": "2026-11-14T17:09:09Z",
+  "detected_at": "2026-11-15T15:23:53.906711Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--4d6ee0828b2d96f3.json",
+  "content_hash": "sha256:dcde420bc53175f77ee7524afd66ab924642e995cd93433470b40cf371539194",
+  "external_id": "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "datasette-vega 0.7",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/datasette-vega/releases/tag/0.7\">datasette-vega 0.7</a></p>\n        <p>A new release of Datasette's longest untouched plugin, for rendering charts (using <a href=\"https://vega.github.io/vega-lite/\">Vega-Lite</a>) against data in a table or custom query. The last release was in July 2018!</p>\n<p>I finally bumped it for compatibility with the latest Datasette alphas, plus some cosmetic tweaks to make it work better with <a href=\"https://lite.datasette.io/\">Datasette Lite</a>.</p>\n<p>(Datasette Lite just gained the ability to run JavaScript plugins like this! I'll write more about that soon.)</p>\n<p>Since it works with Datasette Lite, the live demo in the README now <a href=\"https://lite.datasette.io/?install=datasette-vega&amp;csv=https%3A%2F%2Fraw.githubusercontent.com%2Ffivethirtyeight%2Fdata%2Fmaster%2Fairline-safety%2Fairline-safety.csv#/data/airline-safety?_size=max#g.mark=bar&amp;g.x_column=airline&amp;g.x_type=ordinal&amp;g.y_column=fatalities_00_14&amp;g.y_type=quantitative\">links to this demo on Datasette Lite</a>.</p>\n<p><img alt=\"Screenshot of a charting tool. A panel headed &quot;Charting options&quot; has radio buttons for &quot;Bar&quot; (selected), &quot;Line&quot; and &quot;Scatter&quot;. Below are select menus: &quot;X column&quot; set to &quot;airline&quot; with &quot;Type&quot; set to &quot;Label&quot;, and &quot;Y column&quot; set to &quot;fatalities_00_14&quot; with &quot;Type&quot; set to &quo",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--6968fdce3ed69eae",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+  "supporting_urls": [],
+  "published_at": "2026-11-14T23:59:28Z",
+  "detected_at": "2026-11-15T15:23:53.906711Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--6968fdce3ed69eae.json",
+  "content_hash": "sha256:0f9aa32a811d30f86ecad80474fc4d93e2dbe9a69fc3f1f2d9edf8da912c441f",
+  "external_id": "https://simonwillison.net/2026/Nov/14/datasette-llm/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "datasette-llm 0.1a11",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-llm/releases/tag/0.1a11\">datasette-llm 0.1a11</a></p>\n        <p><code>datasette-llm</code> is the intermediate plugin for Datasette that supports configuring LLMs for use with other Datasette plugins.</p>\n<p>This release adds support for OpenAI-compatible endpoints, so you can configure Datasette to use an LLM hosted anywhere that talks the OpenAI pseudo-standard web protocol.</p>\n<p>This means that if you're running local models with <a href=\"https://lmstudio.ai\">LM Studio</a> or <a href=\"https://ollama.com\">Ollama</a> or <a href=\"https://github.com/ggml-org/llama.cpp\">llama.cpp</a> (which just hit <a href=\"https://huggingface.co/blog/ggml-org/llama-cpp-v1\">v1.0.0</a>) you can run Datasette via <code>uvx</code> like this:</p>\n<div class=\"highlight highlight-source-shell\"><pre>wget https://datasette.io/content.db\n\nuvx --with datasette-agent datasette \\\n  --root --secret 1 \\\n  -s plugins.datasette-llm.default_model <span class=\"pl-s\"><span class=\"pl-pds\">'</span>{</span>\n<span class=\"pl-s\">    \"model\": \"lmstudio-qwen\",</span>\n<span class=\"pl-s\">    \"model_name\": \"qwen/qwen3.8-27b\",</span>\n<span class=\"pl-s\">    \"api_base\": \"http://localhost:1234/v1\"</span>\n<span class=\"pl-s\">  }<span class=\"pl-pds\">'</span></span> content.db</pre></div>\n\n<p>And you'll get a local server running a Datasette Agent instance powered by your local model!</p>\n<p><img alt=\"Screenshot of a chat interface. Header bar reads &q",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

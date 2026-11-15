@@ -1,36 +1,36 @@
 {
-  "status": "healthy",
-  "last_attempted_at": "2026-11-14T14:47:35.236589Z",
+  "status": "degraded",
+  "last_attempted_at": "2026-11-15T15:23:53.906711Z",
   "last_fully_successful_at": "2026-11-14T14:47:35.236589Z",
   "coverage": {
     "configured": 52,
-    "completed": 52,
-    "fetched": 52,
-    "analyzed": 52,
-    "published": 52,
-    "failed": 0,
+    "completed": 51,
+    "fetched": 51,
+    "analyzed": 51,
+    "published": 51,
+    "failed": 1,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 52,
-      "failed": 0,
+      "ok": 51,
+      "failed": 1,
       "pending": 0
     },
     "evidence": {
-      "ok": 52,
-      "failed": 0,
+      "ok": 51,
+      "failed": 1,
       "pending": 0
     },
     "analysis": {
-      "ok": 52,
+      "ok": 51,
       "failed": 0,
-      "pending": 0
+      "pending": 1
     },
     "publish": {
-      "ok": 52,
+      "ok": 51,
       "failed": 0,
-      "pending": 0
+      "pending": 1
     }
   },
   "per_source": {
@@ -150,10 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--6e2034b649e3bf19",
-        "cloudflare-blog--5b4b589d44b70120"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -283,7 +280,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--48501d216cc837ba",
+        "web-bot-auth-repo--73d7e0e08dde4bb8",
+        "web-bot-auth-repo--a46526c873b9371f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -413,9 +414,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "stratechery--90a5bde260ee85bf"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -426,8 +425,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--47cfedc082be3f2a",
-        "simon-willison--a063ccf9ff42ef37"
+        "simon-willison--6968fdce3ed69eae",
+        "simon-willison--4d6ee0828b2d96f3"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -488,9 +487,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ietf-webbotauth-wg--b0e8266a52e25cf9"
+      ],
+      "events_written": [
+        "content/events/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -548,33 +553,26 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-radar-ai-insights--4472dd79799a6996"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [
-        "x-discovery--35c189c5624b8bd1",
-        "x-discovery--9a189f378d284975"
-      ],
+      "fetch": "failed",
+      "evidence": "failed",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "xAI X Search did not return valid candidate JSON",
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-13-x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t.md",
-        "content/feed/2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents.md"
-      ]
+      "feed_items_written": []
     }
   },
-  "events_written": [],
+  "events_written": [
+    "content/events/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
+  ],
   "feed_items_written": [
-    "content/feed/2026-11-13-x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t.md",
-    "content/feed/2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents.md"
+    "content/feed/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
   ],
   "provider": {
     "name": "gemini",
@@ -584,12 +582,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-14",
-    "item_count": 2,
-    "path": "data/daily/2026-11-14.json"
+    "edition_date": "2026-11-15",
+    "item_count": 1,
+    "path": "data/daily/2026-11-15.json"
   },
   "insight_threads": {
-    "thread_count": 318,
+    "thread_count": 320,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -598,13 +596,13 @@
     "error": ""
   },
   "discovery": {
-    "status": "live",
-    "candidate_count": 2,
-    "x_search_calls": 6,
-    "estimated_tool_cost_usd": 0.167809,
+    "status": "unavailable",
+    "candidate_count": 0,
+    "x_search_calls": 0,
+    "estimated_tool_cost_usd": 0.0,
     "sources_configured": 1,
-    "sources_completed": 1,
-    "sources_failed": 0,
+    "sources_completed": 0,
+    "sources_failed": 1,
     "sources_skipped_by_cap": 0
   }
 }
