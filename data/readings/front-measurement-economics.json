@@ -1,0 +1,15 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "measurement-economics",
+  "stance": "Measurement economics is formalizing granular accounting frameworks that separate autonomous scraping from delegated, user-prompted agent actions.",
+  "adoption_shape": "Infrastructure monitors like Cloudflare Radar and the Known Agents directory have aligned on categorizing delegated agents alongside autonomous crawlers, even as platforms like Google maintain legacy identifiers like Google-NotebookLM concurrently with new ones like Google-GeminiNotebook.",
+  "new_entrants": "Recent entries including MiniMaxAgent, Diffbot-User, Haiku-SearchBot, Liner-User, and Google-GeminiNotebook have entered tracking registries to stake out footprints for browser-based task execution and user-prompted assistant fetching.",
+  "watch_for": "The integration and adoption of Web Bot Auth verification status and content usage classifications across Cloudflare Radar's newly indexed agents.",
+  "built_from": [
+    "cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+    "knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+  ],
+  "development_count": 2,
+  "generated_at": "2026-11-16T23:14:53.701094Z",
+  "merged_at": null
+}

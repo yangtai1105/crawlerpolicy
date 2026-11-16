@@ -1,0 +1,14 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "rights-markets",
+  "stance": "Technical provenance infrastructure is expanding to cover audio assets before market-wide rights enforcement mechanisms have established practical workflows around them.",
+  "adoption_shape": "The C2PA coalition moved to publish audio-specific provenance guidance alongside its version 2.5 technical suite, but the guidance remains purely informative rather than an adopted industry mandate.",
+  "new_entrants": "The Coalition for Content Provenance and Authenticity has stepped into the music domain to establish baseline documentation for audio-specific provenance tracking.",
+  "watch_for": "The integration of this informative music guidance into binding implementation requirements by production platforms and distributors.",
+  "built_from": [
+    "c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-16T23:14:53.701094Z",
+  "merged_at": null
+}

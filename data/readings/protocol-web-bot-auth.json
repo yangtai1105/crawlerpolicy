@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "web-bot-auth",
+  "stance": "Web Bot Auth has secured critical institutional footing by becoming an explicit verification benchmark within Cloudflare Radar's expanded bot observability stack.",
+  "adoption_shape": "Network infrastructure monitoring has moved ahead of crawler self-reporting, as Cloudflare Radar and BotBase establish third-party classification of bot profiles and API endpoints rather than relying on unverified agent claims.",
+  "new_entrants": "Cloudflare Radar, powered by BotBase, has stepped in to govern visibility over both autonomous crawlers and delegated agents by cataloging their access levels, content usage models, and Web Bot Auth status.",
+  "watch_for": "The presence or absence of verified Web Bot Auth status across listed crawler profiles in the Bots Directory to determine if crawlers are actively complying with the verification standard.",
+  "built_from": [
+    "cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-16T23:14:53.701094Z",
+  "merged_at": null
+}

@@ -1,0 +1,18 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "agents-identity",
+  "stance": "Agent identity is hardening into formal cryptographic and capability-managed infrastructure as platform directories and standards bodies move to replace informal user-agent declarations.",
+  "adoption_shape": "Network gatekeepers like Cloudflare and the IETF are converging on verifiable identity and capacity management frameworks, while individual AI operators continue to fragment the tracking ecosystem by deploying bespoke, iterative crawler names like Google-GeminiNotebook alongside legacy strings.",
+  "new_entrants": "Task-agent operators including MiniMax, Liner, and Diffbot have introduced specialized assistant fetchers to execute browser-based tasks, while OpenAI has entered transactional execution by binding identity to payment authority via ChatGPT Wallet across its Work, Codex, and dots platforms.",
+  "watch_for": "The formal integration of the IETF's PACE capability management framework or Web Bot Auth verification status by frontline platforms to programmatically regulate agent transactions and content access.",
+  "built_from": [
+    "cf-changelog-radar-cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+    "c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite",
+    "knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo",
+    "openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag"
+  ],
+  "development_count": 5,
+  "generated_at": "2026-11-16T23:14:53.701094Z",
+  "merged_at": null
+}

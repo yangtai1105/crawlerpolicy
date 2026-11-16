@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "c2pa",
+  "stance": "C2PA is actively extending its provenance perimeter into the music sector, attempting to standardize audio media tracking alongside its existing specification suite.",
+  "adoption_shape": "The coalition has formally broadened its documented scope to include audio-specific media provenance, though the update currently represents top-down guidance rather than recorded adoption moves from music industry players.",
+  "new_entrants": "The coalition itself has expanded into the music domain to establish baseline governance for audio assets alongside its established coverage of general AI and security.",
+  "watch_for": "Whether actual music implementers begin applying the audio-specific guidance alongside the 2.5 technical specification suite.",
+  "built_from": [
+    "c2pa-specifications-c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-16T23:14:53.701094Z",
+  "merged_at": null
+}
