@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--1cdfcee8760b5b05",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/the-kings-trust-and-openai",
+  "supporting_urls": [],
+  "published_at": "2026-11-16T00:00:00Z",
+  "detected_at": "2026-11-16T17:58:57.179138Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--1cdfcee8760b5b05.json",
+  "content_hash": "sha256:cac0a116c9178134cbcbfd666d5b20d5002e6fe16c92bda84624eb48901f77ad",
+  "external_id": "https://openai.com/index/the-kings-trust-and-openai",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "The King’s Trust and OpenAI launch £1m partnership",
+  "content": "The King’s Trust and OpenAI launch a £1m partnership to help up to 25,000 young people across the UK build practical AI skills for work.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

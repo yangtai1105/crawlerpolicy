@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--bb40a1e0fb05671a",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2452",
+  "supporting_urls": [],
+  "published_at": "2026-11-16T10:23:52Z",
+  "detected_at": "2026-11-16T17:58:57.179138Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--bb40a1e0fb05671a.json",
+  "content_hash": "sha256:9f521fccfb1a330cc1f85ddfd1cd7e1d02722a76c44537767f3284fc4423f081",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2452",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission disburses another €1.71 billion to Ukraine for drones, ammunition and air defence systems",
+  "content": "European Commission Press release Brussels, 16 Nov 2026 Today, the European Commission disbursed €1.71 billion to Ukraine under the €90 billion Ukraine Support Loan.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--dca3c327a4312f55",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/15/datasette/",
+  "supporting_urls": [],
+  "published_at": "2026-11-15T23:20:27Z",
+  "detected_at": "2026-11-16T17:58:57.179138Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--dca3c327a4312f55.json",
+  "content_hash": "sha256:be4d27682d8f29bf3a9b954e9f7110b40a9f6fc95281183685ffa169e711e939",
+  "external_id": "https://simonwillison.net/2026/Nov/15/datasette/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "datasette 1.0a43",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/simonw/datasette/releases/tag/1.0a43\">datasette 1.0a43</a></p>\n        <p>I've been leaning hard into Claude Fable 5.2 to help knock things off the <a href=\"https://github.com/simonw/datasette/milestone/37\">1.0 milestone</a>, which is now 53% complete.</p>\n<p>The biggest 1.0 item in this release is <a href=\"https://docs.datasette.io/en/latest/plugin_hooks.html#plugin-register-output-renderer-streaming\">streaming support for output renderers</a> - the built-in TSV and CSV export mechanisms now use this as well, and plugins can register themselves as capable of streaming every row in a table in one go via the new <a href=\"https://docs.datasette.io/en/latest/internals.html#internals-response-stream\">Response.stream()</a> method.</p>\n<p>There are a couple of security fixes, one of which I deemed <a href=\"https://github.com/simonw/datasette/security/advisories/GHSA-mw6v-83vp-7c4c\">deserving of a GitHub advisory</a>: private stored queries could be exposed, granting access to the title and SQL of the query (but not allowing that query to be executed).</p>\n<p>There are dozens of smaller improvements. The row page JSON representation <a href=\"https://docs.datasette.io/en/latest/json_api.html#json-api-row\">finally has a design suitable for 1.0</a>. A new <code>&lt;datasette-copy-button&gt;</code> Web Component provides copy-schema in various places. JSON in columns on the row page can be pretty-printed. There's a new <a href=\"ht",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

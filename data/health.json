@@ -1,36 +1,36 @@
 {
-  "status": "degraded",
-  "last_attempted_at": "2026-11-15T15:23:53.906711Z",
-  "last_fully_successful_at": "2026-11-14T14:47:35.236589Z",
+  "status": "healthy",
+  "last_attempted_at": "2026-11-16T17:58:57.179138Z",
+  "last_fully_successful_at": "2026-11-16T17:58:57.179138Z",
   "coverage": {
     "configured": 52,
-    "completed": 51,
-    "fetched": 51,
-    "analyzed": 51,
-    "published": 51,
-    "failed": 1,
+    "completed": 52,
+    "fetched": 52,
+    "analyzed": 52,
+    "published": 52,
+    "failed": 0,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 51,
-      "failed": 1,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "evidence": {
-      "ok": 51,
-      "failed": 1,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "analysis": {
-      "ok": 51,
+      "ok": 52,
       "failed": 0,
-      "pending": 1
+      "pending": 0
     },
     "publish": {
-      "ok": 51,
+      "ok": 52,
       "failed": 0,
-      "pending": 1
+      "pending": 0
     }
   },
   "per_source": {
@@ -160,9 +160,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--757a5859cce5edaa"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-16-datadome-blog-klook-renews-datadome-anti-bot-integration-to-balance-flash-sale-security-and-ai.md"
+      ]
     },
     "akamai-blog": {
       "fetch": "ok",
@@ -170,7 +174,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "akamai-blog--63059f96b1a334bb"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -210,7 +216,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--978616f3dc28f557",
+        "uk-cma--15fceb45a25b4875",
+        "uk-cma--dbdeac6bebd02f54",
+        "uk-cma--d1553972f8c1e7cc",
+        "uk-cma--3c1c6a2658338f04"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -240,7 +252,18 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--c40fd72acb04eb28",
+        "eu-commission-digital--fbbcd5c424f214c9",
+        "eu-commission-digital--01fd0bb44280905b",
+        "eu-commission-digital--27e3327ed52310f8",
+        "eu-commission-digital--f359253f2a6291fe",
+        "eu-commission-digital--bb40a1e0fb05671a",
+        "eu-commission-digital--23c338d76e8f8825",
+        "eu-commission-digital--bd3f309b0fdf6279",
+        "eu-commission-digital--3542b8648fc86d46",
+        "eu-commission-digital--6b82ab4b84a480f8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -280,11 +303,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--48501d216cc837ba",
-        "web-bot-auth-repo--73d7e0e08dde4bb8",
-        "web-bot-auth-repo--a46526c873b9371f"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -414,7 +433,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "stratechery--04b268cf3d31d5c8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -425,8 +446,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--6968fdce3ed69eae",
-        "simon-willison--4d6ee0828b2d96f3"
+        "simon-willison--ea2bba6f5c974f5a",
+        "simon-willison--dca3c327a4312f55",
+        "simon-willison--a344c5478a484fbf"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -447,7 +469,18 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--0735d6d41bc9c9ae",
+        "openai-blog--a23ace3366deba01",
+        "openai-blog--53c578e62e5972ce",
+        "openai-blog--3d4c30c315405454",
+        "openai-blog--b954bb2cea88f0fd",
+        "openai-blog--05e4af4e01d3fed6",
+        "openai-blog--d575d69045c75076",
+        "openai-blog--1cdfcee8760b5b05",
+        "openai-blog--de7acda4c4fe05df",
+        "openai-blog--d7cd8fb5d437681d"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -487,15 +520,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--b0e8266a52e25cf9"
-      ],
-      "events_written": [
-        "content/events/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -558,21 +585,19 @@
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "xAI X Search did not return valid candidate JSON",
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
-  ],
+  "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag.md"
+    "content/feed/2026-11-16-datadome-blog-klook-renews-datadome-anti-bot-integration-to-balance-flash-sale-security-and-ai.md"
   ],
   "provider": {
     "name": "gemini",
@@ -582,12 +607,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-15",
+    "edition_date": "2026-11-16",
     "item_count": 1,
-    "path": "data/daily/2026-11-15.json"
+    "path": "data/daily/2026-11-16.json"
   },
   "insight_threads": {
-    "thread_count": 320,
+    "thread_count": 322,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -596,13 +621,13 @@
     "error": ""
   },
   "discovery": {
-    "status": "unavailable",
+    "status": "live",
     "candidate_count": 0,
-    "x_search_calls": 0,
-    "estimated_tool_cost_usd": 0.0,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.089791,
     "sources_configured": 1,
-    "sources_completed": 0,
-    "sources_failed": 1,
+    "sources_completed": 1,
+    "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }
 }

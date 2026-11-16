@@ -1833,6 +1833,19 @@
       ]
     },
     {
+      "key": "delegated-agent-allowances",
+      "title": "Delegated Agent Allowances",
+      "thesis": "Ticketing and travel platforms are adjusting bot mitigation models to accommodate consumer-delegated AI agents, moving away from binary bot blocking toward risk-weighted discrimination between abusive scrapers and legitimate automated purchasing tools.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-16T17:58:57.179138Z",
+      "last_updated_at": "2026-11-16T17:58:57.179138Z",
+      "related_feed_slugs": [
+        "datadome-blog-klook-renews-datadome-anti-bot-integration-to-balance-flash-sale-security-and-ai"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "delegated-agent-governance",
       "title": "Delegated Agent Governance",
       "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
@@ -3716,6 +3729,19 @@
       "verified_development_slugs": [
         "cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
       ]
+    },
+    {
+      "key": "risk-based-bot-discrimination",
+      "title": "Risk Based Bot Discrimination",
+      "thesis": "Ticketing and travel platforms are adjusting bot mitigation models to accommodate consumer-delegated AI agents, moving away from binary bot blocking toward risk-weighted discrimination between abusive scrapers and legitimate automated purchasing tools.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-16T17:58:57.179138Z",
+      "last_updated_at": "2026-11-16T17:58:57.179138Z",
+      "related_feed_slugs": [
+        "datadome-blog-klook-renews-datadome-anti-bot-integration-to-balance-flash-sale-security-and-ai"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "robots-txt-commercial-protocols",

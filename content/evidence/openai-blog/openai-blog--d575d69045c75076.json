@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--d575d69045c75076",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+  "supporting_urls": [],
+  "published_at": "2026-11-16T06:00:00Z",
+  "detected_at": "2026-11-16T17:58:57.179138Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--d575d69045c75076.json",
+  "content_hash": "sha256:be23403b1ddcd1c742b6d306e8b1fd5725d045fd9a54d9dfb4e4a8416e4b86bc",
+  "external_id": "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "More ways to move care forward with ChatGPT for Healthcare",
+  "content": "Introducing computer-use agents, improved clinical answers, and new healthcare plugins that work across healthcare software to get real work done.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-15T15:23:53.906711+00:00",
-  "last_fetch_succeeded_at": "2026-11-15T15:23:53.906711+00:00",
-  "last_evidence_at": "2026-11-15T15:23:53.906711+00:00",
+  "last_checked_at": "2026-11-16T17:58:57.179138+00:00",
+  "last_fetch_succeeded_at": "2026-11-16T17:58:57.179138+00:00",
+  "last_evidence_at": "2026-11-16T17:58:57.179138+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -64,7 +64,10 @@
     "https://simonwillison.net/2026/Nov/13/datasette-cluster-map/",
     "https://simonwillison.net/2026/Nov/13/datasette-leaflet/",
     "https://simonwillison.net/2026/Nov/14/datasette-llm/",
-    "https://simonwillison.net/2026/Nov/14/datasette-vega/"
+    "https://simonwillison.net/2026/Nov/14/datasette-vega/",
+    "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+    "https://simonwillison.net/2026/Nov/15/datasette/",
+    "https://simonwillison.net/2026/Nov/15/datasette-2/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

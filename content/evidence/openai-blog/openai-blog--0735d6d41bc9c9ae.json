@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--0735d6d41bc9c9ae",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+  "supporting_urls": [],
+  "published_at": "2026-11-16T17:00:00Z",
+  "detected_at": "2026-11-16T17:58:57.179138Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--0735d6d41bc9c9ae.json",
+  "content_hash": "sha256:e2cec5fe08011f7694a7fa4b3dec9d5a1b05c47c9842dbf3185a2c7fa9d6e7af",
+  "external_id": "https://openai.com/index/expanding-chatgpt-for-academic-researchers",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Broadening access to AI for scientists",
+  "content": "We’re expanding our ChatGPT for Academic Researchers program to offer 200,000 researchers worldwide free access to our frontier models.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

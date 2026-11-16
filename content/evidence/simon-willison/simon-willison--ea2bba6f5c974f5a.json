@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--ea2bba6f5c974f5a",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+  "supporting_urls": [],
+  "published_at": "2026-11-15T23:58:36Z",
+  "detected_at": "2026-11-16T17:58:57.179138Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--ea2bba6f5c974f5a.json",
+  "content_hash": "sha256:cf2844d047bbf9ebddaa51bbaf6fc4f8812db7a94c8aa0d646fae292dbc60166",
+  "external_id": "https://simonwillison.net/2026/Nov/15/datasette-maplibre/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "datasette-maplibre 0.1a0",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-maplibre/releases/tag/0.1a0\">datasette-maplibre 0.1a0</a></p>\n        <p>The first new Datasette geospatial plugin in quite a while! This one combines the excellent <a href=\"https://maplibre.org/maplibre-gl-js/docs/\">MapLibre GL</a> library with <a href=\"https://openfreemap.org\">OpenFreeMap</a>, the free vector map server operated by Zsolt Ero (you should <a href=\"https://github.com/sponsors/hyperknot\">sponsor Zsolt on GitHub</a>.)</p>\n<p>I built most of this with a single prompt to Claude Fable 5.2:</p>\n<blockquote>\n<p><code>Look at datasette-cluster-map and datasette-leaflet-geojson plugins, then look at ~/dev/tools/openfreemap-demo.html - then build a brand new Datasette plugin that uses maplibreGL and openfreemap and combines the features of those other two plugins - but be creative and think outside the box for other useful features the plugin might have</code></p>\n</blockquote>\n<p>\"Be creative and think outside the box\" resulted in a few neat ideas - my favorite is that it displays SVG previews of GeoJSON shapes, then loads a WebGL preview only when they scroll into view.</p>\n<p>I also had Claude build a comprehensive demo which works in the latest Datasette Lite, so you can <a href=\"https://lite.datasette.io/?install=datasette-maplibre&amp;url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&amp;metadata=https://gis",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

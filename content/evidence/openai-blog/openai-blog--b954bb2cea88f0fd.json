@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--b954bb2cea88f0fd",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+  "supporting_urls": [],
+  "published_at": "2026-11-16T08:00:00Z",
+  "detected_at": "2026-11-16T17:58:57.179138Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--b954bb2cea88f0fd.json",
+  "content_hash": "sha256:adac717773a192f54aaf72361e5721e75fa664d317fe39971b4713ac5d5305da",
+  "external_id": "https://openai.com/index/our-first-phase-of-embedded-assessments",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Our first phase of embedded assessments",
+  "content": "OpenAI begins embedded assessments with Apollo Research, METR, and Transluce, and Goodfire to independently evaluate model alignment, safeguards, and monitoring systems.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

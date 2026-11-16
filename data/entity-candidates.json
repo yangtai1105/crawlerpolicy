@@ -582,6 +582,19 @@
         "2026-11-11-x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
       ]
     },
+    "player:klook": {
+      "kind": "player",
+      "observed_name": "Klook",
+      "first_seen_at": "2026-11-16T17:58:57.179138Z",
+      "last_seen_at": "2026-11-16T17:58:57.179138Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "datadome-blog--757a5859cce5edaa"
+      ],
+      "feed_slugs": [
+        "2026-11-16-datadome-blog-klook-renews-datadome-anti-bot-integration-to-balance-flash-sale-security-and-ai"
+      ]
+    },
     "player:known agents": {
       "kind": "player",
       "observed_name": "Known Agents",
