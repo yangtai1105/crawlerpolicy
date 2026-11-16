@@ -1,0 +1,317 @@
+{
+  "schema_version": 1,
+  "week": "2026-W46",
+  "generated_at": "2026-11-16T22:44:03.017951Z",
+  "window_start": "2026-11-09",
+  "window_end": "2026-11-15",
+  "health_status": "healthy",
+  "coverage": {
+    "configured": 52,
+    "completed": 52,
+    "fetched": 52,
+    "analyzed": 52,
+    "published": 52,
+    "failed": 0,
+    "required_failed": 0
+  },
+  "thesis": "The web ecosystem is maturing its infrastructure for AI agents and digital assets through standardized capability management, granular traffic classification, native payment execution, and audio provenance guidance.",
+  "executive_shifts": [
+    {
+      "headline": "Agent Identification and Capability Management Expand",
+      "summary": "The IETF Web Bot Auth Working Group received the 'PACE: Capability Management for Agents' draft to help manage agent scope and capacity. Concurrently, Cloudflare Radar integrated BotBase to classify autonomous crawlers and delegated agents by access level, content usage, and Web Bot Auth verification, while the Known Agents directory indexed new identifiers including MiniMaxAgent and Google-GeminiNotebook.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag",
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    },
+    {
+      "headline": "OpenAI Enables Closed-Loop Agent Commerce",
+      "summary": "OpenAI introduced ChatGPT Wallet across ChatGPT Work, Codex, and dots, allowing AI agents to complete purchases using existing card protections and user approval.",
+      "evidence_event_ids": [
+        "openai-introduces-chatgpt-wallet-for-agent-purchases"
+      ]
+    },
+    {
+      "headline": "C2PA Extends Provenance Guidance to Music Assets",
+      "summary": "The Coalition for Content Provenance and Authenticity added 'Guidance for Music Assets' alongside its 2.5 technical specification suite, expanding its provenance documentation into audio-specific media.",
+      "evidence_event_ids": [
+        "c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "access-controls",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+        "ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag",
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "platform-ecosystem",
+      "material_change": true,
+      "event_ids": [
+        "openai-introduces-chatgpt-wallet-for-agent-purchases",
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "identity-authorization",
+      "material_change": true,
+      "event_ids": [
+        "openai-introduces-chatgpt-wallet-for-agent-purchases",
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+        "ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite",
+        "ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag"
+      ],
+      "summary": "2 verified material developments."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": true,
+      "event_ids": [
+        "c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+      ],
+      "summary": "1 verified material development."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": true,
+      "event_ids": [
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada",
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ],
+      "summary": "2 verified material developments."
+    }
+  ],
+  "intelligence_read": "As AI agents transition from passive crawlers to active task and transaction executors, industry groups and platforms are formalizing how agent activity is identified, authorized, and executed. Technical drafts and directory updates are providing site operators with better visibility into agent capabilities and content usage models. Simultaneously, consumer platforms are enabling user-approved agent commerce, while provenance standards are expanding into specific media formats like music.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "OpenAI",
+      "direction": "Enabling AI agents to initiate and finalize commerce directly connects automated task planning with economic execution, shifting agent utility from recommendations to closed-loop transactions.",
+      "evidence_event_ids": [
+        "openai-introduces-chatgpt-wallet-for-agent-purchases"
+      ]
+    },
+    {
+      "actor": "Cloudflare",
+      "direction": "As AI agents blur the line between autonomous scrapers and user-driven proxy requests, edge platforms are standardizing metadata that categorizes not just who is fetching content, but why and how long the data is retained.",
+      "evidence_event_ids": [
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ]
+    },
+    {
+      "actor": "Coalition for Content Provenance and Authenticity",
+      "direction": "As generative audio proliferates and licensing rights disputes intensify, standardizing provenance specifically for music files provides technical infrastructure for tracking authorship, training inputs, and distribution chains.",
+      "evidence_event_ids": [
+        "c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+      ]
+    },
+    {
+      "actor": "IETF",
+      "direction": "Authenticating that an incoming request belongs to an AI agent is only half the operational challenge for site operators; publishers also need standardized protocols to manage the scope, capability, and request capacity granted to those agents.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag"
+      ]
+    },
+    {
+      "actor": "IETF Web Bot Auth Working Group",
+      "direction": "Authenticating that an incoming request belongs to an AI agent is only half the operational challenge for site operators; publishers also need standardized protocols to manage the scope, capability, and request capacity granted to those agents.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag"
+      ]
+    },
+    {
+      "actor": "Google",
+      "direction": "Granular user-agent strings provide web publishers visibility into whether traffic represents automated background crawling or direct, human-prompted retrieval by tools like MiniMax or Google Gemini.",
+      "evidence_event_ids": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    },
+    {
+      "actor": "MiniMax",
+      "direction": "Granular user-agent strings provide web publishers visibility into whether traffic represents automated background crawling or direct, human-prompted retrieval by tools like MiniMax or Google Gemini.",
+      "evidence_event_ids": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    },
+    {
+      "actor": "Diffbot",
+      "direction": "Granular user-agent strings provide web publishers visibility into whether traffic represents automated background crawling or direct, human-prompted retrieval by tools like MiniMax or Google Gemini.",
+      "evidence_event_ids": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    },
+    {
+      "actor": "Haiku",
+      "direction": "Granular user-agent strings provide web publishers visibility into whether traffic represents automated background crawling or direct, human-prompted retrieval by tools like MiniMax or Google Gemini.",
+      "evidence_event_ids": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    },
+    {
+      "actor": "Liner",
+      "direction": "Granular user-agent strings provide web publishers visibility into whether traffic represents automated background crawling or direct, human-prompted retrieval by tools like MiniMax or Google Gemini.",
+      "evidence_event_ids": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    },
+    {
+      "actor": "Known Agents",
+      "direction": "Granular user-agent strings provide web publishers visibility into whether traffic represents automated background crawling or direct, human-prompted retrieval by tools like MiniMax or Google Gemini.",
+      "evidence_event_ids": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make Policy & Regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Litigation & Legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Search & AI Discovery materially change?",
+      "tracks": [
+        "search-discovery"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Licensing & Monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "openai-blog",
+      "tier": "primary",
+      "event_ids": [
+        "openai-introduces-chatgpt-wallet-for-agent-purchases"
+      ],
+      "latest_event_date": "2026-11-13T15:00:00Z"
+    },
+    {
+      "source": "cf-changelog-radar",
+      "tier": "measurement",
+      "event_ids": [
+        "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
+      ],
+      "latest_event_date": "2026-11-09T00:00:00Z"
+    },
+    {
+      "source": "c2pa-specifications",
+      "tier": "primary",
+      "event_ids": [
+        "c2pa-adds-guidance-for-music-assets-to-provenance-specification-suite"
+      ],
+      "latest_event_date": "2026-11-10T16:07:51.172582Z"
+    },
+    {
+      "source": "ietf-webbotauth-wg",
+      "tier": "primary",
+      "event_ids": [
+        "ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag"
+      ],
+      "latest_event_date": "2026-11-15T15:23:53.906711Z"
+    },
+    {
+      "source": "knownagents-directory",
+      "tier": "measurement",
+      "event_ids": [
+        "known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
+      ],
+      "latest_event_date": "2026-11-12T16:36:29.095235Z"
+    }
+  ],
+  "reported_developments": [
+    {
+      "slug": "human-blog-human-security-meta-and-openai-drive-90-of-surging-agentic-web-traffic",
+      "title": "HUMAN Security: Meta and OpenAI Drive 90% of Surging Agentic Web Traffic",
+      "source": "human-blog",
+      "source_tier": "specialist",
+      "primary_track": "measurement-economics",
+      "event_date": "2026-11-09T00:00:00Z",
+      "importance": 0.78,
+      "summary": "HUMAN Security published its October 2026 agentic traffic benchmark, reporting an 8x surge in AI agent web requests since August 2026. Meta and OpenAI now account for approximately 90% of all agentic web traffic, led by Meta's Muse capturing 59% of the overall market. The data highlights a rapid migration toward platform-integrated assistants, while standalone agentic browsers like Perplexity's Comet lose significant traffic share."
+    },
+    {
+      "slug": "human-blog-human-security-reports-209-agentic-traffic-spike-ahead-of-black-friday-2026",
+      "title": "HUMAN Security Reports 209% Agentic Traffic Spike Ahead of Black Friday 2026",
+      "source": "human-blog",
+      "source_tier": "specialist",
+      "primary_track": "measurement-economics",
+      "event_date": "2026-11-10T00:00:00Z",
+      "importance": 0.72,
+      "summary": "HUMAN Security's Satori Threat Intelligence team projected record holiday AI shopping traffic after measuring a 209.7% month-over-month surge in agentic web requests in September 2026. Telemetry from the 2025 holiday period revealed that while total agentic volume rose 23.8% during Black Friday week, weekly block rates fell to 4.7%, indicating that most agent traffic reflected legitimate consumer shopping rather than malicious activity. The report cautions that defensive systems must simultaneously manage acute account takeover spikes, which captured up to 23% of all login attempts immediately before Black Friday 2025."
+    },
+    {
+      "slug": "datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai",
+      "title": "Meta Migrates Muse Agentic Browser Signatures From meta.com to muse.ai",
+      "source": "datadome-blog",
+      "source_tier": "specialist",
+      "primary_track": "identity-authorization",
+      "event_date": "2026-11-11T14:50:47Z",
+      "importance": 0.68,
+      "summary": "Meta transitioned the cryptographic Web Bot Auth signatures for its Muse agentic browser from Meta's corporate key directory to a product-specific directory at muse.ai. The 60-hour rollout began on November 7 and completed on November 9, moving Muse's Signature-Agent header to https://muse.ai. Sites and security systems validating signatures strictly against meta.com now treat Muse requests as unverified unless they update their trusted key directories."
+    },
+    {
+      "slug": "datadome-blog-gartner-defines-gray-bots-and-re-establishes-bot-and-agent-management-as-a-stand",
+      "title": "Gartner Defines 'Gray Bots' and Re-Establishes Bot and Agent Management as a Standalone Market",
+      "source": "datadome-blog",
+      "source_tier": "specialist",
+      "primary_track": "access-controls",
+      "event_date": "2026-11-09T13:53:28Z",
+      "importance": 0.65,
+      "summary": "In its November 2026 Market Overview for Bot Protection and Management Solutions, Gartner categorized bot defense as a distinct market rather than an integrated WAAP feature, driven by the emergence of 'gray bots' and autonomous AI agents. Gartner projects that 80% of enterprises with critical public-facing web applications will deploy dedicated bot management owned by cybersecurity teams by 2028. In response, bot management vendors such as DataDome are shifting enforcement from binary bot-or-human detection to dynamic, intent-based behavioral scoring."
+    }
+  ],
+  "model_generated": true
+}
