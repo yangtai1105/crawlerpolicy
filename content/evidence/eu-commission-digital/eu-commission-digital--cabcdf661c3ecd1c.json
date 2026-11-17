@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--cabcdf661c3ecd1c",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2477",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T14:24:30Z",
+  "detected_at": "2026-11-17T17:24:29.231942Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--cabcdf661c3ecd1c.json",
+  "content_hash": "sha256:cc9f71f4bdadd75ca438b0e2f464846f4dd68ca6fdadbf508f6974f088314e09",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2477",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "EU Leaders discuss AI and Europe's role in Ukraine peace negotiations during informal summit in Dublin",
+  "content": "European Commission News Brussels, 17 Nov 2026 \nPresident of the European Commission, Ursula von der Leyen, was in Dublin on 12 and 13 November to attend the informal EUCO hosted by the Irish Presidency. Lea...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

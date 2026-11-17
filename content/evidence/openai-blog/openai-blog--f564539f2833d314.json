@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--f564539f2833d314",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/introducing-openai-for-chile",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T00:00:00Z",
+  "detected_at": "2026-11-17T17:24:29.231942Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--f564539f2833d314.json",
+  "content_hash": "sha256:94b8084ecab5d1092c4ac4d5212173aee2844ececa0ccf99581bf1201139987e",
+  "external_id": "https://openai.com/index/introducing-openai-for-chile",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing OpenAI for Chile",
+  "content": "OpenAI and the Government of Chile are partnering to support responsible AI adoption, build public-sector skills and help local startups develop AI applications.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

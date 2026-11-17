@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-11-16T17:58:57.179138+00:00",
-  "last_fetch_succeeded_at": "2026-11-16T17:58:57.179138+00:00",
-  "last_evidence_at": "2026-11-16T17:58:57.179138+00:00",
+  "last_checked_at": "2026-11-17T17:24:29.231942+00:00",
+  "last_fetch_succeeded_at": "2026-11-17T17:24:29.231942+00:00",
+  "last_evidence_at": "2026-11-17T17:24:29.231942+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://www.akamai.com/blog/security/2024/sep/noname-security-platform-updates-330-release",
-    "https://www.akamai.com/blog/sustainability/2024/apr/crucial-role-data-sustainability",
     "https://www.akamai.com/blog/security/2024/apr/5-steps-to-make-zero-trust-achievable",
     "https://www.akamai.com/blog/security/2024/apr/secure-your-apis-with-east-west-visibility",
     "https://www.akamai.com/blog/security-research/2024/apr/phishing-usps-malicious-domains-traffic-equal-to-legitimate-traffic",
@@ -503,7 +501,9 @@
     "https://www.akamai.com/blog/edge/2026/nov/webassembly-didnt-miss-the-moment-ai-was-just-late",
     "https://www.akamai.com/blog/ai/2026/nov/ai-vulnerability-surge-exposure-response",
     "https://www.akamai.com/blog/security-research/2026/nov/strikestub-clickfix-powershell-malware-modular-rat",
-    "https://www.akamai.com/blog/news/2026/nov/cisa-bod-26-04-akamais-strategic-blueprint-federal-security"
+    "https://www.akamai.com/blog/news/2026/nov/cisa-bod-26-04-akamais-strategic-blueprint-federal-security",
+    "https://www.akamai.com/blog/cloud/2026/nov/is-your-cloud-infrastructure-running-in-the-right-place",
+    "https://www.akamai.com/blog/security/2026/nov/akamai-threat-intelligence-service-attack-data-action"
   ],
   "consecutive_failures": 0,
   "first_seen": false

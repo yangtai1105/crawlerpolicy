@@ -845,6 +845,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "anonymous-bot-verification",
+      "title": "Anonymous Bot Verification",
+      "thesis": "While initial crawler authentication efforts concentrated on non-repudiable entity identification via HTTP signatures, this proposal introduces a framework for anonymous data collection that relies on attested conduct and tiered compliance instead of exposing crawler identity.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-17T17:24:29.231942Z",
+      "last_updated_at": "2026-11-17T17:24:29.231942Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ]
+    },
+    {
       "key": "anti-bot-agent-clashes",
       "title": "Anti Bot Agent Clashes",
       "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
@@ -3671,6 +3686,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "responsible-web-data-collection-standards",
+      "title": "Responsible Web Data Collection Standards",
+      "thesis": "While initial crawler authentication efforts concentrated on non-repudiable entity identification via HTTP signatures, this proposal introduces a framework for anonymous data collection that relies on attested conduct and tiered compliance instead of exposing crawler identity.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-17T17:24:29.231942Z",
+      "last_updated_at": "2026-11-17T17:24:29.231942Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ]
+    },
+    {
       "key": "responsible-web-scraping",
       "title": "Responsible Web Scraping",
       "thesis": "While the working group focuses heavily on cryptographic verification via HTTP Message Signatures, parallel draft maintenance demonstrates continued momentum toward codifying baseline behavioral and operational norms for automated crawlers.",
@@ -4171,6 +4201,21 @@
         "x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "tiered-crawler-attestation",
+      "title": "Tiered Crawler Attestation",
+      "thesis": "While initial crawler authentication efforts concentrated on non-repudiable entity identification via HTTP signatures, this proposal introduces a framework for anonymous data collection that relies on attested conduct and tiered compliance instead of exposing crawler identity.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-17T17:24:29.231942Z",
+      "last_updated_at": "2026-11-17T17:24:29.231942Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ]
     },
     {
       "key": "training-vs-search-decoupling",

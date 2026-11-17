@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--3bb87d4604b8caff",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T00:00:00Z",
+  "detected_at": "2026-11-17T17:24:29.231942Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--3bb87d4604b8caff.json",
+  "content_hash": "sha256:04ecea2d0f5a1f2d26e9a1a15cc669c9efdaa9f5894e9d429f9d9c49a7558fce",
+  "external_id": "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Strengthening NATO and allied cyber defenses with AI",
+  "content": "How OpenAI is working with NATO and allied cyber agencies to help trusted defenders find vulnerabilities, test fixes and protect essential systems.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

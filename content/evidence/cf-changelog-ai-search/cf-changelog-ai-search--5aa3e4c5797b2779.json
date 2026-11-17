@@ -1,0 +1,19 @@
+{
+  "evidence_id": "cf-changelog-ai-search--5aa3e4c5797b2779",
+  "source": "cf-changelog-ai-search",
+  "source_url": "https://developers.cloudflare.com/changelog/post/2026-11-17-file-summaries/",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T00:00:00Z",
+  "detected_at": "2026-11-17T17:24:29.231942Z",
+  "content_path": "content/evidence/cf-changelog-ai-search/cf-changelog-ai-search--5aa3e4c5797b2779.json",
+  "content_hash": "sha256:b260a0da08ac8c72ec95cafeeb3d4d998a1bd962bacb5d70ba6ff2341d64a1cf",
+  "external_id": "https://developers.cloudflare.com/changelog/post/2026-11-17-file-summaries/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "AI Search - AI Search can generate file summaries during indexing",
+  "content": "<p><a href=\"https://developers.cloudflare.com/ai-search/\">AI Search</a> can now summarize your files while it indexes them. For each text document that produces at least three chunks, AI Search uses a large language model (LLM) to generate a summary, topics, and keywords:</p>\n<ul>\n<li>The summary and keywords are stored in the item's <code>context</code> metadata. A <code>context</code> value you already set is kept.</li>\n<li>The topics are added to the context header of the file's chunks to help retrieval.</li>\n</ul>\n<p>Turn on file summaries in the dashboard, or set <code>indexing_options.file_summary</code> to <code>true</code> when you create or update an instance. File summaries are off by default, and changing the setting triggers a full reindex.</p>\n<p><code>indexing_options</code> is replaced as a whole on every update. Include the current value of every option, or the options you leave out return to their defaults.</p>\n<p><strong>The LLM costs are billed to your account.</strong> File summaries are not part of the AI Search ingestion allotment. AI Search uses a Workers AI model suited to summarization and calls it through your instance's AI Gateway, or the <code>default</code> gateway if none is set, and the calls are billed as <a href=\"https://developers.cloudflare.com/workers-ai/platform/pricing/\">Workers AI usage</a>. Each new or modified file is summarized once, so costs grow with the amount of content you index.</p>\n<p>For more information, refer to <a href=\"https://developers.cloudflare.com/ai-search/configuration/data-source/#file-summaries\">File summaries</a>.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

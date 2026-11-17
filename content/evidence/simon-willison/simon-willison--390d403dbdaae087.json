@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--390d403dbdaae087",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T16:48:33Z",
+  "detected_at": "2026-11-17T17:24:29.231942Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--390d403dbdaae087.json",
+  "content_hash": "sha256:e8bb2839e66247b67daac592ef623d1a8d72413c366ba744f2956c1464dfa9f3",
+  "external_id": "https://simonwillison.net/2026/Nov/17/datasette-lite/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Running the full server-side Datasette Python app in the browser with service workers and Pyodide",
+  "content": "<p><a href=\"https://lite.datasette.io/\">Datasette Lite</a> is my port of the <a href=\"https://datasette.io/\">Datasette</a> Python application to run directly in the browser using WebAssembly and <a href=\"https://pyodide.org/\">Pyodide</a>. I've released a complete rewrite of Datasette Lite using service workers, and it's now almost indistinguishable from the real server-side application.</p>\n<p>You can now do all of the following, using a carefully crafted URL to <strong>lite.datasette.io</strong>:</p>\n<ul>\n<li>Load client-side Datasette to browse any SQLite database, JSON file, CSV file or SQL script</li>\n<li>Select a released version of Datasette to load from PyPI</li>\n<li>Load a specific commit, tag, or branch name from the Datasette GitHub repository</li>\n<li>Pick from over 100 versions of SQLite to use with Datasette</li>\n<li>Install additional Datasette plugins from PyPI or URLs to wheel files, including JavaScript visualization tools</li>\n</ul>\n<p>The ability to load specific Datasette references, plugins, and SQLite versions makes this a fantastic tool for linking to demos of work-in-progress features or bug reproductions, without needing to spin up a full web server to serve that demo.</p>\n<p>As an example, consider the following URL:</p>\n<p><a href=\"https://lite.datasette.io/?install=datasette-maplibre&amp;url=https://gist.githubusercontent.com/simonw/39fa5d399465766039549912e2b3d291/raw/f6dfba99a75cbb8b5d9386223220eb52272767ee/demo.db&amp;metadata=https://gist.githu",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

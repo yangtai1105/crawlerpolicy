@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-11-16T17:58:57.179138+00:00",
-  "last_fetch_succeeded_at": "2026-11-16T17:58:57.179138+00:00",
-  "last_evidence_at": "2026-11-16T17:58:57.179138+00:00",
+  "last_checked_at": "2026-11-17T17:24:29.231942+00:00",
+  "last_fetch_succeeded_at": "2026-11-17T17:24:29.231942+00:00",
+  "last_evidence_at": "2026-11-17T17:24:29.231942+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/helen-toner-joins",
-    "https://openai.com/index/truthfulqa",
     "https://openai.com/index/openai-codex",
     "https://openai.com/index/triton",
     "https://openai.com/index/evaluating-large-language-models-trained-on-code",
@@ -503,7 +501,9 @@
     "https://openai.com/index/more-ways-to-move-care-forward-with-chatgpt-for-healthcare",
     "https://openai.com/index/the-kings-trust-and-openai",
     "https://openai.com/index/step-toward-defining-the-standard-model",
-    "https://openai.com/index/our-new-blog-for-science"
+    "https://openai.com/index/our-new-blog-for-science",
+    "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
+    "https://openai.com/index/introducing-openai-for-chile"
   ],
   "consecutive_failures": 0,
   "first_seen": false

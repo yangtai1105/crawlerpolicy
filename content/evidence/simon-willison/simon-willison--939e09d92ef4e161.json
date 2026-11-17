@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--939e09d92ef4e161",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/17/go-proverbs/",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T06:16:26Z",
+  "detected_at": "2026-11-17T17:24:29.231942Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--939e09d92ef4e161.json",
+  "content_hash": "sha256:b2dc9a47fc1689b62c3072f0fea4e9e167b0d2b1eb629c9d75dd274c348ec5ec",
+  "external_id": "https://simonwillison.net/2026/Nov/17/go-proverbs/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Quoting Go Proverbs",
+  "content": "<blockquote cite=\"https://go-proverbs.github.io\"><p>A little copying is better than a little dependency.</p></blockquote>\n<p class=\"cite\">&mdash; <a href=\"https://go-proverbs.github.io\">Go Proverbs</a>, <a href=\"https://news.ycombinator.com/item?id=50516689#50526408\">via</a></p>\n\n    <p>Tags: <a href=\"https://simonwillison.net/tags/go\">go</a>, <a href=\"https://simonwillison.net/tags/programming\">programming</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
