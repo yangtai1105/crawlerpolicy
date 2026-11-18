@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-18",
+  "generated_at": "2026-11-18T16:57:56.492918Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions",
+      "status": "signal",
+      "importance": 0.8,
+      "published_at": "2026-11-17T19:04:06Z"
+    },
+    {
+      "slug": "x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-",
+      "status": "signal",
+      "importance": 0.78,
+      "published_at": "2026-11-17T19:07:41Z"
+    },
+    {
+      "slug": "simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-",
+      "status": "signal",
+      "importance": 0.68,
+      "published_at": "2026-11-17T22:52:29Z"
+    },
+    {
+      "slug": "x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr",
+      "status": "signal",
+      "importance": 0.65,
+      "published_at": "2026-11-18T10:03:56Z"
+    },
+    {
+      "slug": "x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis",
+      "status": "signal",
+      "importance": 0.55,
+      "published_at": "2026-11-17T16:28:32Z"
+    }
+  ]
+}

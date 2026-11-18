@@ -1,0 +1,32 @@
+{
+  "evidence_id": "x-discovery--b9928d297a461261",
+  "source": "x-discovery",
+  "source_url": "https://x.com/perplexity_ai/status/2122728603909783741",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T16:28:32Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--b9928d297a461261.json",
+  "content_hash": "sha256:e2f823bd50680e407974b7f3ef0dc1f891d0c62911f8e015a5686fd542d8f7f8",
+  "external_id": "2122728603909783741",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Perplexity rolls out Multiagent system where a lead agent splits tasks across specialized agents using different frontier models",
+  "content": "X author: @perplexity_ai\n\nPerplexity AI shipped Multiagent, a new effort level in which a lead agent decomposes tasks, delegates to a team of agents powered by different frontier models that share findings, with the lead synthesizing a final answer.\n\nLinked sources:\n- None supplied",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "perplexity_ai",
+    "post_url": "https://x.com/perplexity_ai/status/2122728603909783741",
+    "linked_urls": [],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "This is the first report in the list covering Perplexity's rollout of its Multiagent system that delegates tasks across different frontier models."
+    },
+    "linked_articles": []
+  }
+}

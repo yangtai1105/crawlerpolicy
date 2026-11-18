@@ -1,36 +1,36 @@
 {
-  "status": "degraded",
-  "last_attempted_at": "2026-11-17T17:24:29.231942Z",
-  "last_fully_successful_at": "2026-11-16T17:58:57.179138Z",
+  "status": "healthy",
+  "last_attempted_at": "2026-11-18T16:57:56.492918Z",
+  "last_fully_successful_at": "2026-11-18T16:57:56.492918Z",
   "coverage": {
     "configured": 52,
-    "completed": 50,
-    "fetched": 50,
-    "analyzed": 50,
-    "published": 50,
-    "failed": 2,
+    "completed": 52,
+    "fetched": 52,
+    "analyzed": 52,
+    "published": 52,
+    "failed": 0,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 50,
-      "failed": 2,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "evidence": {
-      "ok": 50,
-      "failed": 2,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "analysis": {
-      "ok": 50,
+      "ok": 52,
       "failed": 0,
-      "pending": 2
+      "pending": 0
     },
     "publish": {
-      "ok": 50,
+      "ok": 52,
       "failed": 0,
-      "pending": 2
+      "pending": 0
     }
   },
   "per_source": {
@@ -75,11 +75,11 @@
       "feed_items_written": []
     },
     "applebot-extended": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "Redirect response '304 Not Modified' for url 'https://support.apple.com/en-us/119829'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/304",
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
       "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
@@ -150,7 +150,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--84bc8192fcee967a",
+        "cloudflare-blog--2149eb8555ef1f0b"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -170,10 +173,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "akamai-blog--4ce08a76a4ba186e",
-        "akamai-blog--e652c0dd6566e175"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -193,7 +193,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "imperva-blog--9756f48733e2ba66"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -214,8 +216,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--9ab8e1c5e269e103",
-        "uk-cma--5d36ee8ba745926e"
+        "uk-cma--17fc6450deea3b62",
+        "uk-cma--e9bd2193f6fe8424",
+        "uk-cma--2c147f5bc0480a05",
+        "uk-cma--fbe041a937642392",
+        "uk-cma--77ad079f593fa8bc",
+        "uk-cma--57d85291fae54dfc",
+        "uk-cma--e08424d3b450f92a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -247,16 +254,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--2a970b16d98b6670",
-        "eu-commission-digital--06c43f56b82dfd74",
-        "eu-commission-digital--90741b04dda5b676",
-        "eu-commission-digital--cabcdf661c3ecd1c",
-        "eu-commission-digital--31fe238484ab7ee1",
-        "eu-commission-digital--248df8852a40e487",
-        "eu-commission-digital--4194c7d950eb9dc9",
-        "eu-commission-digital--c3f7a33f897adcf0",
-        "eu-commission-digital--c08d4af2b356ed5f",
-        "eu-commission-digital--109d72035564801f"
+        "eu-commission-digital--23a1125f4eb8c69f",
+        "eu-commission-digital--469d7289beb4d555",
+        "eu-commission-digital--664412beaa94a0e4",
+        "eu-commission-digital--611b2473bc2fff29",
+        "eu-commission-digital--3165ff534a16a490",
+        "eu-commission-digital--567b8e7f6f6f012c",
+        "eu-commission-digital--39ae53401664e6ab",
+        "eu-commission-digital--d91ce436fa5c288f",
+        "eu-commission-digital--495ce277799fdd28",
+        "eu-commission-digital--f6f3e27ee18482b1"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -317,7 +324,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "a2a-spec--882811c130ca07d5"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -428,7 +437,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--2bb0c5dc00f72458"
+        "stratechery--ce00a558b571cfb5"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -440,12 +449,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--390d403dbdaae087",
-        "simon-willison--939e09d92ef4e161",
-        "simon-willison--7fd872d2e8bf73d1"
+        "simon-willison--2aafe08e1f285404",
+        "simon-willison--5fac62787ae9939d",
+        "simon-willison--f69f9c6e99c6f354",
+        "simon-willison--fc589d1d09667e6f"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-.md"
+      ]
     },
     "cloudflare-research": {
       "fetch": "ok",
@@ -464,8 +476,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--3bb87d4604b8caff",
-        "openai-blog--f564539f2833d314"
+        "openai-blog--639edb077fefa340",
+        "openai-blog--4058f8b6ac13834e"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -486,9 +498,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-ai-search--5aa3e4c5797b2779"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -509,13 +519,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "ietf-webbotauth-wg--b23a210f6971e0dc"
+        "ietf-webbotauth-wg--010e7fb2084bfddf"
       ],
       "events_written": [
-        "content/events/2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous.md"
+        "content/events/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md"
       ],
       "feed_items_written": [
-        "content/feed/2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous.md"
+        "content/feed/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md"
       ]
     },
     "c2pa-specifications": {
@@ -574,26 +584,44 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--4766e44c5ede47a9"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "xAI X Search did not return valid candidate JSON",
-      "evidence_ids": [],
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "x-discovery--bac46891e67062f7",
+        "x-discovery--4d96328717266b91",
+        "x-discovery--22ae246eb8795f23",
+        "x-discovery--b9928d297a461261",
+        "x-discovery--590af0057172938e"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr.md",
+        "content/feed/2026-11-17-x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions.md",
+        "content/feed/2026-11-17-x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis.md",
+        "content/feed/2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-.md"
+      ]
     }
   },
   "events_written": [
-    "content/events/2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous.md"
+    "content/events/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous.md"
+    "content/feed/2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-.md",
+    "content/feed/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md",
+    "content/feed/2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr.md",
+    "content/feed/2026-11-17-x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions.md",
+    "content/feed/2026-11-17-x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis.md",
+    "content/feed/2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-.md"
   ],
   "provider": {
     "name": "gemini",
@@ -603,12 +631,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-17",
-    "item_count": 1,
-    "path": "data/daily/2026-11-17.json"
+    "edition_date": "2026-11-18",
+    "item_count": 5,
+    "path": "data/daily/2026-11-18.json"
   },
   "insight_threads": {
-    "thread_count": 325,
+    "thread_count": 340,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -617,13 +645,13 @@
     "error": ""
   },
   "discovery": {
-    "status": "unavailable",
-    "candidate_count": 0,
-    "x_search_calls": 0,
-    "estimated_tool_cost_usd": 0.0,
+    "status": "live",
+    "candidate_count": 5,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.122682,
     "sources_configured": 1,
-    "sources_completed": 0,
-    "sources_failed": 1,
+    "sources_completed": 1,
+    "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }
 }

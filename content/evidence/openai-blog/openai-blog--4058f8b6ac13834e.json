@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--4058f8b6ac13834e",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T17:45:00Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--4058f8b6ac13834e.json",
+  "content_hash": "sha256:65ed9d04b019bc46a3c647a079a2a7f28ced222acf1d2123ddd84a6fee0380e1",
+  "external_id": "https://openai.com/index/introducing-gpt-6-2-astra-sol",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Introducing GPT-6.2 Astra and Sol",
+  "content": "Introducing GPT‑6.2 Astra and Sol, with better professional outputs, coding, computer use, and efficiency at lower cost across ChatGPT Work, Codex, and the API.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

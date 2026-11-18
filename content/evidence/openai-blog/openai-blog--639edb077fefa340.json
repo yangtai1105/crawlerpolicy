@@ -1,0 +1,19 @@
+{
+  "evidence_id": "openai-blog--639edb077fefa340",
+  "source": "openai-blog",
+  "source_url": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T00:00:00Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/openai-blog/openai-blog--639edb077fefa340.json",
+  "content_hash": "sha256:c3faa25c750c0655d389752a08c376c39bf9b306e5a6f29d36a2db1ab882eac4",
+  "external_id": "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Le Groupe Figaro and OpenAI partner to bring Le Figaro journalism to ChatGPT",
+  "content": "Le Groupe Figaro and OpenAI partner to bring Le Figaro’s journalism to ChatGPT through summaries and excerpts, with links to original stories.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--fc589d1d09667e6f",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T22:38:52Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--fc589d1d09667e6f.json",
+  "content_hash": "sha256:63d1b9a674607018644b2ab15946e24ed721fef6fe94a2faeaa997ab1e51404e",
+  "external_id": "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "GPT‑6.2 Astra and GPT‑6.2 Sol",
+  "content": "<p><strong><a href=\"https://openai.com/index/introducing-gpt-6-2-astra-sol/\">GPT‑6.2 Astra and GPT‑6.2 Sol</a></strong></p>\nOpenAI:</p>\n<blockquote>\n<p>We’re introducing GPT‑6.2 Astra, our new frontier model for your hardest projects, and GPT‑6.2 Sol, our efficient, versatile model for everyday work.</p>\n</blockquote>\n<p>They're available in the API as <code>gpt-6.2-astra</code> and <code>gpt-6.2-sol</code>. I shipped <a href=\"https://llm.datasette.io/en/stable/changelog.html#v0-38\">LLM 0.38</a> with support for the new models.</p>\n<p>6.2 Astra is 80% of the price of 6 Astra - $8/MTok input and $40/MTok output, the same price as Claude Fable 5.2 (which was also 80% of its predecessor). 6 Astra and Fable 5 were both $10/$50. The cached price is an even bigger discount - $0.40/million compared to $1/million for the older model. This is great news for longer running agentic sessions.</p>\n<p>GPT-6.2 Sol is the same $2/$10 price as 6.1 Sol and 6 Sol - which are half the price of GPT-5.6 Sol ($4/$20).</p>\n<p>Here are the pelicans <a href=\"https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Fa940cc2750162ac9edf0ddf881067b83\">for GPT-6.2 Sol</a> and <a href=\"https://tools.simonwillison.net/markdown-svg-renderer?url=https%3A%2F%2Fgist.github.com%2Fsimonw%2Ffe836e13c90c00233c9e9e499a941805\">for GPT-6.2 Astra</a>. The 6.2 Astra max pelican looks like this:</p>\n<p><img alt=\"Good bicycle, good pelican, one wing is on the handlebars with finger",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

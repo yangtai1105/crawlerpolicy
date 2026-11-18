@@ -125,6 +125,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-execution-sandboxing",
+      "title": "Agent Execution Sandboxing",
+      "thesis": "By placing execution in an external sandbox while intercepting outbound traffic through an allow-list proxy with credential replacement, developers can prevent autonomous agents from exfiltrating credentials or accessing unauthorized external network destinations.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-first-developer-tooling",
       "title": "Agent First Developer Tooling",
       "thesis": "Rather than retrofitting legacy human-oriented terminal interfaces with JSON flags, developer platforms are shifting to agent-first CLI architectures where JSON is standard, commands are discovered via semantic search, and configuration is validated through TypeScript Language Server Protocol (LSP) integrations.",
@@ -390,16 +403,17 @@
     {
       "key": "agentic-commerce",
       "title": "Agentic Commerce",
-      "thesis": "By integrating payment capabilities directly into agent workflows under explicit user approval, OpenAI is operationalizing agents as transactional economic actors rather than strictly informational tools.",
+      "thesis": "Consumer AI shifts from conversational interfaces to delegated execution environments operating inside hardware-isolated virtual machines, interfacing directly with external merchant systems, phone networks, and password managers on a user's behalf.",
       "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-10-21T13:28:44.196458Z",
-      "last_updated_at": "2026-11-13T15:56:00.186978Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
       "related_feed_slugs": [
         "x-discovery-cloudflare-partners-with-mastercard-on-agent-to-agent-payments",
         "datadome-blog-datadome-profiles-agentic-commerce-footprints-for-meta-muse-openai-dots-and-inst",
         "stripe-blog-stripe-introduces-enhancements-for-personal-agent-checkout-via-link",
-        "openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases"
+        "openai-blog-openai-introduces-chatgpt-wallet-for-agent-purchases",
+        "x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions"
       ],
       "verified_development_slugs": [
         "openai-introduces-chatgpt-wallet-for-agent-purchases"
@@ -553,6 +567,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agentic-web-access",
+      "title": "Agentic Web Access",
+      "thesis": "Traditional bot defenses treat non-human automated traffic uniformly, but user-directed agents execute multi-step interactive workflows—such as cart operations and API calls—that break under conventional CAPTCHAs, per-IP rate limits, and endpoint-level filtering unless firewalls explicitly carve out deep, multi-layer exemptions.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agentic-web-governance",
       "title": "Agentic Web Governance",
       "thesis": "Edge enforcement is shifting from binary bot-blocking scores toward multi-dimensional identity and session trust models that distinguish beneficial AI agents, standard search crawlers, and autonomous adversarial exploits.",
@@ -666,6 +693,19 @@
       "last_updated_at": "2026-10-28T14:52:45.308044Z",
       "related_feed_slugs": [
         "x-discovery-cloudflare-launches-aeo-dashboard-tracking-ai-bot-access-and-llm-citations"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "ai-content-rewriting-disputes",
+      "title": "AI Content Rewriting Disputes",
+      "thesis": "The litigation highlights the legal boundary between unprotected factual reporting and actionable infringement in AI content networks, focusing on the reuse of original photography and systematic text reproduction by automated aggregation pipelines.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
       ],
       "verified_development_slugs": []
     },
@@ -860,6 +900,21 @@
       ]
     },
     {
+      "key": "anonymous-crawler-attestation",
+      "title": "Anonymous Crawler Attestation",
+      "thesis": "Rapid iteration from revision -00 to -02 alongside a new IPR disclosure indicates accelerating formalization and proprietary or patented stakes in privacy-preserving, conduct-based crawler verification models.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+      ]
+    },
+    {
       "key": "anti-bot-agent-clashes",
       "title": "Anti Bot Agent Clashes",
       "thesis": "The rise of user-delegated agents exposes an economic conflict: platforms reject agentic traffic because it bypasses ad impressions, disrupts direct customer interfaces, and strains server resources, invalidating the concept of permissionless web automation in consumer AI.",
@@ -981,6 +1036,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "autonomous-consumer-agents",
+      "title": "Autonomous Consumer Agents",
+      "thesis": "Consumer AI shifts from conversational interfaces to delegated execution environments operating inside hardware-isolated virtual machines, interfacing directly with external merchant systems, phone networks, and password managers on a user's behalf.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "behavioral-accountability",
       "title": "Behavioral Accountability",
       "thesis": "CDN bot verification is shifting from identity authentication to dynamic behavioral accountability, creating continuous reputational scoring based on whether crawlers honor site directives and backoff signals.",
@@ -1079,6 +1147,21 @@
       ]
     },
     {
+      "key": "bot-governance-standards",
+      "title": "Bot Governance Standards",
+      "thesis": "Rapid iteration from revision -00 to -02 alongside a new IPR disclosure indicates accelerating formalization and proprietary or patented stakes in privacy-preserving, conduct-based crawler verification models.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+      ]
+    },
+    {
       "key": "bot-identity-standardization",
       "title": "Bot Identity Standardization",
       "thesis": "Emerging bot authentication standards require strict parity across multi-language reference implementations to prevent security loopholes, such as replay attacks on expired cryptographic proofs.",
@@ -1172,6 +1255,19 @@
       "verified_development_slugs": [
         "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
       ]
+    },
+    {
+      "key": "bypass-of-robots-txt-by-delegated-agents",
+      "title": "Bypass Of Robots Txt By Delegated Agents",
+      "thesis": "Traditional bot defenses treat non-human automated traffic uniformly, but user-directed agents execute multi-step interactive workflows—such as cart operations and API calls—that break under conventional CAPTCHAs, per-IP rate limits, and endpoint-level filtering unless firewalls explicitly carve out deep, multi-layer exemptions.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "cache-protection-against-automated-data-harvesting",
@@ -1321,6 +1417,21 @@
         "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "conduct-based-web-access",
+      "title": "Conduct Based Web Access",
+      "thesis": "Rapid iteration from revision -00 to -02 alongside a new IPR disclosure indicates accelerating formalization and proprietary or patented stakes in privacy-preserving, conduct-based crawler verification models.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+      ]
     },
     {
       "key": "consolidation-around-platform-embedded-agents",
@@ -1599,6 +1710,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "credential-masking-proxies",
+      "title": "Credential Masking Proxies",
+      "thesis": "By placing execution in an external sandbox while intercepting outbound traffic through an allow-list proxy with credential replacement, developers can prevent autonomous agents from exfiltrating credentials or accessing unauthorized external network destinations.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "cryptographic-agent-authentication",
       "title": "Cryptographic Agent Authentication",
       "thesis": "Agent identification is shifting from passive heuristic fingerprinting and user-agent string declarations toward cryptographically verifiable identity standards anchored by major financial networks and edge infrastructure providers.",
@@ -1628,17 +1752,18 @@
     {
       "key": "cryptographic-bot-authentication",
       "title": "Cryptographic Bot Authentication",
-      "thesis": "As cryptographic bot verification libraries mature, internal state management requires defensive error propagation to prevent subtle key corruption or unexpected credential overwrites in long-running verification engines.",
+      "thesis": "Traditional bot defenses treat non-human automated traffic uniformly, but user-directed agents execute multi-step interactive workflows—such as cart operations and API calls—that break under conventional CAPTCHAs, per-IP rate limits, and endpoint-level filtering unless firewalls explicitly carve out deep, multi-layer exemptions.",
       "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-08-30T05:51:00.726967Z",
-      "last_updated_at": "2026-09-11T12:38:01.191471Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
       "related_feed_slugs": [
         "web-bot-auth-repo-cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks",
         "web-bot-auth-repo-web-bot-auth-rust-verifier-hardened-against-future-dated-signatures",
         "web-bot-auth-repo-cloudflare-optimizes-ed25519-signature-verification-for-web-bot-auth-edge-worklo",
         "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat",
-        "web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier"
+        "web-bot-auth-repo-web-bot-auth-adds-safe-key-renaming-to-rust-reference-verifier",
+        "x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
       ],
       "verified_development_slugs": [
         "cloudflare-patches-web-bot-auth-rust-verifier-to-enforce-expiration-checks",
@@ -2407,6 +2532,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "firewall-adaptation-for-ai-agents",
+      "title": "Firewall Adaptation For AI Agents",
+      "thesis": "Traditional bot defenses treat non-human automated traffic uniformly, but user-directed agents execute multi-step interactive workflows—such as cart operations and API calls—that break under conventional CAPTCHAs, per-IP rate limits, and endpoint-level filtering unless firewalls explicitly carve out deep, multi-layer exemptions.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "formalization-of-automated-traffic-verification-protocols",
       "title": "Formalization Of Automated Traffic Verification Protocols",
       "thesis": "Active maintenance of the primary protocol draft indicates the working group is iterating on its cryptographic core while surrounding individual contributions explore supporting mechanisms like registries, IP discovery, and agent identity cards.",
@@ -2586,6 +2724,19 @@
       "verified_development_slugs": [
         "a2a-specification-clarifies-interrupted-task-states-as-non-terminal-across-strea"
       ]
+    },
+    {
+      "key": "heterogeneous-model-delegation-for-complex-queries",
+      "title": "Heterogeneous Model Delegation For Complex Queries",
+      "thesis": "Agentic search systems are transitioning from single-model sequential pipelines to multi-agent architectures that orchestrate multiple frontier models simultaneously to handle distinct sub-tasks.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "hierarchical-resolution-frameworks-reconciling-bot-specific-crawler-directives-with-universal-data-use-preferences",
@@ -2845,6 +2996,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "isolated-agent-execution-environments",
+      "title": "Isolated Agent Execution Environments",
+      "thesis": "Consumer AI shifts from conversational interfaces to delegated execution environments operating inside hardware-isolated virtual machines, interfacing directly with external merchant systems, phone networks, and password managers on a user's behalf.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "ja4-fingerprinting",
       "title": "Ja4 Fingerprinting",
       "thesis": "Aggregate traffic and ASN-level drops conflate distinct classes of automated actors: infrastructure outages quickly disable centralized, verified search engine crawlers, whereas evasive and unverified bot operations maintain operational resilience by rapidly migrating workloads across hosting providers.",
@@ -2893,6 +3057,19 @@
       "last_updated_at": "2026-09-28T16:29:28.092567Z",
       "related_feed_slugs": [
         "datadome-blog-meta-muse-agentic-browser-operates-without-declared-user-agent-or-dedicated-ip-r"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "local-news-ai-scraping-litigation",
+      "title": "Local News AI Scraping Litigation",
+      "thesis": "The litigation highlights the legal boundary between unprotected factual reporting and actionable infringement in AI content networks, focusing on the reuse of original photography and systematic text reproduction by automated aggregation pipelines.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
       ],
       "verified_development_slugs": []
     },
@@ -3167,6 +3344,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "multi-agent-orchestration-in-web-discovery",
+      "title": "Multi Agent Orchestration In Web Discovery",
+      "thesis": "Agentic search systems are transitioning from single-model sequential pipelines to multi-agent architectures that orchestrate multiple frontier models simultaneously to handle distinct sub-tasks.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "multi-agent-orchestration-standardization",
       "title": "Multi Agent Orchestration Standardization",
       "thesis": "By extending SendMessageRequest with artifact updates and restoring role attributes (ROLE_USER versus ROLE_AGENT), the protocol formalizes shared, bidirectional document editing and payload handoffs between orchestrators and autonomous agents without requiring separate out-of-band transfer mechanisms.",
@@ -3286,6 +3476,19 @@
       "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "outbound-agent-network-allow-listing",
+      "title": "Outbound Agent Network Allow Listing",
+      "thesis": "By placing execution in an external sandbox while intercepting outbound traffic through an allow-list proxy with credential replacement, developers can prevent autonomous agents from exfiltrating credentials or accessing unauthorized external network destinations.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-18T16:57:56.492918Z",
+      "last_updated_at": "2026-11-18T16:57:56.492918Z",
+      "related_feed_slugs": [
+        "simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-"
       ],
       "verified_development_slugs": []
     },

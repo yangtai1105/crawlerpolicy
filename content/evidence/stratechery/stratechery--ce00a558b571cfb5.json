@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--ce00a558b571cfb5",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/nvidia-earnings-office-convergence-os-wars-ai-edition/",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T11:00:00Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/stratechery/stratechery--ce00a558b571cfb5.json",
+  "content_hash": "sha256:686279ff86ecd26871a99accdaeb6010c7f938fcf72e058e76dc5641d968df8d",
+  "external_id": "https://stratechery.com/?p=21272",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Nvidia Earnings; Office Convergence; OS Wars, AI Edition",
+  "content": "<p>Nvidia's earnings were boring, and also a statement as to why Jensen Huang probably isn't coming back; then, Microsoft and Anthropic ship dueling operating system updates.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

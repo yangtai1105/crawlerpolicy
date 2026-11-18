@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-17T17:24:29.231942+00:00",
-  "last_fetch_succeeded_at": "2026-11-17T17:24:29.231942+00:00",
-  "last_evidence_at": "2026-11-17T17:24:29.231942+00:00",
+  "last_checked_at": "2026-11-18T16:57:56.492918+00:00",
+  "last_fetch_succeeded_at": "2026-11-18T16:57:56.492918+00:00",
+  "last_evidence_at": "2026-11-18T16:57:56.492918+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -70,7 +70,11 @@
     "https://simonwillison.net/2026/Nov/15/datasette-2/",
     "https://simonwillison.net/2026/Nov/17/datasette-lite/",
     "https://simonwillison.net/2026/Nov/17/go-proverbs/",
-    "https://simonwillison.net/2026/Nov/16/llm/"
+    "https://simonwillison.net/2026/Nov/16/llm/",
+    "https://simonwillison.net/2026/Nov/18/daniel-stenberg/",
+    "https://simonwillison.net/2026/Nov/18/psf-end-of-year-fundraiser/",
+    "https://simonwillison.net/2026/Nov/17/external-sandboxes-for-coding-agents/",
+    "https://simonwillison.net/2026/Nov/17/gpt62-astra-and-sol/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

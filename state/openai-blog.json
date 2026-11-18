@@ -1,11 +1,9 @@
 {
-  "last_checked_at": "2026-11-17T17:24:29.231942+00:00",
-  "last_fetch_succeeded_at": "2026-11-17T17:24:29.231942+00:00",
-  "last_evidence_at": "2026-11-17T17:24:29.231942+00:00",
+  "last_checked_at": "2026-11-18T16:57:56.492918+00:00",
+  "last_fetch_succeeded_at": "2026-11-18T16:57:56.492918+00:00",
+  "last_evidence_at": "2026-11-18T16:57:56.492918+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://openai.com/index/openai-codex",
-    "https://openai.com/index/triton",
     "https://openai.com/index/evaluating-large-language-models-trained-on-code",
     "https://openai.com/index/improving-language-model-behavior",
     "https://openai.com/index/openai-scholars-2021-final-projects",
@@ -503,7 +501,9 @@
     "https://openai.com/index/step-toward-defining-the-standard-model",
     "https://openai.com/index/our-new-blog-for-science",
     "https://openai.com/index/strengthening-nato-allied-cyber-defences-ai",
-    "https://openai.com/index/introducing-openai-for-chile"
+    "https://openai.com/index/introducing-openai-for-chile",
+    "https://openai.com/index/le-groupe-figaro-and-openai-announce-partnership",
+    "https://openai.com/index/introducing-gpt-6-2-astra-sol"
   ],
   "consecutive_failures": 0,
   "first_seen": false

@@ -464,6 +464,19 @@
         "2026-11-12-knownagents-directory-known-agents-directory-adds-minimaxagent-google-gemininotebook-and-four-other-bo"
       ]
     },
+    "player:hilary loewenstein": {
+      "kind": "player",
+      "observed_name": "Hilary Loewenstein",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--bac46891e67062f7"
+      ],
+      "feed_slugs": [
+        "2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
+      ]
+    },
     "player:hugging face": {
       "kind": "player",
       "observed_name": "Hugging Face",
@@ -481,8 +494,8 @@
       "kind": "player",
       "observed_name": "IETF Web Bot Auth Working Group",
       "first_seen_at": "2026-10-22T13:30:16.624196Z",
-      "last_seen_at": "2026-11-17T17:24:29.231942Z",
-      "occurrences": 7,
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 8,
       "evidence_ids": [
         "ietf-webbotauth-wg--c6dc433a924a1ecc",
         "ietf-webbotauth-wg--590751b5f4db81f6",
@@ -490,7 +503,8 @@
         "ietf-webbotauth-wg--79c2f8436380dea1",
         "ietf-webbotauth-wg--73b525a0d33d1f6c",
         "ietf-webbotauth-wg--b0e8266a52e25cf9",
-        "ietf-webbotauth-wg--b23a210f6971e0dc"
+        "ietf-webbotauth-wg--b23a210f6971e0dc",
+        "ietf-webbotauth-wg--010e7fb2084bfddf"
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
@@ -499,7 +513,8 @@
         "2026-10-29-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-releases-revision-01-of-core-http-signatures-pro",
         "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
         "2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag",
-        "2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+        "2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous",
+        "2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
       ]
     },
     "player:indonesian parliament": {
@@ -554,6 +569,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:joe coughlin": {
+      "kind": "player",
+      "observed_name": "Joe Coughlin",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--bac46891e67062f7"
+      ],
+      "feed_slugs": [
+        "2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
       ]
     },
     "player:joint development foundation": {
@@ -770,6 +798,32 @@
         "2026-10-30-x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit"
       ]
     },
+    "player:perplexity ai": {
+      "kind": "player",
+      "observed_name": "Perplexity AI",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--b9928d297a461261"
+      ],
+      "feed_slugs": [
+        "2026-11-17-x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis"
+      ]
+    },
+    "player:prime radiant": {
+      "kind": "player",
+      "observed_name": "Prime Radiant",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "simon-willison--f69f9c6e99c6f354"
+      ],
+      "feed_slugs": [
+        "2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-"
+      ]
+    },
     "player:radist": {
       "kind": "player",
       "observed_name": "Radist",
@@ -794,6 +848,19 @@
       ],
       "feed_slugs": [
         "2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
+      ]
+    },
+    "player:robert kellman": {
+      "kind": "player",
+      "observed_name": "Robert Kellman",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--bac46891e67062f7"
+      ],
+      "feed_slugs": [
+        "2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
       ]
     },
     "player:search engine land": {
@@ -867,6 +934,19 @@
         "2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
       ]
     },
+    "player:simon willison": {
+      "kind": "player",
+      "observed_name": "Simon Willison",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "simon-willison--f69f9c6e99c6f354"
+      ],
+      "feed_slugs": [
+        "2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-"
+      ]
+    },
     "player:skadden, arps, slate, meagher & flom": {
       "kind": "player",
       "observed_name": "Skadden, Arps, Slate, Meagher & Flom",
@@ -878,6 +958,19 @@
       ],
       "feed_slugs": [
         "2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
+      ]
+    },
+    "player:surround sound media": {
+      "kind": "player",
+      "observed_name": "Surround Sound Media",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--bac46891e67062f7"
+      ],
+      "feed_slugs": [
+        "2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
       ]
     },
     "player:sysdig": {
@@ -969,6 +1062,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:the record north shore": {
+      "kind": "player",
+      "observed_name": "The Record North Shore",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--bac46891e67062f7"
+      ],
+      "feed_slugs": [
+        "2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
       ]
     },
     "player:the texas tribune": {
@@ -1309,21 +1415,25 @@
       "kind": "protocol",
       "observed_name": "HTTP",
       "first_seen_at": "2026-10-13T15:36:53.900599Z",
-      "last_seen_at": "2026-11-03T15:51:57.033950Z",
-      "occurrences": 5,
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 7,
       "evidence_ids": [
         "datadome-blog--42fa450a86dba89a",
         "cloudflare-blog--5a2555e77804fad4",
         "cloudflare-blog--cc3fb6ecbefdd443",
         "x-discovery--fe5003d0c481d2df",
-        "ietf-webbotauth-wg--73b525a0d33d1f6c"
+        "ietf-webbotauth-wg--73b525a0d33d1f6c",
+        "simon-willison--f69f9c6e99c6f354",
+        "x-discovery--590af0057172938e"
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots",
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut",
         "2026-10-16-cloudflare-blog-cloudflare-introduces-behavioral-trust-scoring-system-for-verified-bots",
         "2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests",
-        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade"
+        "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
+        "2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-",
+        "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
       ]
     },
     "protocol:http 402": {
@@ -1362,6 +1472,19 @@
         "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
         "2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
         "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
+      ]
+    },
+    "protocol:https": {
+      "kind": "protocol",
+      "observed_name": "HTTPS",
+      "first_seen_at": "2026-11-18T16:57:56.492918Z",
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "simon-willison--f69f9c6e99c6f354"
+      ],
+      "feed_slugs": [
+        "2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-"
       ]
     },
     "protocol:jafar": {
@@ -1528,8 +1651,8 @@
       "kind": "protocol",
       "observed_name": "RFC 9421",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-11-11T15:53:10.884486Z",
-      "occurrences": 7,
+      "last_seen_at": "2026-11-18T16:57:56.492918Z",
+      "occurrences": 8,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
         "web-bot-auth-repo--f2800be0b3b43903",
@@ -1537,7 +1660,8 @@
         "web-bot-auth-repo--2f675ebb40cb7d9e",
         "web-bot-auth-repo--202719f2d0bba953",
         "web-bot-auth-repo--478630190caac379",
-        "datadome-blog--da8d7906e0961578"
+        "datadome-blog--da8d7906e0961578",
+        "x-discovery--590af0057172938e"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
@@ -1546,7 +1670,8 @@
         "2026-11-06-web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures",
         "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
         "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
-        "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
+        "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai",
+        "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
       ]
     },
     "protocol:rfc 9651": {

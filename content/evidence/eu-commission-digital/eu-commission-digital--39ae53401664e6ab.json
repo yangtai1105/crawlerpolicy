@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--39ae53401664e6ab",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2499",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T11:36:36Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--39ae53401664e6ab.json",
+  "content_hash": "sha256:1747666a9448b04e685eb920c02eec3e67c599d87281f9f61ece19c8c8e90868",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2499",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission sets up new EU Sanctions Office and appoints new EU Sanctions Envoy",
+  "content": "European Commission Press release Brussels, 18 Nov 2026 Today, the Commission has created the EU Sanctions Office to bring together the Commission's expertise on the entire sanctions lifecycle, from policy design to implementation, enforcement, and anti-circumvention, including outreach to and engagement with third countries.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

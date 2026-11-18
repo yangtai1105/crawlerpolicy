@@ -1,0 +1,19 @@
+{
+  "evidence_id": "a2a-spec--882811c130ca07d5",
+  "source": "a2a-spec",
+  "source_url": "https://github.com/a2aproject/A2A/pull/2411",
+  "supporting_urls": [],
+  "published_at": "2026-11-17T17:51:37Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/a2a-spec/a2a-spec--882811c130ca07d5.json",
+  "content_hash": "sha256:dad597ff3c314e5de6fbfd61beb325fa84b0090d28bfda48d7f40b2b908787fd",
+  "external_id": "pr:2411",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #2411: fix: refine live streaming and user artifact semantics",
+  "content": "## Summary\n\nFollow-up refinements to `SendLiveMessage` (#2153) and client-written artifacts (#2322) on `dev-1.1`:\n\n1. **Escape hatch for `last_seen_generation`** (`SubscribeToTaskRequest`, §3.1.6, §3.1.12) — treats `lastSeenGeneration` as a hint rather than requiring event replay. When set, the server MAY replay subsequent events without an opening `Task` snapshot, OR ignore the hint, open with the current `Task` snapshot, and stream onward from there (allowing stores that only persist the projected `Task` to work without an event log).\n2. **Rename `StreamRequest.send_message` → `StreamRequest.request`** (`StreamRequest` field 2, §3.1.12, §3.2.1) — `SendMessageRequest` can carry `artifact_updates` without a `message` when continuing an existing task, so `request` reflects the broader payload.\n3. **`StreamError` explicitly off the timeline** (`StreamError`, §3.1.12, §3.2.7) — clarifies that `StreamError` is a transport-level rejection on that stream: it does not mutate task state, is never recorded in `Task.timeline`, never advances `Task.generation`, and is never broadcast to other subscribers or push notification webhooks.\n4. **Artifact primary key = `(artifact_id, role)`** (`Artifact`, `TaskArtifactUpdateEvent`, §3.2.1) — defines `(artifact_id, role)` as the per-task unique key for `Task.artifacts`, `append: true` chunk matching, and `append: false` replacement, with servers enforcing/normalising `role` by origin (`ROLE_USER` on client writes, rejecting `ROLE_AGENT`; `ROLE_AGENT` on agent outputs, with `ROLE_UNSPECIFIED` treated as `ROLE_AGENT`).\n\n## Verification\n\n- `buf breaking` against `main` clean\n- `protolint` clean\n- `api-linter` `problems: []`\n- `markdownlint` clean\n\nRelated: #1995, #2153, #2322\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,51 @@
+{
+  "evidence_id": "x-discovery--4d96328717266b91",
+  "source": "x-discovery",
+  "source_url": "https://x.com/verge/status/2122767756454179015",
+  "supporting_urls": [
+    "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free"
+  ],
+  "published_at": "2026-11-17T19:04:06Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--4d96328717266b91.json",
+  "content_hash": "sha256:62dff8a44757c03416f7b822ada1a0183169280180d51950968d72d163c72861",
+  "external_id": "2122767756454179015",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Google rolls out Tasks in Gemini for AI agent actions like calling businesses and purchasing with Google Pay",
+  "content": "X author: @verge\n\nGoogle shipped Tasks in Gemini, enabling its AI agent to autonomously call businesses on a user's behalf, make purchases using Google Pay, and perform other real-world actions.\n\nLinked sources:\n- https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "verge",
+    "post_url": "https://x.com/verge/status/2122767756454179015",
+    "linked_urls": [
+      "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Google's rollout of Tasks in Gemini for autonomous agent actions like business calling and Google Pay purchases has not been covered in any prior items."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+        "final_url": "https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free",
+        "method": "json-ld",
+        "chars": 1545,
+        "sha256": "7a6ade16c0488b79a6b58903553efd3070656a4ac9f79c2efa459d6a146b1672",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-11-17/x-discovery--4d96328717266b91-1.md",
+        "archived_copy": "https://web.archive.org/web/20261118170527/https://www.theverge.com/tech/1035756/google-spark-ai-tasks-free"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 0,
+      "figures_kept": 0,
+      "missing": []
+    }
+  }
+}

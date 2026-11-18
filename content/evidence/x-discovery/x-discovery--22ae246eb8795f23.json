@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--22ae246eb8795f23",
+  "source": "x-discovery",
+  "source_url": "https://x.com/TechCrunch/status/2122729757485781155",
+  "supporting_urls": [
+    "https://techcrunch.com/2026/11/17/daydreams-new-ai-agent-acts-as-your-personal-stylist-and-can-shop-for-you-too/"
+  ],
+  "published_at": "2026-11-17T16:33:07Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--22ae246eb8795f23.json",
+  "content_hash": "sha256:14301a31f554196b78f89c0c7126b935f7b5cab801f27ce165596b96ad23b980",
+  "external_id": "2122729757485781155",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Daydream launches AI shopping agent that remembers style, virtually tries on clothes, tracks sales, and completes purchases",
+  "content": "X author: @TechCrunch\n\nDaydream released a new AI shopping agent capable of remembering user style preferences, virtually trying on clothes, planning outfits, tracking sales, and autonomously completing purchases.\n\nLinked sources:\n- https://techcrunch.com/2026/11/17/daydreams-new-ai-agent-acts-as-your-personal-stylist-and-can-shop-for-you-too/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "TechCrunch",
+    "post_url": "https://x.com/TechCrunch/status/2122729757485781155",
+    "linked_urls": [
+      "https://techcrunch.com/2026/11/17/daydreams-new-ai-agent-acts-as-your-personal-stylist-and-can-shop-for-you-too/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false
+  }
+}

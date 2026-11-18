@@ -1,0 +1,53 @@
+{
+  "evidence_id": "x-discovery--590af0057172938e",
+  "source": "x-discovery",
+  "source_url": "https://x.com/rep_insider/status/2122768656316740011",
+  "supporting_urls": [
+    "https://www.reputation-insider.com/google-tells-websites-how-to-let-ai-agents-past-bot-defenses/"
+  ],
+  "published_at": "2026-11-17T19:07:41Z",
+  "detected_at": "2026-11-18T16:57:56.492918Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--590af0057172938e.json",
+  "content_hash": "sha256:04db4f394792200fc121ea570e4767ff5a551aa59bfe501883a5e70690a38914",
+  "external_id": "2122768656316740011",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Google publishes guidance for websites to verify and cryptographically authenticate its AI agents",
+  "content": "X author: @rep_insider\n\nGoogle published instructions for websites on verifying requests from its AI agents, allowing them past security systems, and implementing cryptographic authentication for agent traffic.\n\nLinked sources:\n- https://www.reputation-insider.com/google-tells-websites-how-to-let-ai-agents-past-bot-defenses/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "rep_insider",
+    "post_url": "https://x.com/rep_insider/status/2122768656316740011",
+    "linked_urls": [
+      "https://www.reputation-insider.com/google-tells-websites-how-to-let-ai-agents-past-bot-defenses/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Google's publication of guidance for websites to verify and cryptographically authenticate its AI agents past bot defenses has not been previously reported."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.reputation-insider.com/google-tells-websites-how-to-let-ai-agents-past-bot-defenses/",
+        "final_url": "https://www.reputation-insider.com/google-tells-websites-how-to-let-ai-agents-past-bot-defenses/",
+        "method": "readability",
+        "chars": 9024,
+        "sha256": "20c7b3e3c419ba90c7920283f676874f65e965db096095c1509ae363a2d41cc0",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-11-17/x-discovery--590af0057172938e-1.md"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 3,
+      "figures_kept": 1,
+      "missing": [
+        "230",
+        "600"
+      ]
+    }
+  }
+}
