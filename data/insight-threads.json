@@ -289,6 +289,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-tailored-retail",
+      "title": "Agent Tailored Retail",
+      "thesis": "As agent-driven purchasing emerges, the debate over monetization is dividing between traditional advertising adapted for algorithmic buyers and purpose-built retail interfaces designed specifically for autonomous agents.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-telemetry",
       "title": "Agent Telemetry",
       "thesis": "AI proxy and gateway infrastructure is adopting traditional web observability standards to give developers granular visibility into which specific SDKs, background workers, and client applications are driving programmatic AI consumption.",
@@ -332,6 +345,19 @@
       "verified_development_slugs": [
         "cloudflare-radar-integrates-botbase-and-adds-access-level-and-content-use-metada"
       ]
+    },
+    {
+      "key": "agentic-ai-blurring-bot-detection",
+      "title": "Agentic AI Blurring Bot Detection",
+      "thesis": "Automated traffic classification can no longer rely on binary bot-versus-human detection because authorized agentic AI workflows structurally mimic scraping, high-frequency querying, and automated transactions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "agentic-browser-adoption",
@@ -418,6 +444,19 @@
       "verified_development_slugs": [
         "openai-introduces-chatgpt-wallet-for-agent-purchases"
       ]
+    },
+    {
+      "key": "agentic-commerce-advertising",
+      "title": "Agentic Commerce Advertising",
+      "thesis": "As agent-driven purchasing emerges, the debate over monetization is dividing between traditional advertising adapted for algorithmic buyers and purpose-built retail interfaces designed specifically for autonomous agents.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "agentic-commerce-friction",
@@ -667,6 +706,19 @@
       "last_updated_at": "2026-09-22T13:08:11.171940Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-2026-security-report-highlights-rising-scraping-volumes-and-ai-agent-sp"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "ai-agent-traffic-filtering",
+      "title": "AI Agent Traffic Filtering",
+      "thesis": "By shifting third-party security lookups into lightweight CDN edge functions enabled by asynchronous network calls, bot mitigation vendors can eliminate heavier serverless runtimes like Lambda@Edge while accessing edge signals like JA3 and JA4 TLS fingerprints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo"
       ],
       "verified_development_slugs": []
     },
@@ -924,6 +976,19 @@
       "last_updated_at": "2026-10-18T12:27:30.284320Z",
       "related_feed_slugs": [
         "x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "api-targeted-bot-automation",
+      "title": "API Targeted Bot Automation",
+      "thesis": "Automated traffic classification can no longer rely on binary bot-versus-human detection because authorized agentic AI workflows structurally mimic scraping, high-frequency querying, and automated transactions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks"
       ],
       "verified_development_slugs": []
     },
@@ -1203,6 +1268,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "bot-transparency-mandates",
+      "title": "Bot Transparency Mandates",
+      "thesis": "Publishers and content creators are coordinating broad multi-industry legislative coalitions to push statutory bans against deceptive or unannounced automated scraping.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "bot-vs-agent-classification-failure",
       "title": "Bot Vs Agent Classification Failure",
       "thesis": "An organizational split exists between security and marketing over agentic web traffic: CMOs view unmeasured AI agents as economic waste causing distorted CAC and broken attribution, while CISOs categorize automated traffic primarily as security threats like scraping and account takeover, leaving both sides without telemetry to discern beneficial autonomous agents from malicious bots.",
@@ -1255,6 +1333,19 @@
       "verified_development_slugs": [
         "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
       ]
+    },
+    {
+      "key": "business-logic-abuse",
+      "title": "Business Logic Abuse",
+      "thesis": "Automated traffic classification can no longer rely on binary bot-versus-human detection because authorized agentic AI workflows structurally mimic scraping, high-frequency querying, and automated transactions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "bypass-of-robots-txt-by-delegated-agents",
@@ -2336,6 +2427,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "edge-native-bot-mitigation",
+      "title": "Edge Native Bot Mitigation",
+      "thesis": "By shifting third-party security lookups into lightweight CDN edge functions enabled by asynchronous network calls, bot mitigation vendors can eliminate heavier serverless runtimes like Lambda@Edge while accessing edge signals like JA3 and JA4 TLS fingerprints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "edge-native-payload-shaping-over-binary-ip-blocking",
       "title": "Edge Native Payload Shaping Over Binary IP Blocking",
       "thesis": "Anti-scraping defense is evolving from binary perimeter rejection to deceptive payload manipulation at the edge, treating scraping as an economic data-integrity contest rather than an access-denial battle.",
@@ -3141,6 +3245,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "majority-automated-web-traffic",
+      "title": "Majority Automated Web Traffic",
+      "thesis": "Automated traffic classification can no longer rely on binary bot-versus-human detection because authorized agentic AI workflows structurally mimic scraping, high-frequency querying, and automated transactions.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "majority-bot-traffic-inflection",
       "title": "Majority Bot Traffic Inflection",
       "thesis": "Agent identification is shifting from passive heuristic fingerprinting and user-agent string declarations toward cryptographically verifiable identity standards anchored by major financial networks and edge infrastructure providers.",
@@ -3824,6 +3941,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "publisher-legislative-lobbying",
+      "title": "Publisher Legislative Lobbying",
+      "thesis": "Publishers and content creators are coordinating broad multi-industry legislative coalitions to push statutory bans against deceptive or unannounced automated scraping.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "publisher-licensing-aggregation",
       "title": "Publisher Licensing Aggregation",
       "thesis": "Licensing deals are increasingly analyzed not just as data acquisition agreements, but as structural factors influencing publisher visibility and retrieval priority within emerging AI search engines.",
@@ -4309,6 +4439,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "stealth-crawler-regulation",
+      "title": "Stealth Crawler Regulation",
+      "thesis": "Publishers and content creators are coordinating broad multi-industry legislative coalitions to push statutory bans against deceptive or unannounced automated scraping.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "strict-edge-enforcement-of-rfc-9421-http-message-signatures",
       "title": "Strict Edge Enforcement Of Rfc 9421 Http Message Signatures",
       "thesis": "Subtle discrepancies between HTTP signature parsers and spec constraints can create validation mismatches, where non-compliant or manipulated input headers still pass verification if implementations silently normalize data structures prior to signing base reconstruction.",
@@ -4419,6 +4562,19 @@
       "verified_development_slugs": [
         "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
       ]
+    },
+    {
+      "key": "tls-fingerprint-inspection",
+      "title": "Tls Fingerprint Inspection",
+      "thesis": "By shifting third-party security lookups into lightweight CDN edge functions enabled by asynchronous network calls, bot mitigation vendors can eliminate heavier serverless runtimes like Lambda@Edge while accessing edge signals like JA3 and JA4 TLS fingerprints.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-19T17:05:06.465696Z",
+      "last_updated_at": "2026-11-19T17:05:06.465696Z",
+      "related_feed_slugs": [
+        "datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "training-vs-search-decoupling",

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--e50d1ac1ade99b1f",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/131-organizations-sign-senate-sbpa-introduction-support-letter/",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T20:59:13Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--e50d1ac1ade99b1f.json",
+  "content_hash": "sha256:e62cbaedfd3fb59e33082cfff45ec251e00d2bf6f71543cc283ef1d83e71564e",
+  "external_id": "https://www.newsmediaalliance.org/?p=18909",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Over 130 News, Content, and Tech Organizations Back AI Bot Transparency Bill Introduced in the Senate Today",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"665\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2021/07/capitol-with-flag-1000px.png\" width=\"1000\" /></p>A group of 131 organizations of all sizes and types of news publishers, content industries, tech and more, representing dozens of US states and countries, delivered a letter to Senators Roger Wicker and Ben Ray Luján thanking them for introducing the Stealth Bot Prohibition Act in the Senate.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

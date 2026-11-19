@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--6548e6d145e5f09d",
+  "source": "x-discovery",
+  "source_url": "https://x.com/OpenAI/status/2123191365983248653",
+  "supporting_urls": [
+    "https://openai.com/index/ai-research-report/"
+  ],
+  "published_at": "2026-11-18T23:07:23Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--6548e6d145e5f09d.json",
+  "content_hash": "sha256:ae6aa943c7342049099bc6819b56f2834393684664a2f337fd4ad493bc644d7d",
+  "external_id": "2123191365983248653",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "OpenAI publishes expanded report on AI use in its own research and calls for industry-wide RSI measurement norms",
+  "content": "X author: @OpenAI\n\nOpenAI released new data showing exponential growth in researchers' AI use, longer agent-completed tasks, and faster-growing human effort on safety/alignment. The report urges AI labs to publicly track and report recursive self-improvement indicators to inform governance.\n\nLinked sources:\n- https://openai.com/index/ai-research-report/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "OpenAI",
+    "post_url": "https://x.com/OpenAI/status/2123191365983248653",
+    "linked_urls": [
+      "https://openai.com/index/ai-research-report/"
+    ],
+    "provider_citations": [],
+    "front": "measurement-economics",
+    "shadow": false
+  }
+}

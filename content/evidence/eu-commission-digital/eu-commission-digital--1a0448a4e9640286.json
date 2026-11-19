@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--1a0448a4e9640286",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2528",
+  "supporting_urls": [],
+  "published_at": "2026-11-19T15:04:25Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--1a0448a4e9640286.json",
+  "content_hash": "sha256:64ca3ab847b6540f4c363c33a7f474b2879b1bf0faa65bef2ed64d41654ea02f",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2528",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement on the incident at today's Cancer Summit",
+  "content": "European Commission Statement Brussels, 19 Nov 2026 This morning, at the European Cancer Summit in Brussels, organised by the European Cancer Organisation, Commissioner for Health and Animal Welfare, Olivér Várhe...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

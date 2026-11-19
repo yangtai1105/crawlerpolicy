@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-19",
+  "generated_at": "2026-11-19T17:05:06.465696Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-11-19T14:26:41Z"
+    },
+    {
+      "slug": "imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-11-19T10:00:07Z"
+    },
+    {
+      "slug": "news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act",
+      "status": "reported",
+      "importance": 0.65,
+      "published_at": "2026-11-18T20:59:13Z"
+    },
+    {
+      "slug": "stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co",
+      "status": "signal",
+      "importance": 0.25,
+      "published_at": "2026-11-19T11:00:00Z"
+    }
+  ]
+}

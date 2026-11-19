@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b6995e4d836d3a5e",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2503",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T23:00:00Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b6995e4d836d3a5e.json",
+  "content_hash": "sha256:cb2d1a85d00e4af07c24c167532fd73b633bb35dfafd5bbc37d84c22b9fc6ea2",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2503",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by Executive Vice-President Mînzatu and Commissioner Lahbib ahead of European Equal Pay Day",
+  "content": "European Commission Statement Brussels, 19 Nov 2026 Equal pay is a fundamental right. Yet, more than six decades after the principle was enshrined in the Treaties, women continue to earn less than men across the ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

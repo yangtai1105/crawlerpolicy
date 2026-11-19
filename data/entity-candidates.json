@@ -107,6 +107,19 @@
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
       ]
     },
+    "player:ben ray luján": {
+      "kind": "player",
+      "observed_name": "Ben Ray Luján",
+      "first_seen_at": "2026-11-19T17:05:06.465696Z",
+      "last_seen_at": "2026-11-19T17:05:06.465696Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "news-media-alliance--e50d1ac1ade99b1f"
+      ],
+      "feed_slugs": [
+        "2026-11-18-news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act"
+      ]
+    },
     "player:censys": {
       "kind": "player",
       "observed_name": "Censys",
@@ -345,6 +358,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:eric seufert": {
+      "kind": "player",
+      "observed_name": "Eric Seufert",
+      "first_seen_at": "2026-11-19T17:05:06.465696Z",
+      "last_seen_at": "2026-11-19T17:05:06.465696Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "stratechery--4174cb5efe51064a"
+      ],
+      "feed_slugs": [
+        "2026-11-19-stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co"
       ]
     },
     "player:experian": {
@@ -863,6 +889,19 @@
         "2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr"
       ]
     },
+    "player:roger wicker": {
+      "kind": "player",
+      "observed_name": "Roger Wicker",
+      "first_seen_at": "2026-11-19T17:05:06.465696Z",
+      "last_seen_at": "2026-11-19T17:05:06.465696Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "news-media-alliance--e50d1ac1ade99b1f"
+      ],
+      "feed_slugs": [
+        "2026-11-18-news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act"
+      ]
+    },
     "player:search engine land": {
       "kind": "player",
       "observed_name": "Search Engine Land",
@@ -960,6 +999,19 @@
         "2026-11-03-x-discovery-reuters-ai-licensing-powers-56-surge-in-q3-news-transaction-revenue"
       ]
     },
+    "player:stratechery": {
+      "kind": "player",
+      "observed_name": "Stratechery",
+      "first_seen_at": "2026-11-19T17:05:06.465696Z",
+      "last_seen_at": "2026-11-19T17:05:06.465696Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "stratechery--4174cb5efe51064a"
+      ],
+      "feed_slugs": [
+        "2026-11-19-stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co"
+      ]
+    },
     "player:surround sound media": {
       "kind": "player",
       "observed_name": "Surround Sound Media",
@@ -990,13 +1042,15 @@
       "kind": "player",
       "observed_name": "Thales",
       "first_seen_at": "2026-11-14T14:47:35.236589Z",
-      "last_seen_at": "2026-11-14T14:47:35.236589Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-19T17:05:06.465696Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "x-discovery--9a189f378d284975"
+        "x-discovery--9a189f378d284975",
+        "imperva-blog--a4c393f69a199b24"
       ],
       "feed_slugs": [
-        "2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents"
+        "2026-11-13-x-discovery-payment-networks-introduce-public-key-signing-protocols-for-ai-agents",
+        "2026-11-19-imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks"
       ]
     },
     "player:the financial times": {
@@ -1756,15 +1810,17 @@
       "kind": "protocol",
       "observed_name": "TLS",
       "first_seen_at": "2026-10-15T13:05:42.271060Z",
-      "last_seen_at": "2026-11-06T15:41:50.881618Z",
-      "occurrences": 2,
+      "last_seen_at": "2026-11-19T17:05:06.465696Z",
+      "occurrences": 3,
       "evidence_ids": [
         "cloudflare-blog--5a2555e77804fad4",
-        "cloudflare-research--a8857902d6605e13"
+        "cloudflare-research--a8857902d6605e13",
+        "datadome-blog--fc474466054217d1"
       ],
       "feed_slugs": [
         "2026-10-14-cloudflare-blog-cloudflare-data-shows-yandex-outage-halted-verified-crawlers-while-malicious-aut",
-        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+        "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un",
+        "2026-11-19-datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo"
       ]
     },
     "protocol:trusted agent protocol": {

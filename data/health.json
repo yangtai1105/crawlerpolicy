@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-18T16:57:56.492918Z",
-  "last_fully_successful_at": "2026-11-18T16:57:56.492918Z",
+  "last_attempted_at": "2026-11-19T17:05:06.465696Z",
+  "last_fully_successful_at": "2026-11-19T17:05:06.465696Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -151,8 +151,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--84bc8192fcee967a",
-        "cloudflare-blog--2149eb8555ef1f0b"
+        "cloudflare-blog--9567f2fde3b6d65b",
+        "cloudflare-blog--481c98a3e8df0e19"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -163,9 +163,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "datadome-blog--fc474466054217d1"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-19-datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo.md"
+      ]
     },
     "akamai-blog": {
       "fetch": "ok",
@@ -194,10 +198,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "imperva-blog--9756f48733e2ba66"
+        "imperva-blog--a4c393f69a199b24",
+        "imperva-blog--defe9dcb487b4add",
+        "imperva-blog--8e2ed87ac66c39ec",
+        "imperva-blog--1ac960825b97e7c0"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-19-imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks.md"
+      ]
     },
     "human-blog": {
       "fetch": "ok",
@@ -216,13 +225,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--17fc6450deea3b62",
-        "uk-cma--e9bd2193f6fe8424",
-        "uk-cma--2c147f5bc0480a05",
-        "uk-cma--fbe041a937642392",
-        "uk-cma--77ad079f593fa8bc",
-        "uk-cma--57d85291fae54dfc",
-        "uk-cma--e08424d3b450f92a"
+        "uk-cma--1a26872e7a935ab7",
+        "uk-cma--78739ba5d63d433e",
+        "uk-cma--9e89811e1c8bb4ae",
+        "uk-cma--6b5bacd2f893fb9c",
+        "uk-cma--6264f3d3ed513db8",
+        "uk-cma--76fef9549df7eb39",
+        "uk-cma--c1811777ac72005a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -254,16 +263,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--23a1125f4eb8c69f",
-        "eu-commission-digital--469d7289beb4d555",
-        "eu-commission-digital--664412beaa94a0e4",
-        "eu-commission-digital--611b2473bc2fff29",
-        "eu-commission-digital--3165ff534a16a490",
-        "eu-commission-digital--567b8e7f6f6f012c",
-        "eu-commission-digital--39ae53401664e6ab",
-        "eu-commission-digital--d91ce436fa5c288f",
-        "eu-commission-digital--495ce277799fdd28",
-        "eu-commission-digital--f6f3e27ee18482b1"
+        "eu-commission-digital--1a0448a4e9640286",
+        "eu-commission-digital--95d2c35f356bf4fb",
+        "eu-commission-digital--d40a3a4b155a43ce",
+        "eu-commission-digital--8af47bb8d65d23e4",
+        "eu-commission-digital--75160e4c29dd1482",
+        "eu-commission-digital--24cfc72c58d5b03d",
+        "eu-commission-digital--2509ee005c215c2a",
+        "eu-commission-digital--d5a567ad52a7d65e",
+        "eu-commission-digital--b6995e4d836d3a5e",
+        "eu-commission-digital--ced2abb3325c4040"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -284,9 +293,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--e50d1ac1ade99b1f"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-18-news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act.md"
+      ]
     },
     "reddit-corporate": {
       "fetch": "ok",
@@ -324,9 +337,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "a2a-spec--882811c130ca07d5"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -437,10 +448,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--ce00a558b571cfb5"
+        "stratechery--4174cb5efe51064a"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-19-stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co.md"
+      ]
     },
     "simon-willison": {
       "fetch": "ok",
@@ -449,15 +462,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--2aafe08e1f285404",
-        "simon-willison--5fac62787ae9939d",
-        "simon-willison--f69f9c6e99c6f354",
-        "simon-willison--fc589d1d09667e6f"
+        "simon-willison--8c71fb9d4feb9620",
+        "simon-willison--c5f716e280d9d405"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-.md"
-      ]
+      "feed_items_written": []
     },
     "cloudflare-research": {
       "fetch": "ok",
@@ -475,10 +484,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--639edb077fefa340",
-        "openai-blog--4058f8b6ac13834e"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -518,15 +524,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--010e7fb2084bfddf"
-      ],
-      "events_written": [
-        "content/events/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -584,9 +584,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-radar-ai-insights--4766e44c5ede47a9"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -597,31 +595,19 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--bac46891e67062f7",
-        "x-discovery--4d96328717266b91",
-        "x-discovery--22ae246eb8795f23",
-        "x-discovery--b9928d297a461261",
-        "x-discovery--590af0057172938e"
+        "x-discovery--6548e6d145e5f09d",
+        "x-discovery--1613067b8b4459dc"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr.md",
-        "content/feed/2026-11-17-x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions.md",
-        "content/feed/2026-11-17-x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis.md",
-        "content/feed/2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-.md"
-      ]
+      "feed_items_written": []
     }
   },
-  "events_written": [
-    "content/events/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md"
-  ],
+  "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-.md",
-    "content/feed/2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-.md",
-    "content/feed/2026-11-18-x-discovery-the-record-north-shore-sues-ai-publisher-surround-sound-media-for-copyright-infr.md",
-    "content/feed/2026-11-17-x-discovery-google-releases-gemini-tasks-agent-for-autonomous-real-world-actions.md",
-    "content/feed/2026-11-17-x-discovery-perplexity-launches-multiagent-architecture-for-task-decomposition-and-synthesis.md",
-    "content/feed/2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-.md"
+    "content/feed/2026-11-19-datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo.md",
+    "content/feed/2026-11-19-imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks.md",
+    "content/feed/2026-11-18-news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act.md",
+    "content/feed/2026-11-19-stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co.md"
   ],
   "provider": {
     "name": "gemini",
@@ -631,12 +617,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-18",
-    "item_count": 5,
-    "path": "data/daily/2026-11-18.json"
+    "edition_date": "2026-11-19",
+    "item_count": 4,
+    "path": "data/daily/2026-11-19.json"
   },
   "insight_threads": {
-    "thread_count": 340,
+    "thread_count": 352,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -646,9 +632,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 5,
+    "candidate_count": 2,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.122682,
+    "estimated_tool_cost_usd": 0.145538,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

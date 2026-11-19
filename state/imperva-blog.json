@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-18T16:57:56.492918+00:00",
-  "last_fetch_succeeded_at": "2026-11-18T16:57:56.492918+00:00",
-  "last_evidence_at": "2026-11-18T16:57:56.492918+00:00",
+  "last_checked_at": "2026-11-19T17:05:06.465696+00:00",
+  "last_fetch_succeeded_at": "2026-11-19T17:05:06.465696+00:00",
+  "last_evidence_at": "2026-11-19T17:05:06.465696+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://www.imperva.com/blog/?p=21469",
@@ -18,7 +18,11 @@
     "https://www.imperva.com/blog/?p=21493",
     "https://www.imperva.com/blog/?p=21499",
     "https://www.imperva.com/blog/?p=21504",
-    "https://www.imperva.com/blog/?p=21511"
+    "https://www.imperva.com/blog/?p=21511",
+    "https://www.imperva.com/blog/?p=21533",
+    "https://www.imperva.com/blog/?p=21541",
+    "https://www.imperva.com/blog/?p=21529",
+    "https://www.imperva.com/blog/?p=21522"
   ],
   "consecutive_failures": 0,
   "first_seen": false

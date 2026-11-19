@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--8af47bb8d65d23e4",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2523",
+  "supporting_urls": [],
+  "published_at": "2026-11-19T13:37:45Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--8af47bb8d65d23e4.json",
+  "content_hash": "sha256:ff4621d80162b8e1aa92128762e15b3b586dd3f57ee48f1ec93bf295710507e7",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2523",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission greenlights the Netherlands' fifth and final payment request for €1.7 billion under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 19 Nov 2026 Today, the European Commission greenlighted the Netherlands' fifth and last payment request worth €1.7 billion under the Recovery and Resilience Facility (RRF), the centrepiece of NextGenerationEU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

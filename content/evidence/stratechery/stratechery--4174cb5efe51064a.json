@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--4174cb5efe51064a",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/an-interview-with-eric-seufert-about-agentic-commerce/",
+  "supporting_urls": [],
+  "published_at": "2026-11-19T11:00:00Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/stratechery/stratechery--4174cb5efe51064a.json",
+  "content_hash": "sha256:99c3e02098e67f55fa724e95087a9bc6c38847b0cf823941d8b5b3f17c191805",
+  "external_id": "https://stratechery.com/?p=21285",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "An Interview With Eric Seufert About Agentic Commerce",
+  "content": "<p>An interview with Eric Seufert about agentic commerce, including why he thinks ads will be the answer, and why I want retailers who cater to agents.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

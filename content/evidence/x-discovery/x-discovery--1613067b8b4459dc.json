@@ -1,0 +1,30 @@
+{
+  "evidence_id": "x-discovery--1613067b8b4459dc",
+  "source": "x-discovery",
+  "source_url": "https://x.com/TechCrunch/status/2123439927228551429",
+  "supporting_urls": [
+    "https://techcrunch.com/2026/11/19/u-k-government-forced-to-disclose-secret-apple-backdoor-order/"
+  ],
+  "published_at": "2026-11-19T15:35:04Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--1613067b8b4459dc.json",
+  "content_hash": "sha256:f1af7b02cf54a1c16c790ebdd82e1b0462f9874be741945e5d2f03b3d66309df",
+  "external_id": "2123439927228551429",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "UK tribunal orders government to disclose secret Apple backdoor order",
+  "content": "X author: @TechCrunch\n\nA UK tribunal ruled that the government must disclose a secret order compelling Apple to create a backdoor, rejecting national security arguments for secrecy.\n\nLinked sources:\n- https://techcrunch.com/2026/11/19/u-k-government-forced-to-disclose-secret-apple-backdoor-order/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "TechCrunch",
+    "post_url": "https://x.com/TechCrunch/status/2123439927228551429",
+    "linked_urls": [
+      "https://techcrunch.com/2026/11/19/u-k-government-forced-to-disclose-secret-apple-backdoor-order/"
+    ],
+    "provider_citations": [],
+    "front": "governance-law",
+    "shadow": false
+  }
+}

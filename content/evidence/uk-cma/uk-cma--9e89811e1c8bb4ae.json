@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--9e89811e1c8bb4ae",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/government/calls-for-evidence/developer-experience-with-iam-and-kubernetes",
+  "supporting_urls": [],
+  "published_at": "2026-11-19T10:33:04Z",
+  "detected_at": "2026-11-19T17:05:06.465696Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--9e89811e1c8bb4ae.json",
+  "content_hash": "sha256:2a9322b6c1741e8b80d048cdf90f7cc7e3fbcbdc3483f62f4183fb2deeb92e22",
+  "external_id": "https://www.gov.uk/government/calls-for-evidence/developer-experience-with-iam-and-kubernetes#2026-11-19T10:33:04Z",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Developer experience with IAM and Kubernetes",
+  "content": "The Competition and Markets Authority (CMA) is gathering evidence and information about cloud developers' use of Identify and Access Management (IAM) and Kubernetes.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
