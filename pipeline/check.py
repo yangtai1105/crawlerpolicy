@@ -596,8 +596,17 @@ async def _process_items(
         if analysis_blocker:
             _mark_analysis_failed(status, analysis_blocker)
 
+    history_floor = cfg.publication_cutoff - _EVIDENCE_HISTORY
     for item in items:
         if item.guid in state.last_seen_guids:
+            continue
+        if item.published_at is not None and item.published_at < history_floor:
+            # A feed that returns its whole archive on first sight (Akamai's
+            # FeedBurner feed carried 1,179 posts back to the 2010s) would
+            # otherwise commit one evidence file per post. Evidence inside
+            # the backfill window is still kept as skipped_cutoff.
+            state.last_seen_guids.append(item.guid)
+            _mark_downstream_ok(status)
             continue
         record = _evidence_for_item(source, item, now)
         _record_evidence(cfg, record, status, dry_run)
@@ -969,6 +978,11 @@ def _publish_analysis(
                 record.evidence_id,
             )
     return development_path, feed_path
+
+
+# How far before the publication cutoff an item still gets an evidence record,
+# so backfill-feed (default window from 2026-06-01) has history to draw on.
+_EVIDENCE_HISTORY = timedelta(days=90)
 
 
 def _archived_copies(record: EvidenceRecord) -> list[str]:
