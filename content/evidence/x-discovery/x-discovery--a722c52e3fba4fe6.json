@@ -1,0 +1,54 @@
+{
+  "evidence_id": "x-discovery--a722c52e3fba4fe6",
+  "source": "x-discovery",
+  "source_url": "https://x.com/verge/status/2123756787459563988",
+  "supporting_urls": [
+    "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app"
+  ],
+  "published_at": "2026-11-20T12:34:10Z",
+  "detected_at": "2026-11-20T16:43:41.099471Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--a722c52e3fba4fe6.json",
+  "content_hash": "sha256:987db66a32baee6d4d8dc58b0c4ec83ec2bd30de6ab7b38f2221e6ad4b24854c",
+  "external_id": "2123756787459563988",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Signal restricts screenshots on mobile and labels AI agents hostile to privacy",
+  "content": "X author: @verge\n\nSignal shipped a new mobile feature that restricts screenshots of chats to block AI agents from reading them, explicitly calling AI agents 'hostile to privacy.'\n\nLinked sources:\n- https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "verge",
+    "post_url": "https://x.com/verge/status/2123756787459563988",
+    "linked_urls": [
+      "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover Signal restricting mobile screenshots or labeling AI agents as hostile to privacy."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+        "final_url": "https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app",
+        "method": "json-ld",
+        "chars": 3005,
+        "sha256": "8004f1ea035854aa7613af8c991b57f7756c617579e41dc0f3168ed2b44527b9",
+        "saved_copy": "https://github.com/yangtai1105/crawlerpolicy-archive/blob/main/articles/2026-11-20/x-discovery--a722c52e3fba4fe6-1.md",
+        "archived_copy": "https://web.archive.org/web/20261120124421/https://www.theverge.com/ai-artificial-intelligence/1038390/signal-blocking-ai-agent-screenshots-mobile-app"
+      }
+    ],
+    "fact_coverage": {
+      "figures_in_source": 3,
+      "figures_kept": 1,
+      "missing": [
+        "11",
+        "90"
+      ]
+    }
+  }
+}

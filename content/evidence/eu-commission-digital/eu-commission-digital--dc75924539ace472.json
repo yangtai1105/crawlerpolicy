@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--dc75924539ace472",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2547",
+  "supporting_urls": [],
+  "published_at": "2026-11-20T12:27:35Z",
+  "detected_at": "2026-11-20T16:43:41.099471Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--dc75924539ace472.json",
+  "content_hash": "sha256:374fe9a5abfe1baba3ce815ee11cf6d650238ee678729af2c50f61a23e053b18",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2547",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission partially greenlights Poland's final payment request for €12.7 billion under NextGenerationEU",
+  "content": "European Commission Press release Brussels, 20 Nov 2026 Today, the European Commission partially greenlighted Poland's sixth and final payment request for €12.7 billion under the Recovery and Resilience Facility, the centrepiece of NextGenerationEU.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--772dff24bb39cc5d",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+  "supporting_urls": [],
+  "published_at": "2026-11-19T20:43:57Z",
+  "detected_at": "2026-11-20T16:43:41.099471Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--772dff24bb39cc5d.json",
+  "content_hash": "sha256:af3ddf8f30412f5a3f80be9bc857c4779d9ec2ecf81471daaf99c4564ea44fb5",
+  "external_id": "https://simonwillison.net/2026/Nov/19/postgresql-19/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PostgreSQL 19 Released",
+  "content": "<p><strong><a href=\"https://www.postgresql.org/about/news/postgresql-19-released-3449/\">PostgreSQL 19 Released</a></strong></p>\nMost years PostgreSQL ships a new release in September, but this year's release came two months later <a href=\"https://rhaas.blogspot.com/2026/10/postgres-19-is-late-and-its-ais-fault.html\">thanks mainly</a> to the flurry of issues that the PostgreSQL team needed to address as part of the ongoing AI-reported vulnerability apocalypse.</p>\n<p>This release was definitely worth the wait. My favorite new feature is this one:</p>\n<blockquote>\n<p>For applications that send reads to standbys, PostgreSQL 19 adds \"read-your-writes\" consistency with the new <a href=\"https://www.postgresql.org/docs/19/sql-wait.html\"><code>WAIT FOR LSN</code></a> command. A session on a standby can use <code>WAIT FOR LSN</code> to wait until the standby has replayed the write-ahead log (WAL) up to a specific <a href=\"https://www.postgresql.org/docs/19/wal-internals.html\">log sequence number (LSN)</a> before running a query, so the application can read data it just wrote on the primary.</p>\n</blockquote>\n<p>In practice, that looks like this:</p>\n<pre><code>UPDATE movie SET genre = 'Dramatic' WHERE genre = 'Drama';\nSELECT pg_current_wal_insert_lsn();\n</code></pre>\n<p>That returns a value like <code>0/0306EE20</code>. Store that somewhere (a signed cookie would work) such that on a subsequent request your application can do:</p>\n<pre><code>WAIT FOR LSN '0/0306EE20' WITH (TIMEOUT '0.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

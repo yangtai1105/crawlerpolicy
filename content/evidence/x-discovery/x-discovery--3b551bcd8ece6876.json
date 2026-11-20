@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--3b551bcd8ece6876",
+  "source": "x-discovery",
+  "source_url": "https://x.com/perplexity_ai/status/2123449395882701224",
+  "supporting_urls": [
+    "https://www.perplexity.ai/hub/blog/self-improving-skills"
+  ],
+  "published_at": "2026-11-19T16:12:42Z",
+  "detected_at": "2026-11-20T16:43:41.099471Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--3b551bcd8ece6876.json",
+  "content_hash": "sha256:322ca049050841b9f705c4d1237cd40b7a994fd48430e2e844b78f56d0af00a0",
+  "external_id": "2123449395882701224",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Perplexity ships autonomous self-improving agent skills feature in Computer product",
+  "content": "X author: @perplexity_ai\n\nPerplexity launched an autonomous improvement agent called Brain in its Computer product that observes user sessions, creates and updates personalized reusable skills, with measured improvements in tool call success and user satisfaction now available to subscribers.\n\nLinked sources:\n- https://www.perplexity.ai/hub/blog/self-improving-skills",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "perplexity_ai",
+    "post_url": "https://x.com/perplexity_ai/status/2123449395882701224",
+    "linked_urls": [
+      "https://www.perplexity.ai/hub/blog/self-improving-skills"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "This is a new development regarding Perplexity's launch of an autonomous self-improving agent skills feature called Brain in its Computer product, distinct from its previously reported multiagent architecture."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.perplexity.ai/hub/blog/self-improving-skills",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://www.perplexity.ai/hub/blog/self-improving-skills'\nFor more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/40"
+      }
+    ]
+  }
+}

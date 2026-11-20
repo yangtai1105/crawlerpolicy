@@ -81,6 +81,19 @@
         "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
       ]
     },
+    "player:apple": {
+      "kind": "player",
+      "observed_name": "Apple",
+      "first_seen_at": "2026-11-20T16:43:41.099471Z",
+      "last_seen_at": "2026-11-20T16:43:41.099471Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--a722c52e3fba4fe6"
+      ],
+      "feed_slugs": [
+        "2026-11-20-x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me"
+      ]
+    },
     "player:associated press": {
       "kind": "player",
       "observed_name": "Associated Press",
@@ -731,6 +744,19 @@
         "2026-11-12-x-discovery-yahoo-becomes-first-licensee-of-internet-licensing-collective-for-ai-content"
       ]
     },
+    "player:meredith whittaker": {
+      "kind": "player",
+      "observed_name": "Meredith Whittaker",
+      "first_seen_at": "2026-11-20T16:43:41.099471Z",
+      "last_seen_at": "2026-11-20T16:43:41.099471Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--a722c52e3fba4fe6"
+      ],
+      "feed_slugs": [
+        "2026-11-20-x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me"
+      ]
+    },
     "player:meta ai": {
       "kind": "player",
       "observed_name": "Meta AI",
@@ -971,6 +997,19 @@
       ],
       "feed_slugs": [
         "2026-11-05-x-discovery-cloudflare-adds-personal-assistant-controls-while-descope-launches-envoy-for-age"
+      ]
+    },
+    "player:signal": {
+      "kind": "player",
+      "observed_name": "Signal",
+      "first_seen_at": "2026-11-20T16:43:41.099471Z",
+      "last_seen_at": "2026-11-20T16:43:41.099471Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--a722c52e3fba4fe6"
+      ],
+      "feed_slugs": [
+        "2026-11-20-x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me"
       ]
     },
     "player:simon willison": {

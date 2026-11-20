@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-19T17:05:06.465696+00:00",
-  "last_fetch_succeeded_at": "2026-11-19T17:05:06.465696+00:00",
-  "last_evidence_at": "2026-11-19T17:05:06.465696+00:00",
+  "last_checked_at": "2026-11-20T16:43:41.099471+00:00",
+  "last_fetch_succeeded_at": "2026-11-20T16:43:41.099471+00:00",
+  "last_evidence_at": "2026-11-20T16:43:41.099471+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://stratechery.com/?p=20650",
@@ -29,7 +29,8 @@
     "https://stratechery.com/?p=21228",
     "https://stratechery.com/?p=21256",
     "https://stratechery.com/?p=21272",
-    "https://stratechery.com/?p=21285"
+    "https://stratechery.com/?p=21285",
+    "https://stratechery.com/?p=21304"
   ],
   "consecutive_failures": 0,
   "first_seen": false

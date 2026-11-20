@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-19T17:05:06.465696Z",
-  "last_fully_successful_at": "2026-11-19T17:05:06.465696Z",
+  "last_attempted_at": "2026-11-20T16:43:41.099471Z",
+  "last_fully_successful_at": "2026-11-20T16:43:41.099471Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -110,9 +110,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "amazonbot--5df8b957536e3481"
+      ],
+      "events_written": [
+        "content/events/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md"
+      ]
     },
     "ccbot": {
       "fetch": "ok",
@@ -140,7 +146,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cf-changelog-radar--750f241604a35ceb"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -151,8 +159,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--9567f2fde3b6d65b",
-        "cloudflare-blog--481c98a3e8df0e19"
+        "cloudflare-blog--4d9d9470a4645aee"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -163,13 +170,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "datadome-blog--fc474466054217d1"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-19-datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo.md"
-      ]
+      "feed_items_written": []
     },
     "akamai-blog": {
       "fetch": "ok",
@@ -198,15 +201,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "imperva-blog--a4c393f69a199b24",
-        "imperva-blog--defe9dcb487b4add",
-        "imperva-blog--8e2ed87ac66c39ec",
-        "imperva-blog--1ac960825b97e7c0"
+        "imperva-blog--c0097f09d2efce6a",
+        "imperva-blog--cd0a78e9be0aa916"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-19-imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks.md"
-      ]
+      "feed_items_written": []
     },
     "human-blog": {
       "fetch": "ok",
@@ -225,13 +224,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--1a26872e7a935ab7",
-        "uk-cma--78739ba5d63d433e",
-        "uk-cma--9e89811e1c8bb4ae",
-        "uk-cma--6b5bacd2f893fb9c",
-        "uk-cma--6264f3d3ed513db8",
-        "uk-cma--76fef9549df7eb39",
-        "uk-cma--c1811777ac72005a"
+        "uk-cma--124d5e3d7d13c2bf"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -263,16 +256,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--1a0448a4e9640286",
-        "eu-commission-digital--95d2c35f356bf4fb",
-        "eu-commission-digital--d40a3a4b155a43ce",
-        "eu-commission-digital--8af47bb8d65d23e4",
-        "eu-commission-digital--75160e4c29dd1482",
-        "eu-commission-digital--24cfc72c58d5b03d",
-        "eu-commission-digital--2509ee005c215c2a",
-        "eu-commission-digital--d5a567ad52a7d65e",
-        "eu-commission-digital--b6995e4d836d3a5e",
-        "eu-commission-digital--ced2abb3325c4040"
+        "eu-commission-digital--254ded0ccd21678f",
+        "eu-commission-digital--80dce9dea2ae0d30",
+        "eu-commission-digital--7ace40a99f066584",
+        "eu-commission-digital--dc75924539ace472",
+        "eu-commission-digital--02049442f103eaca",
+        "eu-commission-digital--2d198ca68fa59f62",
+        "eu-commission-digital--65fc4a2e0532433c",
+        "eu-commission-digital--3362159da84342d3",
+        "eu-commission-digital--b4dc1a6bd52ad5c5",
+        "eu-commission-digital--d866045fa3f34bdd"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -283,7 +276,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "us-ftc-federal-register--87fe61886d0a588e",
+        "us-ftc-federal-register--d2872467341af8d6"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -294,12 +290,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "news-media-alliance--e50d1ac1ade99b1f"
+        "news-media-alliance--d06c67ce0a70016d"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-18-news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act.md"
-      ]
+      "feed_items_written": []
     },
     "reddit-corporate": {
       "fetch": "ok",
@@ -448,12 +442,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--4174cb5efe51064a"
+        "stratechery--674d03d45bf803ae"
       ],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-19-stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co.md"
-      ]
+      "feed_items_written": []
     },
     "simon-willison": {
       "fetch": "ok",
@@ -462,8 +454,9 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--8c71fb9d4feb9620",
-        "simon-willison--c5f716e280d9d405"
+        "simon-willison--5fb050c0c8451292",
+        "simon-willison--871aba3133ef981b",
+        "simon-willison--772dff24bb39cc5d"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -595,19 +588,24 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--6548e6d145e5f09d",
-        "x-discovery--1613067b8b4459dc"
+        "x-discovery--a722c52e3fba4fe6",
+        "x-discovery--8d12c23ab26586dd",
+        "x-discovery--3b551bcd8ece6876"
       ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-20-x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me.md",
+        "content/feed/2026-11-19-x-discovery-perplexity-introduces-brain-autonomous-improvement-agent-in-computer.md"
+      ]
     }
   },
-  "events_written": [],
+  "events_written": [
+    "content/events/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md"
+  ],
   "feed_items_written": [
-    "content/feed/2026-11-19-datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo.md",
-    "content/feed/2026-11-19-imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks.md",
-    "content/feed/2026-11-18-news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act.md",
-    "content/feed/2026-11-19-stratechery-stratechery-and-eric-seufert-debate-advertising-and-infrastructure-in-agentic-co.md"
+    "content/feed/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md",
+    "content/feed/2026-11-20-x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me.md",
+    "content/feed/2026-11-19-x-discovery-perplexity-introduces-brain-autonomous-improvement-agent-in-computer.md"
   ],
   "provider": {
     "name": "gemini",
@@ -617,24 +615,24 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-19",
-    "item_count": 4,
-    "path": "data/daily/2026-11-19.json"
+    "edition_date": "2026-11-20",
+    "item_count": 3,
+    "path": "data/daily/2026-11-20.json"
   },
   "insight_threads": {
-    "thread_count": 352,
+    "thread_count": 360,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
     "status": "ok",
-    "proposed": 0,
+    "proposed": 1,
     "error": ""
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 2,
-    "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.145538,
+    "candidate_count": 3,
+    "x_search_calls": 6,
+    "estimated_tool_cost_usd": 0.209627,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

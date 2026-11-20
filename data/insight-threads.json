@@ -993,6 +993,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "app-versus-platform-conflict",
+      "title": "App Versus Platform Conflict",
+      "thesis": "Platform-level multimodal AI agents bypass application encryption by consuming pixel data directly from screen buffers, forcing application developers to disable basic user-facing features like screenshots in order to defend application privacy.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "asymmetric-bot-identity",
       "title": "Asymmetric Bot Identity",
       "thesis": "Crawler authentication protocols are hardening against symmetric cryptography, where shared secrets create untenable key-distribution and trust vulnerabilities across decentralized web hosts. By enforcing protocol restrictions in the verification layer rather than the cryptographic primitive library, maintainers retain broader RFC 9421 compliance while enforcing strict public-key guarantees for bot verification.",
@@ -1084,6 +1097,19 @@
       "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "autonomous-agent-skill-synthesis",
+      "title": "Autonomous Agent Skill Synthesis",
+      "thesis": "AI agent systems are shifting from static prompt libraries to runtime self-reflection, where the system observes user workflows to synthesize and update its own operational tooling without explicit manual configuration.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "x-discovery-perplexity-introduces-brain-autonomous-improvement-agent-in-computer"
       ],
       "verified_development_slugs": []
     },
@@ -3100,6 +3126,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "ip-based-crawler-verification",
+      "title": "IP Based Crawler Verification",
+      "thesis": "By establishing distinct IP address endpoints and versioned user-agent identifiers for general AI crawlers, search indexers, and live user agents, Amazon is formalizing deterministic verification so site operators can enforce differentiated access controls instead of relying on ambiguous header matching.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ],
+      "verified_development_slugs": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ]
+    },
+    {
       "key": "isolated-agent-execution-environments",
       "title": "Isolated Agent Execution Environments",
       "thesis": "Consumer AI shifts from conversational interfaces to delegated execution environments operating inside hardware-isolated virtual machines, interfacing directly with external merchant systems, phone networks, and password managers on a user's behalf.",
@@ -3593,6 +3634,19 @@
       "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "akamai-blog-akamai-details-edge-based-ai-agent-monetization-via-x402-protocol-and-edge-funct"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "os-level-agent-defenses",
+      "title": "Os Level Agent Defenses",
+      "thesis": "Platform-level multimodal AI agents bypass application encryption by consuming pixel data directly from screen buffers, forcing application developers to disable basic user-facing features like screenshots in order to defend application privacy.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me"
       ],
       "verified_development_slugs": []
     },
@@ -4146,6 +4200,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "screen-scraping-mitigations",
+      "title": "Screen Scraping Mitigations",
+      "thesis": "Platform-level multimodal AI agents bypass application encryption by consuming pixel data directly from screen buffers, forcing application developers to disable basic user-facing features like screenshots in order to defend application privacy.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "scrutiny-of-real-time-retrieval-and-model-training",
       "title": "Scrutiny Of Real Time Retrieval And Model Training",
       "thesis": "Publishing trade organizations are coordinating legal pressure via amicus filings to contest both offline training uses and live inference retrieval by AI developers.",
@@ -4217,6 +4284,34 @@
       "verified_development_slugs": [
         "known-agents-directory-adds-anthropic-s-claude-agent-browser-automation-bot"
       ]
+    },
+    {
+      "key": "segmented-bot-identities",
+      "title": "Segmented Bot Identities",
+      "thesis": "By establishing distinct IP address endpoints and versioned user-agent identifiers for general AI crawlers, search indexers, and live user agents, Amazon is formalizing deterministic verification so site operators can enforce differentiated access controls instead of relying on ambiguous header matching.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ],
+      "verified_development_slugs": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ]
+    },
+    {
+      "key": "self-improving-tool-calling",
+      "title": "Self Improving Tool Calling",
+      "thesis": "AI agent systems are shifting from static prompt libraries to runtime self-reflection, where the system observes user workflows to synthesize and update its own operational tooling without explicit manual configuration.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "x-discovery-perplexity-introduces-brain-autonomous-improvement-agent-in-computer"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "sentinel-virtual-machine-fingerprinting",
@@ -4679,6 +4774,21 @@
         "cloudflare-blog-cloudflare-adds-visibility-analytics-and-granular-policy-controls-for-personal-a"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "user-agent-differentiation",
+      "title": "User Agent Differentiation",
+      "thesis": "By establishing distinct IP address endpoints and versioned user-agent identifiers for general AI crawlers, search indexers, and live user agents, Amazon is formalizing deterministic verification so site operators can enforce differentiated access controls instead of relying on ambiguous header matching.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-20T16:43:41.099471Z",
+      "last_updated_at": "2026-11-20T16:43:41.099471Z",
+      "related_feed_slugs": [
+        "amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ],
+      "verified_development_slugs": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ]
     },
     {
       "key": "user-agent-specialization",

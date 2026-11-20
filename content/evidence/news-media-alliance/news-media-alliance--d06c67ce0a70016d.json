@@ -1,0 +1,19 @@
+{
+  "evidence_id": "news-media-alliance--d06c67ce0a70016d",
+  "source": "news-media-alliance",
+  "source_url": "https://www.newsmediaalliance.org/department-of-labor-announces-final-independent-contractor-rule/",
+  "supporting_urls": [],
+  "published_at": "2026-11-19T18:58:21Z",
+  "detected_at": "2026-11-20T16:43:41.099471Z",
+  "content_path": "content/evidence/news-media-alliance/news-media-alliance--d06c67ce0a70016d.json",
+  "content_hash": "sha256:55a198e99ca25261e91d35cbb293edc7463259ce013f0ada89ce94d500fa8bd4",
+  "external_id": "https://www.newsmediaalliance.org/?p=18930",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Department of Labor Announces Final Independent Contractor Rule",
+  "content": "<p><img alt=\"\" class=\"attachment-post-thumbnail size-post-thumbnail wp-post-image\" height=\"1621\" src=\"https://www.newsmediaalliance.org/wp-content/uploads/2025/09/news-on-phone.jpg\" width=\"2470\" /></p>The News/Media Alliance attended a stakeholder briefing today where the U.S. Department of Labor (DOL) announced a final rule updating its independent contractor classification standard under the Fair Labor Standards Act.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
