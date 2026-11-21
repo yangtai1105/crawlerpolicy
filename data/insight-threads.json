@@ -1676,6 +1676,21 @@
       ]
     },
     {
+      "key": "crawler-authentication-telemetry",
+      "title": "Crawler Authentication Telemetry",
+      "thesis": "While prior drafts in the working group focused primarily on signing requests, declaring metadata, and discovering public keys, this submission addresses the return feedback loop—standardizing how servers report whether bot authentication succeeded or failed.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-21T15:55:16.214054Z",
+      "last_updated_at": "2026-11-21T15:55:16.214054Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+      ]
+    },
+    {
       "key": "crawler-blocks-driving-commercial-licensing",
       "title": "Crawler Blocks Driving Commercial Licensing",
       "thesis": "Publisher-side crawler blocking is demonstrating direct commercial leverage, forcing major model developers to transition from unilateral scraping to commercial licensing partnerships for timely, high-stakes information.",
@@ -4518,6 +4533,21 @@
       ],
       "verified_development_slugs": [
         "a2a-specification-proposes-sendlivemessage-for-bidirectional-agent-interactions"
+      ]
+    },
+    {
+      "key": "standardized-bot-feedback-loops",
+      "title": "Standardized Bot Feedback Loops",
+      "thesis": "While prior drafts in the working group focused primarily on signing requests, declaring metadata, and discovering public keys, this submission addresses the return feedback loop—standardizing how servers report whether bot authentication succeeded or failed.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-21T15:55:16.214054Z",
+      "last_updated_at": "2026-11-21T15:55:16.214054Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
       ]
     },
     {

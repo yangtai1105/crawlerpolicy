@@ -1,36 +1,36 @@
 {
-  "status": "healthy",
-  "last_attempted_at": "2026-11-20T16:43:41.099471Z",
+  "status": "degraded",
+  "last_attempted_at": "2026-11-21T15:55:16.214054Z",
   "last_fully_successful_at": "2026-11-20T16:43:41.099471Z",
   "coverage": {
     "configured": 52,
-    "completed": 52,
-    "fetched": 52,
-    "analyzed": 52,
-    "published": 52,
-    "failed": 0,
+    "completed": 51,
+    "fetched": 51,
+    "analyzed": 51,
+    "published": 51,
+    "failed": 1,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 52,
-      "failed": 0,
+      "ok": 51,
+      "failed": 1,
       "pending": 0
     },
     "evidence": {
-      "ok": 52,
-      "failed": 0,
+      "ok": 51,
+      "failed": 1,
       "pending": 0
     },
     "analysis": {
-      "ok": 52,
+      "ok": 51,
       "failed": 0,
-      "pending": 0
+      "pending": 1
     },
     "publish": {
-      "ok": 52,
+      "ok": 51,
       "failed": 0,
-      "pending": 0
+      "pending": 1
     }
   },
   "per_source": {
@@ -110,15 +110,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "amazonbot--5df8b957536e3481"
-      ],
-      "events_written": [
-        "content/events/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "ccbot": {
       "fetch": "ok",
@@ -146,9 +140,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-radar--750f241604a35ceb"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -159,7 +151,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "cloudflare-blog--4d9d9470a4645aee"
+        "cloudflare-blog--6376bded3ea986fa",
+        "cloudflare-blog--2bed1fbe5137899e"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -200,10 +193,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "imperva-blog--c0097f09d2efce6a",
-        "imperva-blog--cd0a78e9be0aa916"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -223,9 +213,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--124d5e3d7d13c2bf"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -256,16 +244,14 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--254ded0ccd21678f",
-        "eu-commission-digital--80dce9dea2ae0d30",
-        "eu-commission-digital--7ace40a99f066584",
-        "eu-commission-digital--dc75924539ace472",
-        "eu-commission-digital--02049442f103eaca",
-        "eu-commission-digital--2d198ca68fa59f62",
-        "eu-commission-digital--65fc4a2e0532433c",
-        "eu-commission-digital--3362159da84342d3",
-        "eu-commission-digital--b4dc1a6bd52ad5c5",
-        "eu-commission-digital--d866045fa3f34bdd"
+        "eu-commission-digital--058b80420b937250",
+        "eu-commission-digital--abd7389e77f96f52",
+        "eu-commission-digital--0114d80111fcb3bf",
+        "eu-commission-digital--bcf133dc1e555599",
+        "eu-commission-digital--dae12a4a3f22e5b5",
+        "eu-commission-digital--0e7ec60c4c8a0e7a",
+        "eu-commission-digital--6d6bb43f8df29f5a",
+        "eu-commission-digital--df7da36b5ac3424d"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -276,10 +262,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "us-ftc-federal-register--87fe61886d0a588e",
-        "us-ftc-federal-register--d2872467341af8d6"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -289,9 +272,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--d06c67ce0a70016d"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -442,7 +423,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--674d03d45bf803ae"
+        "stratechery--d62c7dee42f0434c"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -454,9 +435,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--5fb050c0c8451292",
-        "simon-willison--871aba3133ef981b",
-        "simon-willison--772dff24bb39cc5d"
+        "simon-willison--e92ded3b237972ae"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -517,9 +496,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ietf-webbotauth-wg--3ceab8e2d13a5934"
+      ],
+      "events_written": [
+        "content/events/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -577,35 +562,28 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--affe5115cbe7e40f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "ok",
-      "evidence": "ok",
-      "analysis": "ok",
-      "publish": "ok",
-      "error": null,
-      "evidence_ids": [
-        "x-discovery--a722c52e3fba4fe6",
-        "x-discovery--8d12c23ab26586dd",
-        "x-discovery--3b551bcd8ece6876"
-      ],
+      "fetch": "failed",
+      "evidence": "failed",
+      "analysis": "pending",
+      "publish": "pending",
+      "error": "xAI X Search did not return valid candidate JSON",
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-20-x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me.md",
-        "content/feed/2026-11-19-x-discovery-perplexity-introduces-brain-autonomous-improvement-agent-in-computer.md"
-      ]
+      "feed_items_written": []
     }
   },
   "events_written": [
-    "content/events/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md"
+    "content/events/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-11-20-amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c.md",
-    "content/feed/2026-11-20-x-discovery-signal-blocks-in-app-screenshots-on-mobile-to-stop-os-level-ai-agents-reading-me.md",
-    "content/feed/2026-11-19-x-discovery-perplexity-introduces-brain-autonomous-improvement-agent-in-computer.md"
+    "content/feed/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
   ],
   "provider": {
     "name": "gemini",
@@ -615,27 +593,27 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-20",
-    "item_count": 3,
-    "path": "data/daily/2026-11-20.json"
+    "edition_date": "2026-11-21",
+    "item_count": 1,
+    "path": "data/daily/2026-11-21.json"
   },
   "insight_threads": {
-    "thread_count": 360,
+    "thread_count": 362,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
     "status": "ok",
-    "proposed": 1,
+    "proposed": 0,
     "error": ""
   },
   "discovery": {
-    "status": "live",
-    "candidate_count": 3,
-    "x_search_calls": 6,
-    "estimated_tool_cost_usd": 0.209627,
+    "status": "unavailable",
+    "candidate_count": 0,
+    "x_search_calls": 0,
+    "estimated_tool_cost_usd": 0.0,
     "sources_configured": 1,
-    "sources_completed": 1,
-    "sources_failed": 0,
+    "sources_completed": 0,
+    "sources_failed": 1,
     "sources_skipped_by_cap": 0
   }
 }

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--abd7389e77f96f52",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2556",
+  "supporting_urls": [],
+  "published_at": "2026-11-21T09:01:16Z",
+  "detected_at": "2026-11-21T15:55:16.214054Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--abd7389e77f96f52.json",
+  "content_hash": "sha256:f16242939810edb175705b0cdb16c23526c1ff859a0c2ba4283c90d3798b07d6",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2556",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by President von der Leyen on the assassination attempt against a US-Ukrainian citizen in Denmark",
+  "content": "European Commission Statement Brussels, 21 Nov 2026 I strongly condemn the assassination attempt against a US-Ukrainian citizen in Denmark, orchestrated by Russian intelligence services.\nThis was an attack on EU ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

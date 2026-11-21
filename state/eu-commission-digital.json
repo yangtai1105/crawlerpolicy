@@ -1,17 +1,9 @@
 {
-  "last_checked_at": "2026-11-20T16:43:41.099471+00:00",
-  "last_fetch_succeeded_at": "2026-11-20T16:43:41.099471+00:00",
-  "last_evidence_at": "2026-11-20T16:43:41.099471+00:00",
+  "last_checked_at": "2026-11-21T15:55:16.214054+00:00",
+  "last_fetch_succeeded_at": "2026-11-21T15:55:16.214054+00:00",
+  "last_evidence_at": "2026-11-21T15:55:16.214054+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://ec.europa.eu/commission/presscorner/detail/en/inf_26_1380",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1594",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1620",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1618",
-    "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_1617",
-    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_1612",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1609",
-    "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_1639",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1625",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1635",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_1642",
@@ -503,7 +495,15 @@
     "https://ec.europa.eu/commission/presscorner/detail/en/mex_26_2543",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2535",
     "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2534",
-    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2533"
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2533",
+    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2557",
+    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2556",
+    "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2539",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2532",
+    "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2169",
+    "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2170",
+    "https://ec.europa.eu/commission/presscorner/detail/en/fs_25_2171",
+    "https://ec.europa.eu/commission/presscorner/detail/en/ac_26_2555"
   ],
   "consecutive_failures": 0,
   "first_seen": false

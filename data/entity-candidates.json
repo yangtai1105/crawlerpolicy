@@ -533,8 +533,8 @@
       "kind": "player",
       "observed_name": "IETF Web Bot Auth Working Group",
       "first_seen_at": "2026-10-22T13:30:16.624196Z",
-      "last_seen_at": "2026-11-18T16:57:56.492918Z",
-      "occurrences": 8,
+      "last_seen_at": "2026-11-21T15:55:16.214054Z",
+      "occurrences": 9,
       "evidence_ids": [
         "ietf-webbotauth-wg--c6dc433a924a1ecc",
         "ietf-webbotauth-wg--590751b5f4db81f6",
@@ -543,7 +543,8 @@
         "ietf-webbotauth-wg--73b525a0d33d1f6c",
         "ietf-webbotauth-wg--b0e8266a52e25cf9",
         "ietf-webbotauth-wg--b23a210f6971e0dc",
-        "ietf-webbotauth-wg--010e7fb2084bfddf"
+        "ietf-webbotauth-wg--010e7fb2084bfddf",
+        "ietf-webbotauth-wg--3ceab8e2d13a5934"
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
@@ -553,7 +554,8 @@
         "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
         "2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag",
         "2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous",
-        "2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+        "2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+        "2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
       ]
     },
     "player:indonesian parliament": {
@@ -1508,8 +1510,8 @@
       "kind": "protocol",
       "observed_name": "HTTP",
       "first_seen_at": "2026-10-13T15:36:53.900599Z",
-      "last_seen_at": "2026-11-18T16:57:56.492918Z",
-      "occurrences": 7,
+      "last_seen_at": "2026-11-21T15:55:16.214054Z",
+      "occurrences": 8,
       "evidence_ids": [
         "datadome-blog--42fa450a86dba89a",
         "cloudflare-blog--5a2555e77804fad4",
@@ -1517,7 +1519,8 @@
         "x-discovery--fe5003d0c481d2df",
         "ietf-webbotauth-wg--73b525a0d33d1f6c",
         "simon-willison--f69f9c6e99c6f354",
-        "x-discovery--590af0057172938e"
+        "x-discovery--590af0057172938e",
+        "ietf-webbotauth-wg--3ceab8e2d13a5934"
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots",
@@ -1526,7 +1529,8 @@
         "2026-10-23-x-discovery-cloudflare-radar-records-bots-generating-65-of-html-page-requests",
         "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
         "2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-",
-        "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
+        "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-",
+        "2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
       ]
     },
     "protocol:http 402": {
