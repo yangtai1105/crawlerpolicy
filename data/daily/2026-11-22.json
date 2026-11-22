@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-22",
+  "generated_at": "2026-11-22T15:57:34.533928Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments",
+      "status": "signal",
+      "importance": 0.75,
+      "published_at": "2026-11-21T21:30:00Z"
+    }
+  ]
+}

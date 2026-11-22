@@ -1,36 +1,36 @@
 {
-  "status": "degraded",
-  "last_attempted_at": "2026-11-21T15:55:16.214054Z",
-  "last_fully_successful_at": "2026-11-20T16:43:41.099471Z",
+  "status": "healthy",
+  "last_attempted_at": "2026-11-22T15:57:34.533928Z",
+  "last_fully_successful_at": "2026-11-22T15:57:34.533928Z",
   "coverage": {
     "configured": 52,
-    "completed": 51,
-    "fetched": 51,
-    "analyzed": 51,
-    "published": 51,
-    "failed": 1,
+    "completed": 52,
+    "fetched": 52,
+    "analyzed": 52,
+    "published": 52,
+    "failed": 0,
     "required_failed": 0
   },
   "stages": {
     "fetch": {
-      "ok": 51,
-      "failed": 1,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "evidence": {
-      "ok": 51,
-      "failed": 1,
+      "ok": 52,
+      "failed": 0,
       "pending": 0
     },
     "analysis": {
-      "ok": 51,
+      "ok": 52,
       "failed": 0,
-      "pending": 1
+      "pending": 0
     },
     "publish": {
-      "ok": 51,
+      "ok": 52,
       "failed": 0,
-      "pending": 1
+      "pending": 0
     }
   },
   "per_source": {
@@ -150,10 +150,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--6376bded3ea986fa",
-        "cloudflare-blog--2bed1fbe5137899e"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -243,16 +240,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "eu-commission-digital--058b80420b937250",
-        "eu-commission-digital--abd7389e77f96f52",
-        "eu-commission-digital--0114d80111fcb3bf",
-        "eu-commission-digital--bcf133dc1e555599",
-        "eu-commission-digital--dae12a4a3f22e5b5",
-        "eu-commission-digital--0e7ec60c4c8a0e7a",
-        "eu-commission-digital--6d6bb43f8df29f5a",
-        "eu-commission-digital--df7da36b5ac3424d"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -422,9 +410,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "stratechery--d62c7dee42f0434c"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -435,7 +421,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--e92ded3b237972ae"
+        "simon-willison--84824da5ab745d82"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -496,15 +482,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--3ceab8e2d13a5934"
-      ],
-      "events_written": [
-        "content/events/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -562,28 +542,28 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-radar-ai-insights--affe5115cbe7e40f"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
     "x-discovery": {
-      "fetch": "failed",
-      "evidence": "failed",
-      "analysis": "pending",
-      "publish": "pending",
-      "error": "xAI X Search did not return valid candidate JSON",
-      "evidence_ids": [],
+      "fetch": "ok",
+      "evidence": "ok",
+      "analysis": "ok",
+      "publish": "ok",
+      "error": null,
+      "evidence_ids": [
+        "x-discovery--1630bd929527ed80"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-21-x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments.md"
+      ]
     }
   },
-  "events_written": [
-    "content/events/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
-  ],
+  "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes.md"
+    "content/feed/2026-11-21-x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments.md"
   ],
   "provider": {
     "name": "gemini",
@@ -593,12 +573,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-21",
+    "edition_date": "2026-11-22",
     "item_count": 1,
-    "path": "data/daily/2026-11-21.json"
+    "path": "data/daily/2026-11-22.json"
   },
   "insight_threads": {
-    "thread_count": 362,
+    "thread_count": 365,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -607,13 +587,13 @@
     "error": ""
   },
   "discovery": {
-    "status": "unavailable",
-    "candidate_count": 0,
-    "x_search_calls": 0,
-    "estimated_tool_cost_usd": 0.0,
+    "status": "live",
+    "candidate_count": 1,
+    "x_search_calls": 5,
+    "estimated_tool_cost_usd": 0.126516,
     "sources_configured": 1,
-    "sources_completed": 0,
-    "sources_failed": 1,
+    "sources_completed": 1,
+    "sources_failed": 0,
     "sources_skipped_by_cap": 0
   }
 }

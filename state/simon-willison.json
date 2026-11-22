@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-21T15:55:16.214054+00:00",
-  "last_fetch_succeeded_at": "2026-11-21T15:55:16.214054+00:00",
-  "last_evidence_at": "2026-11-21T15:55:16.214054+00:00",
+  "last_checked_at": "2026-11-22T15:57:34.533928+00:00",
+  "last_fetch_succeeded_at": "2026-11-22T15:57:34.533928+00:00",
+  "last_evidence_at": "2026-11-22T15:57:34.533928+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -80,7 +80,8 @@
     "https://simonwillison.net/2026/Nov/20/levent-alpoge/",
     "https://simonwillison.net/2026/Nov/20/token-fraud-is-here-and-its-bad/",
     "https://simonwillison.net/2026/Nov/19/postgresql-19/",
-    "https://simonwillison.net/2026/Nov/20/ravi-vakil/"
+    "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
+    "https://simonwillison.net/2026/Nov/21/muru/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

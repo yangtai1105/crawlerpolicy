@@ -1,0 +1,36 @@
+{
+  "evidence_id": "x-discovery--1630bd929527ed80",
+  "source": "x-discovery",
+  "source_url": "https://x.com/Swarmkind/status/2124254022068769072",
+  "supporting_urls": [
+    "https://t.co/j9krx3mtgW"
+  ],
+  "published_at": "2026-11-21T21:30:00Z",
+  "detected_at": "2026-11-22T15:57:34.533928Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--1630bd929527ed80.json",
+  "content_hash": "sha256:60407426ce84dfae9cf9c6df55dbe7f1938b8e964daa1f0f66e8993b14649562",
+  "external_id": "2124254022068769072",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Wikipedia now charges AI companies for bulk access; Cloudflare building crawler toll booths; 200M+ x402 payments made",
+  "content": "X author: @Swarmkind\n\nSwarmkind reported that Wikipedia has begun charging several AI companies for bulk access, Cloudflare is developing toll booths for crawlers, and bots have made over 200 million payments via the x402 HTTP code, citing July 2025 data showing Anthropic's high crawl-to-visitor ratio.\n\nLinked sources:\n- https://t.co/j9krx3mtgW",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "Swarmkind",
+    "post_url": "https://x.com/Swarmkind/status/2124254022068769072",
+    "linked_urls": [
+      "https://t.co/j9krx3mtgW"
+    ],
+    "provider_citations": [],
+    "front": "measurement-economics",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "None of the previously seen items cover Wikipedia charging AI companies for bulk access, Cloudflare developing crawler toll booths, or bot payments via HTTP 402."
+    },
+    "linked_articles": []
+  }
+}

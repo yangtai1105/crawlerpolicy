@@ -1400,6 +1400,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "cdn-crawler-tolling",
+      "title": "CDN Crawler Tolling",
+      "thesis": "The web is transitioning from voluntary opt-out signals like robots.txt to economic barriers where infrastructure providers and publishers directly enforce payment per crawl through protocols such as x402 and managed edge tolling.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-22T15:57:34.533928Z",
+      "last_updated_at": "2026-11-22T15:57:34.533928Z",
+      "related_feed_slugs": [
+        "x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "cdn-edge-level-enforcement-against-ai-scraping",
       "title": "CDN Edge Level Enforcement Against AI Scraping",
       "thesis": "CDN and edge providers are increasingly coupling web cache protection with dedicated bot management features specifically marketed against AI scrapers.",
@@ -3517,6 +3530,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "monetized-web-scraping",
+      "title": "Monetized Web Scraping",
+      "thesis": "The web is transitioning from voluntary opt-out signals like robots.txt to economic barriers where infrastructure providers and publishers directly enforce payment per crawl through protocols such as x402 and managed edge tolling.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-22T15:57:34.533928Z",
+      "last_updated_at": "2026-11-22T15:57:34.533928Z",
+      "related_feed_slugs": [
+        "x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "multi-agent-orchestration-in-web-discovery",
       "title": "Multi Agent Orchestration In Web Discovery",
       "thesis": "Agentic search systems are transitioning from single-model sequential pipelines to multi-agent architectures that orchestrate multiple frontier models simultaneously to handle distinct sub-tasks.",
@@ -4929,6 +4955,19 @@
       "last_updated_at": "2026-10-31T20:51:06.172555Z",
       "related_feed_slugs": [
         "akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "x402-machine-payments",
+      "title": "X402 Machine Payments",
+      "thesis": "The web is transitioning from voluntary opt-out signals like robots.txt to economic barriers where infrastructure providers and publishers directly enforce payment per crawl through protocols such as x402 and managed edge tolling.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-22T15:57:34.533928Z",
+      "last_updated_at": "2026-11-22T15:57:34.533928Z",
+      "related_feed_slugs": [
+        "x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments"
       ],
       "verified_development_slugs": []
     },
