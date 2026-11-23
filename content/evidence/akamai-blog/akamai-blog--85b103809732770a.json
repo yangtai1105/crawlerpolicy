@@ -1,0 +1,19 @@
+{
+  "evidence_id": "akamai-blog--85b103809732770a",
+  "source": "akamai-blog",
+  "source_url": "https://www.akamai.com/blog/security/2026/nov/1615-new-tlds-dns-ready-for-bigger-namespace",
+  "supporting_urls": [],
+  "published_at": "2026-11-23T14:00:00Z",
+  "detected_at": "2026-11-23T19:53:27.881652Z",
+  "content_path": "content/evidence/akamai-blog/akamai-blog--85b103809732770a.json",
+  "content_hash": "sha256:6b963f87f65e018fc1778380d8866c9cbd666cc2cf0aaa5543f69c0cdddabc29",
+  "external_id": "https://www.akamai.com/blog/security/2026/nov/1615-new-tlds-dns-ready-for-bigger-namespace",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "1,615 New TLDs Are Coming. Is Your DNS Ready for a Bigger Namespace?",
+  "content": "ICANN’s 2026 round revealed 1,615 new TLDs. Learn how to stop TLD-swap look-alikes, name collisions, and DNS risks before delegation begins.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

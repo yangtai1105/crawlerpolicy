@@ -1,12 +1,9 @@
 {
-  "last_checked_at": "2026-11-22T15:57:34.533928+00:00",
-  "last_fetch_succeeded_at": "2026-11-22T15:57:34.533928+00:00",
-  "last_evidence_at": "2026-11-20T16:43:41.099471+00:00",
+  "last_checked_at": "2026-11-23T19:53:27.881652+00:00",
+  "last_fetch_succeeded_at": "2026-11-23T19:53:27.881652+00:00",
+  "last_evidence_at": "2026-11-23T19:53:27.881652+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://www.gov.uk/government/publications/cma-workforce-management-information-march-2026#2026-04-30T10:30:15Z",
-    "https://www.gov.uk/government/publications/mergers-orders-and-undertakings-register#2026-05-01T11:35:57Z",
-    "https://www.gov.uk/government/news/cma-publishes-latest-monitoring-report-on-road-fuel-market#2026-05-01T10:03:54Z",
     "https://www.gov.uk/government/publications/enhanced-road-fuel-monitoring-report-may-2026#2026-05-01T10:00:15Z",
     "https://www.gov.uk/cma-cases/aramark-slash-entier-merger-inquiry#2026-05-01T10:00:06Z",
     "https://www.gov.uk/cma-cases/abf-slash-hovis-merger-inquiry#2026-05-06T10:00:25Z",
@@ -503,7 +500,10 @@
     "https://www.gov.uk/government/news/cma-provisionally-finds-that-viagogo-may-have-broken-the-law-on-hidden-fees#2026-11-19T10:00:22Z",
     "https://www.gov.uk/cma-cases/viagogo-consumer-protection-enforcement-case#2026-11-19T10:00:07Z",
     "https://www.gov.uk/cma-cases/vivisol-slash-air-liquide-home-oxygen-services-business-merger-inquiry#2026-11-19T07:00:13Z",
-    "https://www.gov.uk/government/publications/cma-response-to-consumer-services-code-review-consultations#2026-11-20T12:00:41Z"
+    "https://www.gov.uk/government/publications/cma-response-to-consumer-services-code-review-consultations#2026-11-20T12:00:41Z",
+    "https://www.gov.uk/government/consultations/bae-systems-undertakings-review#2026-11-23T14:00:37Z",
+    "https://www.gov.uk/government/consultations/googles-general-search-services-proposed-user-choice-conduct-requirement#2026-11-23T12:31:09Z",
+    "https://www.gov.uk/cma-cases/bae-systems-undertakings-review-2026#2026-11-23T12:00:40Z"
   ],
   "consecutive_failures": 0,
   "first_seen": false

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--aed1c5e1f00b588c",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2558",
+  "supporting_urls": [],
+  "published_at": "2026-11-23T08:50:45Z",
+  "detected_at": "2026-11-23T19:53:27.881652Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--aed1c5e1f00b588c.json",
+  "content_hash": "sha256:d0e196d066b005483a51b3ff8e59611b768c30b660898c51953fa0e7f8c03ffe",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2558",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Keynote speech by Commissioner Albuquerque at the launch of the 6th European Retirement Week at the European Fund and Asset Management Association",
+  "content": "European Commission Speech Brussels, 23 Nov 2026 Good morning, ladies and gentlemen.\nMy thanks to Tanguy for the invitation to take part in today's event, and I would like to commend all fourteen associations ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1536,8 +1536,8 @@
       "kind": "protocol",
       "observed_name": "HTTP",
       "first_seen_at": "2026-10-13T15:36:53.900599Z",
-      "last_seen_at": "2026-11-22T15:57:34.533928Z",
-      "occurrences": 9,
+      "last_seen_at": "2026-11-23T19:53:27.881652Z",
+      "occurrences": 10,
       "evidence_ids": [
         "datadome-blog--42fa450a86dba89a",
         "cloudflare-blog--5a2555e77804fad4",
@@ -1547,7 +1547,8 @@
         "simon-willison--f69f9c6e99c6f354",
         "x-discovery--590af0057172938e",
         "ietf-webbotauth-wg--3ceab8e2d13a5934",
-        "x-discovery--1630bd929527ed80"
+        "x-discovery--1630bd929527ed80",
+        "google-user-triggered-fetchers--ec688633c7fe780b"
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots",
@@ -1558,7 +1559,8 @@
         "2026-11-17-simon-willison-prime-radiant-and-simon-willison-introduce-external-sandboxes-and-network-allow-",
         "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-",
         "2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
-        "2026-11-21-x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments"
+        "2026-11-21-x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments",
+        "2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
       ]
     },
     "protocol:http 402": {

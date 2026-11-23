@@ -1,0 +1,32 @@
+{
+  "evidence_id": "human-blog--bf848d4ce7b897e8",
+  "source": "human-blog",
+  "source_url": "https://www.humansecurity.com/newsroom/human-disrupts-badbox-3-0-ad-fraud-operation/",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T00:00:00Z",
+  "detected_at": "2026-11-23T19:53:27.881652Z",
+  "content_path": "content/evidence/human-blog/human-blog--bf848d4ce7b897e8.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "humansecurity.com/human-disrupts-badbox-3-0-ad-fraud-operation",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "HUMAN Disrupts BADBOX 3.0, an Ad Fraud Operation Running Inside Cheap Consumer TV Boxes",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.humansecurity.com/newsroom/human-disrupts-badbox-3-0-ad-fraud-operation/",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 4463,
+      "sha256": "70c9ad085edb2632b3636e8d177cc775f23fd5625a5c43039c761882d9bd33ca",
+      "cited_urls": [
+        "https://www.humansecurity.com/newsroom/human-disrupts-badbox-3-0-ad-fraud-operation/",
+        "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+        "https://www.morningstar.com/news/pr-newswire/20261118fl01250/human-disrupts-badbox-30-an-ad-fraud-operation-running-inside-cheap-consumer-tv-boxes"
+      ]
+    }
+  }
+}

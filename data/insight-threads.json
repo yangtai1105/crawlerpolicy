@@ -2,6 +2,21 @@
   "schema_version": 1,
   "threads": [
     {
+      "key": "abuse-reporting-integration",
+      "title": "Abuse Reporting Integration",
+      "thesis": "By incorporating developer platforms and automation runtimes like Apps Script and App Engine alongside visual proxies and diagnostic tools, Google explicitly expands its public taxonomy of user-triggered traffic that ignores robots.txt, shifting enforcement responsibility toward identifying embedded project IDs and filing abuse reports.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-23T19:53:27.881652Z",
+      "last_updated_at": "2026-11-23T19:53:27.881652Z",
+      "related_feed_slugs": [
+        "google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
+      ],
+      "verified_development_slugs": [
+        "google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
+      ]
+    },
+    {
       "key": "accelerating-scraping-volume",
       "title": "Accelerating Scraping Volume",
       "thesis": "Traditional identity-based controls like user-agent matching (such as claiming to be GPTBot or ClaudeBot) and static allowlists are failing as automated tools increasingly spoof recognized crawler identities and penetrate deep transactional endpoints, including login and checkout flows.",
@@ -4010,6 +4025,21 @@
       ]
     },
     {
+      "key": "proxy-attribution-transparency",
+      "title": "Proxy Attribution Transparency",
+      "thesis": "By incorporating developer platforms and automation runtimes like Apps Script and App Engine alongside visual proxies and diagnostic tools, Google explicitly expands its public taxonomy of user-triggered traffic that ignores robots.txt, shifting enforcement responsibility toward identifying embedded project IDs and filing abuse reports.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-23T19:53:27.881652Z",
+      "last_updated_at": "2026-11-23T19:53:27.881652Z",
+      "related_feed_slugs": [
+        "google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
+      ],
+      "verified_development_slugs": [
+        "google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
+      ]
+    },
+    {
       "key": "publisher-ai-licensing-resistance",
       "title": "Publisher AI Licensing Resistance",
       "thesis": "Platform operators are attempting to leverage social distribution contracts to bypass standard web crawler opt-outs, effectively conditioning social platform presence on granting broad scraping rights for AI training.",
@@ -4844,6 +4874,21 @@
       ],
       "verified_development_slugs": [
         "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ]
+    },
+    {
+      "key": "user-agent-granular-auditing",
+      "title": "User Agent Granular Auditing",
+      "thesis": "By incorporating developer platforms and automation runtimes like Apps Script and App Engine alongside visual proxies and diagnostic tools, Google explicitly expands its public taxonomy of user-triggered traffic that ignores robots.txt, shifting enforcement responsibility toward identifying embedded project IDs and filing abuse reports.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-23T19:53:27.881652Z",
+      "last_updated_at": "2026-11-23T19:53:27.881652Z",
+      "related_feed_slugs": [
+        "google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
+      ],
+      "verified_development_slugs": [
+        "google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
       ]
     },
     {

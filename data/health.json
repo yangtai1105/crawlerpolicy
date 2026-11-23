@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-22T15:57:34.533928Z",
-  "last_fully_successful_at": "2026-11-22T15:57:34.533928Z",
+  "last_attempted_at": "2026-11-23T19:53:27.881652Z",
+  "last_fully_successful_at": "2026-11-23T19:53:27.881652Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -150,7 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--1e0f698ba6664400"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -170,7 +172,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "akamai-blog--85b103809732770a"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -200,7 +204,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "human-blog--bf848d4ce7b897e8"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -210,7 +216,11 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "uk-cma--55b509a25680286d",
+        "uk-cma--384696ad0c28ec22",
+        "uk-cma--7f720ab1163a66d0"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -240,7 +250,18 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "eu-commission-digital--f56a3718c47c57c7",
+        "eu-commission-digital--77facce523477448",
+        "eu-commission-digital--8c3bebfc7227cb2c",
+        "eu-commission-digital--c5b25a1359877bc3",
+        "eu-commission-digital--aed1c5e1f00b588c",
+        "eu-commission-digital--d2aa3b589dd1f544",
+        "eu-commission-digital--79ebc8bc2addf7cb",
+        "eu-commission-digital--1ea5101c5cb3d8d3",
+        "eu-commission-digital--6b78ad2ad9c5959e",
+        "eu-commission-digital--76d8604a4de48df2"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -260,7 +281,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "news-media-alliance--27a077c41940130f",
+        "news-media-alliance--89edc3c9d29cc76c"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -360,9 +384,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "google-user-triggered-fetchers--ec688633c7fe780b"
+      ],
+      "events_written": [
+        "content/events/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
+      ]
     },
     "nist-caisi": {
       "fetch": "ok",
@@ -410,7 +440,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "stratechery--2ec3c5a8c88a6554"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -421,7 +453,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--84824da5ab745d82"
+        "simon-willison--a7599caf07da132a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -442,7 +474,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "openai-blog--5b0f79df3abd2836"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -552,18 +586,16 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "x-discovery--1630bd929527ed80"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-21-x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments.md"
-      ]
+      "feed_items_written": []
     }
   },
-  "events_written": [],
+  "events_written": [
+    "content/events/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
+  ],
   "feed_items_written": [
-    "content/feed/2026-11-21-x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments.md"
+    "content/feed/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
   ],
   "provider": {
     "name": "gemini",
@@ -573,12 +605,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-22",
+    "edition_date": "2026-11-23",
     "item_count": 1,
-    "path": "data/daily/2026-11-22.json"
+    "path": "data/daily/2026-11-23.json"
   },
   "insight_threads": {
-    "thread_count": 365,
+    "thread_count": 368,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -588,9 +620,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 1,
-    "x_search_calls": 5,
-    "estimated_tool_cost_usd": 0.126516,
+    "candidate_count": 0,
+    "x_search_calls": 4,
+    "estimated_tool_cost_usd": 0.130249,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "stratechery--2ec3c5a8c88a6554",
+  "source": "stratechery",
+  "source_url": "https://stratechery.com/2026/amazon-earnings-the-chip-question-about-agents/",
+  "supporting_urls": [],
+  "published_at": "2026-11-23T11:00:00Z",
+  "detected_at": "2026-11-23T19:53:27.881652Z",
+  "content_path": "content/evidence/stratechery/stratechery--2ec3c5a8c88a6554.json",
+  "content_hash": "sha256:84916502d63e58e9abcc08d879e5e241a0a6338cea8db2af02aed281afda874f",
+  "external_id": "https://stratechery.com/?p=21351",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Amazon Earnings, The Chip Question, About Agents",
+  "content": "<p>Amazon makes the case they are not like other compute providers, even as they signal the willingness to give up margin to serve the frontier.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
