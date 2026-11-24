@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "week": "2026-W47",
+  "generated_at": "2026-11-24T00:35:16.111712Z",
+  "window_start": "2026-11-16",
+  "window_end": "2026-11-22",
+  "health_status": "healthy",
+  "coverage": {
+    "configured": 52,
+    "completed": 52,
+    "fetched": 52,
+    "analyzed": 52,
+    "published": 52,
+    "failed": 0,
+    "required_failed": 0
+  },
+  "thesis": "Web crawler verification and access control are advancing through IETF protocol standardization for bot authentication and operator-led differentiation of automated and user-directed traffic.",
+  "executive_shifts": [
+    {
+      "headline": "IETF Web Bot Auth WG Expands Drafts for Verification Reporting and Anonymous Conduct Attestation",
+      "summary": "The IETF Web Bot Auth Working Group received draft-suresh-webbotauth-verification-outcome-00, a 13-page proposal introducing standardized mechanisms to communicate authentication results back to clients, expanding its portfolio to 14 related specifications. Additionally, the group received and subsequently updated the 'Attested Conduct for Anonymous Web Data Collection' draft from revision -00 to revision -02 (draft-mckenna-webbotauth-collection-attestation-02), which outlines use cases, requirements, a tiered model for verifying crawler conduct without disclosing operator identity, and records an associated intellectual property disclosure.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous",
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-"
+      ]
+    },
+    {
+      "headline": "Amazon Publishes Distinct User Agents and IP Lists for Crawlers and Live Fetcher",
+      "summary": "Amazon updated its crawler documentation with specific browser-formatted user agent strings and dedicated IP address listing pages for Amazonbot, Amzn-SearchBot, and Amzn-User. These explicit verification endpoints allow network administrators and webmasters to prevent spoofing and selectively block Amazon's AI model training crawler while permitting search indexing or live Alexa user query responses.",
+      "evidence_event_ids": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ]
+    }
+  ],
+  "material_developments": [
+    {
+      "track": "policy-regulation",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "litigation-legal",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "search-discovery",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "access-controls",
+      "material_change": true,
+      "event_ids": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c",
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ],
+      "summary": "4 verified material developments."
+    },
+    {
+      "track": "platform-ecosystem",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "identity-authorization",
+      "material_change": true,
+      "event_ids": [
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ],
+      "summary": "3 verified material developments."
+    },
+    {
+      "track": "licensing-monetization",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "standards-protocols",
+      "material_change": true,
+      "event_ids": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c",
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ],
+      "summary": "4 verified material developments."
+    },
+    {
+      "track": "asset-rights",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    },
+    {
+      "track": "measurement-economics",
+      "material_change": false,
+      "event_ids": [],
+      "summary": "No verified material change in this track."
+    }
+  ],
+  "intelligence_read": "Recent developments highlight a dual-track evolution in managing automated web traffic. Within the IETF Web Bot Auth Working Group, draft specifications are expanding to address both operational diagnostics—via standardized reporting of verification outcomes—and privacy-preserving verification through a tiered model of attested conduct for anonymous data collection. Concurrently, major operators are refining current verification mechanisms; Amazon published distinct user agent strings and IP verification endpoints for Amazonbot, Amzn-SearchBot, and Amzn-User, enabling publishers to verify requests and enforce granular access controls across AI model training, search indexing, and live user queries.",
+  "trend_deltas": [],
+  "actor_moves": [
+    {
+      "actor": "Amazon",
+      "direction": "Clear differentiation and IP verification prevent spoofing and allow publishers to selectively block Amazon's AI model training crawler while permitting search indexing or live Alexa user query responses.",
+      "evidence_event_ids": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ]
+    },
+    {
+      "actor": "IETF",
+      "direction": "Cryptographic authentication frameworks fail in production without clear signaling; publishers and bot operators need standardized diagnostics to explain why access was granted or rejected under Web Bot Auth protocols.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ]
+    },
+    {
+      "actor": "IETF Web Bot Auth Working Group",
+      "direction": "Cryptographic authentication frameworks fail in production without clear signaling; publishers and bot operators need standardized diagnostics to explain why access was granted or rejected under Web Bot Auth protocols.",
+      "evidence_event_ids": [
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ]
+    }
+  ],
+  "watchlist": [
+    {
+      "question": "What primary evidence would make Policy & Regulation materially change?",
+      "tracks": [
+        "policy-regulation"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Litigation & Legal materially change?",
+      "tracks": [
+        "litigation-legal"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Search & AI Discovery materially change?",
+      "tracks": [
+        "search-discovery"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Platform & Ecosystem materially change?",
+      "tracks": [
+        "platform-ecosystem"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Licensing & Monetization materially change?",
+      "tracks": [
+        "licensing-monetization"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Asset Rights materially change?",
+      "tracks": [
+        "asset-rights"
+      ]
+    },
+    {
+      "question": "What primary evidence would make Measurement & Economics materially change?",
+      "tracks": [
+        "measurement-economics"
+      ]
+    }
+  ],
+  "source_ledger": [
+    {
+      "source": "amazonbot",
+      "tier": "primary",
+      "event_ids": [
+        "amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+      ],
+      "latest_event_date": "2026-11-20T16:43:41.099471Z"
+    },
+    {
+      "source": "ietf-webbotauth-wg",
+      "tier": "primary",
+      "event_ids": [
+        "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+        "ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous"
+      ],
+      "latest_event_date": "2026-11-21T15:55:16.214054Z"
+    }
+  ],
+  "reported_developments": [
+    {
+      "slug": "datadome-blog-datadome-launches-bot-and-agent-protection-via-amazon-cloudfront-functions-netwo",
+      "title": "DataDome launches bot and agent protection via Amazon CloudFront Functions network calls",
+      "source": "datadome-blog",
+      "source_tier": "specialist",
+      "primary_track": "access-controls",
+      "event_date": "2026-11-19T14:26:41Z",
+      "importance": 0.65,
+      "summary": "DataDome announced general availability for its bot and agent trust management integration using network calls on Amazon CloudFront Functions. The edge-computing integration enables real-time threat evaluation directly within CloudFront request event handlers rather than requiring Lambda@Edge. The company reports the architecture scales up to 10 million requests per second and cuts AWS serverless compute costs by up to 60%."
+    },
+    {
+      "slug": "imperva-blog-thales-and-imperva-report-automated-traffic-reached-53-in-2025-as-ai-bot-attacks",
+      "title": "Thales and Imperva Report Automated Traffic Reached 53% in 2025 as AI Bot Attacks Rose 12.5-Fold",
+      "source": "imperva-blog",
+      "source_tier": "specialist",
+      "primary_track": "measurement-economics",
+      "event_date": "2026-11-19T10:00:07Z",
+      "importance": 0.65,
+      "summary": "According to findings from the 2026 Thales Bad Bot Report, automated traffic comprised 53% of all observed web traffic in 2025, with malicious bots representing 40% of the total. AI-enabled bot attacks surged 12.5-fold year over year, while 27% of bot attacks specifically targeted APIs. The emergence of autonomous AI agents interacting directly with APIs is blurring technical distinctions between legitimate automated transactions and malicious abuse."
+    },
+    {
+      "slug": "news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act",
+      "title": "Coalition of 131 Organizations Backs Senate Stealth Bot Prohibition Act",
+      "source": "news-media-alliance",
+      "source_tier": "specialist",
+      "primary_track": "policy-regulation",
+      "event_date": "2026-11-18T20:59:13Z",
+      "importance": 0.65,
+      "summary": "A coalition of 131 organizations representing news publishers, content industries, and technology groups sent a support letter to US Senators Roger Wicker and Ben Ray Luján. The letter commends the senators for introducing the Stealth Bot Prohibition Act in the Senate. The signatories represent dozens of US states and international jurisdictions."
+    },
+    {
+      "slug": "datadome-blog-klook-renews-datadome-anti-bot-integration-to-balance-flash-sale-security-and-ai",
+      "title": "Klook Renews DataDome Anti-Bot Integration to Balance Flash-Sale Security and AI Agent Access",
+      "source": "datadome-blog",
+      "source_tier": "specialist",
+      "primary_track": "access-controls",
+      "event_date": "2026-11-16T14:47:02Z",
+      "importance": 0.35,
+      "summary": "Travel and experiences booking platform Klook has renewed its bot mitigation partnership with DataDome to defend high-demand ticket sales and API traffic. The platform combines DataDome Bot Protect with internal fraud controls to counter automated threats while monitoring traffic from emerging AI-powered browser tools. Klook stated that its strategy is to apply risk-based controls rather than blocking all automated interactions by default."
+    }
+  ],
+  "model_generated": true
+}
