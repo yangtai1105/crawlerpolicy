@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--a389ec8786237563",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2553",
+  "supporting_urls": [],
+  "published_at": "2026-11-23T23:00:00Z",
+  "detected_at": "2026-11-24T19:21:44.486515Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--a389ec8786237563.json",
+  "content_hash": "sha256:581fed01e7c6927d799c2966780da67b2d4fa58c1346f75dcbc1cb82db7ed406",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2553",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission sets out key EU policy priorities for 2027 in its European Semester Autumn Package",
+  "content": "European Commission Press release Strasbourg, 24 Nov 2026 The European Commission today adopted the 2027 European Semester Autumn Package, setting out economic, social and employment policy priorities.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--32a896cbd1b64fc9",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+  "supporting_urls": [],
+  "published_at": "2026-11-24T03:45:57Z",
+  "detected_at": "2026-11-24T19:21:44.486515Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--32a896cbd1b64fc9.json",
+  "content_hash": "sha256:bdd89f017f2a5b11f03c8d9b031557c433470ae0f4c66aa338a085274f38ee1f",
+  "external_id": "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "datasette-agent 0.7a1",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-agent/releases/tag/0.7a1\">datasette-agent 0.7a1</a></p>\n        <p>A small improvement to <a href=\"https://agent.datasette.io/\">Datasette Agent</a>: chat sessions could already open an iframe side panel that could then navigate to different pages. This version improves navigation by fragment hashes, for deeper integration with other Datasette plugins that update fragment hashes when the user interacts with the plugin in a way that changes state.</p>\n<p>I built this in order to fix some bugs with the much more exciting <a href=\"https://simonwillison.net/2026/Nov/24/datasette-charts/\">datasette-charts 0.2a0 release</a>.</p>\n    \n    \n        <p>Tags: <a href=\"https://simonwillison.net/tags/datasette-agent\">datasette-agent</a>, <a href=\"https://simonwillison.net/tags/datasette\">datasette</a></p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

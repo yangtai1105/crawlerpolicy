@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--b80cd1f9ba2eeb88",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2564",
+  "supporting_urls": [],
+  "published_at": "2026-11-23T23:00:00Z",
+  "detected_at": "2026-11-24T19:21:44.486515Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--b80cd1f9ba2eeb88.json",
+  "content_hash": "sha256:27d232734a44ba8e09726535e5f2e37731cbd2f2ba465770b4e0f14b8f2a9fde",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2564",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission imposes provisional import quotas on hybrid passenger vehicles",
+  "content": "European Commission Press release Brussels, 24 Nov 2026 The European Commission today published provisional safeguard measures setting import quotas for certain hybrid vehicles. These restrictions are needed to protect EU industry against a sharp recent increase in imports of such vehicles. The measures will enter into force on 1 December and follow an investigation that showed imports of hybrid vehicles into the EU have increased significantly since 2023.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

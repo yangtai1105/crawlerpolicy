@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--18e24bcebb343e96",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+  "supporting_urls": [],
+  "published_at": "2026-11-24T04:24:29Z",
+  "detected_at": "2026-11-24T19:21:44.486515Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--18e24bcebb343e96.json",
+  "content_hash": "sha256:fce5475b42cc82b97d5fccbeb50bebed576fc94fb0738bb3b57c1e3253b485b1",
+  "external_id": "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "datasette-charts 0.2a0",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-charts/releases/tag/0.2a0\">datasette-charts 0.2a0</a></p>\n        <p>I introduced this new charting plugin for Datasette <a href=\"https://simonwillison.net/2026/Nov/23/datasette-charts/\">yesterday</a>. Today it's gained integration with <a href=\"https://agent.datasette.io/\">Datasette Agent</a>, so now you can ask chat for a chart and it will create one for you using the same underlying chart suggestion and generation tools.</p>\n<p>Here's a demo video, recorded on <a href=\"https://agent.datasette.io/\">agent.datasette.io</a>  where you can sign in with GitHub to try the plugin yourself:</p>\n<figure>\n  <video controls=\"controls\" height=\"1080\" poster=\"https://static.simonwillison.net/static/cors-allow/2026/datasette-charts-agent-demo.webp\" preload=\"none\" style=\"height: auto;\" width=\"1440\">\n    <source src=\"https://static.simonwillison.net/static/cors-allow/2026/datasette-charts-agent-demo.mp4\" type=\"video/mp4\" />\n    <a href=\"https://static.simonwillison.net/static/cors-allow/2026/datasette-charts-agent-demo.mp4\">Download the video (MP4)</a>\n  </video>\n  <figcaption id=\"charts-demo-desc\" style=\"margin-top: 1em;\">\n    I prompt Datasette Agent to \"Use #stats to show sqlite-utils downloads over time as a chart\" - where typing \"#stats\" opens a table search box. It shows me a chart inline in the chat, and when I click \"Open in the chart builder\" it opens the chart in a panel along with the table page. I use t",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

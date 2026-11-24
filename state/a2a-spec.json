@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-23T19:53:27.881652+00:00",
-  "last_fetch_succeeded_at": "2026-11-23T19:53:27.881652+00:00",
-  "last_evidence_at": "2026-11-18T16:57:56.492918+00:00",
+  "last_checked_at": "2026-11-24T19:21:44.486515+00:00",
+  "last_fetch_succeeded_at": "2026-11-24T19:21:44.486515+00:00",
+  "last_evidence_at": "2026-11-24T19:21:44.486515+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "release:330803766",
@@ -20,7 +20,8 @@
     "pr:2153",
     "pr:2322",
     "pr:2270",
-    "pr:2411"
+    "pr:2411",
+    "pr:2426"
   ],
   "consecutive_failures": 0,
   "first_seen": false

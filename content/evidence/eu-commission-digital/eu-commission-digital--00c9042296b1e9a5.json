@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--00c9042296b1e9a5",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2571",
+  "supporting_urls": [],
+  "published_at": "2026-11-24T12:26:20Z",
+  "detected_at": "2026-11-24T19:21:44.486515Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--00c9042296b1e9a5.json",
+  "content_hash": "sha256:686bbbf2b6a7e0d4977431e6525981ead85e7ab2ecc85c940c055ef5ad15cacc",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/statement_26_2571",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Statement by Commissioner Dombrovskis presenting the European Semester Autumn Package at the European Parliament",
+  "content": "European Commission Statement Strasbourg, 24 Nov 2026 Madame Chair, honourable Members.\nThank you for the opportunity to join you today to present the main elements of the European Semester Autumn Package, adopted ...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

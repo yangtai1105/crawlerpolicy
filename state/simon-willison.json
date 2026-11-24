@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-23T19:53:27.881652+00:00",
-  "last_fetch_succeeded_at": "2026-11-23T19:53:27.881652+00:00",
-  "last_evidence_at": "2026-11-23T19:53:27.881652+00:00",
+  "last_checked_at": "2026-11-24T19:21:44.486515+00:00",
+  "last_fetch_succeeded_at": "2026-11-24T19:21:44.486515+00:00",
+  "last_evidence_at": "2026-11-24T19:21:44.486515+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://simonwillison.net/2026/Oct/30/nesformer/",
@@ -82,7 +82,12 @@
     "https://simonwillison.net/2026/Nov/19/postgresql-19/",
     "https://simonwillison.net/2026/Nov/20/ravi-vakil/",
     "https://simonwillison.net/2026/Nov/21/muru/",
-    "https://simonwillison.net/2026/Nov/22/select-styling/"
+    "https://simonwillison.net/2026/Nov/22/select-styling/",
+    "https://simonwillison.net/2026/Nov/24/astra-historical-mystery/",
+    "https://simonwillison.net/2026/Nov/24/datasette-charts/",
+    "https://simonwillison.net/2026/Nov/24/datasette-agent/",
+    "https://simonwillison.net/2026/Nov/23/glm-54/",
+    "https://simonwillison.net/2026/Nov/23/ladybird/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

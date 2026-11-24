@@ -1,0 +1,36 @@
+{
+  "evidence_id": "human-blog--1d29489b6266340c",
+  "source": "human-blog",
+  "source_url": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T00:00:00Z",
+  "detected_at": "2026-11-24T19:21:44.486515Z",
+  "content_path": "content/evidence/human-blog/human-blog--1d29489b6266340c.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "humansecurity.com/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Satori Threat Intelligence Disruption: BADBOX 3.0 Hides the Largest Ad Fraud Operation Ever Disclosed Inside Infected TV Boxes",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 8558,
+      "sha256": "8aa72f2096c7b3754126ac7799559abe243830664fd33404618766da8c16cc18",
+      "cited_urls": [
+        "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/",
+        "https://dev.to/anoymask/badbox-30-factory-embedded-android-backdoor-leads-to-hidden-ad-fraud-and-residential-proxies-4gc4",
+        "https://www.humansecurity.com/company/satori-threat-intelligence/",
+        "https://dgnewsru.livejournal.com/5786168.html",
+        "https://www.spectrum.security/threats/badbox-3-0-tv-box-operation",
+        "https://www.youtube.com/shorts/F9_o2khjZEk",
+        "https://otx.alienvault.com/pulse/6b02766895ae3a82b0f7ee2d"
+      ]
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "evidence_id": "human-blog--5e9979d1b6029943",
+  "source": "human-blog",
+  "source_url": "https://www.humansecurity.com/learn/blog/badbox-3-0-economics-of-threat-adaptation/",
+  "supporting_urls": [],
+  "published_at": "2026-11-18T00:00:00Z",
+  "detected_at": "2026-11-24T19:21:44.486515Z",
+  "content_path": "content/evidence/human-blog/human-blog--5e9979d1b6029943.json",
+  "content_hash": "sha256:e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "external_id": "humansecurity.com/badbox-3-0-economics-of-threat-adaptation",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "BADBOX 3.0 and the Economics of Threat Adaptation",
+  "content": "",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "grounded_read": {
+      "url": "https://www.humansecurity.com/learn/blog/badbox-3-0-economics-of-threat-adaptation/",
+      "method": "gemini-grounded",
+      "model": "gemini-3.8-flash",
+      "chars": 4964,
+      "sha256": "d63bc53d247edcd680b7013f21d35213c8bcdb6675f6e9af37b317c2d2a78a1d",
+      "cited_urls": [
+        "https://www.humansecurity.com/learn/blog/badbox-3-0-economics-of-threat-adaptation/",
+        "https://www.humansecurity.com/learn/blog/satori-threat-intelligence-disruption-badbox-3-0-hides-the-largest-ad-fraud-operation-ever-disclosed-inside-infected-tv-boxes/"
+      ]
+    }
+  }
+}

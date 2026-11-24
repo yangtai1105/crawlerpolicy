@@ -533,8 +533,8 @@
       "kind": "player",
       "observed_name": "IETF Web Bot Auth Working Group",
       "first_seen_at": "2026-10-22T13:30:16.624196Z",
-      "last_seen_at": "2026-11-21T15:55:16.214054Z",
-      "occurrences": 9,
+      "last_seen_at": "2026-11-24T19:21:44.486515Z",
+      "occurrences": 10,
       "evidence_ids": [
         "ietf-webbotauth-wg--c6dc433a924a1ecc",
         "ietf-webbotauth-wg--590751b5f4db81f6",
@@ -544,7 +544,8 @@
         "ietf-webbotauth-wg--b0e8266a52e25cf9",
         "ietf-webbotauth-wg--b23a210f6971e0dc",
         "ietf-webbotauth-wg--010e7fb2084bfddf",
-        "ietf-webbotauth-wg--3ceab8e2d13a5934"
+        "ietf-webbotauth-wg--3ceab8e2d13a5934",
+        "ietf-webbotauth-wg--3bb3ac9639080895"
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
@@ -555,7 +556,8 @@
         "2026-11-15-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-pace-capability-management-draft-for-ag",
         "2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous",
         "2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
-        "2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+        "2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
+        "2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra"
       ]
     },
     "player:indonesian parliament": {

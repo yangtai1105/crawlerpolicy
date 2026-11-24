@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-23T19:53:27.881652Z",
-  "last_fully_successful_at": "2026-11-23T19:53:27.881652Z",
+  "last_attempted_at": "2026-11-24T19:21:44.486515Z",
+  "last_fully_successful_at": "2026-11-24T19:21:44.486515Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -60,7 +60,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "google-extended--9598d3f45623f8c6"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -150,9 +152,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--1e0f698ba6664400"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -173,7 +173,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "akamai-blog--85b103809732770a"
+        "akamai-blog--f6cc4908821609e7",
+        "akamai-blog--d10da60e83f06a9b"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -205,7 +206,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "human-blog--bf848d4ce7b897e8"
+        "human-blog--1d29489b6266340c",
+        "human-blog--5e9979d1b6029943"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -217,9 +219,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--55b509a25680286d",
-        "uk-cma--384696ad0c28ec22",
-        "uk-cma--7f720ab1163a66d0"
+        "uk-cma--144a9d6dcadfcb8e",
+        "uk-cma--f357b29d13807774",
+        "uk-cma--b66c224bd596ecfc",
+        "uk-cma--e74736600bf74043",
+        "uk-cma--f2b6c6ecd7d840f7"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -251,16 +255,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--f56a3718c47c57c7",
-        "eu-commission-digital--77facce523477448",
-        "eu-commission-digital--8c3bebfc7227cb2c",
-        "eu-commission-digital--c5b25a1359877bc3",
-        "eu-commission-digital--aed1c5e1f00b588c",
-        "eu-commission-digital--d2aa3b589dd1f544",
-        "eu-commission-digital--79ebc8bc2addf7cb",
-        "eu-commission-digital--1ea5101c5cb3d8d3",
-        "eu-commission-digital--6b78ad2ad9c5959e",
-        "eu-commission-digital--76d8604a4de48df2"
+        "eu-commission-digital--1ab902a20ace0b1d",
+        "eu-commission-digital--7536184816ccac2c",
+        "eu-commission-digital--39634d5b17c7e4f1",
+        "eu-commission-digital--05dc40d96c8b0db9",
+        "eu-commission-digital--00c9042296b1e9a5",
+        "eu-commission-digital--868c1e6a441c96d5",
+        "eu-commission-digital--6a0f351403b87b2c",
+        "eu-commission-digital--a389ec8786237563",
+        "eu-commission-digital--b80cd1f9ba2eeb88",
+        "eu-commission-digital--3213889e919f3542"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -281,10 +285,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "news-media-alliance--27a077c41940130f",
-        "news-media-alliance--89edc3c9d29cc76c"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -304,7 +305,10 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "web-bot-auth-repo--50eb0d1cdf6f6fe3",
+        "web-bot-auth-repo--5bcaf80e3cee9f9f"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -324,7 +328,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "a2a-spec--e0e4f4fda8fbde5c"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -384,15 +390,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "google-user-triggered-fetchers--ec688633c7fe780b"
-      ],
-      "events_written": [
-        "content/events/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "nist-caisi": {
       "fetch": "ok",
@@ -441,7 +441,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "stratechery--2ec3c5a8c88a6554"
+        "stratechery--0138192fa679ef0d"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -453,7 +453,11 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--a7599caf07da132a"
+        "simon-willison--bed604f596f5dd97",
+        "simon-willison--18e24bcebb343e96",
+        "simon-willison--32a896cbd1b64fc9",
+        "simon-willison--6550953b6ca601e3",
+        "simon-willison--46295d229270a47a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -475,7 +479,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "openai-blog--5b0f79df3abd2836"
+        "openai-blog--3c9e306021f4d588",
+        "openai-blog--e745d123ea45a422"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -516,9 +521,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "ietf-webbotauth-wg--3bb3ac9639080895"
+      ],
+      "events_written": [
+        "content/events/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
+      ]
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -592,10 +603,10 @@
     }
   },
   "events_written": [
-    "content/events/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
+    "content/events/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl.md"
+    "content/feed/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
   ],
   "provider": {
     "name": "gemini",
@@ -605,12 +616,12 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-23",
+    "edition_date": "2026-11-24",
     "item_count": 1,
-    "path": "data/daily/2026-11-23.json"
+    "path": "data/daily/2026-11-24.json"
   },
   "insight_threads": {
-    "thread_count": 368,
+    "thread_count": 370,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
@@ -622,7 +633,7 @@
     "status": "live",
     "candidate_count": 0,
     "x_search_calls": 4,
-    "estimated_tool_cost_usd": 0.130249,
+    "estimated_tool_cost_usd": 0.08277,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
