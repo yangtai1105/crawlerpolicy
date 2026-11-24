@@ -1,0 +1,17 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "access-discovery",
+  "stance": "Crawler discovery and verification are dividing between proprietary infrastructure disclosures and an accelerating IETF standardization effort aimed at anonymous attestation and automated outcome reporting.",
+  "adoption_shape": "Amazon has reinforced bilateral operational transparency by publishing browser-formatted user agent strings and IP verification lists for Amazonbot, Amzn-SearchBot, and Amzn-User, while technical contributors within the IETF Web Bot Auth Working Group are organizing around multi-tiered protocols to verify behavior without identifying the crawler operator.",
+  "new_entrants": "Authors McKenna and Suresh entered the IETF Web Bot Auth pipeline with new drafts designed to govern privacy-preserving data collection attestation and formalize how authentication outcomes are reported back to clients.",
+  "watch_for": "Watch for whether major web operators begin ingesting and acting upon the IETF's standardized verification outcome responses rather than relying solely on manual IP list lookups.",
+  "built_from": [
+    "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+    "amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+  ],
+  "development_count": 4,
+  "generated_at": "2026-11-24T01:31:19.693268Z",
+  "merged_at": null
+}

@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "robots-txt",
+  "stance": "Amazon's provision of dedicated IP lists and distinct user-agent strings makes crawler verification a matter of verifiable network identity rather than passive directive matching.",
+  "adoption_shape": "Amazon moved unilaterally to separate automated indexing from real-time user fetching across three specific identities, placing the onus on webmasters to validate incoming traffic using explicit IP endpoints rather than treating all Amazon traffic as a single entity.",
+  "new_entrants": "Amazon introduced Amzn-User alongside Amazonbot and Amzn-SearchBot to distinguish and control live, user-directed fetching separately from its general automated web crawling.",
+  "watch_for": "The integration of Amazon's newly published verification endpoints into standard webmaster filtering setups to differentiate live user requests from automated crawl traffic.",
+  "built_from": [
+    "amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-24T01:31:19.693268Z",
+  "merged_at": null
+}

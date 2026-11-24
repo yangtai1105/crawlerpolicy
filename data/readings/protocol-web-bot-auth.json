@@ -1,0 +1,14 @@
+{
+  "subject_kind": "protocol",
+  "subject_slug": "web-bot-auth",
+  "stance": "The Web Bot Auth effort is maturing from defining core verification rules into standardizing client-side feedback loops.",
+  "adoption_shape": "Movement remains concentrated within the standards body rather than broader market adoption, with momentum defined by an expanding corpus of 14 active and related IETF specifications.",
+  "new_entrants": "Contributor Suresh has introduced draft-suresh-webbotauth-verification-outcome-00 to control how servers relay authentication outcomes back to visiting clients.",
+  "watch_for": "Working-group consensus on adopting the individual Suresh verification-outcome proposal into the formal Web Bot Auth standards track.",
+  "built_from": [
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+  ],
+  "development_count": 1,
+  "generated_at": "2026-11-24T01:31:19.693268Z",
+  "merged_at": null
+}

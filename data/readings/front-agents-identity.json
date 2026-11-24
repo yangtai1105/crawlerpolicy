@@ -1,0 +1,17 @@
+{
+  "subject_kind": "front",
+  "subject_slug": "agents-identity",
+  "stance": "Agent identity is fragmenting into a tactical split between immediate, operator-published IP and user-agent lists and longer-term standards for privacy-preserving, conduct-based cryptographic verification.",
+  "adoption_shape": "While commercial operators like Amazon maintain control through practical, bilateral mechanisms by publishing dedicated IP ranges and distinct user-agent strings for search bots and live fetchers, standardizers in the IETF Web Bot Auth Working Group are simultaneously constructing multi-tiered protocols to decouple behavioral verification from operator identity.",
+  "new_entrants": "Specification authors McKenna and Suresh have introduced drafts into the IETF to standardize reporting mechanisms for authentication results and tiered attestation models aimed at preserving anonymity during data collection.",
+  "watch_for": "Whether large-scale crawler operators adopt the IETF's standardized verification outcome reporting mechanisms or continue relying exclusively on self-hosted IP lists and user-agent declarations.",
+  "built_from": [
+    "ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
+    "amazonbot-amazon-publishes-distinct-user-agent-strings-and-ip-verification-lists-for-web-c",
+    "ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+  ],
+  "development_count": 4,
+  "generated_at": "2026-11-24T01:31:19.693268Z",
+  "merged_at": null
+}
