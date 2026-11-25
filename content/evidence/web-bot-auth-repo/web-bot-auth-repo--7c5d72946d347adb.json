@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--7c5d72946d347adb",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/186",
+  "supporting_urls": [],
+  "published_at": "2026-11-25T08:54:37Z",
+  "detected_at": "2026-11-25T18:27:10.486917Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--7c5d72946d347adb.json",
+  "content_hash": "sha256:04eed4b1b658d71455d749ce7fb43e3c35df4a049efa5e1433656586b4c46176",
+  "external_id": "pr:186",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "PR #186: feat(docs): Expand the new CONTRIBUTING.md guidelines",
+  "content": "We have received a number of external PR requests, and this expansion is a band-aid patch to ensure all resources evolve in a coordinated manner. The main goal is to (a) assist in triaging, (b) identifying how both libraries should co-evolve, and (c) make explicit some guidelines for what a valid contribution is.\n\nThis change will require contributors to submit issues before opening PRs. It sets a standard for how we will entertain interop issues between the two libraries. It defines the minimum criteria for how we want to interact with AI contributions, as well as what criteria an author should gauge their contribution against.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

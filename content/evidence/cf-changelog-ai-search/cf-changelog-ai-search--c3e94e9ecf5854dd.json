@@ -1,0 +1,19 @@
+{
+  "evidence_id": "cf-changelog-ai-search--c3e94e9ecf5854dd",
+  "source": "cf-changelog-ai-search",
+  "source_url": "https://developers.cloudflare.com/changelog/post/2026-11-25-search-for-agents/",
+  "supporting_urls": [],
+  "published_at": "2026-11-25T00:00:00Z",
+  "detected_at": "2026-11-25T18:27:10.486917Z",
+  "content_path": "content/evidence/cf-changelog-ai-search/cf-changelog-ai-search--c3e94e9ecf5854dd.json",
+  "content_hash": "sha256:7873a2d742479973d20a2f17db2b3220d2a240024009ac004dd307eab3cb6edc",
+  "external_id": "https://developers.cloudflare.com/changelog/post/2026-11-25-search-for-agents/",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "AI Search - Introducing Search for Agents",
+  "content": "<p>Search for Agents makes your website searchable by AI agents without manually configuring a search integration. Turn it on under <strong>Quick Actions</strong> on your domain's <strong>Overview</strong> page in the Cloudflare dashboard. Cloudflare creates an AI Search instance, starts indexing your content, and exposes a search endpoint on your domain.</p>\n<img alt=\"Search for Agents toggle turned on in the Cloudflare dashboard, with a Beta badge and a link to feature documentation.\" height=\"244\" src=\"https://developers.cloudflare.com/cdn-cgi/image/onerror=redirect,width=958,height=244,format=webp/_astro/search-for-agents.CkMydMyZ.png\" width=\"958\" />\n<p>Cloudflare adds discovery metadata to your HTML pages and, when Markdown for Agents is on, to Markdown responses. Agents can discover the endpoint and search with keywords or natural-language queries:</p>\n<figure class=\"nb-code-figure\"><pre class=\"astro-code astro-code-themes github-light github-dark nb-shiki-c6xiwz\" tabindex=\"0\"><code><span class=\"line\"><span class=\"nb-shiki-1t8gfj\">curl</span><span class=\"nb-shiki-dzsirb\"> --get</span><span class=\"nb-shiki-mdbnqw\"> \"https://example.com/.well-known/search\"</span><span class=\"nb-shiki-dzsirb\"> \\</span></span>\n<span class=\"line\"><span class=\"nb-shiki-dzsirb\">  --data-urlencode</span><span class=\"nb-shiki-mdbnqw\"> \"q=How do I verify webhook signatures?\"</span></span></code></pre></figure>\n<p>The endpoint supports both <code>GET</code> and HTTP <code>QUERY</code> requests. It returns relevant content in Markdown, not an AI-generated answer, so agents can use the results with their own models.</p>\n<p>Search for Agents is available on all plans. Usage is subject to <a href=\"https://developers.cloudflare.com/ai-search/platform/limits-pricing/\">AI Search pricing and plan limits</a>. You can customize configurable settings in the AI Search instance created for your domain.</p>\n<p>Read the <a href=\"https://blog.cloudflare.com/search-for-agents\" rel=\"noopener\" target=\"_blank\">announcement blog post<span class=\"external-link\"> ↗︎</span></a> and refer to the <a href=\"https://developers.cloudflare.com/ai-search/how-to/search-for-agents/\">Search for Agents guide</a> for setup instructions and default settings.</p>",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

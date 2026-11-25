@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--31029b05cb6ff41a",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/206",
+  "supporting_urls": [],
+  "published_at": "2026-11-25T08:47:41Z",
+  "detected_at": "2026-11-25T18:27:10.486917Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--31029b05cb6ff41a.json",
+  "content_hash": "sha256:9cc90b07159022689a819568afb77f9c579605ae980ee6d4cc830f9976a11106",
+  "external_id": "pr:206",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #206: test(verification-workers): replay draft Ed25519 Signature-Agent vectors",
+  "content": "Refs #199\n\nI looked into why the demo rejects the dictionary form. `main` is fine: the library and the worker both verify the draft -01 E.2.1 and E.2.2 vectors. The deployed demo is older than `main`. Its landing page still cites `draft-meunier-web-bot-auth-architecture` and it has no `/signature-agent-card` route, so it looks like a build from around 26 May (04979c4).\n\nI confirmed the cause against `/v0/api/verify`. For `\"signature-agent\";key=\"sig1\"` the deployed verifier builds the base line from the whole field value (`sig1=\"https://...\"`), not the member value (`\"https://...\"`) that RFC 9421 section 2.1.2 requires. A request signed over the whole field value comes back `valid`, and the draft-shaped request comes back `invalid: invalid signature`.\n\nSo the fix for #199 is a redeploy, which I can't do. This PR adds the test that would have caught it:\n\n- Two `/v0/api/verify` cases that replay the fixed E.2.1 (dictionary) and E.2.2 (legacy) Ed25519 vectors from the draft. Every existing case signs with this repo's own `sign()`, so if `sign()` and `verify()` build the same wrong base, those cases still pass. I checked this: with whole-field extraction put back into `http-message-sig`, all 33 existing worker tests still pass and the new E.2.1 case fails.\n- The landing page now links the IETF draft and says it accepts the dictionary form, plus the legacy string for migration, which is the note the reporter asked for.\n\n`npm run lint` and `npm test` pass locally.\n",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

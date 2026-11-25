@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-24T19:21:44.486515Z",
-  "last_fully_successful_at": "2026-11-24T19:21:44.486515Z",
+  "last_attempted_at": "2026-11-25T18:27:10.486917Z",
+  "last_fully_successful_at": "2026-11-25T18:27:10.486917Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -60,9 +60,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "google-extended--9598d3f45623f8c6"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -152,9 +150,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-blog--a3079668fb221868"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-25-cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support.md"
+      ]
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -172,10 +174,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "akamai-blog--f6cc4908821609e7",
-        "akamai-blog--d10da60e83f06a9b"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -205,10 +204,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "human-blog--1d29489b6266340c",
-        "human-blog--5e9979d1b6029943"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -219,11 +215,15 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--144a9d6dcadfcb8e",
-        "uk-cma--f357b29d13807774",
-        "uk-cma--b66c224bd596ecfc",
-        "uk-cma--e74736600bf74043",
-        "uk-cma--f2b6c6ecd7d840f7"
+        "uk-cma--8c23de53c31277c5",
+        "uk-cma--f3cb2b565ca30676",
+        "uk-cma--28b137496190f0ef",
+        "uk-cma--f98dce600acc5ca1",
+        "uk-cma--f49d14e1400fdc2e",
+        "uk-cma--bf69083a203c2a8a",
+        "uk-cma--2d52d4e019d06352",
+        "uk-cma--45c47d0a792d339c",
+        "uk-cma--999ced648d004028"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -255,16 +255,16 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--1ab902a20ace0b1d",
-        "eu-commission-digital--7536184816ccac2c",
-        "eu-commission-digital--39634d5b17c7e4f1",
-        "eu-commission-digital--05dc40d96c8b0db9",
-        "eu-commission-digital--00c9042296b1e9a5",
-        "eu-commission-digital--868c1e6a441c96d5",
-        "eu-commission-digital--6a0f351403b87b2c",
-        "eu-commission-digital--a389ec8786237563",
-        "eu-commission-digital--b80cd1f9ba2eeb88",
-        "eu-commission-digital--3213889e919f3542"
+        "eu-commission-digital--a23644533db5f742",
+        "eu-commission-digital--755fe4d9f1e0211b",
+        "eu-commission-digital--7504dff8c7c33006",
+        "eu-commission-digital--40ee7d05bb1f7dc3",
+        "eu-commission-digital--ffb698da8d3a0079",
+        "eu-commission-digital--6a685af5d4d25a0e",
+        "eu-commission-digital--468a57c89f57391b",
+        "eu-commission-digital--3af2cdf5d9817f44",
+        "eu-commission-digital--f4dbf3af36511a96",
+        "eu-commission-digital--3859a4c4686a8725"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -306,11 +306,22 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "web-bot-auth-repo--50eb0d1cdf6f6fe3",
-        "web-bot-auth-repo--5bcaf80e3cee9f9f"
+        "web-bot-auth-repo--93a4e3e6a580fd4c",
+        "web-bot-auth-repo--a5b3da832249fc8b",
+        "web-bot-auth-repo--31029b05cb6ff41a",
+        "web-bot-auth-repo--8ebd5e7abafc2601",
+        "web-bot-auth-repo--7c5d72946d347adb"
       ],
-      "events_written": [],
-      "feed_items_written": []
+      "events_written": [
+        "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
+        "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
+        "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
+        "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
+        "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md"
+      ]
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -328,9 +339,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "a2a-spec--e0e4f4fda8fbde5c"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -400,9 +409,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "nist-caisi--2001d07b2b955fcc"
+      ],
+      "events_written": [
+        "content/events/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md"
+      ]
     },
     "knownagents-directory": {
       "fetch": "ok",
@@ -440,9 +455,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "stratechery--0138192fa679ef0d"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -453,11 +466,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--bed604f596f5dd97",
-        "simon-willison--18e24bcebb343e96",
-        "simon-willison--32a896cbd1b64fc9",
-        "simon-willison--6550953b6ca601e3",
-        "simon-willison--46295d229270a47a"
+        "simon-willison--2d508bef3488f781"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -478,10 +487,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "openai-blog--3c9e306021f4d588",
-        "openai-blog--e745d123ea45a422"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -501,9 +507,15 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
-      "events_written": [],
-      "feed_items_written": []
+      "evidence_ids": [
+        "cf-changelog-ai-search--c3e94e9ecf5854dd"
+      ],
+      "events_written": [
+        "content/events/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md"
+      ],
+      "feed_items_written": [
+        "content/feed/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md"
+      ]
     },
     "google-search-central-blog": {
       "fetch": "ok",
@@ -522,13 +534,13 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "ietf-webbotauth-wg--3bb3ac9639080895"
+        "ietf-webbotauth-wg--138a860aa621dcf9"
       ],
       "events_written": [
-        "content/events/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
+        "content/events/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md"
       ],
       "feed_items_written": [
-        "content/feed/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
+        "content/feed/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md"
       ]
     },
     "c2pa-specifications": {
@@ -587,7 +599,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "cloudflare-radar-ai-insights--5b2b5365a0d8dd56"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -597,16 +611,32 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "x-discovery--e7286616207bea82"
+      ],
       "events_written": [],
-      "feed_items_written": []
+      "feed_items_written": [
+        "content/feed/2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra.md"
+      ]
     }
   },
   "events_written": [
-    "content/events/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
+    "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
+    "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
+    "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md",
+    "content/events/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md",
+    "content/events/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md",
+    "content/events/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md"
   ],
   "feed_items_written": [
-    "content/feed/2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra.md"
+    "content/feed/2026-11-25-cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support.md",
+    "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
+    "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
+    "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md",
+    "content/feed/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md",
+    "content/feed/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md",
+    "content/feed/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md",
+    "content/feed/2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra.md"
   ],
   "provider": {
     "name": "gemini",
@@ -616,24 +646,24 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-24",
-    "item_count": 1,
-    "path": "data/daily/2026-11-24.json"
+    "edition_date": "2026-11-25",
+    "item_count": 5,
+    "path": "data/daily/2026-11-25.json"
   },
   "insight_threads": {
-    "thread_count": 370,
+    "thread_count": 389,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
     "status": "ok",
-    "proposed": 0,
+    "proposed": 1,
     "error": ""
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 0,
-    "x_search_calls": 4,
-    "estimated_tool_cost_usd": 0.08277,
+    "candidate_count": 1,
+    "x_search_calls": 6,
+    "estimated_tool_cost_usd": 0.131351,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

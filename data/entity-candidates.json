@@ -133,6 +133,32 @@
         "2026-11-18-news-media-alliance-coalition-of-131-organizations-backs-senate-stealth-bot-prohibition-act"
       ]
     },
+    "player:bruce schneier": {
+      "kind": "player",
+      "observed_name": "Bruce Schneier",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--e7286616207bea82"
+      ],
+      "feed_slugs": [
+        "2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra"
+      ]
+    },
+    "player:cais": {
+      "kind": "player",
+      "observed_name": "CAIS",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--e7286616207bea82"
+      ],
+      "feed_slugs": [
+        "2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra"
+      ]
+    },
     "player:censys": {
       "kind": "player",
       "observed_name": "Censys",
@@ -533,8 +559,8 @@
       "kind": "player",
       "observed_name": "IETF Web Bot Auth Working Group",
       "first_seen_at": "2026-10-22T13:30:16.624196Z",
-      "last_seen_at": "2026-11-24T19:21:44.486515Z",
-      "occurrences": 10,
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 11,
       "evidence_ids": [
         "ietf-webbotauth-wg--c6dc433a924a1ecc",
         "ietf-webbotauth-wg--590751b5f4db81f6",
@@ -545,7 +571,8 @@
         "ietf-webbotauth-wg--b23a210f6971e0dc",
         "ietf-webbotauth-wg--010e7fb2084bfddf",
         "ietf-webbotauth-wg--3ceab8e2d13a5934",
-        "ietf-webbotauth-wg--3bb3ac9639080895"
+        "ietf-webbotauth-wg--3bb3ac9639080895",
+        "ietf-webbotauth-wg--138a860aa621dcf9"
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi",
@@ -557,7 +584,8 @@
         "2026-11-17-ietf-webbotauth-wg-ietf-web-bot-auth-working-group-receives-draft-on-attested-conduct-for-anonymous",
         "2026-11-18-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-web-data-collection-attestation-draft-to-",
         "2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
-        "2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra"
+        "2026-11-24-ietf-webbotauth-wg-second-ipr-disclosure-filed-on-web-bot-auth-anonymous-collection-attestation-dra",
+        "2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-"
       ]
     },
     "player:indonesian parliament": {
@@ -638,6 +666,19 @@
       ],
       "feed_slugs": [
         "2026-10-25-c2pa-specifications-c2pa-releases-version-2-5-of-content-provenance-technical-specifications"
+      ]
+    },
+    "player:jonathan zittrain": {
+      "kind": "player",
+      "observed_name": "Jonathan Zittrain",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--e7286616207bea82"
+      ],
+      "feed_slugs": [
+        "2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra"
       ]
     },
     "player:jpmorgan chase": {
@@ -813,6 +854,19 @@
         "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
       ]
     },
+    "player:national institute of standards and technology": {
+      "kind": "player",
+      "observed_name": "National Institute of Standards and Technology",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "nist-caisi--2001d07b2b955fcc"
+      ],
+      "feed_slugs": [
+        "2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva"
+      ]
+    },
     "player:nieman lab": {
       "kind": "player",
       "observed_name": "Nieman Lab",
@@ -826,6 +880,19 @@
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-to-over-400-outlets",
         "2026-10-17-x-discovery-meta-strips-contested-ai-training-language-from-commercial-terms-following-publi"
+      ]
+    },
+    "player:nist caissi": {
+      "kind": "player",
+      "observed_name": "NIST CAISSI",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "nist-caisi--2001d07b2b955fcc"
+      ],
+      "feed_slugs": [
+        "2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva"
       ]
     },
     "player:oil city news": {
@@ -1268,6 +1335,19 @@
         "2026-11-13-x-discovery-indonesia-considers-copyright-bill-mandating-payments-for-news-snippets-and-ai-t"
       ]
     },
+    "player:tim o'reilly": {
+      "kind": "player",
+      "observed_name": "Tim O'Reilly",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--e7286616207bea82"
+      ],
+      "feed_slugs": [
+        "2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra"
+      ]
+    },
     "player:tony xu": {
       "kind": "player",
       "observed_name": "Tony Xu",
@@ -1417,6 +1497,19 @@
         "2026-10-17-x-discovery-major-web-platforms-and-banks-ramp-up-blocks-against-autonomous-ai-agents"
       ]
     },
+    "protocol:.well-known/search": {
+      "kind": "protocol",
+      "observed_name": ".well-known/search",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cf-changelog-ai-search--c3e94e9ecf5854dd"
+      ],
+      "feed_slugs": [
+        "2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ]
+    },
     "protocol:agent pay": {
       "kind": "protocol",
       "observed_name": "Agent Pay",
@@ -1454,6 +1547,19 @@
       ],
       "feed_slugs": [
         "2026-10-22-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-drafts-on-crawler-best-practices-and-ip-range-publi"
+      ]
+    },
+    "protocol:draft-ietf-webbotauth-httpsig-protocol": {
+      "kind": "protocol",
+      "observed_name": "draft-ietf-webbotauth-httpsig-protocol",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--8ebd5e7abafc2601"
+      ],
+      "feed_slugs": [
+        "2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
       ]
     },
     "protocol:draft-mckenna-webbotauth-collection-attestation-00": {
@@ -1538,8 +1644,8 @@
       "kind": "protocol",
       "observed_name": "HTTP",
       "first_seen_at": "2026-10-13T15:36:53.900599Z",
-      "last_seen_at": "2026-11-23T19:53:27.881652Z",
-      "occurrences": 10,
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 11,
       "evidence_ids": [
         "datadome-blog--42fa450a86dba89a",
         "cloudflare-blog--5a2555e77804fad4",
@@ -1550,7 +1656,8 @@
         "x-discovery--590af0057172938e",
         "ietf-webbotauth-wg--3ceab8e2d13a5934",
         "x-discovery--1630bd929527ed80",
-        "google-user-triggered-fetchers--ec688633c7fe780b"
+        "google-user-triggered-fetchers--ec688633c7fe780b",
+        "cloudflare-blog--a3079668fb221868"
       ],
       "feed_slugs": [
         "2026-10-13-datadome-blog-datadome-benchmark-finds-65-3-of-21-491-tested-sites-fail-to-stop-automated-bots",
@@ -1562,7 +1669,8 @@
         "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-",
         "2026-11-21-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes",
         "2026-11-21-x-discovery-wikipedia-monetizes-ai-scrapes-and-x402-crosses-200-million-bot-payments",
-        "2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl"
+        "2026-11-23-google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl",
+        "2026-11-25-cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support"
       ]
     },
     "protocol:http 402": {
@@ -1601,6 +1709,19 @@
         "2026-11-03-ietf-webbotauth-wg-ietf-web-bot-auth-wg-receives-internet-draft-on-signed-agent-metadata-http-heade",
         "2026-11-05-web-bot-auth-repo-web-bot-auth-caddy-example-enforces-draft-00-tag-expiration-and-signature-agent-",
         "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai"
+      ]
+    },
+    "protocol:http query": {
+      "kind": "protocol",
+      "observed_name": "HTTP QUERY",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cf-changelog-ai-search--c3e94e9ecf5854dd"
+      ],
+      "feed_slugs": [
+        "2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
       ]
     },
     "protocol:https": {
@@ -1752,36 +1873,53 @@
       "kind": "protocol",
       "observed_name": "REST",
       "first_seen_at": "2026-10-31T20:51:06.172555Z",
-      "last_seen_at": "2026-11-02T17:52:31.512194Z",
-      "occurrences": 2,
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 3,
       "evidence_ids": [
         "akamai-blog--0c53717bccfcaaab",
-        "ucp-spec--9f1e1582ff89ae60"
+        "ucp-spec--9f1e1582ff89ae60",
+        "cloudflare-blog--a3079668fb221868"
       ],
       "feed_slugs": [
         "2026-10-30-akamai-blog-akamai-intelligence-report-details-agentic-web-exploits-and-unauthenticated-mcp-",
-        "2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc"
+        "2026-11-02-ucp-spec-universal-commerce-protocol-backports-ask-capability-to-2026-08-25-release-branc",
+        "2026-11-25-cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support"
+      ]
+    },
+    "protocol:rfc 10008": {
+      "kind": "protocol",
+      "observed_name": "RFC 10008",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "cloudflare-blog--a3079668fb221868"
+      ],
+      "feed_slugs": [
+        "2026-11-25-cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support"
       ]
     },
     "protocol:rfc 9110": {
       "kind": "protocol",
       "observed_name": "RFC 9110",
       "first_seen_at": "2026-11-06T15:41:50.881618Z",
-      "last_seen_at": "2026-11-06T15:41:50.881618Z",
-      "occurrences": 1,
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 2,
       "evidence_ids": [
-        "web-bot-auth-repo--202719f2d0bba953"
+        "web-bot-auth-repo--202719f2d0bba953",
+        "web-bot-auth-repo--8ebd5e7abafc2601"
       ],
       "feed_slugs": [
-        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and"
+        "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
+        "2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
       ]
     },
     "protocol:rfc 9421": {
       "kind": "protocol",
       "observed_name": "RFC 9421",
       "first_seen_at": "2026-10-20T13:22:00.882558Z",
-      "last_seen_at": "2026-11-18T16:57:56.492918Z",
-      "occurrences": 8,
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 9,
       "evidence_ids": [
         "web-bot-auth-repo--f60849145322fff0",
         "web-bot-auth-repo--f2800be0b3b43903",
@@ -1790,7 +1928,8 @@
         "web-bot-auth-repo--202719f2d0bba953",
         "web-bot-auth-repo--478630190caac379",
         "datadome-blog--da8d7906e0961578",
-        "x-discovery--590af0057172938e"
+        "x-discovery--590af0057172938e",
+        "web-bot-auth-repo--31029b05cb6ff41a"
       ],
       "feed_slugs": [
         "2026-10-19-web-bot-auth-repo-web-bot-auth-enforces-rfc-9421-duplicate-component-identifier-checks",
@@ -1800,7 +1939,8 @@
         "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-caddy-plugin-patches-multi-header-signature-handling-and",
         "2026-11-05-web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
         "2026-11-11-datadome-blog-meta-migrates-muse-agentic-browser-signatures-from-meta-com-to-muse-ai",
-        "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-"
+        "2026-11-17-x-discovery-google-details-bot-defense-verification-and-cryptographic-signatures-for-google-",
+        "2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial"
       ]
     },
     "protocol:rfc 9651": {
@@ -1814,6 +1954,19 @@
       ],
       "feed_slugs": [
         "2026-10-27-web-bot-auth-repo-cloudflare-web-bot-auth-rejects-duplicate-signature-labels-under-rfc-9421"
+      ]
+    },
+    "protocol:rfc 9864": {
+      "kind": "protocol",
+      "observed_name": "RFC 9864",
+      "first_seen_at": "2026-11-25T18:27:10.486917Z",
+      "last_seen_at": "2026-11-25T18:27:10.486917Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "web-bot-auth-repo--a5b3da832249fc8b"
+      ],
+      "feed_slugs": [
+        "2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve"
       ]
     },
     "protocol:rpc": {

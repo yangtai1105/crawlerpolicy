@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--e7286616207bea82",
+  "source": "x-discovery",
+  "source_url": "https://x.com/obaid/status/2125338144895594937",
+  "supporting_urls": [
+    "https://www.accountableagents.ai/"
+  ],
+  "published_at": "2026-11-24T21:17:55Z",
+  "detected_at": "2026-11-25T18:27:10.486917Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--e7286616207bea82.json",
+  "content_hash": "sha256:24419514516eb77a09cee972cc23743279c5fd7b7f736e6b2f8dccfbccd98165",
+  "external_id": "2125338144895594937",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Accountable Agents Framework Proposed",
+  "content": "X author: @obaid\n\nCAIS and experts including Bruce Schneier, Jonathan Zittrain and Tim O'Reilly released the Accountable Agents framework proposing a directory that verifies agent owners while sites see only pseudonymous IDs, enabling traceability if harm occurs.\n\nLinked sources:\n- https://www.accountableagents.ai/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "obaid",
+    "post_url": "https://x.com/obaid/status/2125338144895594937",
+    "linked_urls": [
+      "https://www.accountableagents.ai/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "The release of the Accountable Agents framework proposing an agent owner directory with pseudonymous IDs has not been covered in any previous items."
+    },
+    "linked_articles": [
+      {
+        "url": "https://www.accountableagents.ai/",
+        "error": "ValueError: no article body in static HTML (135 chars)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--f4dbf3af36511a96",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2580",
+  "supporting_urls": [],
+  "published_at": "2026-11-24T23:00:00Z",
+  "detected_at": "2026-11-25T18:27:10.486917Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--f4dbf3af36511a96.json",
+  "content_hash": "sha256:b077fcb1f45036203fcc6408f3db2cc4cae2bf929f86bc456cef1b8fe721de37",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/speech_26_2580",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Speech by President von der Leyen at the European Parliament plenary debate on Europe's role and capacity to protect the international order and secure a just and lasting peace for Ukraine",
+  "content": "European Commission Speech Strasbourg, 25 Nov 2026 “Check against delivery” \n \nDear Vice-President, dear Sabine,\nHonourable Members, \nAlmost five years ago, Russia launched its full-scale invasion of Ukraine. It...",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

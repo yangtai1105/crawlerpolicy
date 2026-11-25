@@ -1,7 +1,7 @@
 {
-  "last_checked_at": "2026-11-24T19:21:44.486515+00:00",
-  "last_fetch_succeeded_at": "2026-11-24T19:21:44.486515+00:00",
-  "last_evidence_at": "2026-11-17T17:24:29.231942+00:00",
+  "last_checked_at": "2026-11-25T18:27:10.486917+00:00",
+  "last_fetch_succeeded_at": "2026-11-25T18:27:10.486917+00:00",
+  "last_evidence_at": "2026-11-25T18:27:10.486917+00:00",
   "last_hash": null,
   "last_seen_guids": [
     "https://developers.cloudflare.com/changelog/post/2026-02-09-indexing-improvements/",
@@ -33,7 +33,8 @@
     "https://developers.cloudflare.com/changelog/post/2026-10-16-cjk-keyword-search/",
     "https://developers.cloudflare.com/changelog/post/2026-11-12-d1-data-source/",
     "https://developers.cloudflare.com/changelog/post/2026-11-13-terraform-namespaces/",
-    "https://developers.cloudflare.com/changelog/post/2026-11-17-file-summaries/"
+    "https://developers.cloudflare.com/changelog/post/2026-11-17-file-summaries/",
+    "https://developers.cloudflare.com/changelog/post/2026-11-25-search-for-agents/"
   ],
   "consecutive_failures": 0,
   "first_seen": false

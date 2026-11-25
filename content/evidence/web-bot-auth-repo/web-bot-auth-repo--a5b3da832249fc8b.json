@@ -1,0 +1,19 @@
+{
+  "evidence_id": "web-bot-auth-repo--a5b3da832249fc8b",
+  "source": "web-bot-auth-repo",
+  "source_url": "https://github.com/cloudflare/web-bot-auth/pull/201",
+  "supporting_urls": [],
+  "published_at": "2026-11-25T08:49:26Z",
+  "detected_at": "2026-11-25T18:27:10.486917Z",
+  "content_path": "content/evidence/web-bot-auth-repo/web-bot-auth-repo--a5b3da832249fc8b.json",
+  "content_hash": "sha256:08bc74f2344784513e69aa8278b210dffb531960d6b36dfa1d0c9aad0258b236",
+  "external_id": "pr:201",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "PR #201: fix(web-bot-auth): accept the Ed25519 JWK alg",
+  "content": "Related to #168.\n\n`signerFromJWK` and `verifierFromJWK` rejected an Ed25519 JWK with `alg: \"Ed25519\"`, which is what Node's `crypto.subtle.exportKey` returns.\n\n[RFC 9864 Section 2.2](https://www.rfc-editor.org/info/rfc9864/#section-2.2) registers `Ed25519` and deprecates `EdDSA`, so both are now accepted.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

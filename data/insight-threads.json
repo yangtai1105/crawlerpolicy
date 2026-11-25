@@ -43,6 +43,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "adoption-of-http-query-method-for-agent-search",
+      "title": "Adoption Of Http Query Method For Agent Search",
+      "thesis": "By bundling link-discovery indexing with an automated standard endpoint at `/.well-known/search`, Cloudflare shifts agent access from unstructured site scraping to direct, edge-hosted API retrieval. Returning raw Markdown rather than generative completions ensures visiting agents receive source material suitable for their own context windows.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ]
+    },
+    {
       "key": "adoption-of-ietf-standardization-efforts-for-ai-training-opt-out-mechanisms",
       "title": "Adoption Of Ietf Standardization Efforts For AI Training Opt Out Mechanisms",
       "thesis": "By implementing IETF aipref draft signals alongside robots.txt, Anthropic bridges broad protocol-level AI training preferences with bot-specific crawler directives, establishing explicit conflict-resolution rules where specific user-agent blocks override general opt-outs.",
@@ -216,6 +231,19 @@
       "last_updated_at": "2026-11-06T15:41:50.881618Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agent-identity-verification",
+      "title": "Agent Identity Verification",
+      "thesis": "The framework separates identity verification from direct disclosure, introducing a trusted third-party directory model that shifts machine access governance from blunt blocking to conditional pseudonymity backed by auditability.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra"
       ],
       "verified_development_slugs": []
     },
@@ -509,6 +537,19 @@
       "last_updated_at": "2026-09-09T12:45:33.251712Z",
       "related_feed_slugs": [
         "datadome-blog-datadome-highlights-shift-to-ai-agent-bot-management-and-cryptographic-verificat"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agentic-content-negotiation",
+      "title": "Agentic Content Negotiation",
+      "thesis": "Edge networks are attempting to shift agent behavior from full-site crawling to on-demand retrieval by standardizing discovery metadata and utilizing idempotent HTTP QUERY endpoints directly at the domain level.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support"
       ],
       "verified_development_slugs": []
     },
@@ -1857,6 +1898,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "crawling-to-search-api-pivot",
+      "title": "Crawling To Search API Pivot",
+      "thesis": "Edge networks are attempting to shift agent behavior from full-site crawling to on-demand retrieval by standardizing discovery metadata and utilizing idempotent HTTP QUERY endpoints directly at the domain level.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "credential-backed-silent-agent-browsing",
       "title": "Credential Backed Silent Agent Browsing",
       "thesis": "The operational boundary in automated web access is shifting from crawler discovery to delegated user execution, where agents actively evade bot mitigation by routing through local customer machines or browser profiles without cryptographic provenance.",
@@ -1933,6 +1987,21 @@
       ]
     },
     {
+      "key": "cryptographic-bot-authentication-hardening",
+      "title": "Cryptographic Bot Authentication Hardening",
+      "thesis": "Self-referential test suites that generate test inputs using their own internal signing implementations fail to detect shared serialization errors, allowing deviations from RFC 9421 member-value parsing to persist in deployed verifiers.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial"
+      ]
+    },
+    {
       "key": "cryptographic-bot-authentication-standards-hardening",
       "title": "Cryptographic Bot Authentication Standards Hardening",
       "thesis": "By tightening validation between declared signature algorithms and resolved cryptographic keys, the reference verifier closes potential algorithm confusion or substitution vulnerabilities during HTTP message signature processing.",
@@ -1968,31 +2037,35 @@
     {
       "key": "cryptographic-crawler-authentication",
       "title": "Cryptographic Crawler Authentication",
-      "thesis": "Crawler authentication protocols are hardening against symmetric cryptography, where shared secrets create untenable key-distribution and trust vulnerabilities across decentralized web hosts. By enforcing protocol restrictions in the verification layer rather than the cryptographic primitive library, maintainers retain broader RFC 9421 compliance while enforcing strict public-key guarantees for bot verification.",
-      "direction": "emerging",
+      "thesis": "Cryptographic authentication across modern runtimes requires verifier libraries to tolerate both legacy JOSE registrations and newer RFC algorithm identifiers to prevent ecosystem fragmentation between standard Node.js crypto outputs and verification gateways.",
+      "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-11-06T15:41:50.881618Z",
-      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
       "related_feed_slugs": [
-        "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures"
+        "web-bot-auth-repo-web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve"
       ],
       "verified_development_slugs": [
-        "web-bot-auth-verifier-disallows-shared-hmac-signatures"
+        "web-bot-auth-verifier-disallows-shared-hmac-signatures",
+        "cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve"
       ]
     },
     {
       "key": "cryptographic-crawler-identity-verification",
       "title": "Cryptographic Crawler Identity Verification",
-      "thesis": "Cryptographic crawler authentication protocols are vulnerable to subtle string serialization mismatches in reference libraries, where an incorrect parameter label turns an otherwise valid cryptographic signature into an immediate verification failure.",
-      "direction": "emerging",
+      "thesis": "By bypassing permissive WHATWG URL normalization in favor of strict RFC 9110 syntax validation, cryptographic verifiers prevent subtle parser-differential discrepancies where a verifier resolves a different URI than the one originally signed by the bot.",
+      "direction": "developing",
       "confidence": "high",
       "first_observed_at": "2026-11-06T15:41:50.881618Z",
-      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
       "related_feed_slugs": [
-        "web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+        "web-bot-auth-repo-cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
+        "web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
       ],
       "verified_development_slugs": [
-        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+        "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter",
+        "cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
       ]
     },
     {
@@ -2148,13 +2221,14 @@
     {
       "key": "delegated-agent-governance",
       "title": "Delegated Agent Governance",
-      "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
-      "direction": "emerging",
+      "thesis": "The framework separates identity verification from direct disclosure, introducing a trusted third-party directory model that shifts machine access governance from blunt blocking to conditional pseudonymity backed by auditability.",
+      "direction": "developing",
       "confidence": "medium",
       "first_observed_at": "2026-11-06T15:41:50.881618Z",
-      "last_updated_at": "2026-11-06T15:41:50.881618Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
       "related_feed_slugs": [
-        "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls"
+        "cloudflare-blog-cloudflare-launches-trusted-agent-delegation-coalition-and-agent-access-controls",
+        "x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra"
       ],
       "verified_development_slugs": []
     },
@@ -2662,6 +2736,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "fail-closed-edge-security",
+      "title": "Fail Closed Edge Security",
+      "thesis": "Cryptographic authentication across modern runtimes requires verifier libraries to tolerate both legacy JOSE registrations and newer RFC algorithm identifiers to prevent ecosystem fragmentation between standard Node.js crypto outputs and verification gateways.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve"
+      ]
+    },
+    {
       "key": "fail-closed-timestamp-validation",
       "title": "Fail Closed Timestamp Validation",
       "thesis": "Protocol parity across multiple language reference implementations is critical for authentication standards; divergent validation sequences between Rust and TypeScript created an edge-case discrepancy where compromised keys could use forward-skewed creation times.",
@@ -2703,6 +2792,21 @@
         "news-media-alliance-publishers-respond-to-doj-statement-of-interest-supporting-ai-fair-use"
       ],
       "verified_development_slugs": []
+    },
+    {
+      "key": "federal-super-intelligence-benchmark-development",
+      "title": "Federal Super Intelligence Benchmark Development",
+      "thesis": "Federal evaluation frameworks are formalizing methodologies around 'uplift'—measuring the extent to which super intelligence capabilities augment human or automated task performance, particularly across high-consequence domains like cybersecurity and biosecurity.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva"
+      ],
+      "verified_development_slugs": [
+        "nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva"
+      ]
     },
     {
       "key": "firewall-adaptation-for-ai-agents",
@@ -3119,6 +3223,21 @@
       ]
     },
     {
+      "key": "intellectual-property-disclosures-in-bot-governance",
+      "title": "Intellectual Property Disclosures In Bot Governance",
+      "thesis": "Rapid iteration alongside accumulating IPR filings indicates that anonymous crawler attestation is emerging as both a high-priority mechanism and an area of intensifying intellectual property contention within web crawling standardization.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-"
+      ]
+    },
+    {
       "key": "intent-based-access-control",
       "title": "Intent Based Access Control",
       "thesis": "Consumer shopping agents present a distinct architectural challenge from indexing crawlers: they navigate sensitive transactional endpoints (logins, carts, payment gateways) without declaring identity headers, using execution models ranging from identifiable cloud VMs to residential proxies that rotate IPs and hardware fingerprints mid-session.",
@@ -3382,6 +3501,21 @@
       ],
       "verified_development_slugs": [
         "cloudflare-ai-search-adds-custom-domains-mcp-access-controls-and-link-discovery-"
+      ]
+    },
+    {
+      "key": "markdown-first-content-delivery-for-autonomous-agents",
+      "title": "Markdown First Content Delivery For Autonomous Agents",
+      "thesis": "By bundling link-discovery indexing with an automated standard endpoint at `/.well-known/search`, Cloudflare shifts agent access from unstructured site scraping to direct, edge-hosted API retrieval. Returning raw Markdown rather than generative completions ensures visiting agents receive source material suitable for their own context windows.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
       ]
     },
     {
@@ -3750,6 +3884,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "parser-differential-hardening",
+      "title": "Parser Differential Hardening",
+      "thesis": "By bypassing permissive WHATWG URL normalization in favor of strict RFC 9110 syntax validation, cryptographic verifiers prevent subtle parser-differential discrepancies where a verifier resolves a different URI than the one originally signed by the bot.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
+      ]
+    },
+    {
       "key": "pay-per-use-ai",
       "title": "Pay Per Use AI",
       "thesis": "Pay Per Use separates crawling access from actual downstream utilization, addressing AI buyers' reluctance to pay per scrape when many indexed pages are never served in answers.",
@@ -4070,6 +4219,19 @@
       ]
     },
     {
+      "key": "pseudonymous-accountability",
+      "title": "Pseudonymous Accountability",
+      "thesis": "The framework separates identity verification from direct disclosure, introducing a trusted third-party directory model that shifts machine access governance from blunt blocking to conditional pseudonymity backed by auditability.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "publisher-ai-licensing-resistance",
       "title": "Publisher AI Licensing Resistance",
       "thesis": "Platform operators are attempting to leverage social distribution contracts to bypass standard web crawler opt-outs, effectively conditioning social platform presence on granting broad scraping rights for AI training.",
@@ -4232,6 +4394,19 @@
       "verified_development_slugs": [
         "web-bot-auth-verifier-disallows-shared-hmac-signatures"
       ]
+    },
+    {
+      "key": "rfc10008-query-adoption",
+      "title": "Rfc10008 Query Adoption",
+      "thesis": "Edge networks are attempting to shift agent behavior from full-site crawling to on-demand retrieval by standardizing discovery metadata and utilizing idempotent HTTP QUERY endpoints directly at the domain level.",
+      "direction": "emerging",
+      "confidence": "medium",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support"
+      ],
+      "verified_development_slugs": []
     },
     {
       "key": "rigorous-adherence-to-rfc-9421-http-message-signatures-for-crawler-verification",
@@ -4467,6 +4642,21 @@
       "verified_development_slugs": []
     },
     {
+      "key": "shift-from-bot-scraping-to-edge-indexed-search-apis",
+      "title": "Shift From Bot Scraping To Edge Indexed Search Apis",
+      "thesis": "By bundling link-discovery indexing with an automated standard endpoint at `/.well-known/search`, Cloudflare shifts agent access from unstructured site scraping to direct, edge-hosted API retrieval. Returning raw Markdown rather than generative completions ensures visiting agents receive source material suitable for their own context windows.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ]
+    },
+    {
       "key": "shift-from-static-waf-rules-to-dynamic-bot-management",
       "title": "Shift From Static WAF Rules To Dynamic Bot Management",
       "thesis": "Enterprise bot defenses are increasingly consolidating fraud mitigation (such as credential stuffing) with general automated traffic governance, allowing security and SEO teams to identify and classify AI data collection agents alongside malicious threats.",
@@ -4547,6 +4737,21 @@
       ]
     },
     {
+      "key": "standardization-of-ai-uplift-evaluation",
+      "title": "Standardization Of AI Uplift Evaluation",
+      "thesis": "Federal evaluation frameworks are formalizing methodologies around 'uplift'—measuring the extent to which super intelligence capabilities augment human or automated task performance, particularly across high-consequence domains like cybersecurity and biosecurity.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva"
+      ],
+      "verified_development_slugs": [
+        "nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva"
+      ]
+    },
+    {
       "key": "standardization-of-autonomous-agent-lifecycles",
       "title": "Standardization Of Autonomous Agent Lifecycles",
       "thesis": "By establishing that interrupted states are non-terminal and do not mandate closing transport streams, the specification decouples conversational pauses from connection lifecycles, enabling continuous streaming sessions even when human or automated input is requested mid-task.",
@@ -4592,6 +4797,21 @@
       ]
     },
     {
+      "key": "standardization-of-well-known-agent-discovery",
+      "title": "Standardization Of Well Known Agent Discovery",
+      "thesis": "By bundling link-discovery indexing with an automated standard endpoint at `/.well-known/search`, Cloudflare shifts agent access from unstructured site scraping to direct, edge-hosted API retrieval. Returning raw Markdown rather than generative completions ensures visiting agents receive source material suitable for their own context windows.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis"
+      ]
+    },
+    {
       "key": "standardization-testing-for-cryptographic-crawler-headers",
       "title": "Standardization Testing For Cryptographic Crawler Headers",
       "thesis": "Edge bot verification implementations often stumble on header-folding and component-identifier edge cases in general-purpose RFC 9421 libraries, necessitating pre-normalization workarounds until upstream cryptographic parsers mature.",
@@ -4622,6 +4842,21 @@
       ]
     },
     {
+      "key": "standardized-anonymous-crawler-attestation",
+      "title": "Standardized Anonymous Crawler Attestation",
+      "thesis": "Rapid iteration alongside accumulating IPR filings indicates that anonymous crawler attestation is emerging as both a high-priority mechanism and an area of intensifying intellectual property contention within web crawling standardization.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-"
+      ],
+      "verified_development_slugs": [
+        "ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-"
+      ]
+    },
+    {
       "key": "standardized-bot-feedback-loops",
       "title": "Standardized Bot Feedback Loops",
       "thesis": "While prior drafts in the working group focused primarily on signing requests, declaring metadata, and discovering public keys, this submission addresses the return feedback loop—standardizing how servers report whether bot authentication succeeded or failed.",
@@ -4634,6 +4869,21 @@
       ],
       "verified_development_slugs": [
         "ietf-web-bot-auth-wg-receives-draft-on-reporting-verification-outcomes"
+      ]
+    },
+    {
+      "key": "standards-convergence",
+      "title": "Standards Convergence",
+      "thesis": "Cryptographic authentication across modern runtimes requires verifier libraries to tolerate both legacy JOSE registrations and newer RFC algorithm identifiers to prevent ecosystem fragmentation between standard Node.js crypto outputs and verification gateways.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve"
       ]
     },
     {
@@ -4693,6 +4943,21 @@
       ]
     },
     {
+      "key": "strict-rfc-9421-header-dictionary-parsing-compliance",
+      "title": "Strict Rfc 9421 Header Dictionary Parsing Compliance",
+      "thesis": "Self-referential test suites that generate test inputs using their own internal signing implementations fail to detect shared serialization errors, allowing deviations from RFC 9421 member-value parsing to persist in deployed verifiers.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial"
+      ]
+    },
+    {
       "key": "strict-rfc-9421-http-message-signatures-compliance",
       "title": "Strict Rfc 9421 Http Message Signatures Compliance",
       "thesis": "Cryptographic crawler authentication protocols are vulnerable to subtle string serialization mismatches in reference libraries, where an incorrect parameter label turns an otherwise valid cryptographic signature into an immediate verification failure.",
@@ -4705,6 +4970,21 @@
       ],
       "verified_development_slugs": [
         "cloudflare-web-bot-auth-corrects-rsassa-pkcs1-v1-5-signature-algorithm-parameter"
+      ]
+    },
+    {
+      "key": "strict-rfc-uri-syntax-enforcement",
+      "title": "Strict Rfc Uri Syntax Enforcement",
+      "thesis": "By bypassing permissive WHATWG URL normalization in favor of strict RFC 9110 syntax validation, cryptographic verifiers prevent subtle parser-differential discrepancies where a verifier resolves a different URI than the one originally signed by the bot.",
+      "direction": "emerging",
+      "confidence": "high",
+      "first_observed_at": "2026-11-25T18:27:10.486917Z",
+      "last_updated_at": "2026-11-25T18:27:10.486917Z",
+      "related_feed_slugs": [
+        "web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
+      ],
+      "verified_development_slugs": [
+        "cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u"
       ]
     },
     {
