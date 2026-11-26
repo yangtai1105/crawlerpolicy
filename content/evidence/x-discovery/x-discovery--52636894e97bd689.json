@@ -1,0 +1,36 @@
+{
+  "evidence_id": "x-discovery--52636894e97bd689",
+  "source": "x-discovery",
+  "source_url": "https://x.com/Oxylabs_io/status/2126008404963455169",
+  "supporting_urls": [
+    "https://x.com/i/article/2126003361132564480"
+  ],
+  "published_at": "2026-11-26T17:41:17Z",
+  "detected_at": "2026-11-26T18:09:13.262662Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--52636894e97bd689.json",
+  "content_hash": "sha256:9836551254268efee14abaeaad89aedbf982c3be3ce6c54c4b47e9af46a9db9d",
+  "external_id": "2126008404963455169",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Oxylabs Data Digest covers signed requests, WebMCP, and bot detection",
+  "content": "X author: @Oxylabs_io\n\nOxylabs published its November Data Digest on signed requests, WebMCP, agent identity signals, and challenges in bot detection scores for AI/web traffic.\n\nLinked sources:\n- https://x.com/i/article/2126003361132564480",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "Oxylabs_io",
+    "post_url": "https://x.com/Oxylabs_io/status/2126008404963455169",
+    "linked_urls": [
+      "https://x.com/i/article/2126003361132564480"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "Oxylabs' November Data Digest analyzing signed requests, WebMCP, agent identity signals, and bot detection scores has not been reported in the list."
+    },
+    "linked_articles": []
+  }
+}

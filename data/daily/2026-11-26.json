@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "edition_date": "2026-11-26",
+  "generated_at": "2026-11-26T18:09:13.262662Z",
+  "status": "published",
+  "note": "Highest-consequence developments detected in this daily window.",
+  "items": [
+    {
+      "slug": "x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st",
+      "status": "signal",
+      "importance": 0.65,
+      "published_at": "2026-11-25T21:28:37Z"
+    },
+    {
+      "slug": "x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb",
+      "status": "signal",
+      "importance": 0.45,
+      "published_at": "2026-11-26T17:41:17Z"
+    }
+  ]
+}

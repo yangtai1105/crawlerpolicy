@@ -1,0 +1,41 @@
+{
+  "evidence_id": "x-discovery--2ea025c6b4218120",
+  "source": "x-discovery",
+  "source_url": "https://x.com/PPCLAND/status/2125703225332404685",
+  "supporting_urls": [
+    "https://ppc.land/googles-change-to-chromes-ai-agent-feature-breaks-early-testers-code/"
+  ],
+  "published_at": "2026-11-25T21:28:37Z",
+  "detected_at": "2026-11-26T18:09:13.262662Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--2ea025c6b4218120.json",
+  "content_hash": "sha256:397bbabd62ee13382053727511ca6e13223309e919e2d9c94670b3128f290465",
+  "external_id": "2125703225332404685",
+  "stage": "published",
+  "analysis_attempts": 1,
+  "last_error": null,
+  "title": "Chrome 160 introduces breaking changes to WebMCP for AI agents",
+  "content": "X author: @PPCLAND\n\nDevelopers working on WebMCP, a proposed standard for software agents to use site actions, are facing breaking changes in Chrome 160; a stable subset is targeted for early 2027.\n\nLinked sources:\n- https://ppc.land/googles-change-to-chromes-ai-agent-feature-breaks-early-testers-code/",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "PPCLAND",
+    "post_url": "https://x.com/PPCLAND/status/2125703225332404685",
+    "linked_urls": [
+      "https://ppc.land/googles-change-to-chromes-ai-agent-feature-breaks-early-testers-code/"
+    ],
+    "provider_citations": [],
+    "front": "agents-identity",
+    "shadow": false,
+    "novelty": {
+      "outcome": "new",
+      "matched": null,
+      "reason": "This is a new development regarding breaking changes to the WebMCP standard for AI agents introduced in Chrome 160, which has not been covered in any previously listed items."
+    },
+    "linked_articles": [
+      {
+        "url": "https://ppc.land/googles-change-to-chromes-ai-agent-feature-breaks-early-testers-code/",
+        "error": "HTTPStatusError: Client error '403 Forbidden' for url 'https://ppc.land/googles-change-to-chromes-ai-agent-feature-breaks-early-testers-code/'\nFor more information check: https://developer.mozilla.org"
+      }
+    ]
+  }
+}

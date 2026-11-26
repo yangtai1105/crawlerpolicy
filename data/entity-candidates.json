@@ -213,6 +213,19 @@
         "2026-10-30-x-discovery-penske-media-and-chegg-appeal-dismissal-of-google-ai-overviews-lawsuit"
       ]
     },
+    "player:chrome": {
+      "kind": "player",
+      "observed_name": "Chrome",
+      "first_seen_at": "2026-11-26T18:09:13.262662Z",
+      "last_seen_at": "2026-11-26T18:09:13.262662Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--2ea025c6b4218120"
+      ],
+      "feed_slugs": [
+        "2026-11-25-x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st"
+      ]
+    },
     "player:claudebot": {
       "kind": "player",
       "observed_name": "ClaudeBot",
@@ -906,6 +919,19 @@
       ],
       "feed_slugs": [
         "2026-10-17-x-discovery-google-expands-news-ai-pilot-licensing-to-over-400-publishers"
+      ]
+    },
+    "player:oxylabs": {
+      "kind": "player",
+      "observed_name": "Oxylabs",
+      "first_seen_at": "2026-11-26T18:09:13.262662Z",
+      "last_seen_at": "2026-11-26T18:09:13.262662Z",
+      "occurrences": 1,
+      "evidence_ids": [
+        "x-discovery--52636894e97bd689"
+      ],
+      "feed_slugs": [
+        "2026-11-26-x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb"
       ]
     },
     "player:penske media": {
@@ -2103,6 +2129,21 @@
       ],
       "feed_slugs": [
         "2026-11-06-cloudflare-research-cloudflare-designs-post-quantum-anonymous-credentials-for-agent-rate-limiting-un"
+      ]
+    },
+    "protocol:webmcp": {
+      "kind": "protocol",
+      "observed_name": "WebMCP",
+      "first_seen_at": "2026-11-26T18:09:13.262662Z",
+      "last_seen_at": "2026-11-26T18:09:13.262662Z",
+      "occurrences": 2,
+      "evidence_ids": [
+        "x-discovery--2ea025c6b4218120",
+        "x-discovery--52636894e97bd689"
+      ],
+      "feed_slugs": [
+        "2026-11-25-x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st",
+        "2026-11-26-x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb"
       ]
     }
   }

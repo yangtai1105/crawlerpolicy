@@ -222,6 +222,19 @@
       "verified_development_slugs": []
     },
     {
+      "key": "agent-identity-standardization",
+      "title": "Agent Identity Standardization",
+      "thesis": "Industry focus is shifting toward cryptographic identity and structured agent protocols like WebMCP as traditional heuristic bot detection scores struggle to reliably classify AI-driven web traffic.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-26T18:09:13.262662Z",
+      "last_updated_at": "2026-11-26T18:09:13.262662Z",
+      "related_feed_slugs": [
+        "x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "agent-identity-standards",
       "title": "Agent Identity Standards",
       "thesis": "Personal AI agents break web security models by commingling multiple end users behind shared intermediary infrastructure, rendering conventional IP or agent-level blocking blunt and counterproductive.",
@@ -697,6 +710,19 @@
       "last_updated_at": "2026-09-30T14:39:16.784317Z",
       "related_feed_slugs": [
         "cloudflare-blog-cloudflare-unveils-monetization-gateway-pay-per-use-and-cryptographic-bot-contro"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "agentic-web-standards",
+      "title": "Agentic Web Standards",
+      "thesis": "Browsers are treating agentic interaction protocols like WebMCP as experimental APIs subject to breaking churn, signalling that standardized delegated agent execution on the web remains in early development.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-26T18:09:13.262662Z",
+      "last_updated_at": "2026-11-26T18:09:13.262662Z",
+      "related_feed_slugs": [
+        "x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st"
       ],
       "verified_development_slugs": []
     },
@@ -1294,6 +1320,19 @@
       ]
     },
     {
+      "key": "bot-detection-degradation-under-ai-traffic",
+      "title": "Bot Detection Degradation Under AI Traffic",
+      "thesis": "Industry focus is shifting toward cryptographic identity and structured agent protocols like WebMCP as traditional heuristic bot detection scores struggle to reliably classify AI-driven web traffic.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-26T18:09:13.262662Z",
+      "last_updated_at": "2026-11-26T18:09:13.262662Z",
+      "related_feed_slugs": [
+        "x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb"
+      ],
+      "verified_development_slugs": []
+    },
+    {
       "key": "bot-governance-standards",
       "title": "Bot Governance Standards",
       "thesis": "Rapid iteration from revision -00 to -02 alongside a new IPR disclosure indicates accelerating formalization and proprietary or patented stakes in privacy-preserving, conduct-based crawler verification models.",
@@ -1398,6 +1437,19 @@
       "last_updated_at": "2026-11-11T15:53:10.884486Z",
       "related_feed_slugs": [
         "x-discovery-openai-launches-business-hub-beta-for-labeled-business-agents-and-analytics"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "browser-agent-apis",
+      "title": "Browser Agent Apis",
+      "thesis": "Browsers are treating agentic interaction protocols like WebMCP as experimental APIs subject to breaking churn, signalling that standardized delegated agent execution on the web remains in early development.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-26T18:09:13.262662Z",
+      "last_updated_at": "2026-11-26T18:09:13.262662Z",
+      "related_feed_slugs": [
+        "x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st"
       ],
       "verified_development_slugs": []
     },
@@ -4705,6 +4757,19 @@
       "last_updated_at": "2026-11-11T15:53:10.884486Z",
       "related_feed_slugs": [
         "x-discovery-major-enterprises-restrict-third-party-ai-agents-as-walmart-introduces-agent-gat"
+      ],
+      "verified_development_slugs": []
+    },
+    {
+      "key": "signed-request-adoption",
+      "title": "Signed Request Adoption",
+      "thesis": "Industry focus is shifting toward cryptographic identity and structured agent protocols like WebMCP as traditional heuristic bot detection scores struggle to reliably classify AI-driven web traffic.",
+      "direction": "emerging",
+      "confidence": "low",
+      "first_observed_at": "2026-11-26T18:09:13.262662Z",
+      "last_updated_at": "2026-11-26T18:09:13.262662Z",
+      "related_feed_slugs": [
+        "x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb"
       ],
       "verified_development_slugs": []
     },

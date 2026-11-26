@@ -1,15 +1,9 @@
 {
-  "last_checked_at": "2026-11-25T18:27:10.486917+00:00",
-  "last_fetch_succeeded_at": "2026-11-25T18:27:10.486917+00:00",
-  "last_evidence_at": "2026-11-25T18:27:10.486917+00:00",
+  "last_checked_at": "2026-11-26T18:09:13.262662+00:00",
+  "last_fetch_succeeded_at": "2026-11-26T18:09:13.262662+00:00",
+  "last_evidence_at": "2026-11-26T18:09:13.262662+00:00",
   "last_hash": null,
   "last_seen_guids": [
-    "https://www.gov.uk/government/publications/supply-chains-and-market-power#2026-05-12T09:04:00Z",
-    "https://www.gov.uk/cma-cases/referral-of-the-proposed-bus-network-support-grant-subsidy-scheme-by-west-midlands-combined-authority#2026-05-11T12:02:29Z",
-    "https://www.gov.uk/government/publications/report-on-the-proposed-bus-network-support-grant-subsidy-scheme-by-west-midlands-combined-authority#2026-05-11T12:01:14Z",
-    "https://www.gov.uk/cma-cases/referral-of-the-proposed-business-rates-relief-for-electric-vehicle-ev-chargepoints-and-ev-only-forecourts-by-hm-treasury#2026-05-13T13:00:30Z",
-    "https://www.gov.uk/cma-cases/macquarie-asset-management-slash-energy-assets-group-merger-inquiry#2026-05-15T10:00:26Z",
-    "https://www.gov.uk/cma-cases/vandemoortele-slash-delifrance-merger-inquiry#2026-05-15T09:00:24Z",
     "https://www.gov.uk/government/news/cma-launches-strategic-market-status-investigation-into-microsofts-business-software-ecosystem#2026-05-14T10:20:00Z",
     "https://www.gov.uk/government/calls-for-evidence/microsofts-business-software-ecosystem-invitation-to-comment#2026-05-14T10:16:16Z",
     "https://www.gov.uk/cma-cases/microsofts-business-software-ecosystem#2026-05-14T10:16:14Z",
@@ -503,7 +497,13 @@
     "https://www.gov.uk/government/news/cma-considers-remedies-to-resolve-coatings-merger-concerns#2026-11-25T07:31:35Z",
     "https://www.gov.uk/cma-cases/akzonobel-slash-axalta-merger-inquiry#2026-11-25T07:31:09Z",
     "https://www.gov.uk/government/news/mccormick-offers-remedies-to-resolve-competition-concerns-in-unilever-foods-deal#2026-11-25T07:02:33Z",
-    "https://www.gov.uk/cma-cases/mccormick-slash-unilever-merger-inquiry#2026-11-25T07:00:26Z"
+    "https://www.gov.uk/cma-cases/mccormick-slash-unilever-merger-inquiry#2026-11-25T07:00:26Z",
+    "https://www.gov.uk/cma-cases/the-brinks-company-slash-ncr-atleos-corporation-merger-inquiry#2026-11-26T14:00:42Z",
+    "https://www.gov.uk/government/publications/cma-correspondence-in-relation-to-private-provision-in-the-dentistry-market#2026-11-26T07:00:26Z",
+    "https://www.gov.uk/government/consultations/private-dental-services-market-study-interim-report#2026-11-26T07:00:20Z",
+    "https://www.gov.uk/government/news/cma-study-reveals-catalogue-of-concerns-in-private-dentistry-market#2026-11-26T07:00:20Z",
+    "https://www.gov.uk/guidance/how-to-engage-with-the-cmas-private-dental-services-market-study#2026-11-26T07:00:14Z",
+    "https://www.gov.uk/cma-cases/private-dental-services-market-study#2026-11-26T07:00:08Z"
   ],
   "consecutive_failures": 0,
   "first_seen": false

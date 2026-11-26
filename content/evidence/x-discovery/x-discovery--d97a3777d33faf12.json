@@ -1,0 +1,35 @@
+{
+  "evidence_id": "x-discovery--d97a3777d33faf12",
+  "source": "x-discovery",
+  "source_url": "https://x.com/sengineland/status/2125756489071509972",
+  "supporting_urls": [
+    "https://searchengineland.com/google-documents-a-number-of-previously-undocumented-google-crawlers-and-fetchers-502934"
+  ],
+  "published_at": "2026-11-26T01:00:16Z",
+  "detected_at": "2026-11-26T18:09:13.262662Z",
+  "content_path": "content/evidence/x-discovery/x-discovery--d97a3777d33faf12.json",
+  "content_hash": "sha256:ee3a3b703d1b53e67be7887316cc81e30651c2d85154293988c01d0d45f5e0dd",
+  "external_id": "2125756489071509972",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Google documents previously undocumented crawlers and fetchers",
+  "content": "X author: @sengineland\n\nGoogle documented 12 existing crawlers and fetchers (including GoogleDocs and pageburst), split by crawler vs. fetcher category, and published the details.\n\nLinked sources:\n- https://searchengineland.com/google-documents-a-number-of-previously-undocumented-google-crawlers-and-fetchers-502934",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {
+    "author_handle": "sengineland",
+    "post_url": "https://x.com/sengineland/status/2125756489071509972",
+    "linked_urls": [
+      "https://searchengineland.com/google-documents-a-number-of-previously-undocumented-google-crawlers-and-fetchers-502934"
+    ],
+    "provider_citations": [],
+    "front": "access-discovery",
+    "shadow": false,
+    "novelty": {
+      "outcome": "covered",
+      "matched": "feed:google-user-triggered-fetchers-google-formally-documents-six-user-triggered-fetchers-and-abuse-reporting-workfl",
+      "reason": "This covers the same Google documentation update cataloging previously undocumented crawlers and user-triggered fetchers."
+    }
+  }
+}

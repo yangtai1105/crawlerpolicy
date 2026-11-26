@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-25T18:27:10.486917Z",
-  "last_fully_successful_at": "2026-11-25T18:27:10.486917Z",
+  "last_attempted_at": "2026-11-26T18:09:13.262662Z",
+  "last_fully_successful_at": "2026-11-26T18:09:13.262662Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -150,13 +150,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-blog--a3079668fb221868"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-25-cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support.md"
-      ]
+      "feed_items_written": []
     },
     "datadome-blog": {
       "fetch": "ok",
@@ -215,15 +211,12 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--8c23de53c31277c5",
-        "uk-cma--f3cb2b565ca30676",
-        "uk-cma--28b137496190f0ef",
-        "uk-cma--f98dce600acc5ca1",
-        "uk-cma--f49d14e1400fdc2e",
-        "uk-cma--bf69083a203c2a8a",
-        "uk-cma--2d52d4e019d06352",
-        "uk-cma--45c47d0a792d339c",
-        "uk-cma--999ced648d004028"
+        "uk-cma--b08e1b5e7f249bc9",
+        "uk-cma--1c2ed434a19e108b",
+        "uk-cma--1010369437bae5a6",
+        "uk-cma--970d23b23171ff01",
+        "uk-cma--abded350971001f9",
+        "uk-cma--46ad775ad280209d"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -255,16 +248,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--a23644533db5f742",
-        "eu-commission-digital--755fe4d9f1e0211b",
-        "eu-commission-digital--7504dff8c7c33006",
-        "eu-commission-digital--40ee7d05bb1f7dc3",
-        "eu-commission-digital--ffb698da8d3a0079",
-        "eu-commission-digital--6a685af5d4d25a0e",
-        "eu-commission-digital--468a57c89f57391b",
-        "eu-commission-digital--3af2cdf5d9817f44",
-        "eu-commission-digital--f4dbf3af36511a96",
-        "eu-commission-digital--3859a4c4686a8725"
+        "eu-commission-digital--0ceaf94062b8318d",
+        "eu-commission-digital--369a92ac607401e1",
+        "eu-commission-digital--815cb4dc3e958f78",
+        "eu-commission-digital--d7595fe4f305b020"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -275,7 +262,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "us-ftc-federal-register--5941bfc555737e00"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -305,23 +294,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "web-bot-auth-repo--93a4e3e6a580fd4c",
-        "web-bot-auth-repo--a5b3da832249fc8b",
-        "web-bot-auth-repo--31029b05cb6ff41a",
-        "web-bot-auth-repo--8ebd5e7abafc2601",
-        "web-bot-auth-repo--7c5d72946d347adb"
-      ],
-      "events_written": [
-        "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
-        "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
-        "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
-        "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
-        "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "mcp-spec": {
       "fetch": "ok",
@@ -409,15 +384,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "nist-caisi--2001d07b2b955fcc"
-      ],
-      "events_written": [
-        "content/events/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "knownagents-directory": {
       "fetch": "ok",
@@ -466,7 +435,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "simon-willison--2d508bef3488f781"
+        "simon-willison--096533def50a5e2a",
+        "simon-willison--9dba3b93ed8d2449",
+        "simon-willison--f622f9af3cff6fad",
+        "simon-willison--6091d4f5a252bab7"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -507,15 +479,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cf-changelog-ai-search--c3e94e9ecf5854dd"
-      ],
-      "events_written": [
-        "content/events/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "google-search-central-blog": {
       "fetch": "ok",
@@ -533,15 +499,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "ietf-webbotauth-wg--138a860aa621dcf9"
-      ],
-      "events_written": [
-        "content/events/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md"
-      ],
-      "feed_items_written": [
-        "content/feed/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md"
-      ]
+      "evidence_ids": [],
+      "events_written": [],
+      "feed_items_written": []
     },
     "c2pa-specifications": {
       "fetch": "ok",
@@ -599,9 +559,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "cloudflare-radar-ai-insights--5b2b5365a0d8dd56"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -612,31 +570,21 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "x-discovery--e7286616207bea82"
+        "x-discovery--d97a3777d33faf12",
+        "x-discovery--2ea025c6b4218120",
+        "x-discovery--52636894e97bd689"
       ],
       "events_written": [],
       "feed_items_written": [
-        "content/feed/2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra.md"
+        "content/feed/2026-11-25-x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st.md",
+        "content/feed/2026-11-26-x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb.md"
       ]
     }
   },
-  "events_written": [
-    "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
-    "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
-    "content/events/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md",
-    "content/events/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md",
-    "content/events/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md",
-    "content/events/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md"
-  ],
+  "events_written": [],
   "feed_items_written": [
-    "content/feed/2026-11-25-cloudflare-blog-cloudflare-launches-search-for-agents-with-rfc-10008-query-support.md",
-    "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-accepts-rfc-9864-ed25519-identifier-in-jwk-signer-and-ve.md",
-    "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-adds-rfc-9421-test-vectors-to-prevent-header-base-serial.md",
-    "content/feed/2026-11-25-web-bot-auth-repo-cloudflare-web-bot-auth-enforces-rfc-9110-empty-host-checks-on-signature-agent-u.md",
-    "content/feed/2026-11-25-nist-caisi-nist-caissi-requests-public-comment-on-draft-sp-2400-801-on-si-driven-uplift-eva.md",
-    "content/feed/2026-11-25-cf-changelog-ai-search-cloudflare-launches-search-for-agents-with-automated-indexing-and-well-known-dis.md",
-    "content/feed/2026-11-25-ietf-webbotauth-wg-ietf-web-bot-auth-wg-updates-anonymous-collection-attestation-draft-to-revision-.md",
-    "content/feed/2026-11-24-x-discovery-cais-and-experts-release-accountable-agents-framework-for-pseudonymous-agent-tra.md"
+    "content/feed/2026-11-25-x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st.md",
+    "content/feed/2026-11-26-x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb.md"
   ],
   "provider": {
     "name": "gemini",
@@ -646,24 +594,24 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "published",
-    "edition_date": "2026-11-25",
-    "item_count": 5,
-    "path": "data/daily/2026-11-25.json"
+    "edition_date": "2026-11-26",
+    "item_count": 2,
+    "path": "data/daily/2026-11-26.json"
   },
   "insight_threads": {
-    "thread_count": 389,
+    "thread_count": 394,
     "path": "data/insight-threads.json"
   },
   "map_proposals": {
     "status": "ok",
-    "proposed": 1,
+    "proposed": 0,
     "error": ""
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 1,
-    "x_search_calls": 6,
-    "estimated_tool_cost_usd": 0.131351,
+    "candidate_count": 3,
+    "x_search_calls": 3,
+    "estimated_tool_cost_usd": 0.117564,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
