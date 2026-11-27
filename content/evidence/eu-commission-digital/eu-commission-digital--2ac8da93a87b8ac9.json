@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--2ac8da93a87b8ac9",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2592",
+  "supporting_urls": [],
+  "published_at": "2026-11-26T23:00:00Z",
+  "detected_at": "2026-11-27T17:52:12.068422Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--2ac8da93a87b8ac9.json",
+  "content_hash": "sha256:2c8ed73cdb486c083dbda8922bbd3ae8d3eff49640860a071b555fc8b6ea8bfa",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2592",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission unconditionally approves Deutsche Börse's acquisition of Allfunds",
+  "content": "European Commission Press release Brussels, 27 Nov 2026 The European Commission has unconditionally approved, under the EU Merger Regulation, the proposed acquisition by Deutsche Börse of Allfunds.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

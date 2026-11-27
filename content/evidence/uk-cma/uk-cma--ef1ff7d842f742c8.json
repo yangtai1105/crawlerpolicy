@@ -1,0 +1,19 @@
+{
+  "evidence_id": "uk-cma--ef1ff7d842f742c8",
+  "source": "uk-cma",
+  "source_url": "https://www.gov.uk/government/publications/cma-prompt-payment-data-july-to-september-2026",
+  "supporting_urls": [],
+  "published_at": "2026-11-27T12:01:37Z",
+  "detected_at": "2026-11-27T17:52:12.068422Z",
+  "content_path": "content/evidence/uk-cma/uk-cma--ef1ff7d842f742c8.json",
+  "content_hash": "sha256:28416e15034579217053b9b057493fbe21f581a5b466ede05d7767e2032e94ca",
+  "external_id": "https://www.gov.uk/government/publications/cma-prompt-payment-data-july-to-september-2026#2026-11-27T12:01:37Z",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Transparency data: CMA: prompt payment data, July to September 2026",
+  "content": "Data about how long the Competition and Markets Authority (CMA) takes to pay invoices.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

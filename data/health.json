@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-26T18:09:13.262662Z",
-  "last_fully_successful_at": "2026-11-26T18:09:13.262662Z",
+  "last_attempted_at": "2026-11-27T17:52:12.068422Z",
+  "last_fully_successful_at": "2026-11-27T17:52:12.068422Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -211,12 +211,8 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "uk-cma--b08e1b5e7f249bc9",
-        "uk-cma--1c2ed434a19e108b",
-        "uk-cma--1010369437bae5a6",
-        "uk-cma--970d23b23171ff01",
-        "uk-cma--abded350971001f9",
-        "uk-cma--46ad775ad280209d"
+        "uk-cma--ef1ff7d842f742c8",
+        "uk-cma--7fdb30cc55bfc01a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -248,10 +244,10 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--0ceaf94062b8318d",
-        "eu-commission-digital--369a92ac607401e1",
-        "eu-commission-digital--815cb4dc3e958f78",
-        "eu-commission-digital--d7595fe4f305b020"
+        "eu-commission-digital--908469de436cd4ea",
+        "eu-commission-digital--c1e40d5b3bcd9990",
+        "eu-commission-digital--2ac8da93a87b8ac9",
+        "eu-commission-digital--6e51389e26cb9a7a"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -262,9 +258,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "us-ftc-federal-register--5941bfc555737e00"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -434,12 +428,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "simon-willison--096533def50a5e2a",
-        "simon-willison--9dba3b93ed8d2449",
-        "simon-willison--f622f9af3cff6fad",
-        "simon-willison--6091d4f5a252bab7"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -569,23 +558,13 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "x-discovery--d97a3777d33faf12",
-        "x-discovery--2ea025c6b4218120",
-        "x-discovery--52636894e97bd689"
-      ],
+      "evidence_ids": [],
       "events_written": [],
-      "feed_items_written": [
-        "content/feed/2026-11-25-x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st.md",
-        "content/feed/2026-11-26-x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb.md"
-      ]
+      "feed_items_written": []
     }
   },
   "events_written": [],
-  "feed_items_written": [
-    "content/feed/2026-11-25-x-discovery-chrome-160-introduces-breaking-changes-to-webmcp-agent-standard-ahead-of-2027-st.md",
-    "content/feed/2026-11-26-x-discovery-oxylabs-highlights-signed-requests-webmcp-and-bot-detection-challenges-in-novemb.md"
-  ],
+  "feed_items_written": [],
   "provider": {
     "name": "gemini",
     "status": "ok",
@@ -593,10 +572,10 @@
   },
   "derived_errors": [],
   "daily_brief": {
-    "status": "published",
-    "edition_date": "2026-11-26",
-    "item_count": 2,
-    "path": "data/daily/2026-11-26.json"
+    "status": "quiet",
+    "edition_date": "2026-11-27",
+    "item_count": 0,
+    "path": "data/daily/2026-11-27.json"
   },
   "insight_threads": {
     "thread_count": 394,
@@ -609,9 +588,9 @@
   },
   "discovery": {
     "status": "live",
-    "candidate_count": 3,
+    "candidate_count": 0,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.117564,
+    "estimated_tool_cost_usd": 0.053044,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,
