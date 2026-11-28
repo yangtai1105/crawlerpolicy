@@ -179,7 +179,8 @@
     - LLM
   keyword_filter_scope: title
   enrich_via: gemini_grounded
-  archive_primary: true
+  # No archive_primary: akamai.com blocks the Wayback Machine too (Save Page
+  # Now answers 520 for every post).
   display_name: Akamai Blog
   default_tracks: [access-controls, identity-authorization, measurement-economics]
   tier: specialist
@@ -220,7 +221,7 @@
     agentic traffic, AI crawlers and scrapers, bot traffic, or AI agent
     identification and verification (AgenticTrust, Sightline)
   lookback_days: 14
-  archive_primary: true
+  # No archive_primary: Save Page Now answers 520 for humansecurity.com.
   display_name: HUMAN Security Blog
   default_tracks: [identity-authorization, platform-ecosystem, measurement-economics]
   tier: specialist
