@@ -1,7 +1,7 @@
 {
   "status": "healthy",
-  "last_attempted_at": "2026-11-27T17:52:12.068422Z",
-  "last_fully_successful_at": "2026-11-27T17:52:12.068422Z",
+  "last_attempted_at": "2026-11-28T16:39:06.604475Z",
+  "last_fully_successful_at": "2026-11-28T16:39:06.604475Z",
   "coverage": {
     "configured": 52,
     "completed": 52,
@@ -210,10 +210,7 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [
-        "uk-cma--ef1ff7d842f742c8",
-        "uk-cma--7fdb30cc55bfc01a"
-      ],
+      "evidence_ids": [],
       "events_written": [],
       "feed_items_written": []
     },
@@ -244,10 +241,7 @@
       "publish": "ok",
       "error": null,
       "evidence_ids": [
-        "eu-commission-digital--908469de436cd4ea",
-        "eu-commission-digital--c1e40d5b3bcd9990",
-        "eu-commission-digital--2ac8da93a87b8ac9",
-        "eu-commission-digital--6e51389e26cb9a7a"
+        "eu-commission-digital--820a05d5832f1d06"
       ],
       "events_written": [],
       "feed_items_written": []
@@ -428,7 +422,9 @@
       "analysis": "ok",
       "publish": "ok",
       "error": null,
-      "evidence_ids": [],
+      "evidence_ids": [
+        "simon-willison--3f1f338a6b404a02"
+      ],
       "events_written": [],
       "feed_items_written": []
     },
@@ -573,9 +569,9 @@
   "derived_errors": [],
   "daily_brief": {
     "status": "quiet",
-    "edition_date": "2026-11-27",
+    "edition_date": "2026-11-28",
     "item_count": 0,
-    "path": "data/daily/2026-11-27.json"
+    "path": "data/daily/2026-11-28.json"
   },
   "insight_threads": {
     "thread_count": 394,
@@ -590,7 +586,7 @@
     "status": "live",
     "candidate_count": 0,
     "x_search_calls": 3,
-    "estimated_tool_cost_usd": 0.053044,
+    "estimated_tool_cost_usd": 0.032665,
     "sources_configured": 1,
     "sources_completed": 1,
     "sources_failed": 0,

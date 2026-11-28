@@ -1,0 +1,19 @@
+{
+  "evidence_id": "eu-commission-digital--820a05d5832f1d06",
+  "source": "eu-commission-digital",
+  "source_url": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2604",
+  "supporting_urls": [],
+  "published_at": "2026-11-27T23:00:00Z",
+  "detected_at": "2026-11-28T16:39:06.604475Z",
+  "content_path": "content/evidence/eu-commission-digital/eu-commission-digital--820a05d5832f1d06.json",
+  "content_hash": "sha256:fd86c7844dd1458b96fcd08df530154511e35be9dd1a027f8f12c6f96d61f0ae",
+  "external_id": "https://ec.europa.eu/commission/presscorner/detail/en/ip_26_2604",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "Commission prepares for temporary flexibility for plug-in hybrid electric vehicles",
+  "content": "European Commission Press release Brussels, 28 Nov 2026 Today, the European Commission is consulting the Technical Committee on Motor Vehicles (TCMV), composed of representatives of the Member States, on amendments to the type-approval rules (Euro 6 and Euro 7) to postpone until 1 January 2030 the foreseen update of the ‘Utility Factors' for certain plug-in hybrid electric vehicles (PHEVs) to the levels that were applicable in 2025.",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}

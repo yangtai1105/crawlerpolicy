@@ -1,0 +1,19 @@
+{
+  "evidence_id": "simon-willison--3f1f338a6b404a02",
+  "source": "simon-willison",
+  "source_url": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+  "supporting_urls": [],
+  "published_at": "2026-11-27T23:57:17Z",
+  "detected_at": "2026-11-28T16:39:06.604475Z",
+  "content_path": "content/evidence/simon-willison/simon-willison--3f1f338a6b404a02.json",
+  "content_hash": "sha256:c95f2d9b99f511650b4674a26fd02620f5682e12c85c407574b7ddfa22d8370e",
+  "external_id": "https://simonwillison.net/2026/Nov/27/datasette-charts/",
+  "stage": "analyzed",
+  "analysis_attempts": 0,
+  "last_error": null,
+  "title": "datasette-charts 0.4a0",
+  "content": "<p><strong>Release:</strong> <a href=\"https://github.com/datasette/datasette-charts/releases/tag/0.4a0\">datasette-charts 0.4a0</a></p>\n        <p>The new datasette-charts plugin has its own plugin hook to allow other plugins to define new chart types, but I hadn't actually used it for anything yet. I had Claude Opus 5.5 build an experimental plugins just to try out the hook and it came up with a bunch of friction points in the design. This release addresses those, which should make building additional chart plugins a whole lot more ergonomic.</p>\n<p>I've also added a website for the plugin, at <a href=\"https://charts.datasette.io/\">charts.datasette.io</a>. The new website includes a <a href=\"https://charts.datasette.io/docs/plugins/\">tutorial for plugin authors</a>, and <a href=\"https://charts.datasette.io/gallery/\">a gallery</a> showing all of the core charts and annotations, each one linking to an interactive demo on <a href=\"https://lite.datasette.io/\">Datasette Lite</a>.</p>\n<p><img alt=\"Screenshot of a documentation page section showing a two-by-two grid of cards, each with a chart screenshot, a heading, a description, a link and a collapsed disclosure. Heading: &quot;Annotations&quot;. Intro text: &quot;Notes drawn on a chart: lines, shaded ranges, callouts and text. They are part of the chart's spec, so they are kept in the link to the chart. Documentation for annotations.&quot; where &quot;Documentation for annotations&quot; is a link. Card 1: an area line chart title",
+  "previous_content": "",
+  "unified_diff": "",
+  "discovery_metadata": {}
+}
